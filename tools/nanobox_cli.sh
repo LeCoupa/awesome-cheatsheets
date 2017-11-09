@@ -1,5 +1,99 @@
 # *****************************************************************************
+# CLI COMMANDS SUMMARY
+# https://docs.nanobox.io/cli/
+# *****************************************************************************
+
+
+# Update your Nanobox CLI to the most recent version
+nanobox-update
+
+# Starts your local environment, allowing you to run your app
+nanobox run [<command>]
+
+# Builds your app's runtime
+nanobox build
+
+# Compiles your app's code into a deployable package
+nanobox compile
+
+# Manages connections to remote applications
+nanobox remote add <app-name> [<remote-alias>]
+nanobox remote rm <remote-alias>
+nanobox remote ls
+
+# Deploys your app to a live app
+nanobox deploy [<dry-run | {remote-alias}>] [-m <message>]
+
+# Opens an interactive terminal from inside a component in your live app
+nanobox console [<local | dry-run | {remote-alias}>] <component.id>
+
+# Displays information about the app and its components
+nanobox info [<local | dry-run | {remote-alias}>]
+
+# Establishes a secure tunnel from your local machine to a running service
+nanobox tunnel [<remote-alias>] <component.id> [-p <local-port>[:[<remote-port>]]]
+
+# Manages environment variables on your production environment
+nanobox evar add [<local | dry-run | {remote-alias}>] <key1>=<value1> <key2>=<value2>
+nanobox evar load [<local | dry-run | {remote-alias}>] path/to/file
+nanobox evar rm [<local | dry-run | {remote-alias}>] <key1> <key2>
+nanobox evar ls [<local | dry-run | {remote-alias}>]
+
+# Manage DNS aliases for local applications
+nanobox dns add <local | dry-run> <hostname>
+nanobox dns rm <local | dry-run> <hostname>
+nanobox dns ls <local | dry-run>
+
+# View and streams application logs
+nanobox log [<dry-run | {remote-alias}>]
+nanobox log [<dry-run | {remote-alias}>] -f
+nanobox log [<dry-run | {remote-alias}>] -n <number>
+
+# Walks through prompts to configure Nanobox
+nanobox config set <config-key> <config-value>
+nanobox config get <config-key>
+nanobox config ls
+
+# Downloads the most recent versions of Nanobox docker images
+nanobox update-images
+
+# Authenticates your Nanobox client with your nanobox.io account
+nanobox login
+
+# Removes your nanobox.io api token from your local nanobox client
+nanobox logout
+
+# Starts the Nanobox container
+nanobox start
+
+# Stops the Nanobox container
+nanobox stop
+
+# Display the status of Nanobox & apps
+nanobox status
+
+# Destroys the current project and removes it from Nanobox
+nanobox destroy [<local | dry-run>]
+
+# Clean out any environments that no longer exist
+nanobox clean
+
+# Removes all Nanobox-created containers, files, & data
+nanobox implode
+
+# Show the current Nanobox version
+nanobox version
+
+--help                 # Displays help information about the CLI and specific commands
+--debug                # In the event of a failure, drop into a debug context
+-t, --trace            # Increases display output and sets level to 'trace'
+-v, --verbose          # Increases display output and sets level to 'debug'
+-f, --force            # Forces the command to run without any confirmation. Use responsibly!
+
+
+# *****************************************************************************
 # LOCAL ENVIRONMENT
+# https://docs.nanobox.io/workflow/modifying-your-app/
 # *****************************************************************************
 
 
@@ -17,6 +111,7 @@ nanobox info local
 
 # *****************************************************************************
 # DRY RUN ENVIRONMENT
+# https://docs.nanobox.io/workflow/dry-run/
 # *****************************************************************************
 
 
@@ -38,6 +133,7 @@ nanobox info dry-run
 
 # *****************************************************************************
 # PRODUCTION ENVIRONMENT
+# https://docs.nanobox.io/workflow/deploy-code/
 # *****************************************************************************
 
 
@@ -76,40 +172,3 @@ nanobox evar rm local KEY1
 
 # List all variables for a given environment
 nanobox evar ls local
-
-
-# *****************************************************************************
-# CLI COMMANDS SUMMARY
-# https://docs.nanobox.io/cli/
-# *****************************************************************************
-
-
-nanobox-update         # Update your Nanobox CLI to the most recent version
-nanobox run            # Starts your local environment, allowing you to run your app
-nanobox build          # Builds your app's runtime
-nanobox compile        # Compiles your app's code into a deployable package
-nanobox remote         # Manages connections to remote applications
-nanobox deploy         # Deploys your app to a live app
-nanobox console        # Opens an interactive terminal from inside a component in your live app
-nanobox info           # Displays information about the app and its components
-nanobox tunnel         # Establishes a secure tunnel from your local machine to a running service
-nanobox evar           # Manages environment variables on your production environment
-nanobox dns            # Manage DNS aliases for local applications
-nanobox log            # View and streams application logs
-nanobox configure      # Walks through prompts to configure Nanobox
-nanobox update-images  # Downloads the most recent versions of Nanobox docker images
-nanobox login          # Authenticates your Nanobox client with your nanobox.io account
-nanobox logout         # Removes your nanobox.io api token from your local nanobox client
-nanobox start          # Starts the Nanobox container
-nanobox stop           # Stops the Nanobox container
-nanobox status         # Display the status of Nanobox & apps
-nanobox destroy        # Destroys the current project and removes it from Nanobox
-nanobox clean          # Clean out any environments that no longer exist
-nanobox implode        # Removes all Nanobox-created containers, files, & data
-nanobox version        # Show the current Nanobox version
-
---help                 # Displays help information about the CLI and specific commands
---debug                # In the event of a failure, drop into a debug context
--t, --trace            # Increases display output and sets level to 'trace'
--v, --verbose          # Increases display output and sets level to 'debug'
--f, --force            # Forces the command to run without any confirmation. Use responsibly!
