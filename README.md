@@ -14,4 +14,4 @@
 ## Tools
 
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-- [Nanobox CLI](tools/nanobox_cli.yml)
+- [Nanobox CLI](tools/nanobox_cli.sh)
