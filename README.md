@@ -1,8 +1,8 @@
 # Awesome Cheatsheets
 
-> List of useful cheatsheets that will make you smile
+> List of useful cheatsheets that will make you smile.
 
-[![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com) 
+[![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/for-you.svg)](http://forthebadge.com)
 
 ## Table of Contents
 
