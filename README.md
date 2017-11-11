@@ -8,7 +8,7 @@
 ## Table of Contents
 
 - [Languages](#languages)
-
+- [Frameworks](#frameworks)
 - [Tools](#tools)
 
 
@@ -25,8 +25,8 @@
 
 ## Tools
 
+- [Docker](tools/docker.sh)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-
 - [Nanobox CLI](tools/nanobox_cli.sh)
 
 
