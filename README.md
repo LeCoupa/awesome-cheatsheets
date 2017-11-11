@@ -14,6 +14,7 @@
 
 ## Languages
 
+- [Bash](languages/bash.sh)
 - [JavaScript](languages/javascript.js)
 
 
