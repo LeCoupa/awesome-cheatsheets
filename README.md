@@ -18,7 +18,7 @@
 - [JavaScript](languages/javascript.js)
 
 
-## FRAMEWORKS
+## Frameworks
 
 - [Node.js](frameworks/node.js)
 
