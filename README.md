@@ -9,6 +9,7 @@
 
 - [Languages](#languages)
 - [Frameworks](#frameworks)
+- [Databases](#databases)
 - [Tools](#tools)
 
 
@@ -21,6 +22,11 @@
 ## Frameworks
 
 - [Node.js](frameworks/node.js)
+
+
+## Databases
+
+- [Redis](databases/redis.sh)
 
 
 ## Tools
