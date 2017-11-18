@@ -8,20 +8,33 @@
 ## Table of Contents
 
 - [Languages](#languages)
-- [Frameworks](#frameworks)
+
+- [Backend](#backend)
+
+- [Frontend](#frontend)
+
 - [Databases](#databases)
+
 - [Tools](#tools)
 
 
 ## Languages
 
 - [Bash](languages/bash.sh)
+
 - [JavaScript](languages/javascript.js)
 
 
-## Frameworks
+## Backend
 
-- [Node.js](frameworks/node.js)
+- [Django](backend/django.py)
+
+- [Node.js](backend/node.js)
+
+
+## Frontend
+
+- [Vue](frontend/vue.js)
 
 
 ## Databases
@@ -32,7 +45,9 @@
 ## Tools
 
 - [Docker](tools/docker.sh)
+
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
+
 - [Nanobox CLI](tools/nanobox_cli.sh)
 
 
