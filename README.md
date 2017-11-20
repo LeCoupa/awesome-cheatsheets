@@ -34,7 +34,7 @@
 
 ## Frontend
 
-- [Vue](frontend/vue.js)
+- [Vue.js](frontend/vue.js)
 
 
 ## Databases

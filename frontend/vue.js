@@ -52,3 +52,56 @@ Vue.config.warnHandler = function (msg, vm, trace) {
  * GLOBAL API
  * https://vuejs.org/v2/api/#Global-API
  * ******************************************************************************************* */
+
+
+Vue.version                        // Provides the installed version of Vue as a string.
+
+Vue.extend(options)                // Create a “subclass” of the base Vue constructor.
+Vue.mixin( mixin )                 // Apply a mixin globally, which affects every Vue instance created afterwards.
+Vue.nextTick([callback, context])  // Defer the callback to be executed after the next DOM update cycle.
+Vue.use(plugin)                    // Install a Vue.js plugin. If the plugin is an Object, it must expose an install method.
+
+Vue.set(target, key, value)        // Set a property on an object. If the object is reactive, ensure the property is created as a reactive property and trigger view updates.
+Vue.delete(target, key)            // Delete a property on an object. If the object is reactive, ensure the deletion triggers view updates.
+
+// Register or retrieve a global directive.
+Vue.directive('my-directive', {
+  bind: function () {},
+  inserted: function () {},
+  update: function () {},
+  componentUpdated: function () {},
+  unbind: function () {}
+})
+
+// Register (function directive)
+Vue.directive('my-directive', function () {
+  // This will be called as `bind` and `update`
+})
+
+// Getter, return the directive definition if registered
+var myDirective = Vue.directive('my-directive')
+
+// Getter, return the filter if registered
+var myFilter = Vue.filter('my-filter')
+
+// Register a global filter
+Vue.filter('my-filter', function (value) { })
+
+// Register an extended constructor
+Vue.component('my-component', Vue.extend({ }))
+
+// Register an options object (automatically call Vue.extend)
+Vue.component('my-component', { })
+
+// Retrieve a registered component (always return constructor)
+var MyComponent = Vue.component('my-component')
+
+Vue.compile(template)  // Compiles a template string into a render function
+
+
+/* *******************************************************************************************
+ * OPTIONS DATA
+ * https://vuejs.org/v2/api/#Options-Data
+ * ******************************************************************************************* */
+
+
