@@ -100,8 +100,215 @@ Vue.compile(template)  // Compiles a template string into a render function
 
 
 /* *******************************************************************************************
- * OPTIONS DATA
+ * OPTIONS > DATA
  * https://vuejs.org/v2/api/#Options-Data
  * ******************************************************************************************* */
+
+
+Vue.component('my-component', {
+  // A list/hash of attributes that are exposed to accept data from the parent component.
+  // It has an Array-based simple syntax and an alternative Object-based syntax that allows
+  // advanced configurations such as type checking, custom validation and default values.
+  props: {
+    height: Number,
+    age: {
+      type: Number,
+      default: 0,
+      required: true,
+      validator: function (value) {
+        return value >= 0
+      }
+    }
+  },
+
+  // Primarily intended to make unit testing easier
+  propsData: {
+    age: 12
+  },
+
+  // The data object for the Vue instance.
+  // Vue will recursively convert its properties into getter/setters to make it “reactive”. 
+  // Note: you should not use an arrow function with the data property
+  data: function () {
+    return {
+      a: 1,
+      b: 2
+    }
+  },
+
+  // Computed properties to be mixed into the Vue instance.
+  // All getters and setters have their this context automatically bound to the Vue instance.
+  // Computed properties are cached, and only re-computed on reactive dependency changes.
+  // Note that if a certain dependency is out of the instance’s scope (i.e. not reactive),
+  // the computed property will not be updated.
+  computed: {
+    // Note: you should not use an arrow function to define a computed property.
+    aDouble: function () {
+      return this.a * 2
+    },
+    aPlus: {
+      get: function () {
+        return this.a + 1
+      },
+      set: function (v) {
+        this.a = v - 1
+      }
+    }
+  },
+
+  // An object where keys are expressions to watch and values are the corresponding callbacks.
+  // The value can also be a string of a method name, or an Object that contains additional options.
+  // The Vue instance will call $watch() for each entry in the object at instantiation.
+  watch: {
+    // Note: you should not use an arrow function to define a watcher.
+    a: function (val, oldVal) {
+      console.log('new: %s, old: %s', val, oldVal)
+    },
+    // String method name
+    b: 'someMethod',
+    // Deep watcher
+    c: {
+      handler: function (val, oldVal) { /* ... */ },
+      deep: true
+    },
+    // The callback will be called immediately after the start of the observation
+    d: {
+      handler: function (val, oldVal) { /* ... */ },
+      immediate: true
+    }
+  },
+
+  // Methods to be mixed into the Vue instance. You can access these methods directly on the VM instance,
+  // or use them in directive expressions. All methods will have their this context automatically bound to
+  // the Vue instance.
+  methods: {
+    // Note: you should not use an arrow function to define a method.
+    plus: function () {
+      this.a++
+    }
+  }
+})
+
+
+/* *******************************************************************************************
+ * OPTIONS > DOM
+ * https://vuejs.org/v2/api/#Options-DOM
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * OPTIONS > LIFECYCLE HOOKS
+ * https://vuejs.org/v2/api/#Options-Lifecycle-Hooks
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * OPTIONS > ASSETS
+ * https://vuejs.org/v2/api/#Options-Assets
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * OPTIONS > COMPOSITION
+ * https://vuejs.org/v2/api/#Options-Composition
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * OPTIONS > MISC
+ * https://vuejs.org/v2/api/#Options-Lifecycle-Hooks
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * INSTANCE PROPERTIES
+ * https://vuejs.org/v2/api/#Instance-Properties
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * INSTANCE METHODS > DATA
+ * https://vuejs.org/v2/api/#Instance-Methods-Data
+ * ******************************************************************************************* */
+
+
+
+
+/* *******************************************************************************************
+ * INSTANCE METHODS > EVENTS
+ * https://vuejs.org/v2/api/#Instance-Methods-Events
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * INSTANCE METHODS > LIFECYCLE
+ * https://vuejs.org/v2/api/#Instance-Methods-Lifecycle
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * DIRECTIVES
+ * https://vuejs.org/v2/api/#Directives
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * SPECIAL ATTRIBUTES
+ * https://vuejs.org/v2/api/#Special-Attributes
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * BUILT-IN COMPONENTS
+ * https://vuejs.org/v2/api/#Built-In-Components
+ * ******************************************************************************************* */
+
+
+
+
+
+/* *******************************************************************************************
+ * VNODE INTERFACE
+ * https://vuejs.org/v2/api/#VNode-Interface
+ * ******************************************************************************************* */
+
+
+
+
+/* *******************************************************************************************
+ * SERVER-SIDE RENDERING
+ * https://vuejs.org/v2/api/#Server-Side-Rendering
+ * ******************************************************************************************* */
+
 
 
