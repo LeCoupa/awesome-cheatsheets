@@ -105,7 +105,7 @@ Vue.compile(template)  // Compiles a template string into a render function
  * ******************************************************************************************* */
 
 
-Vue.component('my-component', {
+new Vue({
   // A list/hash of attributes that are exposed to accept data from the parent component.
   // It has an Array-based simple syntax and an alternative Object-based syntax that allows
   // advanced configurations such as type checking, custom validation and default values.
@@ -196,7 +196,57 @@ Vue.component('my-component', {
  * ******************************************************************************************* */
 
 
+new Vue({
+  // Provide the Vue instance an existing DOM element to mount on.
+  // It can be a CSS selector string or an actual HTMLElement.
+  // After the instance is mounted, the resolved element will be accessible as vm.$el.
+  el: '#example',
 
+  // A string template to be used as the markup for the Vue instance.
+  // The template will replace the mounted element.
+  // Any existing markup inside the mounted element will be ignored,
+  // unless content distribution slots are present in the template.
+  // If the string starts with # it will be used as a querySelector and
+  // use the selected element’s innerHTML as the template string. This
+  // allows the use of the common <script type="x-template"> trick to include templates.
+  template: `
+    <div class="checkbox-wrapper" @click="check">
+      <div :class="{ checkbox: true, checked: checked }"></div>
+      <div class="title">{{ title }}</div>
+    </div>
+  `,
+
+  // An alternative to string templates allowing you to leverage the full programmatic power of JavaScript.
+  // The render function receives a createElement method as it’s first argument used to create VNodes.
+  // If the component is a functional component, the render function also receives an extra argument context,
+  // which provides access to contextual data since functional components are instance-less.
+  render: function (createElement) {
+    // create kebabCase id
+    var headingId = getChildrenTextContent(this.$slots.default)
+    .toLowerCase()
+    .replace(/\W+/g, '-')
+    .replace(/(^\-|\-$)/g, '')
+
+    return createElement(
+      'h' + this.level,
+      [
+        createElement('a', {
+          attrs: {
+            name: headingId,
+            href: '#' + headingId
+          }
+        }, this.$slots.default)
+      ]
+    )
+  },
+
+  // Provide an alternative render output when the default render function encounters an error.
+  // The error will be passed to renderError as the second argument.
+  // This is particularly useful when used together with hot-reload.
+  renderError (createElement, err) {
+    return createElement('pre', { style: { color: 'red' }}, err.stack)
+  }
+})
 
 
 /* *******************************************************************************************
@@ -248,6 +298,7 @@ Vue.component('my-component', {
  * INSTANCE METHODS > DATA
  * https://vuejs.org/v2/api/#Instance-Methods-Data
  * ******************************************************************************************* */
+
 
 
 
@@ -309,6 +360,5 @@ Vue.component('my-component', {
  * SERVER-SIDE RENDERING
  * https://vuejs.org/v2/api/#Server-Side-Rendering
  * ******************************************************************************************* */
-
 
 
