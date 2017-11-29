@@ -129,7 +129,7 @@ new Vue({
   // The data object for the Vue instance.
   // Vue will recursively convert its properties into getter/setters to make it “reactive”. 
   // Note: you should not use an arrow function with the data property
-  data: function () {
+  data () {
     return {
       a: 1,
       b: 2
@@ -183,7 +183,7 @@ new Vue({
   // the Vue instance.
   methods: {
     // Note: you should not use an arrow function to define a method.
-    plus: function () {
+    plus () {
       this.a++
     }
   }
@@ -220,7 +220,7 @@ new Vue({
   // The render function receives a createElement method as it’s first argument used to create VNodes.
   // If the component is a functional component, the render function also receives an extra argument context,
   // which provides access to contextual data since functional components are instance-less.
-  render: function (createElement) {
+  render (createElement) {
     // create kebabCase id
     var headingId = getChildrenTextContent(this.$slots.default)
     .toLowerCase()
@@ -255,7 +255,107 @@ new Vue({
  * ******************************************************************************************* */
 
 
+// All lifecycle hooks automatically have their this context bound to the instance,
+// so that you can access data, computed properties, and methods. This means you should not
+// use an arrow function to define a lifecycle method (e.g. created: () => this.fetchTodos()).
+// The reason is arrow functions bind the parent context, so this will not be the Vue instance as
+// you expect and this.fetchTodos will be undefined.
 
+new Vue({
+  // Called synchronously immediately after the instance has been initialized,
+  // before data observation and event/watcher setup.
+  beforeCreate () {
+    console.log('The instance has been initialized')
+  },
+
+  // Called synchronously after the instance is created. At this stage, the instance has
+  // finished processing the options which means the following have been set up: data observation,
+  // computed properties, methods, watch/event callbacks. However, the mounting phase has not been
+  // started, and the $el property will not be available yet.
+  created () {
+    console.log('The instance has been created')
+  },
+
+  // Called right before the mounting begins: the render function
+  // is about to be called for the first time.
+  beforeMount () {
+    console.log('The instance is about to be mounted')
+  },
+
+  // Called after the instance has been mounted, where el is replaced by the newly created vm.$el.
+  // If the root instance is mounted to an in-document element, vm.$el will also be in-document when
+  // mounted is called.
+  mounted () {
+    console.log('The instance has been mounted')
+
+    // Note that mounted does not guarantee that all child components have also been mounted.
+    // If you want to wait until the entire view has been rendered, you can use vm.$nextTick
+    // inside of mounted:
+    this.$nextTick(function () {
+      // Code that will run only after the
+      // entire view has been rendered
+    })
+  },
+
+  // Called when the data changes, before the virtual DOM is re-rendered and patched.
+  // You can perform further state changes in this hook and they will not trigger additional re-renders.
+  // This hook is not called during server-side rendering.  
+  beforeUpdate () {
+    console.log('The instance is about to be re-rendered and patched')
+  },
+
+  // The component’s DOM will have been updated when this hook is called, so you can perform DOM-dependent
+  // operations here. However, in most cases you should avoid changing state inside the hook. To react
+  // to state changes, it’s usually better to use a computed property or watcher instead.
+  updated () {
+    console.log('The instance has been re-rendered and patched')
+
+    // Note that updated does not guarantee that all child components have also been re-rendered.
+    // If you want to wait until the entire view has been re-rendered, you can use vm.$nextTick
+    // inside of updated:
+    this.$nextTick(function () {
+      // Code that will run only after the
+      // entire view has been re-rendered
+    })
+  },
+
+  // Called when a kept-alive component is activated.
+  activated () {
+    console.log('Component activated')
+  },
+
+  // Called when a kept-alive component is deactivated.  
+  deactivated () {
+    console.log('Component deactivated')
+  },
+
+  // Called right before a Vue instance is destroyed.
+  // At this stage the instance is still fully functional.
+  beforeDestroy () {
+    console.log('The instance is about to be destroyed')
+  },
+
+  // Called after a Vue instance has been destroyed.
+  // When this hook is called, all directives of the Vue instance have been unbound,
+  // all event listeners have been removed, and all child Vue instances have also been destroyed.  
+  destroyed () {
+    console.log('The instance has been destroyed')
+  },
+
+  // Called when an error from any descendent component is captured.
+  // The hook receives three arguments: the error, the component instance that triggered the error,
+  // and a string containing information on where the error was captured.
+  // The hook can return false to stop the error from propagating further.
+  errorCaptured (error, vm, info) {
+    console.log(`The error (${error}) has been captured for ${vm}: ${info}`)
+
+    // An errorCaptured hook can return false to prevent the error from propagating further.
+    // This is essentially saying “this error has been handled and should be ignored.”
+    // It will prevent any additional errorCaptured hooks or the global config.errorHandler
+    // from being invoked for this error.
+    return false
+  },
+})
 
 
 /* *******************************************************************************************
