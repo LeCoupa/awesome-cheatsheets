@@ -6,10 +6,17 @@
  * ******************************************************************************************* */
 
 
-Vue.config.devtools = true        // Configure whether to allow vue-devtools inspection
-Vue.config.performance = true     // Enable component init, compile, render and patch performance tracing in the browser devtool timeline.
-Vue.config.productionTip = false  // Prevent the production tip on Vue startup.
-Vue.config.silent = false         // Suppress all Vue logs and warnings
+// Configure whether to allow vue-devtools inspection
+Vue.config.devtools = true
+
+// Enable component init, compile, render and patch performance tracing in the browser devtool timeline.
+Vue.config.performance = true
+
+// Prevent the production tip on Vue startup.
+Vue.config.productionTip = false
+
+// Suppress all Vue logs and warnings
+Vue.config.silent = false
 
 // Make Vue ignore custom elements defined outside of Vue
 Vue.config.ignoredElements = [
@@ -382,7 +389,62 @@ new Vue({
  * ******************************************************************************************* */
 
 
+// The data object that the Vue instance is observing.
+// The Vue instance proxies access to the properties on its data object.
+vm.$data
 
+// An object representing the current props a component has received.
+// The Vue instance proxies access to the properties on its props object.
+vm.$props
+
+// The root DOM element that the Vue instance is managing.
+vm.$el
+
+// The instantiation options used for the current Vue instance.
+// This is useful when you want to include custom properties in the options:
+vm.$options
+
+// The parent instance, if the current instance has one.
+vm.$parent
+
+// The root Vue instance of the current component tree.
+// If the current instance has no parents this value will be itself.
+vm.$root
+
+// The direct child components of the current instance.
+// Note there’s no order guarantee for $children, and it is not reactive.
+// If you find yourself trying to use $children for data binding,
+// consider using an Array and v-for to generate child components,
+// and use the Array as the source of truth.
+vm.$children
+
+// Used to programmatically access content distributed by slots.
+// Each named slot has its own corresponding property (e.g. the contents of slot="foo" will
+// be found at vm.$slots.foo). The default property contains any nodes not included in a named slot.
+// Accessing vm.$slots is most useful when writing a component with a render function.
+vm.$slots
+
+// Used to programmatically access scoped slots. For each slot, including the default one, the
+// object contains a corresponding function that returns VNodes.
+// Accessing vm.$scopedSlots is most useful when writing a component with a render function.
+vm.$scopedSlots
+
+// An object that holds child components that have ref registered.
+vm.$refs
+
+// Whether the current Vue instance is running on the server.
+vm.$isServer
+
+// Contains parent-scope attribute bindings (except for class and style) that are not recognized
+// (and extracted) as props. When a component doesn’t have any declared props, this essentially
+// contains all parent-scope bindings (except for class and style), and can be passed down to an
+// inner component via v-bind="$attrs" - useful when creating higher-order components.
+vm.$attrs
+
+// Contains parent-scope v-on event listeners (without .native modifiers).
+// This can be passed down to an inner component via v-on="$listeners" - useful when creating
+// higher-order components.
+vm.$listeners
 
 
 /* *******************************************************************************************
