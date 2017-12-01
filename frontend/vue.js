@@ -482,10 +482,10 @@ var unwatch = vm.$watch('a.b.c', function (newVal, oldVal) {
 unwatch()
 
 // This is the alias of the global Vue.set.
-vm.$set( target, key, value )
+vm.$set(target,key, value)
 
 // This is the alias of the global Vue.delete.
-vm.$delete( target, key )
+vm.$delete(target, key)
 
 
 /* *******************************************************************************************
@@ -494,7 +494,23 @@ vm.$delete( target, key )
  * ******************************************************************************************* */
 
 
+// Listen for a custom event on the current vm. Events can be triggered by vm.$emit.
+// The callback will receive all the additional arguments passed into these event-triggering methods.
+vm.$on(event, callback)
 
+// Listen for a custom event, but only once.
+// The listener will be removed once it triggers for the first time.
+vm.$once(event, callback)
+
+// Remove custom event listener(s).
+// If no arguments are provided, remove all event listeners;
+// If only the event is provided, remove all listeners for that event;
+// If both event and callback are given, remove the listener for that specific callback only.
+vm.$off([event, callback])
+
+// Trigger an event on the current instance.
+// Any additional arguments will be passed into the listener’s callback function.
+vm.$emit(event, […args])
 
 
 /* *******************************************************************************************
