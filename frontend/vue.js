@@ -546,58 +546,51 @@ vm.$destroy()
  * ******************************************************************************************* */
 
 
-// --- Updates the element’s textContent.
-// --- If you need to update the part of textContent, you should use {{ Mustache }} interpolations.
-
+// <!-- Updates the element’s textContent. -->
+// <!-- If you need to update the part of textContent, you should use {{ Mustache }} interpolations. -->
 
 // <span v-text="msg"></span>
 
 
-// --- Updates the element’s innerHTML. Note that the contents are inserted as plain HTML -
-// --- they will not be compiled as Vue templates. If you find yourself trying to compose templates
-// --- using v-html, try to rethink the solution by using components instead.
-
+// <!-- Updates the element’s innerHTML. Note that the contents are inserted as plain HTML -->
+// <!-- they will not be compiled as Vue templates. If you find yourself trying to compose templates -->
+// <!-- using v-html, try to rethink the solution by using components instead. -->
 
 // <div v-html="html"></div>
 
 
-// --- Toggle’s the element’s display CSS property based on the truthy-ness of the expression value.
-// --- This directive triggers transitions when its condition changes.
-
+// <!-- Toggle’s the element’s display CSS property based on the truthy-ness of the expression value. -->
+// <!-- This directive triggers transitions when its condition changes. -->
 
 // <div v-show="condition"></div>
 
 
-// --- Conditionally render the element based on the truthy-ness of the expression value.
-// --- The element and its contained directives / components are destroyed and re-constructed
-// --- during toggles. If the element is a <template> element, its content will be extracted as
-// --- the conditional block. This directive triggers transitions when its condition changes.
-
+// <!-- Conditionally render the element based on the truthy-ness of the expression value. -->
+// <!-- The element and its contained directives / components are destroyed and re-constructed -->
+// <!-- during toggles. If the element is a <template> element, its content will be extracted as -->
+// <!-- the conditional block. This directive triggers transitions when its condition changes. -->
 
 // <div v-if="condition"></div>
 // <div v-else-if="anotherCondition"></div>
 // <div v-else></div>
 
 
-// --- Render the element or template block multiple times based on the source data.
-// --- The directive’s value must use the special syntax alias in expression to provide an alias
-// --- for the current element being iterated on:
-
+// <!-- Render the element or template block multiple times based on the source data. -->
+// <!-- The directive’s value must use the special syntax alias in expression to provide an alias -->
+// <!-- for the current element being iterated on: -->
 
 // <div v-for="item in items">{{ item.text }}</div>
 
 
-// --- Alternatively, you can also specify an alias for the index (or the key if used on an Object):
-
+// <!-- Alternatively, you can also specify an alias for the index (or the key if used on an Object): -->
 
 // <div v-for="(item, index) in items"></div>
 // <div v-for="(val, key) in object"></div>
 // <div v-for="(val, key, index) in object"></div>
 
 
-// --- Attaches an event listener to the element. The event type is denoted by the argument.
-// --- The expression can be a method name, an inline statement, or omitted if there are modifiers present.
-
+// <!-- Attaches an event listener to the element. The event type is denoted by the argument. -->
+// <!-- The expression can be a method name, an inline statement, or omitted if there are modifiers present. -->
 
 // .stop:                                           Call event.stopPropagation().
 // .prevent:                                        Call event.preventDefault().
@@ -624,10 +617,9 @@ vm.$destroy()
 // The click event will be triggered at most once:  <button v-on:click.once="doThis"></button>
 
 
-// --- Dynamically bind one or more attributes, or a component prop to an expression.
-// --- When used to bind the class or style attribute, it supports additional value types such as
-// --- Array or Objects. See linked guide section below for more details.
-
+// <!-- Dynamically bind one or more attributes, or a component prop to an expression. -->
+// <!-- When used to bind the class or style attribute, it supports additional value types such as -->
+// <!-- Array or Objects. See linked guide section below for more details. -->
 
 // .prop:                                                    Bind as a DOM property instead of an attribute.
 // .camel:                                                   (2.1.0+) transform the kebab-case attribute name into camelCase.
@@ -645,9 +637,8 @@ vm.$destroy()
 // XLink:                                                    <svg><a :xlink:special="foo"></a></svg>
 
 
-// --- Create a two-way binding on a form input element or a component.
-// --- For detailed usage and other notes, see the Guide section linked below.
-
+// <!-- Create a two-way binding on a form input element or a component. -->
+// <!-- For detailed usage and other notes, see the Guide section linked below. -->
 
 // .lazy:    Listen to change events instead of input
 // .number:  Cast input string to numbers
@@ -658,27 +649,24 @@ vm.$destroy()
 // <input type="checkbox" id="checkbox" v-model="checked">
 
 
-// --- Skip compilation for this element and all its children.
-// --- You can use this for displaying raw mustache tags.
-// --- Skipping large numbers of nodes with no directives on them can also speed up compilation.
-
+// <!-- Skip compilation for this element and all its children. -->
+// <!-- You can use this for displaying raw mustache tags. -->
+// <!-- Skipping large numbers of nodes with no directives on them can also speed up compilation. -->
 
 // <span v-pre>{{ this will not be compiled }}</span>
 
 
-// --- This directive will remain on the element until the associated Vue instance finishes
-// --- compilation. Combined with CSS rules such as [v-cloak] { display: none }, this directive
-// --- can be used to hide un-compiled mustache bindings until the Vue instance is ready.
-
+// <!-- This directive will remain on the element until the associated Vue instance finishes -->
+// <!-- compilation. Combined with CSS rules such as [v-cloak] { display: none }, this directive -->
+// <!-- can be used to hide un-compiled mustache bindings until the Vue instance is ready. -->
 
 // <div v-cloak>{{ message }}</div>
 // [v-cloak] { display: none; }
 
 
-// --- Render the element and component once only. On subsequent re-renders, the element/component
-// --- and all its children will be treated as static content and skipped. This can be used to
-// --- optimize update performance.
-
+// <!-- Render the element and component once only. On subsequent re-renders, the element/component -->
+// <!-- and all its children will be treated as static content and skipped. This can be used to -->
+// <!-- optimize update performance. -->
 
 // <span v-once>This will never change: {{msg}}</span>
 // <my-component v-once :comment="msg"></my-component>
@@ -690,7 +678,34 @@ vm.$destroy()
  * ******************************************************************************************* */
 
 
+// <!-- The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to -->
+// <!-- identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses -->
+// <!-- an algorithm that minimizes element movement and tries to patch/reuse elements of the same type -->
+// <!-- in-place as much as possible. With keys, it will reorder elements based on the order change of -->
+// <!-- keys, and elements with keys that are no longer present will always be removed/destroyed. -->
 
+// <ul><li v-for="item in items" :key="item.id">...</li></ul>
+// <transition><span :key="text">{{ text }}</span></transition>
+
+
+// <!-- ref is used to register a reference to an element or a child component. The reference will be -->
+// <!-- registered under the parent component’s $refs object. If used on a plain DOM element, the -->
+// <!-- reference will be that element; if used on a child component, the reference will be component instance: -->
+
+// <!-- vm.$refs.p will be the DOM node -->
+// <p ref="p">hello</p>
+
+// <!-- vm.$refs.child will be the child comp instance -->
+// <child-comp ref="child"></child-comp>
+
+
+// <!-- Used on content inserted into child components to indicate which named slot the content belongs to. -->
+// Child markup:  <header><slot name="header"></slot></header>
+// Parent markup: <app-layout><h1 slot="header">Here might be a page title</h1></app-layout>
+
+
+// <!-- Used for dynamic components and to work around limitations of in-DOM templates. -->
+// <component :is="currentView"></component>
 
 
 /* *******************************************************************************************
