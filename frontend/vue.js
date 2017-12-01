@@ -88,11 +88,11 @@ Vue.directive('my-directive', function () {
 // Getter, return the directive definition if registered
 var myDirective = Vue.directive('my-directive')
 
-// Getter, return the filter if registered
-var myFilter = Vue.filter('my-filter')
-
 // Register a global filter
 Vue.filter('my-filter', function (value) { })
+
+// Getter, return the filter if registered
+var myFilter = Vue.filter('my-filter')
 
 // Register an extended constructor
 Vue.component('my-component', Vue.extend({ }))
