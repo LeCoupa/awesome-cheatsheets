@@ -371,7 +371,49 @@ new Vue({
  * ******************************************************************************************* */
 
 
+new Vue({
+  // A hash of directives to be made available to the Vue instance.
+  directives: {
+    myDirective: {
+      // Called only once, when the directive is first bound to the element.
+      // This is where you can do one-time setup work.
+      bind: function (el, binding, vnode, oldVnode) {
+        console.log('The directive is first bound to the element.')
+      },
 
+      // Called when the bound element has been inserted into its parent node
+      // (this only guarantees parent node presence, not necessarily in-document).
+      inserted: function (el, binding, vnode, oldVnode) {
+        console.log('The bound element has been inserted into its parent node.')
+      },
+
+      // Called after the containing component’s VNode has updated, but possibly before its
+      // children have updated. The directive’s value may or may not have changed, but you can
+      // skip unnecessary updates by comparing the binding’s current and old values (see below
+      // on hook arguments).
+      update: function (el, binding, vnode, oldVnode) {
+        console.log('The component VNode has updated.')
+      },
+
+      // Called after the containing component’s VNode and the VNodes of its children have updated.
+      componentUpdated: function (el, binding, vnode, oldVnode) {
+        console.log('The component’s VNode and the VNodes of its children have updated.')
+      },
+      
+      // Called only once, when the directive is unbound from the element.
+      unbind: function (el, binding, vnode, oldVnode) {
+        console.log('The directive is unbound from the element.')
+      },
+    }
+  },
+
+  // A hash of filters to be made available to the Vue instance.
+  filters: {
+    myFilter: function (value) {
+      console.log('Do your computations and return something to display.')
+    }
+  }
+})
 
 
 /* *******************************************************************************************
@@ -700,34 +742,11 @@ vm.$destroy()
 
 
 // <!-- Used on content inserted into child components to indicate which named slot the content belongs to. -->
-// Child markup:  <header><slot name="header"></slot></header>
-// Parent markup: <app-layout><h1 slot="header">Here might be a page title</h1></app-layout>
+// <!-- Child markup: -->
+// <header><slot name="header"></slot></header>
+// <!-- Parent markup: -->
+// <app-layout><h1 slot="header">Here might be a page title</h1></app-layout>
 
 
 // <!-- Used for dynamic components and to work around limitations of in-DOM templates. -->
 // <component :is="currentView"></component>
-
-
-/* *******************************************************************************************
- * BUILT-IN COMPONENTS
- * https://vuejs.org/v2/api/#Built-In-Components
- * ******************************************************************************************* */
-
-
-
-
-
-/* *******************************************************************************************
- * VNODE INTERFACE
- * https://vuejs.org/v2/api/#VNode-Interface
- * ******************************************************************************************* */
-
-
-
-
-/* *******************************************************************************************
- * SERVER-SIDE RENDERING
- * https://vuejs.org/v2/api/#Server-Side-Rendering
- * ******************************************************************************************* */
-
-
