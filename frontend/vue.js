@@ -546,7 +546,142 @@ vm.$destroy()
  * ******************************************************************************************* */
 
 
+// --- Updates the element’s textContent.
+// --- If you need to update the part of textContent, you should use {{ Mustache }} interpolations.
 
+
+// <span v-text="msg"></span>
+
+
+// --- Updates the element’s innerHTML. Note that the contents are inserted as plain HTML -
+// --- they will not be compiled as Vue templates. If you find yourself trying to compose templates
+// --- using v-html, try to rethink the solution by using components instead.
+
+
+// <div v-html="html"></div>
+
+
+// --- Toggle’s the element’s display CSS property based on the truthy-ness of the expression value.
+// --- This directive triggers transitions when its condition changes.
+
+
+// <div v-show="condition"></div>
+
+
+// --- Conditionally render the element based on the truthy-ness of the expression value.
+// --- The element and its contained directives / components are destroyed and re-constructed
+// --- during toggles. If the element is a <template> element, its content will be extracted as
+// --- the conditional block. This directive triggers transitions when its condition changes.
+
+
+// <div v-if="condition"></div>
+// <div v-else-if="anotherCondition"></div>
+// <div v-else></div>
+
+
+// --- Render the element or template block multiple times based on the source data.
+// --- The directive’s value must use the special syntax alias in expression to provide an alias
+// --- for the current element being iterated on:
+
+
+// <div v-for="item in items">{{ item.text }}</div>
+
+
+// --- Alternatively, you can also specify an alias for the index (or the key if used on an Object):
+
+
+// <div v-for="(item, index) in items"></div>
+// <div v-for="(val, key) in object"></div>
+// <div v-for="(val, key, index) in object"></div>
+
+
+// --- Attaches an event listener to the element. The event type is denoted by the argument.
+// --- The expression can be a method name, an inline statement, or omitted if there are modifiers present.
+
+
+// .stop:                                           Call event.stopPropagation().
+// .prevent:                                        Call event.preventDefault().
+// .capture:                                        Add event listener in capture mode.
+// .self:                                           Only trigger handler if event was dispatched from this element.
+// .{keyCode | keyAlias}:                           Only trigger handler on certain keys.
+// .native:                                         Listen for a native event on the root element of component.
+// .once:                                           Trigger handler at most once.
+// .left:                                           (2.2.0+) only trigger handler for left button mouse events.
+// .right:                                          (2.2.0+) only trigger handler for right button mouse events.
+// .middle:                                         (2.2.0+) only trigger handler for middle button mouse events.
+// .passive:                                        (2.3.0+) attaches a DOM event with { passive: true }.
+
+// Method handler:                                  <button v-on:click="doThis"></button>
+// Object syntax (2.4.0+):                          <button v-on="{ mousedown: onMouseDown, mouseup: onMouseUp }"></button>
+// Inline statement:                                <button v-on:click="doThat('hello', $event)"></button>
+// Shorthand:                                       <button @click="doThis"></button>
+// Stop propagation:                                <button @click.stop="doThis"></button>
+// Prevent default:                                 <button @click.prevent="doThis"></button>
+// Prevent default without expression:              <form @submit.prevent></form>
+// Chain modifiers:                                 <button @click.stop.prevent="doThis"></button>
+// Key modifier using keyAlias:                     <input @keyup.enter="onEnter">
+// Key modifier using keyCode:                      <input @keyup.13="onEnter">
+// The click event will be triggered at most once:  <button v-on:click.once="doThis"></button>
+
+
+// --- Dynamically bind one or more attributes, or a component prop to an expression.
+// --- When used to bind the class or style attribute, it supports additional value types such as
+// --- Array or Objects. See linked guide section below for more details.
+
+
+// .prop:                                                    Bind as a DOM property instead of an attribute.
+// .camel:                                                   (2.1.0+) transform the kebab-case attribute name into camelCase.
+// .sync:                                                    (2.3.0+) a syntax sugar that expands into a v-on handler for updating the bound value.
+
+// Bind an attribute:                                        <img v-bind:src="imageSrc">
+// Shorthand:                                                <img :src="imageSrc">
+// With inline string concatenation:                         <img :src="'/path/to/images/' + fileName">
+// Class binding:                                            <div :class="{ red: isRed }"></div>
+// Style binding:                                            <div :style="{ fontSize: size + 'px' }"></div>
+// Binding an object of attributes                           <div v-bind="{ id: someProp, 'other-attr': otherProp }"></div>
+// DOM attribute binding with prop modifier:                 <div v-bind:text-content.prop="text"></div>
+// Prop binding. "prop" must be declared in my-component:    <my-component :prop="someThing"></my-component>
+// Pass down parent props in common with a child component:  <child-component v-bind="$props"></child-component>
+// XLink:                                                    <svg><a :xlink:special="foo"></a></svg>
+
+
+// --- Create a two-way binding on a form input element or a component.
+// --- For detailed usage and other notes, see the Guide section linked below.
+
+
+// .lazy:    Listen to change events instead of input
+// .number:  Cast input string to numbers
+// .trim:    Trim input
+
+// <input v-model="message" placeholder="edit me">
+// <textarea v-model="message" placeholder="add multiple lines"></textarea>
+// <input type="checkbox" id="checkbox" v-model="checked">
+
+
+// --- Skip compilation for this element and all its children.
+// --- You can use this for displaying raw mustache tags.
+// --- Skipping large numbers of nodes with no directives on them can also speed up compilation.
+
+
+// <span v-pre>{{ this will not be compiled }}</span>
+
+
+// --- This directive will remain on the element until the associated Vue instance finishes
+// --- compilation. Combined with CSS rules such as [v-cloak] { display: none }, this directive
+// --- can be used to hide un-compiled mustache bindings until the Vue instance is ready.
+
+
+// <div v-cloak>{{ message }}</div>
+// [v-cloak] { display: none; }
+
+
+// --- Render the element and component once only. On subsequent re-renders, the element/component
+// --- and all its children will be treated as static content and skipped. This can be used to
+// --- optimize update performance.
+
+
+// <span v-once>This will never change: {{msg}}</span>
+// <my-component v-once :comment="msg"></my-component>
 
 
 /* *******************************************************************************************
