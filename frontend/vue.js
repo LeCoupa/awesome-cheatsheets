@@ -422,7 +422,25 @@ new Vue({
  * ******************************************************************************************* */
 
 
+new Vue({
+  // Specify the parent instance for the instance to be created. Establishes a parent-child
+  // relationship between the two. The parent will be accessible as this.$parent for the child,
+  // and the child will be pushed into the parent’s $children array.
+  parent: vueInstance,
 
+  // The mixins option accepts an array of mixin objects. These mixin objects can contain instance
+  // options like normal instance objects, and they will be merged against the eventual options
+  // using the same option merging logic in Vue.extend(). e.g. If your mixin contains a created
+  // hook and the component itself also has one, both functions will be called.
+  // Mixin hooks are called in the order they are provided, and called before the component’s own hooks.
+  mixins: [mixin],
+
+  // Allows declaratively extending another component (could be either a plain options object or a
+  // constructor) without having to use Vue.extend. This is primarily intended to make it easier to
+  // extend between single file components. This is similar to mixins, the difference being that
+  // the component’s own options takes higher priority than the source component being extended.
+  extends: ObjectOrFunction,
+})
 
 
 /* *******************************************************************************************
@@ -431,7 +449,36 @@ new Vue({
  * ******************************************************************************************* */
 
 
+new Vue({
+  // Allow the component to recursively invoke itself in its template.
+  // Note that when a component is registered globally with Vue.component(), the global ID is
+  // automatically set as its name.
+  // Another benefit of specifying a name option is debugging. Named components result in more
+  // helpful warning messages. Also, when inspecting an app in the vue-devtools, unnamed components
+  // will show up as <AnonymousComponent>, which isn’t very informative. By providing the name
+  // option, you will get a much more informative component tree.
+  name: 'myComponent',
 
+  // Change the plain text interpolation delimiters.
+  delimiters: ['${', '}'],
+
+  // Causes a component to be stateless (no data) and instanceless (no this context). They are
+  // only a render function that returns virtual nodes making them much cheaper to render.
+  functional: true,
+
+  // By default, parent scope attribute bindings that are not recognized as props will
+  // “fallthrough” and be applied to the root element of the child component as normal HTML
+  // attributes. When authoring a component that wraps a target element or another component,
+  // this may not always be the desired behavior. By setting inheritAttrs to false, this default
+  // behavior can be disabled. The attributes are available via the $attrs instance property
+  // (also new in 2.4) and can be explicitly bound to a non-root element using v-bind.
+  // Note: this option does not affect class and style bindings.  
+  inheritAttrs: true,
+
+  // When set to true, will preserve and render HTML comments found in templates. The default
+  // behavior is discarding them.
+  comments: true,
+})
 
 
 /* *******************************************************************************************
