@@ -389,6 +389,15 @@ new Vue({
  * ******************************************************************************************* */
 
 
+
+
+
+/* *******************************************************************************************
+ * INSTANCE PROPERTIES
+ * https://vuejs.org/v2/api/#Instance-Properties
+ * ******************************************************************************************* */
+
+
 // The data object that the Vue instance is observing.
 // The Vue instance proxies access to the properties on its data object.
 vm.$data
@@ -448,21 +457,35 @@ vm.$listeners
 
 
 /* *******************************************************************************************
- * INSTANCE PROPERTIES
- * https://vuejs.org/v2/api/#Instance-Properties
- * ******************************************************************************************* */
-
-
-
-
-
-/* *******************************************************************************************
  * INSTANCE METHODS > DATA
  * https://vuejs.org/v2/api/#Instance-Methods-Data
  * ******************************************************************************************* */
 
 
+// Watch an expression or a computed function on the Vue instance for changes.
+// The callback gets called with the new value and the old value.
+// The expression only accepts dot-delimited paths.
+// For more complex expressions, use a function instead.
+var unwatch = vm.$watch('a.b.c', function (newVal, oldVal) {
+  // do something
+}, {
+  // To also detect nested value changes inside Objects, you need to pass in deep: true
+  // in the options argument. Note that you don’t need to do so to listen for Array mutations.
+  deep: true,
 
+  // Passing in immediate: true in the option will trigger the callback immediately with the
+  // current value of the expression:
+  immediate: true
+})
+
+// later, teardown the watcher
+unwatch()
+
+// This is the alias of the global Vue.set.
+vm.$set( target, key, value )
+
+// This is the alias of the global Vue.delete.
+vm.$delete( target, key )
 
 
 /* *******************************************************************************************
