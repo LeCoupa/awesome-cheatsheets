@@ -519,7 +519,25 @@ vm.$emit(event, […args])
  * ******************************************************************************************* */
 
 
+// If a Vue instance didn’t receive the el option at instantiation, it will be in “unmounted”
+// state, without an associated DOM element. vm.$mount() can be used to manually start the mounting
+// of an unmounted Vue instance.
+vm.$mount([elementOrSelector])
 
+// Force the Vue instance to re-render. Note it does not affect all child components,
+// only the instance itself and child components with inserted slot content.
+vm.$forceUpdate()
+
+// Defer the callback to be executed after the next DOM update cycle.
+// Use it immediately after you’ve changed some data to wait for the DOM update.
+// This is the same as the global Vue.nextTick, except that the callback’s this context is
+// automatically bound to the instance calling this method.
+vm.$nextTick([callback])
+
+// Completely destroy a vm. Clean up its connections with other existing vms, unbind all its
+// directives, turn off all event listeners.
+// Triggers the beforeDestroy and destroyed hooks.
+vm.$destroy()
 
 
 /* *******************************************************************************************
