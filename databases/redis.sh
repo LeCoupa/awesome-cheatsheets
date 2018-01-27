@@ -21,7 +21,7 @@ STRLEN key                        # get the length of the value stored in a key
 MSET key value [key value ...]    # set multiple keys to multiple values
 MSETNX key value [key value ...]  # set multiple keys to multiple values, only if none of the keys exist
 GET key                           # get value in key
-GETRANGE key value                # get a substring value of a key and return its old value
+GETRANGE key start end            # get substring of stored value from start to end offsets (both inclusive)
 MGET key [key ...]                # get the values of all the given keys
 INCR key                          # increment value in key
 INCRBY key increment              # increment the integer value of a key by the given amount
