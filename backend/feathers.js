@@ -20,6 +20,25 @@
 npm install @feathersjs/feathers --save
 ```
 
+const feathers = require('@feathersjs/feathers');
+
+const app = feathers();                      // application initialization
+
+app.mixins                                   // contains a list of service mixins
+
+app.use(path, service)                       // allows registering a service object on a given path
+app.service(path)                            // returns the wrapped service object for the given path
+app.hooks(hooks)                             // allows registration of application-level hooks
+app.publish([event, ] publisher)             // registers a global event publisher
+app.configure(callback)                      // runs a callback function that gets passed the application object
+app.listen(port)                             // starts the application on the given port
+app.setup([server])                          // used to initialize all services by calling each services .setup(app, path) method (if available)
+app.set(name, value)                         // assigns setting name to value
+app.get(name)                                // retrieves the setting name
+app.on(eventname, listener)                  // registers a listener method for the given eventname
+app.emit(eventname, data)                    // emits the event eventname to all event listeners
+app.removeListener(eventname, [ listener ])  // removes all or the given listener for eventname
+
 
 /* *******************************************************************************************
  * 2. TRANSPORT: Expose a Feathers application as an API server.
