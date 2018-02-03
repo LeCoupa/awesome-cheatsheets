@@ -84,7 +84,7 @@ module.parent;    // The module that required this one.
 module.children;  // The module objects required by this one.
 
 exports.area = function (r) {
-  return 3.14 * r * r;
+  return Math.PI * r * r;
 };
 
 // If you want the root of your module's export to be a function (such as a constructor)
