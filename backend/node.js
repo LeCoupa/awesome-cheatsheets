@@ -543,9 +543,9 @@ os.EOL;                  // A constant defining the appropriate End-of-line mark
 // Buffer is used to dealing with binary data
 // Buffer is similar to an array of integers but corresponds to a raw memory allocation outside the V8 heap
 
-new Buffer(size);                                                   // Allocates a new buffer of size octets.
-new Buffer(array);                                                  // Allocates a new buffer using an array of octets.
-new Buffer(str, [encoding]);                                        // Allocates a new buffer containing the given str. encoding defaults to 'utf8'.
+Buffer.from(size);                                                  // Allocates a new buffer of size octets.
+Buffer.from(array);                                                 // Allocates a new buffer using an array of octets.
+Buffer.from(str, [encoding]);                                       // Allocates a new buffer containing the given str. encoding defaults to 'utf8'.
 
 Buffer.isEncoding(encoding);                                        // Returns true if the encoding is a valid encoding argument, or false otherwise.
 Buffer.isBuffer(obj);                                               // Tests if obj is a Buffer
