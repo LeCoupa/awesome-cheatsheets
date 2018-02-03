@@ -249,10 +249,10 @@ then
   statements]
 fi
 
-for x := 1 to 10 do
-begin
+for x in {1..10}
+do
   statements
-end
+done
 
 for name [in list]
 do
