@@ -29,6 +29,8 @@
 
 - [Django](backend/django.py)
 
+- [Feather.js](backend/feathers.js)
+
 - [Node.js](backend/node.js)
 
 
