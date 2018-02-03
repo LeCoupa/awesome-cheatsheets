@@ -39,6 +39,57 @@ app.on(eventname, listener)                  // registers a listener method for 
 app.emit(eventname, data)                    // emits the event eventname to all event listeners
 app.removeListener(eventname, [ listener ])  // removes all or the given listener for eventname
 
+// "Services" are the heart of every Feathers application.
+// Services are JavaScript objects (or instances of ES6 classes) that implement certain methods.
+// Feathers itself will also add some additional methods and functionality to its services.
+class MyService {
+  // Retrieves a list of all resources from the service.
+  // Provider parameters will be passed as params.query.
+  async find(params) {
+    return [];
+  }
+
+  // Retrieves a single resource with the given id from the service.
+  async get(id, params) {}
+
+  // Creates a new resource with data.
+  // The method should return the newly created data. data may also be an array.
+  async create(data, params) {}
+
+  // Replaces the resource identified by id with data.
+  // The method should return the complete, updated resource data.
+  // id can also be null when updating multiple records, with params.query containing the query criteria.
+  async update(id, data, params) {}
+
+  // Merges the existing data of the resource identified by id with the new data.
+  // id can also be null indicating that multiple resources should be patched with params.query containing the query criteria.
+  async patch(id, data, params) {}
+
+  // Removes the resource with id.
+  // The method should return the removed resource.
+  // id can also be null, which indicates the deletion of multiple resources, with params.query containing the query criteria.
+  async remove(id, params) {}
+
+  // A special method that initializes the service, passing an instance of the Feathers application
+  // and the path it has been registered on.
+  // For services registered before app.listen is invoked, the setup function of each registered service
+  // is called on invoking app.listen. For services registered after app.listen is invoked, setup is
+  // called automatically by Feathers when a service is registered.
+  setup(app, path) {}
+}
+
+app.use('/my-service', new MyService());
+
+// Important: Always use the service returned by app.service(path)
+const myService = app.service('my-service');
+
+myService.hooks(hooks)                             // register hooks for this service
+myService.publish([event, ] publisher)             // register an event publishing callback
+myService.mixin(mixin)                             // extends the functionality of a service
+myService.on(eventname, listener)                  // registers a listener method for the given eventname
+myService.emit(eventname, data)                    // emits the event eventname to all event listeners
+myService.removeListener(eventname, [ listener ])  // removes all listeners (or the given listener) for eventname
+
 
 /* *******************************************************************************************
  * 2. TRANSPORT: Expose a Feathers application as an API server.
