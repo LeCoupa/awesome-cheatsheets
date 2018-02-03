@@ -63,7 +63,7 @@ cat > <filename>              # places standard input into file
 more <filename>               # shows the first part of a file (move with space and type q to quit)
 head <filename>               # outputs the first 10 lines of file
 tail <filename>               # outputs the last 10 lines of file (useful with -f option)
-emacs <filename>              # lets you create and edit a file
+vim <filename>                # lets you create and edit a file
 mv <filename1> <filename2>    # moves a file
 cp <filename1> <filename2>    # copies a file
 rm <filename>                 # removes a file
