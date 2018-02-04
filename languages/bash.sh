@@ -411,7 +411,7 @@ trap dbgtrap DEBUG  # causes the trap code to be executed before every statement
 trap - DEBUG  # turn off the DEBUG trap
 
 function returntrap {
-  echo "A return occured"
+  echo "A return occurred"
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
