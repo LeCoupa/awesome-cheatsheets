@@ -87,6 +87,7 @@ myService.hooks(hooks)                             // register hooks for this se
 myService.publish([event, ] publisher)             // register an event publishing callback
 myService.mixin(mixin)                             // extends the functionality of a service
 myService.on(eventname, listener)                  // registers a listener method for the given eventname
+myService.once(eventname, listener)                // registers a listener method for the given eventname that will be triggered only one time
 myService.emit(eventname, data)                    // emits the event eventname to all event listeners
 myService.removeListener(eventname, [ listener ])  // removes all listeners (or the given listener) for eventname
 
