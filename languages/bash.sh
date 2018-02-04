@@ -376,7 +376,7 @@ cd; nano .bashrc
 > export websites="/Users/mac/Documents/websites"
 
 source .bashrc
-cd websites
+cd $websites
 
 
 ##############################################################################

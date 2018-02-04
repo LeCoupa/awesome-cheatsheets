@@ -90,6 +90,29 @@ myService.on(eventname, listener)                  // registers a listener metho
 myService.emit(eventname, data)                    // emits the event eventname to all event listeners
 myService.removeListener(eventname, [ listener ])  // removes all listeners (or the given listener) for eventname
 
+// Hooks are pluggable middleware functions that can be registered
+// before, after or on errors of a service method. You can register a
+// single hook function or create a chain of them to create complex work-flows.
+app.service('messages').hooks({
+  before: {
+    create(context) {
+      context.data.createdAt = new Date();
+    },
+
+    update(context) {
+      context.data.updatedAt = new Date();
+    },
+
+    patch(context) {
+      context.data.updatedAt = new Date();
+    }
+  },
+
+  error(context) {
+    console.error(`Error in ${context.path} calling ${context.method} method`, context.error);
+  }
+});
+
 
 /* *******************************************************************************************
  * 2. TRANSPORT: Expose a Feathers application as an API server.
