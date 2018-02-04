@@ -24,7 +24,7 @@ CTRL+T  # transposes two characters
 CTRL+U  # kills backward from point to the beginning of line
 CTRL+V  # makes the next character typed verbatim
 CTRL+W  # kills the word behind the cursor
-CTRL+X  # lists the possible filename completefions of the current word
+CTRL+X  # lists the possible filename completions of the current word
 CTRL+Y  # retrieves (yank) last item killed
 CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
 
