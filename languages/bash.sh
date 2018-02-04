@@ -154,7 +154,7 @@ ${#array[i]}                 # to find out the length of any element in the arra
 ${#array[@]}                 # to find out how many values there are in the array
 
 declare -a                   # the variables are treaded as arrays
-declare -f                   # uses funtion names only
+declare -f                   # uses function names only
 declare -F                   # displays function names without definitions
 declare -i                   # the variables are treaded as integers
 declare -r                   # makes the variables read-only
@@ -175,9 +175,9 @@ ${variable//pattern/string}  # the longest match to pattern in variable is repla
 
 ${#varname}                  # returns the length of the value of the variable as a character string
 
-*(patternlist)               # matches zero or more occurences of the given patterns
-+(patternlist)               # matches one or more occurences of the given patterns
-?(patternlist)               # matches zero or one occurence of the given patterns
+*(patternlist)               # matches zero or more occurrences of the given patterns
++(patternlist)               # matches one or more occurrences of the given patterns
+?(patternlist)               # matches zero or one occurrence of the given patterns
 @(patternlist)               # matches exactly one of the given patterns
 !(patternlist)               # matches anything except one of the given patterns
 
@@ -333,7 +333,7 @@ n<&-       # closes the input from file descripor n
 
 # To suspend a job, type CTRL+Z while it is running. You can also suspend a job with CTRL+Y.
 # This is slightly different from CTRL+Z in that the process is only stopped when it attempts to read input from terminal.
-# Of course, to interupt a job, type CTRL+C.
+# Of course, to interrupt a job, type CTRL+C.
 
 myCommand &  # runs job in the background and prompts back the shell
 
@@ -411,7 +411,7 @@ trap dbgtrap DEBUG  # causes the trap code to be executed before every statement
 trap - DEBUG  # turn off the DEBUG trap
 
 function returntrap {
-  echo "A return occured"
+  echo "A return occurred"
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
