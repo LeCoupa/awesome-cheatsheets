@@ -1,6 +1,6 @@
 # Awesome Cheatsheets
 
-> Useful cheatsheets with everything you should know in one single-file. 🚀
+> 🚀 Cheatsheets for popular programming languages & frameworks. What you should know organized in a single file.
 
 [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
