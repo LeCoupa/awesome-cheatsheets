@@ -175,8 +175,8 @@ ${variable//pattern/string}  # the longest match to pattern in variable is repla
 
 ${#varname}                  # returns the length of the value of the variable as a character string
 
-*(patternlist)               # matches zero or more occurences of the given patterns
-+(patternlist)               # matches one or more occurences of the given patterns
+*(patternlist)               # matches zero or more occurrences of the given patterns
++(patternlist)               # matches one or more occurrences of the given patterns
 ?(patternlist)               # matches zero or one occurence of the given patterns
 @(patternlist)               # matches exactly one of the given patterns
 !(patternlist)               # matches anything except one of the given patterns
