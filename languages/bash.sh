@@ -58,8 +58,8 @@ ls                            # lists your files
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
 ls -a                         # lists all files, including hidden files
 ln -s <filename> <link>       # creates symbolic link to file
-touch <filename>              # creates or updates your file
-cat > <filename>              # places standard input into file
+touch <filename>              # creates or updates (edit) your file
+cat > <filename>              # places standard input into file (can also be used to dump the content of a file on stdout)
 more <filename>               # shows the first part of a file (move with space and type q to quit)
 head <filename>               # outputs the first 10 lines of file
 tail <filename>               # outputs the last 10 lines of file (useful with -f option)
@@ -116,7 +116,7 @@ df                       # shows disk usage
 du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
 last <yourUsername>      # lists your last logins
 ps -u yourusername       # lists your processes
-kill <PID>               # kills (ends) the processes with the ID you gave
+kill <PID>               # kills the processes with the ID you gave
 killall <processname>    # kill all processes with the name
 top                      # displays your currently active processes
 bg                       # lists stopped or background jobs ; resume a stopped job in the background
@@ -143,9 +143,9 @@ echo $!                      # prints process ID of the most recently invoked ba
 echo $?                      # displays the exit status of the last command
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 
-array[0] = val               # several ways to define an array
-array[1] = val
-array[2] = val
+array[0]=val                 # several ways to define an array
+array[1]=val
+array[2]=val
 array=([2]=val [0]=val [1]=val)
 array(val val val)
 
