@@ -333,7 +333,7 @@ n<&-       # closes the input from file descripor n
 
 # To suspend a job, type CTRL+Z while it is running. You can also suspend a job with CTRL+Y.
 # This is slightly different from CTRL+Z in that the process is only stopped when it attempts to read input from terminal.
-# Of course, to interupt a job, type CTRL+C.
+# Of course, to interrupt a job, type CTRL+C.
 
 myCommand &  # runs job in the background and prompts back the shell
 
