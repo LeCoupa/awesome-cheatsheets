@@ -190,7 +190,7 @@ util.isArray(object);          // Returns true if the given "object" is an Array
 util.isRegExp(object);         // Returns true if the given "object" is a RegExp. false otherwise.
 util.isDate(object);           // Returns true if the given "object" is a Date. false otherwise.
 util.isError(object);          // Returns true if the given "object" is an Error. false otherwise.
-util.promisify(fn)             // Takes a function and returns a version that returns promises.
+util.promisify(fn)             // Takes a function whose last argument is a callback and returns a version that returns promises.
 
 util.inherits(constructor, superConstructor);  // Inherit the prototype methods from one constructor into another.
 
