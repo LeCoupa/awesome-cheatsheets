@@ -177,7 +177,7 @@ ${#varname}                  # returns the length of the value of the variable a
 
 *(patternlist)               # matches zero or more occurrences of the given patterns
 +(patternlist)               # matches one or more occurrences of the given patterns
-?(patternlist)               # matches zero or one occurence of the given patterns
+?(patternlist)               # matches zero or one occurrence of the given patterns
 @(patternlist)               # matches exactly one of the given patterns
 !(patternlist)               # matches anything except one of the given patterns
 
