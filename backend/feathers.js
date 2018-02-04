@@ -29,7 +29,7 @@ app.mixins                                   // contains a list of service mixin
 app.use(path, service)                       // allows registering a service object on a given path
 app.service(path)                            // returns the wrapped service object for the given path
 app.hooks(hooks)                             // allows registration of application-level hooks
-app.publish([event, ] publisher)             // registers a global event publisher
+app.publish([event,], publisher)             // registers a global event publisher
 app.configure(callback)                      // runs a callback function that gets passed the application object
 app.listen(port)                             // starts the application on the given port
 app.setup([server])                          // used to initialize all services by calling each services .setup(app, path) method (if available)
@@ -84,7 +84,7 @@ app.use('/my-service', new MyService());
 const myService = app.service('my-service');
 
 myService.hooks(hooks)                             // register hooks for this service
-myService.publish([event, ] publisher)             // register an event publishing callback
+myService.publish([event,], publisher)             // register an event publishing callback
 myService.mixin(mixin)                             // extends the functionality of a service
 myService.on(eventname, listener)                  // registers a listener method for the given eventname
 myService.once(eventname, listener)                // registers a listener method for the given eventname that will be triggered only one time
@@ -140,6 +140,27 @@ context.data      // [writable] contains the data of a create, update and patch 
 context.error     // [writable] contains the error object that was thrown in a failed method call (only available in error hooks)
 context.result    // [writable] contains the result of the successful service method call (only available in after hooks)
 context.dispatch  // [writable and optional] contains a "safe" version of the data that should be sent to any client
+
+// A channel is an object that contains a number of connections.
+// It can be created via app.channel and allows a connection to join or leave it.
+app.channel(name)                     // when given a single name, returns an existing or new named channel
+app.channel(name1, name2, ... nameN)  // when given multiples names, will return a combined channel.
+app.channels                          // returns a list of all existing channel names
+
+channel.join(connection)      // adds a connection to this channel
+channel.leave(connection|fn)  // removes a connection from this channel
+channel.filter(fn)            // returns a new channel filtered by a given function which gets passed the connection
+channel.send(data)            // returns a copy of this channel with customized data that should be sent for this event
+
+channel.connections  // contains a list of all connections in this channel
+channel.length       // returns the total number of connections in this channel
+
+service.publish([event,] fn)  // registers a publishing function for a specific service for a specific event or all events if no event name was given
+app.publish([event,] fn)
+
+app.on('connection', connection => {})  // fired every time a new real-time connection is established
+app.on('login', (payload, info) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
+
 
 
 /* *******************************************************************************************
