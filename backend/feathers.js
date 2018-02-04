@@ -93,25 +93,52 @@ myService.removeListener(eventname, [ listener ])  // removes all listeners (or 
 // Hooks are pluggable middleware functions that can be registered
 // before, after or on errors of a service method. You can register a
 // single hook function or create a chain of them to create complex work-flows.
-app.service('messages').hooks({
+app.service('my-service').hooks({
   before: {
-    create(context) {
-      context.data.createdAt = new Date();
-    },
+    all: [
+      // Use normal functions
+      function(context) { console.log('before all hook ran'); }
+    ],
 
-    update(context) {
-      context.data.updatedAt = new Date();
-    },
+    find: [
+      // Use ES6 arrow functions
+      context => console.log('before find hook 1 ran'),
+      context => console.log('before find hook 2 ran')
+    ],
 
-    patch(context) {
-      context.data.updatedAt = new Date();
-    }
+    async create (context) {
+      return context
+    },
   },
 
+  after: {
+    all: [],
+    find: [],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  },
+
+  // Here is an example for a very useful application hook that logs every service method error
+  // with the service and method name as well as the error stack
   error(context) {
     console.error(`Error in ${context.path} calling ${context.method} method`, context.error);
   }
 });
+
+context.app       // [read only] contains the Feathers application object
+context.service   // [read only] contains the service this hook currently runs on
+context.path      // [read only] contains the service name (or path) without leading or trailing slashes
+context.method    // [read only] contains the name of the service method (find, get, create, update...)
+context.type      // [read only] contains the hook type (one of before, after or error)
+context.params    // [writable] contains the service method parameters (including params.query)
+context.id        // [writable] contains the id for a get, remove, update and patch service method call
+context.data      // [writable] contains the data of a create, update and patch service method call
+context.error     // [writable] contains the error object that was thrown in a failed method call (only available in error hooks)
+context.result    // [writable] contains the result of the successful service method call (only available in after hooks)
+context.dispatch  // [writable and optional] contains a "safe" version of the data that should be sent to any client
 
 
 /* *******************************************************************************************
