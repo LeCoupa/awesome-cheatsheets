@@ -1,6 +1,6 @@
 # Awesome Cheatsheets
 
-> 🚀 Cheatsheets for popular programming languages & frameworks. What you should know organized in a single file.
+> 🚀 Cheatsheets for popular programming languages & frameworks. The MUST KNOWS of programming organized into a single repository.
 
 [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
@@ -55,4 +55,4 @@
 
 ## Contributions
 
-Any contribution to the code (via pull request would be nice) or any part of the documentation and any idea and/or suggestion are very welcome.
+Contributions to code, documentation, and general suggestions are most welcome. Please submit changes via pull request.
