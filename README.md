@@ -52,6 +52,8 @@
 
 - [Nanobox CLI](tools/nanobox_cli.sh)
 
+- [VIM](tools/vim.txt)
+
 
 ## Contributions
 
