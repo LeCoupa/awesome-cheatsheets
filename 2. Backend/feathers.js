@@ -18,6 +18,9 @@
 ```bash
 # Provides the ability to initialize new application instances
 npm install @feathersjs/feathers --save
+
+# Provides a set of standard error classes used by all other Feathers modules
+npm install @feathersjs/errors --save
 ```
 
 const feathers = require('@feathersjs/feathers');

@@ -7,25 +7,25 @@
 
 ## Table of Contents
 
-- [Languages](#languages)
+- [1. Languages](#languages)
 
-- [Backend](#backend)
+- [2. Backend](#backend)
 
-- [Frontend](#frontend)
+- [3. Frontend](#frontend)
 
-- [Databases](#databases)
+- [4. Databases](#databases)
 
-- [Tools](#tools)
+- [5. Tools](#tools)
 
 
-## Languages
+## 1. Languages
 
 - [Bash](languages/bash.sh)
 
 - [JavaScript](languages/javascript.js)
 
 
-## Backend
+## 2. Backend
 
 - [Django](backend/django.py)
 
@@ -34,17 +34,17 @@
 - [Node.js](backend/node.js)
 
 
-## Frontend
+## 3. Frontend
 
 - [Vue.js](frontend/vue.js)
 
 
-## Databases
+## 4. Databases
 
 - [Redis](databases/redis.sh)
 
 
-## Tools
+## 5. Tools
 
 - [Docker](tools/docker.sh)
 
