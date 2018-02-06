@@ -5,7 +5,7 @@
 > ❤️ If you love this repository, [you can click here to make it spread](https://ctt.ec/PHba4).
 
 
-## Why are we doing this?
+## Why Awesome CheatSheets?
 
 I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) but as it is easier to keep track of the history, I reorganized everything into a single repository. Most of the content is coming from official documentations or some books I have read.
 
