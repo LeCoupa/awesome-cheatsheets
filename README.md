@@ -1,6 +1,8 @@
 # Awesome Cheatsheets
 
-> 🚀 Useful single-file cheatsheets for popular programming languages, frameworks and tools.
+![AWESOME CHEATSHEETS LOgO](_images/awesome_cheatsheets_logo@2x.png)
+
+> 🚀 Useful single-file cheatsheets for popular programming languages, frameworks and development tools.
 
 [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
