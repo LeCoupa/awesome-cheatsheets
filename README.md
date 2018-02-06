@@ -2,8 +2,6 @@
 
 > 📚 Useful cheatsheets for popular programming languages, frameworks and development tools with everything you should know in one single file.
 
-> 🌟 **If you like this repository, feel free to star it.**
-
 ## Why are we doing this?
 
 I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) but as it is easier to keep track of the history, I reorganized everything into a single repository. Most of the content is coming from official documentations or some books I have read.
