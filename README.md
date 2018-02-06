@@ -2,7 +2,7 @@
 
 > 📚 Useful cheatsheets for popular programming languages, frameworks and development tools with everything you should know in one single file.
 
-> 🌟 If you like this repository, feel free to star it.
+> 🌟 **If you like this repository, feel free to star it.**
 
 ## Why are we doing this?
 
