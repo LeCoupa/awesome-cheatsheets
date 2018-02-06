@@ -563,3 +563,10 @@ buf[index];                                                         // Get and s
 buf.length;                                                         // The size of the buffer in bytes, Note that this is not necessarily the size of the contents
 
 buffer.INSPECT_MAX_BYTES;                                           // How many bytes will be returned when buffer.inspect() is called. This can be overridden by user modules.
+
+/* *******************************************************************************************
+ * JSON
+ * ******************************************************************************************* */
+
+JSON.parse(json);        // Returns an object which mapped from json
+JSON.stringify(object);  // Returns a json as string which mapped from object
