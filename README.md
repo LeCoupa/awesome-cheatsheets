@@ -1,6 +1,6 @@
 ![AWESOME CHEATSHEETS LOgO](_images/awesome_cheatsheets_logo@2x.png)
 
-> 🚀 Useful single-file cheatsheets for popular programming languages, frameworks and development tools.
+> 📚 Useful single-file cheatsheets for popular programming languages, frameworks and development tools.
 
 
 ## Table of Contents
