@@ -60,8 +60,3 @@ Feel free to browse each file to learn new things and to keep them at hand when 
 - [Nanobox CLI](tools/nanobox_cli.sh)
 
 - [VIM](tools/vim.txt)
-
-
-## Contributions
-
-Contributions to code, documentation, and general suggestions are most welcome. Please submit changes via pull request.
