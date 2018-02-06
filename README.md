@@ -2,7 +2,7 @@
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
-> ❤️ If you love this repository, [__you can click here to make it spread__](https://ctt.ec/PHba4).
+> ❤️ **If you love this repository, [you can click here to make it spread](https://ctt.ec/PHba4).**
 
 
 ## Why Awesome Cheatsheets?
