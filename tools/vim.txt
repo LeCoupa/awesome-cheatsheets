@@ -1,7 +1,7 @@
 ##############################################################################
 # VIM CHEATSHEET
-# http://www.vim.org/
-# https://vim.sourceforge.io/docs.php
+# WEBSITE: http://www.vim.org/  
+# DOCUMENTATION: https://vim.sourceforge.io/docs.php
 ##############################################################################
 
 
