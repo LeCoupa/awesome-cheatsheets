@@ -14,51 +14,60 @@ Feel free to browse each file to learn new things and to keep them at hand when 
 **If you want to follow this mindset for your favorite programming language, framework or development tool, you are more than welcome to contribute. Just submit changes via pull request and I will review it.**
 
 
-## Table of Contents
+## 📚 Table of Contents
+  
+## 📃 Languages
+<details>
+<summary>View contents</summary>
 
-- [Languages](#languages)
+* [Bash](languages/bash.sh)
 
-- [Backend](#backend)
+* [JavaScript](languages/javascript.js)
 
-- [Frontend](#frontend)
+</details>
 
-- [Databases](#databases)
+## 📦 Backend
+<details>
+<summary>View contents</summary>
 
-- [Tools](#tools)
+### Python
+  * [Django](backend/django.py)
 
+### Javascript
+  
+  * [Feathers.js](backend/feathers.js)
 
-## Languages
+  * [Node.js](backend/node.js)
+  
+</details>
 
-- [Bash](languages/bash.sh)
+## 🌐 Frontend
+<details>
+<summary>View contents</summary>
+  
+### Frameworks
+  * [Vue.js](frontend/vue.js)
+  
+</details>
 
-- [JavaScript](languages/javascript.js)
+## 🗃️ Databases
+<details>
+<summary>View contents</summary>
+  
+* [Redis](databases/redis.sh)
 
+</details>
 
-## Backend
+## 🔧 Tools
+<details>
+<summary>View contents</summary>
+  
+* [Docker](tools/docker.sh)
 
-- [Django](backend/django.py)
+* [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 
-- [Feathers.js](backend/feathers.js)
+* [Nanobox CLI](tools/nanobox_cli.sh)
 
-- [Node.js](backend/node.js)
+* [VIM](tools/vim.txt)
+</details>
 
-
-## Frontend
-
-- [Vue.js](frontend/vue.js)
-
-
-## Databases
-
-- [Redis](databases/redis.sh)
-
-
-## Tools
-
-- [Docker](tools/docker.sh)
-
-- [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-
-- [Nanobox CLI](tools/nanobox_cli.sh)
-
-- [VIM](tools/vim.txt)
