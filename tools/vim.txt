@@ -1,10 +1,12 @@
-*************
-*  Vim  *
-*************
+##############################################################################
+# VIM CHEATSHEET
+##############################################################################
 
 
-CURSOR MOVEMENT
-===============
+##############################################################################
+# CURSOR MOVEMENTS
+##############################################################################
+
 
 h                   move left
 j                   move down
@@ -46,8 +48,10 @@ tx                  search line forward before 'x'
 Tx                  search line backward before 'x'
 
 
-BOOKMARKS
-=========
+##############################################################################
+# BOOKMARKS
+##############################################################################
+
 
 :marks              list all the current marks
 ma                  make a bookmark named a at the current cursor position
@@ -56,8 +60,10 @@ ma                  make a bookmark named a at the current cursor position
 `.                  go to the line that you last edited
 
 
-INSERT MODE
-===========
+##############################################################################
+# INSERT MODE
+##############################################################################
+
 
 i                   start insert mode at cursor
 I                   insert at the beginning of the line
@@ -68,8 +74,10 @@ O                   open blank line above current line
 Esc                 exit insert mode
 
 
-EDITING
-=======
+##############################################################################
+# EDITING
+##############################################################################
+
 
 r                   replace a single character (does not use insert mode)
 R                   enter Insert mode, replacing characters rather than inserting
@@ -99,8 +107,10 @@ ddkp                swap current line with previous
 :r !{cmd}           execute {cmd} and insert its standard output below the cursor.
 
 
-DELETING TEXT
-=============
+##############################################################################
+# DELETING TEXT
+##############################################################################
+
 
 x                   delete current character
 X                   delete previous character
@@ -110,8 +120,10 @@ D                   delete from cursor to end of line
 :[range]d           delete [range] lines
 
 
-COPYING AND MOVING TEXT
-=======================
+##############################################################################
+# COPYING AND MOVING TEXT
+##############################################################################
+
 
 yw                  yank word
 yy                  yank (copy) a line
@@ -120,7 +132,6 @@ y$                  yank to end of line
 p                   put (paste) the clipboard after cursor/current line
 P                   put (paste) before cursor/current line
 :set paste          avoid unexpected effects in pasting
-
 :registers          display the contents of all registers
 "xyw                yank word into register x
 "xyy                yank line into register x
@@ -132,8 +143,10 @@ P                   put (paste) before cursor/current line
 :[line]put x        put the text from register x after [line]
 
 
-MACROS
-======
+##############################################################################
+# MACROS
+##############################################################################
+
 
 qa                  start recording macro 'a'
 q                   end recording macro
@@ -141,8 +154,10 @@ q                   end recording macro
 @:                  replay last command
 
 
-VISUAL MODE
-===========
+##############################################################################
+# VISUAL MODE
+##############################################################################
+
 
 v                   start visual mode, mark lines, then do command (such as y-yank)
 V                   start linewise visual mode
@@ -157,8 +172,9 @@ ib                  inner () block
 ib                  inner {} block
 Esc                 exit visual mode
 
-Visual mode commands
+VISUAL MODE COMMANDS
 --------------------
+
 >                   shift right
 <                   shift left
 c                   change (replace) marked text
@@ -167,8 +183,10 @@ d                   delete marked text
 ~                   switch case
 
 
-SPELLING
-========
+##############################################################################
+# SPELLING
+##############################################################################
+
 
 ]s                  next misspelled word
 [s                  previous misspelled word
@@ -177,8 +195,10 @@ zug                 undo last add word
 z=                  suggest word
 
 
-EXITING
-=======
+##############################################################################
+# EXITING
+##############################################################################
+
 
 :q                  quit Vim. This fails when changes have been made.
 :q!                 quit without writing.
@@ -192,8 +212,10 @@ ZZ                  write current file, if modified, and exit.
 ZQ                  quit current file and exit (same as ":q!").
 
 
-SEARCH/REPLACE
-==============
+##############################################################################
+# SEARCH/REPLACE
+##############################################################################
+
 
 /pattern                    search for pattern
 ?pattern                    search backward for pattern
@@ -207,9 +229,10 @@ N                           repeat search in opposite direction
                             with new in every file with confirmation, save and quit
 
 
+##############################################################################
+# MULTIPLE FILES
+##############################################################################
 
-MULTIPLE FILES
-==============
 
 :e filename         edit a file in a new buffer
 :tabe filename      edit a file in a new tab (Vim7, gVim)
@@ -221,8 +244,10 @@ MULTIPLE FILES
 :b vimrc            show buffer whose filename begins with "vimrc"
 
 
-WINDOWS
-=======
+##############################################################################
+# WINDOWS
+##############################################################################
+
 
 :sp f               split open f
 :vsp f              vsplit open f
@@ -241,8 +266,10 @@ CTRL-w =            equal window
 CTRL-w o            close other windows
 
 
-QUICKFIX WINDOW
-===============
+##############################################################################
+# QUICKFIX WINDOW
+##############################################################################
+
 
 copen               open quickfix window
 cclose              close quickfix window
@@ -253,8 +280,10 @@ clast               display the last error
 [count]cp           display [count] previous error
 
 
-PROGRAMMING
-===========
+##############################################################################
+# PROGRAMMING
+##############################################################################
+
 
 %                   show matching brace, bracket, or parenthese
 gf                  edit the file whose name is under or after the cursor
@@ -265,14 +294,10 @@ CTRL-o              move to previous position you were at
 CTRL-i              move to more recent position you were at
 
 
+##############################################################################
+# PLUGINS > ACK
+##############################################################################
 
-*************
-*  PLUGINS  *
-*************
-
-
-ACK (plugin)
-============
 
 :Ack                Search recursively in directory
 o                   to open (same as enter)
@@ -282,49 +307,62 @@ T                   to open in new tab silently
 q                   to close the quickfix window
 
 
-CHEAT (plugin)
-==============
+##############################################################################
+# PLUGINS > CHEAT
+##############################################################################
+
 
 :Cheat              open cheat sheet (with autocomplete)
 <leader>ch          open cheat sheet for word under the cursor
 
 
-GIST (plugin)
-=============
+##############################################################################
+# PLUGINS > GIST
+##############################################################################
+
 
 :Gist               post whole text to gist
 :Gist XXXXX         get gist XXXXX
 :Gist -l            list my gists
 
 
-GUNDO (plugin)
-==============
+##############################################################################
+# PLUGINS > GUNDO
+##############################################################################
+
 
 :GundoToggle        show undo tree
 
 
-LUSTYJUGGLER (plugin)
-=====================
+##############################################################################
+# PLUGINS > LUSTYJUGGLER
+##############################################################################
+
 
 <Leader>lj          show open buffers
 
 
-NERDCOMMENTER (plugin)
-======================
+##############################################################################
+# PLUGINS > NERDCOMMENTER
+##############################################################################
+
 
 <leader>cc          comment out line(s)
 <leader>c<space>    toggle the comment state of the selected line(s)
 
 
-NERDTREE (plugin)
-=================
+##############################################################################
+# PLUGINS > NERDTREE
+##############################################################################
+
 
 :NERDTreeToggle     show / hide file browser
 :NERDTreeFind       show current file in file browser
 :Bookmark name      bookmark the current node as "name"
 
-File
+FILE
 ----
+
 o                   open in prev window
 go                  preview
 t                   open in new tab
@@ -334,23 +372,26 @@ gi                  preview split
 s                   open vsplit
 gs                  preview vsplit
 
-Directory
+DIRECTORY
 ---------
+
 o                   open & close node
 O                   recursively open node
 x                   close parent of node
 X                   close all child nodes of current node recursively
 e                   explore selected dir
 
-Bookmark
+BOOKMARK
 --------
+
 o                   open bookmark
 t                   open in new tab
 T                   open in new tab silently
 D                   delete bookmark
 
-Tree navigation
+TREE NAVIGATION
 ---------------
+
 P                   go to root
 p                   go to parent
 K                   go to first child
@@ -358,8 +399,9 @@ J                   go to last child
 CTRL-j              go to next sibling
 CTRL-k              go to prev sibling
 
-Filesystem
+FILESYSTEM
 ----------
+
 C                   change tree root to the selected dir
 u                   move tree root up a dir
 U                   move tree root up a dir but leave old root open
@@ -368,47 +410,59 @@ R                   refresh current root
 m                   show menu
 cd                  change the CWD to the selected dir
 
-Tree filtering
+TREE FILTERING
 --------------
+
 I                   hidden files
 f                   file filters
 F                   files
 B                   bookmarks
 
-Other
+OTHER
 -----
+
 q                   close the NERDTree window
 A                   zoom (maximize-minimize) the NERDTree window
 ?                   toggle help
 
 
-PDV (plugin)
-============
+##############################################################################
+# PLUGINS > PDV
+##############################################################################
+
 
 CTRL-P              generate PHP DOC
 
 
-PICKACOLOR (plugin)
-===================
+##############################################################################
+# PLUGINS > PICKACOLOR
+##############################################################################
+
 
 :PickHEX            choose color in system color picker
 
 
-SNIPMATE (plugin)
-=================
+##############################################################################
+# PLUGINS > SNIPMATE
+##############################################################################
+
 
 <tab>               expand snippet
 
 
-SPARKUP (plugin)
-================
+##############################################################################
+# PLUGINS > SPARKUP
+##############################################################################
+
 
 CTRL-e              execute sparkup (zen coding expansion)
 CTRL-n              jump to the next empty tag / attribute
 
 
-SURROUND (plugin)
-=================
+##############################################################################
+# PLUGINS > SURROUND
+##############################################################################
+
 
 cs'"                change surrounding quotes to double-quotes
 cs(}                change surrounding parens to braces 
@@ -419,22 +473,28 @@ ysiw[               surround inner word with brackets
 vees'               surround 2 words (ee) with quotes '
 
 
-TABULAR (plugin)
-================
+##############################################################################
+# PLUGINS > TABULAR
+##############################################################################
+
 
 :Tabularize /,      line the selected lines up on the commas
 
 
-TAGLIST (plugin)
-================
+##############################################################################
+# PLUGINS > TAGLIST
+##############################################################################
+
 
 :TlistToggle        open / close taglist window
 <enter>             jump to tag or file
 <space>             display the tag prototype
 
 
-UNIMPAIRED (plugin)
-===================
+##############################################################################
+# PLUGINS > UNIMPAIRED
+##############################################################################
+
 
 [space              new line above
 ]space              new line below
@@ -448,8 +508,10 @@ UNIMPAIRED (plugin)
 ]Q                  jump to last quickfix item
 
 
-VIM-FUGITIVE (plugin)
-=====================
+##############################################################################
+# PLUGINS > VIM-FUGITIVE
+##############################################################################
+
 
 :Git                run a git command
 :Gstatus            git status : - to (un)stage , p to patch, C to commit
@@ -464,20 +526,26 @@ VIM-FUGITIVE (plugin)
 :Gbrowse            open github
 
 
-VIM-MARKDOWN-PREVIEW (plugin)
-=============================
+##############################################################################
+# PLUGINS > VIM-MARKDOWN-PREVIEW
+##############################################################################
+
 
 :Mm                 preview markdown document in webbrowser
 
 
-VIM-PEEPOPEN (plugin)
-=====================
+##############################################################################
+# PLUGINS > VIM-PEEPOPEN
+##############################################################################
+
 
 <Leader>p           open the current directory with the peepopen application (fuzzy search)
 
 
-VIM-SYMFONY (plugin)
-====================
+##############################################################################
+# PLUGINS > VIM-SYMFONY
+##############################################################################
+
 
 :Sview              open template file
 :Saction            open action file
@@ -490,10 +558,9 @@ VIM-SYMFONY (plugin)
 :Symfony            execute task
 
 
-
-*********************
-*  PERSONAL .VIMRC  *
-*********************
+##############################################################################
+# PERSONAL .VIMRC
+##############################################################################
 
 
 <leader>ev          edit vimrc file
