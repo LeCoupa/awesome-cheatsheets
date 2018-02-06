@@ -2,7 +2,7 @@
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
-> 🙏🏼 If you like this repository, [you can click here to make it spread](Test LinkCopy Linkhttps://ctt.ec/PHba4).
+> 🙏🏼 If you like this repository, [you can click here to make it spread](https://ctt.ec/PHba4).
 
 
 ## Why are we doing this?
