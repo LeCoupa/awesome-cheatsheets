@@ -1,6 +1,15 @@
 ![AWESOME CHEATSHEETS LOgO](_images/awesome_cheatsheets_logo@2x.png)
 
-> 📚 Useful single-file cheatsheets for popular programming languages, frameworks and development tools.
+> 📚 Useful cheatsheets for popular programming languages, frameworks and development tools. Everything you should know in one single file.
+
+
+## Why are we doing this?
+
+I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) but as it is easier to keep track of the history, I reorganized everything into a single repository. Most of the content is coming from official documentations or some books I have read.
+
+Feel free to browse each file to learn new things and to keep them at hand when you forgot about something. They have been designed to save you time and to provide a quick way to assess your knowledge.
+
+If you want to follow this mindset for your favorite programming language, framework or development tool, you are more than welcome to contribute. Just submit changes via pull request and I will review it.
 
 
 ## Table of Contents
