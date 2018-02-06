@@ -1,6 +1,6 @@
 # Awesome Cheatsheets
 
-> 🚀 Cheatsheets for popular programming languages & frameworks. The MUST KNOWS of programming organized into a single repository.
+> 🚀 Useful single-file cheatsheets for popular programming languages, frameworks and tools.
 
 [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
