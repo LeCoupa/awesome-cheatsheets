@@ -1,6 +1,9 @@
 ![AWESOME CHEATSHEETS LOgO](_images/awesome_cheatsheets_logo@2x.png)
 
-> 📚 Useful cheatsheets for popular programming languages, frameworks and development tools that include everything you should know in one single file.
+> 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
+
+> 🙏🏼 If you like this repository, [you can click here to make it spread](Test LinkCopy Linkhttps://ctt.ec/PHba4).
+
 
 ## Why are we doing this?
 
