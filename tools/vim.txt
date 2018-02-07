@@ -86,7 +86,7 @@ R                   enter Insert mode, replacing characters rather than insertin
 J                   join line below to the current one
 cc                  change (replace) an entire line
 cw                  change (replace) to the end of word
-c$                  change (replace) to the end of line
+C                   change (replace) to the end of line
 s                   delete character at cursor and substitute text
 S                   delete line at cursor and substitute text (same as cc)
 xp                  transpose two letters (delete and paste, technically)
