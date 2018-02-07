@@ -71,17 +71,9 @@ Feel free to browse each file to learn new things and to keep them at hand when 
     <td align="center"><a href="https://anyleads.com/">
       <img src="https://pbs.twimg.com/profile_images/838140522476761094/A4WpBe5M_400x400.jpg" height="64" /></a>
     </td>
-  </tr>
-  <tr>
-    <td align="center">Anyleads</td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://crisp.chat/"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
     </td>
-  </tr>
-  <tr>
-    <td align="center">Crisp</td>
   </tr>
 </table>
 
