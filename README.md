@@ -64,7 +64,7 @@ Feel free to browse each file to learn new things and to keep them at hand when 
 - [VIM](tools/vim.txt)
 
 
-## Companies who contributed
+## Contribution
 
 <table>
   <tr>
