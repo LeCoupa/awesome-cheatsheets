@@ -232,13 +232,16 @@ app.configure(primus(options))            // sets up the Primus transport with t
 app.configure(primus(options, callback))  // sets up the Primus transport with the given Primus options and calls the callback with the Primus server instance
 
 
-
 /* *******************************************************************************************
  * 3. CLIENT: More details on how to use Feathers on the client.
  * ******************************************************************************************* */
 
 
 ```bash
+# Bundles the separate Feathers client side modules into one providing the code as ES5 (compatible with modern browsers)
+# You do not have to install or load any of the other modules listed below
+npm install @feathersjs/client --save
+
 # Allows to connect to services through REST HTTP
 npm install @feathersjs/rest-client --save
 
@@ -251,6 +254,26 @@ npm install @feathersjs/primus-client --save
 # Allows you to easily authenticate against a Feathers server
 npm install @feathersjs/authentication-client --save
 ```
+
+// --> REST CLIENT <--
+
+rest([baseUrl])  // Initialize a client object with a base URL
+
+app.configure(restClient.jquery(window.jQuery));   // connect to a service using jQuery
+app.configure(restClient.request(requestClient));  // connect to a service using request
+app.configure(restClient.superagent(superagent));  // connect to a service using Superagent
+app.configure(restClient.axios(axios));            // connect to a service using Axion
+app.configure(restClient.fetch(window.fetch));     // connect to a service using Fetch
+
+// --> SOCKET.IO <--
+
+socketio(socket)           // initialize the Socket.io client using a given socket and the default options
+socketio(socket, options)  // initialize the Socket.io client using a given socket and the given options
+
+// --> PRISMUS <--
+
+primus(socket)           // initialize the Primus client using a given socket and the default options
+primus(socket, options)  // initialize the Primus client using a given socket and the given options
 
 
 /* *******************************************************************************************
