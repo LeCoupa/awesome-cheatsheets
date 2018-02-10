@@ -68,6 +68,8 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 - [VIM](tools/vim.txt)
 
+- [XCode](tools/xcode.txt)
+
 
 ## Contribution
 
