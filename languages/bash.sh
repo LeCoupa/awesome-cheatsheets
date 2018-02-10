@@ -147,7 +147,7 @@ array[0]=val                 # several ways to define an array
 array[1]=val
 array[2]=val
 array=([2]=val [0]=val [1]=val)
-array(val val val)
+array=(val val val)
 
 ${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
 ${#array[i]}                 # to find out the length of any element in the array
