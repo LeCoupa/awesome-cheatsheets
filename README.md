@@ -4,6 +4,8 @@
 
 > ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 
 ## Why Awesome-Cheatsheets?
 
