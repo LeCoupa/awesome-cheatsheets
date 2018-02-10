@@ -210,8 +210,22 @@ app.use(express.errorHandler())  // set up the error handler with the default co
 
 // --> SOCKET.IO <--
 
+const feathers = require('@feathersjs/feathers');
+const socketio = require('@feathersjs/socketio');
 
+const app = feathers();
 
+app.configure(socketio());                            // sets up the Socket.io transport with the default configuration using either the server provided by app.listen or passed in app.setup(server)
+app.configure(socketio(callback))                     // sets up the Socket.io transport with the default configuration and call callback with the Socket.io server object
+app.configure(socketio(options [, callback]))         // sets up the Socket.io transport with the given Socket.io options object and optionally calls the callback
+app.configure(socketio(port, [options], [callback]))  // creates a new Socket.io server on a separate port. Options and a callback are optional
+
+// The options can also be used to initialize uWebSocket which is a WebSocket server
+// implementation that provides better performace and reduced latency.
+// npm install uws --save
+app.configure(socketio({
+  wsEngine: 'uws'
+}));
 
 // --> PRIMUS <--
 
