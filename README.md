@@ -1,10 +1,10 @@
 ![AWESOME CHEATSHEETS LOGO](_images/awesome_cheatsheets_logo@2x.png)
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
 > ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
-
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 
 ## Why Awesome-Cheatsheets?
