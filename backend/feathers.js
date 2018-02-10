@@ -168,7 +168,6 @@ app.on('connection', connection => {})  // fired every time a new real-time conn
 app.on('login', (payload, info) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
 
 
-
 /* *******************************************************************************************
  * 2. TRANSPORT: Expose a Feathers application as an API server.
  * ******************************************************************************************* */
@@ -228,6 +227,9 @@ app.configure(socketio({
 }));
 
 // --> PRIMUS <--
+
+app.configure(primus(options))            // sets up the Primus transport with the given Primus options
+app.configure(primus(options, callback))  // sets up the Primus transport with the given Primus options and calls the callback with the Primus server instance
 
 
 
