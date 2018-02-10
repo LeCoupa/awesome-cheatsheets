@@ -81,6 +81,9 @@ class MyService {
   setup(app, path) {}
 }
 
+params.query     // contains the URL query parameters sent from the client
+params.provider  // for any service method call made through REST params.provider will be set to rest
+
 app.use('/my-service', new MyService());
 
 // Important: Always use the service returned by app.service(path)
@@ -182,25 +185,36 @@ npm install @feathersjs/socketio --save
 npm install @feathersjs/primus --save
 ```
 
+// --> EXPRESS <--
+
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
 
 // Create an app that is a Feathers AND Express application
 const app = express(feathers());
 
-// Register a service
-app.use('/todos', {
-  get(id) {
-    return Promise.resolve({ id });
-  }
-});
+// If no Feathers application is passed, express() returns a plain Express application
+// just like a normal call to Express would
+const app = express();
 
-// Register an Express middleware
-app.use('/test', (req, res) => {
-  res.json({
-    message: 'Hello world from Express middleware'
-  });
-});
+app.use(path, service|mw)        // registers either a service object or an Express middleware on the given path
+app.listen(port)                 // will first call Express app.listen and then internally also call the Feathers app.setup(server)
+app.setup(server)                // usually called internally by app.listen but in the cases described below needs to be called explicitly
+
+express.rest()                   // registers a Feathers transport mechanism that allows you to expose and consume services through a RESTful API.
+app.configure(express.rest())    // configures the transport provider with a standard formatter sending JSON response via res.json
+
+express.notFound()               // returns middleware that returns a NotFound (404) Feathers error
+express.errorHandler()           // middleware that formats any error response to a REST call as JSON and sets the appropriate error code
+app.use(express.errorHandler())  // set up the error handler with the default configuration
+
+// --> SOCKET.IO <--
+
+
+
+
+// --> PRIMUS <--
+
 
 
 /* *******************************************************************************************
