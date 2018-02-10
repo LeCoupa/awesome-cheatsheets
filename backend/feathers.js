@@ -159,7 +159,7 @@ channel.connections  // contains a list of all connections in this channel
 channel.length       // returns the total number of connections in this channel
 
 service.publish([event,] fn)  // registers a publishing function for a specific service for a specific event or all events if no event name was given
-app.publish([event,] fn)
+app.publish([event,] fn)      // registers an event publishing callback
 
 app.on('connection', connection => {})  // fired every time a new real-time connection is established
 app.on('login', (payload, info) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
@@ -181,6 +181,26 @@ npm install @feathersjs/socketio --save
 # Allows to call service methods and receive real-time events via Primus
 npm install @feathersjs/primus --save
 ```
+
+const feathers = require('@feathersjs/feathers');
+const express = require('@feathersjs/express');
+
+// Create an app that is a Feathers AND Express application
+const app = express(feathers());
+
+// Register a service
+app.use('/todos', {
+  get(id) {
+    return Promise.resolve({ id });
+  }
+});
+
+// Register an Express middleware
+app.use('/test', (req, res) => {
+  res.json({
+    message: 'Hello world from Express middleware'
+  });
+});
 
 
 /* *******************************************************************************************
