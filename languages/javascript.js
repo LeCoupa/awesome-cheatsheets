@@ -5,7 +5,8 @@
 
 
 // Global object: properties
-Array.length                                         // Reflects the number of elements in an array
+Array.length                                         // Reflects the number of elements in an array.
+Array.prototype                                      // Represents the prototype for the Array constructor and allows to add new properties and methods to all Array objects.
 
 // Global object: methods
 Array.from(arrayLike[, mapFn[, thisArg]])            // Creates a new Array instance from an array-like or iterable object.
