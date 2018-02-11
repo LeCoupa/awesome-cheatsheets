@@ -51,6 +51,7 @@ docker service ps                                   # List the tasks of Services
 docker service scale <service_name>=<replica>       # Scale special service(s)
 docker service update <options> <service_name>      # Update Service options
 
+
 ##############################################################################
 # DOCKER STACK 
 ##############################################################################
