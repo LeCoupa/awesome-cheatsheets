@@ -32,7 +32,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 #### Imperative
 
-* [JavaScript](languages/php.php)
+* [PHP](languages/php.php)
 
 #### Functional
 
