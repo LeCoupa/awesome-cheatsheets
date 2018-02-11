@@ -37,14 +37,14 @@ exit    # logs out of current session
 # BASH BASICS
 ##############################################################################
 
-
-export              # displays all environment variables
+env                 # displays all environment variables
 
 echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
 
-bash                # if you want to use bash (type exit to go back to your normal shell)
+bash                # if you want to use bash (type exit to go back to your previously opened shell)
 whereis bash        # finds out where bash is on your system
+which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
 
 clear               # clears content on window (hide displayed lines)
 
@@ -54,30 +54,31 @@ clear               # clears content on window (hide displayed lines)
 ##############################################################################
 
 
-ls                            # lists your files
+ls                            # lists your files in current directory, ls <dir> to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
-ls -a                         # lists all files, including hidden files
+ls -a                         # lists all files, including hidden files (name beginning with '.')
 ln -s <filename> <link>       # creates symbolic link to file
 touch <filename>              # creates or updates (edit) your file
-cat > <filename>              # places standard input into file (can also be used to dump the content of a file on stdout)
+cat <filename>                # prints file raw content (will not be interpreted)
+any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
 more <filename>               # shows the first part of a file (move with space and type q to quit)
-head <filename>               # outputs the first 10 lines of file
-tail <filename>               # outputs the last 10 lines of file (useful with -f option)
-vim <filename>                # lets you create and edit a file
-mv <filename1> <filename2>    # moves a file
-cp <filename1> <filename2>    # copies a file
+head <filename>               # outputs the first lines of file (default: 10 lines)
+tail <filename>               # outputs the last lines of file (useful with -f option) (default: 10 lines)
+vim <filename>                # opens a file in VIM (VI iMproved) text editor, will create it if it doesn't exist
+mv <filename1> <dest>         # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
+cp <filename1> <dest>         # copies a file
 rm <filename>                 # removes a file
 diff <filename1> <filename2>  # compares files, and shows where they differ
-wc <filename>                 # tells you how many lines, words and characters there are in a file
-chmod -options <filename>     # lets you change the read, write, and execute permissions on your files
-gzip <filename>               # compresses files
+wc <filename>                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
+chmod -options <filename>     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
+gzip <filename>               # compresses files using gzip algorithm
 gunzip <filename>             # uncompresses files compressed by gzip
 gzcat <filename>              # lets you look at gzipped file without actually having to gunzip it
-lpr <filename>                # print the file
-lpq                           # check out the printer queue
-lprm <jobnumber>              # remove something from the printer queue
+lpr <filename>                # prints the file
+lpq                           # checks out the printer queue
+lprm <jobnumber>              # removes something from the printer queue
 genscript                     # converts plain text files into postscript for printing and gives you some options for formatting
-dvips <filename>              # print .dvi files (i.e. files produced by LaTeX)
+dvips <filename>              # prints .dvi files (i.e. files produced by LaTeX)
 grep <pattern> <filenames>    # looks for the string in the files
 grep -r <pattern> <dir>       # search recursively for pattern in directory
 
@@ -143,11 +144,11 @@ echo $!                      # prints process ID of the most recently invoked ba
 echo $?                      # displays the exit status of the last command
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 
-array[0]=val                 # several ways to define an array
-array[1]=val
-array[2]=val
-array=([2]=val [0]=val [1]=val)
-array=(val val val)
+array[0]=valA                # how to define an array
+array[1]=valB
+array[2]=valC
+array=([2]=valC [0]=valA [1]=valB)  # another way
+array=(valA valB valC)              # and another
 
 ${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
 ${#array[i]}                 # to find out the length of any element in the array
@@ -193,7 +194,7 @@ $(UNIX command)              # command substitution: runs the command and return
 # $@ is equal to "$1" "$2"... "$N", where N is the number of positional parameters. $# holds the number of positional parameters.
 
 
-functname() {
+function functname() {
   shell commands
 }
 
@@ -212,12 +213,16 @@ statement1 || statement2  # or operator
 -a                        # and operator inside a test conditional expression
 -o                        # or operator inside a test conditional expression
 
+# STRINGS
+
 str1 = str2               # str1 matches str2
 str1 != str2              # str1 does not match str2
-str1 < str2               # str1 is less than str2
-str1 > str2               # str1 is greater than str2
+str1 < str2               # str1 is less than str2 (alphabetically)
+str1 > str2               # str1 is greater than str2 (alphabetically)
 -n str1                   # str1 is not null (has length greater than 0)
 -z str1                   # str1 is null (has length 0)
+
+# FILES
 
 -a file                   # file exists
 -d file                   # file exists and is a directory
@@ -232,6 +237,8 @@ str1 > str2               # str1 is greater than str2
 -G file                   # file's group ID matches yours (or one of yours, if you are in multiple groups)
 file1 -nt file2           # file1 is newer than file2
 file1 -ot file2           # file1 is older than file2
+
+# NUMBERS
 
 -lt                       # less than
 -le                       # less than or equal
@@ -305,8 +312,8 @@ eval     # takes arguments and run them through the command-line processing step
 
 
 cmd1|cmd2  # pipe; takes standard output of cmd1 as standard input to cmd2
-> file     # directs standard output to file
 < file     # takes standard input from file
+> file     # directs standard output to file
 >> file    # directs standard output to file; append to file if it already exists
 >|file     # forces standard output to file even if noclobber is set
 n>|file    # forces output to file from file descriptor n even if noclobber is set
