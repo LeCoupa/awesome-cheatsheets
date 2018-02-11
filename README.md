@@ -24,7 +24,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 ### 📃 Languages
 
 <details>
-<summary>View contents</summary>
+<summary>View cheatsheets</summary>
 
 #### Command line interface
 
@@ -43,7 +43,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 ### 📦 Backend
 
 <details>
-<summary>View contents</summary>
+<summary>View cheatsheets</summary>
 
 #### Python
 
@@ -59,7 +59,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 ### 🌐 Frontend
 
 <details>
-<summary>View contents</summary>
+<summary>View cheatsheets</summary>
 
 #### Frameworks
 
@@ -70,7 +70,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 ### 🗃️ Databases
 
 <details>
-<summary>View contents</summary>
+<summary>View cheatsheets</summary>
 
 #### NoSQL
 
@@ -81,12 +81,12 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 ### 🔧 Tools
 
 <details>
-<summary>View contents</summary>
+<summary>View cheatsheets</summary>
 
 #### Development
 
 * [VIM](tools/vim.txt)
-* [XCode](tools/xcode.txt)
+* [Xcode](tools/xcode.txt)
 
 #### Infrastructure
 
