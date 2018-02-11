@@ -67,7 +67,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 </details>
 
 
-## 🔧 Tools
+### 🔧 Tools
 
 <details>
 <summary>View contents</summary>
