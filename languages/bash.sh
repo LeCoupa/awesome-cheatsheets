@@ -144,11 +144,11 @@ echo $!                      # prints process ID of the most recently invoked ba
 echo $?                      # displays the exit status of the last command
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 
-array[0]=valA                 # how to define an array
+array[0]=valA                # how to define an array
 array[1]=valB
 array[2]=valC
-array=([2]=valC [0]=valA [1]=valB) # another way
-array(valA valB valC) # and another
+array=([2]=valC [0]=valA [1]=valB)  # another way
+array=(valA valB valC)              # and another
 
 ${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
 ${#array[i]}                 # to find out the length of any element in the array
@@ -407,7 +407,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exists with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
 
 function dbgtrap {
   echo "badvar is $badvar"

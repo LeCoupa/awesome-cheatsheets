@@ -1,64 +1,112 @@
-![AWESOME CHEATSHEETS LOgO](_images/awesome_cheatsheets_logo@2x.png)
+![AWESOME CHEATSHEETS LOGO](_images/awesome_cheatsheets_logo@2x.png)
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
-> ❤️ **If you love this repository, [you can click here to make it spread](https://ctt.ec/PHba4).**
+> ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
 
 
-## Why Awesome Cheatsheets?
+## 🎩 Why Awesome-Cheatsheets?
 
-I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) but as it is easier to keep track of the history, I reorganized everything into a single repository. Most of the content is coming from official documentations or some books I have read.
+I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) To better keep track of the history and to let people contribute to them, I reorganized everything into this  single repository. Most of the content is coming from official documentations and some books I have read.
 
-Feel free to browse each file to learn new things and to keep them at hand when you forgot about something. They have been designed to save you time when you are building great things and to provide a quick way to assess your knowledge.
-
-**If you want to follow this mindset for your favorite programming language, framework or development tool, you are more than welcome to contribute. Just submit changes via pull request and I will review it.**
+Feel free to browse each cheatsheet to learn new things and to keep them at hand when you forgot about one command. They have been designed to provide a quick way to assess your knowledge and to save you time.
 
 
-## Table of Contents
+## 🙌🏼 How to Contribute?
 
-- [Languages](#languages)
-
-- [Backend](#backend)
-
-- [Frontend](#frontend)
-
-- [Databases](#databases)
-
-- [Tools](#tools)
+You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
 
 
-## Languages
+## 📚 Table of Contents
 
-- [Bash](languages/bash.sh)
+### 📃 Languages
 
-- [JavaScript](languages/javascript.js)
+<details>
+<summary>View contents</summary>
 
+#### Command line interface
 
-## Backend
+* [Bash](languages/bash.sh)
 
-- [Django](backend/django.py)
+#### Imperative
 
-- [Feathers.js](backend/feathers.js)
+* [PHP](languages/php.php)
 
-- [Node.js](backend/node.js)
+#### Functional
 
-
-## Frontend
-
-- [Vue.js](frontend/vue.js)
-
-
-## Databases
-
-- [Redis](databases/redis.sh)
+* [JavaScript](languages/javascript.js)
+</details>
 
 
-## Tools
+### 📦 Backend
 
-- [Docker](tools/docker.sh)
+<details>
+<summary>View contents</summary>
 
-- [Nanobox Boxfile](tools/nanobox_boxfile.yml)
+#### Python
 
-- [Nanobox CLI](tools/nanobox_cli.sh)
+* [Django](backend/django.py)
 
-- [VIM](tools/vim.txt)
+#### Javascript
+  
+* [Feathers.js](backend/feathers.js)
+* [Node.js](backend/node.js)
+</details>
+
+
+### 🌐 Frontend
+
+<details>
+<summary>View contents</summary>
+
+#### Frameworks
+
+* [Vue.js](frontend/vue.js)
+</details>
+
+
+### 🗃️ Databases
+
+<details>
+<summary>View contents</summary>
+
+#### NoSQL
+
+* [Redis](databases/redis.sh)
+</details>
+
+
+### 🔧 Tools
+
+<details>
+<summary>View contents</summary>
+
+#### Development
+
+* [VIM](tools/vim.txt)
+* [XCode](tools/xcode.txt)
+
+#### Infrastructure
+
+* [Docker](tools/docker.sh)
+* [Nanobox Boxfile](tools/nanobox_boxfile.yml)
+* [Nanobox CLI](tools/nanobox_cli.sh)
+</details>
+
+
+## Contribution
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://anyleads.com/" target="_blank"><img src="https://pbs.twimg.com/profile_images/838140522476761094/A4WpBe5M_400x400.jpg" height="64" /></a>
+    </td>
+    <td align="center">
+      <a href="https://crisp.chat/" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
+    </td>
+  </tr>
+</table>
+
+> 👋 Do you want your company to be listed there? Contribute with a cheatsheet for your favorite programming language, framework or development tool.

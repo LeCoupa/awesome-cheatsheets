@@ -81,6 +81,9 @@ class MyService {
   setup(app, path) {}
 }
 
+params.query     // contains the URL query parameters sent from the client
+params.provider  // for any service method call made through REST params.provider will be set to rest
+
 app.use('/my-service', new MyService());
 
 // Important: Always use the service returned by app.service(path)
@@ -159,11 +162,10 @@ channel.connections  // contains a list of all connections in this channel
 channel.length       // returns the total number of connections in this channel
 
 service.publish([event,] fn)  // registers a publishing function for a specific service for a specific event or all events if no event name was given
-app.publish([event,] fn)
+app.publish([event,] fn)      // registers an event publishing callback
 
 app.on('connection', connection => {})  // fired every time a new real-time connection is established
 app.on('login', (payload, info) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
-
 
 
 /* *******************************************************************************************
@@ -182,6 +184,53 @@ npm install @feathersjs/socketio --save
 npm install @feathersjs/primus --save
 ```
 
+// --> EXPRESS <--
+
+const feathers = require('@feathersjs/feathers');
+const express = require('@feathersjs/express');
+
+// Create an app that is a Feathers AND Express application
+const app = express(feathers());
+
+// If no Feathers application is passed, express() returns a plain Express application
+// just like a normal call to Express would
+const app = express();
+
+app.use(path, service|mw)        // registers either a service object or an Express middleware on the given path
+app.listen(port)                 // will first call Express app.listen and then internally also call the Feathers app.setup(server)
+app.setup(server)                // usually called internally by app.listen but in the cases described below needs to be called explicitly
+
+express.rest()                   // registers a Feathers transport mechanism that allows you to expose and consume services through a RESTful API.
+app.configure(express.rest())    // configures the transport provider with a standard formatter sending JSON response via res.json
+
+express.notFound()               // returns middleware that returns a NotFound (404) Feathers error
+express.errorHandler()           // middleware that formats any error response to a REST call as JSON and sets the appropriate error code
+app.use(express.errorHandler())  // set up the error handler with the default configuration
+
+// --> SOCKET.IO <--
+
+const feathers = require('@feathersjs/feathers');
+const socketio = require('@feathersjs/socketio');
+
+const app = feathers();
+
+app.configure(socketio());                            // sets up the Socket.io transport with the default configuration using either the server provided by app.listen or passed in app.setup(server)
+app.configure(socketio(callback))                     // sets up the Socket.io transport with the default configuration and call callback with the Socket.io server object
+app.configure(socketio(options [, callback]))         // sets up the Socket.io transport with the given Socket.io options object and optionally calls the callback
+app.configure(socketio(port, [options], [callback]))  // creates a new Socket.io server on a separate port. Options and a callback are optional
+
+// The options can also be used to initialize uWebSocket which is a WebSocket server
+// implementation that provides better performace and reduced latency.
+// npm install uws --save
+app.configure(socketio({
+  wsEngine: 'uws'
+}));
+
+// --> PRIMUS <--
+
+app.configure(primus(options))            // sets up the Primus transport with the given Primus options
+app.configure(primus(options, callback))  // sets up the Primus transport with the given Primus options and calls the callback with the Primus server instance
+
 
 /* *******************************************************************************************
  * 3. CLIENT: More details on how to use Feathers on the client.
@@ -189,6 +238,10 @@ npm install @feathersjs/primus --save
 
 
 ```bash
+# Bundles the separate Feathers client side modules into one providing the code as ES5 (compatible with modern browsers)
+# You do not have to install or load any of the other modules listed below
+npm install @feathersjs/client --save
+
 # Allows to connect to services through REST HTTP
 npm install @feathersjs/rest-client --save
 
@@ -201,6 +254,26 @@ npm install @feathersjs/primus-client --save
 # Allows you to easily authenticate against a Feathers server
 npm install @feathersjs/authentication-client --save
 ```
+
+// --> REST CLIENT <--
+
+rest([baseUrl])  // Initialize a client object with a base URL
+
+app.configure(restClient.jquery(window.jQuery));   // connect to a service using jQuery
+app.configure(restClient.request(requestClient));  // connect to a service using request
+app.configure(restClient.superagent(superagent));  // connect to a service using Superagent
+app.configure(restClient.axios(axios));            // connect to a service using Axion
+app.configure(restClient.fetch(window.fetch));     // connect to a service using Fetch
+
+// --> SOCKET.IO <--
+
+socketio(socket)           // initialize the Socket.io client using a given socket and the default options
+socketio(socket, options)  // initialize the Socket.io client using a given socket and the given options
+
+// --> PRISMUS <--
+
+primus(socket)           // initialize the Primus client using a given socket and the default options
+primus(socket, options)  // initialize the Primus client using a given socket and the given options
 
 
 /* *******************************************************************************************
@@ -224,6 +297,33 @@ npm install @feathersjs/authentication-oauth1 --save
 # Allows you to use any Passport OAuth2 authentication strategy (FB, Instagram, Github, Google...)
 npm install @feathersjs/authentication-oauth2 --save
 ```
+
+app.configure(auth(options))  // configure the authentication plugin with the given options
+
+options = {
+  path: '/authentication',    // the authentication service path
+  header: 'Authorization',    // the header to use when using JWT auth
+  entity: 'user',             // the entity that will be added to the request, socket, and context.params. (ie. req.user, socket.user, context.params.user)
+  service: 'users',           // the service to look up the entity
+  passReqToCallback: true,    // whether the request object should be passed to the strategies `verify` function
+  session: false,             // whether to use sessions
+  cookie: {
+    enabled: false,           // whether cookie creation is enabled
+    name: 'feathers-jwt',     // the cookie name
+    httpOnly: false,          // when enabled, prevents the client from reading the cookie.
+    secure: true              // whether cookies should only be available over HTTPS
+  },
+  jwt: {
+    header: { typ: 'access' },          // by default is an access token but can be any type
+    audience: 'https://yourdomain.com', // The resource server where the token is processed
+    subject: 'anonymous',               // Typically the entity id associated with the JWT
+    issuer: 'feathers',                 // The issuing server, application or resource
+    algorithm: 'HS256',                 // the algorithm to use
+    expiresIn: '1d'                     // the access token expiry
+  }
+}
+
+app.service('authentication')  //
 
 
 /* *******************************************************************************************
