@@ -26,7 +26,12 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 <details>
 <summary>View contents</summary>
 
+#### Command line interface
+
 * [Bash](languages/bash.sh)
+
+#### Functional
+
 * [JavaScript](languages/javascript.js)
 </details>
 
@@ -62,7 +67,9 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 <details>
 <summary>View contents</summary>
-  
+
+#### NoSQL
+
 * [Redis](databases/redis.sh)
 </details>
 
@@ -72,13 +79,17 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 <details>
 <summary>View contents</summary>
 
+#### Development
+
+* [VIM](tools/vim.txt)
+* [XCode](tools/xcode.txt)
+
+#### Infrastructure
+
 * [Docker](tools/docker.sh)
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
-* [VIM](tools/vim.txt)
 </details>
-
-- [XCode](tools/xcode.txt)
 
 
 ## Contribution
