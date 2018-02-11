@@ -7,14 +7,14 @@
 > ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
 
 
-## Why Awesome-Cheatsheets?
+## 🎩 Why Awesome-Cheatsheets?
 
 I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) To better keep track of the history and to let people contribute to them, I reorganized everything into this  single repository. Most of the content is coming from official documentations and some books I have read.
 
 Feel free to browse each cheatsheet to learn new things and to keep them at hand when you forgot about one command. They have been designed to provide a quick way to assess your knowledge and to save you time.
 
 
-## How to Contribute?
+## 🙌🏼 How to Contribute?
 
 You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
 
