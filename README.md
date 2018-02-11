@@ -20,62 +20,63 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 
 ## 📚 Table of Contents
-  
-## 📃 Languages
+
+### 📃 Languages
+
 <details>
 <summary>View contents</summary>
 
 * [Bash](languages/bash.sh)
-
 * [JavaScript](languages/javascript.js)
-
 </details>
 
-## 📦 Backend
+
+### 📦 Backend
+
 <details>
 <summary>View contents</summary>
 
-### Python
-  * [Django](backend/django.py)
+#### Python
 
-### Javascript
-  
-  * [Feathers.js](backend/feathers.js)
+* [Django](backend/django.py)
 
-  * [Node.js](backend/node.js)
+#### Javascript
   
+* [Feathers.js](backend/feathers.js)
+* [Node.js](backend/node.js)
 </details>
 
-## 🌐 Frontend
+
+### 🌐 Frontend
+
 <details>
 <summary>View contents</summary>
   
-### Frameworks
-  * [Vue.js](frontend/vue.js)
-  
+#### Frameworks
+
+* [Vue.js](frontend/vue.js)
 </details>
 
-## 🗃️ Databases
+
+### 🗃️ Databases
+
 <details>
 <summary>View contents</summary>
   
 * [Redis](databases/redis.sh)
-
 </details>
+
 
 ## 🔧 Tools
+
 <details>
 <summary>View contents</summary>
-  
+
 * [Docker](tools/docker.sh)
-
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-
 * [Nanobox CLI](tools/nanobox_cli.sh)
-
 * [VIM](tools/vim.txt)
 </details>
-
 
 
 ## Contribution
