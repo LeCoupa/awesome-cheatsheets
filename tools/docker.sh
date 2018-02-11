@@ -31,7 +31,25 @@ docker-compose up
 docker-compose up -d
 docker-compose down
 docker-compose logs
+docker-compose restart                          # Restart all service
+docker-compose pull                             # Pull all image service 
+docker-compose build                            # Build all image service
+docker-compose config                           # Validate and view the Compose file
+docker-compose scale <service_name>=<replica>   # Scale special service(s)
+docker-compose top                              # Display the running processes
 
+
+##############################################################################
+# DOCKER SERVICES 
+##############################################################################
+
+
+docker service create <options> <image> <command>   # Create new service
+docker service inspect --pretty <service_name>      # Display detailed information Service(s)
+docker service ls                                   # List Services
+docker service ps                                   # List the tasks of Services
+docker service scale <service_name>=<replica>       # Scale special service(s)
+docker service update <options> <service_name>      # Update Service options
 
 ##############################################################################
 # DOCKER STACK 
