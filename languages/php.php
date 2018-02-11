@@ -6,9 +6,10 @@
  */
 class NormalClass extends AbstractClassName implements InterfaceName
 {
+
     use TraitName;
 
-    // Property types
+    // --> PROPERTY TYPES <--
 
     /**
      * Public property, everyone can access this property. 
@@ -34,7 +35,7 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     static $property;
 
-    // Function Types
+    // --> FUNCTION TYPES <--
 
     /**
      * Public function, everyone can access this function.
@@ -43,7 +44,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function publicFunction(Type $var = null): Type
     {
-        # code...
     }
 
     /**
@@ -53,7 +53,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     private function privateFunction(Type $var = null): Type
     {
-        # code...
     }
 
     /**
@@ -63,7 +62,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     protected function protectedFunction(Type $var = null): Type
     {
-        # code...
     }
     
     /**
@@ -73,10 +71,9 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public static function staticFunction(Type $var = null): Type
     {
-        # code...
     }
 
-    // Magic methods
+    // --> MAGIC METHODS <--
 
     /**
      * Gets triggered on creating a new class instance
@@ -86,7 +83,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __construct(Type $var = null)
     {
-        # code...
     }
 
     /**
@@ -96,7 +92,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __destruct()
     {
-        # code...
     }
 
     /**
@@ -108,7 +103,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __set(string $name , mixed $value)
     {
-        # code...
     }
 
     /**
@@ -119,7 +113,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __get(string $name)
     {
-        # code...
     }
 
     /**
@@ -130,7 +123,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __isset(string $name)
     {
-        # code...
     }
 
     /**
@@ -141,7 +133,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __unset(string $name)
     {
-        # code...
     }
 
     /**
@@ -153,7 +144,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __call(string $name, array $arguments)
     {
-        # code...
     }
 
     /**
@@ -165,7 +155,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public static function __callStatic(string $name, array $arguments)
     {
-        # code...
     }
 
     /**
@@ -174,7 +163,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __sleep()
     {
-        # code...
     }
 
     /**
@@ -183,7 +171,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __wakeup()
     {
-        # code...
     }
 
     /**
@@ -192,7 +179,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __toString()
     {
-        # code...
     }
 
     /**
@@ -202,7 +188,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __invoke(Type $var = null)
     {
-        # code...
     }
 
     /**
@@ -212,7 +197,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public static function __set_state(array $properties)
     {
-        # code...
     }
 
     /**
@@ -221,7 +205,6 @@ class NormalClass extends AbstractClassName implements InterfaceName
      */
     public function __debugInfo()
     {
-        # code...
     }
 
 }
