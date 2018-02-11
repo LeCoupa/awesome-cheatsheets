@@ -400,7 +400,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exists with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
 
 function dbgtrap {
   echo "badvar is $badvar"
