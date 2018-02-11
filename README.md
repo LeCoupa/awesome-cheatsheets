@@ -30,6 +30,10 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 * [Bash](languages/bash.sh)
 
+### Imperative
+
+* [JavaScript](languages/php.php)
+
 #### Functional
 
 * [JavaScript](languages/javascript.js)
@@ -56,7 +60,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 <details>
 <summary>View contents</summary>
-  
+
 #### Frameworks
 
 * [Vue.js](frontend/vue.js)
