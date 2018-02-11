@@ -30,7 +30,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 * [Bash](languages/bash.sh)
 
-### Imperative
+#### Imperative
 
 * [JavaScript](languages/php.php)
 
