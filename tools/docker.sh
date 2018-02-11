@@ -27,10 +27,10 @@ docker run username/repository:tag          # Run image from a registry
 ##############################################################################
 
 
-docker-compose up
-docker-compose up -d
-docker-compose down
-docker-compose logs
+docker-compose up                               # Create and start containers
+docker-compose up -d                            # Create and start containers in detached mode
+docker-compose down                             # Stop and remove containers, networks, images, and volumes
+docker-compose logs                             # View output from containers
 docker-compose restart                          # Restart all service
 docker-compose pull                             # Pull all image service 
 docker-compose build                            # Build all image service
