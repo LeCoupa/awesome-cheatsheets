@@ -39,17 +39,12 @@
 
 
 # *****************************************************************************
-# Django to begin django-admin
+# DJANGO-ADMIN
 # *****************************************************************************
-# Note: When working with single Django Project its easy to use manage.py instead of django-admin
-# These two options can be intechangeble
-django-admin startproject <ProjectName>     # To create Project Directory structure
-											 # https://docs.djangoproject.com/en/2.0/ref/django-admin/#startproject
-django-admin startapp <Appname>				 # To create Django Application Name
-											 # https://docs.djangoproject.com/en/2.0/ref/django-admin/#startapp
-django-admin migrate						 # To Synchronize the database state with your current state project models and migrations
-											 # https://docs.djangoproject.com/en/2.0/ref/django-admin/#migrate
-django-admin makemigrations					 # To create new migrations to the database based on the changes detected in the models
-											 # https://docs.djangoproject.com/en/2.0/ref/django-admin/#makemigrations
-django-admin runserver						 # To start the development webserver at 127.0.0.1 with the port 8000
-										     # https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver
+
+
+django-admin startproject <ProjectName>  # create a new project directory structure
+django-admin startapp <Appname>          # create a new django application with the specified name
+django-admin migrate                     # synchronize the database state with your current state project models and migrations
+django-admin makemigrations              # create new migrations to the database based on the changes detected in the models
+django-admin runserver                   # start the development webserver at 127.0.0.1 with the port 8000
