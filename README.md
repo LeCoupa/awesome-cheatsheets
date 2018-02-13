@@ -96,7 +96,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 </details>
 
 
-## Contribution
+## 🙏🏻 Contribution
 
 <table>
   <tr>
