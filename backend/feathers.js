@@ -319,7 +319,7 @@ npm install @feathersjs/authentication-oauth2 --save
 // --> SERVER <--
 // https://docs.feathersjs.com/api/authentication/server.html
 
-options = {
+const options = {
   path: '/authentication',    // the authentication service path
   header: 'Authorization',    // the header to use when using JWT auth
   entity: 'user',             // the entity that will be added to the request, socket, and context.params. (ie. req.user, socket.user, context.params.user)
@@ -362,7 +362,7 @@ app.on('logout', callback))  // emits an event whenever a client successfully lo
 // --> CLIENT <--
 // https://docs.feathersjs.com/api/authentication/client.html
 
-options = {
+const options = {
   path: '/authentication',    // the server-side authentication service path
   header: 'Authorization',    // the default authorization header for REST
   jwtStrategy: 'jwt',         // the name of the JWT authentication strategy 
@@ -395,7 +395,7 @@ const authentication = require('@feathersjs/authentication');
 const local = require('@feathersjs/authentication-local');
 const app = feathers();
 
-options = {
+const options = {
   name: 'local',              // the name to use when invoking the authentication Strategy
   entity: 'user',             // the entity that you're comparing username/password against
   service: 'users',           // the service to look up the entity
@@ -430,7 +430,7 @@ const authentication = require('@feathersjs/authentication');
 const jwt = require('@feathersjs/authentication-jwt');
 const app = feathers();
 
-options = {
+const options = {
   name: 'jwt',                                      // the name to use when invoking the authentication Strategy
   entity: 'user',                                   // the entity that you pull from if an 'id' is present in the payload
   service: 'users',                                 // the service to look up the entity
@@ -477,7 +477,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
-options = {
+const options = {
   idField: '<provider>Id',  // The field to look up the entity by when logging in with the provider. Defaults to '<provider>Id' (ie. 'twitterId').
   path: '/auth/<provider>', // The route to register the middleware
   callbackURL: 'http(s)://hostame[:port]/auth/<provider>/callback', // The callback url. Will automatically take into account your host and port and whether you are in production based on your app environment to construct the url. (ie. in development http://localhost:3030/auth/twitter/callback)
@@ -520,7 +520,7 @@ const oauth2 = require('@feathersjs/authentication-oauth2');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const app = feathers();
 
-options = {
+const options = {
   idField: '<provider>Id',   // The field to look up the entity by when logging in with the provider. Defaults to '<provider>Id' (ie. 'facebookId').
   path: '/auth/<provider>',  // The route to register the middleware
   callbackURL: 'http(s)://hostname[:port]/auth/<provider>/callback', // The callback url. Will automatically take into account your host and port and whether you are in production based on your app environment to construct the url. (ie. in development http://localhost:3030/auth/facebook/callback)
@@ -590,3 +590,60 @@ npm install feathers-elasticsearch --save
 # [NOSSQL] Database adapter for RethinkDB a real-time database.
 npm install feathers-rethinkdb --save
 ```
+
+// --> COMMON API <--
+// https://docs.feathersjs.com/api/databases/common.html
+
+const service = require('feathers-<adaptername>');
+
+app.use('/messages', service({
+  id: undefined,         // (optional) name of the id field property (usually set by default to id or _id)
+  events: undefined,     // (optional) list of custom service events sent by this service
+  paginate: {            // (optional) a pagination object containing a default and max page size
+    default: undefined,  // sets the default number of items when $limit is not set
+    max: undefined       // sets the maximum allowed number of items per page (even if the $limit query parameter is set higher)
+  }
+}));
+
+adapter.find()                    // returns a list of all records matching the query in params.query using the common querying mechanism
+adapter.get(id, params)           // retrieves a single record by its unique identifier (the field set in the id option during initialization)
+adapter.create(data, params)      // creates a new record with data. data can also be an array to create multiple records
+adapter.update(id, data, params)  // completely replaces a single record identified by id with data. Does not allow replacing multiple records (id can't be null). id can not be changed.
+adapter.patch(id, data, params)   // merges a record identified by id with data. id can be null to allow replacing multiple records (all records that match params.query the same as in .find). id can not be changed
+adapter.remove(id, params)        // removes a record identified by id. id can be null to allow removing multiple records (all records that match params.query the same as in .find)
+
+// --> QUERYING <--
+// https://docs.feathersjs.com/api/databases/querying.html
+
+app.service('messages').find({
+  query: {
+    $limit: 2,                      // will return only the number of results you specify
+    $select: [ 'text', 'userId' ],  // allows to pick which fields to include in the result
+    $skip: 2,                       // will skip the specified number of results
+    $sort: {                        // will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order
+      createdAt: -1
+    },
+    $or: [                          // find all records that match any of the given criteria
+      { archived: { $ne: true } },
+      { roomId: 2 }
+    ],
+    read: false,                    // compared directly for equality
+    roomId: {
+      $in: [ 2, 5 ],                // find all records where the property does match any of the given values
+      $nin: [ 1, 3 ]                // find all records where the property does not match any of the given values
+    },
+    createdAt: {
+      $lt: new Date().getTime(),    // find all records where the value is less to a given value
+      $lte: new Date().getTime(),   // find all records where the value is less and equal to a given value
+      $gt: new Date().getTime(),    // find all records where the value is more to a given value
+      $gte: new Date().getTime(),   // find all records where the value is more and equal to a given value
+    },
+    archived: {
+      $ne: true                     // find all records that do not equal the given property value
+    }
+  }
+});
+
+// With pagination enabled, to just get the number of available records set $limit to 0.
+// This will only run a (fast) counting query against the database and return a page object with
+// the total and an empty data array.
