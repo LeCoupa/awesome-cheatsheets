@@ -278,7 +278,7 @@ rest([baseUrl])  // Initialize a client object with a base URL
 app.configure(restClient.jquery(window.jQuery));   // connect to a service using jQuery
 app.configure(restClient.request(requestClient));  // connect to a service using request
 app.configure(restClient.superagent(superagent));  // connect to a service using Superagent
-app.configure(restClient.axios(axios));            // connect to a service using Axion
+app.configure(restClient.axios(axios));            // connect to a service using Axios
 app.configure(restClient.fetch(window.fetch));     // connect to a service using Fetch
 
 // --> SOCKET.IO <--
@@ -287,7 +287,7 @@ app.configure(restClient.fetch(window.fetch));     // connect to a service using
 socketio(socket)           // initialize the Socket.io client using a given socket and the default options
 socketio(socket, options)  // initialize the Socket.io client using a given socket and the given options
 
-// --> PRISMUS <--
+// --> PRIMUS <--
 // https://docs.feathersjs.com/api/client/primus.html
 
 primus(socket)           // initialize the Primus client using a given socket and the default options
