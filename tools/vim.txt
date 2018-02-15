@@ -262,8 +262,10 @@ CTRL-w h            left window
 CTRL-w j            down window
 CTRL-w k            up window
 CTRL-w l            right window
-CTRL-w +            larger window
-CTRL-w -            smaller window
+CTRL-w +            increase window height
+CTRL-w -            decrease window height
+CTRL-w <            increase window width
+CTRL-w >            decrease window width
 CTRL-w =            equal window
 CTRL-w o            close other windows
 
