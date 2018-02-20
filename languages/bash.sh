@@ -28,6 +28,10 @@ CTRL+X  # lists the possible filename completions of the current word
 CTRL+Y  # retrieves (yank) last item killed
 CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
 
+ALT+B   # moves backward one word
+ALT+D   # deletes next word
+ALT+F   # moves forward one word
+
 DELETE  # deletes one character backward
 !!      # repeats the last command
 exit    # logs out of current session
