@@ -647,3 +647,41 @@ app.service('messages').find({
 // With pagination enabled, to just get the number of available records set $limit to 0.
 // This will only run a (fast) counting query against the database and return a page object with
 // the total and an empty data array.
+
+
+/* *******************************************************************************************
+ * 5. APPLICATION ARCHITECTURE
+ * ******************************************************************************************* */
+
+
+// .
+// ├── config/              # contains the configuration files for the app
+// │   ├── default.json     # default configuration variables
+// │   ├── production.json  # override default configurations variables when NODE_ENV=production
+// │   └── ...
+// │
+// ├── node_modules/        # project dependencies using NPM or Yarn
+// │   └── ...
+// │
+// ├── public/              # contains static files to be served
+// │   └── ...
+// │
+// ├── src/                 # contains the Feathers server code
+// │   ├── hooks/           # contains our custom hooks
+// │   │   └── ...
+// │   ├── middleware/      # contains our Express middlewares
+// │   │   └── ...
+// │   ├── services/        # contains our services
+// │   │   └── ...
+// │   ├── tests/           # contains Mocha test files for the app, hooks and services
+// │   │   └── ...
+// │   │
+// │   ├── index.js         # is used to load and start the application
+// │   ├── app.js           # configures our Feathers application
+// │   ├── app.hooks.js     # contains hooks which that run for all services
+// │   ├── app.test.js      # tests file
+// │   └── channels.js      # set up Feathers event channels
+// │
+// ├── .editorconfig        # helps developers define and maintain consistent coding styles
+// ├── .eslintrc.json       # eslint configuration
+// └── package.json         # express server for production
