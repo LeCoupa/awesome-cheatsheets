@@ -1,14 +1,10 @@
-##############################################################################
 # XCODE CHEAT SHEET
-# WEBSITE: https://developer.apple.com/xcode/
-# DOCUMENTATION: https://developer.apple.com/documentation/xcodekit
-##############################################################################
+
+WEBSITE: https://developer.apple.com/xcode/
+DOCUMENTATION: https://developer.apple.com/documentation/xcodekit
 
 
-##############################################################################
-# SEARCH
-##############################################################################
-
+## SEARCH
 
 Cmd + F                     Find in File
 Cmd + Option + F            Find & Replace in File
@@ -16,20 +12,14 @@ Cmd + Shift + F             Find in Project
 Cmd + Option + Shift + F    Find & Replace in Project
 
 
-##############################################################################
-# TABS
-##############################################################################
-
+## TABS
 
 Cmd + T                     New Tab
 Cmd + }                     Previous Tab
 Cmd + {                     Next Tab
 
 
-##############################################################################
-# NAVIGATION
-##############################################################################
-
+## NAVIGATION
 
 Cmd + Shift + O             Quick Open
 Cmd + J                     Focus to Editor
@@ -43,10 +33,7 @@ Cmd + Option + LEFT         Fold Section
 Cmd + Option + RIGHT        Unfold Section
 
 
-##############################################################################
-# EDITING
-##############################################################################
-
+## EDITING
 
 Cmd + Option + ENTER        Show Assitant Editor
 Cmd + ENTER                 Hide Assitant Editor
@@ -59,10 +46,7 @@ Cmd + Option + [            Move Line Up
 Cmd + Option + ]            Move Line Down
 
 
-##############################################################################
-# NAVIGATOR (LEFT PANEL)
-##############################################################################
-
+## NAVIGATOR (LEFT PANEL)
 
 Cmd + 0                     Show /Hide 
 Cmd + 1-8                   Switch tabs 
@@ -71,10 +55,7 @@ Shift + Option + click      Decide where to Open
 double click                Open in New Window
 
 
-##############################################################################
-# DEBUGGING
-##############################################################################
-
+## DEBUGGING
 
 Cmd + Shift + Y             Toggle Debug Area
 Cmd + '                     Next Issue
@@ -84,19 +65,13 @@ Cmd + Y                     Active / Deactive Breakpoints
 Cmd + K                     Clear Console
 
 
-##############################################################################
-# UTILITIES (RIGHT PANEL)
-##############################################################################
-
+## UTILITIES (RIGHT PANEL)
 
 Cmd + Option + 0            Show / Hide
 Cmd + Option + 1-9          Go to Tab
 
 
-##############################################################################
-# DUBUGGING & RUN
-##############################################################################
-
+## DUBUGGING & RUN
 
 Cmd + B                     Build
 Cmd + R                     Run 
