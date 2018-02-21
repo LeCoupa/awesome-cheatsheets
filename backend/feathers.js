@@ -679,7 +679,6 @@ app.service('messages').find({
 // │   ├── index.js         # is used to load and start the application
 // │   ├── app.js           # configures our Feathers application
 // │   ├── app.hooks.js     # contains hooks which that run for all services
-// │   ├── app.test.js      # tests file
 // │   └── channels.js      # set up Feathers event channels
 // │
 // ├── .editorconfig        # helps developers define and maintain consistent coding styles
