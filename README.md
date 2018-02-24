@@ -93,6 +93,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 * [Docker](tools/docker.sh)
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
+* [Kubernetes](tools/kubernetes.sh)
 </details>
 
 
@@ -105,6 +106,9 @@ You are more than welcome to contribute and build your own cheatsheet for your f
     </td>
     <td align="center">
       <a href="https://crisp.chat/" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
+    </td>
+    <td align="center">
+      <a href="https://learnk8s.io/" target="_blank"><img src="https://pbs.twimg.com/profile_images/925127335573114880/9yCkEIe3_400x400.jpg" height="64" /></a>
     </td>
   </tr>
 </table>
