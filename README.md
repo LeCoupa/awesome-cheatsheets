@@ -61,6 +61,10 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 <details>
 <summary>View cheatsheets</summary>
 
+#### Basics
+
+* [HTML5](frontend/html5.html)
+
 #### Frameworks
 
 * [Vue.js](frontend/vue.js)
