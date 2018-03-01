@@ -1,6 +1,6 @@
 ![AWESOME CHEATSHEETS LOGO](_images/awesome_cheatsheets_logo@2x.png)
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/LICENSE)
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
@@ -61,6 +61,10 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 <details>
 <summary>View cheatsheets</summary>
 
+#### Basics
+
+* [HTML5](frontend/html5.html)
+
 #### Frameworks
 
 * [Vue.js](frontend/vue.js)
@@ -106,6 +110,9 @@ You are more than welcome to contribute and build your own cheatsheet for your f
     </td>
     <td align="center">
       <a href="https://crisp.chat/" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
+    </td>
+    <td align="center">
+      <a href="https://hackr.io/" target="_blank"><img src="https://d1eq8vvyuam4eq.cloudfront.net/assets/images/code-images/code-apple-touch-icon-precomposed.png" height="64" /></a>
     </td>
     <td align="center">
       <a href="https://learnk8s.io/" target="_blank"><img src="https://pbs.twimg.com/profile_images/925127335573114880/9yCkEIe3_400x400.jpg" height="64" /></a>
