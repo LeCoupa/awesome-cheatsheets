@@ -1,5 +1,6 @@
 ##############################################################################
 # KUBERNETES
+# PDF: https://sematext.com/kubernetes-cheat-sheet/
 # WEBSITE: https://kubernetes.io/
 # DOCUMENTATION: https://kubernetes.io/docs/home
 ##############################################################################

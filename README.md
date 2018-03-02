@@ -95,9 +95,9 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 #### Infrastructure
 
 * [Docker](tools/docker.sh)
+* [Kubernetes](tools/kubernetes.sh)
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
-* [Kubernetes](tools/kubernetes.sh)
 </details>
 
 
