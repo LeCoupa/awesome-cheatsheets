@@ -97,7 +97,7 @@ Você é mais do que bem-vindo para contribuir e criar sua própria cheatsheet p
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
 
-#### :bar_chart: Versionamento
+#### Versionamento
 
 * [Git](tools/git.txt)
 
