@@ -56,6 +56,17 @@ Você é mais do que bem-vindo para contribuir e criar sua própria cheatsheet p
 * [Node.js](backend/node.js)
 </details>
 
+### FrameWorks
+
+<details>
+
+<summary>Ver cheatsheets</summary>
+
+#### PHP
+
+* [Laravel](frameworks/Laravel.php)
+
+</details>
 
 ### 🌐 Frontend
 
