@@ -54,18 +54,6 @@ Você é mais do que bem-vindo para contribuir e criar sua própria cheatsheet p
 * [Node.js](backend/node.js)
 </details>
 
-### :dart: FrameWorks
-
-<details>
-
-<summary>Ver cheatsheets</summary>
-
-#### PHP
-
-* [Laravel](frameworks/Laravel.php)
-
-</details>
-
 ### 🌐 Frontend
 
 <details>
@@ -108,6 +96,11 @@ Você é mais do que bem-vindo para contribuir e criar sua própria cheatsheet p
 * [Kubernetes](tools/kubernetes.sh)
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
+
+#### :bar_chart: Versionamento
+
+* [Git](tools/git.txt)
+
 </details>
 
 

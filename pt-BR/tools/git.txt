@@ -1,0 +1,31 @@
+3 Estágios de um commit:
+
+- Untracked files: Não estão sendo versionados
+- Changes to be committed: Pronto para ser comitado
+- Arquivos commitados: Já fazem parte do controle
+
+####################################################################
+
+COMANDO                                         FUNÇÃO
+
+git init                                        Cria um controle de versão no diretório 
+git add <arquivo>                               Inclue o arquivo para ficar esperando o commit(changes to be committed)
+git rm --cached <arquivo>                       Retira o arquivo do changes to be committed e retorna para o Untracked files
+git status                                      Mostra o estágio dos Arquivos
+git log                                         Mostra os commits
+git commit -m "Texto"                           Cria um commit
+git log -p                                      Mostra a alteração que foi feita em cada arquivo commitado
+git log -p -<numero>                            Limita o resultado que o comando mostrará(Ex: -2)
+git --stats                                     Mostra o git log com as estatisticas de commit 
+git log --pretty=oneline                        Traz todos os commits em uma linha 
+git log --pretty=format:"%h -%an, %ar : %s"     Traz uma parte do rash, quem criou, o tempo, o commit 
+git log --since=<dias>.days                     Mostra os commits de acordo com a quantidade de dias escolhido
+git reset HEAD <file>                           Volta para o status anterior(Untracked files)
+git checkout <rash>                             Volta a versão do rash escolhido
+git reset HEAD~<numero>                         Volta uma quantidade x de commits 
+git reset HEAD~<numero> --soft                  Remove os commits e deixa os arquivos prontos para o commit 
+git checkout -b <nome>                          Cria um branch 
+git branch                                      Mostra o branch atual
+git checkout <NomeDoBranch>                     Muda para o Branch escolhido
+git merge <branch>                              Adiciona as modificações do branch selecionado ao atual
+git tag <tag>                                   Cria uma tag até o commit atual 
