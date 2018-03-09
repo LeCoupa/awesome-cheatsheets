@@ -16,8 +16,6 @@ Sinta-se à vontade para navegar em cada cheatsheet para aprender coisas novas e
 
 ## 🙌🏼 Como posso contribuir?
 
-You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
-
 Você é mais do que bem-vindo para contribuir e criar sua própria cheatsheet para sua linguagem de programação, estrutura ou ferramenta de desenvolvimento favorita. Basta enviar as alterações por meio de pull request e as revisarei antes do merging.
 
 ## 📚 Tabela de Conteúdo
