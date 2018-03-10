@@ -52,6 +52,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 #### Javascript
   
 * [Feathers.js](backend/feathers.js)
+* [Moleculer](backend/moleculer.js)
 * [Node.js](backend/node.js)
 </details>
 
