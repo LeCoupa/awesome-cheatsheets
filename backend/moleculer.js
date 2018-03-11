@@ -5,17 +5,21 @@
  * Version: 0.12.x
  * ******************************************************************************************* */
 
+
 /* *******************************************************************************************
  * Install Moleculer
  * ******************************************************************************************* */
+
 
 ```bash
 npm i moleculer
 ```
 
+
 /* *******************************************************************************************
  * SERVICE BROKER OPTIONS
  * ******************************************************************************************* */
+
 
 // All ServiceBroker options with default values
 const broker = new ServiceBroker({
@@ -73,9 +77,11 @@ const broker = new ServiceBroker({
     ContextFactory: null                    // Custom Context factory class
 });
 
+
 /* *******************************************************************************************
  * SERVICE BROKER METHODS
  * ******************************************************************************************* */
+
 
 // Broker properties
 broker.Promise                                  // Pointer to Bluebird Promise lib
@@ -121,9 +127,11 @@ broker.sendPing(nodeID);                        // Ping a remote node
 broker.MOLECULER_VERSION                        // Version number of Moleculer lib
 broker.PROTOCOL_VERSION                         // Version number of Moleculer protocol
 
+
 /* *******************************************************************************************
  * BROKER SERVICE CALLS
  * ******************************************************************************************* */
+
 
 // Call the "users.get" service with params
 broker.call("users.get", { id: 150 }).then(user => console.log(user));
@@ -150,9 +158,11 @@ const res = await broker.mcall({
 });
 console.log(res.posts, res.users);
 
+
 /* *******************************************************************************************
  * BROKER EVENTS
  * ******************************************************************************************* */
+
 
 // Send a balanced event with payload
 broker.emit("user.created", { user: user });
@@ -166,10 +176,12 @@ broker.broadcast("user.created", { user: user });
 // Send a broadcast event only for "mail" and "payment" services (all instances)
 broker.broadcast("user.created", { user: user }, ["mail", "payment"]);
 
+
 /* *******************************************************************************************
  * NATS TRANSPORTER
  * Requirement: `npm i nats`
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -208,10 +220,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * REDIS TRANSPORTER
  * Requirement: `npm i ioredis`
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -243,6 +257,7 @@ const broker = new ServiceBroker({
  * Requirement: `npm i mqtt`
  * ******************************************************************************************* */
 
+
 // Default options
 const broker = new ServiceBroker({
     transporter: "MQTT"
@@ -266,10 +281,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * AMQP TRANSPORTER
  * Requirement: `npm i amqplib`
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -293,10 +310,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * KAFKA TRANSPORTER
  * Requirement: `npm i kafka-node`
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -339,10 +358,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * NATS STREAMING TRANSPORTER
  * Requirement: `npm i node-nats-streaming`
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -365,10 +386,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * TCP STREAMING TRANSPORTER
  * No requirements
  * ******************************************************************************************* */
+
 
 // Default options
 const broker = new ServiceBroker({
@@ -444,6 +467,7 @@ const broker = new ServiceBroker({
  * http://moleculer.services/docs/cachers.html
  * ******************************************************************************************* */
 
+
 // Memory cacher
 const broker = new ServiceBroker({
     cacher: "Memory"
@@ -489,9 +513,11 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * Manual caching
  * ******************************************************************************************* */
+
 
 // Save to cache
 broker.cacher.set("mykey.a", { a: 5 });
@@ -508,10 +534,12 @@ broker.cacher.clean("mykey.*");
 // Clean all entries
 broker.cacher.clean();
 
+
 /* *******************************************************************************************
  * SERIALIZER
  * http://moleculer.services/docs/serializers.html
  * ******************************************************************************************* */
+
 
 // JSON serializer (default)
 const broker = new ServiceBroker({
@@ -533,9 +561,11 @@ const broker = new ServiceBroker({
     serializer: "MsgPack"
 });
 
+
 /* *******************************************************************************************
  * STRATEGY
  * ******************************************************************************************* */
+
 
 // Round-robin strategy (default)
 const broker = new ServiceBroker({
@@ -569,10 +599,12 @@ const broker = new ServiceBroker({
     }
 });
 
+
 /* *******************************************************************************************
  * LOGGER
  * http://moleculer.services/docs/logger.html
  * ******************************************************************************************* */
+
 
 // Logger methods
 broker.logger.fatal();
@@ -602,9 +634,11 @@ const broker = new ServiceBroker({
     logger: bindings => logger.child(bindings)
 });
 
+
 /* *******************************************************************************************
  * SERVICE SCHEMA
  * ******************************************************************************************* */
+
 
 module.exports = {
     // Name
@@ -673,9 +707,11 @@ module.exports = {
     }
 };
 
+
 /* *******************************************************************************************
  * SERVICE
  * ******************************************************************************************* */
+
 
 this.name               // Name of service
 this.version            // Version of service
@@ -687,10 +723,12 @@ this.logger             // Logger instance
 this.actions            // Actions of service.
 this.waitForServices    // Pointer to ‘broker.waitForServices’ method
 
+
 /* *******************************************************************************************
  * CONTEXT
  * ******************************************************************************************* */
 
+ 
 ctx.id                  // Context ID
 ctx.broker              // Broker instance
 ctx.action              // Action definition
