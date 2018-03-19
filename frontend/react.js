@@ -71,6 +71,114 @@ React.Fragment
  * ******************************************************************************************* */
 
 
+class Component extends React.Component {
+  // Will be called before it is mounted
+  constructor(props) {
+    // Call this method before any other statement
+    // or this.props will be undefined in the constructor
+    super(props);
+
+    // The constructor is also often used to bind event handlers to the class instance.
+    this.method = this.method.bind(this);
+
+    // The constructor is the right place to initialize state. 
+    this.state = {
+      active: true,
+
+      // In rare cases, it’s okay to initialize state based on props.
+      // This effectively “forks” the props and sets the state with the initial props.
+      // If you “fork” props by using them for state, you might also want to implement componentWillReceiveProps(nextProps)
+      // to keep the state up-to-date with them. But lifting state up is often easier and less bug-prone.
+      color: props.initialColor
+    };
+  }
+
+  // Enqueues changes to the component state and
+  // tells React that this component and its children need to be re-rendered with the updated state.
+  // setState() does not always immediately update the component. It may batch or defer the update until later.
+  // This makes reading this.state right after calling setState() a potential pitfall.
+  // Instead, use componentDidUpdate or a setState callback.
+  // You may optionally pass an object as the first argument to setState() instead of a function.
+  setState(updater[, callback]) { }
+
+  // Invoked just before mounting occurs (before render())
+  // This is the only lifecycle hook called on server rendering.
+  componentWillMount() { }
+
+  // Invoked immediately after a component is mounted.
+  // Initialization that requires DOM nodes should go here.
+  // If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+  // This method is a good place to set up any subscriptions. If you do that, don’t forget to unsubscribe in componentWillUnmount().
+  componentDidMount() { }
+
+  // Invoked before a mounted component receives new props.
+  // If you need to update the state in response to prop changes (for example, to reset it),
+  // you may compare this.props and nextProps and perform state transitions using this.setState() in this method.
+  componentWillReceiveProps(nextProps) { }
+
+  // Let React know if a component’s output is not affected by the current change in state or props.
+  // The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.
+  // shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true.
+  // This method is not called for the initial render or when forceUpdate() is used.
+  // Returning false does not prevent child components from re-rendering when their state changes.
+  shouldComponentUpdate(nextProps, nextState) { }
+
+  // Invoked just before rendering when new props or state are being received.
+  // Use this as an opportunity to perform preparation before an update occurs. This method is not called for the initial render.
+  // Note that you cannot call this.setState() here; nor should you do anything else
+  // (e.g. dispatch a Redux action) that would trigger an update to a React component before componentWillUpdate() returns.
+  // If you need to update state in response to props changes, use componentWillReceiveProps() instead.
+  componentWillUpdate(nextProps, nextState) { }
+
+  // Invoked immediately after updating occurs. This method is not called for the initial render.
+  // Use this as an opportunity to operate on the DOM when the component has been updated.
+  // This is also a good place to do network requests as long as you compare the current props to previous props (e.g. a network request may not be necessary if the props have not changed).
+  componentDidUpdate(prevProps, prevState) { }
+
+  // Invoked immediately before a component is unmounted and destroyed.
+  // Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests,
+  // or cleaning up any subscriptions that were created in componentDidMount().
+  componentWillUnmount() { }
+
+  // Error boundaries are React components that catch JavaScript errors anywhere in their child component tree,
+  // log those errors, and display a fallback UI instead of the component tree that crashed.
+  // Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+  componentDidCatch() { }
+
+  // This method is required.
+  // It should be pure, meaning that it does not modify component state,
+  // it returns the same result each time it’s invoked, and
+  // it does not directly interact with the browser (use lifecycle methods for this)
+  // It must return one of the following types: react elements, string and numbers, portals, null or booleans.
+  render() {
+    // Contains the props that were defined by the caller of this component.
+    console.log(this.props);
+
+    // Contains data specific to this component that may change over time.
+    // The state is user-defined, and it should be a plain JavaScript object.
+    // If you don’t use it in render(), it shouldn’t be in the state.
+    // For example, you can put timer IDs directly on the instance.
+    // Never mutate this.state directly, as calling setState() afterwards may replace the mutation you made.
+    // Treat this.state as if it were immutable.
+    console.log(this.state);
+
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+// Can be defined as a property on the component class itself, to set the default props for the class.
+// This is used for undefined props, but not for null props.
+Component.defaultProps = {
+  color: 'blue'
+};
+
+component = new Component();
+
+// By default, when your component’s state or props change, your component will re-render.
+// If your render() method depends on some other data, you can tell React that the component needs re-rendering by calling forceUpdate().
+// Normally you should try to avoid all uses of forceUpdate() and only read from this.props and this.state in render().
+component.forceUpdate(callback)
+
 
 /* *******************************************************************************************
  * TYPECHECKING WITH PROPTYPES
