@@ -10,6 +10,67 @@ npm install --save react-dom   // serves as the entry point of the DOM-related r
 npm install --save prop-types  // runtime type checking for React props and similar objects
 ```
 
+// notes: don't forget the command lines
+
+
+/* *******************************************************************************************
+ * REACT
+ * https://reactjs.org/docs/react-api.html
+ * ******************************************************************************************* */
+
+
+// Create and return a new React element of the given type.
+// Code written with JSX will be converted to use React.createElement().
+// You will not typically invoke React.createElement() directly if you are using JSX.
+React.createElement(
+  type,
+  [props],
+  [...children]
+)
+
+// Clone and return a new React element using element as the starting point.
+// The resulting element will have the original element’s props with the new props merged in shallowly.
+React.cloneElement(
+  element,
+  [props],
+  [...children]
+)
+
+// Verifies the object is a React element. Returns true or false.
+React.isValidElement(object)
+
+React.Children  // provides utilities for dealing with the this.props.children opaque data structure.
+
+// Invokes a function on every immediate child contained within children with this set to thisArg.
+React.Children.map(children, function[(thisArg)])
+
+// Like React.Children.map() but does not return an array.
+React.Children.forEach(children, function[(thisArg)])
+
+// Returns the total number of components in children,
+// equal to the number of times that a callback passed to map or forEach would be invoked.
+React.Children.count(children)
+
+// Verifies that children has only one child (a React element) and returns it.
+// Otherwise this method throws an error.
+React.Children.only(children)
+
+// Returns the children opaque data structure as a flat array with keys assigned to each child.
+// Useful if you want to manipulate collections of children in your render methods,
+// especially if you want to reorder or slice this.props.children before passing it down.
+React.Children.toArray(children)
+
+// The React.Fragment component lets you return multiple elements in a render() method without creating an additional DOM element
+// You can also use it with the shorthand <></> syntax.
+React.Fragment
+
+
+/* *******************************************************************************************
+ * REACT.COMPONENT
+ * https://reactjs.org/docs/react-component.html
+ * ******************************************************************************************* */
+
+
 
 /* *******************************************************************************************
  * TYPECHECKING WITH PROPTYPES
