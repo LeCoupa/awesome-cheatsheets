@@ -68,6 +68,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 #### Frameworks
 
+* [React.js](frontend/react.js)
 * [Vue.js](frontend/vue.js)
 </details>
 
