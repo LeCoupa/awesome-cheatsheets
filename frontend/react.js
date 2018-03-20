@@ -223,6 +223,35 @@ ReactDOM.createPortal(child, container)
 
 
 /* *******************************************************************************************
+ * REACTDOMSERVER
+ * The ReactDOMServer object enables you to render components to static markup.
+ * https://reactjs.org/docs/react-dom.html
+ * ******************************************************************************************* */
+
+
+// Render a React element to its initial HTML. React will return an HTML string.
+// You can use this method to generate HTML on the server and send the markup down on the initial
+// request for faster page loads and to allow search engines to crawl your pages for SEO purposes.
+ReactDOMServer.renderToString(element)
+
+// Similar to renderToString, except this doesn’t create extra DOM attributes that React uses
+// internally, such as data-reactroot. This is useful if you want to use React as a simple static
+// page generator, as stripping away the extra attributes can save some bytes.
+ReactDOMServer.renderToStaticMarkup(element)
+
+// Render a React element to its initial HTML. Returns a Readable stream that outputs an HTML string.
+// The HTML output by this stream is exactly equal to what ReactDOMServer.renderToString would return.
+// You can use this method to generate HTML on the server and send the markup down on the initial
+// request for faster page loads and to allow search engines to crawl your pages for SEO purposes.
+ReactDOMServer.renderToNodeStream(element)
+
+// Similar to renderToNodeStream, except this doesn’t create extra DOM attributes that React uses
+// internally, such as data-reactroot. This is useful if you want to use React as a simple static
+// page generator, as stripping away the extra attributes can save some bytes.
+ReactDOMServer.renderToStaticNodeStream(element)
+
+
+/* *******************************************************************************************
  * TYPECHECKING WITH PROPTYPES
  * https://reactjs.org/docs/typechecking-with-proptypes.html
  * ******************************************************************************************* */
