@@ -1,6 +1,7 @@
 /* *******************************************************************************************
  * REACT.JS CHEATSHEET
- * https://reactjs.org/
+ * DOCUMENTATION: https://reactjs.org/docs/
+ * FILE STRUCTURE: https://reactjs.org/docs/faq-structure.html
  * ******************************************************************************************* */
 
 
@@ -67,6 +68,8 @@ React.Fragment
 
 /* *******************************************************************************************
  * REACT.COMPONENT
+ * React.Component is an abstract base class, so it rarely makes sense to refer to React.Component
+ * directly. Instead, you will typically subclass it, and define at least a render() method.
  * https://reactjs.org/docs/react-component.html
  * ******************************************************************************************* */
 
@@ -79,6 +82,7 @@ class Component extends React.Component {
     super(props);
 
     // The constructor is also often used to bind event handlers to the class instance.
+    // Binding makes sure the method has access to component attributes like this.props and this.state
     this.method = this.method.bind(this);
 
     // The constructor is the right place to initialize state. 
@@ -162,7 +166,12 @@ class Component extends React.Component {
     // Treat this.state as if it were immutable.
     console.log(this.state);
 
-    return <h1>Hello, {this.props.name}</h1>;
+    return (
+      <div>
+        {/* Comment goes here */}
+        Hello, {this.props.name}!
+      </div>
+    );
   }
 }
 
@@ -178,6 +187,39 @@ component = new Component();
 // If your render() method depends on some other data, you can tell React that the component needs re-rendering by calling forceUpdate().
 // Normally you should try to avoid all uses of forceUpdate() and only read from this.props and this.state in render().
 component.forceUpdate(callback)
+
+
+/* *******************************************************************************************
+ * REACT.DOM
+ * The react-dom package provides DOM-specific methods that can be used at the top level of
+ * your app and as an escape hatch to get outside of the React model if you need to.
+ * Most of your components should not need to use this module.
+ * https://reactjs.org/docs/react-dom.html
+ * ******************************************************************************************* */
+
+
+// Render a React element into the DOM in the supplied container and return a reference
+// to the component (or returns null for stateless components).
+ReactDOM.render(element, container[, callback])
+
+// Same as render(), but is used to hydrate a container whose HTML contents were rendered
+// by ReactDOMServer. React will attempt to attach event listeners to the existing markup.
+ReactDOM.hydrate(element, container[, callback])
+
+// Remove a mounted React component from the DOM and clean up its event handlers and state.
+// If no component was mounted in the container, calling this function does nothing.
+// Returns true if a component was unmounted and false if there was no component to unmount.
+ReactDOM.unmountComponentAtNode(container)
+
+// If this component has been mounted into the DOM, this returns the corresponding native browser
+// DOM element. This method is useful for reading values out of the DOM, such as form field values
+// and performing DOM measurements. In most cases, you can attach a ref to the DOM node and avoid
+// using findDOMNode at all.
+ReactDOM.findDOMNode(component)
+
+// Creates a portal. Portals provide a way to render children into a DOM node that exists outside
+// the hierarchy of the DOM component.
+ReactDOM.createPortal(child, container)
 
 
 /* *******************************************************************************************
