@@ -337,8 +337,3 @@ MyComponent.propTypes = {
     }
   })
 };
-
-// Specifies the default values for props:
-MyComponent.defaultProps = {
-  name: 'Stranger'
-};
