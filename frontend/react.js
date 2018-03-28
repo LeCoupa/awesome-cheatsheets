@@ -176,7 +176,7 @@ class Component extends React.Component {
 
   import polyfill from 'react-lifecycles-compat';
 
-  class PolyfiledComponent extends React.Component {
+  class PolyfilledComponent extends React.Component {
     static getDerivedStateFromProps(nextProps, prevState) {
       // Your state update logic here ...
     }
@@ -186,7 +186,7 @@ class Component extends React.Component {
     }
   }
 
-  polyfill(PolyfiledComponent)
+  polyfill(PolyfilledComponent)
 
   export default PolyfilledComponent;
 
