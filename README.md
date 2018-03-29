@@ -70,6 +70,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 
 * [React.js](frontend/react.js)
 * [Vue.js](frontend/vue.js)
+* [Angularjs](frontend/angularjs.js)
 </details>
 
 
