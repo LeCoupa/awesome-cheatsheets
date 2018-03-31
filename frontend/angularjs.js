@@ -14,6 +14,10 @@
 // You can retrieve a scope for any DOM element by using:
 angular.element(aDomElement).scope()
 
+// An object that contains information about the current AngularJS version.
+// This object has the following properties: full, major, minor, dot, codeName
+angular.version
+
 
 /* *******************************************************************************************
  * CSS CLASS USED BY ANGULAR
@@ -127,3 +131,209 @@ angular.reloadWithDebugInfo()
 // Serializes input into a JSON-formatted string.
 // Properties with leading $$ characters will be stripped since AngularJS uses this notation internally.
 angular.toJson(obj, pretty)
+
+
+/* *******************************************************************************************
+ * NG MODULE > DIRECTIVES
+ * ******************************************************************************************* */
+
+
+// Use this directive to auto-bootstrap an AngularJS application.
+// Only one AngularJS application can be auto-bootstrapped per HTML document.
+// You can specify an AngularJS module to be used as the root module for the application.
+'ng-app'
+
+// The ngBind attribute tells AngularJS to replace the text content of the specified HTML element with
+// the value of a given expression, and to update the text content when the value of that expression changes.
+'ng-bind'
+
+// Evaluates the expression and inserts the resulting HTML into the element in a secure way.
+'ng-bind-html'
+
+// The ngBindTemplate directive specifies that the element text content should be replaced with
+// the interpolation of the template in the ngBindTemplate attribute.
+'ng-bind-template'
+
+// Specify custom behavior on blur event.
+'ng-blur'
+
+// Evaluate the given expression when the user changes the input.
+'ng-change'
+
+// Sets the checked attribute on the element, if the expression inside ngChecked is truthy.
+'ng-checked'
+
+// The ngClass directive allows you to dynamically set CSS classes on an HTML element by databinding
+// an expression that represents all classes to be added.
+'ng-class'
+
+// The ngClassOdd and ngClassEven directives work exactly as ngClass, except they work in
+// conjunction with ngRepeat and take effect only on odd (even) rows.
+'ng-class-even'
+
+// The ngClassOdd and ngClassEven directives work exactly as ngClass, except they work in
+// conjunction with ngRepeat and take effect only on odd (even) rows.
+'ng-class-odd'
+
+// The ngClick directive allows you to specify custom behavior when an element is clicked.
+'ng-click'
+
+// The ngCloak directive is used to prevent the AngularJS html template from being briefly displayed
+// by the browser in its raw (uncompiled) form while your application is loading.
+'ng-cloak'
+
+// The ngController directive attaches a controller class to the view.
+'ng-controller'
+
+// Specify custom behavior on copy event.
+'ng-copy'
+
+// Specify custom behavior on cut event.
+'ng-cut'
+
+// Allows you to specify custom behavior on a dblclick event.
+'ng-dblclick'
+
+// This directive sets the disabled attribute on the element (typically a form control, e.g. input, button, select etc.)
+// if the expression inside ngDisabled evaluates to truthy.
+'ng-disabled'
+
+// Specify custom behavior on focus event.
+'ng-focus'
+
+// Nestable alias of form directive. HTML does not allow nesting of form elements.
+// It is useful to nest forms, for example if the validity of a sub-group of controls needs to be determined.
+'ng-form'
+
+// Shows or hides the given HTML element based on the expression provided to the ngHide attribute.
+'ng-hide'
+
+// Executes the expression and replaces with the right href link
+'ng-href'
+
+// Removes or recreates a portion of the DOM tree based on an {expression}.
+'ng-if'
+
+// Fetches, compiles and includes an external HTML fragment.
+'ng-include'
+
+// Allows you to evaluate an expression in the current scope.
+'ng-init'
+
+// Force the angular.element library.
+// This should be used to force either jqLite by leaving ng-jq blank or setting the name of the jquery variable under window (eg. jQuery).
+'ng-jq'
+
+// Specify custom behavior on keydown event.
+'ng-keydown'
+
+// Specify custom behavior on keypress event.
+'ng-keypress'
+
+// Specify custom behavior on keyup event.
+'ng-keyup'
+
+// Text input that converts between a delimited string and an array of strings.
+'ng-list'
+
+// Adds the maxlength validator to ngModel.
+'ng-maxlength'
+
+// Adds the minlength validator to ngModel.
+'ng-minlength'
+
+// The ngModel directive binds an input,select, textarea (or custom form control) to a property on the scope using NgModelController,
+// which is created and exposed by this directive.
+'ng-model'
+
+// Modify the behaviour of ngModel directives within your application.
+// You can specify an ngModelOptions directive on any element.
+// All ngModel directives will use the options of their nearest ngModelOptions ancestor.
+'ng-model-options'
+
+// Allows you to specify custom behavior on mousedown event.
+'ng-mousedown'
+
+// Specify custom behavior on mouseenter event.
+'ng-mouseenter'
+
+// Specify custom behavior on mouseleave event.
+'ng-mouseleave'
+
+// Specify custom behavior on mousemove event.
+'ng-mousemove'
+
+// Specify custom behavior on mouseover event.
+'ng-mouseover'
+
+// Specify custom behavior on mouseup event.
+'ng-mouseup'
+
+// Tells AngularJS not to compile or bind the contents of the current DOM element,
+// including directives on the element itself that have a lower priority than ngNonBindable.
+'ng-non-bindable'
+
+// Sets the open attribute on the element, if the expression inside ngOpen is truthy.
+'ng-open'
+
+// The ngOptions attribute can be used to dynamically generate a list of <option> elements for the <select>
+// element using the array or object obtained by evaluating the ngOptions comprehension expression.
+'ng-options'
+
+// Specify custom behavior on paste event.
+'ng-paste'
+
+// ngPattern adds the pattern validator to ngModel.
+// It is most often used for text-based input controls, but can also be applied to custom text-based controls.
+'ng-pattern'
+
+// Displays messages according to en-US localization rules.
+'ng-pluralize'
+
+// Sets the readonly attribute on the element, if the expression inside ngReadonly is truthy
+'ng-readonly'
+
+// Instantiates a template once per item from a collection
+// Special properties are exposed on the local scope of each template instance, including:
+// $index, $first, $middle, $last, $even, $odd
+'ng-repeat'
+
+// ngRequired adds the required validator to ngModel.
+// It is most often used for input and select controls, but can also be applied to custom controls.
+'ng-required'
+
+// Sets the selected attribute on the element, if the expression inside ngSelected is truthy.
+'ng-selected'
+
+// Shows or hides the given HTML element based on the expression provided to the ngShow attribute.
+'ng-show'
+
+// Using AngularJS markup like {{hash}} in a src attribute doesn't work right:
+// The browser will fetch from the URL with the literal text {{hash}} until AngularJS
+// replaces the expression inside {{hash}}. The ngSrc directive solves this problem.
+'ng-src'
+
+// Using AngularJS markup like {{hash}} in a srcset attribute doesn't work right:
+// The browser will fetch from the URL with the literal text {{hash}} until AngularJS
+// replaces the expression inside {{hash}}. The ngSrcset directive solves this problem.
+'ng-srcset'
+
+// Allows you to set CSS style on an HTML element conditionally.
+'ng-style'
+
+// Enables binding AngularJS expressions to onsubmit events.
+'ng-submit'
+
+// Used to conditionally swap DOM structure on your template based on a scope expression.
+'ng-switch'
+
+// Marks the insertion point for the transcluded DOM of the nearest parent directive that uses transclusion.
+'ng-transclude'
+
+// Binds the given expression to the value of the element.
+// It is mainly used on input[radio] and option elements, so that when the element is selected,
+// the ngModel of that element (or its select parent element) is set to the bound value.
+'ng-value'
+
+// 
+'ng-script'
