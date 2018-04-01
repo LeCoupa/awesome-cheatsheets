@@ -335,5 +335,100 @@ angular.toJson(obj, pretty)
 // the ngModel of that element (or its select parent element) is set to the bound value.
 'ng-value'
 
-// 
-'ng-script'
+
+/* *******************************************************************************************
+ * NG MODULE > TYPE
+ * ******************************************************************************************* */
+
+
+// A cache object used to store and retrieve data, primarily used by $templateRequest
+// and the script directive to cache templates and other data.
+$cacheFactory.Cache
+
+// Don't forget the cache
+
+// A shared object between directive compile / linking functions which contains normalized
+// DOM element attributes. The values reflect current binding state {{ }}.
+$compile.directive.Attributes
+
+// Converts an attribute name (e.g. dash/colon/underscore-delimited string, optionally prefixed with x- or data-)
+// to its normalized, camelCase form.
+$compile.directive.Attributes.$normalize(name)
+
+// Adds the CSS class value specified by the classVal parameter to the element.
+// If animations are enabled then an animation will be triggered for the class addition.
+$compile.directive.Attributes.$addClass(classVal)
+
+// Removes the CSS class value specified by the classVal parameter from the element.
+// If animations are enabled then an animation will be triggered for the class removal.
+$compile.directive.Attributes.$removeClass(classVal)
+
+// Adds and removes the appropriate CSS class values to the element based on the difference
+// between the new and old CSS class values (specified as newClasses and oldClasses).
+$compile.directive.Attributes.$updateClass(newClasses, oldClasses)
+
+// Observes an interpolated attribute.
+$compile.directive.Attributes.$observe(key, fn)
+
+// Set DOM element attribute value.
+$compile.directive.Attributes.$set(name, value)
+
+// A map of DOM element attribute names to the normalized name.
+// This is needed to do reverse lookup from normalized name back to actual name.
+$compile.directive.Attributes.$attr
+
+// A root scope can be retrieved using the $rootScope key from the $injector.
+$rootScope.Scope([providers], [instanceCache])
+
+
+/* *******************************************************************************************
+ * NG MODULE > FILTERS
+ * ******************************************************************************************* */
+
+
+// Formats a number as a currency (ie $1,234.56).
+// When no currency symbol is provided, default symbol for current locale is used.
+{{ currency_expression | currency : symbol : fractionSize}}
+$filter('currency')(amount, symbol, fractionSize)
+
+// Formats date to a string based on the requested format.
+{{ date_expression | date : format : timezone}}
+$filter('date')(date, format, timezone)
+
+// Selects a subset of items from array and returns it as a new array.
+{{ filter_expression | filter : expression : comparator : anyPropertyKey}}
+$filter('filter')(array, expression, comparator, anyPropertyKey)
+
+// Allows you to convert a JavaScript object into JSON string.
+// This filter is mostly useful for debugging.
+// When using the double curly notation the binding is automatically converted to JSON.
+{{ json_expression | json : spacing}}
+$filter('json')(object, spacing)
+
+// Creates a new array or string containing only a specified number of elements.
+// The elements are taken from either the beginning or the end of the source array,
+// string or number, as specified by the value and sign (positive or negative) of limit.
+// Other array-like objects are also supported (e.g. array subclasses, NodeLists, jqLite/jQuery collections etc).
+// If a number is used as input, it is converted to a string.
+{{ limitTo_expression | limitTo : limit : begin}}
+$filter('limitTo')(input, limit, begin)
+
+// Converts string to lowercase.
+{{ lowercase_expression | lowercase}}
+$filter('lowercase')()
+
+// Formats a number as text.
+// If the input is null or undefined, it will just be returned.
+// If the input is infinite (Infinity or -Infinity), the Infinity symbol '∞' or '-∞' is returned, respectively.
+// If the input is not a number an empty string is returned.
+{{ number_expression | number : fractionSize}}
+$filter('number')(number, fractionSize)
+
+// Returns an array containing the items from the specified collection,
+// ordered by a comparator function based on the values computed using the expression predicate.
+{{ orderBy_expression | orderBy : expression : reverse : comparator}}
+$filter('orderBy')(collection, expression, reverse, comparator)
+
+// Converts string to uppercase.
+{{ uppercase_expression | uppercase}}
+$filter('uppercase')()
