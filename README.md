@@ -108,10 +108,10 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 <table>
   <tr>
     <td align="center">
-      <a href="https://anyleads.com/" target="_blank"><img src="https://pbs.twimg.com/profile_images/838140522476761094/A4WpBe5M_400x400.jpg" height="64" /></a>
+      <a href="https://crisp.chat/?ta=oR1nEv43TM" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
     </td>
     <td align="center">
-      <a href="https://crisp.chat/" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
+      <a href="http://try.anyleads.com/secret" target="_blank"><img src="https://pbs.twimg.com/profile_images/838140522476761094/A4WpBe5M_400x400.jpg" height="64" /></a>
     </td>
     <td align="center">
       <a href="https://hackr.io/" target="_blank"><img src="https://d1eq8vvyuam4eq.cloudfront.net/assets/images/code-images/code-apple-touch-icon-precomposed.png" height="64" /></a>
