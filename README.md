@@ -14,11 +14,6 @@ I always make a cheatsheet when I want to improve my skills on a programming lan
 Feel free to browse each cheatsheet to learn new things and to keep them at hand when you forgot about one command. They have been designed to provide a quick way to assess your knowledge and to save you time.
 
 
-## 🙌🏼 How to Contribute?
-
-You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
-
-
 ## 📚 Table of Contents
 
 ### 📃 Languages
@@ -101,6 +96,11 @@ You are more than welcome to contribute and build your own cheatsheet for your f
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
 </details>
+
+
+## 🙌🏼 How to Contribute?
+
+You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
 
 
 ## 🙏🏻 Contribution
