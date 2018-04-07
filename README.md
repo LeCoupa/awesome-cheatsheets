@@ -1,4 +1,4 @@
-![AWESOME CHEATSHEETS LOGO](_resources/design/cover_github@2x.png)
+![AWESOME CHEATSHEETS LOGO](_design/cover_github@2x.png)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/LICENSE)
 
