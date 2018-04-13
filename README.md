@@ -6,13 +6,11 @@
 
 > ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
 
-
 ## 🤔 Why Awesome-Cheatsheets?
 
-I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) To better keep track of the history and to let people contribute to them, I reorganized everything into this  single repository. Most of the content is coming from official documentations and some books I have read.
+I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) To better keep track of the history and to let people contribute to them, I reorganized everything into this single repository. Most of the content is coming from official documentations and some books I have read.
 
 Feel free to browse each cheatsheet to learn new things and to keep them at hand when you forgot about one command. They have been designed to provide a quick way to assess your knowledge and to save you time.
-
 
 ## 📚 Table of Contents
 
@@ -31,9 +29,12 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Functional
 
-* [JavaScript](languages/javascript.js)
+<details>
+<summary>JavaScript</summary>
+* [Arrays](languages/javascript/arrays.js)
+* [Objects](languages/javascript/objects.js)
+  </details>
 </details>
-
 
 ### 📦 Backend
 
@@ -45,12 +46,11 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 * [Django](backend/django.py)
 
 #### Javascript
-  
+
 * [Feathers.js](backend/feathers.js)
 * [Moleculer](backend/moleculer.js)
 * [Node.js](backend/node.js)
-</details>
-
+  </details>
 
 ### 🌐 Frontend
 
@@ -65,8 +65,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 * [React.js](frontend/react.js)
 * [Vue.js](frontend/vue.js)
-</details>
-
+  </details>
 
 ### 🗃️ Databases
 
@@ -76,8 +75,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 #### NoSQL
 
 * [Redis](databases/redis.sh)
-</details>
-
+  </details>
 
 ### 🔧 Tools
 
@@ -95,13 +93,11 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 * [Kubernetes](tools/kubernetes.sh)
 * [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 * [Nanobox CLI](tools/nanobox_cli.sh)
-</details>
-
+  </details>
 
 ## 🙌🏼 How to Contribute?
 
 You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
-
 
 ## 🙏🏻 Contribution
 
@@ -118,6 +114,9 @@ You are more than welcome to contribute and build your own cheatsheet for your f
     </td>
     <td align="center">
       <a href="https://learnk8s.io/" target="_blank"><img src="https://pbs.twimg.com/profile_images/925127335573114880/9yCkEIe3_400x400.jpg" height="64" /></a>
+    </td>
+    <td align="center">
+      <a href="https://www.voxygen.com/" target="_blank"><img src="https://www.voxygen.com/images/logo-wide.png" height="64" /></a>
     </td>
   </tr>
 </table>
