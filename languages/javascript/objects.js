@@ -4,7 +4,7 @@
  * ******************************************************************************************* */
 
 // Global object: properties
-Object.length                                         // length is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number does not include the rest parameter. Has a value of 1.
+Object.length                                        // length is a property of a function object, and indicates how many arguments the function expects, i.e. the number of formal parameters. This number does not include the rest parameter. Has a value of 1.
 Object.prototype                                     // Represents the Object prototype object and allows to add new properties and methods to all objects of type Object.
 
 // Methods of the Object constructor
