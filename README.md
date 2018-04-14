@@ -29,11 +29,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Functional
 
-<details>
-<summary>JavaScript</summary>
+  <details>
+  <summary>JavaScript</summary>
+
 * [Objects](languages/javascript/objects.js)
+
 * [Arrays](languages/javascript/arrays.js)
+
   </details>
+
 </details>
 
 ### 📦 Backend
@@ -116,7 +120,7 @@ You are more than welcome to contribute and build your own cheatsheet for your f
       <a href="https://learnk8s.io/" target="_blank"><img src="https://pbs.twimg.com/profile_images/925127335573114880/9yCkEIe3_400x400.jpg" height="64" /></a>
     </td>
     <td align="center">
-      <a href="https://www.voxygen.com/" target="_blank"><img src="https://i.imgur.com/BNfjQZy.png" height="64" /></a>
+      <a href="https://www.voxygen.com/" target="_blank"><img src="https://imgur.com/XQoVtag.png" height="64" /></a>
     </td>
   </tr>
 </table>
