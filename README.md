@@ -45,7 +45,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 * [Django](backend/django.py)
 
 #### Javascript
-  
+
 * [Feathers.js](backend/feathers.js)
 * [Moleculer](backend/moleculer.js)
 * [Node.js](backend/node.js)
@@ -65,6 +65,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 * [React.js](frontend/react.js)
 * [Vue.js](frontend/vue.js)
+* [Ember.js](frontend/ember.js)
 </details>
 
 
