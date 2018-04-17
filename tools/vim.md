@@ -138,7 +138,7 @@
 * `<<`                  indent line one column to left
 * `==`                  auto-indent current line
 * `ddp`                 swap current line with next
-* `ddkp`                swap current line with previous
+* `ddkP`                swap current line with previous
 * `:%retab`             fix spaces / tabs issues in whole file
 * `:r [name]`           insert the file [name] below the cursor.
 * `:r !{cmd}`           execute {cmd} and insert its standard output below the cursor.
@@ -327,14 +327,14 @@
 
 #### FILE
 
-* `o'                   open in prev window
-* `go'                  preview
-* `t'                   open in new tab
-* `T'                   open in new tab silently
-* `i'                   open split
-* `gi'                  preview split
-* `s'                   open vsplit
-* `gs'                  preview vsplit
+* `o`                   open in prev window
+* `go`                  preview
+* `t`                   open in new tab
+* `T`                   open in new tab silently
+* `i`                   open split
+* `gi`                  preview split
+* `s`                   open vsplit
+* `gs`                  preview vsplit
 
 #### DIRECTORY
 
