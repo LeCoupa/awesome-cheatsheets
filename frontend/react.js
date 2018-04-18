@@ -107,6 +107,9 @@ class Component extends React.Component {
 
   // Invoked just before mounting occurs (before render())
   // This is the only lifecycle hook called on server rendering.
+  // React 16.3 introduces an alias for this hook "UNSAFE_componentWillMount" as it will be deprecated in React 17
+  // For initializing state, use the constructor.
+  // For fetching external data and event listeners, use ComponentDidMount() as this file suggests.
   componentWillMount() { }
 
   // Invoked immediately after a component is mounted.
@@ -118,6 +121,8 @@ class Component extends React.Component {
   // Invoked before a mounted component receives new props.
   // If you need to update the state in response to prop changes (for example, to reset it),
   // you may compare this.props and nextProps and perform state transitions using this.setState() in this method.
+  // React 16.3 introduces an alias for this hook "UNSAFE_componentWillReceiveProps" as it will be deprecated in React 17
+  // Please refer to the new lifecycle hook getDerivedStateFromProps()
   componentWillReceiveProps(nextProps) { }
 
   // Let React know if a component’s output is not affected by the current change in state or props.
@@ -132,6 +137,8 @@ class Component extends React.Component {
   // Note that you cannot call this.setState() here; nor should you do anything else
   // (e.g. dispatch a Redux action) that would trigger an update to a React component before componentWillUpdate() returns.
   // If you need to update state in response to props changes, use componentWillReceiveProps() instead.
+  // React 16.3 introduces an alias for this hook "UNSAFE_componentWillUpdate" as it will be deprecated in React 17.
+  // This can be replaced with a mixture of ComponentDidUpdate() and getSnapshotBeforeupdate()
   componentWillUpdate(nextProps, nextState) { }
 
   // Invoked immediately after updating occurs. This method is not called for the initial render.
@@ -148,6 +155,40 @@ class Component extends React.Component {
   // log those errors, and display a fallback UI instead of the component tree that crashed.
   // Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
   componentDidCatch() { }
+
+  // React 16.3+ only without a polyfill
+  // Replaces componentWillReceiveProps()
+  // If you need to update the state in response to prop changes,
+  // you may compare this.props and nextProps and perform state transitions using this.setState() in this method.
+  static getDerivedStateFromProps(nextProps, prevState) { }
+
+  // React 16.3+
+  // The new getSnapshotBeforeUpdate lifecycle is called right before mutations are made (e.g. before the DOM is updated). 
+  // The return value for this lifecycle will be passed as the third parameter to componentDidUpdate.
+  // Together with componentDidUpdate, this new lifecycle should cover all use cases for the legacy componentWillUpdate.
+  // https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#new-lifecycle-getsnapshotbeforeupdate
+  getSnapshotBeforeUpdate() { }
+
+  /** Polyfill to use 16.3 lifecycle hooks in older versions of React - 0.14.9+ */
+  ```
+    npm install 'react-lifecycles-compat';
+  ```
+
+  import polyfill from 'react-lifecycles-compat';
+
+  class PolyfilledComponent extends React.Component {
+    static getDerivedStateFromProps(nextProps, prevState) {
+      // Your state update logic here ...
+    }
+
+    render() {
+      return "I'm a polyfilled component";
+    }
+  }
+
+  polyfill(PolyfilledComponent)
+
+  export default PolyfilledComponent;
 
   // This method is required.
   // It should be pure, meaning that it does not modify component state,
@@ -337,3 +378,34 @@ MyComponent.propTypes = {
     }
   })
 };
+
+
+/* *******************************************************************************************
+ * React 16.3 Context API
+ * https://medium.com/dailyjs/reacts--new-context-api-70c9fe01596b
+ * ******************************************************************************************* */
+
+ // React 16.3 comes with a new and improved version of the Context API which allows us to avoid needlessly "drilling" props down multiple levels.
+
+const LanguageContext = React.createContext('Spanish')
+class LanguageProvider extends React.Component {
+  state = {language: 'spanish'}
+  render() {
+    return (
+      <LanguageContext.Provider value={this.state.language}>
+        {this.props.children}
+      </LanguageContext.Provider>
+    )
+  }
+}
+class App extends React.Component {
+  render() {
+    return (
+      <LanguageProvider>
+        <LanguageContext.Consumer>
+          {val => <div>{`This component will be displayed in ${val}`}</div>}
+        </LanguageContext.Consumer>
+      </LanguageProvider>
+    )
+  }
+}
