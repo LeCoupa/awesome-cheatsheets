@@ -29,14 +29,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Functional
 
-  <details>
-  <summary>JavaScript</summary>
-
-* [Objects](languages/javascript/objects.js)
-
-* [Arrays](languages/javascript/arrays.js)
-
-  </details>
+* [JavaScript](languages/javaScript.js)
 
 </details>
 
