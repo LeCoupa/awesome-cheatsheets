@@ -29,7 +29,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Functional
 
-* [JavaScript](languages/javaScript.js)
+* [JavaScript](languages/javascript.js)
 
 </details>
 
