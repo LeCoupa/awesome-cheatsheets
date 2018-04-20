@@ -15,7 +15,7 @@
  * ******************************************************************************************* */
 
 
-```bash
+```
 # Provides the ability to initialize new application instances
 npm install @feathersjs/feathers --save
 
@@ -185,7 +185,7 @@ app.on('login', (payload, info) => {})  // sent by the authentication module and
  * ******************************************************************************************* */
 
 
-```bash
+```
 # Contains Express framework integrations
 npm install @feathersjs/express --save
 
@@ -252,7 +252,7 @@ app.configure(primus(options, callback))  // sets up the Primus transport with t
  * ******************************************************************************************* */
 
 
-```bash
+```
 # Bundles the separate Feathers client side modules into one providing the code as ES5 (compatible with modern browsers)
 # You do not have to install or load any of the other modules listed below
 npm install @feathersjs/client --save
@@ -299,7 +299,7 @@ primus(socket, options)  // initialize the Primus client using a given socket an
  * ******************************************************************************************* */
 
 
-```bash
+```
 # Assists in using JWT for authentication
 npm install @feathersjs/authentication --save
 
@@ -562,7 +562,7 @@ app.service('authentication').hooks({
  * ******************************************************************************************* */
 
 
-```bash
+```
 # [MEMORY/FILESYSTEM] In-memory database adapter
 npm install feathers-memory --save
 
