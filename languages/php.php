@@ -55,14 +55,14 @@ switch($arr) {
 }
 
 /**
- * Global variable
+ * Global variables
  * http://php.net/manual/en/language.variables.superglobals.php
  */
 $_SERVER; // SERVER variables
 $_GET; // Query params
 $_POST; // Post fields
 $_REQUEST; // GET and POST together
-$GLOBALS; // Collection of global variables
+$GLOBALS; // Array of global variables
 $_SESSION; // Browser session
 $_FILES; // Array of files that are sent in request
 $_COOKIE; // Array of cookies sent in request
