@@ -49,7 +49,8 @@ ember serve
     - Project/Addon creation: create new projects quickly without having to worry about project structure;
     - Build pipeline: asset compilation, finger-printing and more out of the box;
     - Generators: use the built-in generators and get files that follow the latest practices, and matching tests;
-    - Ember Addons: extend both your application and Ember CLI itself with community solutions.
+    - Ember Addons: extend both your application and Ember CLI itself with community solutions. Also an excellent
+                    way to easily integrate 3rd party libraries into your Ember app.
  */
 
 Basic commands
@@ -700,30 +701,43 @@ On Component Destroy
  *
  */
 
-// Stuck? Lost? Get Help from the Community
-[Ember Discussion Forum](http://discuss.emberjs.com/)
-  | a great venue for discussing features, architecture and best practices.
+//  Ember Discussion Forum
+//
+//    url: http://discuss.emberjs.com/
+//
+//    A great venue for discussing things like features, architecture, and best practices
+//    and a great place to ask questions (and get great answers from Ember Core Team members
+//    and other members of the community)
 
-[Ember Community Slack](https://embercommunity.slack.com/)
-  | use the Slackin app to receive an invitation.
+//  Ember Community Slack
+//
+//    url: https://embercommunity.slack.com/
+//
+//    Use the Slackin app to receive an invitation.
 
-[StackOverflow](http://stackoverflow.com/questions/tagged/ember.js)
-  | used to track questions. Just tag your question with ember.js or search for questions with that tag. Please check to see if your question has already been answered before asking a new one.
+//  Ember Times
+//
+//    url: https://the-emberjs-times.ongoodbits.com/
+//
+//    Follow the progress of new features in the Ember ecosystem, requests for community
+//    input (RFCs), and calls for contributors
 
+//  Ember Weekly
+//
+//    url: http://www.emberweekly.com/
+//
+//    A curated list of Ember learning resources (podcasts, videos, blog posts, books, and more)
 
-// Stay Up to Date with the Latest News
-[Ember Times](https://the-emberjs-times.ongoodbits.com/)
-  | follow the progress of new features in the Ember ecosystem, requests for community input (RFCs), and calls for contributors
+//  Official Ember Blog
+//
+//    url: https://emberjs.com/blog/
+//
+//    Big announcements like new Ember.js version release notes or State of the Union information
 
-[Ember Weekly](http://www.emberweekly.com/)
-  | a curated list of Ember learning resources (podcasts, videos, blog posts, books, and more)
+//  Ember Github
+//
+//    url: https://github.com/emberjs/
 
-[Official Ember Blog](https://emberjs.com/blog/)
-  | big announcements like new Ember.js version release notes or State of the Union information
-
-
-// In a Giving Mood? Contribute to the Project
-[Ember Github](https://github.com/emberjs/)
-
-// Feeling Lonely? Join a Meetup
-[Ember Meetups](https://emberjs.com/community/meetups/)
+//  Ember Meetups
+//
+//    url: https://emberjs.com/community/meetups/
