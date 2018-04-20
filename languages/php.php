@@ -1,7 +1,12 @@
 <?php
 
 /**
+ * 
+ */
+
+/**
  * Global variable
+ * http://php.net/manual/en/language.variables.superglobals.php
  */
 $_SERVER; // SERVER variables
 $_GET; // Query params
