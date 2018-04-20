@@ -1,8 +1,12 @@
 <?php
 
 /**
- * 
+ * Printing
  */
+echo ""; // Print a string or type that can be made into a string(I.E int, float).
+print_r($arr); // Print anything, with type hints for array's and object's
+var_dump($arr); // Print anything, with type hints for any value and sizes
+
 /**
  * Ways of looping
  */
