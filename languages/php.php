@@ -3,6 +3,48 @@
 /**
  * 
  */
+/**
+ * Ways of looping
+ */
+continue; // Skip current iter
+break; // Exit loop
+
+// Foreach
+foreach($arr as $key => $value) {
+    $key = $key;
+    $value = $value;
+}
+
+// For
+for($i = 0; $i < count($arr) - 1; $i++) {
+    $key = $i;
+    $value = $arr[$i];
+}
+
+// While
+$i = 0;
+while($i < count($arr) - 1) {
+    $key = $i;
+    $value = $arr[$i];
+}
+
+// Do while
+$i = 0;
+do {
+    $key = $i;
+    $value = $arr[$i];
+} while($i < count($arr));
+
+// Switch
+switch($arr) {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+}
 
 /**
  * Global variable
