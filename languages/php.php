@@ -1,6 +1,21 @@
 <?php
 
 /**
+ * Global variable
+ */
+$_SERVER; // SERVER variables
+$_GET; // Query params
+$_POST; // Post fields
+$_REQUEST; // GET and POST together
+$GLOBALS; // Collection of global variables
+$_SESSION; // Browser session
+$_FILES; // Array of files that are sent in request
+$_COOKIE; // Array of cookies sent in request
+$_ENV; // php.ini options
+$argv; // Array of terminal arguments (filename included)
+$argc; // Number of arguments passed into terminal
+
+/**
  * Class 
  * http://php.net/manual/en/language.oop5.basic.php
  */
