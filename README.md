@@ -72,7 +72,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 #### NoSQL
 
 * [Redis](databases/redis.sh)
+<<<<<<< HEAD
   </details>
+=======
+
+#### Relational
+* [MSSQL](databases/mssql.md)
+</details>
+
+>>>>>>> master
 
 ### 🔧 Tools
 
