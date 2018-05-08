@@ -15,6 +15,7 @@ ALTER TABLE [Table] ADD PRIMARY KEY(Columnname1, columnname2);
 ```
 # Utilities
 ### Reset identity column back to 1
+Will make it so the next insert will have and ID of 2
 ```sql
 DBCC CHECKIDENT ('[Table]', RESEED, 1)
 ```
