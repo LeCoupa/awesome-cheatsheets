@@ -56,3 +56,9 @@ MAX(totalqty)
   FOR dateadded in([01],[02],[03],[04],[05],[06],[07],[08],[09],[10],[11],[12])
 ) as p
 ```
+
+### Toggle Identity Insert
+SET IDENTITY_INSERT TableName OFF
+
+SET IDENTITY_INSERT TableName ON
+
