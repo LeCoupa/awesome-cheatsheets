@@ -58,7 +58,8 @@ MAX(totalqty)
 ```
 
 ### Toggle Identity Insert
+```sql
 SET IDENTITY_INSERT TableName OFF
 
 SET IDENTITY_INSERT TableName ON
-
+```
