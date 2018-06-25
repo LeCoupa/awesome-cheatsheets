@@ -21,15 +21,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Command line interface
 
-* [Bash](languages/bash.sh)
+- [Bash](languages/bash.sh)
 
 #### Imperative
 
-* [PHP](languages/php.php)
+- [PHP](languages/php.php)
 
 #### Functional
 
-* [JavaScript](languages/javascript.js)
+- [JavaScript](languages/javascript.js)
 
 </details>
 
@@ -40,13 +40,13 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Python
 
-* [Django](backend/django.py)
+- [Django](backend/django.py)
 
 #### Javascript
 
-* [Feathers.js](backend/feathers.js)
-* [Moleculer](backend/moleculer.js)
-* [Node.js](backend/node.js)
+- [Feathers.js](backend/feathers.js)
+- [Moleculer](backend/moleculer.js)
+- [Node.js](backend/node.js)
   </details>
 
 ### 🌐 Frontend
@@ -56,14 +56,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Basics
 
-* [HTML5](frontend/html5.html)
+- [HTML5](frontend/html5.html)
 
 #### Frameworks
 
-* [React.js](frontend/react.js)
-* [Vue.js](frontend/vue.js)
-* [Ember.js](frontend/ember.js)
-* [Angular](frontend/angular.js)
+- [React.js](frontend/react.js)
+- [Vue.js](frontend/vue.js)
+- [Ember.js](frontend/ember.js)
+- [Angular](frontend/angular.js)
+- [AngularJS](frontend/angularjs.js)
   </details>
 
 ### 🗃️ Databases
@@ -73,7 +74,7 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### NoSQL
 
-* [Redis](databases/redis.sh)
+- [Redis](databases/redis.sh)
   </details>
 
 ### 🔧 Tools
@@ -83,15 +84,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Development
 
-* [VIM](tools/vim.txt)
-* [Xcode](tools/xcode.txt)
+- [VIM](tools/vim.txt)
+- [Xcode](tools/xcode.txt)
 
 #### Infrastructure
 
-* [Docker](tools/docker.sh)
-* [Kubernetes](tools/kubernetes.sh)
-* [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-* [Nanobox CLI](tools/nanobox_cli.sh)
+- [Docker](tools/docker.sh)
+- [Kubernetes](tools/kubernetes.sh)
+- [Nanobox Boxfile](tools/nanobox_boxfile.yml)
+- [Nanobox CLI](tools/nanobox_cli.sh)
   </details>
 
 ## 🙌🏼 How to Contribute?
