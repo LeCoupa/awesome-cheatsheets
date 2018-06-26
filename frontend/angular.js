@@ -185,7 +185,8 @@ class MyDirective() {}
 @Pipe({...})
 class MyPipe() {} 
 
-// Declares that a class can be injected into the constructor of another class by the dependency injector.
+// Declares that a class can be injected into the constructor of another class
+// by the dependency injector.
 @Injectable()
 class MyService() {}  
 
