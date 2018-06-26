@@ -63,8 +63,8 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 - [React.js](frontend/react.js)
 - [Vue.js](frontend/vue.js)
 - [Ember.js](frontend/ember.js)
-- [Angular (2+)](frontend/angular-io.js)
-- [AngularJS](frontend/angular-js.js)
+- [Angular (2+)](frontend/angular.js)
+- [AngularJS](frontend/angular.js)
   </details>
 
 ### 🗃️ Databases
