@@ -1,5 +1,5 @@
 /* *******************************************************************************************
- * ANGULAR CHEATSHEET
+ * ANGULAR (2+) CHEATSHEET
  * DOCUMENTATION: https://angular.io/docs
  * STYLE GUIDE: https://angular.io/guide/styleguide
  * ******************************************************************************************* */
