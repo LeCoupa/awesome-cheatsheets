@@ -107,23 +107,28 @@ sails.log(message);
 // Populate and return foreign record(s) for the given association of this record.
 ("GET /:model/:id/:association");
 
-// Create a new record in your database.
+// Create a new record in your database
+// and notify subscribed sockets that a newly record is created
 ("POST /:model");
 
-// Update an existing record in the database and notify subscribed sockets that it has changed.
+// Update an existing record in the database
+// and notify subscribed sockets that it has changed.
 ("PATCH /:model/:id");
 
-// Replace all of the foreign records in one of this record's collections (e.g. "comments").
+// Replace all of the foreign records in one of this record's collections
+// and notify subscribed sockets to the parent record.
 ("PUT /:model/:id/:association");
 
-// Add a foreign record to one of this record's collections.
+// Add a foreign record to one of this record's collections
+// and notify subscribed sockets to the parent record.
 ("PUT /:model/:id/:association/:fk");
 
 // Delete the record specified by id from the database forever
-// and notify subscribed sockets.
+// and notify subscribed sockets that a record has been deleted
 ("DELETE /:model/:id");
 
-// Remove a foreign record (e.g. a comment) from one of this record's collections (e.g. "comments").
+// Remove a foreign record from one of this record's collections
+// and notify subscribed sockets about this removed child
 ("DELETE /:model/:id/:association/:fk");
 
 /********************************************************************************************
