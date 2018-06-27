@@ -1,5 +1,6 @@
 /* *******************************************************************************************
  * ANGULAR (2+) CHEATSHEET
+ * BASED ON https://angular.io/guide/cheatsheet
  * DOCUMENTATION: https://angular.io/docs
  * STYLE GUIDE: https://angular.io/guide/styleguide
  * ******************************************************************************************* */
