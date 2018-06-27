@@ -12,12 +12,12 @@
  * 6. RESPONSE
  * 7. WATERLINE ORM
  * 8. WEBSOCKETS
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 1. APPLICATION
  * https://sailsjs.com/documentation/reference/application
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 // A dictionary of all loaded Sails models, indexed by their identity.
 sails.models;
@@ -30,6 +30,9 @@ sails.hooks;
 
 // The full set of configuration options for the Sails instance
 sails.config;
+
+// The runtime values of your app's custom configuration settings.
+sails.config.custom;
 
 // A set of convenience methods for low - level interaction with connected websockets.
 sails.sockets;
@@ -82,46 +85,73 @@ sails.request(url, body);
 sails.request(url, callback);
 sails.request(url, body, callback);
 
-// The runtime values of your app's custom configuration settings.
-sails.config.custom;
-
 // Access a particular datastore, or the default datastore.
 sails.getDatastore(datastoreName);
 
 // Log a message or some data at the "debug" log level using Sails' built-in logger.
-sails.log(...);
+sails.log(message);
 
 /********************************************************************************************
  * 2. BLUEPRINT API
  * https://sailsjs.com/documentation/reference/blueprint-api
- * ******************************************************************************************* */
+ ********************************************************************************************/
+
+// Find a list of records that match the specified criteria
+// and (if possible) subscribe to each of them.
+("GET /:model");
+
+// Look up the record with the specified id from the database
+// and (if possible) subscribe to the record to hear about any future changes.
+("GET /:model/:id");
+
+// Populate and return foreign record(s) for the given association of this record.
+("GET /:model/:id/:association");
+
+// Create a new record in your database.
+("POST /:model");
+
+// Update an existing record in the database and notify subscribed sockets that it has changed.
+("PATCH /:model/:id");
+
+// Replace all of the foreign records in one of this record's collections (e.g. "comments").
+("PUT /:model/:id/:association");
+
+// Add a foreign record to one of this record's collections.
+("PUT /:model/:id/:association/:fk");
+
+// Delete the record specified by id from the database forever
+// and notify subscribed sockets.
+("DELETE /:model/:id");
+
+// Remove a foreign record (e.g. a comment) from one of this record's collections (e.g. "comments").
+("DELETE /:model/:id/:association/:fk");
 
 /********************************************************************************************
  * 3. COMMAND-LINE INTERFACE
  * https://sailsjs.com/documentation/reference/command-line-interface
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 4. CONFIGURATION
  * https://sailsjs.com/documentation/reference/configuration
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 5. REQUEST
  * https://sailsjs.com/documentation/reference/request-req
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 6. REPONSE
  * https://sailsjs.com/documentation/reference/response-res
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 7. WATERLINE ORM
  * https://sailsjs.com/documentation/reference/waterline-orm
- * ******************************************************************************************* */
+ ********************************************************************************************/
 
 /********************************************************************************************
  * 8. WEB SOCKETS
  * https://sailsjs.com/documentation/reference/web-sockets
- * ******************************************************************************************* */
+ ********************************************************************************************/
