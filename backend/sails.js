@@ -136,6 +136,63 @@ sails.log(message);
  * https://sailsjs.com/documentation/reference/command-line-interface
  ********************************************************************************************/
 
+// Lift your Node.js/Sails.js app in interactive mode, and enter the REPL.
+// Useful for trying out Waterline queries, quickly managing your data, and checking
+// out your project's runtime configuration.
+sails console [--dontLift]
+
+// Generate api/models/Foo.js, including attributes with the specified types if provided.
+sails generate model
+
+// Generate a standalone action.
+sails generate action
+
+// Generate a helper at api/helpers/foo.js.
+sails generate helper
+
+// Generate api/controllers/FooController.js, including actions with the specified names if provided.
+sails generate controller
+
+// Generate a project hook in api/hooks/foo/.
+sails generate hook
+
+// Generate a foo folder containing the files necessary for building a new generator.
+sails generate generator
+
+// Generate a custom response at api/responses/foo.js
+sails generate response
+
+// Generate a api/adapters/foo/ folder containing the files necessary for building a new adapter.
+sails generate adapter
+
+// Generate a sails.io.js file at the specified location, overwriting the default sails.io.js if applicable.
+sails generate sails.io.js
+
+// Generate api/models/Foo.js and api/controllers/FooController.js.
+sails generate api	
+
+// Alias for sails new.
+sails generate new
+
+// Experimental. Adds the following files to your app:
+// .gitignore, .jshintrc, .editorconfig, .npmignore, .travis.yml, .appveyor.yml
+sails generate etc
+
+// Attach the node debugger and lift the sails app; similar to running node--inspect app.js.
+// You can then use a tool like the Chrome DevTools to interactively debug your apps.
+sails inspect
+
+// Run the Sails app in the current dir
+// (if node_modules/sails exists, it will be used instead of the globally installed Sails)
+sails lift [--prod] [--port <portNum>] [--verbose] [--silly]
+
+// Create a new sails project.
+sails new <yourAppName> [--no-frontend] [--minimal] [--without=package,package,package]
+
+// Get the version of your computer's globally installed Sails command-line tool
+// (i.e. the version you installed with npm install -g sails).
+sails version
+
 /********************************************************************************************
  * 4. CONFIGURATION
  * https://sailsjs.com/documentation/reference/configuration
