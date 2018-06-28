@@ -47,6 +47,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Feathers.js](backend/feathers.js)
 - [Moleculer](backend/moleculer.js)
 - [Node.js](backend/node.js)
+- [Sails.js](backend/sails.js)
   </details>
 
 ### 🌐 Frontend
