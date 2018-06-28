@@ -29,6 +29,9 @@ sails.helpers;
 sails.hooks;
 
 // The full set of configuration options for the Sails instance
+// It is assembled automatically when Sails loads your app;
+// merging together command-line arguments, environment variables, your .sailsrc file,
+// and the configuration objects exported from any and all modules in your app's config/ directory.
 sails.config;
 
 // The runtime values of your app's custom configuration settings.
@@ -197,6 +200,68 @@ sails version
  * 4. CONFIGURATION
  * https://sailsjs.com/documentation/reference/configuration
  ********************************************************************************************/
+
+// Determines which TCP port your Sails app will use to listen for incoming requests.
+sails.config.port
+
+// Declare the host name of your Sails app (By default, Sails will assume localhost).
+sails.config.explicitHost
+
+// The runtime “environment” of your Sails app (usually either development or production).
+sails.config.environment
+
+// A time limit, in milliseconds, imposed on all hooks in your app (default to 20000)
+sails.config.hookTimeout
+
+// Configure SSL settings for HTTPs and WSS
+sails.config.ssl
+
+// These configurable settings allow you to configure the blueprint API in Sails.
+sails.config.blueprints
+
+// Asynchronous bootstrap function that runs before your Sails app gets lifted (i.e. starts up).
+// Can be used for setting up baseline data, running sanity checks on the status of your database...
+sails.config.bootstrap
+
+// Custom configuration for your app (one-off settings specific to your application)
+// Things like the domain to use when sending emails, or 3rd party API keys for Stripe, Mailgun...
+sails.config.custom
+
+// Datastore configurations(or simply datastores) are like "saved settings" for your adapters.
+sails.config.datastores
+
+// Configuration for the global variables that Sails exposes by default.
+sails.config.globals
+
+// Configuration for your app's underlying HTTP server.
+sails.config.http
+
+// Configuration for Sails' built-in internationalization & localization features.
+sails.config.i18n
+
+// Configuration for the logger in your Sails app.
+sails.config.log
+
+// Your default project-wide model settings.
+sails.config.models
+
+// Dictionary that maps policies to an app’s actions.
+sails.config.policies
+
+// Configuration for custom (aka "explicit") routes.
+sails.config.routes
+
+// Configuration for your app's security settings.
+sails.config.security
+
+// Configuration for Sails's built-in session support.
+sails.config.session
+
+// Provide transparent access to Socket.io
+sails.config.sockets
+
+// Configuration for your app's server-side views.
+sails.config.views
 
 /********************************************************************************************
  * 5. REQUEST
