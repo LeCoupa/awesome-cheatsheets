@@ -1,5 +1,75 @@
 <?php
 
+// Exit the file, string inside get's echo'ed
+die("This file is not ment to be ran. ¯\_(ツ)_/¯");
+exit("This file is not ment to be ran. ¯\_(ツ)_/¯");
+
+/**
+ * Printing
+ */
+echo ""; // Print a string or type that can be made into a string(I.E int, float).
+print_r($arr); // Print anything, with type hints for array's and object's
+var_dump($arr); // Print anything, with type hints for any value and sizes
+
+/**
+ * Ways of looping
+ */
+continue; // Skip current iter
+break; // Exit loop
+
+// Foreach
+foreach($arr as $key => $value) {
+    $key = $key;
+    $value = $value;
+}
+
+// For
+for($i = 0; $i < count($arr) - 1; $i++) {
+    $key = $i;
+    $value = $arr[$i];
+}
+
+// While
+$i = 0;
+while($i < count($arr) - 1) {
+    $key = $i;
+    $value = $arr[$i];
+}
+
+// Do while
+$i = 0;
+do {
+    $key = $i;
+    $value = $arr[$i];
+} while($i < count($arr));
+
+// Switch
+switch($arr) {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+}
+
+/**
+ * Global variables
+ * http://php.net/manual/en/language.variables.superglobals.php
+ */
+$_SERVER; // SERVER variables
+$_GET; // Query params
+$_POST; // Post fields
+$_REQUEST; // GET and POST together
+$GLOBALS; // Array of global variables
+$_SESSION; // Browser session
+$_FILES; // Array of files that are sent in request
+$_COOKIE; // Array of cookies sent in request
+$_ENV; // php.ini options
+$argv; // Array of terminal arguments (filename included)
+$argc; // Number of arguments passed into terminal
+
 /**
  * Class 
  * http://php.net/manual/en/language.oop5.basic.php
