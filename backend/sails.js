@@ -20,79 +20,79 @@
  ********************************************************************************************/
 
 // A dictionary of all loaded Sails models, indexed by their identity.
-sails.models;
+sails.models
 
 // A dictionary of all accessible helpers, including organics.
-sails.helpers;
+sails.helpers
 
 // A dictionary of all loaded Sails hooks, indexed by their identity.
-sails.hooks;
+sails.hooks
 
 // The full set of configuration options for the Sails instance
-// It is assembled automatically when Sails loads your app;
+// It is assembled automatically when Sails loads your app
 // merging together command-line arguments, environment variables, your .sailsrc file,
 // and the configuration objects exported from any and all modules in your app's config/ directory.
-sails.config;
+sails.config
 
 // The runtime values of your app's custom configuration settings.
-sails.config.custom;
+sails.config.custom
 
 // A set of convenience methods for low - level interaction with connected websockets.
-sails.sockets;
+sails.sockets
 
 // Talk to Socket.io directly.
-sails.io;
+sails.io
 
 // A regular expression designed for use in identifying URL paths that seem like they are probably
 // for a static asset of some kind (e.g. image, stylesheet, favicon.ico, robots.txt, etc).
-sails.LOOKS_LIKE_ASSET_RX;
+sails.LOOKS_LIKE_ASSET_RX
 
 // Return a dictionary of Sails actions.
-sails.getActions();
+sails.getActions()
 
 // Look up the first route pointing at the specified target (e.g. MeController.login)
 // and return a dictionary containing its method and URL.
-sails.getRouteFor(target);
+sails.getRouteFor(target)
 
 // Look up the first route pointing at the specified target (e.g. entrance/view-login)
 // and return its URL.
-sails.getUrlFor(target);
+sails.getUrlFor(target)
 
 // Lift a Sails app programmatically.
 // This does exactly what you might be used to seeing by now when you run sails lift.
-sailsApp.lift(configOverrides, function(err) {});
+sailsApp.lift(configOverrides, function(err) {})
 
 // Load a Sails app into memory-- but without lifting an HTTP server.
 // Useful for writing tests, command - line scripts, and scheduled jobs.
-sailsApp.load(configOverrides, function(err) {});
+sailsApp.load(configOverrides, function(err) {})
 
 // Shut down a lifted Sails app and have it cease listening for / responding to any future requests.
-sails.lower(callback);
+sails.lower(callback)
 
 // Register a new Sails action that can then be bound to a route.
-sails.registerAction(action, name);
+sails.registerAction(action, name)
 
 // Register a new action middleware function that will be applied to actions
 // with the specified identities.
-sails.registerActionMiddleware(actionMiddlewareFns, actionIdentities);
+sails.registerActionMiddleware(actionMiddlewareFns, actionIdentities)
 
 // Flush and reload all Sails actions.
-sails.reloadActions();
+sails.reloadActions()
 
 // Compile a view into an HTML template.
-sails.renderView(pathToView, templateData);
+sails.renderView(pathToView, templateData)
 
 // Make a virtual request to a running Sails instance.
-sails.request(request);
-sails.request(url, body);
-sails.request(url, callback);
-sails.request(url, body, callback);
+sails.request(request)
+sails.request(url, body)
+sails.request(url, callback)
+sails.request(url, body, callback)
 
 // Access a particular datastore, or the default datastore.
-sails.getDatastore(datastoreName);
+sails.getDatastore(datastoreName)
 
 // Log a message or some data at the "debug" log level using Sails' built-in logger.
-sails.log(message);
+sails.log(message)
 
 /********************************************************************************************
  * 2. BLUEPRINT API
@@ -101,38 +101,38 @@ sails.log(message);
 
 // Find a list of records that match the specified criteria
 // and (if possible) subscribe to each of them.
-("GET /:model");
+GET /:model
 
 // Look up the record with the specified id from the database
 // and (if possible) subscribe to the record to hear about any future changes.
-("GET /:model/:id");
+GET /:model/:id
 
 // Populate and return foreign record(s) for the given association of this record.
-("GET /:model/:id/:association");
+GET /:model/:id/:association
 
 // Create a new record in your database
 // and notify subscribed sockets that a newly record is created
-("POST /:model");
+POST /:model
 
 // Update an existing record in the database
 // and notify subscribed sockets that it has changed.
-("PATCH /:model/:id");
+PATCH /:model/:id
 
 // Replace all of the foreign records in one of this record's collections
 // and notify subscribed sockets to the parent record.
-("PUT /:model/:id/:association");
+PUT /:model/:id/:association
 
 // Add a foreign record to one of this record's collections
 // and notify subscribed sockets to the parent record.
-("PUT /:model/:id/:association/:fk");
+PUT /:model/:id/:association/:fk
 
 // Delete the record specified by id from the database forever
 // and notify subscribed sockets that a record has been deleted
-("DELETE /:model/:id");
+DELETE /:model/:id
 
 // Remove a foreign record from one of this record's collections
 // and notify subscribed sockets about this removed child
-("DELETE /:model/:id/:association/:fk");
+DELETE /:model/:id/:association/:fk
 
 /********************************************************************************************
  * 3. COMMAND-LINE INTERFACE
@@ -267,6 +267,116 @@ sails.config.views
  * 5. REQUEST
  * https://sailsjs.com/documentation/reference/request-req
  ********************************************************************************************/
+
+// The moment that Sails started processing the request, as a Javascript Date object.
+req._startTime
+
+// An object containing text parameters from the parsed request body, defaulting to {}.
+// If a request contains one or more file uploads, only the text parameters sent before
+// the first file parameter will be available in req.body.
+req.body
+
+// An object containing all of the unsigned cookies from this request (req).
+req.cookies
+
+// A flag indicating the user-agent sending this request (req) wants "fresh" data
+// (as indicated by the "if-none-match", "cache-control", and/or "if-modified-since" request headers.)
+req.fresh
+
+// An object containing pre-defined/custom header given in the current request.
+req.headers
+
+// Returns the hostname supplied in the host HTTP header.
+// This header may be set either by the client or by the proxy.
+req.hostname
+
+// The IP address of the client who sent this request (req).
+req.ip
+
+// Contains the IP addresses in this request's "X-Forwarded-For" header
+// as an array of the IP address strings.
+req.ips
+
+// A flag indicating whether or not this request (req) originated from a Socket.io connection.
+req.isSocket
+
+// The request method (aka "verb".)
+// All requests to a Sails server have a "method", even via WebSockets.
+req.method
+
+// Dictionary (plain JavaScript object) of request-agnostic settings available in your app's actions.
+req.options
+
+// Retains the original request URL allowing you to rewrite req.url freely for internal routing purposes.
+// In almost all cases, you’ll want to use req.url instead.
+req.originalUrl
+
+// An object containing parameter values parsed from the URL path.
+req.params
+
+// The URL pathname from the request URL string of the current request (req).
+req.path
+
+// The protocol used to send this request (req).
+req.protocol
+
+// A dictionary containing the parsed query-string, defaulting to {}.
+req.query
+
+// Indicates whether or not the request was sent over a secure TLS connection (i.e. https:// or wss://).
+req.secure
+
+// A dictionary containing all of the signed cookies from this request (req).
+req.signedCookies
+
+// If the current Request (req) originated from a connected Socket.io client,
+// req.socket refers to the raw Socket.io socket instance.
+req.socket
+
+// An array of all the subdomains in this request's URL.
+req.subdomains
+
+// Like req.path, but also includes the query string suffix.
+req.url
+
+// A flag indicating whether the requesting client would prefer a JSON response
+// (as opposed to some other format, like XML or HTML.)
+req.wantsJSON
+
+// A flag indicating whether the current request (req) appears to be an AJAX request.
+req.xhr
+
+// Return whether this request (req) advertises that it understands the specified media type.
+req.accepts(mediaType)
+
+// Return whether this request (req) advertises that it is able to handle any of the specified
+// character set(s), and if so, which one.
+req.acceptsCharsets(charset1, charset2, …)
+
+// Return whether this request (req) advertises that it understands any of the specified
+// language(s), and if so, which one.
+req.acceptsLanguages(language1, language2, …)
+
+// Returns the value of all parameters sent in the request, merged together into a single dictionary
+req.allParams()
+
+// Build and return a Skipper Upstream representing an incoming multipart file upload from the specified field.
+req.file(field)
+
+// Returns the value of the specified header field in this request (req). Note that header names are case-insensitive.
+req.get(header)
+
+// Returns true if this request's declared "Content-Type" matches the specified media/mime type.
+req.is(type)
+
+// Returns the value of the parameter with the specified name.
+req.param(name[, defaultValue])
+
+// Override the inferred locale for this request.
+req.setLocale(override)
+
+// Time out this request if a response is not sent within the specified number of milliseconds.
+req.setTimeout(numMilliseconds)
 
 /********************************************************************************************
  * 6. REPONSE
