@@ -4,8 +4,6 @@
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
-> ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
-
 ## 🤔 Why Awesome-Cheatsheets?
 
 I usually make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa). To better keep track of the history and to let people contribute, I reorganized all of them into this single repository. Most of the content is coming from official documentations and some books I have read.
