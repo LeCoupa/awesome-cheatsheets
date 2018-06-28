@@ -379,9 +379,76 @@ req.setLocale(override)
 req.setTimeout(numMilliseconds)
 
 /********************************************************************************************
- * 6. REPONSE
+ * 6. RESPONSE
  * https://sailsjs.com/documentation/reference/response-res
  ********************************************************************************************/
+
+// Indicate to a web browser or other user agent that an outgoing file download sent
+// in this response should be "Saved as..." rather than "Opened", and optionally specify the
+// name for the newly downloaded file on disk.
+res.attachment([filename])
+
+// This method is used to send a 200 ("OK") response back down to the client.
+res.ok(data)
+
+// This method is used to send a 400 ("Bad Request") response back down
+// to the client indicating that the request is invalid.
+res.badRequest(data)
+
+// This method is used to send a 403 ("Forbidden") response back down
+// to the client indicating that the request is not allowed.
+res.forbidden()
+
+// This method is used to send a 404 ("Not Found") response using either res.json() or res.view().
+res.notFound()
+
+// This method is used to send a 500 ("Server Error") response back down to the client indicating
+// that some kind of server error occurred (i.e. the error is not the requesting user agent's fault).
+res.serverError(err)
+res.serverError()
+
+// Sets a cookie with name (name) and value (value) to be sent along with the response.
+res.cookie(name, value[, options])
+
+// Clears cookie (name) in the response.
+res.clearCookie(name[, options])
+
+// Returns the current value of the specified response header (header).
+res.get(header)
+
+// Sets specified response header (header) to the specified value (value).
+res.set(header, value)
+res.set(headers)
+
+// Sends a JSON response composed of a stringified version of the specified data.
+res.json([statusCode,] data)
+
+// Send a JSON or JSONP response.
+res.jsonp()
+
+// Sets the "Location" response header to the specified URL expression(url).
+res.location(url)
+
+// Redirect the requesting user-agent to the given absolute or relative url.
+res.redirect(url)
+res.redirect(statusCode, url)
+
+// Send a string response in a format other than JSON (XML, CSV, plain text, etc.
+// If you want to send a dictionary or JSON, use res.json().
+// If you want to send a custom status code, call req.status() first.
+res.send([string])
+
+// Set the status code of this response.
+res.status(statusCode)
+
+// Sets the "Content-Type" response header to the specified type.
+res.type(type)
+
+// Respond with an HTML page.
+res.view(pathToView, locals)
+res.view(pathToView)
+res.view(locals)
+res.view()
 
 /********************************************************************************************
  * 7. WATERLINE ORM
