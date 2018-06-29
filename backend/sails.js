@@ -455,6 +455,152 @@ res.view()
  * https://sailsjs.com/documentation/reference/waterline-orm
  ********************************************************************************************/
 
+// --> DATASTORE <--
+
+// Return the default datastore
+var datastore = sails.getDatastore()
+
+// The generic, stateless, low-level driver for this datastore (if the adapter supports it).
+datastore.driver
+
+// The live connection manager for this datastore.
+datastore.manager
+
+// Lease a new connection from the datastore for use in running multiple queries
+// on the same connection (i.e. so that the logic provided in during can reuse the db connection).
+await datastore.leaseConnection(during)
+
+// Execute a raw SQL query using this datastore.
+await datastore.sendNativeQuery(sql, valuesToEscape)
+
+// Fetch a preconfigured deferred object hooked up to the sails-mysql or sails-postgresql adapter
+// (and consequently the appropriate driver)
+await datastore.transaction(during)
+
+// --> MODELS <--
+
+// Add one or more existing child records to the specified collection.
+MyModel.addToCollection(parentId, association).members(childIds)
+
+// Remove one or more members from the specified collection
+MyModel.removeFromCollection()
+
+// Replace all members of the specified collection
+MyModel.replaceCollection()
+
+// Archive ("soft-delete") records that match the specified criteria,
+// saving them as new records in the built-in Archive model, then destroying the originals.
+MyModel.archive(criteria)
+
+// Get the total number of records matching the specified criteria.
+MyModel.count(criteria)
+
+// Get the aggregate mean of the specified attribute across all matching records.
+MyModel.avg(numericAttrName, criteria)
+
+// Get the aggregate sum of the specified attribute across all matching records.
+MyModel.sum(numericAttrName, criteria)
+
+// Find records in your database that match the given criteria.
+MyModel.find(criteria)
+
+// Attempt to find a particular record in your database that matches the given criteria.
+MyModel.findOne(criteria)
+
+// Find the record matching the specified criteria.
+// If no such record exists, create one using the provided initial values.
+MyModel.findOrCreate(criteria, initialValues)
+
+// Create a record in the database.
+MyModel.create(initialValues)
+MyModel.create(initialValues).fetch()  // Created record will be returned
+
+// Create a set of records in the database.
+MyModel.createEach(initialValues)
+MyModel.createEach(initialValues).fetch()  // Created records will be returned
+
+// Update all records matching criteria.
+MyModel.update(criteria, valuesToSet)
+MyModel.update(criteria, valuesToSet).fetch()  // Updated records will be returned
+
+// Destroy records in your database that match the given criteria.
+MyModel.destroy(criteria)
+MyModel.destroy(criteria).fetch() // Destroyed record will be returned
+
+// Access the datastore for a particular model.
+MyModel.getDatastore()
+
+// Stream records from your database one at a time or in batches,
+// without first having to buffer the entire result set in memory.
+MyModel.stream(criteria)
+
+// Verify that a value would be valid for a given attribute, then return it, loosely coerced.
+MyModel.validate(attrName, value)
+
+// --> QUERIES <--
+
+// Set the maximum number of records to retrieve when executing a query instance.
+query.limit(maximum)
+
+// Indicate a number of records to skip before returning the results from executing a query instance.
+query.skip(numRecordsToSkip)
+
+// Set the order in which retrieved records should be returned when executing a query instance.
+query.sort(sortClause)
+
+// Specify a where clause for filtering a query.
+query.where(whereClause)
+
+// Tell Waterline (and the underlying database adapter) to send back records that were
+// updated/destroyed/created when performing an .update(), .create(), .createEach() or .destroy()
+// query. Otherwise, no data will be returned (or if you are using callbacks, the second argument
+// to the .exec() callback will be undefined.)
+// This is just a shortcut for .meta({fetch: true})
+// Warning: This is not recommended for update/destroy queries that affect large numbers of records.
+query.fetch()
+
+// Modify a query instance so that, when executed, it will populate child records for the
+// specified collection, optionally filtering by subcriteria. Populate may be called more than
+// once on the same query, as long as each call is for a different association.
+query.populate()
+
+// Decrypt any auto-encrypted attributes in the records returned for this particular query.
+// This is just a shortcut for .meta({decrypt: true})
+query.decrypt()
+
+// Execute a Waterline query instance.
+query.exec(function (err, result) {})
+
+// Begin executing a Waterline query instance and return a promise.
+// This is an alternative to .exec().
+query.toPromise()
+
+// Capture and intercept the specified error, automatically modifying and re-throwing it,
+// or specifying a new Error to be thrown instead. (Still throws.)
+query.intercept(filter, handler)
+query.intercept(handler)
+
+// Provide additional options to Waterline when executing a query instance.
+query.meta(options)
+
+// Execute a Waterline query instance using promises.
+// Whenever possible, it is recommended that you use await instead of calling this method.
+// This is an alternative to .exec(). When combined with .catch(), it provides the same functionality.
+query.then(callback)
+
+// Execute a Waterline query instance using promises.
+// Whenever possible, it is recommended that you use await instead of calling this method.
+// This is an alternative to .exec(). When combined with .then(), it provides the same functionality.
+query.catch(callback)
+
+// Tolerate (swallow) the specified error, and return a new result value (or undefined) instead. (Don't throw.)
+query.tolerate(filter, handler)
+query.tolerate(filter)
+query.tolerate(handler)
+
+// Specify an existing database connection to use for this query.
+query.usingConnection(connection)
+
 /********************************************************************************************
  * 8. WEB SOCKETS
  * https://sailsjs.com/documentation/reference/web-sockets
