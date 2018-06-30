@@ -605,3 +605,120 @@ query.usingConnection(connection)
  * 8. WEB SOCKETS
  * https://sailsjs.com/documentation/reference/web-sockets
  ********************************************************************************************/
+
+// --> RESOURCEFUL PUBSUB (HIGHER LEVEL ABSTRACTION WHICH ARE USED BY SAILS BLUEPRINT API) <--
+
+// Retrieve the name of the PubSub “room” for a given record.
+MyModel.getRoomName(id)
+
+// Broadcast an arbitrary message to socket clients subscribed to one or more of this model's records.
+// Be sure and check req.isSocket === true before passing in req to refer to the requesting socket.
+// If used, the provided req must be from a socket request, not just any old HTTP request.
+// Is like sails.sockets.broadcast()
+MyModel.publish(ids, data, req)
+
+// Subscribe the requesting client socket to changes/deletions of one or more database records.
+// Is like sails.sockets.join()
+MyModel.subscribe(req, ids)
+
+// Unsubscribe the requesting client socket from one or more database records.
+// Is like sails.sockets.leave()
+MyModel.unsubscribe(req, ids)
+
+// --> SAILS.SOCKETS <--
+
+// Subscribe all members of a room to one or more additional rooms.
+// In a multi-server environment, the callback function (cb) will be executed when the
+// .addRoomMembersToRooms() call completes on the current server. This does not guarantee that
+// other servers in the cluster have already finished running the operation.
+sails.sockets.addRoomMembersToRooms(sourceRoom, destRooms, cb)
+
+// Broadcast a message to all sockets connected to the server (or any server in the cluster,
+// if you have a multi-server deployment using Redis).
+sails.sockets.blast(data)
+sails.sockets.blast(eventName, data)
+sails.sockets.blast(data, socketToOmit)
+sails.sockets.blast(eventName, data, socketToOmit)
+
+// Broadcast a message to all sockets in a room (or to a particular socket).
+sails.sockets.broadcast(roomNames, data)
+sails.sockets.broadcast(roomNames, eventName, data)
+sails.sockets.broadcast(roomNames, data, socketToOmit)
+sails.sockets.broadcast(roomNames, eventName, data, socketToOmit)
+
+// Parse the socket ID from an incoming socket request (req).
+sails.sockets.getId(req)
+
+// Subscribe a socket to a room.
+sails.sockets.join(socket, roomName)
+sails.sockets.join(socket, roomName, cb)
+
+// Unsubscribe a socket from a room.
+sails.sockets.leave(socket, roomName)
+sails.sockets.leave(socket, roomName, cb)
+
+// Unsubscribe all members of a room (e.g. chatroom7) from that room and every other room
+// they are currently subscribed to; except the automatic room associated with their socket ID.
+sails.sockets.leaveAll(roomName, cb)
+
+// Unsubscribe all members of a room from one or more other rooms.
+sails.sockets.removeRoomMembersFromRooms(sourceRoom, destRooms, cb)
+
+// --> SOCKET CLIENT <--
+
+// Home of global configuration options for the sails.io.js library, as well as any sockets it creates.
+io.sails
+
+// Wait one cycle of the event loop after loading and then attempt to create a new SailsSocket
+// and connect it to the URL specified by io.sails.url. 
+io.sails.autoConnect
+
+// Sockets will automatically (and continuously) attempt to reconnect to the server
+// if they become disconnected unexpectedly.
+io.sails.reconnection
+
+// Dictionary of headers to be sent by default with every request from this socket.
+// Can be overridden via the headers option in .request().
+io.sails.headers
+
+// Set an environment for sails.io.js, which affects how much information is logged to the console.
+// Valid values are development (full logs) and production (minimal logs).
+io.sails.environment
+
+// The URL that the socket is connected to, or will attempt to connect to.
+io.sails.url
+
+// The transports that the socket will attempt to connect using.
+io.sails.transports
+
+// Used for creating new socket connections manually.
+io.sails.connect([url], [options])
+
+// Unbind the specified event handler (opposite of .on()).
+// To force a client socket to stop receiving broadcasted messages, do not use this method.
+// Instead, unsubscribe the socket in your server-side code:
+// In order to use .off(), you will need to store the handlerFn argument you passed in to .on() in a variable.
+io.socket.off(eventIdentity, handlerFn)
+
+// Start listening for socket events from Sails with the specified eventName.
+// Will trigger the provided callback function when a matching event is received.
+// This happens when the server broadcasts a message to this socket directly, or to a room of which it is a member.
+io.socket.on(eventName, function (msg) { })
+
+// Send a virtual DELETE request to a Sails server using Socket.io.
+io.socket.delete(url, data, function (data, jwres) {})
+
+// Send a socket request(virtual GET) to a Sails server using Socket.io.
+io.socket.get(url, data, function (resData, jwres) {})
+
+// Send a socket request (virtual PATCH) to a Sails server using Socket.io.
+io.socket.patch(url, data, function (resData, jwres) {})
+
+// Send a socket request (virtual POST) to a Sails server using Socket.io.
+io.socket.post(url, data, function (resData, jwres) {})
+
+// Send a socket request (virtual PUT) to a Sails server using Socket.io.
+io.socket.put(url, data, function (resData, jwres) {})
+
+// Send a virtual request to a Sails server using Socket.io.
+io.socket.request(options, function (resData, jwres) {})
