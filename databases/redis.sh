@@ -49,6 +49,7 @@ LINSERT key BEFORE|AFTER pivot value  # insert an element before or after anothe
 LLEN key                              # return the current length of the list
 LPOP key                              # remove the first element from the list and returns it
 LSET key index value                  # set the value of an element in a list by its index
+LREM key number_of_occurrences value  # delete occurrences of value if the list stored in key
 LTRIM key start stop                  # trim a list to the specified range
 RPOP key                              # remove the last element from the list and returns it
 RPOPLPUSH source destination          # remove the last element in a list, prepend it to another list and return it
