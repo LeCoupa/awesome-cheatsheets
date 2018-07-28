@@ -85,6 +85,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 - [VIM](tools/vim.txt)
 - [Xcode](tools/xcode.txt)
+- [Dotnet CLI](tools/dotnetcli.md)
 
 #### Infrastructure
 
@@ -117,6 +118,10 @@ You are more than welcome to contribute and build your own cheatsheet for your f
     <td align="center">
       <a href="https://www.voxygen.com/" target="_blank"><img src="https://imgur.com/XQoVtag.png" height="64" /></a>
     </td>
+    <td align="center">
+      <a href="https://winnovera.com" target="_blank"><img src="https://winnovera.com/img/logo-dark.png" height="64" /></a>
+    </td>
+
   </tr>
 </table>
 
