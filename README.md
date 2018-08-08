@@ -23,6 +23,8 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Imperative
 
+- [C](languages/C.txt)
+- [C#](languages/C#.txt)
 - [PHP](languages/php.php)
 
 #### Functional
