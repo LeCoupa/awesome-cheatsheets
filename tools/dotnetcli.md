@@ -252,3 +252,28 @@ The dotnet publish command's output is ready for deployment to a hosting system 
 ##### List the project references for the project
 
 `dotnet list reference`
+
+
+
+## Dotnet CLI Global Tools
+
+#### [Simple command-line HTTP server for .NET Core CLI](https://github.com/natemcmaster/dotnet-serve)
+`dotnet tool install -g dotnet-serve`
+
+#### [Find outdated NuGet packages and apply updates to them](https://github.com/NuKeeperDotNet/NuKeeper)
+`dotnet tool install -g NuKeeper --version 0.5.0`
+
+#### [Coverlet is a cross platform code coverage library for .NET Core, with support for line, branch and method coverage](https://github.com/tonerdo/coverlet)
+`dotnet tool install -g coverlet.console`
+
+#### [The SonarScanner for MSBuild is the recommended way to launch a SonarQube or SonarCloud analysis for projects/solutions using dotnet command as build tool](https://github.com/SonarSource/sonar-scanner-msbuild)
+`dotnet tool install -g dotnet-sonarscanner`
+
+#### [Search for Nuget packages using the .NET Core CLI](https://github.com/billpratt/dotnet-search)
+`dotnet tool install -g dotnet-search`
+
+#### [Code generation tool for creating controllers, views, and models in ASP.NET Core projects](https://github.com/aspnet/Scaffolding)
+`dotnet tool install -g dotnet-aspnet-codegenerator --version 2.1.1`
+
+#### [Run C# scripts from the .NET CLI](https://github.com/filipw/dotnet-script)
+`dotnet tool install -g dotnet-script`
