@@ -1,51 +1,76 @@
 # Visual Studio CheatSheet
 
-
 ## Useful Extensions
 
 ### HTML & CSS
 
-* `CSScomb`: Codeing style formatter for CSS, Less, SCSS and Saas.
+- `CSScomb`: Codeing style formatter for CSS, Less, SCSS and Saas.
 
-* `Puglint`: Linter and style checker for pug.
+- `Puglint`: Linter and style checker for pug.
 
-* `SCSS IntelliSense`: Advanced autocompletion and refactoring support for SCSS.
+- `Sass`: Indented Sass syntax highlighting, autocomplete & snippets.
+
+- `SCSS IntelliSense`: Advanced autocompletion and refactoring support for SCSS.
 
 ### JavaScript, Node & NPM
 
-* `ESLint`: Integrates ESLint into VS Code
+- `Import Cost`: This extension will display inline in the editor the size of the imported package.
 
-* `NPM`: NPM support for VS Code.
+- `ESLint`: Integrates ESLint into VS Code
 
-* `NPM Intellisense`: Visual Studio Code plugin that autocompletes NPM modules in import statements.
+- `NPM`: NPM support for VS Code.
 
-* `Version Lens`: Shows the latest version for each package using code lens.
+- `NPM Intellisense`: Visual Studio Code plugin that autocompletes NPM modules in import statements.
 
+- `Version Lens`: Shows the latest version for each package using code lens.
 
-### SPA
+- `Vetur`: Vue tooling for VS Code.
 
-* `Vetur`: Vue tooling for VS Code.
+### Git
 
+- `Git History`: View git log, file history, compare branches or commits.
 
-### Miscellaneous
+- `Gitignore`: A extension for Visual Studio Code that assists you in working with .gitignore files.
 
-`Final-Newline`: Inserts a final newline when saving the document.
+### Themes
 
-`Open in Github/Bitbucket...`: Jump to a source code line in Github / Bitbucket, Gitlab, VisualStudio.com
+- `Material Icon Theme`: Material Design Icons for Visual Studio Code.
 
-`OpenChrome`: Open file with Chrome.
+- `Palenight Theme`: An elegant and juicy material-like theme for Visual Studio Code.
 
-`Output Colorizer`: Syntax Highlighting for log files.
+### Handy
 
-`SVG Viewer`: SVG Viewer for Visual Studio Code.
+- `Debugger for Chrome`: Debug your JavaScript code in the Chrome browser.
 
-`Terminal`: Terminal for Visual Studio Code.
+- `EditorConfig for VS Code`: EditorConfig Support for Visual Studio Code.
 
+- `Final-Newline`: Inserts a final newline when saving the document.
+
+- `Formatting Toggle`: A VS Code extension that allows you to toggle the formatter (Prettier, Beautify, …) ON and OFF with a simple click.
+
+- `Open in Github/Bitbucket...`: Jump to a source code line in Github / Bitbucket, Gitlab, VisualStudio.com
+
+- `OpenChrome`: Open file with Chrome.
+
+- `Output Colorizer`: Syntax Highlighting for log files.
+
+- `Prettier - Code formatter`: VS Code plugin for prettier/prettier.
+
+- `REST Client`: REST Client for Visual Studio Code.
+
+- `SVG Viewer`: SVG Viewer for Visual Studio Code.
+
+- `Terminal`: Terminal for Visual Studio Code.
+
+- `VS Live Share`: Real-time collaborative development from the comfort of your favorite tools.
+
+- `Wrap Console Log`: Wrap to console.log by word or selection.
 
 ##############################################################################
+
 # USER SETTINGS
-##############################################################################
 
+##############################################################################
 
 ```javascript
 {
@@ -81,7 +106,7 @@
 
     // Controls auto save of dirty files
     "files.autoSave": "afterDelay",
-  
+
     // Controls the delay in ms after which a dirty file is saved automatically
     "files.autoSaveDelay": 1000,
 
@@ -136,7 +161,7 @@
 
     // Specifies the icon theme used in the workbench
     "workbench.iconTheme": "material-icon-theme",
-  
+
     // Controls font aliasing method in the workbench
     "workbench.fontAliasing": "antialiased",
     "explorer.confirmDragAndDrop": false
