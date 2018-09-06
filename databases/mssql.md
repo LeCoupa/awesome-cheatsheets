@@ -65,11 +65,15 @@ SET IDENTITY_INSERT TableName ON
 ```
 
 ### Replace a char code with anything you want
+```sql
 REPLACE(value,CHAR(0233),'e')
+```
 
 ### Mass replace characters
+```sql
 update t
 set mp.field = replace(mp.feild, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
+```
 
 
