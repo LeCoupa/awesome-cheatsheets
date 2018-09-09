@@ -86,6 +86,7 @@ $c: ".c-base-cheatsheet";
       width: 100%;
       height: 160px;
       border-radius: 4px;
+      user-select: none;
     }
   }
 
@@ -102,6 +103,7 @@ $c: ".c-base-cheatsheet";
     #{$c}__share {
       margin-top: 12px;
       display: flex;
+      user-select: none;
 
       #{$c}__network {
         margin-right: 6px;
