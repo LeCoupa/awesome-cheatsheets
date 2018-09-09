@@ -20,7 +20,7 @@ module.exports = {
         : "http://localhost:3000"
   },
   css: ["normalize.css/normalize.css"],
-  plugins: [{ src: "@/plugins/global.js" }],
+  plugins: [{ src: "@/plugins/ga.js" }, { src: "@/plugins/global.js" }],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
