@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "NODE_ENV=production nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
