@@ -26,6 +26,7 @@
       base-cheatsheet(
         v-for="cheatsheet in category.cheatsheets"
         :key="cheatsheet.name"
+        :link="cheatsheet.link"
         :name="cheatsheet.name"
         :thumbnail="cheatsheet.thumbnail"
       )
@@ -36,6 +37,7 @@
      ************************************************************************* -->
 
 <script>
+// PROJECT
 import BaseCheatsheet from "@/components/BaseCheatsheet";
 import BaseDivider from "@/components/BaseDivider";
 
@@ -54,15 +56,33 @@ export default {
           cheatsheets: [
             {
               name: "Bash",
-              thumbnail: "bash.jpg"
+              thumbnail: "bash.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh"
+            },
+            {
+              name: "C",
+              thumbnail: "c.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/C.txt"
+            },
+            {
+              name: "C#",
+              thumbnail: "c-sharp.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/C%23.txt"
             },
             {
               name: "JavaScript",
-              thumbnail: "javascript.jpg"
+              thumbnail: "javascript.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/javascript.js"
             },
             {
               name: "PHP",
-              thumbnail: "php.jpg"
+              thumbnail: "php.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/php.php"
             }
           ]
         },
@@ -71,19 +91,33 @@ export default {
           cheatsheets: [
             {
               name: "Django",
-              thumbnail: "django.jpg"
+              thumbnail: "django.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/django.py"
             },
             {
               name: "Feathers.js",
-              thumbnail: "feathers.jpg"
+              thumbnail: "feathers.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/feathers.js"
             },
             {
               name: "Moleculer",
-              thumbnail: "moleculer.jpg"
+              thumbnail: "moleculer.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/moleculer.js"
             },
             {
               name: "Node.js",
-              thumbnail: "node.jpg"
+              thumbnail: "node.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/node.js"
+            },
+            {
+              name: "Sails.js",
+              thumbnail: "sails.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/sails.js"
             }
           ]
         },
@@ -92,19 +126,39 @@ export default {
           cheatsheets: [
             {
               name: "Angular.js",
-              thumbnail: "angularjs.jpg"
+              thumbnail: "angularjs.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/angularjs.js"
+            },
+            {
+              name: "Angular 2+",
+              thumbnail: "angular.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/angular.js"
+            },
+            {
+              name: "Ember.js",
+              thumbnail: "ember.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/ember.js"
             },
             {
               name: "HTML5",
-              thumbnail: "html5.jpg"
+              thumbnail: "html5.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/html5.html"
             },
             {
               name: "React.js",
-              thumbnail: "react.jpg"
+              thumbnail: "react.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/react.js"
             },
             {
               name: "Vue.js",
-              thumbnail: "vue.jpg"
+              thumbnail: "vue.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/vue.js"
             }
           ]
         },
@@ -113,7 +167,9 @@ export default {
           cheatsheets: [
             {
               name: "Redis",
-              thumbnail: "redis.jpg"
+              thumbnail: "redis.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/databases/redis.sh"
             }
           ]
         },
@@ -122,19 +178,27 @@ export default {
           cheatsheets: [
             {
               name: "Docker",
-              thumbnail: "docker.jpg"
+              thumbnail: "docker.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/docker.sh"
             },
             {
               name: "Kubernetes",
-              thumbnail: "kubernetes.jpg"
+              thumbnail: "kubernetes.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/kubernetes.sh"
             },
             {
               name: "VIM",
-              thumbnail: "vim.jpg"
+              thumbnail: "vim.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/vim.txt"
             },
             {
               name: "Xcode",
-              thumbnail: "xcode.jpg"
+              thumbnail: "xcode.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/xcode.txt"
             }
           ]
         }
@@ -161,8 +225,8 @@ $c: ".c-index";
   #{$c}__description {
     margin: 0;
     margin: 30px 0 40px;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 32px;
   }
 
   #{$c}__category {

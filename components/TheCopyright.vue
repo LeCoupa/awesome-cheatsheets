@@ -43,8 +43,6 @@ $c: ".c-the-copyright";
   border-left: 1px solid #313d4f;
   border-top-left-radius: 4px;
   background-color: #171e29;
-  text-decoration: none;
-  cursor: pointer;
 
   #{$c}__name {
     margin-right: 6px;

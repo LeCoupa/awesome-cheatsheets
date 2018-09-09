@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Messenger</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19,11 C14.0294275,11 10,14.7309462 10,19.3333325 C10,21.955835 11.3087455,24.295055 13.3540371,25.8226111 L13.3540371,29 L16.418455,27.3181666 C17.2362813,27.5445001 18.102685,27.6666665 19,27.6666665 C23.9705725,27.6666665 28,23.9357225 28,19.3333325 C28,14.7309462 23.9705725,11 19,11 L19,11 Z M19.8944088,22.2222238 L17.6024838,19.7777788 L13.1304348,22.2222238 L18.04969,17 L20.3975163,19.444445 L24.8136663,17 L19.8944088,22.2222238 L19.8944088,22.2222238 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cheatsheet-Block" transform="translate(-68.000000, -227.000000)">
+            <g id="Social-Icons" transform="translate(20.000000, 227.000000)">
+                <g id="Messenger" transform="translate(48.000000, 0.000000)">
+                    <circle id="Base" fill="#007FFF" cx="19" cy="19" r="19"></circle>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Clip-2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

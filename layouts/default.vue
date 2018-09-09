@@ -58,6 +58,11 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "Heebo Thin";
   src: url("/fonts/heebo/Heebo-Thin.otf");

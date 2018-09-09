@@ -3,23 +3,30 @@
      ************************************************************************* -->
 
 <template lang="pug">
-a(
-  :href="link"
-  class="c-base-cheatsheet"
-  targer="_blank"
-)
-  img(
-    :src="'/images/components/BaseCheatsheet/' + thumbnail"
-    class="c-base-cheatsheet__thumbnail"
+.c-base-cheatsheet
+  a(
+    :href="link"
+    class="c-base-cheatsheet__link"
+    target="_blank"
   )
+    img(
+      :src="'/images/components/BaseCheatsheet/' + thumbnail"
+      class="c-base-cheatsheet__thumbnail"
+    )
+
   .c-base-cheatsheet__content
-    span.c-base-cheatsheet__name The {{ name }} Cheatsheet
+    a(
+      :href="link"
+      class="c-base-cheatsheet__name"
+      target="_blank"
+    ) The {{ name }} Cheatsheet
 
     .c-base-cheatsheet__share
-      span(
+      base-share(
         v-for="network in networks"
-        :src="'/images/components/BaseCheatsheet/' + network"
-        class="c-base-cheatsheet__icon"
+        :key="network"
+        :network="network"
+        class="c-base-cheatsheet__network"
       )
 </template>
 
@@ -28,7 +35,14 @@ a(
      ************************************************************************* -->
 
 <script>
+// PROJECT
+import BaseShare from "@/components/BaseShare";
+
 export default {
+  components: {
+    BaseShare
+  },
+
   props: {
     link: {
       type: String,
@@ -47,7 +61,7 @@ export default {
   data() {
     return {
       // --> COMPONENTS <--
-      networks: ["twitter", "slack", "messenger", "telegram", "linkedin"]
+      networks: ["slack", "messenger", "telegram", "twitter", "linkedin"]
     };
   }
 };
@@ -64,15 +78,15 @@ $c: ".c-base-cheatsheet";
   display: block;
   padding: 10px;
   border: 1px solid #313d4f;
-  border-radius: 4px;
+  border-radius: 6px;
   background: #273142;
-  cursor: pointer;
 
-  #{$c}__thumbnail {
-    margin-bottom: 5px;
-    width: 100%;
-    height: 160px;
-    border-radius: 4px;
+  #{$c}__link {
+    #{$c}__thumbnail {
+      width: 100%;
+      height: 160px;
+      border-radius: 4px;
+    }
   }
 
   #{$c}__content {
@@ -83,6 +97,19 @@ $c: ".c-base-cheatsheet";
       margin-bottom: 20px;
       color: #ffffff;
       font-size: 18px;
+    }
+
+    #{$c}__share {
+      margin-top: 12px;
+      display: flex;
+
+      #{$c}__network {
+        margin-right: 6px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
