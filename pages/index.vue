@@ -3,7 +3,10 @@
      ************************************************************************* -->
 
 <template lang="pug">
-
+.c-index
+  h2(
+    v-html="description"
+  )
 </template>
 
 <!-- *************************************************************************
@@ -11,7 +14,16 @@
      ************************************************************************* -->
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      description: `
+        Awesome cheatsheets for popular programming languages, frameworks and development tools.<br/>
+        They include everything you should know in one single file. 🤓👌
+      `
+    };
+  }
+};
 </script>
 
 <!-- *************************************************************************
