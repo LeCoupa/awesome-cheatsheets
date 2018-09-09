@@ -47,6 +47,7 @@ export default {
 
   data() {
     return {
+      // --> COMPONENTS <--
       categories: [
         {
           name: "Languages",
@@ -159,7 +160,7 @@ $c: ".c-index";
 
   #{$c}__description {
     margin: 0;
-    margin: 40px 0;
+    margin: 30px 0 40px;
     font-size: 24px;
     line-height: 36px;
   }

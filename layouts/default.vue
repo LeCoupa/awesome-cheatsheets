@@ -3,11 +3,11 @@
      ************************************************************************* -->
 
 <template lang="pug">
-  .l-default
+.l-default
+  .l-default__inner
     the-github(
       class="l-default__github"
     )
-
     nuxt
 
     the-copyright(
@@ -94,10 +94,17 @@ html {
 }
 
 #{$c} {
-  #{$c}__copyright {
-    position: fixed;
-    right: 0;
-    bottom: 0;
+  margin: 0 20px;
+
+  #{$c}__inner {
+    margin: 0 auto;
+    max-width: 1140px;
+
+    #{$c}__copyright {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 </style>

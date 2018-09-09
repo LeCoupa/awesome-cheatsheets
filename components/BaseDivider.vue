@@ -38,6 +38,7 @@ $c: ".c-base-divider";
   #{$c}__category {
     margin-right: 40px;
     color: #ffffff;
+    text-align-last: left;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
