@@ -24,7 +24,8 @@ module.exports = {
           exclude: /(node_modules)/
         });
       }
-    }
+    },
+    postcss: [require("autoprefixer")()]
   },
   css: ["normalize.css/normalize.css"]
 };
