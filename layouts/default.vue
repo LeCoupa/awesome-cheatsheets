@@ -42,7 +42,7 @@ $c: ".l-default";
 html {
   overflow-y: scroll;
   box-sizing: border-box;
-  padding: 60px 0 100px;
+  padding: 60px 0 40px;
   min-height: 100%;
   background-color: #1b2431;
   color: white;
@@ -96,8 +96,8 @@ html {
 #{$c} {
   #{$c}__copyright {
     position: fixed;
-    bottom: 0;
     right: 0;
+    bottom: 0;
   }
 }
 </style>

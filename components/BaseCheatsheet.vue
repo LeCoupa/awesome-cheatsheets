@@ -3,10 +3,13 @@
      ************************************************************************* -->
 
 <template lang="pug">
-.c-base-divider
-  span.c-base-divider__category {{ category }}
-
-  hr.c-base-divider__line
+.c-base-cheatsheet
+  img(
+    :src="thumbnail"
+    class="c-base-cheatsheet__thumbnail"
+  )
+  .c-base-cheatsheet__content
+    span.c-base-cheatsheet__name The {{ name }} Cheatsheet
 </template>
 
 <!-- *************************************************************************
@@ -16,8 +19,12 @@
 <script>
 export default {
   props: {
-    category: {
-      name: String,
+    name: {
+      type: String,
+      required: true
+    },
+    thumbnail: {
+      type: String,
       required: true
     }
   }
@@ -29,23 +36,30 @@ export default {
      ************************************************************************* -->
 
 <style lang="scss">
-$c: ".c-base-divider";
+$c: ".c-base-cheatsheet";
 
 #{$c} {
-  display: flex;
-  align-items: center;
+  padding: 10px;
+  border: 1px solid #313d4f;
+  border-radius: 4px;
+  background: #273142;
 
-  #{$c}__category {
-    margin-right: 40px;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
+  #{$c}__thumbnail {
+    width: 100%;
+    height: 160px;
+    border-radius: 4px;
+    margin-bottom: 5px;
   }
 
-  #{$c}__line {
-    flex: 1;
-    color: #313d4f;
+  #{$c}__content {
+    padding: 10px;
+    text-align: left;
+
+    #{$c}__name {
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: 18px;
+    }
   }
 }
 </style>

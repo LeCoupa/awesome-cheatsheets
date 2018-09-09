@@ -15,11 +15,20 @@
 
   section(
     v-for="(category, index) in categories"
+    :key="category.name"
     class="c-index__category"
   )
     base-divider(
       :category="'0' + (index + 1) + '. ' + category.name"
+      class="c-index__divider"
     )
+    .c-index__cheatsheets
+      base-cheatsheet(
+        v-for="cheatsheet in category.cheatsheets"
+        :key="cheatsheet.name"
+        :name="cheatsheet.name"
+        :thumbnail="cheatsheet.thumbnail"
+      )
 </template>
 
 <!-- *************************************************************************
@@ -27,10 +36,12 @@
      ************************************************************************* -->
 
 <script>
+import BaseCheatsheet from "@/components/BaseCheatsheet";
 import BaseDivider from "@/components/BaseDivider";
 
 export default {
   components: {
+    BaseCheatsheet,
     BaseDivider
   },
 
@@ -38,19 +49,93 @@ export default {
     return {
       categories: [
         {
-          name: "Languages"
+          name: "Languages",
+          cheatsheets: [
+            {
+              name: "Bash",
+              thumbnail: "bash.jpg"
+            },
+            {
+              name: "JavaScript",
+              thumbnail: "javascript.jpg"
+            },
+            {
+              name: "PHP",
+              thumbnail: "php.jpg"
+            }
+          ]
         },
         {
-          name: "Backend"
+          name: "Backend",
+          cheatsheets: [
+            {
+              name: "Django",
+              thumbnail: "django.jpg"
+            },
+            {
+              name: "Feathers.js",
+              thumbnail: "feathers.jpg"
+            },
+            {
+              name: "Moleculer",
+              thumbnail: "moleculer.jpg"
+            },
+            {
+              name: "Node.js",
+              thumbnail: "node.jpg"
+            }
+          ]
         },
         {
-          name: "Frontend"
+          name: "Frontend",
+          cheatsheets: [
+            {
+              name: "Angular.js",
+              thumbnail: "angularjs.jpg"
+            },
+            {
+              name: "HTML5",
+              thumbnail: "html5.jpg"
+            },
+            {
+              name: "React.js",
+              thumbnail: "react.jpg"
+            },
+            {
+              name: "Vue.js",
+              thumbnail: "vue.jpg"
+            }
+          ]
         },
         {
-          name: "Databases"
+          name: "Databases",
+          cheatsheets: [
+            {
+              name: "Redis",
+              thumbnail: "redis.jpg"
+            }
+          ]
         },
         {
-          name: "Tools"
+          name: "Tools",
+          cheatsheets: [
+            {
+              name: "Docker",
+              thumbnail: "docker.jpg"
+            },
+            {
+              name: "Kubernetes",
+              thumbnail: "kubernetes.jpg"
+            },
+            {
+              name: "VIM",
+              thumbnail: "vim.jpg"
+            },
+            {
+              name: "Xcode",
+              thumbnail: "xcode.jpg"
+            }
+          ]
         }
       ]
     };
@@ -80,7 +165,22 @@ $c: ".c-index";
   }
 
   #{$c}__category {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    #{$c}__divider {
+      margin-bottom: 40px;
+    }
+
+    #{$c}__cheatsheets {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fill, 270px);
+      justify-content: center;
+    }
   }
 }
 </style>
