@@ -43,16 +43,7 @@
      ************************************************************************* -->
 
 <script>
-// PROJECT
-import BaseCheatsheet from "@/components/BaseCheatsheet";
-import BaseDivider from "@/components/BaseDivider";
-
 export default {
-  components: {
-    BaseCheatsheet,
-    BaseDivider
-  },
-
   data() {
     return {
       // --> COMPONENTS <--

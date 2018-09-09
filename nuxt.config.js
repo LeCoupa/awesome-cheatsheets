@@ -27,5 +27,6 @@ module.exports = {
     },
     postcss: [require("autoprefixer")()]
   },
-  css: ["normalize.css/normalize.css"]
+  css: ["normalize.css/normalize.css"],
+  plugins: [{ src: "@/plugins/global.js" }]
 };

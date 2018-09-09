@@ -35,14 +35,7 @@
      ************************************************************************* -->
 
 <script>
-// PROJECT
-import BaseShare from "@/components/BaseShare";
-
 export default {
-  components: {
-    BaseShare
-  },
-
   props: {
     link: {
       type: String,
