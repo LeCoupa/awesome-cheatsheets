@@ -46,7 +46,7 @@ html {
   box-sizing: border-box;
   padding: 60px 0;
   min-height: 100%;
-  background-color: #1b2431;
+  background-color: $mirage;
   color: white;
   text-align: center;
   word-spacing: 1px;

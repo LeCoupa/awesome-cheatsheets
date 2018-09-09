@@ -73,9 +73,9 @@ $c: ".c-base-cheatsheet";
 #{$c} {
   display: block;
   padding: 10px;
-  border: 1px solid #313d4f;
+  border: 1px solid $oxford-blue;
   border-radius: 6px;
-  background: #273142;
+  background: $ebony-clay;
 
   #{$c}__link {
     #{$c}__thumbnail {
@@ -92,7 +92,7 @@ $c: ".c-base-cheatsheet";
 
     #{$c}__name {
       margin-bottom: 20px;
-      color: #ffffff;
+      color: $white;
       font-size: 18px;
     }
 

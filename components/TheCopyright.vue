@@ -48,15 +48,15 @@ $c: ".c-the-copyright";
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 5px 5px 10px;
-  border-top: 1px solid #313d4f;
-  border-left: 1px solid #313d4f;
+  padding: 5px 10px;
+  border-top: 1px solid $oxford-blue;
+  border-left: 1px solid $oxford-blue;
   border-top-left-radius: 4px;
-  background-color: #171e29;
+  background-color: $mirage2;
 
   #{$c}__name {
     margin-right: 6px;
-    color: #ffffff;
+    color: $white;
     font-size: 14px;
   }
 

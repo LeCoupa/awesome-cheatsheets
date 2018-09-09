@@ -37,7 +37,7 @@ $c: ".c-base-divider";
 
   #{$c}__category {
     margin-right: 40px;
-    color: #ffffff;
+    color: $white;
     text-align-last: left;
     text-transform: uppercase;
     font-weight: bold;
@@ -49,7 +49,7 @@ $c: ".c-base-divider";
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #313d4f;
+    border-top: 1px solid $oxford-blue;
   }
 }
 </style>
