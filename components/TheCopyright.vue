@@ -65,8 +65,6 @@ $c: ".c-the-copyright";
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background-image: url("/images/common/lecoupa.jpg");
-    background-size: cover;
   }
 }
 </style>
