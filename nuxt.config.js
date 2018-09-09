@@ -20,9 +20,14 @@ module.exports = {
         : "http://localhost:3000"
   },
   css: ["normalize.css/normalize.css"],
-  plugins: [
-    { src: "@/plugins/ga.js", ssr: false },
-    { src: "@/plugins/global.js" }
+  plugins: [{ src: "@/plugins/global.js" }],
+  modules: [
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-125493236-1"
+      }
+    ]
   ],
   build: {
     extend(config, { isDev, isClient }) {
