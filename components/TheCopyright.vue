@@ -28,7 +28,7 @@ $c: ".c-the-copyright";
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 5px 5px 15px;
+  padding: 5px 5px 5px 10px;
   border-top: 1px solid #313d4f;
   border-left: 1px solid #313d4f;
   border-top-left-radius: 4px;
