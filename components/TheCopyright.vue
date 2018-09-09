@@ -3,7 +3,11 @@
      ************************************************************************* -->
 
 <template lang="pug">
-.c-the-copyright
+a(
+  class="c-the-copyright"
+  href="https://twitter.com/LeCoupa"
+  target="_blank"
+)
   span.c-the-copyright__name By LeCoupa
 
   span.c-the-copyright__picture
@@ -14,7 +18,13 @@
      ************************************************************************* -->
 
 <script>
-export default {};
+export default {
+  methods: {
+    onClick() {
+      console.log("onClick");
+    }
+  }
+};
 </script>
 
 <!-- *************************************************************************
@@ -33,6 +43,8 @@ $c: ".c-the-copyright";
   border-left: 1px solid #313d4f;
   border-top-left-radius: 4px;
   background-color: #171e29;
+  text-decoration: none;
+  cursor: pointer;
 
   #{$c}__name {
     margin-right: 6px;
@@ -45,8 +57,8 @@ $c: ".c-the-copyright";
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    background-size: cover;
     background-image: url("/images/common/lecoupa.jpg");
+    background-size: cover;
   }
 }
 </style>

@@ -45,10 +45,10 @@ $c: ".c-base-cheatsheet";
   background: #273142;
 
   #{$c}__thumbnail {
+    margin-bottom: 5px;
     width: 100%;
     height: 160px;
     border-radius: 4px;
-    margin-bottom: 5px;
   }
 
   #{$c}__content {
