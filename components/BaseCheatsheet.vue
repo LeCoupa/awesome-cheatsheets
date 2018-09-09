@@ -10,7 +10,7 @@
     target="_blank"
   )
     img(
-      :src="'/images/components/BaseCheatsheet/' + thumbnail"
+      :src="baseUrl + '/images/components/BaseCheatsheet/' + thumbnail"
       class="c-base-cheatsheet__thumbnail"
     )
 
@@ -53,6 +53,9 @@ export default {
 
   data() {
     return {
+      // --> STATE <--
+      baseUrl: process.env.baseUrl,
+
       // --> COMPONENTS <--
       networks: ["Slack", "Messenger", "Telegram", "Twitter", "LinkedIn"]
     };

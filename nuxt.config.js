@@ -13,7 +13,14 @@ module.exports = {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-  loading: { color: "#3B8070" },
+  env: {
+    baseUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://lecoupa.github.io/awesome-cheatsheets/"
+        : "http://localhost:3000"
+  },
+  css: ["normalize.css/normalize.css"],
+  plugins: [{ src: "@/plugins/global.js" }],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -26,7 +33,5 @@ module.exports = {
       }
     },
     postcss: [require("autoprefixer")()]
-  },
-  css: ["normalize.css/normalize.css"],
-  plugins: [{ src: "@/plugins/global.js" }]
+  }
 };

@@ -11,7 +11,7 @@ div(
 )
   img(
     @click="onClick"
-    :src="'/images/components/BaseShare/' + network.toLowerCase() + '.svg'"
+    :src="baseUrl + '/images/components/BaseShare/' + network.toLowerCase() + '.svg'"
     class="c-base-share__image"
   )
 </template>
@@ -27,6 +27,13 @@ export default {
       type: String,
       required: true
     }
+  },
+
+  data() {
+    return {
+      // --> STATE <--
+      baseUrl: process.env.baseUrl
+    };
   },
 
   methods: {

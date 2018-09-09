@@ -10,8 +10,8 @@
     target="_blank"
   )
     img(
-      src="/images/common/logo.png"
-      srcset="/images/common/logo@2x.png"
+      :src="baseUrl + '/images/common/logo.png'"
+      :srcset="baseUrl + '/images/common/logo@2x.png'"
       class="c-index__logo"
     )
 
@@ -46,6 +46,9 @@
 export default {
   data() {
     return {
+      // --> STATE <--
+      baseUrl: process.env.baseUrl,
+
       // --> COMPONENTS <--
       categories: [
         {
