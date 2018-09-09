@@ -1,0 +1,302 @@
+/* *************************************************************************
+LIBRARIES > BALLOON
+Based on https://github.com/kazzkiq/balloon.css
+************************************************************************* */
+
+/* *************************************************************************
+* BALLOON > VARIABLES
+* ************************************************************************* */
+
+$balloon-bg: fade-out(#111, 0.05);
+$balloon-base-size: 10px;
+$balloon-arrow-height: 6px;
+
+/* *************************************************************************
+* BALLOON > MIXINS
+* ************************************************************************* */
+
+@mixin svg-arrow($color, $position: up) {
+  $degrees: 0;
+  $height: 6px;
+  $width: 18px;
+
+  @if ($position == down) {
+    $degrees: 180 18 6;
+  } @else if ($position == left) {
+    $degrees: -90 18 18;
+    $width: 6px;
+    $height: 18px;
+  } @else if ($position == right) {
+    $degrees: 90 6 6;
+    $width: 6px;
+    $height: 18px;
+  }
+
+  background: no-repeat
+    url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22#{$width * 2}%22%20height%3D%22#{$height * 2}%22%3E%3Cpath%20fill%3D%22#{$color}%22%20transform%3D%22rotate(#{$degrees})%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
+  background-size: 100% auto;
+  width: $width;
+  height: $height;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+@mixin transform-origin($val) {
+  -webkit-transform-origin: $val;
+  -moz-transform-origin: $val;
+  -ms-transform-origin: $val;
+  transform-origin: $val;
+}
+
+@mixin opacity($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+@mixin base-effects() {
+  @include opacity(0);
+  pointer-events: none;
+  @include transition(all 0.05 ease-out 0.05);
+}
+
+/* *************************************************************************
+* BALLOON > STYLES
+* ************************************************************************* */
+
+// IE 11 button bugfix
+button[data-balloon] {
+  overflow: visible;
+}
+
+[data-balloon] {
+  position: relative; // alt. absolute or fixed
+
+  &:after {
+    @include base-effects();
+
+    font-size: $balloon-base-size + 2;
+    background: $balloon-bg;
+    border-radius: 4px;
+    color: #ffffff;
+    content: attr(data-balloon);
+    padding: 0.5em 1em;
+    position: absolute;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 500;
+    z-index: 5;
+  }
+
+  &:before {
+    @include svg-arrow($balloon-bg);
+    @include base-effects();
+
+    content: "";
+    position: absolute;
+    z-index: 5;
+  }
+
+  &:hover,
+  &[data-balloon-visible] {
+    &:before,
+    &:after {
+      @include opacity(1);
+
+      pointer-events: auto;
+    }
+  }
+
+  &.font-awesome:after {
+    font-family: FontAwesome;
+  }
+
+  &[data-balloon-break] {
+    &:after {
+      white-space: pre;
+    }
+  }
+
+  &[data-balloon-pos="up"] {
+    &:after {
+      @include transform(translate(-50%, 10px));
+      @include transform-origin(top);
+
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 5px + $balloon-arrow-height;
+    }
+    &:before {
+      @include transform(translate(-50%, 10px));
+      @include transform-origin(top);
+
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 5px;
+    }
+
+    &:hover,
+    &[data-balloon-visible] {
+      &:after {
+        @include transform(translate(-50%, 0));
+      }
+
+      &:before {
+        @include transform(translate(-50%, 0));
+      }
+    }
+  }
+
+  &[data-balloon-pos="down"] {
+    &:after {
+      @include transform(translate(-50%, -10px));
+
+      left: 50%;
+      margin-top: 5px + $balloon-arrow-height;
+      top: 100%;
+    }
+
+    &:before {
+      @include svg-arrow($balloon-bg, "down");
+      @include transform(translate(-50%, -10px));
+
+      left: 50%;
+      margin-top: 5px;
+      top: 100%;
+    }
+
+    &:hover,
+    &[data-balloon-visible] {
+      &:after {
+        @include transform(translate(-50%, 0));
+      }
+
+      &:before {
+        @include transform(translate(-50%, 0));
+      }
+    }
+  }
+
+  &[data-balloon-pos="left"] {
+    &:after {
+      @include transform(translate(10px, -50%));
+
+      margin-right: 5px + $balloon-arrow-height;
+      right: 100%;
+      top: 50%;
+    }
+
+    &:before {
+      @include svg-arrow($balloon-bg, "left");
+      @include transform(translate(10px, -50%));
+
+      margin-right: 5px;
+      right: 100%;
+      top: 50%;
+    }
+
+    &:hover,
+    &[data-balloon-visible] {
+      &:after {
+        @include transform(translate(0, -50%));
+      }
+
+      &:before {
+        @include transform(translate(0, -50%));
+      }
+    }
+  }
+
+  &[data-balloon-pos="right"] {
+    &:after {
+      @include transform(translate(-10px, -50%));
+
+      left: 100%;
+      margin-left: 5px + $balloon-arrow-height;
+      top: 50%;
+    }
+
+    &:before {
+      @include svg-arrow($balloon-bg, "right");
+      @include transform(translate(-10px, -50%));
+
+      left: 100%;
+      margin-left: 5px;
+      top: 50%;
+    }
+
+    &:hover,
+    &[data-balloon-visible] {
+      &:after {
+        @include transform(translate(0, -50%));
+      }
+
+      &:before {
+        @include transform(translate(0, -50%));
+      }
+    }
+  }
+
+  &[data-balloon-length="small"] {
+    &:after {
+      white-space: normal;
+      width: 80px;
+    }
+  }
+
+  &[data-balloon-length="medium"] {
+    &:after {
+      white-space: normal;
+      width: 150px;
+    }
+  }
+
+  &[data-balloon-length="large"] {
+    &:after {
+      white-space: normal;
+      width: 260px;
+    }
+  }
+
+  &[data-balloon-length="xlarge"] {
+    &:after {
+      white-space: normal;
+      width: 380px;
+
+      @media screen and (max-width: 768px) {
+        white-space: normal;
+        width: 90vw;
+      }
+    }
+  }
+
+  &[data-balloon-length="fit"] {
+    &:after {
+      white-space: normal;
+      width: 100%;
+    }
+  }
+
+  &[data-balloon-type="sidebar"] {
+    &:after {
+      font-size: $balloon-base-size + 3;
+      border-radius: 2px;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       // --> COMPONENTS <--
-      networks: ["slack", "messenger", "telegram", "twitter", "linkedin"]
+      networks: ["Slack", "Messenger", "Telegram", "Twitter", "LinkedIn"]
     };
   }
 };

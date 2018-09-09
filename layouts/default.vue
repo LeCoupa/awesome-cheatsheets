@@ -39,6 +39,8 @@ export default {
 <style lang="scss">
 $c: ".l-default";
 
+@import "./assets/libraries/balloon";
+
 html {
   overflow-y: scroll;
   box-sizing: border-box;
