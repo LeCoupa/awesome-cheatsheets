@@ -4,7 +4,7 @@
 
 <template lang="pug">
   .l-default
-    github-corner(
+    the-github(
       class="l-default__github"
     )
 
@@ -21,12 +21,12 @@
 
 <script>
 // PROJECT
-import GithubCorner from "@/components/GithubCorner";
+import TheGithub from "@/components/TheGithub";
 import TheCopyright from "@/components/TheCopyright";
 
 export default {
   components: {
-    GithubCorner,
+    TheGithub,
     TheCopyright
   }
 };
