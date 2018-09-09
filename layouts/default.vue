@@ -99,7 +99,7 @@ a {
 }
 
 #{$c} {
-  margin: 0 20px;
+  margin: 0 40px;
 
   #{$c}__inner {
     margin: 0 auto;

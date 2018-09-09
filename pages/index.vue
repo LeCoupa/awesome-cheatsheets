@@ -4,11 +4,17 @@
 
 <template lang="pug">
 .c-index
-  img(
-    src="/images/common/logo.png"
-    srcset="/images/common/logo@2x.png"
-    class="c-index__logo"
+  a(
+    class="c-index__link"
+    href="https://github.com/LeCoupa/awesome-cheatsheets"
+    target="_blank"
   )
+    img(
+      src="/images/common/logo.png"
+      srcset="/images/common/logo@2x.png"
+      class="c-index__logo"
+    )
+
   p.c-index__description
     | Awesome cheatsheets for popular programming languages, frameworks and development tools.<br/>
     | They include everything you should know in one single file. 👩‍💻👨‍💻
