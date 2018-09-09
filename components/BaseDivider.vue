@@ -46,7 +46,10 @@ $c: ".c-base-divider";
 
   #{$c}__line {
     flex: 1;
-    color: #313d4f;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #313d4f;
   }
 }
 </style>
