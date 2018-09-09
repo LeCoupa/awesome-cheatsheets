@@ -10,7 +10,10 @@ a(
 )
   span.c-the-copyright__name By LeCoupa
 
-  span.c-the-copyright__picture
+  img(
+    :src="baseUrl + '/images/common/lecoupa.jpg'"
+    class="c-the-copyright__picture"
+  )
 </template>
 
 <!-- *************************************************************************
@@ -19,6 +22,13 @@ a(
 
 <script>
 export default {
+  data() {
+    return {
+      // --> STATE <--
+      baseUrl: process.env.baseUrl
+    };
+  },
+
   methods: {
     onClick() {
       console.log("onClick");
