@@ -44,7 +44,7 @@ $c: ".l-default";
 html {
   overflow-y: scroll;
   box-sizing: border-box;
-  padding: 60px 0 40px;
+  padding: 60px 0;
   min-height: 100%;
   background-color: #1b2431;
   color: white;
