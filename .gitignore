@@ -1,6 +1,9 @@
 # System
 .DS_Store
 
+# Editor
+.vscode
+
 # Dependencies
 node_modules
 
