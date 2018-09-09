@@ -36,7 +36,7 @@ $c: ".c-base-divider";
   align-items: center;
 
   #{$c}__category {
-    margin-right: 40px;
+    margin-right: 20px;
     color: $white;
     text-align-last: left;
     text-transform: uppercase;
