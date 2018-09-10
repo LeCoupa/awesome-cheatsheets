@@ -26,7 +26,7 @@ import TheCopyright from "@/components/TheCopyright";
 
 export default {
   components: {
-    TheGithub,
+    TheGithubCorner,
     TheCopyright
   }
 };
@@ -44,7 +44,7 @@ $c: ".l-default";
 html {
   overflow-y: scroll;
   box-sizing: border-box;
-  padding: 60px 0;
+  padding: 60px 0 80px;
   min-height: 100%;
   background-color: $mirage;
   color: white;

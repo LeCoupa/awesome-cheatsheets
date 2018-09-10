@@ -19,6 +19,12 @@
     | Awesome cheatsheets for popular programming languages, frameworks and development tools.<br/>
     | They include everything you should know in one single file. 👩‍💻👨‍💻
 
+  the-github-buttons(
+    repo="awesome-cheatsheets"
+    user="LeCoupa"
+    class="c-index__github-buttons"
+  )
+
   section(
     v-for="(category, index) in categories"
     :key="category.name"
@@ -43,7 +49,14 @@
      ************************************************************************* -->
 
 <script>
+// PROJECT
+import TheGithubButtons from "@/components/TheGithubButtons";
+
 export default {
+  components: {
+    TheGithubButtons
+  },
+
   data() {
     return {
       // --> STATE <--
@@ -224,9 +237,13 @@ $c: ".c-index";
 
   #{$c}__description {
     margin: 0;
-    margin: 30px 0 40px;
-    font-size: 22px;
+    margin: 30px 0;
+    font-size: 18px;
     line-height: 32px;
+  }
+
+  #{$c}__github-buttons {
+    margin-bottom: 40px;
   }
 
   #{$c}__category {
@@ -245,6 +262,18 @@ $c: ".c-index";
       grid-gap: 20px;
       grid-template-columns: repeat(auto-fill, 270px);
       justify-content: center;
+    }
+  }
+}
+
+@include mq($from: tablet) {
+  #{$c} {
+    #{$c}__description {
+      font-size: 22px;
+    }
+
+    #{$c}__github-buttons {
+      margin-bottom: 60px;
     }
   }
 }
