@@ -58,7 +58,7 @@ export default {
       baseUrl: process.env.baseUrl,
 
       // --> COMPONENTS <--
-      networks: ["Telegram", "Twitter", "LinkedIn"]
+      networks: ["Facebook", "Telegram", "Twitter", "LinkedIn"]
     };
   },
 
@@ -72,7 +72,9 @@ export default {
         `Check this awesome cheatsheet about ${technology}: ${link} #${technology.toLowerCase()} #cheatsheet`
       );
 
-      if (socialNetwork === "telegram") {
+      if (socialNetwork === "facebook") {
+        url = `https://www.facebook.com/sharer/sharer.php?u=${link}`;
+      } else if (socialNetwork === "telegram") {
         url = `https://telegram.me/share/url?url=${link}&text=${message}`;
       } else if (socialNetwork === "twitter") {
         url = `https://twitter.com/intent/tweet?text=${message}`;
