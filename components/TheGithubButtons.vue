@@ -70,7 +70,7 @@ $c: ".c-the-github-buttons";
 #{$c} {
   #{$c}__wrapper {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width: 100%;
 
     #{$c}__button {
@@ -103,6 +103,7 @@ $c: ".c-the-github-buttons";
   #{$c} {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
 
     #{$c}__wrapper {
       width: initial;

@@ -24,7 +24,6 @@
     user="LeCoupa"
     class="c-index__github-buttons"
   )
-
   section(
     v-for="(category, index) in categories"
     :key="category.name"

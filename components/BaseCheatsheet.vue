@@ -24,6 +24,7 @@
     .c-base-cheatsheet__share
       base-share(
         v-for="network in networks"
+        @click="onShare"
         :key="network"
         :network="network"
         class="c-base-cheatsheet__network"
@@ -57,8 +58,30 @@ export default {
       baseUrl: process.env.baseUrl,
 
       // --> COMPONENTS <--
-      networks: ["Slack", "Messenger", "Telegram", "Twitter", "LinkedIn"]
+      networks: ["Telegram", "Twitter", "LinkedIn"]
     };
+  },
+
+  methods: {
+    onShare(network) {
+      const link = this.link;
+      const socialNetwork = network.toLowerCase();
+      const technology = this.name;
+      let url = "";
+      let message = encodeURIComponent(
+        `Check this awesome cheatsheet about ${technology}: ${link} #${technology.toLowerCase()} #cheatsheet`
+      );
+
+      if (socialNetwork === "telegram") {
+        url = `https://telegram.me/share/url?url=${link}&text=${message}`;
+      } else if (socialNetwork === "twitter") {
+        url = `https://twitter.com/intent/tweet?text=${message}`;
+      } else if (socialNetwork === "linkedin") {
+        url = `https://www.linkedin.com/shareArticle?mini=true&url=${link}&source=LinkedIn`;
+      }
+
+      window.open(url);
+    }
   }
 };
 </script>
