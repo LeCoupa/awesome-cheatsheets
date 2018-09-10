@@ -5,8 +5,8 @@
 <template lang="pug">
 .l-default
   .l-default__inner
-    the-github(
-      class="l-default__github"
+    the-github-corner(
+      class="l-default__github-corner"
     )
     nuxt
 
@@ -21,7 +21,7 @@
 
 <script>
 // PROJECT
-import TheGithub from "@/components/TheGithub";
+import TheGithubCorner from "@/components/TheGithubCorner";
 import TheCopyright from "@/components/TheCopyright";
 
 export default {
