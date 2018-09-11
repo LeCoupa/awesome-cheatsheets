@@ -58,7 +58,7 @@ export default {
       baseUrl: process.env.baseUrl,
 
       // --> COMPONENTS <--
-      networks: ["Facebook", "Telegram", "Twitter", "LinkedIn"]
+      networks: ["Facebook", "Twitter", "LinkedIn", "Telegram"]
     };
   },
 

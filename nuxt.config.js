@@ -8,7 +8,7 @@ module.exports = {
         hid: "description",
         name: "description",
         content:
-          "Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file."
+          "Designed for the ones who enjoy dark interfaces as much as we do. Using the best UX practices for great conversion rates."
       }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]

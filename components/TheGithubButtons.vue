@@ -103,9 +103,9 @@ $c: ".c-the-github-buttons";
   #{$c} {
     display: flex;
     justify-content: center;
-    margin-bottom: 0;
 
     #{$c}__wrapper {
+      margin-bottom: 0;
       width: initial;
     }
   }

@@ -7,6 +7,7 @@
   .l-default__inner
     the-github-corner(
       class="l-default__github-corner"
+      link="https://github.com/LeCoupa/awesome-cheatsheets"
     )
     nuxt
 
@@ -58,6 +59,21 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+
+  #{$c} {
+    margin: 0 40px;
+
+    #{$c}__inner {
+      margin: 0 auto;
+      max-width: 1140px;
+
+      #{$c}__copyright {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
 }
 
 a {
@@ -98,21 +114,6 @@ a {
 @font-face {
   font-family: "Heebo Black";
   src: url("/fonts/heebo/Heebo-Black.otf");
-}
-
-#{$c} {
-  margin: 0 40px;
-
-  #{$c}__inner {
-    margin: 0 auto;
-    max-width: 1140px;
-
-    #{$c}__copyright {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-    }
-  }
 }
 </style>
 
