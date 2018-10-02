@@ -6,7 +6,7 @@ const router =
   process.env.NODE_ENV === "production"
     ? {
         router: {
-          base: "/dark-mode/"
+          base: "/awesome-cheatsheets/"
         }
       }
     : {};
