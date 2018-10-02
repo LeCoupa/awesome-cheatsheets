@@ -1,3 +1,20 @@
+/**************************************************************************
+ * ENVIRONMENT CONFIGURATIONS
+ ***************************************************************************/
+
+const router =
+  process.env.NODE_ENV === "production"
+    ? {
+        router: {
+          base: "/dark-mode/"
+        }
+      }
+    : {};
+
+/**************************************************************************
+ * EXPORT
+ ***************************************************************************/
+
 module.exports = {
   head: {
     title: "Awesome Cheatsheets",
@@ -13,14 +30,18 @@ module.exports = {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
+
   env: {
     baseUrl:
       process.env.NODE_ENV === "production"
         ? "https://lecoupa.github.io/awesome-cheatsheets/"
         : "http://localhost:3000"
   },
+
   css: ["normalize.css/normalize.css"],
+
   plugins: [{ src: "@/plugins/global.js" }],
+
   modules: [
     [
       "@nuxtjs/google-analytics",
@@ -40,6 +61,7 @@ module.exports = {
       ]
     ]
   ],
+
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -52,5 +74,7 @@ module.exports = {
       }
     },
     postcss: [require("autoprefixer")()]
-  }
+  },
+
+  ...router
 };
