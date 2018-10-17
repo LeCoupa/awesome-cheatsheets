@@ -33,6 +33,9 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 - [JavaScript](languages/javascript.js)
 
+#### Concurrent
+- [Rholang](languages/RholangCheetSheet_10.04.18.pdf) [Source repo](https://github.com/JoshOrndorff/LearnRholangByExample/tree/master/cheatSheet)
+
 </details>
 
 ### 📦 Backend
