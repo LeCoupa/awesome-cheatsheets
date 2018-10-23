@@ -58,6 +58,11 @@ MAX(totalqty)
 ) as p
 ```
 
+### Query Tables
+```sql
+select * from sys.tables order by modify_date desc
+```
+
 ### Toggle Identity Insert
 ```sql
 SET IDENTITY_INSERT TableName OFF
