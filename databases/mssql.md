@@ -77,7 +77,7 @@ REPLACE(value,CHAR(0233),'e')
 ### Mass replace characters
 ```sql
 update t
-set mp.field = replace(mp.feild, b.Letter, b.ReplaceWithLetter)
+set t.field = replace(t.field, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
 ```
 
