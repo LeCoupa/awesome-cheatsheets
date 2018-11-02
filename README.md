@@ -77,8 +77,17 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### NoSQL
 
+<<<<<<< HEAD
 - [Redis](databases/redis.sh)
   </details>
+=======
+* [Redis](databases/redis.sh)
+
+#### Relational
+* [MSSQL](databases/mssql.md)
+</details>
+
+>>>>>>> 2e53a26fbe12fb575e305c73def1ecf71f83b84a
 
 ### 🔧 Tools
 
