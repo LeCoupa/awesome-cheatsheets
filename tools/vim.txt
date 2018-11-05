@@ -184,6 +184,13 @@ y                   yank (copy) marked text
 d                   delete marked text
 ~                   switch case
 
+VISUAL MODE SHORTCUTS
+---------------------
+
+v%                  selects matching parenthesis
+vi{                 selects matching curly brace
+vi"                 selects text between double quotes
+vi'                 selects text between single quotes
 
 ##############################################################################
 # SPELLING

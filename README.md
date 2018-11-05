@@ -1,16 +1,16 @@
-![AWESOME CHEATSHEETS LOGO](_design/cover_github@2x.png)
+[![AWESOME CHEATSHEETS LOGO](_design/cover_github@2x.png)](https://lecoupa.github.io/awesome-cheatsheets/)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/LICENSE)
 
-> 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
+**WEBSITE DIRECTORY**: [Available here](https://lecoupa.github.io/awesome-cheatsheets/).
 
-> ❤️ **If you like this repository, [you can click here to tweet it and make it spread](https://ctt.ec/PHba4).**
+> 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
 ## 🤔 Why Awesome-Cheatsheets?
 
-I always make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa) To better keep track of the history and to let people contribute to them, I reorganized everything into this single repository. Most of the content is coming from official documentations and some books I have read.
+I usually make a cheatsheet when I want to improve my skills on a programming language, a framework or a development tool. [I started doing these kind of things a long time ago on Gist](https://gist.github.com/LeCoupa). To better keep track of the history and to let people contribute, I reorganized all of them into this single repository. Most of the content is coming from official documentations and some books I have read.
 
-Feel free to browse each cheatsheet to learn new things and to keep them at hand when you forgot about one command. They have been designed to provide a quick way to assess your knowledge and to save you time.
+Feel free to take a look. You might learn new things. They have been designed to provide a quick way to assess your knowledge and to save you time.
 
 ## 📚 Table of Contents
 
@@ -21,15 +21,17 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Command line interface
 
-* [Bash](languages/bash.sh)
+- [Bash](languages/bash.sh)
 
 #### Imperative
 
-* [PHP](languages/php.php)
+- [C](languages/C.txt)
+- [C#](languages/C%23.txt)
+- [PHP](languages/php.php)
 
 #### Functional
 
-* [JavaScript](languages/javascript.js)
+- [JavaScript](languages/javascript.js)
 
 </details>
 
@@ -40,13 +42,14 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Python
 
-* [Django](backend/django.py)
+- [Django](backend/django.py)
 
 #### Javascript
 
-* [Feathers.js](backend/feathers.js)
-* [Moleculer](backend/moleculer.js)
-* [Node.js](backend/node.js)
+- [Feathers.js](backend/feathers.js)
+- [Moleculer](backend/moleculer.js)
+- [Node.js](backend/node.js)
+- [Sails.js](backend/sails.js)
   </details>
 
 ### 🌐 Frontend
@@ -56,12 +59,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Basics
 
-* [HTML5](frontend/html5.html)
+- [HTML5](frontend/html5.html)
 
 #### Frameworks
 
-* [React.js](frontend/react.js)
-* [Vue.js](frontend/vue.js)
+- [React.js](frontend/react.js)
+- [Vue.js](frontend/vue.js)
+- [Ember.js](frontend/ember.js)
+- [Angular (2+)](frontend/angular.js)
+- [AngularJS](frontend/angularjs.js)
   </details>
 
 ### 🗃️ Databases
@@ -71,12 +77,17 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### NoSQL
 
+<<<<<<< HEAD
+- [Redis](databases/redis.sh)
+  </details>
+=======
 * [Redis](databases/redis.sh)
 
 #### Relational
 * [MSSQL](databases/mssql.md)
 </details>
 
+>>>>>>> 2e53a26fbe12fb575e305c73def1ecf71f83b84a
 
 ### 🔧 Tools
 
@@ -85,15 +96,15 @@ Feel free to browse each cheatsheet to learn new things and to keep them at hand
 
 #### Development
 
-* [VIM](tools/vim.txt)
-* [Xcode](tools/xcode.txt)
+- [VIM](tools/vim.txt)
+- [Xcode](tools/xcode.txt)
 
 #### Infrastructure
 
-* [Docker](tools/docker.sh)
-* [Kubernetes](tools/kubernetes.sh)
-* [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-* [Nanobox CLI](tools/nanobox_cli.sh)
+- [Docker](tools/docker.sh)
+- [Kubernetes](tools/kubernetes.sh)
+- [Nanobox Boxfile](tools/nanobox_boxfile.yml)
+- [Nanobox CLI](tools/nanobox_cli.sh)
   </details>
 
 ## 🙌🏼 How to Contribute?
