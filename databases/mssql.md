@@ -80,6 +80,3 @@ update t
 set t.field = replace(t.field, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
 ```
-
-### See a character in a column
-select AscII (right(sku,1) ) as lastchar 
