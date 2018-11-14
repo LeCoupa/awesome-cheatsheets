@@ -65,8 +65,9 @@ select * from sys.tables order by modify_date desc
 
 ### Toggle Identity Insert
 ```sql
-SET IDENTITY_INSERT TableName OFF
 SET IDENTITY_INSERT TableName ON
+// insert ...
+SET IDENTITY_INSERT TableName OFF
 ```
 
 ### Replace a char code with anything you want
