@@ -492,6 +492,10 @@ MyModel.replaceCollection()
 // saving them as new records in the built-in Archive model, then destroying the originals.
 MyModel.archive(criteria)
 
+// Archive ("soft-delete") the record that matches the specified criteria,
+// saving it (if it exists) as a new record in the built-in Archive model, then destroying the original.
+MyModel.archiveOne(criteria);
+
 // Get the total number of records matching the specified criteria.
 MyModel.count(criteria)
 
@@ -523,9 +527,15 @@ MyModel.createEach(initialValues).fetch()  // Created records will be returned
 MyModel.update(criteria, valuesToSet)
 MyModel.update(criteria, valuesToSet).fetch()  // Updated records will be returned
 
+// Update the record that matches the given criteria, if one exists.
+MyModel.updateOne(criteria).set(valuesToSet);
+
 // Destroy records in your database that match the given criteria.
 MyModel.destroy(criteria)
 MyModel.destroy(criteria).fetch() // Destroyed record will be returned
+
+// Destroy the record in your database that matches the given criteria, if one exists.
+MyModel.destroyOne(criteria);
 
 // Access the datastore for a particular model.
 MyModel.getDatastore()
