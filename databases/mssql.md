@@ -81,3 +81,13 @@ update t
 set t.field = replace(t.field, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
 ```
+# Data Formatting
+### Return Full Month Name of a Date (ex: October)
+```sql
+SELECT DATENAME(MONTH, [Yourdatetimefield]) FROM TABLE
+```
+
+### Military Time
+```sql
+select convert(varchar(20),cast('Feb 18 2017 10:03AM' as datetime),20) -- result 01-18-2017 10:03:00
+```
