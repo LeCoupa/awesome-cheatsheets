@@ -2,18 +2,18 @@ CHEATSHEET C#
 
 1. Data Types
 
-    Primitive   Size            Example
+    Primitive  Range                             Size            Example
     
-    String      2 bytes/char    s = "reference";
-    bool                        b = true;
-    char        2 bytes         ch = 'a';
-    byte        1 byte          b = 0x78;
-    short       2 bytes         val = 70;
-    int         4 bytes         val = 700;
-    long        8 bytes         val = 70;
-    float       4 bytes         val = 70.0F;
-    double      8 bytes         val = 70.0D;
-    decimal     16 bytes        val = 70.0M;
+    String                                       2 bytes/char    s = "reference";
+    bool                                                         b = true;
+    char        U+0000 to U+FFFF                 2 bytes         ch = 'a';
+    byte        0 to 255                         1 byte          b = 0x78;
+    short       -32,768 to 32,767                2 bytes         val = 70;
+    int         -2,147,483,648 to 2,147,483,647  4 bytes         val = 700;
+    long        ±9,223,372,036,854,775,808       8 bytes         val = 70;
+    float       ±1.5 x 10^45 to ±3.4 x 10^38     4 bytes         val = 70.0F;
+    double      ±5.0 × 10^324 to ±1.7 × 10^308   8 bytes         val = 70.0D;
+    decimal	    ±1.0 x 10^28 to ±7.9228 x 10^28	 16 bytes        val = 70.2m;	28-29 significant digits 
 
 2. Arrays
     

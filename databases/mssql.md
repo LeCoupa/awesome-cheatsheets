@@ -65,8 +65,9 @@ select * from sys.tables order by modify_date desc
 
 ### Toggle Identity Insert
 ```sql
-SET IDENTITY_INSERT TableName OFF
 SET IDENTITY_INSERT TableName ON
+-- insert ...
+SET IDENTITY_INSERT TableName OFF
 ```
 
 ### Replace a char code with anything you want
@@ -77,9 +78,16 @@ REPLACE(value,CHAR(0233),'e')
 ### Mass replace characters
 ```sql
 update t
-set mp.field = replace(mp.feild, b.Letter, b.ReplaceWithLetter)
+set t.field = replace(t.field, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
 ```
+# Data Formatting
+### Return Full Month Name of a Date (ex: October)
+```sql
+SELECT DATENAME(MONTH, [Yourdatetimefield]) FROM TABLE
+```
 
-### See a character in a column
-select AscII (right(sku,1) ) as lastchar 
+### Military Time
+```sql
+select convert(varchar(20),cast('Feb 18 2017 10:03AM' as datetime),20) -- result 01-18-2017 10:03:00
+```
