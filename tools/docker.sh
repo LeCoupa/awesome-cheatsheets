@@ -39,7 +39,7 @@ docker-compose build                            # Build all image service
 docker-compose config                           # Validate and view the Compose file
 docker-compose scale <service_name>=<replica>   # Scale special service(s)
 docker-compose top                              # Display the running processes
-
+docker-compose run -rm -p 2022:22 web bash      # Start web service and runs bash as its command, remove old container.
 
 ##############################################################################
 # DOCKER SERVICES 
