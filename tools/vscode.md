@@ -54,6 +54,8 @@
 
 - `Output Colorizer`: Syntax Highlighting for log files.
 
+- `Project Manager`: Easily switch between projects.
+
 - `Prettier - Code formatter`: VS Code plugin for prettier/prettier.
 
 - `REST Client`: REST Client for Visual Studio Code.
