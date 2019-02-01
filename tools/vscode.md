@@ -64,6 +64,8 @@
 
 - `Terminal`: Terminal for Visual Studio Code.
 
+- `Vue Peek`: Allows peek and goto definition for Vue single-file components.
+
 - `VS Live Share`: Real-time collaborative development from the comfort of your favorite tools.
 
 - `Wrap Console Log`: Wrap to console.log by word or selection.
