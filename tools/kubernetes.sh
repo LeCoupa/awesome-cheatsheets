@@ -1,3 +1,5 @@
+#!/bin/bash
+# shellcheck disable=SC1090
 ##############################################################################
 # KUBERNETES
 # PDF: https://sematext.com/kubernetes-cheat-sheet/
