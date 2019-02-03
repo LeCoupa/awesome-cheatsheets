@@ -389,7 +389,8 @@ cd~ nano .bash_profile > alias gentlenode='ssh admin@gentlenode.com -p 3404'  # 
 cd~ nano .bashrc > shopt -s cdable_vars
 export websites="/Users/mac/Documents/websites" >> .bashrc
 source .bashrc
-cd || $websites
+# shellcheck disable=SC2164
+cd $websites
 
 
 ##############################################################################
