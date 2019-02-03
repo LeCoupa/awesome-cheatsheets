@@ -14,7 +14,7 @@ CTRL+E  # moves to end of line
 CTRL+F  # moves forward one character
 CTRL+G  # aborts the current editing command and ring the terminal bell
 CTRL+J  # same as RETURN
-CTRL+K  # deletes "(kill)" forward to end of line
+CTRL+K  # deletes (kill) forward to end of line
 CTRL+L  # clears screen and redisplay the line
 CTRL+M  # same as RETURN
 CTRL+N  # next line in command history
@@ -27,7 +27,7 @@ CTRL+U  # kills backward from point to the beginning of line
 CTRL+V  # makes the next character typed verbatim
 CTRL+W  # kills the word behind the cursor
 CTRL+X  # lists the possible filename completions of the current word
-CTRL+Y  # retrieves "(yank)" last item killed
+CTRL+Y  # retrieves (yank) last item killed
 CTRL+Z  # stops the current command, resume with fg in the foreground or bg in the background
 
 ALT+B   # moves backward one word
@@ -48,11 +48,11 @@ env                 # displays all environment variables
 echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
 
-bash                # if you want to use bash "(type exit to go back to your previously opened shell)"
+bash                # if you want to use bash (type exit to go back to your previously opened shell)
 whereis bash        # finds out where bash is on your system
-which bash          # finds out which program is executed as 'bash' "(default: /bin/bash, can change across environments)"
+which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
 
-clear               # clears content on window "(hide displayed lines)"
+clear               # clears content on window (hide displayed lines)
 
 
 ##############################################################################
@@ -62,21 +62,21 @@ clear               # clears content on window "(hide displayed lines)"
 
 ls                            # lists your files in current directory, ls [dir] to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
-ls -a                         # lists all files, including hidden files "(name beginning with '.')"
+ls -a                         # lists all files, including hidden files (name beginning with '.')
 ln -s [filename] [link]       # creates symbolic link to file
-touch [filename]              # creates or updates "(edit)" your file
-cat [filename]                # prints file raw content "(will not be interpreted)"
-any_command > [filename]      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" "(generally /dev/stdout)"
-more [filename]               # shows the first part of a file "(move with space and type q to quit)"
-head [filename]               # outputs the first lines of file "(default: 10 lines)"
-tail [filename]               # outputs the last lines of file "(useful with -f option)" "(default: 10 lines)"
-vim [filename]                # opens a file in VIM "(VI iMproved)" text editor, will create it if it doesn't exist
-mv [filename] [dest]          # moves a file to destination, behavior will change based on 'dest' type "(dir: file is placed into dir; file: file will replace dest "(tip: useful for renaming)")"
+touch [filename]              # creates or updates (edit) your file
+cat [filename]                # prints file raw content (will not be interpreted)
+any_command > [filename]      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
+more [filename]               # shows the first part of a file (move with space and type q to quit)
+head [filename]               # outputs the first lines of file (default: 10 lines)
+tail [filename]               # outputs the last lines of file (useful with -f option) (default: 10 lines)
+vim [filename]                # opens a file in VIM (VI iMproved) text editor, will create it if it doesn't exist
+mv [filename] [dest]          # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
 cp [filename] [dest]          # copies a file
 rm [filename]                 # removes a file
 diff [filename] [filename2]   # compares files, and shows where they differ
-wc [filename]                 # tells you how many lines, words and characters there are in a file. Use -lwc "(lines, word, character)" to ouput only 1 of those informations
-chmod -options [filename]     # lets you change the read, write, and execute permissions on your files "(more infos: SUID, GUID)"
+wc [filename]                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
+chmod -options [filename]     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
 gzip [filename]               # compresses files using gzip algorithm
 gunzip [filename]             # uncompresses files compressed by gzip
 gzcat [filename]              # lets you look at gzipped file without actually having to gunzip it
@@ -84,7 +84,7 @@ lpr [filename]                # prints the file
 lpq                           # checks out the printer queue
 lprm [jobnumber]              # removes something from the printer queue
 genscript                     # converts plain text files into postscript for printing and gives you some options for formatting
-dvips [filename]              # prints .dvi files "(i.e. files produced by LaTeX)"
+dvips [filename]              # prints .dvi files (i.e. files produced by LaTeX)
 grep "[pattern] [filenames]"  # looks for the string in the files
 grep -r "[pattern] [dir]"     # search recursively for pattern in directory
 
@@ -95,7 +95,8 @@ grep -r "[pattern] [dir]"     # search recursively for pattern in directory
 
 cd~               # changes to home
 mkdir dirname     # makes a new directory
-cd || dirname     # changes directory
+# shellcheck disable=SC2164
+cd dirname        # changes directory
 pwd               # tells you where you currently are
 
 
@@ -119,7 +120,7 @@ finger user              # displays information about user
 uname -a                 # shows kernel information
 man command              # shows the manual for specified command
 df                       # shows disk usage
-du [filename]            # shows the disk usage of the files and directories in filename "(du -s give only a total)"
+du [filename]            # shows the disk usage of the files and directories in filename (du -s give only a total)
 last [yourUsername]      # lists your last logins
 ps -u yourusername       # lists your processes
 kill [PID]               # kills the processes with the ID you gave
@@ -197,7 +198,7 @@ $"(UNIX command)"             # command substitution: runs the command and retur
 ##############################################################################
 
 
-# The function refers to passed arguments by position "(as if they were positional parameters)", that is, $1, $2, and so forth.
+# The function refers to passed arguments by position (as if they were positional parameters), that is, $1, $2, and so forth.
 # $@ is equal to "$1" "$2"... "$N", where N is the number of positional parameters. $# holds the number of positional parameters.
 
 
@@ -224,24 +225,24 @@ statement1 || statement2  # or operator
 
 export str1=str2          # str1 matches str2
 str1 != str2              # str1 does not match str2
-str1 < str2               # str1 is less than str2 "(alphabetically)"
-str1 > str2               # str1 is greater than str2 "(alphabetically)"
--n str1                   # str1 is not null "(has length greater than 0)"
--z str1                   # str1 is null "(has length 0)"
+str1 < str2               # str1 is less than str2 (alphabetically)
+str1 > str2               # str1 is greater than str2 (alphabetically)
+-n str1                   # str1 is not null (has length greater than 0)
+-z str1                   # str1 is null (has length 0)
 
 # FILES
 
 -a file                   # file exists
 -d file                   # file exists and is a directory
 -e file                   # file exists; same -a
--f file                   # file exists and is a regular file "(i.e., not a directory or other special type of file)"
+-f file                   # file exists and is a regular file (i.e., not a directory or other special type of file)
 -r file                   # you have read permission
 -s file                   # file exists and is not empty
 -w file                   # your have write permission
 -x file                   # you have execute permission on file, or directory search permission if it is a directory
 -N file                   # file was modified since it was last read
 -O file                   # you own file
--G file                   # file's group ID matches yours "(or one of yours, if you are in multiple groups)"
+-G file                   # file's group ID matches yours (or one of yours, if you are in multiple groups)
 file1 -nt file2           # file1 is newer than file2
 file1 -ot file2           # file1 is older than file2
 
@@ -353,7 +354,7 @@ n<&-            # closes the input from file descripor n
 
 myCommand &  # runs job in the background and prompts back the shell
 
-jobs         # lists all jobs "(use with -l to see associated PID)"
+jobs         # lists all jobs (use with -l to see associated PID)
 
 fg           # brings a background job into the foreground
 fg %+        # brings most recently invoked background job
@@ -399,13 +400,13 @@ cd $websites
 
 
 bash -n scriptname  # don't run commands; check for syntax errors only
-set -o noexec       # alternative "(set option in script)"
+set -o noexec       # alternative (set option in script)
 
 bash -v scriptname  # echo commands before running them
-set -o verbose      # alternative "(set option in script)"
+set -o verbose      # alternative (set option in script)
 
 bash -x scriptname  # echo commands after command-line processing
-set -o xtrace       # alternative "(set option in script)"
+set -o xtrace       # alternative (set option in script)
 
 trap 'echo $varname' EXIT  # useful when you want to print out the values of variables at the point that your script exits
 
