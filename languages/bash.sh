@@ -93,11 +93,11 @@ grep -r "[pattern] [dir]"     # search recursively for pattern in directory
 # DIRECTORY COMMANDS
 ##############################################################################
 
-cd~               # changes to home
-mkdir dirname     # makes a new directory
+cd~              # changes to home
+mkdir dirname    # makes a new directory
 # shellcheck disable=SC2164
-cd dirname        # changes directory
-pwd               # tells you where you currently are
+cd dirname       # changes directory
+pwd              # tells you where you currently are
 
 
 ##############################################################################
