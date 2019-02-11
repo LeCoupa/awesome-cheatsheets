@@ -42,6 +42,10 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Python
 
+- [Laravel](backend/laravel.php)
+
+#### Python
+
 - [Django](backend/django.py)
 
 #### Javascript
