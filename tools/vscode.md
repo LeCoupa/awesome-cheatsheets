@@ -26,6 +26,10 @@
 
 - `Vetur`: Vue tooling for VS Code.
 
+### PHP
+
+- `PHP IntelliSense`: Advanced Autocompletion and Refactoring support for PHP.
+
 ### Git
 
 - `Git History`: View git log, file history, compare branches or commits.
