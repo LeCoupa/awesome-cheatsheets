@@ -28,6 +28,8 @@
 
 ### PHP
 
+- `Laravel Artisan`: Laravel Artisan commands within Visual Studio Code.
+
 - `PHP IntelliSense`: Advanced Autocompletion and Refactoring support for PHP.
 
 ### Git
