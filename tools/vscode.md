@@ -44,6 +44,8 @@
 
 - `EditorConfig for VS Code`: EditorConfig Support for Visual Studio Code.
 
+- `File Utils`: A convenient way of creating, duplicating, moving, renaming and deleting files and directories.
+
 - `Final-Newline`: Inserts a final newline when saving the document.
 
 - `Formatting Toggle`: A VS Code extension that allows you to toggle the formatter (Prettier, Beautify, …) ON and OFF with a simple click.
