@@ -32,6 +32,8 @@
 
 - `Laravel Artisan`: Laravel Artisan commands within Visual Studio Code.
 
+- `PHP CS Fixer`: PHP CS Fixer extension for VS Code, php formatter, php code beautify tool.
+
 - `PHP IntelliSense`: Advanced Autocompletion and Refactoring support for PHP.
 
 ### Git
