@@ -40,7 +40,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 <details>
 <summary>View cheatsheets</summary>
 
-#### Python
+#### PHP
 
 - [Laravel](backend/laravel.php)
 
