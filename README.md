@@ -105,27 +105,3 @@ Feel free to take a look. You might learn new things. They have been designed to
 ## 🙌🏼 How to Contribute?
 
 You are more than welcome to contribute and build your own cheatsheet for your favorite programming language, framework or development tool. Just submit changes via pull request and I will review them before merging.
-
-## 🙏🏻 Contribution
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://crisp.chat/?ta=oR1nEv43TM" target="_blank"><img src="https://pbs.twimg.com/profile_images/651629444944273408/r5Kd_ifq_400x400.png" height="64" /></a>
-    </td>
-    <td align="center">
-      <a href="http://try.anyleads.com/secret" target="_blank"><img src="https://pbs.twimg.com/profile_images/838140522476761094/A4WpBe5M_400x400.jpg" height="64" /></a>
-    </td>
-    <td align="center">
-      <a href="https://hackr.io/" target="_blank"><img src="https://d1eq8vvyuam4eq.cloudfront.net/assets/images/code-images/code-apple-touch-icon-precomposed.png" height="64" /></a>
-    </td>
-    <td align="center">
-      <a href="https://learnk8s.io/" target="_blank"><img src="https://pbs.twimg.com/profile_images/925127335573114880/9yCkEIe3_400x400.jpg" height="64" /></a>
-    </td>
-    <td align="center">
-      <a href="https://www.voxygen.com/" target="_blank"><img src="https://imgur.com/XQoVtag.png" height="64" /></a>
-    </td>
-  </tr>
-</table>
-
-> 👋 Do you want your company to be listed there? Contribute with a cheatsheet for your favorite programming language, framework or development tool.
