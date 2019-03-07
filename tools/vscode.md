@@ -34,6 +34,8 @@
 
 - `PHP CS Fixer`: PHP CS Fixer extension for VS Code, php formatter, php code beautify tool.
 
+- `PHP Doc Comment VSCode Plugin`: Add phpdoc @param and @return tag for selected function signatures.
+
 - `PHP IntelliSense`: Advanced Autocompletion and Refactoring support for PHP.
 
 ### Git
