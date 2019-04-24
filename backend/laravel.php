@@ -207,3 +207,175 @@ php artisan view:clear           // Clear all compiled view files
  ********************************************************************************************/
 
 
+/********************************************************************************************
+ * 12. COLLECTIONS
+ * https://laravel.com/docs/5.7/collections
+ ********************************************************************************************/
+
+
+all
+average
+avg
+chunk
+collapse
+combine
+concat
+contains
+containsStrict
+count
+crossJoin
+dd
+diff
+diffAssoc
+diffKeys
+dump
+each
+eachSpread
+every
+except
+filter
+first
+firstWhere
+flatMap
+flatten
+flip
+forget
+forPage
+get
+groupBy
+has
+implode
+intersect
+intersectByKeys
+isEmpty
+isNotEmpty
+keyBy
+keys
+last
+macro
+make
+map
+mapInto
+mapSpread
+mapToGroups
+mapWithKeys
+max
+median
+merge
+min
+mode
+nth
+only
+pad
+partition
+pipe
+pluck
+pop
+prepend
+pull
+push
+put
+random
+reduce
+reject
+reverse
+search
+shift
+shuffle
+slice
+some
+sort
+sortBy
+sortByDesc
+sortKeys
+sortKeysDesc
+splice
+split
+sum
+take
+tap
+times
+toArray
+toJson
+transform
+union
+unique
+uniqueStrict
+unless
+unlessEmpty
+unlessNotEmpty
+unwrap
+values
+when
+whenEmpty
+whenNotEmpty
+where
+whereStrict
+whereBetween
+whereIn
+whereInStrict
+whereInstanceOf
+whereNotBetween
+whereNotIn
+whereNotInStrict
+wrap
+zip
+
+
+/********************************************************************************************
+ * 13. HTTP TESTS
+ * https://laravel.com/docs/5.7/http-tests
+ ********************************************************************************************/
+
+
+$response->assertStatus($code);                            // Assert that the response has a given code.
+$response->assertForbidden();                              // Assert that the response has a forbidden status code.
+$response->assertNotFound();                               // Assert that the response has a not found status code.
+$response->assertOk();                                     // Assert that the response has a 200 status code.
+$response->assertSuccessful();                             // Assert that the response has a successful status code.
+$response->assertRedirect($uri);                           // Assert that the response is a redirect to a given URI.
+
+$response->assertHeader($headerName, $value = null);       // Assert that the given header is present on the response.
+$response->assertHeaderMissing($headerName);               // Assert that the given header is not present on the response.
+
+$response->assertExactJson(array $data);                   // Assert that the response contains an exact match of the given JSON data.
+$response->assertJson(array $data);                        // Assert that the response contains the given JSON data.
+$response->assertJsonCount($count, $key = null);           // Assert that the response JSON has an array with the expected number of items at the given key.
+$response->assertJsonFragment(array $data);                // Assert that the response contains the given JSON fragment.
+$response->assertJsonMissing(array $data);                 // Assert that the response does not contain the given JSON fragment.
+$response->assertJsonMissingExact(array $data);            // Assert that the response does not contain the exact JSON fragment.
+$response->assertJsonMissingValidationErrors($keys);       // Assert that the response has no JSON validation errors for the given keys.
+$response->assertJsonStructure(array $structure);          // Assert that the response has a given JSON structure.
+$response->assertJsonValidationErrors($keys);              // Assert that the response has the given JSON validation errors for the given keys.
+
+$response->assertDontSee($value);                          // Assert that the given string is not contained within the response.
+$response->assertDontSeeText($value);                      // Assert that the given string is not contained within the response text.
+$response->assertSee($value);                              // Assert that the given string is contained within the response.
+$response->assertSeeInOrder(array $values);                // Assert that the given strings are contained in order within the response.
+$response->assertSeeText($value);                          // Assert that the given string is contained within the response text.
+$response->assertSeeTextInOrder(array $values);            // Assert that the given strings are contained in order within the response text.
+
+$response->assertCookie($cookieName, $value = null);       // Assert that the response contains the given cookie.
+$response->assertCookieExpired($cookieName);               // Assert that the response contains the given cookie and it is expired.
+$response->assertCookieNotExpired($cookieName);            // Assert that the response contains the given cookie and it is not expired.
+$response->assertCookieMissing($cookieName);               // Assert that the response does not contains the given cookie.
+$response->assertPlainCookie($cookieName, $value = null);  // Assert that the response contains the given cookie (unencrypted).
+
+$response->assertSessionHas($key, $value = null);                                             // Assert that the session contains the given piece of data.
+$response->assertSessionHasAll(array $data);                                                  // Assert that the session has a given list of values.
+$response->assertSessionHasErrors(array $keys, $format = null, $errorBag = 'default');        // Assert that the session contains an error for the given field.
+$response->assertSessionHasErrorsIn($errorBag, $keys = [], $format = null);                   // Assert that the session has the given errors.
+$response->assertSessionHasNoErrors();                                                        // Assert that the session has no errors.
+$response->assertSessionDoesntHaveErrors($keys = [], $format = null, $errorBag = 'default');  // Assert that the session has no errors for the given keys.
+$response->assertSessionMissing($key);                                                        // Assert that the session does not contain the given key.
+
+$response->assertViewHas($key, $value = null);             // Assert that the response view was given a piece of data.
+$response->assertViewHasAll(array $data);                  // Assert that the response view has a given list of data.
+$response->assertViewIs($value);                           // Assert that the given view was returned by the route.
+$response->assertViewMissing($key);                        // Assert that the response view is missing a piece of bound data.
+
+$this->assertAuthenticated($guard = null);                           // Assert that the user is authenticated.
+$this->assertGuest($guard = null);                                   // Assert that the user is not authenticated.
+$this->assertAuthenticatedAs($user, $guard = null);                  // Assert that the given user is authenticated.
+$this->assertCredentials(array $credentials, $guard = null);         // $this->assertCredentials(array $credentials, $guard = null).
+$this->assertInvalidCredentials(array $credentials, $guard = null);  // Assert that the given credentials are invalid.
