@@ -48,3 +48,5 @@ django-admin startapp <Appname>          # create a new django application with 
 django-admin migrate                     # synchronize the database state with your current state project models and migrations
 django-admin makemigrations              # create new migrations to the database based on the changes detected in the models
 django-admin runserver                   # start the development webserver at 127.0.0.1 with the port 8000
+django-admin help                        # display usage information and a list of the commands provided by each application
+django-admin version                     # display the current django version
