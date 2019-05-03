@@ -1,4 +1,6 @@
 #!/bin/bash
+# shellcheck disable=SC1035
+
 ##############################################################################
 # SHORTCUTS
 ##############################################################################
@@ -58,43 +60,43 @@ clear               # clears content on window (hide displayed lines)
 ##############################################################################
 
 
-ls                            # lists your files in current directory, ls <dir> to print files in a specific directory
+ls                            # lists your files in current directory, ls [dir] to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
 ls -a                         # lists all files, including hidden files (name beginning with '.')
-ln -s <filename> <link>       # creates symbolic link to file
-touch <filename>              # creates or updates (edit) your file
-cat <filename>                # prints file raw content (will not be interpreted)
-any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
-more <filename>               # shows the first part of a file (move with space and type q to quit)
-head <filename>               # outputs the first lines of file (default: 10 lines)
-tail <filename>               # outputs the last lines of file (useful with -f option) (default: 10 lines)
-vim <filename>                # opens a file in VIM (VI iMproved) text editor, will create it if it doesn't exist
-mv <filename1> <dest>         # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
-cp <filename1> <dest>         # copies a file
-rm <filename>                 # removes a file
-diff <filename1> <filename2>  # compares files, and shows where they differ
-wc <filename>                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
-chmod -options <filename>     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
-gzip <filename>               # compresses files using gzip algorithm
-gunzip <filename>             # uncompresses files compressed by gzip
-gzcat <filename>              # lets you look at gzipped file without actually having to gunzip it
-lpr <filename>                # prints the file
+ln -s [filename] [link]       # creates symbolic link to file
+touch [filename]              # creates or updates (edit) your file
+cat [filename]                # prints file raw content (will not be interpreted)
+any_command > [filename]      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
+more [filename]               # shows the first part of a file (move with space and type q to quit)
+head [filename]               # outputs the first lines of file (default: 10 lines)
+tail [filename]               # outputs the last lines of file (useful with -f option) (default: 10 lines)
+vim [filename]                # opens a file in VIM (VI iMproved) text editor, will create it if it doesn't exist
+mv [filename] [dest]          # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
+cp [filename] [dest]          # copies a file
+rm [filename]                 # removes a file
+diff [filename] [filename2]   # compares files, and shows where they differ
+wc [filename]                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
+chmod -options [filename]     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
+gzip [filename]               # compresses files using gzip algorithm
+gunzip [filename]             # uncompresses files compressed by gzip
+gzcat [filename]              # lets you look at gzipped file without actually having to gunzip it
+lpr [filename]                # prints the file
 lpq                           # checks out the printer queue
-lprm <jobnumber>              # removes something from the printer queue
+lprm [jobnumber]              # removes something from the printer queue
 genscript                     # converts plain text files into postscript for printing and gives you some options for formatting
-dvips <filename>              # prints .dvi files (i.e. files produced by LaTeX)
-grep <pattern> <filenames>    # looks for the string in the files
-grep -r <pattern> <dir>       # search recursively for pattern in directory
+dvips [filename]              # prints .dvi files (i.e. files produced by LaTeX)
+grep "[pattern] [filenames]"  # looks for the string in the files
+grep -r "[pattern] [dir]"     # search recursively for pattern in directory
 
 
 ##############################################################################
 # DIRECTORY COMMANDS
 ##############################################################################
 
-
-mkdir <dirname>  # makes a new directory
-cd               # changes to home
-cd <dirname>     # changes directory
+cd~              # changes to home
+mkdir dirname    # makes a new directory
+# shellcheck disable=SC2164
+cd dirname       # changes directory
 pwd              # tells you where you currently are
 
 
@@ -114,25 +116,25 @@ date                     # shows the current date and time
 cal                      # shows the month's calendar
 uptime                   # shows current uptime
 w                        # displays whois online
-finger <user>            # displays information about user
+finger user              # displays information about user
 uname -a                 # shows kernel information
-man <command>            # shows the manual for specified command
+man command              # shows the manual for specified command
 df                       # shows disk usage
-du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
-last <yourUsername>      # lists your last logins
+du [filename]            # shows the disk usage of the files and directories in filename (du -s give only a total)
+last [yourUsername]      # lists your last logins
 ps -u yourusername       # lists your processes
-kill <PID>               # kills the processes with the ID you gave
-killall <processname>    # kill all processes with the name
+kill [PID]               # kills the processes with the ID you gave
+killall [processname]    # kill all processes with the name
 top                      # displays your currently active processes
 bg                       # lists stopped or background jobs ; resume a stopped job in the background
 fg                       # brings the most recent job in the foreground
-fg <job>                 # brings job to the foreground
+fg [job]                 # brings job to the foreground
 
-ping <host>              # pings host and outputs results
-whois <domain>           # gets whois information for domain
-dig <domain>             # gets DNS information for domain
-dig -x <host>            # reverses lookup host
-wget <file>              # downloads file
+ping [host]              # pings host and outputs results
+whois [domain]           # gets whois information for domain
+dig [domain]             # gets DNS information for domain
+dig -x [host]            # reverses lookup host
+wget [file]              # downloads file
 
 
 ##############################################################################
@@ -144,19 +146,21 @@ varname=value                # defines a variable
 varname=value command        # defines a variable to be in the environment of a particular subprocess
 echo $varname                # checks a variable's value
 echo $$                      # prints process ID of the current shell
-echo $!                      # prints process ID of the most recently invoked background job
+echo $!
+                             # prints process ID of the most recently invoked background job
 echo $?                      # displays the exit status of the last command
-export VARNAME=value         # defines an environment variable (will be available in subprocesses)
+export VARNAME=value         # defines an environment variable "(will be available in subprocesses)"
 
-array[0]=valA                # how to define an array
+export array                        # export array as value
+array[0]=valA                       # how to define an array
 array[1]=valB
 array[2]=valC
 array=([2]=valC [0]=valA [1]=valB)  # another way
 array=(valA valB valC)              # and another
 
-${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
-${#array[i]}                 # to find out the length of any element in the array
-${#array[@]}                 # to find out how many values there are in the array
+$"{array[i]}"                # displays array's value for this index. If no index is supplied, array element 0 is assumed
+$"{#array[i]}"               # to find out the length of any element in the array
+$"{#array[@]}"               # to find out how many values there are in the array
 
 declare -a                   # the variables are treaded as arrays
 declare -f                   # uses function names only
@@ -165,28 +169,28 @@ declare -i                   # the variables are treaded as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
 
-${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
-${varname:=word}             # if varname exists and isn't null, return its value; otherwise set it word and then return its value
-${varname:?message}          # if varname exists and isn't null, return its value; otherwise print varname, followed by message and abort the current command or script
-${varname:+word}             # if varname exists and isn't null, return word; otherwise return null
-${varname:offset:length}     # performs substring expansion. It returns the substring of $varname starting at offset and up to length characters
+$"{varname:-word}"            # if varname exists and isn't null, return its value; otherwise return word
+$"{varname:=word}"            # if varname exists and isn't null, return its value; otherwise set it word and then return its value
+$"{varname:?message}"         # if varname exists and isn't null, return its value; otherwise print varname, followed by message and abort the current command or script
+$"{varname:+word}"            # if varname exists and isn't null, return word; otherwise return null
+$"{varname:offset:length}"    # performs substring expansion. It returns the substring of $varname starting at offset and up to length characters
 
-${variable#pattern}          # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
-${variable##pattern}         # if the pattern matches the beginning of the variable's value, delete the longest part that matches and return the rest
-${variable%pattern}          # if the pattern matches the end of the variable's value, delete the shortest part that matches and return the rest
-${variable%%pattern}         # if the pattern matches the end of the variable's value, delete the longest part that matches and return the rest
-${variable/pattern/string}   # the longest match to pattern in variable is replaced by string. Only the first match is replaced
-${variable//pattern/string}  # the longest match to pattern in variable is replaced by string. All matches are replaced
+$"{variable#pattern}"         # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
+$"{variable##pattern}"        # if the pattern matches the beginning of the variable's value, delete the longest part that matches and return the rest
+$"{variable%pattern}"         # if the pattern matches the end of the variable's value, delete the shortest part that matches and return the rest
+$"{variable%%pattern}"        # if the pattern matches the end of the variable's value, delete the longest part that matches and return the rest
+$"{variable/pattern/string}"  # the longest match to pattern in variable is replaced by string. Only the first match is replaced
+$"{variable//pattern/string}" # the longest match to pattern in variable is replaced by string. All matches are replaced
 
-${#varname}                  # returns the length of the value of the variable as a character string
+$"{#varname}"                 # returns the length of the value of the variable as a character string
 
-*(patternlist)               # matches zero or more occurrences of the given patterns
-+(patternlist)               # matches one or more occurrences of the given patterns
-?(patternlist)               # matches zero or one occurrence of the given patterns
-@(patternlist)               # matches exactly one of the given patterns
-!(patternlist)               # matches anything except one of the given patterns
+*"(patternlist)"              # matches zero or more occurrences of the given patterns
++"(patternlist)"              # matches one or more occurrences of the given patterns
+?"(patternlist)"              # matches zero or one occurrence of the given patterns
+@"(patternlist)"              # matches exactly one of the given patterns
+!"(patternlist)"              # matches anything except one of the given patterns
 
-$(UNIX command)              # command substitution: runs the command and returns standard output
+$"(UNIX command)"             # command substitution: runs the command and returns standard output
 
 
 ##############################################################################
@@ -219,7 +223,7 @@ statement1 || statement2  # or operator
 
 # STRINGS
 
-str1 = str2               # str1 matches str2
+export str1=str2          # str1 matches str2
 str1 != str2              # str1 does not match str2
 str1 < str2               # str1 is less than str2 (alphabetically)
 str1 > str2               # str1 is greater than str2 (alphabetically)
@@ -254,35 +258,37 @@ file1 -ot file2           # file1 is older than file2
 if condition
 then
   statements
-[elif condition
-  then statements...]
-[else
-  statements]
+elif condition
+  then statements
+else
+  statements
 fi
 
+export x
 for x in {1..10}
 do
   statements
 done
 
-for name [in list]
+for name in [list]
 do
   statements that can use $name
 done
 
-for (( initialisation ; ending condition ; update ))
+for x
 do
-  statements...
+  ending condition
+elseif update
 done
 
-case expression in
+case $x in
   pattern1 )
-    statements ;;
+    statement1 ;;
   pattern2 )
-    statements ;;
+    statement2 ;;
 esac
 
-select name [in list]
+select name in list
 do
   statements that can use $name
 done
@@ -315,26 +321,26 @@ eval     # takes arguments and run them through the command-line processing step
 ##############################################################################
 
 
-cmd1|cmd2  # pipe; takes standard output of cmd1 as standard input to cmd2
-< file     # takes standard input from file
-> file     # directs standard output to file
->> file    # directs standard output to file; append to file if it already exists
->|file     # forces standard output to file even if noclobber is set
-n>|file    # forces output to file from file descriptor n even if noclobber is set
-<> file    # uses file as both standard input and standard output
-n<>file    # uses file as both input and output for file descriptor n
-n>file     # directs file descriptor n to file
-n<file     # takes file descriptor n from file
-n>>file    # directs file description n to file; append to file if it already exists
-n>&        # duplicates standard output to file descriptor n
-n<&        # duplicates standard input from file descriptor n
-n>&m       # file descriptor n is made to be a copy of the output file descriptor
-n<&m       # file descriptor n is made to be a copy of the input file descriptor
-&>file     # directs standard output and standard error to file
-<&-        # closes the standard input
->&-        # closes the standard output
-n>&-       # closes the ouput from file descriptor n
-n<&-       # closes the input from file descripor n
+cmd1|cmd2       # pipe; takes standard output of cmd1 as standard input to cmd2
+text < file     # takes standard input from file
+text > file     # directs standard output to file
+text >> file    # directs standard output to file; append to file if it already exists
+text >|file     # forces standard output to file even if noclobber is set
+n>|file         # forces output to file from file descriptor n even if noclobber is set
+text <> file    # uses file as both standard input and standard output
+n<>file         # uses file as both input and output for file descriptor n
+n>file          # directs file descriptor n to file
+n<file          # takes file descriptor n from file
+n>>file         # directs file description n to file; append to file if it already exists
+n>&2            # duplicates standard output to file descriptor n
+n<&1            # duplicates standard input from file descriptor n
+n>&m            # file descriptor n is made to be a copy of the output file descriptor
+n<&m            # file descriptor n is made to be a copy of the input file descriptor
+text &>file     # directs standard output and standard error to file
+text <&-        # closes the standard input
+text >&-        # closes the standard output
+n>&-            # closes the ouput from file descriptor n
+n<&-            # closes the input from file descripor n
 
 
 ##############################################################################
@@ -367,7 +373,7 @@ trap cmd sig1 sig2  # executes a command when a signal is received by the script
 trap "" sig1 sig2   # ignores that signals
 trap - sig1 sig2    # resets the action taken when the signal is received to the default
 
-disown <PID|JID>    # removes the process from the list of jobs
+disown PID|JID      # removes the process from the list of jobs
 
 wait                # waits until all background jobs have finished
 
@@ -378,15 +384,13 @@ wait                # waits until all background jobs have finished
 
 
 # set an alias
-cd; nano .bash_profile
-> alias gentlenode='ssh admin@gentlenode.com -p 3404'  # add your alias in .bash_profile
+cd~ nano .bash_profile > alias gentlenode='ssh admin@gentlenode.com -p 3404'  # add your alias in .bash_profile
 
 # to quickly go to a specific directory
-cd; nano .bashrc
-> shopt -s cdable_vars
-> export websites="/Users/mac/Documents/websites"
-
+cd~ nano .bashrc > shopt -s cdable_vars
+export websites="/Users/mac/Documents/websites" >> .bashrc
 source .bashrc
+# shellcheck disable=SC2164
 cd $websites
 
 
@@ -411,18 +415,19 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status
 
+# shellcheck disable=SC2154
 function dbgtrap {
   echo "badvar is $badvar"
 }
 
 trap dbgtrap DEBUG  # causes the trap code to be executed before every statement in a function or script
-# ...section of code in which the problem occurs...
-trap - DEBUG  # turn off the DEBUG trap
+                    # ...section of code in which the problem occurs...
+trap - DEBUG        # turn off the DEBUG trap
 
 function returntrap {
-  echo "A return occurred"
+  echo 'A return occurred'
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing

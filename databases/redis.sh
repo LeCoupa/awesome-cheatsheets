@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # *****************************************************************************
 # BASICS
 # *****************************************************************************
@@ -54,13 +56,13 @@ LTRIM key start stop                  # trim a list to the specified range
 RPOP key                              # remove the last element from the list and returns it
 RPOPLPUSH source destination          # remove the last element in a list, prepend it to another list and return it
 BLPOP key [key ...] timeout           # remove and get the first element in a list, or block until one is available
-BRPOP key [key ...] timeout           # remove and get the last element in a list, or block until one is available
+BRPOP key [key ...] timeout           # remove and get the last element in a list, or block until one is available
 
 
 # *****************************************************************************
 # SETS
 # A set is similar to a list, except it does not have a specific order
-# and each element may only appear once. 
+# and each element may only appear once.
 # *****************************************************************************
 
 
@@ -82,14 +84,14 @@ SPOP key [count]                 # remove and return one or multiple random memb
 # *****************************************************************************
 
 
-ZADD key [NX|XX] [CH] [INCR] score member [score member ...]  # add one or more members to a sorted set, or update its score if it already exists
+ZADD key [NX|XX] [CH] [INCR]score member [score member ...]  # add one or more members to a sorted set, or update its score if it already exists
 
 ZCARD key                           # get the number of members in a sorted set
 ZCOUNT key min max                  # count the members in a sorted set with scores within the given values
 ZINCRBY key increment member        # increment the score of a member in a sorted set
 ZRANGE key start stop [WITHSCORES]  # returns a subset of the sorted set
 ZRANK key member                    # determine the index of a member in a sorted set
-ZREM key member [member ...]        # remove one or more members from a sorted set
+ZREM key member [member ...]        # remove one or more members from a sorted set
 ZREMRANGEBYRANK key start stop      # remove all members in a sorted set within the given indexes
 ZREMRANGEBYSCORE key min max        # remove all members in a sorted set, by index, with scores ordered from high to low
 ZSCORE key member                   # get the score associated with the given mmeber in a sorted set
@@ -139,10 +141,10 @@ PFMERGE destkey sourcekey [sourcekey ...]  # merge N HyperLogLogs into a single 
 
 
 PSUBSCRIBE pattern [pattern ...]             # listen for messages published to channels matching the given patterns
-PUBSUB subcommand [argument [argument ...]]  # inspect the state of the Pub/Sub subsystem
+PUBSUB subcommand [argument [argument ...]]  # inspect the state of the Pub/Sub subsystem
 PUBLISH channel message                      # post a message to a channel
-PUNSUBSCRIBE [pattern [pattern ...]]         # stop listening for messages posted to channels matching the given patterns
-SUBSCRIBE channel [channel ...]              # listen for messages published to the given channels
+PUNSUBSCRIBE [pattern [pattern ...]]         # stop listening for messages posted to channels matching the given patterns
+SUBSCRIBE channel [channel ...]              # listen for messages published to the given channels
 UNSUBSCRIBE [channel [channel ...]]          # stop listening for messages posted to the given channels
 
 
