@@ -114,6 +114,12 @@ export default {
                 "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/feathers.js"
             },
             {
+              name: "Laravel",
+              thumbnail: "laravel.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/laravel.php"
+            },
+            {
               name: "Moleculer",
               thumbnail: "moleculer.jpg",
               link:
