@@ -85,7 +85,7 @@ $c: ".c-the-github-buttons";
       }
 
       &--fork {
-        width: 100px;
+        width: 110px;
       }
 
       &--follow {
