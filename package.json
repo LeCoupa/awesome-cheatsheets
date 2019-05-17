@@ -5,7 +5,7 @@
   "author": "Julien <julien.le.coupanec@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "PORT=2018 nuxt",
     "build": "NODE_ENV=production nuxt build",
     "start": "nuxt start",
     "generate": "NODE_ENV=production nuxt generate",
