@@ -35,7 +35,7 @@ module.exports = {
     baseUrl:
       process.env.NODE_ENV === "production"
         ? "https://lecoupa.github.io/awesome-cheatsheets/"
-        : "http://localhost:3000"
+        : "http://localhost:2018"
   },
 
   css: ["normalize.css/normalize.css"],
