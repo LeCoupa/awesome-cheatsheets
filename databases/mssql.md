@@ -115,3 +115,13 @@ last_execution_time as LastExecutionTime, execution_count as ExecutionCount
 FROM sys.dm_exec_procedure_stats WHERE DB_NAME(database_id) IS NOT NULL AND OBJECT_NAME(object_id) IS NOT NULL
 ORDER BY execution_count DESC --ORDER BY last_execution_time DESC
 ```
+
+# Row_Number() #
+### Useful for updating records when you do not have a common key ###
+```sql
+select ROW_NUMBER () OVER ( order by order.orderid ) AS ROW#, c.clubid
+from order o right outer join Club c on c.orderid = o.orderid
+where getdate() between c.StartDate and c.EndDate
+and c.id is null
+```
+
