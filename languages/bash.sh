@@ -219,12 +219,12 @@ statement1 || statement2  # or operator
 
 # STRINGS
 
-str1 = str2               # str1 matches str2
-str1 != str2              # str1 does not match str2
-str1 < str2               # str1 is less than str2 (alphabetically)
-str1 > str2               # str1 is greater than str2 (alphabetically)
--n str1                   # str1 is not null (has length greater than 0)
--z str1                   # str1 is null (has length 0)
+str1 == str2               # str1 matches str2
+str1 != str2               # str1 does not match str2
+str1 < str2                # str1 is less than str2 (alphabetically)
+str1 > str2                # str1 is greater than str2 (alphabetically)
+-n str1                    # str1 is not null (has length greater than 0)
+-z str1                    # str1 is null (has length 0)
 
 # FILES
 
@@ -411,7 +411,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status
 
 function dbgtrap {
   echo "badvar is $badvar"
