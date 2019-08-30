@@ -45,7 +45,7 @@ break 	  used to exit loop and used to exit switch
 case	    choice in a switch
 char	     basic declaration of a type character
 const	     prefix declaration meaning variable can not be changed
-continuego to bottom of loop in for, while and do loops
+continue 	go to bottom of loop in for, while and do loops
 default	   optional last case of a switch
 do	       executable statement, do-while loop
 double     basic declaration double precision floating point
