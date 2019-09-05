@@ -379,3 +379,27 @@ $this->assertGuest($guard = null);                                   // Assert t
 $this->assertAuthenticatedAs($user, $guard = null);                  // Assert that the given user is authenticated.
 $this->assertCredentials(array $credentials, $guard = null);         // $this->assertCredentials(array $credentials, $guard = null).
 $this->assertInvalidCredentials(array $credentials, $guard = null);  // Assert that the given credentials are invalid.
+
+/********************************************************************************************
+ * 14. LARAVEL VALET COMMANDS
+ * https://laravel.com/docs/6.0/valet
+ ********************************************************************************************/
+
+valet install     // Install the Valet daemon.
+valet uninstall   // Uninstall the Valet daemon.
+valet use php@7.2 // Allows you to switch between php versions.
+
+valet restart     // Restart the Valet daemon.
+valet start       // Start the Valet daemon.
+valet stop        // Stop the Valet daemon.
+
+valet park        // Register your current working directory as a path which Valet should search for sites.
+valet forget      // Run this command from a "parked" directory to remove it from the parked directory list.
+valet paths       // View all of your "parked" paths.
+valet link        // Link a single site in the current directory and not the entire directory.
+valet unlink      // Unlink a single site in the current directory
+valet secure      // Serve site into https
+valet unsecure    // Revert back to http
+
+valet log         // View a list of logs which are written by Valet's services.
+valet trust       // Add sudoers files for Brew and Valet to allow Valet commands to be run without prompting for passwords.
