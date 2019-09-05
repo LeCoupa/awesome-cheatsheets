@@ -389,17 +389,22 @@ valet install     // Install the Valet daemon.
 valet uninstall   // Uninstall the Valet daemon.
 valet use php@7.2 // Allows you to switch between php versions.
 
-valet restart     // Restart the Valet daemon.
 valet start       // Start the Valet daemon.
 valet stop        // Stop the Valet daemon.
+valet restart     // Restart the Valet daemon.
 
 valet park        // Register your current working directory as a path which Valet should search for sites.
 valet forget      // Run this command from a "parked" directory to remove it from the parked directory list.
 valet paths       // View all of your "parked" paths.
-valet link        // Link a single site in the current directory and not the entire directory.
-valet unlink      // Unlink a single site in the current directory
+
+valet link <name>   // Link a single site in the current directory and not the entire directory.
+valet unlink <name> // Unlink a single site in the current directory
+valet links         // View all of your "linked" paths.
+
 valet secure      // Serve site into https
 valet unsecure    // Revert back to http
 
-valet log         // View a list of logs which are written by Valet's services.
-valet trust       // Add sudoers files for Brew and Valet to allow Valet commands to be run without prompting for passwords.
+valet log          // View a list of logs which are written by Valet's services.
+valet trust        // Add sudoers files for Brew and Valet to allow Valet commands to be run without prompting for passwords.
+valet tld <suffix> // Update tld for your domains (default to test).
+valet share        // Share your site with the world.
