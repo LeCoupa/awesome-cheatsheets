@@ -12,6 +12,8 @@
 
 - `SCSS IntelliSense`: Advanced autocompletion and refactoring support for SCSS.
 
+- `XML Format`: Format XML documents.
+
 ### JavaScript, Node & NPM
 
 - `Import Cost`: This extension will display inline in the editor the size of the imported package.
