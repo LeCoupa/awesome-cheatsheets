@@ -51,12 +51,6 @@ django-admin runserver                   # start the development webserver at 12
 django-admin help                        # display usage information and a list of the commands provided by each application
 django-admin version                     # display the current django version
 
-
-# ******************************************************************************
-# Other useful or advanced django-admin commands                                   
-# ******************************************************************************
-
-
 django-admin check                       # Checks the entire django project for potential problems
 django-admin compilemessages             # Compiles .po files to .mo files for use with builtin gettext support
 django-admin createcachetable            # Creates the tables needed to use the SQL cache backend.
