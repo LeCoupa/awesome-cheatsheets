@@ -69,3 +69,15 @@ django-admin sqlmigrate                  # Prints the SQL statements for the nam
 django-admin sqlsequencereset            # Prints the SQL statements for resetting sequences for the given app name(s).
 django-admin squashmigrations            # Squashes an existing set of migrations (from first until specified) into a single new one.
 django-admin testserver                  # Runs a development server with data from the given fixture(s).
+
+
+
+###################################################################################
+#  App related commands #######################################################
+###################################################################################
+
+django-admin changepassword <username>   # Allows changing a user’s password. It prompts you to enter a new password twice for the given user.
+django-admin createsuperuser             # Creates a superuser account (a user who has all permissions).
+django-admin remove_stale_contenttypes   # Deletes stale content types (from deleted models) in your database.
+django-admin clearsessions               # Can be run as a cron job or directly to clean out expired sessions.
+django-admin collectstatic               # Helps to collect all the static files in the one mentioned directory.
