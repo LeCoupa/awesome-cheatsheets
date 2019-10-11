@@ -303,3 +303,39 @@ abstract class AbstractClassName
     abstract function abstractFunction(Type $var = null): Type;
 
 }
+
+
+/**
+ * Basic Implementation of LoggerAwareInterface.
+ * @see https://github.com/php-fig/log/blob/master/Psr/Log/LoggerAwareTrait.php
+ */
+trait LoggerAwareTrait
+{
+    /**
+     * The logger instance.
+     *
+     * @var LoggerInterface
+     */
+    protected $logger;
+    /**
+     * Sets a logger.
+     *
+     * @param LoggerInterface $logger
+     */
+    public function setLogger(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+}
+
+
+/**
+ * Example with use of LoggerAwareTrait.
+ */
+class ClassWithLogger
+{
+    /**
+     * Use the LoggerAwareTrait in this class.
+     */
+    use LoggerAwareTrait;
+}
