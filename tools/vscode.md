@@ -54,6 +54,8 @@
 
 ### Handy
 
+- `Better comments`: Improve your code commenting by annotating with alert, informational, TODOs, and more!
+
 - `Debugger for Chrome`: Debug your JavaScript code in the Chrome browser.
 
 - `EditorConfig for VS Code`: EditorConfig Support for Visual Studio Code.
