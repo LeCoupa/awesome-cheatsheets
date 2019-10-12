@@ -91,16 +91,18 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Development
 
+- [Sublime Text](tools/sublime_text.md)
 - [VIM](tools/vim.txt)
+- [Visual Studio Code](tools/vscode.md)
 - [Xcode](tools/xcode.txt)
 
 #### Infrastructure
 
 - [Docker](tools/docker.sh)
+- [Heroku CLI](tools/heroku.sh)
 - [Kubernetes](tools/kubernetes.sh)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 - [Nanobox CLI](tools/nanobox_cli.sh)
-- [Heroku CLI](tools/heroku.sh)
   </details>
 
 ## 🙌🏼 How to Contribute?
