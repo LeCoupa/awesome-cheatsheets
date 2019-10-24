@@ -3,3 +3,6 @@
 
 # Editors
 .vscode/
+
+# Vim
+*.swp
