@@ -10,7 +10,7 @@ CTRL+D  # deletes one character backward or logs out of current session, similar
 CTRL+E  # moves to end of line
 CTRL+F  # moves forward one character
 CTRL+G  # aborts the current editing command and ring the terminal bell
-CTRL+H	# deletes one character under cursor (same as DELETE)
+CTRL+H  # deletes one character under cursor (same as DELETE)
 CTRL+J  # same as RETURN
 CTRL+K  # deletes (kill) forward to end of line
 CTRL+L  # clears screen and redisplay the line
@@ -31,14 +31,14 @@ CTRL+Z  # stops the current command, resume with fg in the foreground or bg in t
 ALT+B   # moves backward one word
 ALT+D   # deletes next word
 ALT+F   # moves forward one word
-ALT+H	# deletes one character backward
+ALT+H   # deletes one character backward
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
 
 history   # shows command line history
 !!        # repeats the last command
-!<n>	  # refers to command line 'n'
+!<n>      # refers to command line 'n'
 !<string> # refers to command starting with 'string'
 
 exit      # logs out of current session
