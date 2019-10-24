@@ -254,6 +254,7 @@ set noic                    ignore case: turn off
 :b1                 show buffer 1
 :b vimrc            show buffer whose filename begins with "vimrc"
 :bufdo <command>    run 'command(s)' in all buffers
+:[range]bufdo <command> run 'command(s)' for buffers in 'range'
 
 
 ##############################################################################
