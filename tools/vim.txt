@@ -232,6 +232,8 @@ n                           repeat search in same direction
 N                           repeat search in opposite direction
 *                           search forward, word under cursor
 #                           search backward, word under cursor
+set ic                      ignore case: turn on
+set noic                    ignore case: turn off
 :%s/old/new/g               replace all old with new throughout file
 :%s/old/new/gc              replace all old with new throughout file with confirmation
 :argdo %s/old/new/gc | wq   open multiple files and run this command to replace old 
@@ -251,6 +253,7 @@ N                           repeat search in opposite direction
 :bd                 delete a buffer (close a file)
 :b1                 show buffer 1
 :b vimrc            show buffer whose filename begins with "vimrc"
+:bufdo <command>    run 'command(s)' in all buffers
 
 
 ##############################################################################
