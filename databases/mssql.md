@@ -115,7 +115,13 @@ last_execution_time as LastExecutionTime, execution_count as ExecutionCount
 FROM sys.dm_exec_procedure_stats WHERE DB_NAME(database_id) IS NOT NULL AND OBJECT_NAME(object_id) IS NOT NULL
 ORDER BY execution_count DESC --ORDER BY last_execution_time DESC
 ```
-
+### Take row data into column data that is separated by a comma ###
+```sql
+-- You need the substring because you need to cast back to a string from the xml path
+select SUBSTRING( (select distinct top 5  COALESCE(loc.LocationId + ', ','')
+FROM Locations loc where loc.ProductId= '1' FOR XML PATH('')),1,10000000)
+```
+                 
 # Row_Number() #
 ### Useful for updating records when you do not have a common key ###
 ```sql
