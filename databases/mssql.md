@@ -121,13 +121,16 @@ ORDER BY execution_count DESC --ORDER BY last_execution_time DESC
 select SUBSTRING( (select distinct top 5  COALESCE(loc.LocationId + ', ','')
 FROM Locations loc where loc.ProductId= '1' FOR XML PATH('')),1,10000000)
 ```
-                 
-# Row_Number() #
-### Useful for updating records when you do not have a common key ###
+
+### Row_Number(): Useful for updating records when you do not have a common key ###
 ```sql
 select ROW_NUMBER () OVER ( order by order.orderid ) AS ROW#, c.clubid
 from order o right outer join Club c on c.orderid = o.orderid
 where getdate() between c.StartDate and c.EndDate
 and c.id is null
 ```
+
+# Operators #
+### BETWEEN ###
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates. The BETWEEN operator is inclusive: begin and end values are included.
 
