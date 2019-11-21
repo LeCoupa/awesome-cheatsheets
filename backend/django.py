@@ -61,7 +61,7 @@ django-admin help                        # display usage information and a list 
 django-admin makemigrations              # create new migrations to the database based on the changes detected in the models
 django-admin migrate                     # synchronize the database state with your current state project models and migrations
 django-admin remove_stale_contenttypes   # Deletes stale content types (from deleted models) in your database.y.
-django-admin runserver                   # start the development webserver at 127.0.0.1 with the port 8000
+django-admin runserver <port>            # start the development webserver at 127.0.0.1 with the port <port> default 8000
 django-admin sendtestemail               # Sends a test email to the email addresses specified as arguments.
 django-admin shell                       # Runs a Python interactive interpreter. Tries to use IPython or bpython, if one of them is available. Any standard input is executed as code.
 django-admin showmigrations              # Shows all available migrations for the current project.
