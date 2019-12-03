@@ -102,7 +102,8 @@ SELECT TABLE_CATALOG as DatabaseName, TABLE_NAME AS  'TableName', COLUMN_NAME AS
 FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME LIKE '%' + @searchtext + '%' ORDER BY TableName, ColumnName
 
 --Search Procedure Definitions
-SELECT DB_NAME(st.database_id) AS DatabaseName, pr.name AS ProcedureName, pr.create_date as CreateDate, pr.modify_date AS LastModifiedDate,
+SELECT DB_NAME(st.database_id) AS DatabaseName, pr.name AS ProcedureName, 
+    pr.create_date as CreateDate, pr.modify_date AS LastModifiedDate,
     st.last_execution_time as LastExecutionDate, st.cached_time as CachedDate, st.execution_count as CountSinceCache,
     st.total_elapsed_time as ElapsedTimeSinceCache, object_definition(st.object_id) as Definition
 FROM sys.dm_exec_procedure_stats AS st RIGHT OUTER JOIN sys.procedures AS pr ON st.object_id = pr.object_id
