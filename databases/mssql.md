@@ -104,10 +104,12 @@ FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME LIKE '%' + @searchtext + '%' O
 --Search Procedure Definitions
 SELECT DB_NAME(st.database_id) AS DatabaseName, pr.name AS ProcedureName, 
     pr.create_date as CreateDate, pr.modify_date AS LastModifiedDate,
-    st.last_execution_time as LastExecutionDate, st.cached_time as CachedDate, st.execution_count as CountSinceCache,
-    st.total_elapsed_time as ElapsedTimeSinceCache, object_definition(st.object_id) as Definition
+    st.last_execution_time as LastExecutionDate, st.cached_time as CachedDate, 
+    st.execution_count as CountSinceCache, st.total_elapsed_time as ElapsedTimeSinceCache, 
+    object_definition(st.object_id) as Definition
 FROM sys.dm_exec_procedure_stats AS st RIGHT OUTER JOIN sys.procedures AS pr ON st.object_id = pr.object_id
-WHERE (st.database_id IS NOT NULL AND st.object_id IS NOT NULL AND object_definition(st.OBJECT_ID) LIKE '%' + @searchtext + '%')
+WHERE (st.database_id IS NOT NULL AND st.object_id IS NOT NULL 
+  AND object_definition(st.OBJECT_ID) LIKE '%' + @searchtext + '%')
 ORDER BY st.execution_count DESC
 
 --Get Stored Procedure Usage Stackup
