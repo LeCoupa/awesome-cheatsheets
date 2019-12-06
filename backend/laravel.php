@@ -192,7 +192,70 @@ php artisan view:clear           // Clear all compiled view files
  * https://laravel.com/docs/5.8/validation
  ********************************************************************************************/
 
-
+accepted                               // The field under validation must be yes, on, 1, or true.
+active_url                             // The field under validation must have a valid A or AAAA record according to the dns_get_record PHP function.
+after:date                             // The field under validation must be a value after a given date.
+after_or_equal:date                    // The field under validation must be a value after or equal to the given date.
+alpha                                  // The field under validation must be entirely alphabetic characters.
+alpha_dash                             // The field under validation may have alpha-numeric characters, as well as dashes and underscores.
+alpha_num                              // The field under validation must be entirely alpha-numeric characters.
+array                                  // The field under validation must be a PHP array.
+bail                                   // Stop running validation rules after the first validation failure.
+before:date                            // The field under validation must be a value preceding the given date.
+before_or_equal:date                   // The field under validation must be a value preceding or equal to the given date.
+between:min,max                        // The field under validation must have a size between the given min and max.
+boolean                                // The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, "1", and "0".
+confirmed                              // The field under validation must have a matching field of foo_confirmation.
+date                                   // The field under validation must be a valid, non-relative date according to the strtotime PHP function.
+date_equals:date                       // The field under validation must be equal to the given date.
+date_format:format                     // The field under validation must match the given format.
+different:field                        // The field under validation must have a different value than field.
+digits:value                           // The field under validation must be numeric and must have an exact length of value.
+digits_between:min,max                 // The field under validation must have a length between the given min and max.
+dimensions                             // The file under validation must be an image meeting the dimension constraints as specified by the rule's parameters.
+distinct                               // When working with arrays, the field under validation must not have any duplicate values.
+email                                  // The field under validation must be formatted as an e-mail address.
+ends_with:foo,bar,...                  // The field under validation must end with one of the given values.
+exists:table,column                    // The field under validation must exist on a given database table.
+file                                   // The field under validation must be a successfully uploaded file.
+filled                                 // The field under validation must not be empty when it is present.
+gt:field                               // The field under validation must be greater than the given field.
+gte:field                              // The field under validation must be greater than or equal to the given field.
+image                                  // The file under validation must be an image (jpeg, png, bmp, gif, svg, or webp)
+in:foo,bar,...                         // The field under validation must be included in the given list of values.
+in_array:anotherfield.*                // The field under validation must exist in anotherfield's values.
+integer                                // The field under validation must be an integer.
+ip                                     // The field under validation must be an IP address.
+ipv4                                   // The field under validation must be an IPv4 address.
+ipv6                                   // The field under validation must be an IPv6 address.
+json                                   // The field under validation must be a valid JSON string.
+lt:field                               // The field under validation must be less than the given field.
+lte:field                              // The field under validation must be less than or equal to the given field.
+max:value                              // The field under validation must be less than or equal to a maximum value.
+mimetypes:text/plain,...               // The file under validation must match one of the given MIME types:
+mimes:foo,bar,...                      // The file under validation must have a MIME type corresponding to one of the listed extensions.
+min:value                              // The field under validation must have a minimum value.
+not_in:foo,bar,...                     // The field under validation must not be included in the given list of values.
+not_regex:pattern                      // The field under validation must not match the given regular expression.
+nullable                               // The field under validation may be null.
+numeric                                // The field under validation must be numeric.
+present                                // The field under validation must be present in the input data but can be empty.
+regex:pattern                          // The field under validation must match the given regular expression.
+required                               // The field under validation must be present in the input data and not empty.
+required_if:anotherfield,value,...     // The field under validation must be present and not empty if the anotherfield field is equal to any value.
+required_unless:anotherfield,value,... // The field under validation must be present and not empty unless the anotherfield field is equal to any value.
+required_with:foo,bar,...              // The field under validation must be present and not empty only if any of the other specified fields are present.
+required_with_all:foo,bar,...          // The field under validation must be present and not empty only if all of the other specified fields are present.
+required_without:foo,bar,...           // The field under validation must be present and not empty only when any of the other specified fields are not present.
+required_without_all:foo,bar,...       // The field under validation must be present and not empty only when all of the other specified fields are not present.
+same:field                             // The given field must match the field under validation.
+size:value                             // The field under validation must have a size matching the given value.
+starts_with:foo,bar,...                // The field under validation must start with one of the given values.
+string                                 // The field under validation must be a string.
+timezone                               // The field under validation must be a valid timezone identifier according to the timezone_identifiers_list PHP function.
+unique:table,column,except,idColumn    // The field under validation must not exist within the given database table.
+url                                    // The field under validation must be a valid URL.
+uuid                                   // The field under validation must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID).
 
 /********************************************************************************************
  * 10. ERROR HANDLING
