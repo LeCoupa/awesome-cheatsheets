@@ -275,7 +275,6 @@ uuid                                   // The field under validation must be a v
  * https://laravel.com/docs/5.7/collections
  ********************************************************************************************/
 
-
 all
 average
 avg
@@ -384,12 +383,10 @@ whereNotInStrict
 wrap
 zip
 
-
 /********************************************************************************************
  * 13. HTTP TESTS
  * https://laravel.com/docs/5.7/http-tests
  ********************************************************************************************/
-
 
 $response->assertStatus($code);                            // Assert that the response has a given code.
 $response->assertForbidden();                              // Assert that the response has a forbidden status code.
