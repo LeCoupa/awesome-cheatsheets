@@ -26,6 +26,18 @@
 
 - `Vetur`: Vue tooling for VS Code.
 
+### PHP
+
+- `Better PHPUnit`: A better PHPUnit test runner.
+
+- `Laravel Artisan`: Laravel Artisan commands within Visual Studio Code.
+
+- `PHP CS Fixer`: PHP CS Fixer extension for VS Code, php formatter, php code beautify tool.
+
+- `PHP Doc Comment VSCode Plugin`: Add phpdoc @param and @return tag for selected function signatures.
+
+- `PHP IntelliSense`: Advanced Autocompletion and Refactoring support for PHP.
+
 ### Git
 
 - `Git History`: View git log, file history, compare branches or commits.
@@ -44,6 +56,8 @@
 
 - `EditorConfig for VS Code`: EditorConfig Support for Visual Studio Code.
 
+- `File Utils`: A convenient way of creating, duplicating, moving, renaming and deleting files and directories.
+
 - `Final-Newline`: Inserts a final newline when saving the document.
 
 - `Formatting Toggle`: A VS Code extension that allows you to toggle the formatter (Prettier, Beautify, …) ON and OFF with a simple click.
@@ -56,21 +70,21 @@
 
 - `Prettier - Code formatter`: VS Code plugin for prettier/prettier.
 
+- `Project Manager`: Easily switch between projects.
+
 - `REST Client`: REST Client for Visual Studio Code.
 
 - `SVG Viewer`: SVG Viewer for Visual Studio Code.
 
 - `Terminal`: Terminal for Visual Studio Code.
 
+- `Vue Peek`: Allows peek and goto definition for Vue single-file components.
+
 - `VS Live Share`: Real-time collaborative development from the comfort of your favorite tools.
 
 - `Wrap Console Log`: Wrap to console.log by word or selection.
 
-##############################################################################
-
-# USER SETTINGS
-
-##############################################################################
+## My Settings
 
 ```javascript
 {
