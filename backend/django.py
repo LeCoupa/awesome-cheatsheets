@@ -39,6 +39,25 @@
 
 
 # *****************************************************************************
+# Deployment
+# *****************************************************************************
+
+
+# add your media, database, venv, __pycache__ to the .gitignore (there is a compelete list that you can find here: https://github.com/jpadilla/django-project-template/blob/master/.gitignore)
+# keep migration files in the git (you will need to migrate them in target server)
+# don't run "makemigrations" in the target server (you will need to just run "migrate")
+# $ pip freeze > requirements.txt
+# make appropriate changes in your project settings.py file (change DEBUG to False and etc)
+# push your code to your git-server
+# pull your code in your target server
+# give right permissions to the web-server (e.g. $ chown www-data:www-data -R /var/www/myproject)
+# make a new venv in the target server and activate it
+# $ sudo pip install -r requirements.txt
+# sudo ./venv/bin/python3 manage.py migrate
+# restart your web-server (in case of apache: $ sudo service apache2 restart)
+
+
+# *****************************************************************************
 # DJANGO-ADMIN
 # *****************************************************************************
 
@@ -73,4 +92,23 @@ django-admin startapp <Appname>          # create a new django application with 
 django-admin startproject <ProjectName>  # create a new project directory structure
 django-admin testserver                  # Runs a development server with data from the given fixture(s).
 django-admin version                     # display the current django version
+
+
+# *****************************************************************************
+# Starting a django project in python3
+# *****************************************************************************
+
+
+# 1. $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; python3 get-pip.py
+# 2. $ pip install django						
+# 3. $ pip install virtualenv
+# 4. $ mkdir django-projects
+# 5. $ cd django-projects  
+# 6. $ virtualenv venv 								
+# 7. $ source venv/bin/activate								
+# 8. $ django-admin startproject myproject					
+# 9. $ python manage.py runserver
+
+
+
 
