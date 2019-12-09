@@ -12,6 +12,8 @@
 
 - `SCSS IntelliSense`: Advanced autocompletion and refactoring support for SCSS.
 
+- `XML Format`: Format XML documents.
+
 ### JavaScript, Node & NPM
 
 - `Import Cost`: This extension will display inline in the editor the size of the imported package.
@@ -51,6 +53,8 @@
 - `Palenight Theme`: An elegant and juicy material-like theme for Visual Studio Code.
 
 ### Handy
+
+- `Better comments`: Improve your code commenting by annotating with alert, informational, TODOs, and more!
 
 - `Debugger for Chrome`: Debug your JavaScript code in the Chrome browser.
 
