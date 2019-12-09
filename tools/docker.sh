@@ -22,6 +22,8 @@ docker push username/repository:tag         # Upload tagged image to registry
 docker run username/repository:tag          # Run image from a registry
 docker system prune                         # Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes. (Docker 17.06.1-ce and superior)
 docker system prune -a                      # Remove all unused containers, networks, images not just dangling ones (Docker 17.06.1-ce and superior)
+docker volume prune                         # Remove all unused local volumes
+docker network prune                        # Remove all unused networks
 
 
 ##############################################################################
@@ -39,7 +41,7 @@ docker-compose build                            # Build all image service
 docker-compose config                           # Validate and view the Compose file
 docker-compose scale <service_name>=<replica>   # Scale special service(s)
 docker-compose top                              # Display the running processes
-
+docker-compose run -rm -p 2022:22 web bash      # Start web service and runs bash as its command, remove old container.
 
 ##############################################################################
 # DOCKER SERVICES 

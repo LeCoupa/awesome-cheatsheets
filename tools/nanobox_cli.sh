@@ -99,7 +99,7 @@ nanobox version
 
 # Add a convenient way to access your app from the browser
 nanobox dns add local vue.dev
-nanobox dns add local django.dev
+nanobox dns add local laravel.dev
 
 # Run your app as you would normally, with Nanobox
 nanobox run npm run dev --host 0.0.0.0
@@ -116,7 +116,7 @@ nanobox info local
 
 
 # Add a DNS Alias to a dry-run app
-nanobox dns add dry-run django.preview
+nanobox dns add dry-run laravel.preview
 
 # Preview your app locally
 nanobox deploy dry-run

@@ -65,8 +65,9 @@ select * from sys.tables order by modify_date desc
 
 ### Toggle Identity Insert
 ```sql
-SET IDENTITY_INSERT TableName OFF
 SET IDENTITY_INSERT TableName ON
+-- insert ...
+SET IDENTITY_INSERT TableName OFF
 ```
 
 ### Replace a char code with anything you want
@@ -77,9 +78,62 @@ REPLACE(value,CHAR(0233),'e')
 ### Mass replace characters
 ```sql
 update t
-set mp.field = replace(mp.feild, b.Letter, b.ReplaceWithLetter)
+set t.field = replace(t.field, b.Letter, b.ReplaceWithLetter)
 from table t inner join ACIIRef b on (t.field like '%' +  b.Letter + '%')
 ```
+# Data Formatting
+### Return Full Month Name of a Date (ex: October)
+```sql
+SELECT DATENAME(MONTH, [Yourdatetimefield]) FROM TABLE
+```
 
-### See a character in a column
-select AscII (right(sku,1) ) as lastchar 
+### Military Time
+```sql
+select convert(varchar(20),cast('Feb 18 2017 10:03AM' as datetime),20) -- result 01-18-2017 10:03:00
+```
+
+# Advanced #
+### Search for fields in the current database
+```sql
+DECLARE @searchtext varchar(60); SET @searchtext = 'fieldname';
+
+--Search Tables and Columns
+SELECT TABLE_CATALOG as DatabaseName, TABLE_NAME AS  'TableName', COLUMN_NAME AS 'ColumnName'
+FROM INFORMATION_SCHEMA.COLUMNS WHERE COLUMN_NAME LIKE '%' + @searchtext + '%' ORDER BY TableName, ColumnName
+
+--Search Procedure Definitions
+SELECT DB_NAME(st.database_id) AS DatabaseName, pr.name AS ProcedureName, 
+    pr.create_date as CreateDate, pr.modify_date AS LastModifiedDate,
+    st.last_execution_time as LastExecutionDate, st.cached_time as CachedDate, 
+    st.execution_count as CountSinceCache, st.total_elapsed_time as ElapsedTimeSinceCache, 
+    object_definition(st.object_id) as Definition
+FROM sys.dm_exec_procedure_stats AS st RIGHT OUTER JOIN sys.procedures AS pr ON st.object_id = pr.object_id
+WHERE (st.database_id IS NOT NULL AND st.object_id IS NOT NULL 
+  AND object_definition(st.OBJECT_ID) LIKE '%' + @searchtext + '%')
+ORDER BY st.execution_count DESC
+
+--Get Stored Procedure Usage Stackup
+SELECT DB_NAME(database_id) AS DatabaseName, OBJECT_NAME(object_id) AS StoredProcedure, cached_time as CachedTime, 
+last_execution_time as LastExecutionTime, execution_count as ExecutionCount
+FROM sys.dm_exec_procedure_stats WHERE DB_NAME(database_id) IS NOT NULL AND OBJECT_NAME(object_id) IS NOT NULL
+ORDER BY execution_count DESC --ORDER BY last_execution_time DESC
+```
+### Take row data into column data that is separated by a comma ###
+```sql
+-- You need the substring because you need to cast back to a string from the xml path
+select SUBSTRING( (select distinct top 5  COALESCE(loc.LocationId + ', ','')
+FROM Locations loc where loc.ProductId= '1' FOR XML PATH('')),1,10000000)
+```
+
+### Row_Number(): Useful for updating records when you do not have a common key ###
+```sql
+select ROW_NUMBER () OVER ( order by order.orderid ) AS ROW#, c.clubid
+from order o right outer join Club c on c.orderid = o.orderid
+where getdate() between c.StartDate and c.EndDate
+and c.id is null
+```
+
+# Operators #
+### BETWEEN ###
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates. The BETWEEN operator is inclusive: begin and end values are included.
+

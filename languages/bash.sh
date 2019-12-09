@@ -1,8 +1,7 @@
 #!/bin/bash
 ##############################################################################
-# SHORTCUTS
+# SHORTCUTS and HISTORY
 ##############################################################################
-
 
 CTRL+A  # move to beginning of line
 CTRL+B  # moves backward one character
@@ -11,6 +10,7 @@ CTRL+D  # deletes one character backward or logs out of current session, similar
 CTRL+E  # moves to end of line
 CTRL+F  # moves forward one character
 CTRL+G  # aborts the current editing command and ring the terminal bell
+CTRL+H  # deletes one character under cursor (same as DELETE)
 CTRL+J  # same as RETURN
 CTRL+K  # deletes (kill) forward to end of line
 CTRL+L  # clears screen and redisplay the line
@@ -31,10 +31,17 @@ CTRL+Z  # stops the current command, resume with fg in the foreground or bg in t
 ALT+B   # moves backward one word
 ALT+D   # deletes next word
 ALT+F   # moves forward one word
+ALT+H   # deletes one character backward
 
-DELETE  # deletes one character backward
-!!      # repeats the last command
-exit    # logs out of current session
+BACKSPACE  # deletes one character backward
+DELETE     # deletes one character under cursor
+
+history   # shows command line history
+!!        # repeats the last command
+!<n>      # refers to command line 'n'
+!<string> # refers to command starting with 'string'
+
+exit      # logs out of current session
 
 
 ##############################################################################
@@ -47,7 +54,7 @@ echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
 
 bash                # if you want to use bash (type exit to go back to your previously opened shell)
-whereis bash        # finds out where bash is on your system
+whereis bash        # locates the binary, source and manual-page for a command
 which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
 
 clear               # clears content on window (hide displayed lines)
@@ -219,12 +226,12 @@ statement1 || statement2  # or operator
 
 # STRINGS
 
-str1 = str2               # str1 matches str2
-str1 != str2              # str1 does not match str2
-str1 < str2               # str1 is less than str2 (alphabetically)
-str1 > str2               # str1 is greater than str2 (alphabetically)
--n str1                   # str1 is not null (has length greater than 0)
--z str1                   # str1 is null (has length 0)
+str1 == str2               # str1 matches str2
+str1 != str2               # str1 does not match str2
+str1 < str2                # str1 is less than str2 (alphabetically)
+str1 > str2                # str1 is greater than str2 (alphabetically)
+-n str1                    # str1 is not null (has length greater than 0)
+-z str1                    # str1 is null (has length 0)
 
 # FILES
 
@@ -357,8 +364,10 @@ fg %N        # brings job number N
 fg %string   # brings job whose command begins with string
 fg %?string  # brings job whose command contains string
 
-kill -l      # returns a list of all signals on the system, by name and number
-kill PID     # terminates process with specified PID
+kill -l               # returns a list of all signals on the system, by name and number
+kill PID              # terminates process with specified PID
+kill -s SIGKILL 4500  # sends a signal to force or terminate the process
+kill -15 913          # Ending PID 913 process with signal 15 (TERM)
 
 ps           # prints a line of information about the current running login shell and any processes running under it
 ps -a        # selects all processes with a tty except session leaders
@@ -411,7 +420,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status
 
 function dbgtrap {
   echo "badvar is $badvar"

@@ -113,13 +113,13 @@ app.service('my-service').hooks({
   before: {
     all: [
       // Use normal functions
-      function(context) { console.log('before all hook ran'); }
+      async function(context) { console.log('before all hook ran'); }
     ],
 
     find: [
       // Use ES6 arrow functions
       context => console.log('before find hook 1 ran'),
-      context => console.log('before find hook 2 ran')
+      async context => console.log('before find hook 2 ran')
     ],
 
     async create (context) {
@@ -177,7 +177,8 @@ service.publish([event,] fn)  // registers a publishing function for a specific 
 app.publish([event,] fn)      // registers an event publishing callback
 
 app.on('connection', connection => {})  // fired every time a new real-time connection is established
-app.on('login', (payload, info) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
+app.on('disconnection', connection => {})
+app.on('login', (authenticationResult, params, context) => {})  // sent by the authentication module and also contains the connection in the info object that is passed as the second parameter
 
 
 /* *******************************************************************************************
@@ -232,13 +233,6 @@ app.configure(socketio());                            // sets up the Socket.io t
 app.configure(socketio(callback))                     // sets up the Socket.io transport with the default configuration and call callback with the Socket.io server object
 app.configure(socketio(options [, callback]))         // sets up the Socket.io transport with the given Socket.io options object and optionally calls the callback
 app.configure(socketio(port, [options], [callback]))  // creates a new Socket.io server on a separate port. Options and a callback are optional
-
-// The options can also be used to initialize uWebSocket which is a WebSocket server
-// implementation that provides better performace and reduced latency.
-// npm install uws --save
-app.configure(socketio({
-  wsEngine: 'uws'
-}));
 
 // --> PRIMUS <--
 // https://docs.feathersjs.com/api/client/primus.html
@@ -306,55 +300,65 @@ npm install @feathersjs/authentication --save
 # Wraps the passport-local authentication strategy (username and password)
 npm install @feathersjs/authentication-local --save
 
-# Wraps the passport-jwt authentication strategy (JSON Web Token access token)
-npm install @feathersjs/authentication-jwt --save
-
-# Allows you to use any Passport OAuth1 authentication strategy (most notably Twitter)
-npm install @feathersjs/authentication-oauth1 --save
-
-# Allows you to use any Passport OAuth2 authentication strategy (FB, Instagram, Github, Google...)
-npm install @feathersjs/authentication-oauth2 --save
+# Allows to use 180+ oAuth providers (Facebook, Google, Twitter etc.)
+npm install @feathersjs/authentication-oauth --save
 ```
 
 // --> SERVER <--
 // https://docs.feathersjs.com/api/authentication/server.html
 
 const options = {
-  path: '/authentication',    // the authentication service path
-  header: 'Authorization',    // the header to use when using JWT auth
-  entity: 'user',             // the entity that will be added to the request, socket, and context.params. (ie. req.user, socket.user, context.params.user)
-  service: 'users',           // the service to look up the entity
-  passReqToCallback: true,    // whether the request object should be passed to the strategies `verify` function
-  session: false,             // whether to use sessions
-  cookie: {
-    enabled: false,           // whether cookie creation is enabled
-    name: 'feathers-jwt',     // the cookie name
-    httpOnly: false,          // when enabled, prevents the client from reading the cookie.
-    secure: true              // whether cookies should only be available over HTTPS
-  },
-  jwt: {
-    header: { typ: 'access' },          // by default is an access token but can be any type
-    audience: 'https://yourdomain.com', // The resource server where the token is processed
-    subject: 'anonymous',               // Typically the entity id associated with the JWT
-    issuer: 'feathers',                 // The issuing server, application or resource
-    algorithm: 'HS256',                 // the algorithm to use
-    expiresIn: '1d'                     // the access token expiry
+  "authentication": {
+    "secret": "CHANGE_ME", // The token signing secret
+    "entity": "user", // the entity that will be added to the request, socket, and context.params. (ie. req.user, socket.user, context.params.user)
+    "service": "users", // the service to look up the entity
+    "authStrategies": [ "jwt", "local" ], // The authentication strategies to allow to create a token
+    "jwtOptions": {
+      "header": { "typ": "access" }, // by default is an access token but can be any type
+      "audience": "https://yourdomain.com", // The resource server where the token is processed
+      "issuer": "feathers", // The issuing server, application or resource
+      "algorithm": "HS256", // the algorithm to use
+      "expiresIn": "1d" // the access token expiry
+    }
   }
 }
 
-app.configure(auth(options))  // configure the authentication plugin with the given options
+const { AuthenticationService, JWTStrategy } = require('@feathersjs/authentication');
 
-service = app.service('authentication')  // service for creating JWT (implements only the create and remove methods)
+let authService = new AuthenticationService(app);
 
-service.create(data)       // creates a JWT based on the jwt options configured on the plugin
-service.remove(data)       // removes the JWT token (mostly exists for the logout process)
-service.hooks({ before })  // registers hooks for this service
-service.hooks({ after })   // registers hooks for this service
+service.register('jwt', new JWTStrategy());
 
-app.passport.createJWT(payload, options)  // used by the authentication service to generate JSON Web Tokens
-app.passport.verifyJWT(token, options)    // verifies the signature and payload of the passed in JWT token using the options
+app.use('/authentication', authService);
+app.configure(expressOauth());
 
-auth.hooks.authenticate(strategies)  // registers an array of authentication strategies on a service method
+app.get('defaultAuthentication') // The name of the default authentication service
+
+authService = app.service('authentication')  // service for creating JWT (implements only the create and remove methods)
+
+authService.hooks({ before })  // registers hooks for this service
+authService.hooks({ after })   // registers hooks for this service
+
+new AuthenticationService(app) // Create a new authentication service
+
+class MyAuthenticationService extends AuthenticationService {} // Customize the authentication service
+
+authService.authenticate(data, params, ...strategies) // Authenticate with strategies
+authService.create(data, params) // Authenticate with data and params
+authService.create({ // Authenticate and create a JWT using the local strategy email/password
+  strategy: 'local',
+  email: 'hello@feathersjs.com',
+  password: 'supersecret'
+});
+authService.remove(id, params) // removes the JWT token (mostly exists for the logout process)
+authService.configuration // The current configuration
+authService.register(name, strategy) // Register a new authentication strategy
+authService.createAccessToken(payload) // Create a new access token with payload
+authService.verifyAccessToken(accessToken) // Verify an existing access token
+authService.getTokenOptions(authResult, params) // Get the options for a token
+authService.getPayload(authResult, params) // Return the payload for an authentication result
+authService.parse(req, res, ...strategies) // Parse an HTTP request and response with using a list of strategies
+
 
 app.on('login', callback))   // emits an event whenever a client successfully authenticates
 app.on('logout', callback))  // emits an event whenever a client successfully logout
@@ -363,198 +367,77 @@ app.on('logout', callback))  // emits an event whenever a client successfully lo
 // https://docs.feathersjs.com/api/authentication/client.html
 
 const options = {
-  path: '/authentication',    // the server-side authentication service path
-  header: 'Authorization',    // the default authorization header for REST
-  jwtStrategy: 'jwt',         // the name of the JWT authentication strategy 
-  entity: 'user',             // the entity you are authenticating (ie. a users)
-  service: 'users',           // the service to look up the entity
-  cookie: 'feathers-jwt',     // the name of the cookie to parse the JWT from when cookies are enabled server side
-  storageKey: 'feathers-jwt', // the key to store the accessToken in localstorage or AsyncStorage on React Native
-  storage: undefined          // Passing a WebStorage-compatible object to enable automatic storage on the client.
+  storage: window.localStorage, // The storage to store the access token
+  path: '/authentication', // The path of the authentication service
+  locationKey: 'access_token', // The name of the window hash parameter to parse for an access token from the window.location. Usually used by the oAuth flow.
+  locationErrorKey: 'error', // The name of the window hash parameter to parse for authentication errors. Usually used by the oAuth flow.
+  jwtStrategy: 'jwt', // The access token authentication strategy
+  storageKey: 'feathers-jwt', // Key for storing the token in e.g. localStorage
+  header: 'Authorization', // Name of the accessToken header
+  scheme: 'Bearer', // The HTTP header scheme
+  Authentication: AuthenticationClient // Allows to provide a customized authentication client class
 }
 
 app.configure(auth(options))  // configure the authentication plugin with the given options
 
-app.authenticate()         // authenticates using the JWT from the storage
+app.reAuthenticate()        // authenticates using the JWT from the storage
 app.authenticate(options)  // authenticate with a Feathers server by passing a strategy and other properties as credentials
 app.logout()               // removes the JWT accessToken from storage on the client
 
-app.passport.getJWT()               // pulls the JWT from storage or the cookie
-app.passport.verifyJWT(token)       // verifies that a JWT is not expired and decode it to get the payload
-app.passport.payloadIsValid(token)  // synchronously verify that a token has not expired
+const authenticationInfo = await app.get('authentication'); // The authenticatoin information (like the user)
 
-app.on('authenticated', callback))              // emits an event whenever the client successfully authenticates
-app.on('logout', callback))                     // emits an event whenever the client successfully authenticates
-app.on('reauthentication-error', errorHandler)  // will automatically handle attempting to re-authenticate the socket when the client regains connectivity with the server
+app.on('login', callback)  // emits an event whenever the client successfully authenticates
+app.on('logout', callback) // emits an event whenever the client successfully authenticates
 
 // --> LOCAL (EMAIL & PASSWORD) <--
 // https://docs.feathersjs.com/api/authentication/local.html
 
-const feathers = require('@feathersjs/feathers');
-const authentication = require('@feathersjs/authentication');
-const local = require('@feathersjs/authentication-local');
-const app = feathers();
+const { LocalStrategy } = require('@feathersjs/authentication-local');
 
 const options = {
-  name: 'local',              // the name to use when invoking the authentication Strategy
-  entity: 'user',             // the entity that you're comparing username/password against
-  service: 'users',           // the service to look up the entity
-  usernameField: 'email',     // key name of username field
-  passwordField: 'password',  // key name of password field
-  passReqToCallback: true,    // whether the request object should be passed to `verify`
-  session: false,             // whether to use sessions
-  Verifier: Verifier          // A Verifier class. Defaults to the built-in one but can be a custom one
+  usernameField: 'email', // Name of the username field in the (e.g. 'email')
+  passwordField: 'password', // Name of the password field (e.g. 'password')
+  hashSize: 10, // The BCrypt hash size
+  errorMessage: 'Invalid login', // The error message to return on errors
+  entityUsernameField: usernameField, // Name of the username field on the entity if authentication request data and entity field names are different
+  entityPasswordField: passwordField // Name of the password field on the entity if authentication request data and entity field names are different
 }
 
-app.configure(authentication(options));
-app.configure(local());
-
-// Setup a hook to only allow valid JWTs or successful 
-// local auth to authenticate and get new JWT access tokens
-app.service('authentication').hooks({
-  before: {
-    create: [
-      authentication.hooks.authenticate(['local', 'jwt'])
-    ]
-  }
-});
+authService.register('local', new LocalStrategy());
 
 local.hooks.hashPassword()       // hashes plain text passwords before they are saved to the database
 local.hooks.protect('password')  // makes sure that protected fields don't get sent to a client
 
-// --> JWT <--
-// https://docs.feathersjs.com/api/authentication/jwt.html
+// --> OAUTH <--
+// https://docs.feathersjs.com/api/authentication/oauth.html
+const { expressOauth, OAuthStrategy } = require('@feathersjs/authentication-oauth');
 
-const feathers = require('@feathersjs/feathers');
-const authentication = require('@feathersjs/authentication');
-const jwt = require('@feathersjs/authentication-jwt');
-const app = feathers();
+class GitHubStrategy extends OAuthStrategy {
+  async getEntityData(profile) {
+    const baseData = await super.getEntityData(profile);
 
-const options = {
-  name: 'jwt',                                      // the name to use when invoking the authentication Strategy
-  entity: 'user',                                   // the entity that you pull from if an 'id' is present in the payload
-  service: 'users',                                 // the service to look up the entity
-  passReqToCallback: true,                          // whether the request object should be passed to `verify`
-  jwtFromRequest: [                                 // a passport-jwt option determining where to parse the JWT
-    ExtractJwt.fromHeader,                          // From "Authorization" header
-    ExtractJwt.fromAuthHeaderWithScheme('Bearer'),  // Allowing "Bearer" prefix
-    ExtractJwt.fromBodyField('body')                // from request body
-  ],
-  secretOrKey: auth.secret,                         // Your main secret provided to passport-jwt
-  session: false,                                   // whether to use sessions,
-  Verifier: Verifier                                // A Verifier class. Defaults to the built-in one but can be a custom one. See below for details.
+    return {
+      ...baseData,
+      email: profile.email
+    };
+  }
 }
 
-app.configure(authentication(options));
-app.configure(jwt());
-
-// Setup a hook to only allow valid JWTs to authenticate
-// and get new JWT access tokens
-app.service('authentication').hooks({
-  before: {
-    create: [
-      authentication.hooks.authenticate(['jwt'])
-    ]
-  }
-});
-
-// --> OAUTH1 <--
-// https://docs.feathersjs.com/api/authentication/oauth1.html
-
-const feathers = require('@feathersjs/feathers');
-const authentication = require('@feathersjs/authentication');
-const jwt = require('@feathersjs/authentication-jwt');
-const oauth1 = require('@feathersjs/authentication-oauth1');
-
-const session = require('express-session');
-const TwitterStrategy = require('passport-twitter').Strategy;
-const app = feathers();
-
-// Setup in memory session
-app.use(session({
-  secret: 'super secret',
-  resave: true,
-  saveUninitialized: true
-}));
+authService.register('github', new MyGitHubStrategy());
 
 const options = {
-  idField: '<provider>Id',  // The field to look up the entity by when logging in with the provider. Defaults to '<provider>Id' (ie. 'twitterId').
-  path: '/auth/<provider>', // The route to register the middleware
-  callbackURL: 'http(s)://hostame[:port]/auth/<provider>/callback', // The callback url. Will automatically take into account your host and port and whether you are in production based on your app environment to construct the url. (ie. in development http://localhost:3030/auth/twitter/callback)
-  entity: 'user',           // the entity that you are looking up
-  service: 'users',         // the service to look up the entity
-  passReqToCallback: true,  // whether the request object should be passed to `verify`
-  session: true,            // whether to use sessions,
-  handler: fn,              // Express middleware for handling the oauth callback. Defaults to the built in middleware.
-  formatter: fn,            // The response formatter. Defaults the the built in feathers-rest formatter, which returns JSON.
-  Verifier: Verifier        // A Verifier class. Defaults to the built-in one but can be a custom one. See below for details.
+  authentication: {
+    oauth: {
+      redirect: '/', // The redirect after a successful login
+      github: { // The per-strategy configuration
+        key: '<Client ID>',
+        secret: '<Client secret>'
+      }
+    }
+  }
 }
 
-// Setup authentication
-app.configure(authentication(options));
-app.configure(jwt());
-app.configure(oauth1({
-  name: 'twitter',
-  Strategy: TwitterStrategy,
-  consumerKey: '<your consumer key>',
-  consumerSecret: '<your consumer secret>'
-}));
-
-// Setup a hook to only allow valid JWTs to authenticate
-// and get new JWT access tokens
-app.service('authentication').hooks({
-  before: {
-    create: [
-      authentication.hooks.authenticate(['jwt'])
-    ]
-  }
-});
-
-// --> OAUTH 2 <--
-// https://docs.feathersjs.com/api/authentication/oauth2.html
-
-const feathers = require('@feathersjs/feathers');
-const authentication = require('@feathersjs/authentication');
-const jwt = require('@feathersjs/authentication-jwt');
-const oauth2 = require('@feathersjs/authentication-oauth2');
-const FacebookStrategy = require('passport-facebook').Strategy;
-const app = feathers();
-
-const options = {
-  idField: '<provider>Id',   // The field to look up the entity by when logging in with the provider. Defaults to '<provider>Id' (ie. 'facebookId').
-  path: '/auth/<provider>',  // The route to register the middleware
-  callbackURL: 'http(s)://hostname[:port]/auth/<provider>/callback', // The callback url. Will automatically take into account your host and port and whether you are in production based on your app environment to construct the url. (ie. in development http://localhost:3030/auth/facebook/callback)
-  successRedirect: undefined,
-  failureRedirect: undefined,
-  entity: 'user',            // the entity that you are looking up
-  service: 'users',          // the service to look up the entity
-  passReqToCallback: true,   // whether the request object should be passed to `verify`
-  session: false,            // whether to use sessions,
-  handler: fn,               // Express middleware for handling the oauth callback. Defaults to the built in middleware.
-  formatter: fn,             // The response formatter. Defaults the the built in feathers-rest formatter, which returns JSON.
-  Verifier: Verifier         // A Verifier class. Defaults to the built-in one but can be a custom one. See below for details.
-}
-
-// Setup authentication
-app.configure(authentication({ secret: 'super secret' }));
-app.configure(jwt());
-app.configure(oauth2({
-  name: 'facebook',
-  Strategy: FacebookStrategy,
-  clientID: '<your client id>',
-  clientSecret: '<your client secret>',
-  scope: ['public_profile', 'email']
-}));
-
-// Setup a hook to only allow valid JWTs to authenticate
-// and get new JWT access tokens
-app.service('authentication').hooks({
-  before: {
-    create: [
-      authentication.hooks.authenticate(['jwt'])
-    ]
-  }
-});
+app.configure(expressOauth(options));
 
 
 /* *******************************************************************************************
@@ -602,7 +485,9 @@ app.use('/messages', service({
   paginate: {            // (optional) a pagination object containing a default and max page size
     default: undefined,  // sets the default number of items when $limit is not set
     max: undefined       // sets the maximum allowed number of items per page (even if the $limit query parameter is set higher)
-  }
+  },
+  whitelist: [],          // A list of additional non-standard query parameters to allow (e.g [ '$regex', '$populate' ])
+  multi: true             // Allow create with arrays and update and remove with id null to change multiple items
 }));
 
 adapter.find()                    // returns a list of all records matching the query in params.query using the common querying mechanism
@@ -611,6 +496,14 @@ adapter.create(data, params)      // creates a new record with data. data can al
 adapter.update(id, data, params)  // completely replaces a single record identified by id with data. Does not allow replacing multiple records (id can't be null). id can not be changed.
 adapter.patch(id, data, params)   // merges a record identified by id with data. id can be null to allow replacing multiple records (all records that match params.query the same as in .find). id can not be changed
 adapter.remove(id, params)        // removes a record identified by id. id can be null to allow removing multiple records (all records that match params.query the same as in .find)
+
+// Hook-less
+adapter._find()
+adapter._get(id, params)
+adapter._create(data, params)
+adapter._update(id, data, params)
+adapter._patch(id, data, params)
+adapter._remove(id, params)
 
 // --> QUERYING <--
 // https://docs.feathersjs.com/api/databases/querying.html
@@ -673,14 +566,13 @@ app.service('messages').find({
 // │   │   └── ...
 // │   ├── services/        # contains our services
 // │   │   └── ...
-// │   ├── tests/           # contains Mocha test files for the app, hooks and services
-// │   │   └── ...
 // │   │
 // │   ├── index.js         # is used to load and start the application
 // │   ├── app.js           # configures our Feathers application
 // │   ├── app.hooks.js     # contains hooks which that run for all services
 // │   └── channels.js      # set up Feathers event channels
-// │
+// ├── tests/               # contains Mocha test files for the app, hooks and services
+// │   └── ...
 // ├── .editorconfig        # helps developers define and maintain consistent coding styles
 // ├── .eslintrc.json       # eslint configuration
 // └── package.json         # express server for production
