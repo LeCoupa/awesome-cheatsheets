@@ -108,7 +108,3 @@ django-admin version                     # display the current django version
 # 7. $ source venv/bin/activate								
 # 8. $ django-admin startproject myproject					
 # 9. $ python manage.py runserver
-
-
-
-
