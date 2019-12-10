@@ -1,11 +1,14 @@
 git init            # initiates git in the current directory
 git clone <address> # creates a git repo from given address (get the address from your git-server)
 
-git add file.txt   # adds(stages) file.txt to the git
-git add *          # adds(stages) all new modifications, deletions, creations to the git
-git reset file.txt # Removes file.txt from the stage
-git rm file.txt    # removes file.txt both from git and file system
-git status         # shows the modifications and stuff that are not staged yet
+git add file.txt   		# adds(stages) file.txt to the git
+git add *          		# adds(stages) all new modifications, deletions, creations to the git
+git reset file.txt 		# Removes file.txt from the stage
+git rm file.txt    		# removes file.txt both from git and file system
+git rm -r my-dir		# removes my-dir directory both from git and file system
+git rm --cached file.txt	# removes file.txt from git but not from file system
+git rm --cached -r my-dir	# removes my-dir directory from git but not from file system
+git status        		# shows the modifications and stuff that are not staged yet
 
 git branch              # shows all the branches (current branch is shown with a star)
 git branch my-branch    # creates my-branch
@@ -29,7 +32,7 @@ git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to
 git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
 git fetch --tags                  # pulls the tags from remote
 
-git pull my-remote my-branch# pulls and tries to merge my-branch from my-remote to the current branch
+git pull my-remote my-branch      # pulls and tries to merge my-branch from my-remote to the current branch
 
 git stash                            # stashes the staged and unstaged changes (git status will be clean after it)
 git stash -u                         # stash everything including new untracked files (but not .gitignore)
