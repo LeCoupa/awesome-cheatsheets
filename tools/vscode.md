@@ -4,7 +4,7 @@
 
 ### HTML & CSS
 
-- `CSScomb`: Codeing style formatter for CSS, Less, SCSS and Saas.
+- `CSScomb`: Coding style formatter for CSS, Less, SCSS and Saas.
 
 - `Puglint`: Linter and style checker for pug.
 
