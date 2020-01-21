@@ -24,7 +24,7 @@ foreach($arr as $key => $value) {
 }
 
 // For
-for($i = 0; $i < count($arr) - 1; $i++) {
+for($i = 0; $i < count($arr); $i++) {
     $key = $i;
     $value = $arr[$i];
 }
