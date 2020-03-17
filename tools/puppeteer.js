@@ -96,19 +96,19 @@ browser.wsEndpoint()                        // Returns the browser websocket url
 
 const context = await browser.createIncognitoBrowserContext();
 
-browserContext.on('targetchanged')   // 
-browserContext.on('targetcreated')   // 
-browserContext.on('targetdestroyed') // 
+browserContext.on('targetchanged')   // Emitted when the url of a target inside the browser context changes.
+browserContext.on('targetcreated')   // Emitted when a new target is created inside the browser context.
+browserContext.on('targetdestroyed') // Emitted when a target inside the browser context is destroyed, for example when a page is closed.
 
-browserContext.browser()                                // 
-browserContext.clearPermissionOverrides()               // 
-browserContext.close()                                  // 
-browserContext.isIncognito()                            // 
-browserContext.newPage()                                // 
-browserContext.overridePermissions(origin, permissions) // 
-browserContext.pages()                                  // 
-browserContext.targets()                                // 
-browserContext.waitForTarget(predicate[, options])      // 
+browserContext.browser()                                // The browser this browser context belongs to.
+browserContext.clearPermissionOverrides()               // Clears all permission overrides for the browser context.
+browserContext.close()                                  // Closes the browser context. All the targets that belong to the browser context will be closed.
+browserContext.isIncognito()                            // Returns whether BrowserContext is incognito.
+browserContext.newPage()                                // Creates a new page in the browser context.
+browserContext.overridePermissions(origin, permissions) // Overrides permissions to grant.
+browserContext.pages()                                  // An array of all pages inside the browser context.
+browserContext.targets()                                // An array of all active targets inside the browser context.
+browserContext.waitForTarget(predicate[, options])      // Promise which resolves to the first target found that matches the predicate function.
 
 // PAGE
 // Page provides methods to interact with a single tab or extension background page in Chromium.
