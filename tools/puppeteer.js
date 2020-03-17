@@ -74,21 +74,21 @@ browser.on('targetchanged')   // Emitted when the url of a target changes.
 browser.on('targetcreated')   // Emitted when a target is created, for example when a new page is opened by window.open or browser.newPage.
 browser.on('targetdestroyed') // Emitted when a target is destroyed, for example when a page is closed.
 
-browser.browserContexts()                   // 
-browser.close()                             // 
-browser.createIncognitoBrowserContext()     // 
-browser.defaultBrowserContext()             // 
-browser.disconnect()                        // 
-browser.isConnected()                       // 
-browser.newPage()                           // 
-browser.pages()                             // 
-browser.process()                           // 
-browser.target()                            // 
-browser.targets()                           // 
-browser.userAgent()                         // 
-browser.version()                           // 
-browser.waitForTarget(predicate[, options]) // 
-browser.wsEndpoint()                        // 
+browser.browserContexts()                   // Returns an array of all open browser contexts.
+browser.close()                             // Closes Chromium and all of its pages (if any were opened).
+browser.createIncognitoBrowserContext()     // Creates a new incognito browser context.
+browser.defaultBrowserContext()             // Returns the default browser context.
+browser.disconnect()                        // Disconnects Puppeteer from the browser, but leaves the Chromium process running.
+browser.isConnected()                       // Indicates that the browser is connected.
+browser.newPage()                           // Promise which resolves to a new Page object.
+browser.pages()                             // An array of all pages inside the Browser.
+browser.process()                           // Returns Spawned browser process.
+browser.target()                            // A target associated with the browser.
+browser.targets()                           // An array of all active targets inside the Browser.
+browser.userAgent()                         // Promise which resolves to the browser's original user agent.
+browser.version()                           // Returns the browser version (e.g. Chrome/61.0.3153.0)
+browser.waitForTarget(predicate[, options]) // Promise which resolves to the first target found that matches the predicate function.
+browser.wsEndpoint()                        // Returns the browser websocket url.
 
 // BROWSER CONTEXT
 // BrowserContexts provide a way to operate multiple independent browser sessions
