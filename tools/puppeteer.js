@@ -40,15 +40,15 @@ PUPPETEER_PRODUCT                // Specify which browser you'd like Puppeteer t
 
 const puppeteer = require('puppeteer');
 
-puppeteer.devices;
-puppeteer.errors;
-puppeteer.product;
+puppeteer.devices; // Returns a list of devices to be used with page.emulate(options)
+puppeteer.errors;  // Returns the specific error classes
+puppeteer.product; // Returns the name of the browser that is under automation ("chrome" or "firefox")
 
-puppeteer.connect(options);
-puppeteer.createBrowserFetcher([options]);
-puppeteer.defaultArgs([options]);
-puppeteer.executablePath();
-puppeteer.launch([options]);
+puppeteer.connect(options);                // Attaches Puppeteer to an existing Chromium instance.
+puppeteer.createBrowserFetcher([options]); // Create a brower fetcher instance
+puppeteer.defaultArgs([options]);          // The default flags that Chromium will be launched with.
+puppeteer.executablePath();                // Returns a path where Puppeteer expects to find bundled Chromium.
+puppeteer.launch([options]);               // Launch a browser instance
 
 // BROWSER FETCHER
 // BrowserFetcher can download and manage different versions of Chromium.
@@ -56,12 +56,12 @@ puppeteer.launch([options]);
 
 const browserFetcher = puppeteer.createBrowserFetcher();
 
-browserFetcher.canDownload(revision)
-browserFetcher.download(revision[, progressCallback])
-browserFetcher.localRevisions()
-browserFetcher.platform()
-browserFetcher.remove(revision)
-browserFetcher.revisionInfo(revision)
+browserFetcher.canDownload(revision)                  // Initiates a HEAD request to check if the revision is available.
+browserFetcher.download(revision[, progressCallback]) // Initiates a GET request to download the revision from the host.
+browserFetcher.localRevisions()                       // Returns a list of all revisions available locally on disk.
+browserFetcher.platform()                             // Returns one of mac, linux, win32 or win64.
+browserFetcher.remove(revision)                       // Resolves when the revision has been removed.
+browserFetcher.revisionInfo(revision)                 // Returns all the information on the revision.
 
 // BROWSER
 // A Browser is created when Puppeteer connects to a Chromium instance, either through puppeteer.launch or puppeteer.connect.
@@ -69,10 +69,10 @@ browserFetcher.revisionInfo(revision)
 
 const browser = await puppeteer.launch();
 
-browser.on('disconnected')
-browser.on('targetchanged')
-browser.on('targetcreated')
-browser.on('targetdestroyed')
+browser.on('disconnected')    // 
+browser.on('targetchanged')   // 
+browser.on('targetcreated')   // 
+browser.on('targetdestroyed') // 
 
 browser.browserContexts()
 browser.close()
