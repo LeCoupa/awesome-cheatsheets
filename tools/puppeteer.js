@@ -165,50 +165,50 @@ page.emulateMediaType(type)                                     // Changes the C
 page.emulateTimezone(timezoneId)                                // Changes the timezone of the page.
 page.evaluate(pageFunction[, ...args])                          // Evaluate the page.
 page.evaluateHandle(pageFunction[, ...args])                    // Evaluate the page and return returns in-page object (JSHandle).
-page.evaluateOnNewDocument(pageFunction[, ...args])             // 
-page.exposeFunction(name, puppeteerFunction)                    // 
-page.focus(selector)                                            // 
-page.frames()                                                   // 
-page.goBack([options])                                          // 
-page.goForward([options])                                       // 
-page.goto(url[, options])                                       // 
-page.hover(selector)                                            // 
-page.isClosed()                                                 // 
-page.mainFrame()                                                // 
-page.metrics()                                                  // 
-page.pdf([options])                                             // 
-page.queryObjects(prototypeHandle)                              // 
-page.reload([options])                                          // 
-page.screenshot([options])                                      // 
-page.select(selector, ...values)                                // 
-page.setBypassCSP(enabled)                                      // 
-page.setCacheEnabled([enabled])                                 // 
-page.setContent(html[, options])                                // 
-page.setCookie(...cookies)                                      // 
-page.setDefaultNavigationTimeout(timeout)                       // 
-page.setDefaultTimeout(timeout)                                 // 
-page.setExtraHTTPHeaders(headers)                               // 
-page.setGeolocation(options)                                    // 
-page.setJavaScriptEnabled(enabled)                              // 
-page.setOfflineMode(enabled)                                    // 
-page.setRequestInterception(value)                              // 
-page.setUserAgent(userAgent)                                    // 
-page.setViewport(viewport)                                      // 
-page.tap(selector)                                              // 
-page.target()                                                   // 
-page.title()                                                    // 
-page.type(selector, text[, options])                            // 
-page.url()                                                      // 
-page.viewport()                                                 // 
-page.waitFor(selectorOrFunctionOrTimeout[, options[, ...args]]) // 
-page.waitForFileChooser([options])                              // 
-page.waitForFunction(pageFunction[, options[, ...args]])        // 
-page.waitForNavigation([options])                               // 
-page.waitForRequest(urlOrPredicate[, options])                  // 
-page.waitForResponse(urlOrPredicate[, options])                 // 
-page.waitForSelector(selector[, options])                       // 
-page.waitForXPath(xpath[, options])                             // 
-page.workers()                                                  // 
+page.evaluateOnNewDocument(pageFunction[, ...args])             // Adds a function which would be invoked whenever the page is navigated or whenever the child frame is attached or navigated.
+page.exposeFunction(name, puppeteerFunction)                    // Adds a function called name on the page's window object.
+page.focus(selector)                                            // Fetches an element with selector and focuses it. If there's no element matching selector, the method throws an error.
+page.frames()                                                   // Returns an array of all frames attached to the page.
+page.goBack([options])                                          // Navigate to the previous page in history.
+page.goForward([options])                                       // Navigate to the next page in history.
+page.goto(url[, options])                                       // Promise which resolves to the main resource response. In case of multiple redirects, the navigation will resolve with the response of the last redirect.
+page.hover(selector)                                            // Fetches an element with selector, scrolls it into view if needed, and then uses page.mouse to hover over the center of the element.
+page.isClosed()                                                 // Indicates that the page has been closed.
+page.mainFrame()                                                // Returns the page's main frame.
+page.metrics()                                                  // Returns an object containing the page metrics.
+page.pdf([options])                                             // Generates a pdf of the page with print css media.
+page.queryObjects(prototypeHandle)                              // Iterates the JavaScript heap and finds all the objects with the given prototype.
+page.reload([options])                                          // Reloads the page.
+page.screenshot([options])                                      // Takes a screenshot.
+page.select(selector, ...values)                                // Triggers a change and input event once all the provided options have been selected. If there's no <select> element matching selector, the method throws an error.
+page.setBypassCSP(enabled)                                      // Toggles bypassing page's Content-Security-Policy.
+page.setCacheEnabled([enabled])                                 // Toggles ignoring cache for each request based on the enabled state. By default, caching is enabled.
+page.setContent(html[, options])                                // Asssigns HTML markup to the page.
+page.setCookie(...cookies)                                      // Sets a cookie.
+page.setDefaultNavigationTimeout(timeout)                       // Changes the default maximum navigation timeout (see docs for the concerned methods).
+page.setDefaultTimeout(timeout)                                 // Changes the default maximum navigation timeout (for all methods).
+page.setExtraHTTPHeaders(headers)                               // Sets extra HTTP headers to be sent with every request the page initiates.
+page.setGeolocation(options)                                    // Sets the page's geolocation.
+page.setJavaScriptEnabled(enabled)                              // Whether or not to enable JavaScript on the page.
+page.setOfflineMode(enabled)                                    // When true, enables offline mode for the page.
+page.setRequestInterception(value)                              // Whether to enable request interception.
+page.setUserAgent(userAgent)                                    // Sets the specific user agent to use in this page.
+page.setViewport(viewport)                                      // Sets the viewport.
+page.tap(selector)                                              // This method fetches an element with selector, scrolls it into view if needed, and then uses page.touchscreen to tap in the center of the element. If there's no element matching selector, the method throws an error.
+page.target()                                                   // Returns a target this page was created from.
+page.title()                                                    // Returns the page title.
+page.type(selector, text[, options])                            // Sends a keydown, keypress/input, and keyup event for each character in the text.
+page.url()                                                      // This is a shortcut for page.mainFrame().url()
+page.viewport()                                                 // Returns the viewport information.
+page.waitFor(selectorOrFunctionOrTimeout[, options[, ...args]]) // Wait for the element to appear.
+page.waitForFileChooser([options])                              // Wait for the file chooser.
+page.waitForFunction(pageFunction[, options[, ...args]])        // Wait for the function.
+page.waitForNavigation([options])                               // Wait for navigation.
+page.waitForRequest(urlOrPredicate[, options])                  // Wait for the request.
+page.waitForResponse(urlOrPredicate[, options])                 // Wait for the response.
+page.waitForSelector(selector[, options])                       // Wait for the selector.
+page.waitForXPath(xpath[, options])                             // Wait for the XPath selector.
+page.workers()                                                  // Returns all of the dedicated WebWorkers associated with the page.
 
 // WORKER
 // The Worker class represents a WebWorker.
