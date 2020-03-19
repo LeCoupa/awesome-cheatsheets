@@ -237,54 +237,53 @@ keyboard.sendCharacter(char)   // Dispatches a keypress and input event. This do
 keyboard.type(text[, options]) // Sends a keydown, keypress/input, and keyup event for each character in the text.
 keyboard.up(key)               // Dispatches a keyup event.
 
-
 // MOUSE
 // The Mouse class operates in main-frame CSS pixels relative to the top-left corner of the viewport.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-mouse
 
-mouse.click(x, y[, options]) // 
-mouse.down([options])        // 
-mouse.move(x, y[, options])  // 
-mouse.up([options])          // 
+mouse.click(x, y[, options]) // Shortcut for mouse.move, mouse.down and mouse.up.
+mouse.down([options])        // Dispatches a mousedown event.
+mouse.move(x, y[, options])  // Dispatches a mousemove event.
+mouse.up([options])          // Dispatches a mouseup event.
 
 // TOUCHSCREEN
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-touchscreen
 
-touchscreen.tap(x, y) // 
+touchscreen.tap(x, y) // Dispatches a touchstart and touchend event.
 
 // TRACING
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-tracing
 
-tracing.start([options]) // 
-tracing.stop()           // 
+tracing.start([options]) // Start trace.
+tracing.stop()           // Stop trace.
 
 // FILE CHOOSER
 // FileChooser objects are returned via the 'page.waitForFileChooser' method.
 // File choosers let you react to the page requesting for a file.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-filechooser
 
-fileChooser.accept(filePaths) // 
-fileChooser.cancel()          // 
-fileChooser.isMultiple()      // 
+fileChooser.accept(filePaths) // Accept the file chooser request with given paths.
+fileChooser.cancel()          // Closes the file chooser without selecting any files.
+fileChooser.isMultiple()      // Returns whether file chooser allow for multiple file selection.
 
 // DIALOG
 // Dialog objects are dispatched by page via the 'dialog' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-dialog
 
-dialog.accept([promptText]) // 
-dialog.defaultValue()       // 
-dialog.dismiss()            // 
-dialog.message()            // 
-dialog.type()               // 
+dialog.accept([promptText]) // Resolves when the dialog has been accepted.
+dialog.defaultValue()       // If dialog is prompt, returns default prompt value. Otherwise, returns empty string.
+dialog.dismiss()            // Resolves when the dialog has been dismissed.
+dialog.message()            // Returns a message displayed in the dialog.
+dialog.type()               // Returns dialog's type, can be one of: alert, beforeunload, confirm or prompt.
 
 // CONSOLE MESSAGEç
 // ConsoleMessage objects are dispatched by page via the 'console' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-consolemessage
 
-consoleMessage.args()     // 
-consoleMessage.location() // 
-consoleMessage.text()     // 
-consoleMessage.type()     // 
+consoleMessage.args()     // Returns JSHandle.
+consoleMessage.location() // Returns location.
+consoleMessage.text()     // Returns message text.
+consoleMessage.type()     // Returns message type.
 
 // FRAME
 // At every point of time, page exposes its current frame tree via the page.mainFrame() and frame.childFrames() methods.
