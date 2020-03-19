@@ -400,19 +400,19 @@ elementHandle.uploadFile(...filePaths)                  // Uploads file.
 // Represents a request which are sent by a page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-request
 
-request.abort([errorCode])    // 
-request.continue([overrides]) // 
-request.failure()             // 
-request.frame()               // 
-request.headers()             // 
-request.isNavigationRequest() // 
-request.method()              // 
-request.postData()            // 
-request.redirectChain()       // 
-request.resourceType()        // 
-request.respond(response)     // 
-request.response()            // 
-request.url()                 // 
+request.abort([errorCode])    // Aborts request.
+request.continue([overrides]) // Continues request with optional request overrides.
+request.failure()             // The method returns null unless this request was failed, as reported by requestfailed event.
+request.frame()               // Returns the Frame that initiated this request, or null if navigating to error pages.
+request.headers()             // Returns an object with HTTP headers associated with the request. All header names are lower-case.
+request.isNavigationRequest() // Whether this request is driving frame's navigation.
+request.method()              // Returns Request's method (GET, POST, etc.)
+request.postData()            // Returns Request's post body, if any.
+request.redirectChain()       // Returns the redirect chain.
+request.resourceType()        // Returns the request's resource type as it was perceived by the rendering engine. 
+request.respond(response)     // Fulfills request with given response.
+request.response()            // Returns a matching Response object, or null if the response has not been received yet.
+request.url()                 // Returns URL of the request.
 
 // RESPONSE
 // -----
