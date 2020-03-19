@@ -158,7 +158,7 @@ page.addStyleTag(options)                                       // Adds a <link 
 page.authenticate(credentials)                                  // Provide credentials for HTTP authentication.
 page.bringToFront()                                             // Brings page to front (activates tab).
 page.browser()                                                  // Get the browser the page belongs to.
-page.browserContext(                                            // Get the browser context that the page belongs to.
+page.browserContext()                                           // Get the browser context that the page belongs to.
 page.click(selector[, options])                                 // This method fetches an element with selector, scrolls it into view if needed, and then uses page.mouse to click in the center of the element. If there's no element matching selector, the method throws an error.
 page.close([options])                                           // Close the page
 page.content()                                                  // Gets the full HTML contents of the page, including the doctype.
