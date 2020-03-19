@@ -35,6 +35,7 @@ PUPPETEER_PRODUCT                // Specify which browser you'd like Puppeteer t
 
 
 // PUPPETEER
+// -----
 // Puppeteer module provides a method to launch a Chromium instance. 
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-puppeteer
 
@@ -51,6 +52,7 @@ puppeteer.executablePath();                // Returns a path where Puppeteer exp
 puppeteer.launch([options]);               // Launch a browser instance
 
 // BROWSER FETCHER
+// -----
 // BrowserFetcher can download and manage different versions of Chromium.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-browserfetcher
 
@@ -64,6 +66,7 @@ browserFetcher.remove(revision)                       // Resolves when the revis
 browserFetcher.revisionInfo(revision)                 // Returns all the information on the revision.
 
 // BROWSER
+// -----
 // A Browser is created when Puppeteer connects to a Chromium instance, either through puppeteer.launch or puppeteer.connect.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-browser
 
@@ -91,6 +94,7 @@ browser.waitForTarget(predicate[, options]) // Promise which resolves to the fir
 browser.wsEndpoint()                        // Returns the browser websocket url.
 
 // BROWSER CONTEXT
+// -----
 // BrowserContexts provide a way to operate multiple independent browser sessions
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-browsercontext
 
@@ -111,6 +115,7 @@ browserContext.targets()                                // An array of all activ
 browserContext.waitForTarget(predicate[, options])      // Promise which resolves to the first target found that matches the predicate function.
 
 // PAGE
+// -----
 // Page provides methods to interact with a single tab or extension background page in Chromium.
 // One Browser instance might have multiple Page instances.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-page
@@ -211,6 +216,7 @@ page.waitForXPath(xpath[, options])                             // Wait for the 
 page.workers()                                                  // Returns all of the dedicated WebWorkers associated with the page.
 
 // WORKER
+// -----
 // The Worker class represents a WebWorker.
 // The events workercreated and workerdestroyed are emitted on the page object to signal the worker lifecycle.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-worker
@@ -221,6 +227,7 @@ worker.executionContext()                      // Returns ExecutionContext.
 worker.url()                                   // Returns worker url.
 
 // ACCESSIBILITY
+// -----
 // The Accessibility class provides methods for inspecting Chromium's accessibility tree.
 // The accessibility tree is used by assistive technology such as screen readers or switches.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-accessibility
@@ -228,6 +235,7 @@ worker.url()                                   // Returns worker url.
 accessibility.snapshot([options]) // Captures the current state of the accessibility tree. The returned object represents the root accessible node of the page.
 
 // KEYBOARD
+// -----
 // Keyboard provides an api for managing a virtual keyboard. 
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-keyboard
 
@@ -238,6 +246,7 @@ keyboard.type(text[, options]) // Sends a keydown, keypress/input, and keyup eve
 keyboard.up(key)               // Dispatches a keyup event.
 
 // MOUSE
+// -----
 // The Mouse class operates in main-frame CSS pixels relative to the top-left corner of the viewport.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-mouse
 
@@ -247,17 +256,20 @@ mouse.move(x, y[, options])  // Dispatches a mousemove event.
 mouse.up([options])          // Dispatches a mouseup event.
 
 // TOUCHSCREEN
+// -----
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-touchscreen
 
 touchscreen.tap(x, y) // Dispatches a touchstart and touchend event.
 
 // TRACING
+// -----
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-tracing
 
 tracing.start([options]) // Start trace.
 tracing.stop()           // Stop trace.
 
 // FILE CHOOSER
+// -----
 // FileChooser objects are returned via the 'page.waitForFileChooser' method.
 // File choosers let you react to the page requesting for a file.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-filechooser
@@ -267,6 +279,7 @@ fileChooser.cancel()          // Closes the file chooser without selecting any f
 fileChooser.isMultiple()      // Returns whether file chooser allow for multiple file selection.
 
 // DIALOG
+// -----
 // Dialog objects are dispatched by page via the 'dialog' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-dialog
 
@@ -277,6 +290,7 @@ dialog.message()            // Returns a message displayed in the dialog.
 dialog.type()               // Returns dialog's type, can be one of: alert, beforeunload, confirm or prompt.
 
 // CONSOLE MESSAGE
+// -----
 // ConsoleMessage objects are dispatched by page via the 'console' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-consolemessage
 
@@ -286,6 +300,7 @@ consoleMessage.text()     // Returns message text.
 consoleMessage.type()     // Returns message type.
 
 // FRAME
+// -----
 // At every point of time, page exposes its current frame tree via the page.mainFrame() and frame.childFrames() methods.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-frame
 
@@ -321,30 +336,33 @@ frame.waitForSelector(selector[, options])                       // Wait for sel
 frame.waitForXPath(xpath[, options])                             // Wait for XPath selector.
 
 // EXECUTION CONTEXT
+// -----
 // The class represents a context for JavaScript execution.
 // Besides pages, execution contexts can be found in workers.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-executioncontext
 
-executionContext.evaluate(pageFunction[, ...args])       // 
-executionContext.evaluateHandle(pageFunction[, ...args]) // 
-executionContext.frame()                                 // 
-executionContext.queryObjects(prototypeHandle)           // 
+executionContext.evaluate(pageFunction[, ...args])       // Evaluate function in execution context.
+executionContext.evaluateHandle(pageFunction[, ...args]) // Evaluate function in execution context and returns JSHandle.
+executionContext.frame()                                 // Returns frame associated with this execution context.
+executionContext.queryObjects(prototypeHandle)           // The method iterates the JavaScript heap and finds all the objects with the given prototype.
 
 // JSHANDLE
+// -----
 // JSHandle represents an in-page JavaScript object.
 // JSHandles can be created with the page.evaluateHandle method.
 // const windowHandle = await page.evaluateHandle(() => window);
 
-jsHandle.asElement()                             // 
-jsHandle.dispose()                               // 
-jsHandle.evaluate(pageFunction[, ...args])       // 
-jsHandle.evaluateHandle(pageFunction[, ...args]) // 
-jsHandle.executionContext()                      // 
-jsHandle.getProperties()                         // 
-jsHandle.getProperty(propertyName)               // 
-jsHandle.jsonValue()                             // 
+jsHandle.asElement()                             // Returns either null or the object handle itself, if the object handle is an instance of ElementHandle.
+jsHandle.dispose()                               // Resolves when the object handle is successfully disposed.
+jsHandle.evaluate(pageFunction[, ...args])       // Evaluate function in the execution context the handle belongs to.
+jsHandle.evaluateHandle(pageFunction[, ...args]) // Evaluate function in the execution context the handle belongs to and returns JS handle.
+jsHandle.executionContext()                      // Returns execution context the handle belongs to.
+jsHandle.getProperties()                         // Returns a map with property names as keys and JSHandle instances for the property values.
+jsHandle.getProperty(propertyName)               // Fetches a single property from the referenced object.
+jsHandle.jsonValue()                             // Returns a JSON representation of the object. If the object has a toJSON function, it will not be called.
 
 // ELEMENTHANDLE
+// -----
 // ElementHandle represents an in-page DOM element.
 // ElementHandles can be created with the page.$ method.
 // const hrefElement = await page.$('a');
@@ -378,6 +396,7 @@ elementHandle.type(text[, options])                     //
 elementHandle.uploadFile(...filePaths)                  // 
 
 // REQUEST
+// -----
 // Represents a request which are sent by a page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-request
 
@@ -396,6 +415,7 @@ request.response()            //
 request.url()                 // 
 
 // RESPONSE
+// -----
 // Response class represents responses which are received by page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-response
 
@@ -415,6 +435,7 @@ response.text()              //
 response.url()               // 
 
 // SECURITY DETAILS
+// -----
 // SecurityDetails class represents the security details when response was received over the secure connection.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-securitydetails
 
@@ -425,6 +446,7 @@ securityDetails.validFrom()   //
 securityDetails.validTo()     // 
 
 // TARGET
+// -----
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-target
 
 target.browser()          // 
@@ -437,6 +459,7 @@ target.url()              //
 target.worker()           // 
 
 // CDPSESSION
+// -----
 // The CDPSession instances are used to talk raw Chrome Devtools Protocol
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-cdpsession
 
@@ -444,6 +467,7 @@ cdpSession.detach()               //
 cdpSession.send(method[, params]) // 
 
 // COVERAGE
+// -----
 // Coverage gathers information about parts of JavaScript and CSS that were used by the page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-coverage
 
