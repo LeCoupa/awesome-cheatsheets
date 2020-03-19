@@ -231,11 +231,12 @@ accessibility.snapshot([options]) // Captures the current state of the accessibi
 // Keyboard provides an api for managing a virtual keyboard. 
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-keyboard
 
-keyboard.down(key[, options])  // 
-keyboard.press(key[, options]) // 
-keyboard.sendCharacter(char)   // 
-keyboard.type(text[, options]) // 
-keyboard.up(key)               // 
+keyboard.down(key[, options])  // Dispatches a keydown event.
+keyboard.press(key[, options]) // Shortcut for keyboard.down and keyboard.up.
+keyboard.sendCharacter(char)   // Dispatches a keypress and input event. This does not send a keydown or keyup event.
+keyboard.type(text[, options]) // Sends a keydown, keypress/input, and keyup event for each character in the text.
+keyboard.up(key)               // Dispatches a keyup event.
+
 
 // MOUSE
 // The Mouse class operates in main-frame CSS pixels relative to the top-left corner of the viewport.
@@ -276,7 +277,7 @@ dialog.dismiss()            //
 dialog.message()            // 
 dialog.type()               // 
 
-// CONSOLE MESSAGE
+// CONSOLE MESSAGEç
 // ConsoleMessage objects are dispatched by page via the 'console' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-consolemessage
 
