@@ -439,39 +439,39 @@ response.url()               // Contains the URL of the response.
 // SecurityDetails class represents the security details when response was received over the secure connection.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-securitydetails
 
-securityDetails.issuer()      // 
-securityDetails.protocol()    // 
-securityDetails.subjectName() // 
-securityDetails.validFrom()   // 
-securityDetails.validTo()     // 
+securityDetails.issuer()      // Returns a string with the name of issuer of the certificate.
+securityDetails.protocol()    // Returns a string with the security protocol, eg. "TLS 1.2".
+securityDetails.subjectName() // Returns the name of the subject to which the certificate was issued to.
+securityDetails.validFrom()   // Returns UnixTime stating the start of validity of the certificate.
+securityDetails.validTo()     // Returns  UnixTime stating the end of validity of the certificate.
 
 // TARGET
 // -----
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-target
 
-target.browser()          // 
-target.browserContext()   // 
-target.createCDPSession() // 
-target.opener()           // 
-target.page()             // 
-target.type()             // 
-target.url()              // 
-target.worker()           // 
+target.browser()          // Get the browser the target belongs to.
+target.browserContext()   // Returns the browser context.
+target.createCDPSession() // Creates a Chrome Devtools Protocol session attached to the target.
+target.opener()           // Get the target that opened this target. Top-level targets return null.
+target.page()             // Returns the page.
+target.type()             // Identifies what kind of target this is.
+target.url()              // Returns url.
+target.worker()           // Returns worker.
 
 // CDPSESSION
 // -----
 // The CDPSession instances are used to talk raw Chrome Devtools Protocol
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-cdpsession
 
-cdpSession.detach()               // 
-cdpSession.send(method[, params]) // 
+cdpSession.detach()               // Detaches the cdpSession from the target. Once detached, the cdpSession object won't emit any events and can't be used to send messages.
+cdpSession.send(method[, params]) // Send message.
 
 // COVERAGE
 // -----
 // Coverage gathers information about parts of JavaScript and CSS that were used by the page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-coverage
 
-coverage.startCSSCoverage([options]) // 
-coverage.startJSCoverage([options])  // 
-coverage.stopCSSCoverage()           // 
-coverage.stopJSCoverage()            // 
+coverage.startCSSCoverage([options]) // Start CSS coverage.
+coverage.startJSCoverage([options])  // Start JS coverage.
+coverage.stopCSSCoverage()           // Stop CSS coverage.
+coverage.stopJSCoverage()            // Stop JS coverage.
