@@ -215,10 +215,10 @@ page.workers()                                                  // Returns all o
 // The events workercreated and workerdestroyed are emitted on the page object to signal the worker lifecycle.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-worker
 
-worker.evaluate(pageFunction[, ...args])       // 
-worker.evaluateHandle(pageFunction[, ...args]) // 
-worker.executionContext()                      // 
-worker.url()                                   // 
+worker.evaluate(pageFunction[, ...args])       // Evaluate a function in the worker context.
+worker.evaluateHandle(pageFunction[, ...args]) // Evaluate a function in the worker context and returns in-page object (JSHandle).
+worker.executionContext()                      // Returns ExecutionContext.
+worker.url()                                   // Returns worker url.
 
 // ACCESSIBILITY
 // The Accessibility class provides methods for inspecting Chromium's accessibility tree.
