@@ -225,7 +225,7 @@ worker.url()                                   // Returns worker url.
 // The accessibility tree is used by assistive technology such as screen readers or switches.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-accessibility
 
-accessibility.snapshot([options]) // 
+accessibility.snapshot([options]) // Captures the current state of the accessibility tree. The returned object represents the root accessible node of the page.
 
 // KEYBOARD
 // Keyboard provides an api for managing a virtual keyboard. 
