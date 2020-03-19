@@ -419,20 +419,20 @@ request.url()                 // Returns URL of the request.
 // Response class represents responses which are received by page.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-response
 
-response.buffer()            // 
-response.frame()             // 
-response.fromCache()         // 
-response.fromServiceWorker() // 
-response.headers()           // 
-response.json()              // 
-response.ok()                // 
-response.remoteAddress()     // 
-response.request()           // 
-response.securityDetails()   // 
-response.status()            // 
-response.statusText()        // 
-response.text()              // 
-response.url()               // 
+response.buffer()            // Resolves to a buffer with response body.
+response.frame()             // Returns the frame that initiated this response, or null if navigating to error pages.
+response.fromCache()         // True if the response was served from either the browser's disk cache or memory cache.
+response.fromServiceWorker() // True if the response was served by a service worker.
+response.headers()           // Returns an object with HTTP headers associated with the response. All header names are lower-case.
+response.json()              // Resolves to a JSON representation of response body.
+response.ok()                // Contains a boolean stating whether the response was successful (status in the range 200-299) or not.
+response.remoteAddress()     // Returns remote address.
+response.request()           // Retuns the matching Request object.
+response.securityDetails()   // Returns the security details if the response was received over the secure connection, or null otherwise.
+response.status()            // Contains the status code of the response (e.g., 200 for a success).
+response.statusText()        // Contains the status text of the response (e.g. usually an "OK" for a success).
+response.text()              // Resolves to a text representation of response body.
+response.url()               // Contains the URL of the response.
 
 // SECURITY DETAILS
 // -----
