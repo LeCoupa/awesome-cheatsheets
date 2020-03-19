@@ -367,33 +367,33 @@ jsHandle.jsonValue()                             // Returns a JSON representatio
 // ElementHandles can be created with the page.$ method.
 // const hrefElement = await page.$('a');
 
-elementHandle.$(selector)                               // 
-elementHandle.$$(selector)                              // 
-elementHandle.$$eval(selector, pageFunction[, ...args]) // 
-elementHandle.$eval(selector, pageFunction[, ...args])  // 
-elementHandle.$x(expression)                            // 
-elementHandle.asElement()                               // 
-elementHandle.boundingBox()                             // 
-elementHandle.boxModel()                                // 
-elementHandle.click([options])                          // 
-elementHandle.contentFrame()                            // 
-elementHandle.dispose()                                 // 
-elementHandle.evaluate(pageFunction[, ...args])         // 
-elementHandle.evaluateHandle(pageFunction[, ...args])   // 
-elementHandle.executionContext()                        // 
-elementHandle.focus()                                   // 
-elementHandle.getProperties()                           // 
-elementHandle.getProperty(propertyName)                 // 
-elementHandle.hover()                                   // 
-elementHandle.isIntersectingViewport()                  // 
-elementHandle.jsonValue()                               // 
-elementHandle.press(key[, options])                     // 
-elementHandle.screenshot([options])                     // 
-elementHandle.select(...values)                         // 
-elementHandle.tap()                                     // 
-elementHandle.toString()                                // 
-elementHandle.type(text[, options])                     // 
-elementHandle.uploadFile(...filePaths)                  // 
+elementHandle.$(selector)                               // The method runs element.querySelector within the page. If no element matches the selector, the return value resolves to null.
+elementHandle.$$(selector)                              // The method runs element.querySelectorAll within the page. If no elements match the selector, the return value resolves to [].
+elementHandle.$$eval(selector, pageFunction[, ...args]) // This method runs document.querySelectorAll within the element and passes it as the first argument to pageFunction. If there's no element matching selector, the method throws an error.
+elementHandle.$eval(selector, pageFunction[, ...args])  // This method runs document.querySelector within the element and passes it as the first argument to pageFunction. If there's no element matching selector, the method throws an error.
+elementHandle.$x(expression)                            // The method evaluates the XPath expression relative to the elementHandle. If there are no such elements, the method will resolve to an empty array.
+elementHandle.asElement()                               // Returns ElementHandle.
+elementHandle.boundingBox()                             // Returns the bounding box of the element (relative to the main frame), or null if the element is not visible.
+elementHandle.boxModel()                                // Returns boxes of the element, or null if the element is not visible.
+elementHandle.click([options])                          // This method scrolls element into view if needed, and then uses page.mouse to click in the center of the element. If the element is detached from DOM, the method throws an error.
+elementHandle.contentFrame()                            // Resolves to the content frame for element handles referencing iframe nodes, or null otherwise
+elementHandle.dispose()                                 // Stops referencing the element handle. 
+elementHandle.evaluate(pageFunction[, ...args])         // Evaluates function in the execution content the element handle belongs to.
+elementHandle.evaluateHandle(pageFunction[, ...args])   // Evaluates function in the execution content the element handle belongs to and returns JS handle.
+elementHandle.executionContext()                        // Returns execution context.
+elementHandle.focus()                                   // Calls focus on the element.
+elementHandle.getProperties()                           // The method returns a map with property names as keys and JSHandle instances for the property values.
+elementHandle.getProperty(propertyName)                 // Fetches a single property from the objectHandle.s
+elementHandle.hover()                                   // This method scrolls element into view if needed, and then uses page.mouse to hover over the center of the element. If the element is detached from DOM, the method throws an error.
+elementHandle.isIntersectingViewport()                  // Resolves to true if the element is visible in the current viewport.
+elementHandle.jsonValue()                               // Returns a JSON representation of the object.
+elementHandle.press(key[, options])                     // Focuses the element, and then uses keyboard.down and keyboard.up.
+elementHandle.screenshot([options])                     // This method scrolls element into view if needed, and then uses page.screenshot to take a screenshot of the element.
+elementHandle.select(...values)                         // Triggers a change and input event once all the provided options have been selected. If there's no <select> element matching selector, the method throws an error.
+elementHandle.tap()                                     // This method scrolls element into view if needed, and then uses touchscreen.tap to tap in the center of the element. If the element is detached from DOM, the method throws an error.
+elementHandle.toString()                                // Returns string.
+elementHandle.type(text[, options])                     // Focuses the element, and then sends a keydown, keypress/input, and keyup event for each character in the text.
+elementHandle.uploadFile(...filePaths)                  // Uploads file.
 
 // REQUEST
 // -----
