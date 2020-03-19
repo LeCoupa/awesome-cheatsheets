@@ -276,7 +276,7 @@ dialog.dismiss()            // Resolves when the dialog has been dismissed.
 dialog.message()            // Returns a message displayed in the dialog.
 dialog.type()               // Returns dialog's type, can be one of: alert, beforeunload, confirm or prompt.
 
-// CONSOLE MESSAGEç
+// CONSOLE MESSAGE
 // ConsoleMessage objects are dispatched by page via the 'console' event.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-consolemessage
 
@@ -289,36 +289,36 @@ consoleMessage.type()     // Returns message type.
 // At every point of time, page exposes its current frame tree via the page.mainFrame() and frame.childFrames() methods.
 // https://pptr.dev/#?product=Puppeteer&version=v2.1.1&show=api-class-frame
 
-frame.$(selector)                                                // 
-frame.$$(selector)                                               // 
-frame.$$eval(selector, pageFunction[, ...args])                  // 
-frame.$eval(selector, pageFunction[, ...args])                   // 
-frame.$x(expression)                                             // 
-frame.addScriptTag(options)                                      // 
-frame.addStyleTag(options)                                       // 
-frame.childFrames()                                              // 
-frame.click(selector[, options])                                 // 
-frame.content()                                                  // 
-frame.evaluate(pageFunction[, ...args])                          // 
-frame.evaluateHandle(pageFunction[, ...args])                    // 
-frame.executionContext()                                         // 
-frame.focus(selector)                                            // 
-frame.goto(url[, options])                                       // 
-frame.hover(selector)                                            // 
-frame.isDetached()                                               // 
-frame.name()                                                     // 
-frame.parentFrame()                                              // 
-frame.select(selector, ...values)                                // 
-frame.setContent(html[, options])                                // 
-frame.tap(selector)                                              // 
-frame.title()                                                    // 
-frame.type(selector, text[, options])                            // 
-frame.url()                                                      // 
-frame.waitFor(selectorOrFunctionOrTimeout[, options[, ...args]]) // 
-frame.waitForFunction(pageFunction[, options[, ...args]])        // 
-frame.waitForNavigation([options])                               // 
-frame.waitForSelector(selector[, options])                       // 
-frame.waitForXPath(xpath[, options])                             // 
+frame.$(selector)                                                // The method queries frame for the selector. If there's no such element within the frame, the method will resolve to null.
+frame.$$(selector)                                               // The method runs document.querySelectorAll within the frame. If no elements match the selector, the return value resolves to [].
+frame.$$eval(selector, pageFunction[, ...args])                  // This method runs Array.from(document.querySelectorAll(selector)) within the frame and passes it as the first argument to pageFunction.
+frame.$eval(selector, pageFunction[, ...args])                   // This method runs document.querySelector within the frame and passes it as the first argument to pageFunction. If there's no element matching selector, the method throws an error.
+frame.$x(expression)                                             // The method evaluates the XPath expression.
+frame.addScriptTag(options)                                      // Adds a <script> tag into the page with the desired url or content.
+frame.addStyleTag(options)                                       // Adds a <link rel="stylesheet"> tag into the page with the desired url or a <style type="text/css"> tag with the content.
+frame.childFrames()                                              // Returns all child frames.
+frame.click(selector[, options])                                 // This method fetches an element with selector, scrolls it into view if needed, and then uses page.mouse to click in the center of the element. If there's no element matching selector, the method throws an error.
+frame.content()                                                  // Gets the full HTML contents of the frame, including the doctype.
+frame.evaluate(pageFunction[, ...args])                          // Evaluates function in the context of the frame.
+frame.evaluateHandle(pageFunction[, ...args])                    // Evaluates function in the context of the frame and returns JSHandle.
+frame.executionContext()                                         // Returns promise that resolves to the frame's default execution context.
+frame.focus(selector)                                            // This method fetches an element with selector and focuses it. If there's no element matching selector, the method throws an error.
+frame.goto(url[, options])                                       // Goes to url.
+frame.hover(selector)                                            // This method fetches an element with selector, scrolls it into view if needed, and then uses page.mouse to hover over the center of the element. If there's no element matching selector, the method throws an error.
+frame.isDetached()                                               // Returns true if the frame has been detached, or false otherwise.
+frame.name()                                                     // Returns frame's name attribute as specified in the tag.
+frame.parentFrame()                                              // Returns parent frame if any.
+frame.select(selector, ...values)                                // Triggers a change and input event once all the provided options have been selected. If there's no <select> element matching selector, the method throws an error.
+frame.setContent(html[, options])                                // Set content in iframe.
+frame.tap(selector)                                              // This method fetches an element with selector, scrolls it into view if needed, and then uses page.touchscreen to tap in the center of the element. If there's no element matching selector, the method throws an error.
+frame.title()                                                    // Returns the page's title.
+frame.type(selector, text[, options])                            // Sends a keydown, keypress/input, and keyup event for each character in the text.
+frame.url()                                                      // Returns frame's url.
+frame.waitFor(selectorOrFunctionOrTimeout[, options[, ...args]]) // Wait for something.
+frame.waitForFunction(pageFunction[, options[, ...args]])        // Wait for function.
+frame.waitForNavigation([options])                               // Wait for navigation.
+frame.waitForSelector(selector[, options])                       // Wait for selector.
+frame.waitForXPath(xpath[, options])                             // Wait for XPath selector.
 
 // EXECUTION CONTEXT
 // The class represents a context for JavaScript execution.
