@@ -263,19 +263,18 @@ uuid                                   // The field under validation must be a v
  ********************************************************************************************/
 
 /********************************************************************************************
- * COLLECTION TABLE OPTIONS
- * https://laravel.com/docs/5.7/migrations#creating-tables
+ * MIGRATION COMMANDS
+ * https://laravel.com/docs/5.8/migrations
  ********************************************************************************************/
+
+// TABLE OPTIONS
 
 $table->engine = 'InnoDB';             // Specify the table storage engine (MySQL).
 $table->charset = 'utf8';              // Specify a default character set for the table (MySQL).
 $table->collation = 'utf8_unicode_ci'; // Specify a default collation for the table (MySQL).
 $table->temporary();                   // Create a temporary table (except SQL Server).
 
-/********************************************************************************************
- * COLLECTION COLUMN TYPES
- * https://laravel.com/docs/5.8/migrations#generating-migrations
- ********************************************************************************************/
+// COLUMN TYPES
 
 $table->bigIncrements('id');                       // Auto-incrementing UNSIGNED BIGINT (primary key) equivalent column.
 $table->bigInteger('votes');                       // BIGINT equivalent column.
@@ -337,10 +336,7 @@ $table->unsignedTinyInteger('votes');              // UNSIGNED TINYINT equivalen
 $table->uuid('id');                                // UUID equivalent column.
 $table->year('birth_year');                        // YEAR equivalent column.
 
-/********************************************************************************************
- * COLLECTION COLUMN MODIFIERS
- * https://laravel.com/docs/5.7/migrations#column-modifiers
- ********************************************************************************************/
+// COLUMN MODIFIERS
 
 $table->someType()->after('column');              // Place the column "after" another column (MySQL)
 $table->someType()->autoIncrement();              // Set INTEGER columns as auto-increment (primary key)
@@ -356,6 +352,31 @@ $table->someType()->useCurrent();                 // Set TIMESTAMP columns to us
 $table->someType()->virtualAs($expression);       // Create a virtual generated column (MySQL)
 $table->someType()->generatedAs($expression);     // Create an identity column with specified sequence options (PostgreSQL)
 $table->someType()->always();                     // Defines the precedence of sequence values over input for an identity column (PostgreSQL)
+
+// UPDATING COLUMNS
+
+$table->someType()->change();       // Allows you to modify some existing column types to a new type or modify the column's attributes.
+$table->renameColumn('from', 'to'); // Rename a column
+
+$table->dropColumn('column');       // Drop a given column (accepts an array of columns).
+$table->dropRememberToken();        // Drop the remember_token column.
+$table->dropSoftDeletes();          // Drop the deleted_at column.
+$table->dropSoftDeletesTz();        // Alias of dropSoftDeletes() method.
+$table->dropTimestamps();           // Drop the created_at and updated_at columns.
+$table->dropTimestampsTz();         // Alias of dropTimestamps() method.
+
+// INDEXES
+
+$table->primary('id');                // Adds a primary key.
+$table->primary(['id', 'parent_id']); // Adds composite keys.
+$table->unique('email');              // Adds a unique index.
+$table->index('state');               // Adds a plain index.
+$table->spatialIndex('location');     // Adds a spatial index. (except SQLite)
+
+$table->dropPrimary('users_id_primary');               // Drop a primary key from the "users" table.
+$table->dropUnique('users_email_unique');              // Drop a unique index from the "users" table.
+$table->dropIndex('geo_state_index');                  // Drop a basic index from the "geo" table.
+$table->dropSpatialIndex('geo_location_spatialindex'); // Drop a spatial index from the "geo" table (except SQLite).
 
 /********************************************************************************************
  * COLLECTION ELOQUENT METHODS
