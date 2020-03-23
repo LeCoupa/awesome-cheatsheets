@@ -263,6 +263,16 @@ uuid                                   // The field under validation must be a v
  ********************************************************************************************/
 
 /********************************************************************************************
+ * COLLECTION TABLE OPTIONS
+ * https://laravel.com/docs/5.7/migrations#creating-tables
+ ********************************************************************************************/
+
+$table->engine = 'InnoDB';             // Specify the table storage engine (MySQL).
+$table->charset = 'utf8';              // Specify a default character set for the table (MySQL).
+$table->collation = 'utf8_unicode_ci'; // Specify a default collation for the table (MySQL).
+$table->temporary();                   // Create a temporary table (except SQL Server).
+
+/********************************************************************************************
  * COLLECTION COLUMN TYPES
  * https://laravel.com/docs/5.8/migrations#generating-migrations
  ********************************************************************************************/
