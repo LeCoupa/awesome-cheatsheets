@@ -328,6 +328,26 @@ $table->uuid('id');                                // UUID equivalent column.
 $table->year('birth_year');                        // YEAR equivalent column.
 
 /********************************************************************************************
+ * COLLECTION COLUMN MODIFIERS
+ * https://laravel.com/docs/5.7/migrations#column-modifiers
+ ********************************************************************************************/
+
+$table->someType()->after('column');              // Place the column "after" another column (MySQL)
+$table->someType()->autoIncrement();              // Set INTEGER columns as auto-increment (primary key)
+$table->someType()->charset('utf8');              // Specify a character set for the column (MySQL)
+$table->someType()->collation('utf8_unicode_ci'); // Specify a collation for the column (MySQL/SQL Server)
+$table->someType()->comment('my comment');        // Add a comment to a column (MySQL/PostgreSQL)
+$table->someType()->default($value);              // Specify a "default" value for the column
+$table->someType()->first();                      // Place the column "first" in the table (MySQL)
+$table->someType()->nullable($value = true);      // Allows (by default) NULL values to be inserted into the column
+$table->someType()->storedAs($expression);        // Create a stored generated column (MySQL)
+$table->someType()->unsigned();                   // Set INTEGER columns as UNSIGNED (MySQL)
+$table->someType()->useCurrent();                 // Set TIMESTAMP columns to use CURRENT_TIMESTAMP as default value
+$table->someType()->virtualAs($expression);       // Create a virtual generated column (MySQL)
+$table->someType()->generatedAs($expression);     // Create an identity column with specified sequence options (PostgreSQL)
+$table->someType()->always();                     // Defines the precedence of sequence values over input for an identity column (PostgreSQL)
+
+/********************************************************************************************
  * COLLECTION ELOQUENT METHODS
  * https://laravel.com/docs/5.7/collections
  ********************************************************************************************/
