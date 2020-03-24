@@ -67,7 +67,7 @@ clear               # clears content on window (hide displayed lines)
 
 ls                            # lists your files in current directory, ls <dir> to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
-ls -a                         # lists all files, including hidden files (name beginning with '.')
+ls -a                         # lists all files in 'long format', including hidden files (name beginning with '.')
 ln -s <filename> <link>       # creates symbolic link to file
 touch <filename>              # creates or updates (edit) your file
 cat <filename>                # prints file raw content (will not be interpreted)
@@ -79,8 +79,11 @@ vim <filename>                # opens a file in VIM (VI iMproved) text editor, w
 mv <filename1> <dest>         # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
 cp <filename1> <dest>         # copies a file
 rm <filename>                 # removes a file
+find . -name <name> <type>    # searches for a file or a directory in the current directory and all its sub-directories by its name
 diff <filename1> <filename2>  # compares files, and shows where they differ
 wc <filename>                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
+sort <filename>               # sorts the contents of a text file line by line in alphabetical order, use -n for numeric sort and -r for reversing order.
+sort -t -k <filename>         # sorts the contents on specific sort key field starting from 1, using the field separator t.
 chmod -options <filename>     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
 gzip <filename>               # compresses files using gzip algorithm
 gunzip <filename>             # uncompresses files compressed by gzip
@@ -99,10 +102,15 @@ grep -r <pattern> <dir>       # search recursively for pattern in directory
 ##############################################################################
 
 
-mkdir <dirname>  # makes a new directory
-cd               # changes to home
-cd <dirname>     # changes directory
-pwd              # tells you where you currently are
+mkdir <dirname>               # makes a new directory
+rmdir <dirname>               # remove an empty directory
+rmdir -rf <dirname>           # remove a non-empty directory
+mv <dir1> <dir2>              # rename a directory from <dir1> to <dir2>
+cd                            # changes to home
+cd ..                         # changes to the parent directory
+cd <dirname>                  # changes directory
+cp -r <dir1> <dir2>           # copy <dir1> into <dir2> including sub-directories
+pwd                           # tells you where you currently are
 
 
 ##############################################################################
@@ -153,6 +161,8 @@ echo $varname                # checks a variable's value
 echo $$                      # prints process ID of the current shell
 echo $!                      # prints process ID of the most recently invoked background job
 echo $?                      # displays the exit status of the last command
+read <varname>               # reads a string from the input and assigns it to a variable 
+let <varname> = <equation>   # performs mathematical calculation using operators like +, -, *, /, %
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 
 array[0]=valA                # how to define an array
@@ -230,12 +240,14 @@ str1 == str2               # str1 matches str2
 str1 != str2               # str1 does not match str2
 str1 < str2                # str1 is less than str2 (alphabetically)
 str1 > str2                # str1 is greater than str2 (alphabetically)
+str1 \> str2               # str1 is sorted after str2
+str1 \< str2               # str1 is sorted before str2
 -n str1                    # str1 is not null (has length greater than 0)
 -z str1                    # str1 is null (has length 0)
 
 # FILES
 
--a file                   # file exists
+-a file                   # file exists or its compilation is successful
 -d file                   # file exists and is a directory
 -e file                   # file exists; same -a
 -f file                   # file exists and is a regular file (i.e., not a directory or other special type of file)
