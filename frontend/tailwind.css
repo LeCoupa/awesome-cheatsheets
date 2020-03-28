@@ -3,11 +3,9 @@
  * DOCUMENTATION: https://tailwindcss.com/
  * ******************************************************************************************* */
 
-/* *******************************************************************************************
- * AVAILABLE BREAKPOINTS
- * ******************************************************************************************* */
-
 /*
+ * Available breakpoints
+ * ----------
  * sm: min-width: 640px;
  * md: min-width: 768px;
  * lg: min-width: 1024px;
@@ -82,3 +80,16 @@
 .clear-left  /* clear: left; */
 .clear-right /* clear: right; */
 .clear-both  /* clear: both; */
+
+/*
+ * Object Fit
+ * ----------
+ * Utilities for controlling how a replaced element's content should be resized.
+ * By default, only responsive variants are generated for object-fit utilities.
+ */
+
+.object-contain    /* object-fit: contain; */
+.object-cover      /* object-fit: cover; */
+.object-fill       /* object-fit: fill; */
+.object-none       /* object-fit: none; */
+.object-scale-down /* object-fit: scale-down; */
