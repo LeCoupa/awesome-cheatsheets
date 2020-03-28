@@ -2,3 +2,38 @@
  * TAILWIND.CSS
  * DOCUMENTATION: https://tailwindcss.com/
  * ******************************************************************************************* */
+
+/* *******************************************************************************************
+ * AVAILABLE BREAKPOINTS
+ * ******************************************************************************************* */
+
+/*
+ * sm: min-width: 640px;
+ * md: min-width: 768px;
+ * lg: min-width: 1024px;
+ * xl: min-width: 1280px;
+ */
+
+/* *******************************************************************************************
+ * CONTAINER
+ * A component for fixing an element's width to the current breakpoint.
+ * ******************************************************************************************* */
+
+.container
+
+/*
+ * none: width: 100%;
+ * sm:   max-width: 640px;
+ * md:   max-width: 768px;
+ * lg:   max-width: 1024px;
+ * xl:   max-width: 1280px;
+ */
+
+/* *******************************************************************************************
+ * BOX-SIZING
+ * Utilities for controlling how the browser should calculate an element's total size.
+ * By default, only responsive variants are generated for box-sizing utilities.
+ * ******************************************************************************************* */
+
+.box-border	 /* box-sizing: border-box; */
+.box-content /* box-sizing: content-box; */
