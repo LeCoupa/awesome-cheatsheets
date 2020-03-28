@@ -71,3 +71,13 @@
 .float-left  /* float: left; */
 .float-none  /* float: none; */
 .clearfix    /* &::after { content: ""; display: table; clear: both; } */
+
+/* *******************************************************************************************
+ * CLEAR
+ * Utilities for controlling the wrapping of content around an element.
+ * By default, only responsive variants are generated for clear utilities.
+ * ******************************************************************************************* */
+
+.clear-left  /* clear: left; */
+.clear-right /* clear: right; */
+.clear-both  /* clear: both; */
