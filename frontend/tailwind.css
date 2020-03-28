@@ -14,35 +14,34 @@
  * xl: min-width: 1280px;
  */
 
-/* *******************************************************************************************
- * CONTAINER
- * A component for fixing an element's width to the current breakpoint.
+ /* *******************************************************************************************
+ * LAYOUT
  * ******************************************************************************************* */
+
+/*
+ * Container
+ * ----------
+ * A component for fixing an element's width to the current breakpoint.
+ */
 
 .container
 
 /*
- * none: width: 100%;
- * sm:   max-width: 640px;
- * md:   max-width: 768px;
- * lg:   max-width: 1024px;
- * xl:   max-width: 1280px;
- */
-
-/* *******************************************************************************************
- * BOX-SIZING
+ * Box-sizing
+ * ----------
  * Utilities for controlling how the browser should calculate an element's total size.
  * By default, only responsive variants are generated for box-sizing utilities.
- * ******************************************************************************************* */
+ */
 
 .box-border  /* box-sizing: border-box; */
 .box-content /* box-sizing: content-box; */
 
-/* *******************************************************************************************
- * DISPLAY
+/*
+ * Display
+ * ----------
  * Utilities for controlling the display box type of an element.
  * By default, only responsive variants are generated for display utilities.
- * ******************************************************************************************* */
+ */
 
 .hidden             /* display: none; */
 .block              /* display: block; */
@@ -61,22 +60,24 @@
 .table-row-group    /* display: table-row-group; */
 .table-row          /* display: table-row; */
 
-/* *******************************************************************************************
- * FLOATS
+/*
+ * Floats
+ * ----------
  * Utilities for controlling the wrapping of content around an element.
  * By default, only responsive variants are generated for float utilities.
- * ******************************************************************************************* */
+ */
 
 .float-right /* float: right; */
 .float-left  /* float: left; */
 .float-none  /* float: none; */
 .clearfix    /* &::after { content: ""; display: table; clear: both; } */
 
-/* *******************************************************************************************
- * CLEAR
+/*
+ * Clear
+ * ----------
  * Utilities for controlling the wrapping of content around an element.
  * By default, only responsive variants are generated for clear utilities.
- * ******************************************************************************************* */
+ */
 
 .clear-left  /* clear: left; */
 .clear-right /* clear: right; */
