@@ -378,6 +378,14 @@ $table->dropUnique('users_email_unique');              // Drop a unique index fr
 $table->dropIndex('geo_state_index');                  // Drop a basic index from the "geo" table.
 $table->dropSpatialIndex('geo_location_spatialindex'); // Drop a spatial index from the "geo" table (except SQLite).
 
+// FOREIGN KEY CONSTRAINTS
+
+$table->foreign('user_id')->references('id')->on('users'); // Create foreign key constraints.
+$table->dropForeign('posts_user_id_foreign');              // Drop foreign key (accepts an array of strings).
+
+Schema::enableForeignKeyConstraints();  // Enable foreign key constraints within your migrations.
+Schema::disableForeignKeyConstraints(); // Disable foreign key constraints within your migrations.
+
 /********************************************************************************************
  * COLLECTION ELOQUENT METHODS
  * https://laravel.com/docs/5.7/collections
