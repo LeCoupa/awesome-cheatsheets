@@ -173,6 +173,12 @@ export default {
                 "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/react.js"
             },
             {
+              name: "Tailwind.css",
+              thumbnail: "tailwind.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/frontend/tailwind.css"
+            },
+            {
               name: "Vue.js",
               thumbnail: "vue.jpg",
               link:
@@ -201,16 +207,46 @@ export default {
                 "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/docker.sh"
             },
             {
+              name: "Git",
+              thumbnail: "git.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/git.sh"
+            },
+            {
+              name: "Heroku CLI",
+              thumbnail: "heroku.png",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/heroku.sh"
+            },
+            {
               name: "Kubernetes",
               thumbnail: "kubernetes.jpg",
               link:
                 "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/kubernetes.sh"
             },
             {
+              name: "Puppeteer",
+              thumbnail: "puppeteer.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/puppeteer.js"
+            },
+            {
+              name: "Sublime Text",
+              thumbnail: "sublime_text.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/sublime_text.md"
+            },
+            {
               name: "VIM",
               thumbnail: "vim.jpg",
               link:
                 "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/vim.txt"
+            },
+            {
+              name: "Visual Studio Code",
+              thumbnail: "visual_studio_code.jpg",
+              link:
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/vscode.md"
             },
             {
               name: "Xcode",
