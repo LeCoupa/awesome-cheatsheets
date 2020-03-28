@@ -69,6 +69,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 - [React.js](frontend/react.js)
 - [Vue.js](frontend/vue.js)
+- [Tailwind.css](frontend/tailwind.css)
 - [Ember.js](frontend/ember.js)
 - [Angular (2+)](frontend/angular.js)
 - [AngularJS](frontend/angularjs.js)
