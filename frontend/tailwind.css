@@ -31,8 +31,8 @@
  * By default, only responsive variants are generated for box-sizing utilities.
  */
 
-.box-border  /* box-sizing: border-box; */
-.box-content /* box-sizing: content-box; */
+.box-border   /* box-sizing: border-box; */
+.box-content  /* box-sizing: content-box; */
 
 /*
  * Display
@@ -41,22 +41,22 @@
  * By default, only responsive variants are generated for display utilities.
  */
 
-.hidden             /* display: none; */
-.block              /* display: block; */
-.inline-block       /* display: inline-block; */
-.inline             /* display: inline; */
-.flex               /* display: flex; */
-.inline-flex        /* display: inline-flex; */
-.grid               /* display: grid; */
-.table              /* display: table; */
-.table-caption      /* display: table-caption; */
-.table-cell         /* display: table-cell; */
-.table-column       /* display: table-column; */
-.table-column-group /* display: table-column-group; */
-.table-footer-group /* display: table-footer-group; */
-.table-header-group /* display: table-header-group; */
-.table-row-group    /* display: table-row-group; */
-.table-row          /* display: table-row; */
+.hidden              /* display: none; */
+.block               /* display: block; */
+.inline-block        /* display: inline-block; */
+.inline              /* display: inline; */
+.flex                /* display: flex; */
+.inline-flex         /* display: inline-flex; */
+.grid                /* display: grid; */
+.table               /* display: table; */
+.table-caption       /* display: table-caption; */
+.table-cell          /* display: table-cell; */
+.table-column        /* display: table-column; */
+.table-column-group  /* display: table-column-group; */
+.table-footer-group  /* display: table-footer-group; */
+.table-header-group  /* display: table-header-group; */
+.table-row-group     /* display: table-row-group; */
+.table-row           /* display: table-row; */
 
 /*
  * Floats
@@ -65,10 +65,10 @@
  * By default, only responsive variants are generated for float utilities.
  */
 
-.float-right /* float: right; */
-.float-left  /* float: left; */
-.float-none  /* float: none; */
-.clearfix    /* &::after { content: ""; display: table; clear: both; } */
+.float-right  /* float: right; */
+.float-left   /* float: left; */
+.float-none   /* float: none; */
+.clearfix     /* &::after { content: ""; display: table; clear: both; } */
 
 /*
  * Clear
@@ -77,9 +77,9 @@
  * By default, only responsive variants are generated for clear utilities.
  */
 
-.clear-left  /* clear: left; */
-.clear-right /* clear: right; */
-.clear-both  /* clear: both; */
+.clear-left   /* clear: left; */
+.clear-right  /* clear: right; */
+.clear-both   /* clear: both; */
 
 /*
  * Object Fit
@@ -88,11 +88,11 @@
  * By default, only responsive variants are generated for object-fit utilities.
  */
 
-.object-contain    /* object-fit: contain; */
-.object-cover      /* object-fit: cover; */
-.object-fill       /* object-fit: fill; */
-.object-none       /* object-fit: none; */
-.object-scale-down /* object-fit: scale-down; */
+.object-contain     /* object-fit: contain; */
+.object-cover       /* object-fit: cover; */
+.object-fill        /* object-fit: fill; */
+.object-none        /* object-fit: none; */
+.object-scale-down  /* object-fit: scale-down; */
 
 /*
  * Object Position
@@ -101,12 +101,12 @@
  * By default, only responsive variants are generated for object position utilities.
  */
 
-.object-bottom       /* object-position: bottom; */
-.object-center       /* object-position: center; */
-.object-left         /* object-position: left; */
-.object-left-bottom  /* object-position: left bottom; */
-.object-left-top     /* object-position: left top; */
-.object-right        /* object-position: right; */
-.object-right-bottom /* object-position: right bottom; */
-.object-right-top    /* object-position: right top; */
-.object-top          /* object-position: top; */
+.object-bottom        /* object-position: bottom; */
+.object-center        /* object-position: center; */
+.object-left          /* object-position: left; */
+.object-left-bottom   /* object-position: left bottom; */
+.object-left-top      /* object-position: left top; */
+.object-right         /* object-position: right; */
+.object-right-bottom  /* object-position: right bottom; */
+.object-right-top     /* object-position: right top; */
+.object-top           /* object-position: top; */
