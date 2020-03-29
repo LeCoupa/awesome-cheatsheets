@@ -223,10 +223,16 @@
 /*
  * Align Items
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items are positioned along a container's cross axis.
+ * By default, only responsive variants are generated for align-items utilities.
  */
- 
+
+.items-stretch   /* align-items: stretch; */
+.items-start     /* align-items: flex-start; */
+.items-center    /* align-items: center; */
+.items-end       /* align-items: flex-end; */
+.items-baseline  /* align-items: baseline; */
+
 /*
  * Align Content
  * ----------
