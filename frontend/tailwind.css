@@ -1976,42 +1976,189 @@
 /* *******************************************************************************************
  * TRANSFORMS
  * ******************************************************************************************* */
- 
+
 /*
  * SCALE
  * --------------------
  * Utilities for scaling elements with transform.
- * 
+ * By default, only responsive, hover and focus variants are generated for scale utilities.
  */
- 
+
+.scale-0      /* --transform-scale-x: 0; --transform-scale-y: 0; */
+.scale-50     /* --transform-scale-x: .5; --transform-scale-y: .5; */
+.scale-75     /* --transform-scale-x: .75; --transform-scale-y: .75; */
+.scale-90     /* --transform-scale-x: .9; --transform-scale-y: .9; */
+.scale-95     /* --transform-scale-x: .95; --transform-scale-y: .95; */
+.scale-100    /* --transform-scale-x: 1; --transform-scale-y: 1; */
+.scale-105    /* --transform-scale-x: 1.05; --transform-scale-y: 1.05; */
+.scale-110    /* --transform-scale-x: 1.1; --transform-scale-y: 1.1; */
+.scale-125    /* --transform-scale-x: 1.25; --transform-scale-y: 1.25; */
+.scale-150    /* --transform-scale-x: 1.5; --transform-scale-y: 1.5; */
+.scale-x-0    /* --transform-scale-x: 0; */
+.scale-x-50   /* --transform-scale-x: .5; */
+.scale-x-75   /* --transform-scale-x: .75; */
+.scale-x-90   /* --transform-scale-x: .9; */
+.scale-x-95   /* --transform-scale-x: .95; */
+.scale-x-100  /* --transform-scale-x: 1; */
+.scale-x-105  /* --transform-scale-x: 1.05; */
+.scale-x-110  /* --transform-scale-x: 1.1; */
+.scale-x-125  /* --transform-scale-x: 1.25; */
+.scale-x-150  /* --transform-scale-x: 1.5; */
+.scale-y-0    /* --transform-scale-y: 0; */
+.scale-y-50   /* --transform-scale-y: .5; */
+.scale-y-75   /* --transform-scale-y: .75; */
+.scale-y-90   /* --transform-scale-y: .9; */
+.scale-y-95   /* --transform-scale-y: .95; */
+.scale-y-100  /* --transform-scale-y: 1; */
+.scale-y-105  /* --transform-scale-y: 1.05; */
+.scale-y-110  /* --transform-scale-y: 1.1; */
+.scale-y-125  /* --transform-scale-y: 1.25; */
+.scale-y-150  /* --transform-scale-y: 1.5; */
+
 /*
  * ROTATE
  * --------------------
  * Utilities for rotating elements with transform.
- * 
+ * By default, only responsive, hover and focus variants are generated for rotate utilities.
  */
- 
+
+.rotate-0     /* --transform-rotate: 0; */
+.rotate-45    /* --transform-rotate: 45deg; */
+.rotate-90    /* --transform-rotate: 90deg; */
+.rotate-180   /* --transform-rotate: 180deg; */
+.-rotate-180  /* --transform-rotate: -180deg; */
+.-rotate-90   /* --transform-rotate: -90deg; */
+.-rotate-45   /* --transform-rotate: -45deg; */
+
 /*
  * TRANSLATE
  * --------------------
  * Utilities for translating elements with transform.
- * 
+ * By default, only responsive, hover and focus variants are generated for translate utilities.
  */
- 
+
+.translate-x-0      /* --transform-translate-x: 0; */
+.translate-x-1      /* --transform-translate-x: 0.25rem; */
+.translate-x-2      /* --transform-translate-x: 0.5rem; */
+.translate-x-3      /* --transform-translate-x: 0.75rem; */
+.translate-x-4      /* --transform-translate-x: 1rem; */
+.translate-x-5      /* --transform-translate-x: 1.25rem; */
+.translate-x-6      /* --transform-translate-x: 1.5rem; */
+.translate-x-8      /* --transform-translate-x: 2rem; */
+.translate-x-10     /* --transform-translate-x: 2.5rem; */
+.translate-x-12     /* --transform-translate-x: 3rem; */
+.translate-x-16     /* --transform-translate-x: 4rem; */
+.translate-x-20     /* --transform-translate-x: 5rem; */
+.translate-x-24     /* --transform-translate-x: 6rem; */
+.translate-x-32     /* --transform-translate-x: 8rem; */
+.translate-x-40     /* --transform-translate-x: 10rem; */
+.translate-x-48     /* --transform-translate-x: 12rem; */
+.translate-x-56     /* --transform-translate-x: 14rem; */
+.translate-x-64     /* --transform-translate-x: 16rem; */
+.translate-x-px     /* --transform-translate-x: 1px; */
+.-translate-x-1     /* --transform-translate-x: -0.25rem; */
+.-translate-x-2     /* --transform-translate-x: -0.5rem; */
+.-translate-x-3     /* --transform-translate-x: -0.75rem; */
+.-translate-x-4     /* --transform-translate-x: -1rem; */
+.-translate-x-5     /* --transform-translate-x: -1.25rem; */
+.-translate-x-6     /* --transform-translate-x: -1.5rem; */
+.-translate-x-8     /* --transform-translate-x: -2rem; */
+.-translate-x-10    /* --transform-translate-x: -2.5rem; */
+.-translate-x-12    /* --transform-translate-x: -3rem; */
+.-translate-x-16    /* --transform-translate-x: -4rem; */
+.-translate-x-20    /* --transform-translate-x: -5rem; */
+.-translate-x-24    /* --transform-translate-x: -6rem; */
+.-translate-x-32    /* --transform-translate-x: -8rem; */
+.-translate-x-40    /* --transform-translate-x: -10rem; */
+.-translate-x-48    /* --transform-translate-x: -12rem; */
+.-translate-x-56    /* --transform-translate-x: -14rem; */
+.-translate-x-64    /* --transform-translate-x: -16rem; */
+.-translate-x-px    /* --transform-translate-x: -1px; */
+.-translate-x-full  /* --transform-translate-x: -100%; */
+.-translate-x-1/2   /* --transform-translate-x: -50%; */
+.translate-x-1/2    /* --transform-translate-x: 50%; */
+.translate-x-full   /* --transform-translate-x: 100%; */
+.translate-y-0      /* --transform-translate-y: 0; */
+.translate-y-1      /* --transform-translate-y: 0.25rem; */
+.translate-y-2      /* --transform-translate-y: 0.5rem; */
+.translate-y-3      /* --transform-translate-y: 0.75rem; */
+.translate-y-4      /* --transform-translate-y: 1rem; */
+.translate-y-5      /* --transform-translate-y: 1.25rem; */
+.translate-y-6      /* --transform-translate-y: 1.5rem; */
+.translate-y-8      /* --transform-translate-y: 2rem; */
+.translate-y-10     /* --transform-translate-y: 2.5rem; */
+.translate-y-12     /* --transform-translate-y: 3rem; */
+.translate-y-16     /* --transform-translate-y: 4rem; */
+.translate-y-20     /* --transform-translate-y: 5rem; */
+.translate-y-24     /* --transform-translate-y: 6rem; */
+.translate-y-32     /* --transform-translate-y: 8rem; */
+.translate-y-40     /* --transform-translate-y: 10rem; */
+.translate-y-48     /* --transform-translate-y: 12rem; */
+.translate-y-56     /* --transform-translate-y: 14rem; */
+.translate-y-64     /* --transform-translate-y: 16rem; */
+.translate-y-px     /* --transform-translate-y: 1px; */
+.-translate-y-1     /* --transform-translate-y: -0.25rem; */
+.-translate-y-2     /* --transform-translate-y: -0.5rem; */
+.-translate-y-3     /* --transform-translate-y: -0.75rem; */
+.-translate-y-4     /* --transform-translate-y: -1rem; */
+.-translate-y-5     /* --transform-translate-y: -1.25rem; */
+.-translate-y-6     /* --transform-translate-y: -1.5rem; */
+.-translate-y-8     /* --transform-translate-y: -2rem; */
+.-translate-y-10    /* --transform-translate-y: -2.5rem; */
+.-translate-y-12    /* --transform-translate-y: -3rem; */
+.-translate-y-16    /* --transform-translate-y: -4rem; */
+.-translate-y-20    /* --transform-translate-y: -5rem; */
+.-translate-y-24    /* --transform-translate-y: -6rem; */
+.-translate-y-32    /* --transform-translate-y: -8rem; */
+.-translate-y-40    /* --transform-translate-y: -10rem; */
+.-translate-y-48    /* --transform-translate-y: -12rem; */
+.-translate-y-56    /* --transform-translate-y: -14rem; */
+.-translate-y-64    /* --transform-translate-y: -16rem; */
+.-translate-y-px    /* --transform-translate-y: -1px; */
+.-translate-y-full  /* --transform-translate-y: -100%; */
+.-translate-y-1/2   /* --transform-translate-y: -50%; */
+.translate-y-1/2    /* --transform-translate-y: 50%; */
+.translate-y-full   /* --transform-translate-y: 100%; */
+
 /*
  * SKEW
  * --------------------
  * Utilities for translating elements with transform.
- * 
+ * By default, only responsive, hover and focus variants are generated for skew utilities.
  */
- 
+
+.skew-x-0    /* --transform-skew-x: 0; */
+.skew-x-3    /* --transform-skew-x: 3deg; */
+.skew-x-6    /* --transform-skew-x: 6deg; */
+.skew-x-12   /* --transform-skew-x: 12deg; */
+.-skew-x-12  /* --transform-skew-x: -12deg; */
+.-skew-x-6   /* --transform-skew-x: -6deg; */
+.-skew-x-3   /* --transform-skew-x: -3deg; */
+.skew-y-0    /* --transform-skew-y: 0; */
+.skew-y-3    /* --transform-skew-y: 3deg; */
+.skew-y-6    /* --transform-skew-y: 6deg; */
+.skew-y-12   /* --transform-skew-y: 12deg; */
+.-skew-y-12  /* --transform-skew-y: -12deg; */
+.-skew-y-6   /* --transform-skew-y: -6deg; */
+.-skew-y-3   /* --transform-skew-y: -3deg; */
+
 /*
  * TRANSFORM ORIGIN
  * --------------------
  * Utilities for specifying the origin for an element's transformations.
- * 
+ * By default, only responsive variants are generated for transform-origin utilities.
  */
- 
+
+.origin-center        /* transform-origin: center; */
+.origin-top           /* transform-origin: top; */
+.origin-top-right     /* transform-origin: top right; */
+.origin-right         /* transform-origin: right; */
+.origin-bottom-right  /* transform-origin: bottom right; */
+.origin-bottom        /* transform-origin: bottom; */
+.origin-bottom-left   /* transform-origin: bottom left; */
+.origin-left          /* transform-origin: left; */
+.origin-top-left      /* transform-origin: top left; */
+
 /* *******************************************************************************************
  * INTERACTIVITY
  * ******************************************************************************************* */
