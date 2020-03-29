@@ -1503,38 +1503,157 @@
 /*
  * BACKGROUND ATTACHMENT
  * --------------------
- * 
- * 
+ * Utilities for controlling how a background image behaves when scrolling.
+ * By default, only responsive variants are generated for background attachment utilities.
  */
- 
+
+.bg-fixed   /* background-attachment: fixed; */
+.bg-local   /* background-attachment: local; */
+.bg-scroll  /* background-attachment: scroll; */
+
 /*
  * BACKGROUND COLOR
  * --------------------
- * 
- * 
+ * Utilities for controlling how a background image behaves when scrolling.
+ * By default, only responsive, hover and focus variants are generated for background color utilities.
  */
- 
+
+.bg-transparent  /* background-color: transparent; */
+.bg-black        /* background-color: #000; */
+.bg-white        /* background-color: #fff; */
+.bg-gray-100     /* background-color: #f7fafc; */
+.bg-gray-200     /* background-color: #edf2f7; */
+.bg-gray-300     /* background-color: #e2e8f0; */
+.bg-gray-400     /* background-color: #cbd5e0; */
+.bg-gray-500     /* background-color: #a0aec0; */
+.bg-gray-600     /* background-color: #718096; */
+.bg-gray-700     /* background-color: #4a5568; */
+.bg-gray-800     /* background-color: #2d3748; */
+.bg-gray-900     /* background-color: #1a202c; */
+.bg-red-100      /* background-color: #fff5f5; */
+.bg-red-200      /* background-color: #fed7d7; */
+.bg-red-300      /* background-color: #feb2b2; */
+.bg-red-400      /* background-color: #fc8181; */
+.bg-red-500      /* background-color: #f56565; */
+.bg-red-600      /* background-color: #e53e3e; */
+.bg-red-700      /* background-color: #c53030; */
+.bg-red-800      /* background-color: #9b2c2c; */
+.bg-red-900      /* background-color: #742a2a; */
+.bg-orange-100   /* background-color: #fffaf0; */
+.bg-orange-200   /* background-color: #feebc8; */
+.bg-orange-300   /* background-color: #fbd38d; */
+.bg-orange-400   /* background-color: #f6ad55; */
+.bg-orange-500   /* background-color: #ed8936; */
+.bg-orange-600   /* background-color: #dd6b20; */
+.bg-orange-700   /* background-color: #c05621; */
+.bg-orange-800   /* background-color: #9c4221; */
+.bg-orange-900   /* background-color: #7b341e; */
+.bg-yellow-100   /* background-color: #fffff0; */
+.bg-yellow-200   /* background-color: #fefcbf; */
+.bg-yellow-300   /* background-color: #faf089; */
+.bg-yellow-400   /* background-color: #f6e05e; */
+.bg-yellow-500   /* background-color: #ecc94b; */
+.bg-yellow-600   /* background-color: #d69e2e; */
+.bg-yellow-700   /* background-color: #b7791f; */
+.bg-yellow-800   /* background-color: #975a16; */
+.bg-yellow-900   /* background-color: #744210; */
+.bg-green-100    /* background-color: #f0fff4; */
+.bg-green-200    /* background-color: #c6f6d5; */
+.bg-green-300    /* background-color: #9ae6b4; */
+.bg-green-400    /* background-color: #68d391; */
+.bg-green-500    /* background-color: #48bb78; */
+.bg-green-600    /* background-color: #38a169; */
+.bg-green-700    /* background-color: #2f855a; */
+.bg-green-800    /* background-color: #276749; */
+.bg-green-900    /* background-color: #22543d; */
+.bg-teal-100     /* background-color: #e6fffa; */
+.bg-teal-200     /* background-color: #b2f5ea; */
+.bg-teal-300     /* background-color: #81e6d9; */
+.bg-teal-400     /* background-color: #4fd1c5; */
+.bg-teal-500     /* background-color: #38b2ac; */
+.bg-teal-600     /* background-color: #319795; */
+.bg-teal-700     /* background-color: #2c7a7b; */
+.bg-teal-800     /* background-color: #285e61; */
+.bg-teal-900     /* background-color: #234e52; */
+.bg-blue-100     /* background-color: #ebf8ff; */
+.bg-blue-200     /* background-color: #bee3f8; */
+.bg-blue-300     /* background-color: #90cdf4; */
+.bg-blue-400     /* background-color: #63b3ed; */
+.bg-blue-500     /* background-color: #4299e1; */
+.bg-blue-600     /* background-color: #3182ce; */
+.bg-blue-700     /* background-color: #2b6cb0; */
+.bg-blue-800     /* background-color: #2c5282; */
+.bg-blue-900     /* background-color: #2a4365; */
+.bg-indigo-100   /* background-color: #ebf4ff; */
+.bg-indigo-200   /* background-color: #c3dafe; */
+.bg-indigo-300   /* background-color: #a3bffa; */
+.bg-indigo-400   /* background-color: #7f9cf5; */
+.bg-indigo-500   /* background-color: #667eea; */
+.bg-indigo-600   /* background-color: #5a67d8; */
+.bg-indigo-700   /* background-color: #4c51bf; */
+.bg-indigo-800   /* background-color: #434190; */
+.bg-indigo-900   /* background-color: #3c366b; */
+.bg-purple-100   /* background-color: #faf5ff; */
+.bg-purple-200   /* background-color: #e9d8fd; */
+.bg-purple-300   /* background-color: #d6bcfa; */
+.bg-purple-400   /* background-color: #b794f4; */
+.bg-purple-500   /* background-color: #9f7aea; */
+.bg-purple-600   /* background-color: #805ad5; */
+.bg-purple-700   /* background-color: #6b46c1; */
+.bg-purple-800   /* background-color: #553c9a; */
+.bg-purple-900   /* background-color: #44337a; */
+.bg-pink-100     /* background-color: #fff5f7; */
+.bg-pink-200     /* background-color: #fed7e2; */
+.bg-pink-300     /* background-color: #fbb6ce; */
+.bg-pink-400     /* background-color: #f687b3; */
+.bg-pink-500     /* background-color: #ed64a6; */
+.bg-pink-600     /* background-color: #d53f8c; */
+.bg-pink-700     /* background-color: #b83280; */
+.bg-pink-800     /* background-color: #97266d; */
+.bg-pink-900     /* background-color: #702459; */
+
 /*
  * BACKGROUND POSITION
  * --------------------
- * 
- * 
+ * Utilities for controlling how a background image behaves when scrolling.
+ * By default, only responsive variants are generated for background position utilities.
  */
- 
+
+.bg-bottom        /* background-position: bottom; */
+.bg-center        /* background-position: center; */
+.bg-left          /* background-position: left; */
+.bg-left-bottom   /* background-position: left bottom; */
+.bg-left-top      /* background-position: left top; */
+.bg-right         /* background-position: right; */
+.bg-right-bottom  /* background-position: right bottom; */
+.bg-right-top     /* background-position: right top; */
+.bg-top           /* background-position: top; */
+
 /*
  * BACKGROUND REPEAT
  * --------------------
- * 
- * 
+ * Utilities for controlling the repetition of an element's background image.
+ * By default, only responsive variants are generated for background repeat utilities.
  */
- 
+
+.bg-repeat        /* background-repeat: repeat; */
+.bg-no-repeat     /* background-repeat: no-repeat; */
+.bg-repeat-x      /* background-repeat: repeat-x; */
+.bg-repeat-y      /* background-repeat: repeat-y; */
+.bg-repeat-round  /* background-repeat: round; */
+.bg-repeat-space  /* background-repeat: space; */
+
 /*
  * BACKGROUND SIZE
  * --------------------
- * 
- * 
+ * Utilities for controlling the background size of an element's background image.
+ * By default, only responsive variants are generated for background size utilities.
  */
- 
+
+ .bg-auto     /* background-size: auto; */
+ .bg-cover    /* background-size: cover; */
+ .bg-contain  /* background-size: contain; */
+
 /* *******************************************************************************************
  * BORDERS
  * ******************************************************************************************* */
