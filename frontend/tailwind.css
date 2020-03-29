@@ -212,10 +212,14 @@
 /*
  * Flex Wrap
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items wrap.
+ * By default, only responsive variants are generated for flex-wrap utilities.
  */
- 
+
+.flex-no-wrap       /* flex-wrap: nowrap; */
+.flex-wrap          /* flex-wrap: wrap; */
+.flex-wrap-reverse  /* flex-wrap: wrap-reverse; */
+
 /*
  * Align Items
  * ----------
