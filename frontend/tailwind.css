@@ -1867,6 +1867,20 @@
 .rounded-br-full  /* border-bottom-right-radius: 9999px; */
 .rounded-bl-full  /* border-bottom-left-radius: 9999px; */
 
+/* *******************************************************************************************
+ * TABLES
+ * ******************************************************************************************* */
+
+/*
+ * TABLE LAYOUT
+ * --------------------
+ * Utilities for controlling the table layout algorithm.
+ * By default, only responsive variants are generated for table layout utilities.
+ */
+
+.table-auto   /* table-layout: auto; */
+.table-fixed  /* table-layout: fixed; */
+
 /*
  * BORDER COLLAPSE
  * --------------------
@@ -1876,17 +1890,6 @@
 
 .border-collapse  /* border-collapse: collapse; */
 .border-separate  /* border-collapse: separate; */
-
-/* *******************************************************************************************
- * TABLES
- * ******************************************************************************************* */
-
-/*
- * TABLE LAYOUT
- * --------------------
- * Utilities for controlling the table layout algorithm.
- * 
- */
  
 /* *******************************************************************************************
  * EFFECTS
