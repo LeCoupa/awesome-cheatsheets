@@ -1661,31 +1661,212 @@
 /*
  * BORDER COLOR
  * --------------------
- * 
- * 
+ * Utilities for controlling the color of an element's borders.
+ * By default, only responsive, hover and focus variants are generated for border color utilities.
  */
- 
+
+.border-transparent  /* border-color: transparent; */
+.border-black        /* border-color: #000; */
+.border-white        /* border-color: #fff; */
+.border-gray-100     /* border-color: #f7fafc; */
+.border-gray-200     /* border-color: #edf2f7; */
+.border-gray-300     /* border-color: #e2e8f0; */
+.border-gray-400     /* border-color: #cbd5e0; */
+.border-gray-500     /* border-color: #a0aec0; */
+.border-gray-600     /* border-color: #718096; */
+.border-gray-700     /* border-color: #4a5568; */
+.border-gray-800     /* border-color: #2d3748; */
+.border-gray-900     /* border-color: #1a202c; */
+.border-red-100      /* border-color: #fff5f5; */
+.border-red-200      /* border-color: #fed7d7; */
+.border-red-300      /* border-color: #feb2b2; */
+.border-red-400      /* border-color: #fc8181; */
+.border-red-500      /* border-color: #f56565; */
+.border-red-600      /* border-color: #e53e3e; */
+.border-red-700      /* border-color: #c53030; */
+.border-red-800      /* border-color: #9b2c2c; */
+.border-red-900      /* border-color: #742a2a; */
+.border-orange-100   /* border-color: #fffaf0; */
+.border-orange-200   /* border-color: #feebc8; */
+.border-orange-300   /* border-color: #fbd38d; */
+.border-orange-400   /* border-color: #f6ad55; */
+.border-orange-500   /* border-color: #ed8936; */
+.border-orange-600   /* border-color: #dd6b20; */
+.border-orange-700   /* border-color: #c05621; */
+.border-orange-800   /* border-color: #9c4221; */
+.border-orange-900   /* border-color: #7b341e; */
+.border-yellow-100   /* border-color: #fffff0; */
+.border-yellow-200   /* border-color: #fefcbf; */
+.border-yellow-300   /* border-color: #faf089; */
+.border-yellow-400   /* border-color: #f6e05e; */
+.border-yellow-500   /* border-color: #ecc94b; */
+.border-yellow-600   /* border-color: #d69e2e; */
+.border-yellow-700   /* border-color: #b7791f; */
+.border-yellow-800   /* border-color: #975a16; */
+.border-yellow-900   /* border-color: #744210; */
+.border-green-100    /* border-color: #f0fff4; */
+.border-green-200    /* border-color: #c6f6d5; */
+.border-green-300    /* border-color: #9ae6b4; */
+.border-green-400    /* border-color: #68d391; */
+.border-green-500    /* border-color: #48bb78; */
+.border-green-600    /* border-color: #38a169; */
+.border-green-700    /* border-color: #2f855a; */
+.border-green-800    /* border-color: #276749; */
+.border-green-900    /* border-color: #22543d; */
+.border-teal-100     /* border-color: #e6fffa; */
+.border-teal-200     /* border-color: #b2f5ea; */
+.border-teal-300     /* border-color: #81e6d9; */
+.border-teal-400     /* border-color: #4fd1c5; */
+.border-teal-500     /* border-color: #38b2ac; */
+.border-teal-600     /* border-color: #319795; */
+.border-teal-700     /* border-color: #2c7a7b; */
+.border-teal-800     /* border-color: #285e61; */
+.border-teal-900     /* border-color: #234e52; */
+.border-blue-100     /* border-color: #ebf8ff; */
+.border-blue-200     /* border-color: #bee3f8; */
+.border-blue-300     /* border-color: #90cdf4; */
+.border-blue-400     /* border-color: #63b3ed; */
+.border-blue-500     /* border-color: #4299e1; */
+.border-blue-600     /* border-color: #3182ce; */
+.border-blue-700     /* border-color: #2b6cb0; */
+.border-blue-800     /* border-color: #2c5282; */
+.border-blue-900     /* border-color: #2a4365; */
+.border-indigo-100   /* border-color: #ebf4ff; */
+.border-indigo-200   /* border-color: #c3dafe; */
+.border-indigo-300   /* border-color: #a3bffa; */
+.border-indigo-400   /* border-color: #7f9cf5; */
+.border-indigo-500   /* border-color: #667eea; */
+.border-indigo-600   /* border-color: #5a67d8; */
+.border-indigo-700   /* border-color: #4c51bf; */
+.border-indigo-800   /* border-color: #434190; */
+.border-indigo-900   /* border-color: #3c366b; */
+.border-purple-100   /* border-color: #faf5ff; */
+.border-purple-200   /* border-color: #e9d8fd; */
+.border-purple-300   /* border-color: #d6bcfa; */
+.border-purple-400   /* border-color: #b794f4; */
+.border-purple-500   /* border-color: #9f7aea; */
+.border-purple-600   /* border-color: #805ad5; */
+.border-purple-700   /* border-color: #6b46c1; */
+.border-purple-800   /* border-color: #553c9a; */
+.border-purple-900   /* border-color: #44337a; */
+.border-pink-100     /* border-color: #fff5f7; */
+.border-pink-200     /* border-color: #fed7e2; */
+.border-pink-300     /* border-color: #fbb6ce; */
+.border-pink-400     /* border-color: #f687b3; */
+.border-pink-500     /* border-color: #ed64a6; */
+.border-pink-600     /* border-color: #d53f8c; */
+.border-pink-700     /* border-color: #b83280; */
+.border-pink-800     /* border-color: #97266d; */
+.border-pink-900     /* border-color: #702459; */
+
 /*
  * BORDER STYLE
  * --------------------
- * 
- * 
+ * Utilities for controlling the style of an element's borders.
+ * By default, only responsive variants are generated for border style utilities.
  */
- 
+
+.border-solid   /* border-style: solid; */
+.border-dashed  /* border-style: dashed; */
+.border-dotted  /* border-style: dotted; */
+.border-double  /* border-style: double; */
+.border-none    /* border-style: none; */
+
 /*
  * BORDER WIDTH
  * --------------------
- * 
- * 
+ * Utilities for controlling the width of an element's borders.
+ * By default, only responsive variants are generated for border width utilities.
  */
- 
+
+.border      /* border-width: 1px; */
+.border-0    /* border-width: 0; */
+.border-2    /* border-width: 2px; */
+.border-4    /* border-width: 4px; */
+.border-8    /* border-width: 8px; */
+.border-t    /* border-top-width: 1px; */
+.border-r    /* border-right-width: 1px; */
+.border-b    /* border-bottom-width: 1px; */
+.border-l    /* border-left-width: 1px; */
+.border-t-0  /* border-top-width: 0; */
+.border-r-0  /* border-right-width: 0; */
+.border-b-0  /* border-bottom-width: 0; */
+.border-l-0  /* border-left-width: 0; */
+.border-t-2  /* border-top-width: 2px; */
+.border-r-2  /* border-right-width: 2px; */
+.border-b-2  /* border-bottom-width: 2px; */
+.border-l-2  /* border-left-width: 2px; */
+.border-t-4  /* border-top-width: 4px; */
+.border-r-4  /* border-right-width: 4px; */
+.border-b-4  /* border-bottom-width: 4px; */
+.border-l-4  /* border-left-width: 4px; */
+.border-t-8  /* border-top-width: 8px; */
+.border-r-8  /* border-right-width: 8px; */
+.border-b-8  /* border-bottom-width: 8px; */
+.border-l-8  /* border-left-width: 8px; */
+
 /*
  * BORDER RADIUS
  * --------------------
- * 
- * 
+ * Utilities for controlling the border radius of an element.
+ * By default, only responsive variants are generated for border radius utilities.
  */
- 
+
+.rounded-none     /* border-radius: 0; */
+.rounded-sm       /* border-radius: 0.125rem; */
+.rounded          /* border-radius: 0.25rem; */
+.rounded-md       /* border-radius: 0.375rem; */
+.rounded-lg       /* border-radius: 0.5rem; */
+.rounded-full     /* border-radius: 9999px; */
+.rounded-t-none   /* border-top-left-radius: 0; border-top-right-radius: 0; */
+.rounded-r-none   /* border-top-right-radius: 0; border-bottom-right-radius: 0; */
+.rounded-b-none   /* border-bottom-right-radius: 0; border-bottom-left-radius: 0; */
+.rounded-l-none   /* border-top-left-radius: 0; border-bottom-left-radius: 0; */
+.rounded-t-sm     /* border-top-left-radius: 0.125rem; border-top-right-radius: 0.125rem; */
+.rounded-r-sm     /* border-top-right-radius: 0.125rem; border-bottom-right-radius: 0.125rem; */
+.rounded-b-sm     /* border-bottom-right-radius: 0.125rem; border-bottom-left-radius: 0.125rem; */
+.rounded-l-sm     /* border-top-left-radius: 0.125rem; border-bottom-left-radius: 0.125rem; */
+.rounded-t        /* border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; */
+.rounded-r        /* border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; */
+.rounded-b        /* border-bottom-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; */
+.rounded-l        /* border-top-left-radius: 0.25rem; border-bottom-left-radius: 0.25rem; */
+.rounded-t-md     /* border-top-left-radius: 0.375rem; border-top-right-radius: 0.375rem; */
+.rounded-r-md     /* border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem; */
+.rounded-b-md     /* border-bottom-right-radius: 0.375rem; border-bottom-left-radius: 0.375rem; */
+.rounded-l-md     /* border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem; */
+.rounded-t-lg     /* border-top-left-radius: 0.5rem; border-top-right-radius: 0.5rem; */
+.rounded-r-lg     /* border-top-right-radius: 0.5rem; border-bottom-right-radius: 0.5rem; */
+.rounded-b-lg     /* border-bottom-right-radius: 0.5rem; border-bottom-left-radius: 0.5rem; */
+.rounded-l-lg     /* border-top-left-radius: 0.5rem; border-bottom-left-radius: 0.5rem; */
+.rounded-t-full   /* border-top-left-radius: 9999px; border-top-right-radius: 9999px; */
+.rounded-r-full   /* border-top-right-radius: 9999px; border-bottom-right-radius: 9999px; */
+.rounded-b-full   /* border-bottom-right-radius: 9999px; border-bottom-left-radius: 9999px; */
+.rounded-l-full   /* border-top-left-radius: 9999px; border-bottom-left-radius: 9999px; */
+.rounded-tl-none  /* border-top-left-radius: 0; */
+.rounded-tr-none  /* border-top-right-radius: 0; */
+.rounded-br-none  /* border-bottom-right-radius: 0; */
+.rounded-bl-none  /* border-bottom-left-radius: 0; */
+.rounded-tl-sm    /* border-top-left-radius: 0.125rem; */
+.rounded-tr-sm    /* border-top-right-radius: 0.125rem; */
+.rounded-br-sm    /* border-bottom-right-radius: 0.125rem; */
+.rounded-bl-sm    /* border-bottom-left-radius: 0.125rem; */
+.rounded-tl       /* border-top-left-radius: 0.25rem; */
+.rounded-tr       /* border-top-right-radius: 0.25rem; */
+.rounded-br       /* border-bottom-right-radius: 0.25rem; */
+.rounded-bl       /* border-bottom-left-radius: 0.25rem; */
+.rounded-tl-md    /* border-top-left-radius: 0.375rem; */
+.rounded-tr-md    /* border-top-right-radius: 0.375rem; */
+.rounded-br-md    /* border-bottom-right-radius: 0.375rem; */
+.rounded-bl-md    /* border-bottom-left-radius: 0.375rem; */
+.rounded-tl-lg    /* border-top-left-radius: 0.5rem; */
+.rounded-tr-lg    /* border-top-right-radius: 0.5rem; */
+.rounded-br-lg    /* border-bottom-right-radius: 0.5rem; */
+.rounded-bl-lg    /* border-bottom-left-radius: 0.5rem; */
+.rounded-tl-full  /* border-top-left-radius: 9999px; */
+.rounded-tr-full  /* border-top-right-radius: 9999px; */
+.rounded-br-full  /* border-bottom-right-radius: 9999px; */
+.rounded-bl-full  /* border-bottom-left-radius: 9999px; */
+
 /* *******************************************************************************************
  * TABLES
  * ******************************************************************************************* */
@@ -1693,14 +1874,14 @@
 /*
  * BORDER COLLAPSE
  * --------------------
- * 
+ * Utilities for controlling whether table borders should collapse or be separated.
  * 
  */
  
 /*
  * TABLE LAYOUT
  * --------------------
- * 
+ * Utilities for controlling the table layout algorithm.
  * 
  */
  
@@ -1711,7 +1892,7 @@
 /*
  * BOX SHADOW
  * --------------------
- * 
+ * Utilities for controlling the box shadow of an element.
  * 
  */
  
@@ -1719,7 +1900,7 @@
 /*
  * OPACITY
  * --------------------
- * 
+ * Utilities for controlling the opacity of an element.
  * 
  */
  
@@ -1730,21 +1911,21 @@
 /*
  * TRANSITION PROPERTY
  * --------------------
- * 
+ * Utilities for controlling which CSS properties transition.
  * 
  */
  
 /*
  * TRANSITION DURATION
  * --------------------
- * 
+ * Utilities for controlling the duration of CSS transitions.
  * 
  */
  
 /*
  * TRANSITION TIMING FUNCTION
  * --------------------
- * 
+ * Utilities for controlling the easing of CSS transitions.
  * 
  */
  
@@ -1755,35 +1936,35 @@
 /*
  * SCALE
  * --------------------
- * 
+ * Utilities for scaling elements with transform.
  * 
  */
  
 /*
  * ROTATE
  * --------------------
- * 
+ * Utilities for rotating elements with transform.
  * 
  */
  
 /*
  * TRANSLATE
  * --------------------
- * 
+ * Utilities for translating elements with transform.
  * 
  */
  
 /*
  * SKEW
  * --------------------
- * 
+ * Utilities for translating elements with transform.
  * 
  */
  
 /*
  * TRANSFORM ORIGIN
  * --------------------
- * 
+ * Utilities for specifying the origin for an element's transformations.
  * 
  */
  
@@ -1794,42 +1975,42 @@
 /*
  * APPEARANCE
  * --------------------
- * 
+ * Utilities for suppressing native form control styling.
  * 
  */
  
 /*
  * CURSOR
  * --------------------
- * 
+ * Utilities for controlling the cursor style when hovering over an element.
  * 
  */
  
 /*
  * OUTLINE
  * --------------------
- * 
+ * Utilities for controlling an element's outline.
  * 
  */
  
 /*
  * POINTER EVENTS
  * --------------------
- * 
+ * Utilities for controlling whether an element responds to pointer events.
  * 
  */
  
 /*
  * RESIZE
  * --------------------
- * 
+ * Utilities for controlling how an element can be resized.
  * 
  */
  
 /*
  * USER SELECT
  * --------------------
- * 
+ * Utilities for controlling whether the user can select text in an element.
  * 
  */
  
@@ -1840,21 +2021,21 @@
 /*
  * FILL
  * --------------------
- * 
+ * Utilities for styling the fill of SVG elements.
  * 
  */
  
 /*
  * STROKE
  * --------------------
- * 
+ * Utilities for styling the stroke of SVG elements.
  * 
  */
  
 /*
  * STROKE WIDTH
  * --------------------
- * 
+ * Utilities for styling the stroke width of SVG elements.
  * 
  */
  
@@ -1865,7 +2046,7 @@
 /*
  * SCREEN READERS
  * --------------------
- * 
+ * Utilities for improving accessibility with screen readers.
  * 
  */
  
