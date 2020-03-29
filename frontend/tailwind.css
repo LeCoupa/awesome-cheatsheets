@@ -12,9 +12,9 @@
  * xl: min-width: 1280px;
  */
 
- /* *******************************************************************************************
- * LAYOUT
- * ******************************************************************************************* */
+/* *******************************************************************************************
+* LAYOUT
+* ******************************************************************************************* */
 
 /*
  * Container
@@ -22,113 +22,708 @@
  * A component for fixing an element's width to the current breakpoint.
  */
 
-.container
+ .container
 
-/*
- * Box-sizing
- * ----------
- * Utilities for controlling how the browser should calculate an element's total size.
- * By default, only responsive variants are generated for box-sizing utilities.
- */
-
-.box-border   /* box-sizing: border-box; */
-.box-content  /* box-sizing: content-box; */
-
-/*
- * Display
- * ----------
- * Utilities for controlling the display box type of an element.
- * By default, only responsive variants are generated for display utilities.
- */
-
-.hidden              /* display: none; */
-.block               /* display: block; */
-.inline-block        /* display: inline-block; */
-.inline              /* display: inline; */
-.flex                /* display: flex; */
-.inline-flex         /* display: inline-flex; */
-.grid                /* display: grid; */
-.table               /* display: table; */
-.table-caption       /* display: table-caption; */
-.table-cell          /* display: table-cell; */
-.table-column        /* display: table-column; */
-.table-column-group  /* display: table-column-group; */
-.table-footer-group  /* display: table-footer-group; */
-.table-header-group  /* display: table-header-group; */
-.table-row-group     /* display: table-row-group; */
-.table-row           /* display: table-row; */
-
-/*
- * Floats
- * ----------
- * Utilities for controlling the wrapping of content around an element.
- * By default, only responsive variants are generated for float utilities.
- */
-
-.float-right  /* float: right; */
-.float-left   /* float: left; */
-.float-none   /* float: none; */
-.clearfix     /* &::after { content: ""; display: table; clear: both; } */
-
-/*
- * Clear
- * ----------
- * Utilities for controlling the wrapping of content around an element.
- * By default, only responsive variants are generated for clear utilities.
- */
-
-.clear-left   /* clear: left; */
-.clear-right  /* clear: right; */
-.clear-both   /* clear: both; */
-
-/*
- * Object Fit
- * ----------
- * Utilities for controlling how a replaced element's content should be resized.
- * By default, only responsive variants are generated for object-fit utilities.
- */
-
-.object-contain     /* object-fit: contain; */
-.object-cover       /* object-fit: cover; */
-.object-fill        /* object-fit: fill; */
-.object-none        /* object-fit: none; */
-.object-scale-down  /* object-fit: scale-down; */
-
-/*
- * Object Position
- * ----------
- * Utilities for controlling how a replaced element's content should be positioned within its container.
- * By default, only responsive variants are generated for object position utilities.
- */
-
-.object-bottom        /* object-position: bottom; */
-.object-center        /* object-position: center; */
-.object-left          /* object-position: left; */
-.object-left-bottom   /* object-position: left bottom; */
-.object-left-top      /* object-position: left top; */
-.object-right         /* object-position: right; */
-.object-right-bottom  /* object-position: right bottom; */
-.object-right-top     /* object-position: right top; */
-.object-top           /* object-position: top; */
-
-/*
- * Overflow
- * ----------
- * Utilities for controlling how an element handles content that is too large for the container.
- * By default, only responsive variants are generated for overflow utilities.
- */
-
-.overflow-auto       /* overflow: auto; */
-.overflow-hidden     /* overflow: hidden; */
-.overflow-visible    /* overflow: visible; */
-.overflow-scroll     /* overflow: scroll; */
-.overflow-x-auto     /* overflow-x: auto; */
-.overflow-y-auto     /* overflow-y: auto; */
-.overflow-x-hidden   /* overflow-x: hidden; */
-.overflow-y-hidden   /* overflow-y: hidden; */
-.overflow-x-visible  /* overflow-x: visible; */
-.overflow-y-visible  /* overflow-y: visible; */
-.overflow-x-scroll   /* overflow-x: scroll; */
-.overflow-y-scroll   /* overflow-y: scroll; */
-.scrolling-touch     /* -webkit-overflow-scrolling: touch; */
-.scrolling-auto      /* -webkit-overflow-scrolling: auto; */
+ /*
+  * Box-sizing
+  * ----------
+  * Utilities for controlling how the browser should calculate an element's total size.
+  * By default, only responsive variants are generated for box-sizing utilities.
+  */
+ 
+ .box-border   /* box-sizing: border-box; */
+ .box-content  /* box-sizing: content-box; */
+ 
+ /*
+  * Display
+  * ----------
+  * Utilities for controlling the display box type of an element.
+  * By default, only responsive variants are generated for display utilities.
+  */
+ 
+ .hidden              /* display: none; */
+ .block               /* display: block; */
+ .inline-block        /* display: inline-block; */
+ .inline              /* display: inline; */
+ .flex                /* display: flex; */
+ .inline-flex         /* display: inline-flex; */
+ .grid                /* display: grid; */
+ .table               /* display: table; */
+ .table-caption       /* display: table-caption; */
+ .table-cell          /* display: table-cell; */
+ .table-column        /* display: table-column; */
+ .table-column-group  /* display: table-column-group; */
+ .table-footer-group  /* display: table-footer-group; */
+ .table-header-group  /* display: table-header-group; */
+ .table-row-group     /* display: table-row-group; */
+ .table-row           /* display: table-row; */
+ 
+ /*
+  * Floats
+  * ----------
+  * Utilities for controlling the wrapping of content around an element.
+  * By default, only responsive variants are generated for float utilities.
+  */
+ 
+ .float-right  /* float: right; */
+ .float-left   /* float: left; */
+ .float-none   /* float: none; */
+ .clearfix     /* &::after { content: ""; display: table; clear: both; } */
+ 
+ /*
+  * Clear
+  * ----------
+  * Utilities for controlling the wrapping of content around an element.
+  * By default, only responsive variants are generated for clear utilities.
+  */
+ 
+ .clear-left   /* clear: left; */
+ .clear-right  /* clear: right; */
+ .clear-both   /* clear: both; */
+ 
+ /*
+  * Object Fit
+  * ----------
+  * Utilities for controlling how a replaced element's content should be resized.
+  * By default, only responsive variants are generated for object-fit utilities.
+  */
+ 
+ .object-contain     /* object-fit: contain; */
+ .object-cover       /* object-fit: cover; */
+ .object-fill        /* object-fit: fill; */
+ .object-none        /* object-fit: none; */
+ .object-scale-down  /* object-fit: scale-down; */
+ 
+ /*
+  * Object Position
+  * ----------
+  * Utilities for controlling how a replaced element's content should be positioned within its container.
+  * By default, only responsive variants are generated for object position utilities.
+  */
+ 
+ .object-bottom        /* object-position: bottom; */
+ .object-center        /* object-position: center; */
+ .object-left          /* object-position: left; */
+ .object-left-bottom   /* object-position: left bottom; */
+ .object-left-top      /* object-position: left top; */
+ .object-right         /* object-position: right; */
+ .object-right-bottom  /* object-position: right bottom; */
+ .object-right-top     /* object-position: right top; */
+ .object-top           /* object-position: top; */
+ 
+ /*
+  * Overflow
+  * ----------
+  * Utilities for controlling how an element handles content that is too large for the container.
+  * By default, only responsive variants are generated for overflow utilities.
+  */
+ 
+ .overflow-auto       /* overflow: auto; */
+ .overflow-hidden     /* overflow: hidden; */
+ .overflow-visible    /* overflow: visible; */
+ .overflow-scroll     /* overflow: scroll; */
+ .overflow-x-auto     /* overflow-x: auto; */
+ .overflow-y-auto     /* overflow-y: auto; */
+ .overflow-x-hidden   /* overflow-x: hidden; */
+ .overflow-y-hidden   /* overflow-y: hidden; */
+ .overflow-x-visible  /* overflow-x: visible; */
+ .overflow-y-visible  /* overflow-y: visible; */
+ .overflow-x-scroll   /* overflow-x: scroll; */
+ .overflow-y-scroll   /* overflow-y: scroll; */
+ .scrolling-touch     /* -webkit-overflow-scrolling: touch; */
+ .scrolling-auto      /* -webkit-overflow-scrolling: auto; */
+ 
+ /*
+  * Position
+  * ----------
+  * 
+  * 
+  */
+ 
+ 
+ /*
+  * Top / Right / Bottom / Left
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Visibility
+  * ----------
+  * 
+  * 
+  */
+ 
+ 
+ /*
+  * Z-Index
+  * ----------
+  * 
+  * 
+  */
+ 
+  
+ /* *******************************************************************************************
+ * FLEXBOX
+ * ******************************************************************************************* */
+ 
+ /*
+  * Flex Direction
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Flex Wrap
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Align Items
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Align Content
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Align Self
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Justify Content
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Flex
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Flex Grow
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Flex Shrink
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Order
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * GRID
+ * ******************************************************************************************* */
+ 
+ /*
+  * Grid Template Columns
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Grid Column Start / End
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Grid Template Rows
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Grid Row Start / End
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Gap
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Grid Auto Flow
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * SPACING
+ * ******************************************************************************************* */
+ 
+ /*
+  * Padding
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Margin
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * SIZING
+ * ******************************************************************************************* */
+ 
+ /*
+  * Width
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Min-Width
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Max-Width
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Height
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Min-Height
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Max-Height
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * TYPOGRAPHY
+ * ******************************************************************************************* */
+ 
+ /*
+  * Font Family
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Font Size
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Font Smoothing
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Font Style
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Font Weight
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Letter Spacing
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Line Height
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * List Style Type
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * List Style Position
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Placeholder Color
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Text Align
+  * ----------
+  * 
+  * 
+  */
+ 
+ 
+ /*
+  * Text Color
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Text Decoration
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Text Transform
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Vertical Align
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * Whitespace
+  * ----------
+  * 
+  * 
+  */
+ 
+ 
+ /*
+  * Word Break
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * BACKGROUNDS
+ * ******************************************************************************************* */
+ 
+ /*
+  * BACKGROUND ATTACHMENT
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BACKGROUND COLOR
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BACKGROUND POSITION
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BACKGROUND REPEAT
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BACKGROUND SIZE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * BORDERS
+ * ******************************************************************************************* */
+ 
+ /*
+  * BORDER COLOR
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BORDER STYLE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BORDER WIDTH
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * BORDER RADIUS
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * TABLES
+ * ******************************************************************************************* */
+ 
+ /*
+  * BORDER COLLAPSE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * TABLE LAYOUT
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * EFFECTS
+ * ******************************************************************************************* */
+ 
+ /*
+  * BOX SHADOW
+  * ----------
+  * 
+  * 
+  */
+ 
+ 
+ /*
+  * OPACITY
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * TRANSITIONS
+ * ******************************************************************************************* */
+ 
+ /*
+  * TRANSITION PROPERTY
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * TRANSITION DURATION
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * TRANSITION TIMING FUNCTION
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * TRANSFORMS
+ * ******************************************************************************************* */
+ 
+ /*
+  * SCALE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * ROTATE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * TRANSLATE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * SKEW
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * TRANSFORM ORIGIN
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * INTERACTIVITY
+ * ******************************************************************************************* */
+ 
+ /*
+  * APPEARANCE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * CURSOR
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * OUTLINE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * POINTER EVENTS
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * RESIZE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * USER SELECT
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * SVG
+ * ******************************************************************************************* */
+ 
+ /*
+  * FILL
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * STROKE
+  * ----------
+  * 
+  * 
+  */
+ 
+ /*
+  * STROKE WIDTH
+  * ----------
+  * 
+  * 
+  */
+ 
+ /* *******************************************************************************************
+ * ACCESSIBILITY
+ * ******************************************************************************************* */
+ 
+ /*
+  * SCREEN READERS
+  * ----------
+  * 
+  * 
+  */
+ 
