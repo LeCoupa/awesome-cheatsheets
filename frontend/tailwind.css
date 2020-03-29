@@ -1867,17 +1867,20 @@
 .rounded-br-full  /* border-bottom-right-radius: 9999px; */
 .rounded-bl-full  /* border-bottom-left-radius: 9999px; */
 
-/* *******************************************************************************************
- * TABLES
- * ******************************************************************************************* */
- 
 /*
  * BORDER COLLAPSE
  * --------------------
  * Utilities for controlling whether table borders should collapse or be separated.
- * 
+ * By default, only responsive variants are generated for border collapse utilities.
  */
- 
+
+.border-collapse  /* border-collapse: collapse; */
+.border-separate  /* border-collapse: separate; */
+
+/* *******************************************************************************************
+ * TABLES
+ * ******************************************************************************************* */
+
 /*
  * TABLE LAYOUT
  * --------------------
