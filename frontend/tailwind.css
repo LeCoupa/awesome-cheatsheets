@@ -171,19 +171,28 @@
 /*
  * Visibility
  * ----------
- * 
- * 
+ * Utilities for controlling the visibility of an element.
+ * By default, only responsive variants are generated for visibility utilities.
  */
- 
- 
+
+.visible    /* visibility: visible; */
+.invisible  /* visibility: hidden; */
+
 /*
  * Z-Index
  * ----------
- * 
- * 
+ * Utilities for controlling the stack order of an element.
+ * By default, only responsive variants are generated for z-index utilities.
  */
- 
-  
+
+.z-0     /* z-index: 0; */
+.z-10    /* z-index: 10; */
+.z-20    /* z-index: 20; */
+.z-30    /* z-index: 30; */
+.z-40    /* z-index: 40; */
+.z-50    /* z-index: 50; */
+.z-auto  /* z-index: auto; */
+
 /* *******************************************************************************************
  * FLEXBOX
  * ******************************************************************************************* */
@@ -191,10 +200,15 @@
 /*
  * Flex Direction
  * ----------
- * 
- * 
+ * Utilities for controlling the direction of flex items.
+ * By default, only responsive variants are generated for flex-direction utilities.
  */
- 
+
+.flex-row          /* flex-direction: row; */
+.flex-row-reverse  /* flex-direction: row-reverse; */
+.flex-col          /* flex-direction: column; */
+.flex-col-reverse  /* flex-direction: column-reverse; */
+
 /*
  * Flex Wrap
  * ----------
