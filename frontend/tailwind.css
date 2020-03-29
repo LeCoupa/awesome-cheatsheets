@@ -1934,23 +1934,45 @@
  * TRANSITION PROPERTY
  * --------------------
  * Utilities for controlling which CSS properties transition.
- * 
+ * By default, only responsive variants are generated for transition-property utilities.
  */
- 
+
+.transition-none       /* transition-property: none; */
+.transition-all        /* transition-property: all; */
+.transition            /* transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform; */
+.transition-colors     /* transition-property: background-color, border-color, color, fill, stroke; */
+.transition-opacity    /* transition-property: opacity; */
+.transition-shadow     /* transition-property: box-shadow; */
+.transition-transform  /* transition-property: transform; */
+
 /*
  * TRANSITION DURATION
  * --------------------
  * Utilities for controlling the duration of CSS transitions.
- * 
+ * By default, only responsive variants are generated for transition-duration utilities.
  */
- 
+
+.duration-75    /* transition-duration: 75ms; */
+.duration-100   /* transition-duration: 100ms; */
+.duration-150   /* transition-duration: 150ms; */
+.duration-200   /* transition-duration: 200ms; */
+.duration-300   /* transition-duration: 300ms; */
+.duration-500   /* transition-duration: 500ms; */
+.duration-700   /* transition-duration: 700ms; */
+.duration-1000  /* transition-duration: 1000ms; */
+
 /*
  * TRANSITION TIMING FUNCTION
  * --------------------
  * Utilities for controlling the easing of CSS transitions.
- * 
+ * By default, only responsive variants are generated for transition-timing-function utilities.
  */
- 
+
+.ease-linear  /* transition-timing-function: linear; */
+.ease-in      /* transition-timing-function: cubic-bezier(0.4, 0, 1, 1); */
+.ease-out     /* transition-timing-function: cubic-bezier(0, 0, 0.2, 1); */
+.ease-in-out  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+
 /* *******************************************************************************************
  * TRANSFORMS
  * ******************************************************************************************* */
