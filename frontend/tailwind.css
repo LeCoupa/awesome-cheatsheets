@@ -136,11 +136,16 @@
  /*
   * Position
   * ----------
-  * 
-  * 
+  * Utilities for controlling how an element is positioned in the DOM.
+  * By default, only responsive variants are generated for position utilities.
   */
- 
- 
+
+  .static    /* position: static; */
+  .fixed     /* position: fixed; */
+  .absolute  /* position: absolute; */
+  .relative  /* position: relative; */
+  .sticky    /* position: sticky; */
+
  /*
   * Top / Right / Bottom / Left
   * ----------
