@@ -249,45 +249,84 @@
 /*
  * Align Self
  * ----------
- * 
- * 
+ * Utilities for controlling how an individual flex item is positioned along its container's cross axis.
+ * By default, only responsive variants are generated for align-self utilities.
  */
- 
+
+.self-auto     /* align-self: auto; */
+.self-start    /* align-self: flex-start; */
+.self-center   /* align-self: center; */
+.self-end      /* align-self: flex-end; */
+.self-stretch  /* align-self: stretch; */
+
 /*
  * Justify Content
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items are positioned along a container's main axis.
+ * By default, only responsive variants are generated for justify-content utilities.
  */
- 
+
+.justify-start    /* justify-content: flex-start; */
+.justify-center   /* justify-content: center; */
+.justify-end      /* justify-content: flex-end; */
+.justify-between  /* justify-content: space-between; */
+.justify-around   /* justify-content: space-around; */
+
 /*
  * Flex
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items both grow and shrink.
+ * By default, only responsive variants are generated for flex utilities.
  */
- 
+
+.flex-initial  /* flex: 0 1 auto; */
+.flex-1        /* flex: 1 1 0%; */
+.flex-auto     /* flex: 1 1 auto; */
+.flex-none     /* flex: none; */
+
 /*
  * Flex Grow
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items grow.
+ * By default, only responsive variants are generated for flex grow utilities.
  */
- 
+
+.flex-grow    /* flex-grow: 1; */
+.flex-grow-0  /* flex-grow: 0; */
+
 /*
  * Flex Shrink
  * ----------
- * 
- * 
+ * Utilities for controlling how flex items shrink.
+ * By default, only responsive variants are generated for flex shrink utilities.
  */
- 
+
+.flex-shrink    /* flex-shrink: 1; */
+.flex-shrink-0  /* flex-shrink: 0; */
+
 /*
  * Order
  * ----------
- * 
- * 
+ * Utilities for controlling the order of flex items.
+ * By default, only responsive variants are generated for order utilities.
  */
- 
+
+.order-first  /* order: -9999; */
+.order-last   /* order: 9999; */
+.order-none   /* order: 0; */
+.order-1      /* order: 1; */
+.order-2      /* order: 2; */
+.order-3      /* order: 3; */
+.order-4      /* order: 4; */
+.order-5      /* order: 5; */
+.order-6      /* order: 6; */
+.order-7      /* order: 7; */
+.order-8      /* order: 8; */
+.order-9      /* order: 9; */
+.order-10     /* order: 10; */
+.order-11     /* order: 11; */
+.order-12     /* order: 12; */
+
 /* *******************************************************************************************
  * GRID
  * ******************************************************************************************* */
