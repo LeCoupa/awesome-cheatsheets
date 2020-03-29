@@ -1100,124 +1100,402 @@
 /*
  * Font Family
  * --------------------
- * 
- * 
+ * Utilities for controlling the font family of an element.
+ * By default, only responsive variants are generated for font family utilities.
  */
- 
+
+.font-sans   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+.font-serif  /* font-family: Georgia, Cambria, "Times New Roman", Times, serif; */
+.font-mono   /* font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+
 /*
  * Font Size
  * --------------------
- * 
- * 
+ * Utilities for controlling the font size of an element.
+ * By default, only responsive variants are generated for text sizing utilities.
  */
- 
+
+.text-xs    /* font-size: .75rem; */
+.text-sm    /* font-size: .875rem; */
+.text-base  /* font-size: 1rem; */
+.text-lg    /* font-size: 1.125rem; */
+.text-xl    /* font-size: 1.25rem; */
+.text-2xl   /* font-size: 1.5rem; */
+.text-3xl   /* font-size: 1.875rem; */
+.text-4xl   /* font-size: 2.25rem; */
+.text-5xl   /* font-size: 3rem; */
+.text-6xl   /* font-size: 4rem; */
+
 /*
  * Font Smoothing
  * --------------------
- * 
- * 
+ * Utilities for controlling the font smoothing of an element.
+ * By default, only responsive variants are generated for font smoothing utilities.
  */
- 
+
+.antialiased           /* -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; */
+.subpixel-antialiased  /* -webkit-font-smoothing: auto; -moz-osx-font-smoothing: auto; */
+
 /*
  * Font Style
  * --------------------
- * 
- * 
+ * Utilities for controlling the style of text.
+ * By default, only responsive variants are generated for font style utilities.
  */
- 
+
+.italic      /* font-style: italic; */
+.not-italic  /* font-style: normal; */
+
 /*
  * Font Weight
  * --------------------
- * 
- * 
+ * Utilities for controlling the font weight of an element.
+ * By default, only responsive, hover and focus variants are generated for font weight utilities.
  */
- 
+
+.font-hairline   /* font-weight: 100; */
+.font-thin       /* font-weight: 200; */
+.font-light      /* font-weight: 300; */
+.font-normal     /* font-weight: 400; */
+.font-medium     /* font-weight: 500; */
+.font-semibold   /* font-weight: 600; */
+.font-bold       /* font-weight: 700; */
+.font-extrabold  /* font-weight: 800; */
+.font-black      /* font-weight: 900; */
+
 /*
  * Letter Spacing
  * --------------------
- * 
- * 
+ * Utilities for controlling the tracking (letter spacing) of an element.
+ * By default, only responsive variants are generated for tracking utilities.
  */
- 
+
+.tracking-tighter  /* letter-spacing: -0.05em; */
+.tracking-tight    /* letter-spacing: -0.025em; */
+.tracking-normal   /* letter-spacing: 0; */
+.tracking-wide     /* letter-spacing: 0.025em; */
+.tracking-wider    /* letter-spacing: 0.05em; */
+.tracking-widest   /* letter-spacing: 0.1em; */
+
 /*
  * Line Height
  * --------------------
- * 
- * 
+ * Utilities for controlling the leading (line height) of an element.
+ * By default, only responsive variants are generated for line height utilities.
  */
- 
+
+.leading-none     /* line-height: 1; */
+.leading-tight    /* line-height: 1.25; */
+.leading-snug     /* line-height: 1.375; */
+.leading-normal   /* line-height: 1.5; */
+.leading-relaxed  /* line-height: 1.625; */
+.leading-loose    /* line-height: 2; */
+.leading-3        /* line-height: .75rem; */
+.leading-4        /* line-height: 1rem; */
+.leading-5        /* line-height: 1.25rem; */
+.leading-6        /* line-height: 1.5rem; */
+.leading-7        /* line-height: 1.75rem; */
+.leading-8        /* line-height: 2rem; */
+.leading-9        /* line-height: 2.25rem; */
+.leading-10       /* line-height: 2.5rem; */
+
 /*
  * List Style Type
  * --------------------
- * 
- * 
+ * Utilities for controlling the bullet/number style of a list.
+ * By default, only responsive variants are generated for list style type utilities.
  */
- 
+
+.list-none     /* list-style-type: none; */
+.list-disc     /* list-style-type: disc; */
+.list-decimal  /* list-style-type: decimal; */
+
 /*
  * List Style Position
  * --------------------
- * 
- * 
+ * Utilities for controlling the position of bullets/numbers in lists.
+ * By default, only responsive variants are generated for list style position utilities.
  */
- 
+
+.list-inside   /* list-style-position: inside; */
+.list-outside  /* list-style-position: outside; */
+
 /*
  * Placeholder Color
  * --------------------
- * 
- * 
+ * Utilities for controlling the color of placeholder text.
+ * By default, only responsive and focus variants are generated for placeholder color utilities.
  */
- 
+
+ .placeholder-transparent  /* ::placeholder { color: transparent; } */
+ .placeholder-black        /* ::placeholder { color: #000; } */
+ .placeholder-white        /* ::placeholder { color: #fff; } */
+ .placeholder-gray-100     /* ::placeholder { color: #f7fafc; } */
+ .placeholder-gray-200     /* ::placeholder { color: #edf2f7; } */
+ .placeholder-gray-300     /* ::placeholder { color: #e2e8f0; } */
+ .placeholder-gray-400     /* ::placeholder { color: #cbd5e0; } */
+ .placeholder-gray-500     /* ::placeholder { color: #a0aec0; } */
+ .placeholder-gray-600     /* ::placeholder { color: #718096; } */
+ .placeholder-gray-700     /* ::placeholder { color: #4a5568; } */
+ .placeholder-gray-800     /* ::placeholder { color: #2d3748; } */
+ .placeholder-gray-900     /* ::placeholder { color: #1a202c; } */
+ .placeholder-red-100      /* ::placeholder { color: #fff5f5; } */
+ .placeholder-red-200      /* ::placeholder { color: #fed7d7; } */
+ .placeholder-red-300      /* ::placeholder { color: #feb2b2; } */
+ .placeholder-red-400      /* ::placeholder { color: #fc8181; } */
+ .placeholder-red-500      /* ::placeholder { color: #f56565; } */
+ .placeholder-red-600      /* ::placeholder { color: #e53e3e; } */
+ .placeholder-red-700      /* ::placeholder { color: #c53030; } */
+ .placeholder-red-800      /* ::placeholder { color: #9b2c2c; } */
+ .placeholder-red-900      /* ::placeholder { color: #742a2a; } */
+ .placeholder-orange-100   /* ::placeholder { color: #fffaf0; } */
+ .placeholder-orange-200   /* ::placeholder { color: #feebc8; } */
+ .placeholder-orange-300   /* ::placeholder { color: #fbd38d; } */
+ .placeholder-orange-400   /* ::placeholder { color: #f6ad55; } */
+ .placeholder-orange-500   /* ::placeholder { color: #ed8936; } */
+ .placeholder-orange-600   /* ::placeholder { color: #dd6b20; } */
+ .placeholder-orange-700   /* ::placeholder { color: #c05621; } */
+ .placeholder-orange-800   /* ::placeholder { color: #9c4221; } */
+ .placeholder-orange-900   /* ::placeholder { color: #7b341e; } */
+ .placeholder-yellow-100   /* ::placeholder { color: #fffff0; } */
+ .placeholder-yellow-200   /* ::placeholder { color: #fefcbf; } */
+ .placeholder-yellow-300   /* ::placeholder { color: #faf089; } */
+ .placeholder-yellow-400   /* ::placeholder { color: #f6e05e; } */
+ .placeholder-yellow-500   /* ::placeholder { color: #ecc94b; } */
+ .placeholder-yellow-600   /* ::placeholder { color: #d69e2e; } */
+ .placeholder-yellow-700   /* ::placeholder { color: #b7791f; } */
+ .placeholder-yellow-800   /* ::placeholder { color: #975a16; } */
+ .placeholder-yellow-900   /* ::placeholder { color: #744210; } */
+ .placeholder-green-100    /* ::placeholder { color: #f0fff4; } */
+ .placeholder-green-200    /* ::placeholder { color: #c6f6d5; } */
+ .placeholder-green-300    /* ::placeholder { color: #9ae6b4; } */
+ .placeholder-green-400    /* ::placeholder { color: #68d391; } */
+ .placeholder-green-500    /* ::placeholder { color: #48bb78; } */
+ .placeholder-green-600    /* ::placeholder { color: #38a169; } */
+ .placeholder-green-700    /* ::placeholder { color: #2f855a; } */
+ .placeholder-green-800    /* ::placeholder { color: #276749; } */
+ .placeholder-green-900    /* ::placeholder { color: #22543d; } */
+ .placeholder-teal-100     /* ::placeholder { color: #e6fffa; } */
+ .placeholder-teal-200     /* ::placeholder { color: #b2f5ea; } */
+ .placeholder-teal-300     /* ::placeholder { color: #81e6d9; } */
+ .placeholder-teal-400     /* ::placeholder { color: #4fd1c5; } */
+ .placeholder-teal-500     /* ::placeholder { color: #38b2ac; } */
+ .placeholder-teal-600     /* ::placeholder { color: #319795; } */
+ .placeholder-teal-700     /* ::placeholder { color: #2c7a7b; } */
+ .placeholder-teal-800     /* ::placeholder { color: #285e61; } */
+ .placeholder-teal-900     /* ::placeholder { color: #234e52; } */
+ .placeholder-blue-100     /* ::placeholder { color: #ebf8ff; } */
+ .placeholder-blue-200     /* ::placeholder { color: #bee3f8; } */
+ .placeholder-blue-300     /* ::placeholder { color: #90cdf4; } */
+ .placeholder-blue-400     /* ::placeholder { color: #63b3ed; } */
+ .placeholder-blue-500     /* ::placeholder { color: #4299e1; } */
+ .placeholder-blue-600     /* ::placeholder { color: #3182ce; } */
+ .placeholder-blue-700     /* ::placeholder { color: #2b6cb0; } */
+ .placeholder-blue-800     /* ::placeholder { color: #2c5282; } */
+ .placeholder-blue-900     /* ::placeholder { color: #2a4365; } */
+ .placeholder-indigo-100   /* ::placeholder { color: #ebf4ff; } */
+ .placeholder-indigo-200   /* ::placeholder { color: #c3dafe; } */
+ .placeholder-indigo-300   /* ::placeholder { color: #a3bffa; } */
+ .placeholder-indigo-400   /* ::placeholder { color: #7f9cf5; } */
+ .placeholder-indigo-500   /* ::placeholder { color: #667eea; } */
+ .placeholder-indigo-600   /* ::placeholder { color: #5a67d8; } */
+ .placeholder-indigo-700   /* ::placeholder { color: #4c51bf; } */
+ .placeholder-indigo-800   /* ::placeholder { color: #434190; } */
+ .placeholder-indigo-900   /* ::placeholder { color: #3c366b; } */
+ .placeholder-purple-100   /* ::placeholder { color: #faf5ff; } */
+ .placeholder-purple-200   /* ::placeholder { color: #e9d8fd; } */
+ .placeholder-purple-300   /* ::placeholder { color: #d6bcfa; } */
+ .placeholder-purple-400   /* ::placeholder { color: #b794f4; } */
+ .placeholder-purple-500   /* ::placeholder { color: #9f7aea; } */
+ .placeholder-purple-600   /* ::placeholder { color: #805ad5; } */
+ .placeholder-purple-700   /* ::placeholder { color: #6b46c1; } */
+ .placeholder-purple-800   /* ::placeholder { color: #553c9a; } */
+ .placeholder-purple-900   /* ::placeholder { color: #44337a; } */
+ .placeholder-pink-100     /* ::placeholder { color: #fff5f7; } */
+ .placeholder-pink-200     /* ::placeholder { color: #fed7e2; } */
+ .placeholder-pink-300     /* ::placeholder { color: #fbb6ce; } */
+ .placeholder-pink-400     /* ::placeholder { color: #f687b3; } */
+ .placeholder-pink-500     /* ::placeholder { color: #ed64a6; } */
+ .placeholder-pink-600     /* ::placeholder { color: #d53f8c; } */
+ .placeholder-pink-700     /* ::placeholder { color: #b83280; } */
+ .placeholder-pink-800     /* ::placeholder { color: #97266d; } */
+ .placeholder-pink-900     /* ::placeholder { color: #702459; } */
+
 /*
  * Text Align
  * --------------------
- * 
- * 
+ * Utilities for controlling the alignment of text.
+ * By default, only responsive variants are generated for text alignment utilities.
  */
- 
- 
+
+.text-left     /* text-align: left; */
+.text-center   /* text-align: center; */
+.text-right    /* text-align: right; */
+.text-justify  /* text-align: justify; */
+
 /*
  * Text Color
  * --------------------
- * 
- * 
+ * Utilities for controlling the text color of an element.
+ * By default, only responsive, hover and focus variants are generated for text color utilities.
  */
- 
+
+ .text-transparent  /* color: transparent; */
+ .text-black        /* color: #000; */
+ .text-white        /* color: #fff; */
+ .text-gray-100     /* color: #f7fafc; */
+ .text-gray-200     /* color: #edf2f7; */
+ .text-gray-300     /* color: #e2e8f0; */
+ .text-gray-400     /* color: #cbd5e0; */
+ .text-gray-500     /* color: #a0aec0; */
+ .text-gray-600     /* color: #718096; */
+ .text-gray-700     /* color: #4a5568; */
+ .text-gray-800     /* color: #2d3748; */
+ .text-gray-900     /* color: #1a202c; */
+ .text-red-100      /* color: #fff5f5; */
+ .text-red-200      /* color: #fed7d7; */
+ .text-red-300      /* color: #feb2b2; */
+ .text-red-400      /* color: #fc8181; */
+ .text-red-500      /* color: #f56565; */
+ .text-red-600      /* color: #e53e3e; */
+ .text-red-700      /* color: #c53030; */
+ .text-red-800      /* color: #9b2c2c; */
+ .text-red-900      /* color: #742a2a; */
+ .text-orange-100   /* color: #fffaf0; */
+ .text-orange-200   /* color: #feebc8; */
+ .text-orange-300   /* color: #fbd38d; */
+ .text-orange-400   /* color: #f6ad55; */
+ .text-orange-500   /* color: #ed8936; */
+ .text-orange-600   /* color: #dd6b20; */
+ .text-orange-700   /* color: #c05621; */
+ .text-orange-800   /* color: #9c4221; */
+ .text-orange-900   /* color: #7b341e; */
+ .text-yellow-100   /* color: #fffff0; */
+ .text-yellow-200   /* color: #fefcbf; */
+ .text-yellow-300   /* color: #faf089; */
+ .text-yellow-400   /* color: #f6e05e; */
+ .text-yellow-500   /* color: #ecc94b; */
+ .text-yellow-600   /* color: #d69e2e; */
+ .text-yellow-700   /* color: #b7791f; */
+ .text-yellow-800   /* color: #975a16; */
+ .text-yellow-900   /* color: #744210; */
+ .text-green-100    /* color: #f0fff4; */
+ .text-green-200    /* color: #c6f6d5; */
+ .text-green-300    /* color: #9ae6b4; */
+ .text-green-400    /* color: #68d391; */
+ .text-green-500    /* color: #48bb78; */
+ .text-green-600    /* color: #38a169; */
+ .text-green-700    /* color: #2f855a; */
+ .text-green-800    /* color: #276749; */
+ .text-green-900    /* color: #22543d; */
+ .text-teal-100     /* color: #e6fffa; */
+ .text-teal-200     /* color: #b2f5ea; */
+ .text-teal-300     /* color: #81e6d9; */
+ .text-teal-400     /* color: #4fd1c5; */
+ .text-teal-500     /* color: #38b2ac; */
+ .text-teal-600     /* color: #319795; */
+ .text-teal-700     /* color: #2c7a7b; */
+ .text-teal-800     /* color: #285e61; */
+ .text-teal-900     /* color: #234e52; */
+ .text-blue-100     /* color: #ebf8ff; */
+ .text-blue-200     /* color: #bee3f8; */
+ .text-blue-300     /* color: #90cdf4; */
+ .text-blue-400     /* color: #63b3ed; */
+ .text-blue-500     /* color: #4299e1; */
+ .text-blue-600     /* color: #3182ce; */
+ .text-blue-700     /* color: #2b6cb0; */
+ .text-blue-800     /* color: #2c5282; */
+ .text-blue-900     /* color: #2a4365; */
+ .text-indigo-100   /* color: #ebf4ff; */
+ .text-indigo-200   /* color: #c3dafe; */
+ .text-indigo-300   /* color: #a3bffa; */
+ .text-indigo-400   /* color: #7f9cf5; */
+ .text-indigo-500   /* color: #667eea; */
+ .text-indigo-600   /* color: #5a67d8; */
+ .text-indigo-700   /* color: #4c51bf; */
+ .text-indigo-800   /* color: #434190; */
+ .text-indigo-900   /* color: #3c366b; */
+ .text-purple-100   /* color: #faf5ff; */
+ .text-purple-200   /* color: #e9d8fd; */
+ .text-purple-300   /* color: #d6bcfa; */
+ .text-purple-400   /* color: #b794f4; */
+ .text-purple-500   /* color: #9f7aea; */
+ .text-purple-600   /* color: #805ad5; */
+ .text-purple-700   /* color: #6b46c1; */
+ .text-purple-800   /* color: #553c9a; */
+ .text-purple-900   /* color: #44337a; */
+ .text-pink-100     /* color: #fff5f7; */
+ .text-pink-200     /* color: #fed7e2; */
+ .text-pink-300     /* color: #fbb6ce; */
+ .text-pink-400     /* color: #f687b3; */
+ .text-pink-500     /* color: #ed64a6; */
+ .text-pink-600     /* color: #d53f8c; */
+ .text-pink-700     /* color: #b83280; */
+ .text-pink-800     /* color: #97266d; */
+ .text-pink-900     /* color: #702459; */
+
 /*
  * Text Decoration
  * --------------------
- * 
- * 
+ * Utilities for controlling the decoration of text.
+ * By default, only responsive, hover and focus variants are generated for text decoration utilities.
  */
- 
+
+.underline     /* text-decoration: underline; */
+.line-through  /* text-decoration: line-through; */
+.no-underline  /* text-decoration: none; */
+
 /*
  * Text Transform
  * --------------------
- * 
- * 
+ * Utilities for controlling the transformation of text.
+ * By default, only responsive variants are generated for text transformation utilities.
  */
- 
+
+.uppercase    /* text-transform: uppercase; */
+.lowercase    /* text-transform: lowercase; */
+.capitalize   /* text-transform: capitalize; */
+.normal-case  /* text-transform: none; */
+
 /*
  * Vertical Align
  * --------------------
- * 
- * 
+ * Utilities for controlling the vertical alignment of an inline or table-cell box.
+ * By default, only responsive variants are generated for vertical alignment utilities.
  */
- 
+
+.align-baseline     /* vertical-align: baseline; */
+.align-top          /* vertical-align: top; */
+.align-middle       /* vertical-align: middle; */
+.align-bottom       /* vertical-align: bottom; */
+.align-text-top     /* vertical-align: text-top; */
+.align-text-bottom  /* vertical-align: text-bottom; */
+
 /*
  * Whitespace
  * --------------------
- * 
- * 
+ * Utilities for controlling an element's white-space property.
+ * By default, only responsive variants are generated for whitespace utilities.
  */
- 
- 
+
+.whitespace-normal    /* white-space: normal; */
+.whitespace-no-wrap   /* white-space: nowrap; */
+.whitespace-pre       /* white-space: pre; */
+.whitespace-pre-line  /* white-space: pre-line; */
+.whitespace-pre-wrap  /* white-space: pre-wrap; */
+
 /*
  * Word Break
  * --------------------
- * 
- * 
+ * Utilities for controlling word breaks in an element.
+ * By default, only responsive variants are generated for word break utilities.
  */
- 
+
+.break-normal  /* word-break: normal; overflow-wrap: normal */
+.break-words   /* overflow-wrap: break-word; */
+.break-all     /* word-break: break-all; */
+.truncate      /* overflow: hidden; text-overflow: ellipsis; white-space: nowrap */
+
 /* *******************************************************************************************
  * BACKGROUNDS
  * ******************************************************************************************* */
