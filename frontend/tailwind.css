@@ -2238,23 +2238,31 @@
  * FILL
  * --------------------
  * Utilities for styling the fill of SVG elements.
- * 
+ * By default, only responsive variants are generated for fill utilities.
  */
- 
+
+.fill-current  /* fill: currentColor; */
+
 /*
  * STROKE
  * --------------------
  * Utilities for styling the stroke of SVG elements.
- * 
+ * By default, only responsive variants are generated for stroke utilities.
  */
- 
+
+.stroke-current  /* stroke: currentColor; */
+
 /*
  * STROKE WIDTH
  * --------------------
  * Utilities for styling the stroke width of SVG elements.
- * 
+ * By default, only responsive variants are generated for stroke-width utilities.
  */
- 
+
+.stroke-0  /* stroke-width: 0; */
+.stroke-1  /* stroke-width: 1; */
+.stroke-2  /* stroke-width: 2; */
+
 /* *******************************************************************************************
  * ACCESSIBILITY
  * ******************************************************************************************* */
