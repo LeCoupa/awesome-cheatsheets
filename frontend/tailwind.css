@@ -2167,44 +2167,69 @@
  * APPEARANCE
  * --------------------
  * Utilities for suppressing native form control styling.
- * 
+ * By default, only responsive variants are generated for appearance utilities.
  */
- 
+
+.appearance-none  /* appearance: none; */
+
 /*
  * CURSOR
  * --------------------
  * Utilities for controlling the cursor style when hovering over an element.
- * 
+ * By default, only responsive variants are generated for cursor utilities.
  */
- 
+
+.cursor-auto         /* cursor: auto; */
+.cursor-default      /* cursor: default; */
+.cursor-pointer      /* cursor: pointer; */
+.cursor-wait         /* cursor: wait; */
+.cursor-text         /* cursor: text; */
+.cursor-move         /* cursor: move; */
+.cursor-not-allowed  /* cursor: not-allowed; */
+
 /*
  * OUTLINE
  * --------------------
  * Utilities for controlling an element's outline.
- * 
+ * By default, only focus variants are generated for outline utilities.
  */
- 
+
+.outline-none  /* outline: 0; */
+
 /*
  * POINTER EVENTS
  * --------------------
  * Utilities for controlling whether an element responds to pointer events.
- * 
+ * By default, only responsive variants are generated for pointer event utilities.
  */
- 
+
+.pointer-events-none  /* pointer-events: none; */
+.pointer-events-auto  /* pointer-events: auto; */
+
 /*
  * RESIZE
  * --------------------
  * Utilities for controlling how an element can be resized.
- * 
+ * By default, only responsive variants are generated for resizing utilities.
  */
- 
+
+.resize-none  /* resize: none; */
+.resize       /* resize: both; */
+.resize-y     /* resize: vertical; */
+.resize-x     /* resize: horizontal; */
+
 /*
  * USER SELECT
  * --------------------
  * Utilities for controlling whether the user can select text in an element.
- * 
+ * By default, only responsive variants are generated for user-select utilities.
  */
- 
+
+.select-none  /* user-select: none; */
+.select-text  /* user-select: text; */
+.select-all   /* user-select: all; */
+.select-auto  /* user-select: auto; */
+
 /* *******************************************************************************************
  * SVG
  * ******************************************************************************************* */
