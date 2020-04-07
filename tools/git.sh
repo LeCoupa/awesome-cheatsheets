@@ -12,6 +12,9 @@ git branch my-branch    # creates my-branch
 git branch -d my-branch # deletes my-branch
 git checkout my-bracnch # switches to my-branch
 git merge my-branch     # merges my-branch to current branch
+git push origin :my-branch         # delete remote branch
+
+git cherry-pick <commit_id>        # merge the specified commit
 
 git remote                         # shows the remotes
 git remote -v                      # shows the remote for pull and push
@@ -29,7 +32,7 @@ git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to
 git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
 git fetch --tags                  # pulls the tags from remote
 
-git pull my-remote my-branch# pulls and tries to merge my-branch from my-remote to the current branch
+git pull my-remote my-branch         # pulls and tries to merge my-branch from my-remote to the current branch
 
 git stash                            # stashes the staged and unstaged changes (git status will be clean after it)
 git stash -u                         # stash everything including new untracked files (but not .gitignore)
