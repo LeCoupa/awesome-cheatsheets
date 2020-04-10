@@ -50,6 +50,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Javascript
 
+- [Adonis.js](backend/adonis.js)
 - [Feathers.js](backend/feathers.js)
 - [Moleculer](backend/moleculer.js)
 - [Node.js](backend/node.js)
