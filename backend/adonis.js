@@ -71,3 +71,26 @@ Route.group(() => {}).formats(['json'])        // Define response formats
 Route.group(() => {}).prefix('api/v1')         // Define a prefix for a group of routes
 Route.group(() => {}).namespace('Admin')       // Prefix the namespace of the bound controller
 Route.group(() => {}).domain('blog.sthg.com')  // Specify which domain goup routes belong to
+
+/********************************************************************************************
+* VALIDATOR
+* https://indicative-v5.adonisjs.com/
+********************************************************************************************/
+
+
+/********************************************************************************************
+* HOOKS
+* https://adonisjs.com/docs/4.1/database-hooks
+********************************************************************************************/
+
+beforeCreate   // Before creating a new record.
+afterCreate    // After a new record is created.
+beforeUpdate   // Before updating a record.
+afterUpdate    // After a record has been updated.
+beforeSave     // Before creating or updating a new record.
+afterSave      // After a new record has been created or updated.
+beforeDelete   // Before removing a record.
+afterDelete    // After a record is removed.
+afterFind      // After a single record is fetched from the database.
+afterFetch     // After the fetch method is executed.The hook method receives an array of model instances.
+afterPaginate  // After the paginate method is executed.The hook method receives two arguments: an array of model instances and the pagination metadata.
