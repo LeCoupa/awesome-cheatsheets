@@ -3,10 +3,9 @@
  * https://adonisjs.com/
  ********************************************************************************************/
 
-
- /********************************************************************************************
- * AVAILABLE CLI COMMANDS
- ********************************************************************************************/
+/********************************************************************************************
+* AVAILABLE CLI COMMANDS
+********************************************************************************************/
 
 build   // Compile typescript code to Javascript. Optionally watch for file changes
 invoke  // Invoke post install instructions on a given AdonisJs package
@@ -44,3 +43,31 @@ migration:refresh   // Rollback all migrations to the 0 batch then re-run them f
 migration:reset     // Rollback all migrations to the 0 batch.
 migration:status    // Get the status of all the migrations.
 
+/********************************************************************************************
+* ROUTING
+********************************************************************************************/
+
+Route.get(url, closure)     // Register route for GET verb
+Route.post(url, closure)    // Register route for POST verb
+Route.put(url, closure)     // Register route for PUT verb
+Route.patch(url, closure)   // Register route for PATCH verb
+Route.delete(url, closure)  // Register route for DELETED verb
+Route.any(url, closure)     // Register route for all HTTP verbs
+
+Route.on('/').render('welcome')  // Render a view directly
+
+Route.route('/', () => {}, ['GET', 'POST', 'PUT'])           // Register route for multiple verbs
+Route.get('users', closure).as('users.index')                // Assign a unique name to the route
+Route.get('users', closure).formats(['json', 'html'], true)  // Force client to define the route format
+
+Route.resource('users', 'UserController')                    // Define a resource route for CRUD operations
+Route.resource('users', 'UserController').apiOnly()          // Remove create and edit routes
+Route.resource('users', 'UserController').only(['index'])    // Keeps only the passed routes
+Route.resource('users', 'UserController').except(['index'])  //Keeps all routes except the passed routes.
+
+Route.group(() => {})                          // Define a group of routes
+Route.group(() => {}).middleware(['auth'])     // Attach a middleware
+Route.group(() => {}).formats(['json'])        // Define response formats
+Route.group(() => {}).prefix('api/v1')         // Define a prefix for a group of routes
+Route.group(() => {}).namespace('Admin')       // Prefix the namespace of the bound controller
+Route.group(() => {}).domain('blog.sthg.com')  // Specify which domain goup routes belong to
