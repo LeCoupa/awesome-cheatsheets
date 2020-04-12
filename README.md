@@ -93,13 +93,13 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Development
 
+- [cURL](tools/curl.sh)
 - [Git](tools/git.sh)
 - [Puppeteer](tools/puppeteer.js)
 - [Sublime Text](tools/sublime_text.md)
 - [VIM](tools/vim.txt)
 - [Visual Studio Code](tools/vscode.md)
 - [Xcode](tools/xcode.txt)
-- [cURL](tools/curl.sh)
 
 #### Infrastructure
 
