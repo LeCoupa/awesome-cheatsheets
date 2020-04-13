@@ -7,32 +7,32 @@
 * AVAILABLE CLI COMMANDS
 ********************************************************************************************/
 
-build   // Compile typescript code to Javascript. Optionally watch for file changes
-invoke  // Invoke post install instructions on a given AdonisJs package
-serve   // Compile typescript code to Javascript and start the HTTP server
+build   // Compile typescript code to Javascript. Optionally watch for file changes.
+invoke  // Invoke post install instructions on a given AdonisJs package.
+serve   // Compile typescript code to Javascript and start the HTTP server.
 
 // Dump
 
-dump:rcfile  // Dump contents of .adonisrc.json file along with defaults
+dump:rcfile  // Dump contents of .adonisrc.json file along with defaults.
 
 // Generate
 
-generate:key       // Generate a new APP_KEY secret
-generate:manifest  // Generate manifest file to execute ace commands
+generate:key       // Generate a new APP_KEY secret.
+generate:manifest  // Generate manifest file to execute ace commands.
 
 // List
 
-list:routes  // List application routes
+list:routes  // List application routes.
 
 // Make
 
-make:command     // Make a new ace command
-make:controller  // Make a new HTTP controller
-make:middleware  // Make a new middleware
-make:migration   // Make a new migration
-make:provider    // Make a new IoC container provider
-make:validator   // Make a new validator
-make:view        // Make a new view template
+make:command     // Make a new ace command.
+make:controller  // Make a new HTTP controller.
+make:middleware  // Make a new middleware.
+make:migration   // Make a new migration.
+make:provider    // Make a new IoC container provider.
+make:validator   // Make a new validator.
+make:view        // Make a new view template.
 
 // Migrations
 
@@ -44,33 +44,72 @@ migration:reset     // Rollback all migrations to the 0 batch.
 migration:status    // Get the status of all the migrations.
 
 /********************************************************************************************
+* REQUEST
+********************************************************************************************/
+
+request.all()                             // Returns an object containing all request data (merges query params and request body data).
+request.get()                             // Returns an object containing query params data.
+request.post()                            // Returns an object containing request body data.
+request.raw()                             // Returns raw body data as a string.
+request.only(['username', 'age'])         // Returns an object with only the specified keys.
+request.collect(['username', 'age'])      // Formats so it’s ready to save to the database.
+request.except(['csrf_token', 'submit'])  // Returns an object with everything except the specified keys (opposite of only).
+request.input('drink', 'coffee')          // Get the value of a given key (if it doesn’t exist, return the default value).
+
+request.headers()                               // Returns an object of all header data.
+request.header('some-other-header', 'default')  // The header value for a given key (optionally with default value).
+
+request.cookies()                     // Returns an object of all cookie data.
+request.cookie('cart_total', 0)       // Returns the cookie value for a given key (optionally with default value).
+request.plainCookies()                // Returns an object of all raw cookie data.
+request.plainCookie('cart_total', 0)  // Returns the raw cookie value for a given key (optionally with default value).
+
+request.accepts(['json', 'html'])  // Reads the Accept header to help determine the response format.
+request.language(['en', 'fr'])     // Language can also be negotiated based upon the Accept-Language header.
+
+request.url()                 // Returns the current request url.
+request.originalUrl()         // Returns the full current request url with query strings.
+request.method()              // Returns the HTTP request method.
+request.intended()            // Returns the intended request HTTP method.
+request.ip()                  // Returns the most trusted ip address for the user.
+request.ips()                 // Returns an array of ips from most to the least trusted (removes the default ip address, which can be accessed via the ip method).
+request.subdomains()          // Returns a list of request subdomains (removes www from the list).
+request.ajax()                // Checks for X-Requested-With header to determine if the request is ajax or not.
+request.pjax()                // This methods looks for the X-PJAX header to identify if a request is pjax or not.
+request.hostname()            // Returns the request hostname.
+request.protocol()            // Return the request protocol.
+request.match(['posts/:id'])  // Returns whether the passed set of expressions match the current request URL.
+request.hasBody()             // A boolean indicating if the request has a post body (mainly used by the BodyParser to determine whether or not to parse the body).
+request.is(['json', 'html'])  // The is method returns the best matching content type for the current request. The check is entirely based upon the content-type header.
+
+/********************************************************************************************
 * ROUTING
 ********************************************************************************************/
 
-Route.get(url, closure)     // Register route for GET verb
-Route.post(url, closure)    // Register route for POST verb
-Route.put(url, closure)     // Register route for PUT verb
-Route.patch(url, closure)   // Register route for PATCH verb
-Route.delete(url, closure)  // Register route for DELETED verb
-Route.any(url, closure)     // Register route for all HTTP verbs
+Route.get(url, closure)     // Register route for GET verb.
+Route.post(url, closure)    // Register route for POST verb.
+Route.put(url, closure)     // Register route for PUT verb.
+Route.patch(url, closure)   // Register route for PATCH verb.
+Route.delete(url, closure)  // Register route for DELETED verb.
+Route.any(url, closure)     // Register route for all HTTP verbs.
 
-Route.on('/').render('welcome')  // Render a view directly
+Route.on('/').render('welcome')  // Render a view directly.
 
-Route.route('/', () => {}, ['GET', 'POST', 'PUT'])           // Register route for multiple verbs
-Route.get('users', closure).as('users.index')                // Assign a unique name to the route
-Route.get('users', closure).formats(['json', 'html'], true)  // Force client to define the route format
+Route.route('/', () => {}, ['GET', 'POST', 'PUT'])           // Register route for multiple verbs.
+Route.get('users', closure).as('users.index')                // Assign a unique name to the route.
+Route.get('users', closure).formats(['json', 'html'], true)  // Force client to define the route format.
 
-Route.resource('users', 'UserController')                    // Define a resource route for CRUD operations
-Route.resource('users', 'UserController').apiOnly()          // Remove create and edit routes
-Route.resource('users', 'UserController').only(['index'])    // Keeps only the passed routes
+Route.resource('users', 'UserController')                    // Define a resource route for CRUD operations.
+Route.resource('users', 'UserController').apiOnly()          // Remove create and edit routes.
+Route.resource('users', 'UserController').only(['index'])    // Keeps only the passed routes.
 Route.resource('users', 'UserController').except(['index'])  //Keeps all routes except the passed routes.
 
-Route.group(() => {})                          // Define a group of routes
-Route.group(() => {}).middleware(['auth'])     // Attach a middleware
-Route.group(() => {}).formats(['json'])        // Define response formats
-Route.group(() => {}).prefix('api/v1')         // Define a prefix for a group of routes
-Route.group(() => {}).namespace('Admin')       // Prefix the namespace of the bound controller
-Route.group(() => {}).domain('blog.sthg.com')  // Specify which domain goup routes belong to
+Route.group(() => {})                          // Define a group of routes.
+Route.group(() => {}).middleware(['auth'])     // Attach a middleware.
+Route.group(() => {}).formats(['json'])        // Define response formats.
+Route.group(() => {}).prefix('api/v1')         // Define a prefix for a group of routes.
+Route.group(() => {}).namespace('Admin')       // Prefix the namespace of the bound controller.
+Route.group(() => {}).domain('blog.sthg.com')  // Specify which domain goup routes belong to.
 
 /********************************************************************************************
 * VALIDATOR
@@ -86,12 +125,12 @@ const rules = {
 
 // Indivative methods
 
-indicative.validate(data, rules);                   //  Validate data with defined rules
-indicative.validateAll(data, rules);                //  Same as validate but continues to validate all fields, whereas the validate method stops on first error
-indicative.is.email(emailAddress);                  //  Raw validator
-indicative.extend("exists", existsFn);              //  Add your own rules
-indicative.sanitize(data, rules);                   //  Returns a new object with sanitized data:
-indicative.sanitizor.normalizeEmail(emailAddress);  //  Raw sanitizor
+indicative.validate(data, rules);                   //  Validate data with defined rules.
+indicative.validateAll(data, rules);                //  Same as validate but continues to validate all fields, whereas the validate method stops on first error.
+indicative.is.email(emailAddress);                  //  Raw validator.
+indicative.extend("exists", existsFn);              //  Add your own rules.
+indicative.sanitize(data, rules);                   //  Returns a new object with sanitized data:.
+indicative.sanitizor.normalizeEmail(emailAddress);  //  Raw sanitizor.
 
 // Validations
 
