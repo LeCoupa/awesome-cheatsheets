@@ -5,6 +5,7 @@
 
 /********************************************************************************************
 * AVAILABLE CLI COMMANDS
+* https://adonisjs.com/docs/ace
 ********************************************************************************************/
 
 build   // Compile typescript code to Javascript. Optionally watch for file changes.
@@ -45,6 +46,7 @@ migration:status    // Get the status of all the migrations.
 
 /********************************************************************************************
 * REQUEST
+* https://adonisjs.com/docs/request
 ********************************************************************************************/
 
 request.all()                             // Returns an object containing all request data (merges query params and request body data).
@@ -84,6 +86,7 @@ request.is(['json', 'html'])  // The is method returns the best matching content
 
 /********************************************************************************************
 * ROUTING
+* https://adonisjs.com/docs/routing
 ********************************************************************************************/
 
 Route.get(url, closure)     // Register route for GET verb.
@@ -181,7 +184,7 @@ url                 // Ensures the value is a valid URL format.
 
 /********************************************************************************************
 * DATABASE HOOKS
-* https://adonisjs.com/docs/4.1/database-hooks
+* https://adonisjs.com/docs/database-hooks
 ********************************************************************************************/
 
 beforeCreate   // Before creating a new record.
@@ -195,3 +198,22 @@ afterDelete    // After a record is removed.
 afterFind      // After a single record is fetched from the database.
 afterFetch     // After the fetch method is executed.The hook method receives an array of model instances.
 afterPaginate  // After the paginate method is executed.The hook method receives two arguments: an array of model instances and the pagination metadata.
+
+/********************************************************************************************
+* EVENTS
+* https://adonisjs.com/docs/events
+********************************************************************************************/
+
+Event.on(event, listener)              // Bind single or multiple listeners for a given event. The listener can be a closure function or reference to one (or many) IoC container bindings.
+Event.when(event, listener)            // The when method aliases the on method.
+Event.once(event, listener)            // Same as on, but only called one time.
+Event.onAny(listener)                  // Bind listener for any event
+Event.times(number)                    // The times method is chained with on or when to limit the number of times the listener should be fired.
+Event.emit(event, data)                // Emit an event with optional data.
+Event.fire(event, data)                // The fire method aliases the emit method.
+Event.removeListener(event, listener)  // Remove listener(s) for a given event.
+Event.off(event, listener)             // The off method aliases the removeListener method.
+Event.removeAllListeners(event)        // Remove all listeners for a given event.
+Event.listenersCount(event)            // Return the number of listeners for a given event.
+Event.getListeners(event)              // Return an array of listeners for a given event.
+Event.hasListeners(event)              // Return a boolean indicating whether there are any listeners for a given event.
