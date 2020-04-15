@@ -86,7 +86,7 @@ request.is(['json', 'html'])  // The is method returns the best matching content
 
 /********************************************************************************************
 * RESPONSE
-* https://adonisjs.com/docs/4.1/response
+* https://adonisjs.com/docs/response
 ********************************************************************************************/
 
 response.header("Content-type", "application/json");      // Set a header value.
@@ -280,3 +280,23 @@ Event.removeAllListeners(event)        // Remove all listeners for a given event
 Event.listenersCount(event)            // Return the number of listeners for a given event.
 Event.getListeners(event)              // Return an array of listeners for a given event.
 Event.hasListeners(event)              // Return a boolean indicating whether there are any listeners for a given event.
+
+/********************************************************************************************
+* SESSIONS
+* https://adonisjs.com/docs/sessions
+********************************************************************************************/
+
+session.put(key, value);            // Add a key/value pair to the session store.
+session.get(key, [defaultValue]);   // Return the value for a given key (accepts an optional default value).
+session.all();                      // Get everything back as an object from the session store.
+session.increment(key, [steps]);    // Increment the value for a given key (ensure the previous value is a number).
+session.decrement(key, [steps]);    // Decrement the value for a given key (ensure the previous value is a number).
+session.forget(key);                // Remove a key/value pair from the session store.
+session.pull(key, [defaultValue]);  // Return (and then remove) a key/value pair from the session store.
+session.clear();                    // Empty the session store.
+
+session.flashAll()     // Flash the request form data.
+session.flashOnly()    // Flash only the selected fields.
+session.flashExcept()  // Flash the request form data except the selected fields.
+session.withErrors()   // Flash with an array of errors.
+session.flash()        // Flash a custom object.
