@@ -85,6 +85,69 @@ request.hasBody()             // A boolean indicating if the request has a post 
 request.is(['json', 'html'])  // The is method returns the best matching content type for the current request. The check is entirely based upon the content-type header.
 
 /********************************************************************************************
+* RESPONSE
+* https://adonisjs.com/docs/4.1/response
+********************************************************************************************/
+
+response.header("Content-type", "application/json");      // Set a header value.
+response.safeHeader("Content-type", "application/json");  // Only set a header value if it does not already exist.
+response.removeHeader("Content-type");                    // Remove an existing header.
+response.type("application/json");                        // Set the Content-Type header.
+
+response.cookie("cartTotal", 20);       // Set a cookie value.
+response.clearCookie("cartTotal");      // Remove an existing cookie value (by setting its expiry in the past).
+response.plainCookie("cartTotal", 20);  // Set a plain cookie.
+
+response.redirect(url, [(sendParams = false)], [(status = 302)]);                   // Redirect request to a different url (by default it will set the status as 302).
+response.route(route, [data], [domain], [(sendParams = false)], [(status = 302)]);  // Redirect to a route (via route name or controller method).
+
+response.download(filePath);                           // Stream the file to the client.
+response.attachment(filePath, [name], [disposition]);  // Force download the file.
+
+response.continue();                      // 100 status code
+response.switchingProtocols();            // 101 status code
+response.ok();                            // 200 status code
+response.created();                       // 201 status code
+response.accepted();                      // 202 status code
+response.nonAuthoritativeInformation();   // 203 status code
+response.noContent();                     // 204 status code
+response.resetContent();                  // 205 status code
+response.partialContent();                // 206 status code
+response.multipleChoices();               // 300 status code
+response.movedPermanently();              // 301 status code
+response.found();                         // 302 status code
+response.seeOther();                      // 303 status code
+response.notModified();                   // 304 status code
+response.useProxy();                      // 305 status code
+response.temporaryRedirect();             // 307 status code
+response.badRequest();                    // 400 status code
+response.unauthorized();                  // 401 status code
+response.paymentRequired();               // 402 status code
+response.forbidden();                     // 403 status code
+response.notFound();                      // 404 status code
+response.methodNotAllowed();              // 405 status code
+response.notAcceptable();                 // 406 status code
+response.proxyAuthenticationRequired();   // 407 status code
+response.requestTimeout();                // 408 status code
+response.conflict();                      // 409 status code
+response.gone();                          // 410 status code
+response.lengthRequired();                // 411 status code
+response.preconditionFailed();            // 412 status code
+response.requestEntityTooLarge();         // 413 status code
+response.requestUriTooLong();             // 414 status code
+response.unsupportedMediaType();          // 415 status code
+response.requestedRangeNotSatisfiable();  // 416 status code
+response.expectationFailed();             // 417 status code
+response.unprocessableEntity();           // 422 status code
+response.tooManyRequests();               // 429 status code
+response.internalServerError();           // 500 status code
+response.notImplemented();                // 501 status code
+response.badGateway();                    // 502 status code
+response.serviceUnavailable();            // 503 status code
+response.gatewayTimeout();                // 504 status code
+response.httpVersionNotSupported();       // 505 status code
+
+/********************************************************************************************
 * ROUTING
 * https://adonisjs.com/docs/routing
 ********************************************************************************************/
