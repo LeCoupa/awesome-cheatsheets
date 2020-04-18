@@ -302,6 +302,21 @@ Logger.debug(msg[, …​data])    // Print a debug log (level 7).
 Logger.transport(transport)  // Switch transport on the fly.
 
 /********************************************************************************************
+* ENCRYPTION AND HASHING
+* https://adonisjs.com/docs/4.1/encryption-and-hashing
+********************************************************************************************/
+
+const Encryption = use('Encryption')
+
+Encryption.encrypt(string)  // Encrypt a given value.
+Encryption.decrypt(string)  // Decrypt an encrypted value.
+
+const Hash = use('Hash')
+
+await Hash.make(string[, config])        // Hash a plain string value.
+await Hash.verify(string, hashedString)  // Since you cannot decrypt a hash, you can verify the user input against the previously hashed value.
+
+/********************************************************************************************
 * SESSIONS
 * https://adonisjs.com/docs/sessions
 ********************************************************************************************/
