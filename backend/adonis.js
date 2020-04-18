@@ -290,14 +290,14 @@ const Logger = use('Logger')
 
 Logger.level = 'debug'  // Sed default config level
 
-Logger.emerg(msg, …​data)    // Print an emergency log (level 0).
-Logger.alert(msg, …​data)    // Print an alert log (level 1).
-Logger.crit(msg, …​data)     // Print a critical log (level 2).
-Logger.error(msg, …​data)    // Print an error log (level 3).
-Logger.warning(msg, …​data)  // Print a warning log (level 4).
-Logger.notice(msg, …​data)   // Print a notice log (level 5).
-Logger.info(msg, …​data)     // Print an info log (level 6).
-Logger.debug(msg, …​data)    // Print a debug log (level 7).
+Logger.emerg(msg[, …​data])    // Print an emergency log (level 0).
+Logger.alert(msg[, …​data])    // Print an alert log (level 1).
+Logger.crit(msg[, …​data])     // Print a critical log (level 2).
+Logger.error(msg[, …​data])    // Print an error log (level 3).
+Logger.warning(msg[, …​data])  // Print a warning log (level 4).
+Logger.notice(msg[, …​data])   // Print a notice log (level 5).
+Logger.info(msg[, …​data])     // Print an info log (level 6).
+Logger.debug(msg[, …​data])    // Print a debug log (level 7).
 
 Logger.transport(transport)  // Switch transport on the fly.
 
