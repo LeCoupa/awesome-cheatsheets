@@ -246,6 +246,38 @@ under               // Ensures the value of a field is under a certain value. Al
 url                 // Ensures the value is a valid URL format.
 
 /********************************************************************************************
+* LUCID
+* https://adonisjs.com/docs/lucid
+********************************************************************************************/
+
+Model.find()                                 // Find a record using the primary key (always returns one record).
+Model.findOrFail()                           // Similar to find, but instead throws a ModelNotFoundException when unable to find a record.
+Model.findBy()                               // Find a record using a key/value pair (returns the first matching record)
+Model.findByOrFail()                         // Similar to findBy, but instead throws a ModelNotFoundException when unable to find a record.
+Model.first()                                // Find the first row from the database.
+Model.firstOrFail()                          // Similar to first, but instead throws a ModelNotFoundException when unable to find a record.
+Model.last()                                 // Find the latest row from the database.
+Model.findOrCreate(whereAttributes, values)  // Find a record, if not found a new record will be created and returned.
+Model.pick(rows = 1)                         // Pick x number of rows from the database table (defaults to 1 row).
+Model.pickInverse(rows = 1)                  // Pick x number of rows from the database table from last (defaults to 1 row).
+Model.ids()                                  // Return an array of primary keys.
+Model.pair(lhs, rhs)                         // Returns an object of key/value pairs (lhs is the key, rhs is the value).
+Model.all()                                  // Select all rows.
+Model.truncate()                             // Delete all rows (truncate table).
+Model.getCount()                             // Return a count of records in a given result set.
+Model.create(jsonAttributes)                 // Return model instance after saving it into the database
+Model.createMany(arrayAttributes)            // Return an array of model instances after saving them into the database.
+
+Model.query().setHidden(['password'])        // Define hidden fields.
+Model.query().setVisible(['title', 'body'])  // Define visible fields.
+Model.query().paginate()                     // Returns an object with metadata and data property that has a list of model results.
+
+instance.fill(jsonAttributes)                // Remove all existing values, only set the specified attributes.
+instance.merge(jsonAttributes)               // Modifies the specified attributes.
+instance.save()                              // Save the instance to the database.
+instance.delete()                            // Delete model instance from the database.
+
+/********************************************************************************************
 * DATABASE HOOKS
 * https://adonisjs.com/docs/database-hooks
 ********************************************************************************************/
@@ -303,7 +335,7 @@ Logger.transport(transport)  // Switch transport on the fly.
 
 /********************************************************************************************
 * ENCRYPTION AND HASHING
-* https://adonisjs.com/docs/4.1/encryption-and-hashing
+* https://adonisjs.com/docs/encryption-and-hashing
 ********************************************************************************************/
 
 const Encryption = use('Encryption')
