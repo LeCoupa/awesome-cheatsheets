@@ -37,7 +37,6 @@ make:view        // Make a new view template.
 
 // Migrations
 
-make:migration      // Create a new migration file.
 migration:run       // Run all pending migrations.
 migration:rollback  // Rollback last set of migrations.
 migration:refresh   // Rollback all migrations to the 0 batch then re-run them from the start.
@@ -367,3 +366,28 @@ session.flashOnly()    // Flash only the selected fields.
 session.flashExcept()  // Flash the request form data except the selected fields.
 session.withErrors()   // Flash with an array of errors.
 session.flash()        // Flash a custom object.
+
+/********************************************************************************************
+* SOCIAL AUTHENTICATION
+* https://adonisjs.com/docs/social-auth
+********************************************************************************************/
+
+// Drivers: Facebook, Github, Google, Instagram, Linkedin, Twitter, Foursquare.
+
+ally.redirect()                                   // Redirect user to the 3rd party website.
+ally.getRedirectUrl()                             // Get redirect URL back as a string.
+ally.scope(scopesArray)                           // Define runtime scopes before redirecting the user.
+ally.fields(fieldsArray)                          // Fields to be fetched when getting the authenticated user profile.
+ally.getUser()                                    // Get the user profile of an authenticated user (returns an AllyUser instance).
+ally.getUserByToken(accessToken, [accessSecret])  // Returns the user details using the accessToken.
+
+user.getId()            // Returns the user id.
+user.getName()          // Returns the user name.
+user.getEmail()         // Returns the user email.
+user.getNickname()      // Returns the nickname / display name of the user.
+user.getAvatar()        // Returns public URL to the user’s profile picture.
+user.getAccessToken()   // Returns the access token which may be used later to update the user profile.
+user.getRefreshToken()  // Refresh token to be used when access token expires.
+user.getExpires()       // Access token expiry data.
+user.getTokenSecret()   // Returns token secret.
+user.getOriginal()      // Original payload returned by the 3rd party provider.
