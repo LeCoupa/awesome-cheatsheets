@@ -251,7 +251,7 @@ url                 // Ensures the value is a valid URL format.
 
 Model.find()                                 // Find a record using the primary key (always returns one record).
 Model.findOrFail()                           // Similar to find, but instead throws a ModelNotFoundException when unable to find a record.
-Model.findBy()                               // Find a record using a key/value pair (returns the first matching record)
+Model.findBy()                               // Find a record using a key/value pair (returns the first matching record).
 Model.findByOrFail()                         // Similar to findBy, but instead throws a ModelNotFoundException when unable to find a record.
 Model.first()                                // Find the first row from the database.
 Model.firstOrFail()                          // Similar to first, but instead throws a ModelNotFoundException when unable to find a record.
@@ -264,8 +264,9 @@ Model.pair(lhs, rhs)                         // Returns an object of key/value p
 Model.all()                                  // Select all rows.
 Model.truncate()                             // Delete all rows (truncate table).
 Model.getCount()                             // Return a count of records in a given result set.
-Model.create(jsonAttributes)                 // Return model instance after saving it into the database
+Model.create(jsonAttributes)                 // Return model instance after saving it into the database.
 Model.createMany(arrayAttributes)            // Return an array of model instances after saving them into the database.
+Model.toJSON()                               // Converts a serializable instance to a plain array/object.
 
 Model.query().setHidden(['password'])        // Define hidden fields.
 Model.query().setVisible(['title', 'body'])  // Define visible fields.
