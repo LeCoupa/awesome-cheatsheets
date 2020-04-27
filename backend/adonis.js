@@ -278,6 +278,38 @@ instance.save()                              // Save the instance to the databas
 instance.delete()                            // Delete model instance from the database.
 
 /********************************************************************************************
+* QUERY BUILDER
+* https://adonisjs.com/docs/query-builder
+* http://knexjs.org/
+********************************************************************************************/
+
+const Database = use('Database')
+
+// Available where clauses
+
+where(~mixed~)
+orWhere(~mixed~)
+whereNot(~mixed~)
+orWhereNot(~mixed~)
+whereIn(column|columns, array|callback|builder)
+orWhereIn(column | columns, array | callback | builder)
+whereNotIn(column, array|callback|builder)
+orWhereNotIn(column, array | callback | builder)
+whereNull(column)
+orWhereNull(column)
+whereNotNull(column)
+orWhereNotNull(column)
+whereExists(builder | callback)
+orWhereExists(builder | callback)
+whereNotExists(builder | callback)
+orWhereNotExists(builder | callback)
+whereBetween(column, range)
+orWhereBetween(column, range)
+whereNotBetween(column, range)
+orWhereNotBetween(column, range)
+whereRaw(query, [bindings])
+
+/********************************************************************************************
 * DATABASE HOOKS
 * https://adonisjs.com/docs/database-hooks
 ********************************************************************************************/
