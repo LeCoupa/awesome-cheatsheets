@@ -150,8 +150,8 @@ page.tracing       // returns Tracing
 
 page.$(selector)                                                // The method runs document.querySelector within the page. If no element matches the selector, the return value resolves to null.
 page.$$(selector)                                               // The method runs document.querySelectorAll within the page. If no elements match the selector, the return value resolves to [].
-page.$$eval(selector, pageFunction[, ...args])                  // This method runs Array.from(document.querySelectorAll(selector)) within the page and passes it as the first argument to pageFunction.
 page.$eval(selector, pageFunction[, ...args])                   // This method runs document.querySelector within the page and passes it as the first argument to pageFunction. If there's no element matching selector, the method throws an error.
+page.$$eval(selector, pageFunction[, ...args])                  // This method runs Array.from(document.querySelectorAll(selector)) within the page and passes it as the first argument to pageFunction.
 page.$x(expression)                                             // The method evaluates the XPath expression.
 page.addScriptTag(options)                                      // Adds a <script> tag into the page with the desired url or content.
 page.addStyleTag(options)                                       // Adds a <link rel="stylesheet"> tag into the page with the desired url or a <style type="text/css"> tag with the content.
