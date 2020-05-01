@@ -401,6 +401,29 @@ session.withErrors()   // Flash with an array of errors.
 session.flash()        // Flash a custom object.
 
 /********************************************************************************************
+* FILE STORAGE
+* https://adonisjs.com/docs/file-system
+********************************************************************************************/
+
+const Drive = use('Drive')
+
+Drive.exists(relativePath)                          // Find if a file/directory exists or not.
+Drive.get(relativePath, encoding = utf-8)           // Get file contents as a buffer or string.
+Drive.getStream(relativePath)                       // Get file as a stream.
+Drive.put(relativePath, content, options = {})      // Create a new file with given contents (creates any missing directories).
+Drive.prepend(relativePath, content, options = {})  // Prepend content to a file (creates a new file if path doesn’t exist).
+Drive.append(relativePath, content, options = {})   // Append content to a file (creates a new file if path doesn’t exist).
+Drive.delete(relativePath)                          // Remove existing file.
+Drive.move(src, dest, options = {})                 // Move file from one directory to another.
+Drive.copy(src, dest, options = {})                 // Copy file from one directory to another.
+
+// For S3 & Spaces drivers
+
+Drive.getObject(location, params)                   // Get S3 object for a given file (for params info, see S3 params).
+Drive.getUrl(location, [bucket])                    // Get url for a given file (accepts optional alternative bucket param).
+Drive.getSignedUrl(location, expiry = 900, params)  // Get signed url for a given file (expiry set to 15mins by default).
+
+/********************************************************************************************
 * SOCIAL AUTHENTICATION
 * https://adonisjs.com/docs/social-auth
 ********************************************************************************************/
