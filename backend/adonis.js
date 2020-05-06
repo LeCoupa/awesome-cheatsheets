@@ -424,6 +424,26 @@ Drive.getUrl(location, [bucket])                    // Get url for a given file 
 Drive.getSignedUrl(location, expiry = 900, params)  // Get signed url for a given file (expiry set to 15mins by default).
 
 /********************************************************************************************
+* HELPERS
+* https://adonisjs.com/docs/helpers
+********************************************************************************************/
+
+const Helpers = use('Helpers')
+
+Helpers.appRoot()                 // Returns path to the application root.
+Helpers.publicPath([toFile])      // Returns path to the public directory or file inside the directory.
+Helpers.configPath([toFile])      // Returns path to the config directory or file inside the directory.
+Helpers.resourcesPath([toFile])   // Returns path to the resources directory or file inside the directory.
+Helpers.migrationsPath([toFile])  // Returns path to the migrations directory or file inside the directory.
+Helpers.seedsPath([toFile])       // Returns path to the seeds directory or file inside the directory.
+Helpers.databasePath([toFile])    // Returns path to the database directory or file inside the directory.
+Helpers.viewsPath([toFile])       // Returns path to the views directory or file inside the directory.
+Helpers.tmpPath([toFile])         // Returns path to the tmp directory or file inside the directory.
+
+Helpers.promisify()               // Returns promisified callback functions.
+Helpers.isAceCommand()            // Returns whether the process was started as the ace command or not.
+
+/********************************************************************************************
 * SOCIAL AUTHENTICATION
 * https://adonisjs.com/docs/social-auth
 ********************************************************************************************/
