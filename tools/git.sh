@@ -46,6 +46,11 @@ git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
 
+git clean -f                      # clean untracked files permanently
+git clean -f -d/git clean -fd     # To remove directories permanently
+git clean -f -X/git clean -fX     # To remove ignored files permanently
+git clean -f -x/git clean -fx     # To remove ignored and non-ignored files permanently
+
 .gitignore
 # is a file including names of stuff that you don"t want to be staged or tracked.
 # You usually keep your local files like database, media, and etc here.
