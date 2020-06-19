@@ -175,10 +175,10 @@ ${array[i]}                  # displays array's value for this index. If no inde
 ${#array[i]}                 # to find out the length of any element in the array
 ${#array[@]}                 # to find out how many values there are in the array
 
-declare -a                   # the variables are treaded as arrays
+declare -a                   # the variables are treated as arrays
 declare -f                   # uses function names only
 declare -F                   # displays function names without definitions
-declare -i                   # the variables are treaded as integers
+declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
 
