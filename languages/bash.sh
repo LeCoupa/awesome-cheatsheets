@@ -510,4 +510,4 @@ On_White='\033[47m' # White
 # Example of usage
 echo -e "${Green}This is GREEN text${Color_Off} and nornal text"
 echo -e "${Red}${On_White}This is Red test on White background${Color_Off}" 
-# option -s is mandatory, it enable interpretation of backslash escapes
+# option -e is mandatory, it enable interpretation of backslash escapes
