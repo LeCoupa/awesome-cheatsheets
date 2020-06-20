@@ -380,6 +380,7 @@ kill -l               # returns a list of all signals on the system, by name and
 kill PID              # terminates process with specified PID
 kill -s SIGKILL 4500  # sends a signal to force or terminate the process
 kill -15 913          # Ending PID 913 process with signal 15 (TERM)
+kill %1               # Where %1 is the number of job as read from 'jobs' command.
 
 ps           # prints a line of information about the current running login shell and any processes running under it
 ps -a        # selects all processes with a tty except session leaders
