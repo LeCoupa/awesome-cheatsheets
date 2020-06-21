@@ -110,6 +110,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Kubernetes](tools/kubernetes.sh)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 - [Nanobox CLI](tools/nanobox_cli.sh)
+- [Nginx](tools/nginx.sh)
   </details>
 
 ## 🙌🏼 How to Contribute?
