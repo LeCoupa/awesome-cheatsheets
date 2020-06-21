@@ -5,7 +5,7 @@
 Emmet is a productivity toolkit for web developers that uses expressions to generate HTML snippets.
 
 ## Installation
-Normally, Emmet installation should be a straight-forward process from the package-manager as most of the modern text editors support Emmet. If you have difficulty setting up emmet with your editor and wish to check if emmet supports your favorite editor or not, you can check from here. [Emmet Installation instructions](https://emmet.io/download/)
+Normally, installation for Emmet should be a straight-forward process from the package-manager, as most of the modern text editors support Emmet. If you have difficulty setting up emmet with your editor and wish to check Emmet is supported by your favourite editor or not, you can check it from here. [Emmet Installation instructions](https://emmet.io/download/)
 
 ## Usage
 You can use Emmet in two ways:
