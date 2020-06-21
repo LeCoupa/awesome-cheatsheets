@@ -76,3 +76,27 @@ Items can be multiplied by `*`
   <li></li>
 </ul>
 ```
+
+### Grouping
+Items can be grouped together using `()`
+
+`table>(tr>th*5)+tr>t*5`
+
+```html
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <t></t>
+    <t></t>
+    <t></t>
+    <t></t>
+    <t></t>
+  </tr>
+</table>
+```
