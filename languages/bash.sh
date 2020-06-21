@@ -175,10 +175,10 @@ ${array[i]}                  # displays array's value for this index. If no inde
 ${#array[i]}                 # to find out the length of any element in the array
 ${#array[@]}                 # to find out how many values there are in the array
 
-declare -a                   # the variables are treaded as arrays
+declare -a                   # the variables are treated as arrays
 declare -f                   # uses function names only
 declare -F                   # displays function names without definitions
-declare -i                   # the variables are treaded as integers
+declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
 
@@ -380,6 +380,7 @@ kill -l               # returns a list of all signals on the system, by name and
 kill PID              # terminates process with specified PID
 kill -s SIGKILL 4500  # sends a signal to force or terminate the process
 kill -15 913          # Ending PID 913 process with signal 15 (TERM)
+kill %1               # Where %1 is the number of job as read from 'jobs' command.
 
 ps           # prints a line of information about the current running login shell and any processes running under it
 ps -a        # selects all processes with a tty except session leaders
@@ -509,4 +510,4 @@ On_White='\033[47m' # White
 # Example of usage
 echo -e "${Green}This is GREEN text${Color_Off} and nornal text"
 echo -e "${Red}${On_White}This is Red test on White background${Color_Off}" 
-# option -s is mandatory, it enable interpretation of backslash escapes
+# option -e is mandatory, it enable interpretation of backslash escapes
