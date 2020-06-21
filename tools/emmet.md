@@ -16,7 +16,7 @@ __This cheatsheet will assume that you press `Tab` after each expressions.__
 
 ## Basics
 
-### Generating  HTML 5 Snippet
+### Generating  HTML 5 DOCTYPE
 `html:5`
 Will generate
 
@@ -143,4 +143,75 @@ Attributes can be added using `[]`
 
 ```HTML
 <a href="https://google.com" data-toggle="something" target="_blank"></a>
+```
+
+### Numbering
+Numbering can be done using `$`
+You can use this inside tag or contents.
+
+`h${This is so awesome $}*6`
+
+```HTML
+<h1>This is so awesome 1</h1>
+<h2>This is so awesome 2</h2>
+<h3>This is so awesome 3</h3>
+<h4>This is so awesome 4</h4>
+<h5>This is so awesome 5</h5>
+<h6>This is so awesome 6</h6>
+```
+
+Use `@-` to reverse the Numbering
+
+`img[src=image$$@-.jpg]*5`
+
+```HTML
+<img src="image05.jpg" alt="">
+<img src="image04.jpg" alt="">
+<img src="image03.jpg" alt="">
+<img src="image02.jpg" alt="">
+<img src="image01.jpg" alt="">
+```
+
+To start the numbering from specific number, use this way
+
+`img[src=emmet$@100.jpg]*5`
+
+```HTML
+<img src="emmet100.jpg" alt="">
+<img src="emmet101.jpg" alt="">
+<img src="emmet102.jpg" alt="">
+<img src="emmet103.jpg" alt="">
+<img src="emmet104.jpg" alt="">
+```
+
+## Tips
+* Use `:` to expand known abbreviations
+
+`input:date`
+```HTML
+<input type="date" name="" id="">
+```
+
+`form:post`
+```HTML
+<form action="" method="post"></form>
+```
+
+`link:css`
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+* Building Navbar
+
+`.navbar>ul>li*3>a[href=#]{Item $@-}`
+
+```HTML
+<div class="navbar">
+  <ul>
+    <li><a href="#">Item 3</a></li>
+    <li><a href="#">Item 2</a></li>
+    <li><a href="#">Item 1</a></li>
+  </ul>
+</div>
 ```
