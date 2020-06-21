@@ -100,3 +100,47 @@ Items can be grouped together using `()`
   </tr>
 </table>
 ```
+
+### Class and ID
+Class and Id in Emmet can be done using `.` and `#`
+
+`div.heading`
+
+```html
+<div class="heading"></div>
+```
+
+`div#heading`
+
+```html
+<div id="heading"></div>
+```
+
+ID and Class can also be combined together
+
+`div#heading.center`
+
+```html
+<div id="heading" class="center"></div>
+```
+
+### Adding Content inside tags
+Contents inside tags can be added using `{}`
+
+`h1{Emmet is awesome}+h2{Every front end developers should use this}+p{This is paragraph}*2`
+
+```HTML
+<h1>Emmet is awesome</h1>
+<h2>Every front end developers should use this</h2>
+<p>This is paragraph</p>
+<p>This is paragraph</p>
+```
+
+### Attributes inside HTML tags
+Attributes can be added using `[]`
+
+`a[href=https://google.com data-toggle=something target=_blank]`
+
+```HTML
+<a href="https://google.com" data-toggle="something" target="_blank"></a>
+```
