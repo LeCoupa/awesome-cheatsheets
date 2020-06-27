@@ -245,11 +245,32 @@ Also use any options, pos:a/r/f
 display: inline-block;
 ```
 
+* `@f` will result in
+
+```css
+@font-face {
+  font-family:;
+  src:url();
+}
+```
+
 You can also use these shorthands
 
 | Shorthand      | Description |
 | ----------- | ----------- |
 | z      | z-index       |
+| w      | width       |
+| h      | height       |
 | fz   | font-size        |
+| ff   | font-family        |
 | fw   | font-weight        |
+| @lh   | line-height        |
 | maw   | max-width        |
+| mah   | max-height        |
+| miw   | min-width        |
+| mih   | min-width        |
+| !   | !important        |
+| @f   | font-face        |
+| @op   | opacity        |
+| @lh   | line-height        |
+| @op   | opacity        |
