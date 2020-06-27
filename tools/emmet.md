@@ -245,6 +245,12 @@ Also use any options, pos:a/r/f
 display: inline-block;
 ```
 
+* You can use `m` for margin and `p` for padding followed by direction
+
+`mr` -> `margin-right`
+
+`pr` -> `padding-right`
+
 * `@f` will result in
 
 ```css
