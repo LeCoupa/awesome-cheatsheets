@@ -14,7 +14,7 @@ You can use Emmet in two ways:
 
 __This cheatsheet will assume that you press `Tab` after each expressions.__
 
-## Basics
+## HTML
 
 ### Generating  HTML 5 DOCTYPE
 `html:5`
@@ -215,3 +215,41 @@ To start the numbering from specific number, use this way
   </ul>
 </div>
 ```
+
+
+## CSS
+
+Emmet works surprisingly well with css as well.
+
+* `f:l`
+
+```css
+float: left;
+```
+
+You can also use any options n/r/l
+
+* `pos:a­`
+
+```css
+position: absolute;
+```
+
+Also use any options, pos:a/r/f
+
+* `d:n/b­/f/­i/ib`
+
+`d:ib`
+
+```css
+display: inline-block;
+```
+
+You can also use these shorthands
+
+| Shorthand      | Description |
+| ----------- | ----------- |
+| z      | z-index       |
+| fz   | font-size        |
+| fw   | font-weight        |
+| maw   | max-width        |
