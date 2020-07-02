@@ -12,6 +12,33 @@ print_r($arr); // Print anything, with type hints for array's and object's
 var_dump($arr); // Print anything, with type hints for any value and sizes
 
 /**
+ * Declaring an Array
+ */
+// Indexed Array
+$arr = array("John", "Doe", "Lorem", "Ipsum");
+
+// Associative Array
+$arr = array("John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000");
+
+// Multidimensional Arrays
+$arr = array (
+    array("John",100,180),
+    array("Doe",150,130),
+    array("Lorem",500,200),
+    array("Ipsum",170,150)
+);
+
+/**
+ * Sorting an Array
+ */
+sort($arr); // Sort arrays in ascending order.
+rsort($arr); // Sort arrays in descending order.
+asort($arr); // Sort associative arrays in ascending order, according to the value.
+ksort($arr); // Sort associative arrays in ascending order, according to the key.
+arsort($arr); // Sort associative arrays in descending order, according to the value.
+krsort($arr); // Sort associative arrays in descending order, according to the key.
+
+/**
  * Ways of looping
  */
 continue; // Skip current iter
