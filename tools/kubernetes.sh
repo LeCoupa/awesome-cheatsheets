@@ -23,6 +23,8 @@ kubectl config view -o jsonpath='{.users[?(@.name == "k8s")].user.password}'
 # Set credentials for foo.kuberntes.com
 kubectl config set-credentials kubeuser/foo.kubernetes.com --username=kubeuser --password=kubepassword
 
+# Set active namespace
+kubectl config set-context --current --namespace=namespace_name
 
 ##############################################################################
 # VIEWING, FINDING RESOURCES
@@ -115,3 +117,21 @@ kubectl logs pod_name
 
 # Stream pod container logs (stdout, multi-container case)
 kubectl logs -f pod_name -c my-container
+
+
+##############################################################################
+# INTERACTING WITH RUNNING PODS
+##############################################################################
+
+
+# Run command in pod
+kubectl exec pod_name -- command_name
+
+# Run command in pod with multiple containers
+kubectl exec pod_name -c container_name -- command_name
+
+# Get terminal of pod
+kubectl exec -it pod_name /bin/sh
+
+# Get terminal of a container running in pod with multiple containers
+kubectl exec -it pod_name -c container_name /bin/sh
