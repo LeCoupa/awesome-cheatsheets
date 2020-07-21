@@ -277,6 +277,11 @@ instance.merge(jsonAttributes)               // Modifies the specified attribute
 instance.save()                              // Save the instance to the database.
 instance.delete()                            // Delete model instance from the database.
 
+instance.associate(id)       // Exclusive to belongsTo relationship, where it associates two model instances together.
+instance.dissociate(id)      // The opposite of associate, where you just drop the relationship
+instance.attach([id, id...]) // Works with the belongsToMany relationship to attach a relationship inside the pivot table.
+instance.detach([id, id...]) // The opposite of the attach method, and it removes the relationship from the pivot table only.
+
 /********************************************************************************************
 * QUERY BUILDER
 * https://adonisjs.com/docs/query-builder
