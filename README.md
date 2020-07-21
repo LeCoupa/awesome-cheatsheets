@@ -106,7 +106,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Infrastructure
 
-- [Docker](tools/docker.sh)
+- [Docker](tools/docker.md)
 - [Heroku CLI](tools/heroku.sh)
 - [Kubernetes](tools/kubernetes.md)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
