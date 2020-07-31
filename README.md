@@ -81,9 +81,12 @@ Feel free to take a look. You might learn new things. They have been designed to
 <details>
 <summary>View cheatsheets</summary>
 
-#### NoSQL
+#### SQL
 
 - [MySQL](databases/mysql.sh)
+
+#### NoSQL
+
 - [Redis](databases/redis.sh)
   </details>
 
