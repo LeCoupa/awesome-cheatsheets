@@ -106,5 +106,6 @@ django-admin version                     # display the current django version
 # 5. $ virtualenv venv 								
 # 6. $ source venv/bin/activate	
 # 7. $ pip install django							
-# 8. $ django-admin startproject myproject					
-# 9. $ python manage.py runserver
+# 8. $ django-admin startproject myproject
+# 9. $ django-admin startapp myapp
+# 10. $ python manage.py runserver
