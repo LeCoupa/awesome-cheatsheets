@@ -8,3 +8,6 @@ df -h # Check the amount of free space
 
 sudo ufw status # Check status
 sudo ufw allow from remote_IP_address to any port 3306 # Allow external ip to access port
+
+scp user@remote_host:remote_file local_file # download: remote -> local
+scp local_file user@remote_host:remote_file # upload: local -> remote
