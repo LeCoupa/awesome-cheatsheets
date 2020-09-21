@@ -139,6 +139,7 @@ ps -u yourusername       # lists your processes
 kill <PID>               # kills the processes with the ID you gave
 killall <processname>    # kill all processes with the name
 top                      # displays your currently active processes
+lsof                     # lists open files
 bg                       # lists stopped or background jobs ; resume a stopped job in the background
 fg                       # brings the most recent job in the foreground
 fg <job>                 # brings job to the foreground

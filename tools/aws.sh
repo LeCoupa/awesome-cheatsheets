@@ -33,7 +33,7 @@ aws s3 mv <local_file_path> s3://<bucket_name>/<destination_file_path> # Move a 
 ## Example: aws s3 mv text.txt s3://mybucket/text.txt
 aws s3 mv s3://<bucket_name_1> s3://<bucket_name_2> --recursive # Move all objects from bucket_name_1 to bucket_name_2
 
-aws sync <source> <target> # Sync all contents from source to a target directory. This will copy and update all missing or outdated files or objects between source and target
-## Examples: aws sync . s3://mybucket
-##           aws sync s3://bucket_1 s3://bucket_2
-aws sync <source> <target> --delete # Sync all contents from source to target, but this will remove all missing files and objects from the target that are not present in source
+aws s3 sync <source> <target> # Sync all contents from source to a target directory. This will copy and update all missing or outdated files or objects between source and target
+## Examples: aws s3 sync . s3://mybucket
+##           aws s3 sync s3://bucket_1 s3://bucket_2
+aws s3 sync <source> <target> --delete # Sync all contents from source to target, but this will remove all missing files and objects from the target that are not present in source

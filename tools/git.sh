@@ -46,6 +46,10 @@ git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
 
+git rebase -i <commit_id>         # Rebase commits from a commit ID
+git rebase --abort                # Abort a running rebase
+git rebase --continue             # Continue rebasing after fixing all conflicts
+
 git clean -f                      # clean untracked files permanently
 git clean -f -d/git clean -fd     # To remove directories permanently
 git clean -f -X/git clean -fX     # To remove ignored files permanently
