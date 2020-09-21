@@ -116,6 +116,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Nanobox CLI](tools/nanobox_cli.sh)
 - [Nginx](tools/nginx.sh)
 - [Ubuntu](tools/ubuntu.sh)
+- [AWS CLI](tools/aws.sh)
   </details>
 
 ## 🙌🏼 How to Contribute?
