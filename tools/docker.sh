@@ -16,6 +16,7 @@ docker rm $(docker ps -a -q)                # Remove all containers from this ma
 docker images -a                            # Show all images on this machine
 docker rmi <imagename>                      # Remove the specified image from this machine
 docker rmi $(docker images -q)              # Remove all images from this machine
+docker logs <container-id> -f               # Live tail a container's logs
 docker login                                # Log in this CLI session using your Docker credentials
 docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 docker push username/repository:tag         # Upload tagged image to registry

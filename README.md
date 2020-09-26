@@ -109,12 +109,14 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Infrastructure
 
+- [AWS CLI](tools/aws.sh)
 - [Docker](tools/docker.sh)
 - [Heroku CLI](tools/heroku.sh)
 - [Kubernetes](tools/kubernetes.md)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 - [Nanobox CLI](tools/nanobox_cli.sh)
 - [Nginx](tools/nginx.sh)
+- [PM2](tools/pm2.sh)
 - [Ubuntu](tools/ubuntu.sh)
   </details>
 
