@@ -7,12 +7,12 @@ git reset file.txt # Removes file.txt from the stage
 git rm file.txt    # removes file.txt both from git and file system
 git status         # shows the modifications and stuff that are not staged yet
 
-git branch              # shows all the branches (current branch is shown with a star)
-git branch my-branch    # creates my-branch
-git branch -d my-branch # deletes my-branch
-git checkout my-bracnch # switches to my-branch
-git merge my-branch     # merges my-branch to current branch
-git push origin :my-branch         # delete remote branch
+git branch                         # shows all the branches (current branch is shown with a star)
+git branch my-branch               # creates my-branch
+git branch -d my-branch            # deletes my-branch
+git checkout my-bracnch            # switches to my-branch
+git merge my-branch                # merges my-branch to current branch
+git push origin --delete my-branch # delete remote branch
 
 git cherry-pick <commit_id>        # merge the specified commit
 
