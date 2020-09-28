@@ -3,9 +3,10 @@
 # *****************************************************************************
 
 
-redis-server /path/redis.conf  # start redis with the related configuration file
-redis-cli                      # opens a redis prompt
-
+redis-server /path/redis.conf        # start redis with the related configuration file
+redis-cli                            # opens a redis prompt
+sudo systemctl restart redis.service # Restart Redis
+sudo systemctl status redis          # Check Redis status
 
 # *****************************************************************************
 # STRINGS
