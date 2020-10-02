@@ -4,7 +4,9 @@ git clone <address> # creates a git repo from given address (get the address fro
 git add file.txt   # adds(stages) file.txt to the git
 git add *          # adds(stages) all new modifications, deletions, creations to the git
 git reset file.txt # Removes file.txt from the stage
+git reset --hard   # Throws away all your uncommitted changes, hard reset files to HEAD
 git rm file.txt    # removes file.txt both from git and file system
+git rm --cached file.txt # only removes file.txt both from git index
 git status         # shows the modifications and stuff that are not staged yet
 
 git branch                         # shows all the branches (current branch is shown with a star)
@@ -19,10 +21,18 @@ git cherry-pick <commit_id>        # merge the specified commit
 git remote                         # shows the remotes
 git remote -v                      # shows the remote for pull and push
 git remote add my-remote <address> # creates a remote (get the address from your git-server)
+git remote rm my-remote            # Remove a remote
 
 git log                      # shows the log of commits
+git log --oneline            # shows the log of commits, each commit in a single line
 git commit -m "msg"          # commit changes with a msg
+git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
+git commit --amend --no-edit # amends a commit without changing its commit message
 git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
+
+git show                     # shows one or more objects (blobs, trees, tags and commits).
+git diff                     # show changes between commits, commit and working tree
+git diff --color             # show colored diff
 
 git tag                           # shows all the tags
 git tag -a v1.0 -m "msg"          # creates an annotated tag
