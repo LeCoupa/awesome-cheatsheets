@@ -331,6 +331,7 @@ abstract class AbstractClassName
 
 }
 
+
 /**
  * Basic Implementation of LoggerAwareInterface.
  * @see https://github.com/php-fig/log/blob/master/Psr/Log/LoggerAwareTrait.php
