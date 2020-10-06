@@ -98,6 +98,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### Development
 
 - [cURL](tools/curl.sh)
+- [Drush](tools/drush.sh)
 - [Elasticsearch](tools/elasticsearch.js)
 - [Emmet](tools/emmet.md)
 - [Git](tools/git.sh)
