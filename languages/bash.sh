@@ -147,7 +147,7 @@ fg                       # brings the most recent job in the foreground
 fg <job>                 # brings job to the foreground
 
 ping <host>              # pings host and outputs results
-whois <domain>           # gets whois information for domain
+whois <domain>           # gets whois information for domain ; how-to install on Ubuntu: 'sudo apt install whois'
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
