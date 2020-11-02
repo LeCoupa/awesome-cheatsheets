@@ -100,6 +100,8 @@ git config --global --remove-section url.ssh://git@heroku.com/       # To remove
 ### Managing and deploying applications on Heroku (Using Docker)     ###################################
 #####################################################################################################
 
+# Setting stack of your app to a Container
+heroku stack:set container
 
 heroku container:login            # Login to the container resistry
 git clone https://github.com/heroku/alpinehelloworld.git       # Get sample code by cloning into the following repository
