@@ -87,6 +87,7 @@ J                   join line below to the current one
 cc                  change (replace) an entire line
 cw                  change (replace) to the end of word
 C                   change (replace) to the end of line
+ct'                 change (replace) until the ' character (can change ' for any character)
 s                   delete character at cursor and substitute text
 S                   delete line at cursor and substitute text (same as cc)
 xp                  transpose two letters (delete and paste, technically)
@@ -118,6 +119,7 @@ x                   delete current character
 X                   delete previous character
 dw                  delete the current word
 dd                  delete (cut) a line
+dt'                 delete until the next ' character on the line (replace ' by any character)
 D                   delete from cursor to end of line
 :[range]d           delete [range] lines
 
@@ -279,6 +281,7 @@ CTRL-w <            increase window width
 CTRL-w >            decrease window width
 CTRL-w =            equal window
 CTRL-w o            close other windows
+zz                  Centers the window to the current line
 
 
 ##############################################################################

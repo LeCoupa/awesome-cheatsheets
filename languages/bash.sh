@@ -95,6 +95,8 @@ genscript                     # converts plain text files into postscript for pr
 dvips <filename>              # prints .dvi files (i.e. files produced by LaTeX)
 grep <pattern> <filenames>    # looks for the string in the files
 grep -r <pattern> <dir>       # search recursively for pattern in directory
+head -n file_name | tail +n   # Print nth line from file.
+head -y lines.txt | tail +x   # want to display all the lines from x to y. This includes the xth and yth lines.
 
 
 ##############################################################################
@@ -111,7 +113,7 @@ cd ..                         # changes to the parent directory
 cd <dirname>                  # changes directory
 cp -r <dir1> <dir2>           # copy <dir1> into <dir2> including sub-directories
 pwd                           # tells you where you currently are
-
+cd ~                          # changes to home.
 
 ##############################################################################
 # SSH, SYSTEM INFO & NETWORK COMMANDS
