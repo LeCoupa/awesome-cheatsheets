@@ -7,4 +7,4 @@ mysql -u username -p database_name < file.sql                         # Import d
 
 SHOW PROCESSLIST; # Show you any queries that are currently running or in the queue to run
 
-GRANT ALL PRIVILEGES ON mydb.* TO 'myuser'@'%' WITH GRANT OPTION; # Grant **all** privileges on database
+GRANT ALL ON mydb.* TO 'myuser'@'locahost'; # Grant **all** privileges on database
