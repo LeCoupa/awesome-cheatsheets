@@ -32,6 +32,12 @@ ALT+B   # moves backward one word
 ALT+D   # deletes next word
 ALT+F   # moves forward one word
 ALT+H   # deletes one character backward
+ALT+T   # transposes two words
+ALT+.   # pastes last word from the last command. Pressing it repeatedly traverses through command history.
+ALT+U   # capitalizes every character from the current cursor position to the end of the word
+ALT+L   # uncapitalizes every character from the current cursor position to the end of the word
+ALT+C   # capitalizes the letter under the cursor. The cursor then moves to the end of the word.
+ALT+R   # reverts any changes to a command you’ve pulled from your history if you’ve edited it.
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
