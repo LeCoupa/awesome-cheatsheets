@@ -44,7 +44,7 @@
 
 - [`Git History`](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits.
 
-- [`Gitignore`](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore): A extension for Visual Studio Code that assists you in working with .gitignore files.
+- [`Gitignore`](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore): An extension for Visual Studio Code that assists you in working with .gitignore files.
 
 ### Themes
 
