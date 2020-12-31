@@ -5,8 +5,9 @@
  * ******************************************************************************************* */
 
 sudo service elasticsearch status -l  // Check elasticsearch status
-sudo service elasticsearch restart    // Restart elasticsearch
 sudo service kibana restart           // Restart kibana
+sudo service elasticsearch restart    // Restart elasticsearch
+brew services elasticsearch-full restart
 
 sudo /usr/share/elasticsearch/bin/elasticsearch --version // Check ElasticSearch version
 sudo /usr/share/kibana/bin/kibana --version               // Check kibana version
