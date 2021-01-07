@@ -3,9 +3,10 @@
 # *****************************************************************************
 
 
-redis-server /path/redis.conf  # start redis with the related configuration file
-redis-cli                      # opens a redis prompt
-
+redis-server /path/redis.conf        # start redis with the related configuration file
+redis-cli                            # opens a redis prompt
+sudo systemctl restart redis.service # Restart Redis
+sudo systemctl status redis          # Check Redis status
 
 # *****************************************************************************
 # STRINGS
@@ -115,7 +116,7 @@ HINCRBY key field increment  # increment value in hash by X
 HDEL key field [field ...]   # delete one or more hash fields
 HEXISTS key field            # determine if a hash field exists
 HKEYS key                    # get all the fields in a hash
-HLEN key                     # get all the fields in a hash
+HLEN key                     # get the number of fields in a hash
 HSTRLEN key field            # get the length of the value of a hash field
 HVALS key                    # get all the values in a hash
 

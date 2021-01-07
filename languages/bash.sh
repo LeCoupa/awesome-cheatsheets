@@ -1,8 +1,7 @@
 #!/bin/bash
 ##############################################################################
-# SHORTCUTS
+# SHORTCUTS and HISTORY
 ##############################################################################
-
 
 CTRL+A  # move to beginning of line
 CTRL+B  # moves backward one character
@@ -11,6 +10,7 @@ CTRL+D  # deletes one character backward or logs out of current session, similar
 CTRL+E  # moves to end of line
 CTRL+F  # moves forward one character
 CTRL+G  # aborts the current editing command and ring the terminal bell
+CTRL+H  # deletes one character under cursor (same as DELETE)
 CTRL+J  # same as RETURN
 CTRL+K  # deletes (kill) forward to end of line
 CTRL+L  # clears screen and redisplay the line
@@ -31,10 +31,23 @@ CTRL+Z  # stops the current command, resume with fg in the foreground or bg in t
 ALT+B   # moves backward one word
 ALT+D   # deletes next word
 ALT+F   # moves forward one word
+ALT+H   # deletes one character backward
+ALT+T   # transposes two words
+ALT+.   # pastes last word from the last command. Pressing it repeatedly traverses through command history.
+ALT+U   # capitalizes every character from the current cursor position to the end of the word
+ALT+L   # uncapitalizes every character from the current cursor position to the end of the word
+ALT+C   # capitalizes the letter under the cursor. The cursor then moves to the end of the word.
+ALT+R   # reverts any changes to a command you’ve pulled from your history if you’ve edited it.
 
-DELETE  # deletes one character backward
-!!      # repeats the last command
-exit    # logs out of current session
+BACKSPACE  # deletes one character backward
+DELETE     # deletes one character under cursor
+
+history   # shows command line history
+!!        # repeats the last command
+!<n>      # refers to command line 'n'
+!<string> # refers to command starting with 'string'
+
+exit      # logs out of current session
 
 
 ##############################################################################
@@ -47,7 +60,7 @@ echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
 
 bash                # if you want to use bash (type exit to go back to your previously opened shell)
-whereis bash        # finds out where bash is on your system
+whereis bash        # locates the binary, source and manual-page for a command
 which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
 
 clear               # clears content on window (hide displayed lines)
@@ -60,7 +73,7 @@ clear               # clears content on window (hide displayed lines)
 
 ls                            # lists your files in current directory, ls <dir> to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
-ls -a                         # lists all files, including hidden files (name beginning with '.')
+ls -a                         # lists all files in 'long format', including hidden files (name beginning with '.')
 ln -s <filename> <link>       # creates symbolic link to file
 touch <filename>              # creates or updates (edit) your file
 cat <filename>                # prints file raw content (will not be interpreted)
@@ -72,8 +85,11 @@ vim <filename>                # opens a file in VIM (VI iMproved) text editor, w
 mv <filename1> <dest>         # moves a file to destination, behavior will change based on 'dest' type (dir: file is placed into dir; file: file will replace dest (tip: useful for renaming))
 cp <filename1> <dest>         # copies a file
 rm <filename>                 # removes a file
+find . -name <name> <type>    # searches for a file or a directory in the current directory and all its sub-directories by its name
 diff <filename1> <filename2>  # compares files, and shows where they differ
 wc <filename>                 # tells you how many lines, words and characters there are in a file. Use -lwc (lines, word, character) to ouput only 1 of those informations
+sort <filename>               # sorts the contents of a text file line by line in alphabetical order, use -n for numeric sort and -r for reversing order.
+sort -t -k <filename>         # sorts the contents on specific sort key field starting from 1, using the field separator t.
 chmod -options <filename>     # lets you change the read, write, and execute permissions on your files (more infos: SUID, GUID)
 gzip <filename>               # compresses files using gzip algorithm
 gunzip <filename>             # uncompresses files compressed by gzip
@@ -85,6 +101,8 @@ genscript                     # converts plain text files into postscript for pr
 dvips <filename>              # prints .dvi files (i.e. files produced by LaTeX)
 grep <pattern> <filenames>    # looks for the string in the files
 grep -r <pattern> <dir>       # search recursively for pattern in directory
+head -n file_name | tail +n   # Print nth line from file.
+head -y lines.txt | tail +x   # want to display all the lines from x to y. This includes the xth and yth lines.
 
 
 ##############################################################################
@@ -92,11 +110,16 @@ grep -r <pattern> <dir>       # search recursively for pattern in directory
 ##############################################################################
 
 
-mkdir <dirname>  # makes a new directory
-cd               # changes to home
-cd <dirname>     # changes directory
-pwd              # tells you where you currently are
-
+mkdir <dirname>               # makes a new directory
+rmdir <dirname>               # remove an empty directory
+rmdir -rf <dirname>           # remove a non-empty directory
+mv <dir1> <dir2>              # rename a directory from <dir1> to <dir2>
+cd                            # changes to home
+cd ..                         # changes to the parent directory
+cd <dirname>                  # changes directory
+cp -r <dir1> <dir2>           # copy <dir1> into <dir2> including sub-directories
+pwd                           # tells you where you currently are
+cd ~                          # changes to home.
 
 ##############################################################################
 # SSH, SYSTEM INFO & NETWORK COMMANDS
@@ -124,6 +147,7 @@ ps -u yourusername       # lists your processes
 kill <PID>               # kills the processes with the ID you gave
 killall <processname>    # kill all processes with the name
 top                      # displays your currently active processes
+lsof                     # lists open files
 bg                       # lists stopped or background jobs ; resume a stopped job in the background
 fg                       # brings the most recent job in the foreground
 fg <job>                 # brings job to the foreground
@@ -146,6 +170,8 @@ echo $varname                # checks a variable's value
 echo $$                      # prints process ID of the current shell
 echo $!                      # prints process ID of the most recently invoked background job
 echo $?                      # displays the exit status of the last command
+read <varname>               # reads a string from the input and assigns it to a variable 
+let <varname> = <equation>   # performs mathematical calculation using operators like +, -, *, /, %
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 
 array[0]=valA                # how to define an array
@@ -158,10 +184,10 @@ ${array[i]}                  # displays array's value for this index. If no inde
 ${#array[i]}                 # to find out the length of any element in the array
 ${#array[@]}                 # to find out how many values there are in the array
 
-declare -a                   # the variables are treaded as arrays
+declare -a                   # the variables are treated as arrays
 declare -f                   # uses function names only
 declare -F                   # displays function names without definitions
-declare -i                   # the variables are treaded as integers
+declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
 
@@ -219,16 +245,18 @@ statement1 || statement2  # or operator
 
 # STRINGS
 
-str1 = str2               # str1 matches str2
-str1 != str2              # str1 does not match str2
-str1 < str2               # str1 is less than str2 (alphabetically)
-str1 > str2               # str1 is greater than str2 (alphabetically)
--n str1                   # str1 is not null (has length greater than 0)
--z str1                   # str1 is null (has length 0)
+str1 == str2               # str1 matches str2
+str1 != str2               # str1 does not match str2
+str1 < str2                # str1 is less than str2 (alphabetically)
+str1 > str2                # str1 is greater than str2 (alphabetically)
+str1 \> str2               # str1 is sorted after str2
+str1 \< str2               # str1 is sorted before str2
+-n str1                    # str1 is not null (has length greater than 0)
+-z str1                    # str1 is null (has length 0)
 
 # FILES
 
--a file                   # file exists
+-a file                   # file exists or its compilation is successful
 -d file                   # file exists and is a directory
 -e file                   # file exists; same -a
 -f file                   # file exists and is a regular file (i.e., not a directory or other special type of file)
@@ -357,8 +385,11 @@ fg %N        # brings job number N
 fg %string   # brings job whose command begins with string
 fg %?string  # brings job whose command contains string
 
-kill -l      # returns a list of all signals on the system, by name and number
-kill PID     # terminates process with specified PID
+kill -l               # returns a list of all signals on the system, by name and number
+kill PID              # terminates process with specified PID
+kill -s SIGKILL 4500  # sends a signal to force or terminate the process
+kill -15 913          # Ending PID 913 process with signal 15 (TERM)
+kill %1               # Where %1 is the number of job as read from 'jobs' command.
 
 ps           # prints a line of information about the current running login shell and any processes running under it
 ps -a        # selects all processes with a tty except session leaders
@@ -411,7 +442,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status
 
 function dbgtrap {
   echo "badvar is $badvar"
@@ -426,3 +457,66 @@ function returntrap {
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
+
+##############################################################################
+# COLORS AND BACKGROUNDS 
+##############################################################################
+
+# Reset
+Color_Off='\033[0m' # Text Reset
+
+# Regular Colors
+Black='\033[0;30m'  # Black
+Red='\033[0;31m'    # Red
+Green='\033[0;32m'  # Green
+Yellow='\033[0;33m' # Yellow
+Blue='\033[0;34m'   # Blue
+Purple='\033[0;35m' # Purple
+Cyan='\033[0;36m'   # Cyan
+White='\033[0;97m'  # White
+
+# Additional colors
+LGrey='\033[0;37m'  # Ligth Gray
+DGrey='\033[0;90m'  # Dark Gray
+LRed='\033[0;91m'   # Ligth Red
+LGreen='\033[0;92m' # Ligth Green
+LYellow='\033[0;93m'# Ligth Yellow
+LBlue='\033[0;94m'  # Ligth Blue
+LPurple='\033[0;95m'# Light Purple
+LCyan='\033[0;96m'  # Ligth Cyan
+
+
+# Bold
+BBlack='\033[1;30m' # Black
+BRed='\033[1;31m'   # Red
+BGreen='\033[1;32m' # Green
+BYellow='\033[1;33m'# Yellow
+BBlue='\033[1;34m'  # Blue
+BPurple='\033[1;35m'# Purple
+BCyan='\033[1;36m'  # Cyan
+BWhite='\033[1;37m' # White
+
+# Underline
+UBlack='\033[4;30m' # Black
+URed='\033[4;31m'   # Red
+UGreen='\033[4;32m' # Green
+UYellow='\033[4;33m'# Yellow
+UBlue='\033[4;34m'  # Blue
+UPurple='\033[4;35m'# Purple
+UCyan='\033[4;36m'  # Cyan
+UWhite='\033[4;37m' # White
+
+# Background
+On_Black='\033[40m' # Black
+On_Red='\033[41m'   # Red
+On_Green='\033[42m' # Green
+On_Yellow='\033[43m'# Yellow
+On_Blue='\033[44m'  # Blue
+On_Purple='\033[45m'# Purple
+On_Cyan='\033[46m'  # Cyan
+On_White='\033[47m' # White
+
+# Example of usage
+echo -e "${Green}This is GREEN text${Color_Off} and normal text"
+echo -e "${Red}${On_White}This is Red test on White background${Color_Off}" 
+# option -e is mandatory, it enable interpretation of backslash escapes

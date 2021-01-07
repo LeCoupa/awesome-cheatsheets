@@ -4,73 +4,91 @@
 
 ### HTML & CSS
 
-- `CSScomb`: Codeing style formatter for CSS, Less, SCSS and Saas.
+- [`CSScomb`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-csscomb): Coding style formatter for CSS, Less, SCSS and Saas.
 
-- `Puglint`: Linter and style checker for pug.
+- [`Puglint`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-puglint): Linter and style checker for pug.
 
-- `Sass`: Indented Sass syntax highlighting, autocomplete & snippets.
+- [`Sass`](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented): Indented Sass syntax highlighting, autocomplete & snippets.
 
-- `SCSS IntelliSense`: Advanced autocompletion and refactoring support for SCSS.
+- [`SCSS IntelliSense`](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss): Advanced autocompletion and refactoring support for SCSS.
+
+- [`XML Format`](https://marketplace.visualstudio.com/items?itemName=mikeburgh.xml-format): Format XML documents.
 
 ### JavaScript, Node & NPM
 
-- `Import Cost`: This extension will display inline in the editor the size of the imported package.
+- [`Import Cost`](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): This extension will display inline in the editor the size of the imported package.
 
-- `ESLint`: Integrates ESLint into VS Code
+- [`ESLint`](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): Integrates ESLint into VS Code
 
-- `NPM`: NPM support for VS Code.
+- [`NPM`](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script): NPM support for VS Code.
 
-- `NPM Intellisense`: Visual Studio Code plugin that autocompletes NPM modules in import statements.
+- [`NPM Intellisense`](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense): Visual Studio Code plugin that autocompletes NPM modules in import statements.
 
-- `Version Lens`: Shows the latest version for each package using code lens.
+- [`Version Lens`](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens): Shows the latest version for each package using code lens.
 
-- `Vetur`: Vue tooling for VS Code.
+- [`Vetur`](https://marketplace.visualstudio.com/items?itemName=octref.vetur): Vue tooling for VS Code.
+
+### PHP
+
+- [`Better PHPUnit`](https://marketplace.visualstudio.com/items?itemName=calebporzio.better-phpunit): A better PHPUnit test runner.
+
+- [`Laravel Artisan`](https://marketplace.visualstudio.com/items?itemName=ryannaddy.laravel-artisan): Laravel Artisan commands within Visual Studio Code.
+
+- [`PHP CS Fixer`](https://marketplace.visualstudio.com/items?itemName=junstyle.php-cs-fixer): PHP CS Fixer extension for VS Code, php formatter, php code beautify tool.
+
+- [`PHP Doc Comment VSCode Plugin`](https://marketplace.visualstudio.com/items?itemName=rexshi.phpdoc-comment-vscode-plugin): Add phpdoc @param and @return tag for selected function signatures.
+
+- [`PHP IntelliSense`](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense): Advanced Autocompletion and Refactoring support for PHP.
 
 ### Git
 
-- `Git History`: View git log, file history, compare branches or commits.
+- [`Git History`](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits.
 
-- `Gitignore`: A extension for Visual Studio Code that assists you in working with .gitignore files.
+- [`Gitignore`](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore): An extension for Visual Studio Code that assists you in working with .gitignore files.
 
 ### Themes
 
-- `Material Icon Theme`: Material Design Icons for Visual Studio Code.
+- [`Material Icon Theme`](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme): Material Design Icons for Visual Studio Code.
 
-- `Palenight Theme`: An elegant and juicy material-like theme for Visual Studio Code.
+- [`Palenight Theme`](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme): An elegant and juicy material-like theme for Visual Studio Code.
 
 ### Handy
 
-- `Debugger for Chrome`: Debug your JavaScript code in the Chrome browser.
+- [`Better comments`](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments): Improve your code commenting by annotating with alert, informational, TODOs, and more!
 
-- `EditorConfig for VS Code`: EditorConfig Support for Visual Studio Code.
+- [`Debugger for Chrome`](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome): Debug your JavaScript code in the Chrome browser.
 
-- `Final-Newline`: Inserts a final newline when saving the document.
+- [`EditorConfig for VS Code`](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): EditorConfig Support for Visual Studio Code.
 
-- `Formatting Toggle`: A VS Code extension that allows you to toggle the formatter (Prettier, Beautify, …) ON and OFF with a simple click.
+- [`File Utils`](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils): A convenient way of creating, duplicating, moving, renaming and deleting files and directories.
 
-- `Open in Github/Bitbucket...`: Jump to a source code line in Github / Bitbucket, Gitlab, VisualStudio.com
+- [`Final-Newline`](https://marketplace.visualstudio.com/items?itemName=samverschueren.final-newline): Inserts a final newline when saving the document.
 
-- `OpenChrome`: Open file with Chrome.
+- [`Formatting Toggle`](https://marketplace.visualstudio.com/items?itemName=tombonnike.vscode-status-bar-format-toggle): A VS Code extension that allows you to toggle the formatter (Prettier, Beautify, …) ON and OFF with a simple click.
 
-- `Output Colorizer`: Syntax Highlighting for log files.
+- [`Open in Github/Bitbucket...`](https://marketplace.visualstudio.com/items?itemName=ziyasal.vscode-open-in-github): Jump to a source code line in Github / Bitbucket, Gitlab, VisualStudio.com
 
-- `Prettier - Code formatter`: VS Code plugin for prettier/prettier.
+- [`OpenChrome`](https://marketplace.visualstudio.com/items?itemName=huazaierli.openchrome&ssr=false#overview): Open file with Chrome.
 
-- `REST Client`: REST Client for Visual Studio Code.
+- [`Output Colorizer`](https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer): Syntax Highlighting for log files.
 
-- `SVG Viewer`: SVG Viewer for Visual Studio Code.
+- [`Prettier - Code formatter`](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): VS Code plugin for prettier/prettier.
 
-- `Terminal`: Terminal for Visual Studio Code.
+- [`Project Manager`](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager): Easily switch between projects.
 
-- `VS Live Share`: Real-time collaborative development from the comfort of your favorite tools.
+- [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client): REST Client for Visual Studio Code.
 
-- `Wrap Console Log`: Wrap to console.log by word or selection.
+- [`SVG Viewer`](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer): SVG Viewer for Visual Studio Code.
 
-##############################################################################
+- [`Terminal`](https://marketplace.visualstudio.com/items?itemName=formulahendry.terminal): Terminal for Visual Studio Code.
 
-# USER SETTINGS
+- [`Vue Peek`](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek): Allows peek and goto definition for Vue single-file components.
 
-##############################################################################
+- [`VS Live Share`](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Real-time collaborative development from the comfort of your favorite tools.
+
+- [`Wrap Console Log`](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log): Wrap to console.log by word or selection.
+
+## My Settings
 
 ```javascript
 {
