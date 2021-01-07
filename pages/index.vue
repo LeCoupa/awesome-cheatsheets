@@ -222,7 +222,7 @@ export default {
               name: "Kubernetes",
               thumbnail: "kubernetes.jpg",
               link:
-                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/kubernetes.sh"
+                "https://github.com/LeCoupa/awesome-cheatsheets/blob/master/tools/kubernetes.md"
             },
             {
               name: "Puppeteer",
