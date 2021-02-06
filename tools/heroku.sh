@@ -76,17 +76,19 @@ sudo rm /etc/apt/sources.list.d/heroku.list
 
 
 cd myapp                           # Changing into the project directory
-git init 						   # Initializing the project into a git repository
+git init                           # Initializing the project into a git repository
+git add -f example.json            # Adding a perticular content of the project into the repository this will include the content from .gitignore
 git add .                          # Adding all the contents of the project into the repository excluding .gitignore content
 git commit -m "My first commit"    # Commiting the content to the repository
 
-heroku create                      # Creating a new empty application on Heroku
+heroku create appname              # Creating a new application on Heroku here ( appname ) represent the name u give to your app 
 git remote -v                      # verifying that the remote is set to the heroku
 
 heroku git:remote -a thawing-inlet-61413      # For an existing heroku app, you can add remote to the application
 git remote rename heroku heroku-staging       # renaming remotes
 
 git push heroku master             # Deploying code to the heroku application
+git push heroku master --force     # Force Pushing to heroku ( required if the remote contain works that u do not have locally )
 git push heroku testbranch:master  # Deploying code from a non-master branch to the heroku application
 
 heroku create --ssh-git            # ssh git transport for the application instead of https
@@ -105,7 +107,7 @@ heroku stack:set container
 
 heroku container:login            # Login to the container resistry
 git clone https://github.com/heroku/alpinehelloworld.git       # Get sample code by cloning into the following repository
-heroku create                     # Creating a blank heroku application
+heroku create appname                   # Creating a heroku application here ( appname ) represent the name u give to your app
 
 heroku container:push web         # Build the image and push to Container Registry
 heroku container:push --recursive     # Pushing from the root directory of the project in recursive manner
