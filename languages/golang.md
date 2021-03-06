@@ -6,13 +6,18 @@
     - [Hello World](#hello-world)
     - [Go CLI Commands](#go-cli-commands)
     - [Go Modules](#go-modules)
-- Syntax
+- Basic
     - [Basic Types](#basic-types)
     - [Variables](#variables)
     - [Operators](#operators)
     - [Conditional Statements](#conditional-statements)
     - [Loops](#loops)
+    - [Arrays](#arrays)
     - [Functions](#functions)
+- Advanced 
+    - [Structs](#structs)
+    - [Maps](#maps)
+    - [Pointers](#pointers)
 
 ## Hello World
 
@@ -143,6 +148,7 @@ var i, j, k = 1, 2, 3
 // Numeric: 0
 // Boolean: false
 // String: ""
+// Special value: nil (same as null)
 
 var number int // 0
 var text string // false
@@ -289,6 +295,72 @@ for {
 
 <hr/>
 
+## Arrays 
+
+```go
+// Declaration with specified size
+var array [3]string
+array[0] = "Hello"
+array[1] = "Golang"
+array[2] = "World"
+
+// Declaration and Initialization
+values := [5]int{1, 2, 3, 4, 5}
+
+// Slices: A subarray that acts as a reference of an array
+// Determining min and max
+values[1:3] // {2, 3, 4}
+
+// Determining only max will use min = 0
+values[:2] // {1, 2, 3}
+
+// Determining only min will use max = last element
+values[3:] // {3, 4}
+
+// Length: number of elements that a slice contains
+len(values) // 5
+
+// Capacity: number of elements that a slice can contain
+values = values[:1]
+len(values) // 2
+cap(values) // 5
+
+// Slice literal
+slice := []bool{true, true, false}
+
+// make function: create a slice with length and capacity
+slice := make([]int, 5, 6) // make(type, len, cap)
+
+// Append new element to slice
+slice := []int{ 1, 2 }
+slice = append(slice, 3)
+slice // { 1, 2, 3 } 
+slice = append(slice, 3, 2, 1)
+slice // { 1, 2, 3, 3, 2, 1 } 
+
+// For range: iterate over a slice
+slice := string["W", "o", "w"]
+
+for i, value := range slice {
+    i // 0, then 1, then 2
+    value // "W", then "o", then "w"
+}
+
+// Skip index or value
+
+for i := range slice {
+    i // 0, then 1, then 2
+}
+
+for _, value := range slice {
+   value // "W", then "o", then "w"
+}
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
 ## Functions
 ```go
 // Functions acts as a scoped block of code
@@ -313,6 +385,10 @@ d, t := doubleAndTriple(5)
 // d = 10
 // t = 15
 
+// Skipping one of the returned values
+_, t := doubleAndTriple(3)
+// t = 9
+
 // Functions can defer commands. Defered commands are
 // runned in a stack order after the execution and
 // returning of a function
@@ -331,7 +407,135 @@ switchValuesAndDouble(2, 5)
 // a = 10
 // b = 4
 // aux = 0
+
+// Functions can be handled as values
+func calc(fn func(int, int) int) int {
+    return fn(2, 6)
+}
+
+func sum(x, y int) int {
+    return x + y
+}
+
+func mult(x, y int) int {
+    return x * y
+}
+
+calc(sum) // 8
+calc(mult) // 12
+
+// Function closures: a function that returns a function 
+// that remembers the original context
+func calc() func(int) int {
+    value := 0
+    return func(x int) int {
+        value += x
+        return value
+    }
+}
+
+calculator := calc()
+calculator(3) // 3
+calculator(45) // 48
+calculator(12) // 60
 ```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Structs
+
+Structs are a way to arrange data in specific formats.
+
+```go
+// Declaring a struct
+type Person struct {
+    Name string
+    Age int
+}
+
+// Initializing
+person := Person{"John", 34}
+person.Name // "John"
+person.Age // 34
+
+person2 := Person{Age: 20}
+person2.Name // ""
+person2.Age // 20
+
+person3 := Person{}
+person3.Name // ""
+person3.Age // 0
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Maps
+
+Maps are data structures that holds values assigneds to a key.
+
+```go
+// Declaring a map
+var cities map[string]string
+
+// Initializing
+cities = make(map[string]string)
+cities // nil
+
+// Insert
+cities["NY"] = "EUA"
+
+// Retrieve
+newYork = cities["NY"]
+newYork // "EUA"
+
+// Delete
+delete(cities, "NY")
+
+// Check if a key is setted
+value, ok := cities["NY"]
+ok // false
+value // ""
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Pointers
+
+Pointers are a direct reference to a memory address that some variable or value is being stored.
+
+```go
+// Pointers has *T type
+var value int
+var pointer *int
+
+// Point to a variable memory address with &
+value = 3
+pointer = &value
+
+pointer // 3
+pointer = 20
+pointer // 20
+pointer += 5
+pointer // 25
+
+// Pointers to structs can access the attributes
+type Struct struct {
+    X int
+}
+
+s := Struct{3}
+pointer := &s
+
+s.X // 3
+```
+
+Obs: Unlike C, Go doesn't have pointer arithmetics.
 
 [Return to Summary](#summary)
 
