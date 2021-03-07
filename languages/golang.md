@@ -2,32 +2,37 @@
 
 ## Summary
 
-- Introduction
-    - [Hello World](#hello-world)
-    - [Go CLI Commands](#go-cli-commands)
-    - [Go Modules](#go-modules)
-- Basic
-    - [Basic Types](#basic-types)
-    - [Variables](#variables)
-    - [Operators](#operators)
-    - [Conditional Statements](#conditional-statements)
-    - [Loops](#loops)
-    - [Arrays](#arrays)
-    - [Functions](#functions)
-- Advanced 
-    - [Structs](#structs)
-    - [Maps](#maps)
-    - [Pointers](#pointers)
+-   Introduction
+    -   [Hello World](#hello-world)
+    -   [Go CLI Commands](#go-cli-commands)
+    -   [Go Modules](#go-modules)
+-   Basic
+    -   [Basic Types](#basic-types)
+    -   [Variables](#variables)
+    -   [Operators](#operators)
+    -   [Conditional Statements](#conditional-statements)
+    -   [Loops](#loops)
+    -   [Arrays](#arrays)
+    -   [Functions](#functions)
+-   Advanced
+    -   [Structs](#structs)
+    -   [Maps](#maps)
+    -   [Pointers](#pointers)
+    -   [Methods and Interfaces](#methods-and-interfaces)
+    -   [Errors](#errors)
+    -   [Testing](#testing)
+-   Standard Libs
+    -   [Package fmt](#package-fmt)
 
 ## Hello World
 
 ```go
-package main 
+package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Hello World!")
+    fmt.Println("Hello Gophers!")
 }
 ```
 
@@ -44,7 +49,7 @@ $ go run [file.go]
 # Compile
 $ go build [file.go]
 # Running compiled file
-$ ./hello 
+$ ./hello
 
 # Test packages
 $ go test [folder]
@@ -80,16 +85,17 @@ $ go version
 
 ## Go Modules
 
-- Go projects are called **modules**
-- Each module has multiple **packages**
-- Each package should has a scoped functionality. Packages talk to each other to compose the code
-- A module needs at least one package, the **main**
-- The package main needs a entry function called **main**
+-   Go projects are called **modules**
+-   Each module has multiple **packages**
+-   Each package should has a scoped functionality. Packages talk to each other to compose the code
+-   A module needs at least one package, the **main**
+-   The package main needs a entry function called **main**
 
 ```bash
 # Create Module
-$ go mod init [name] 
+$ go mod init [name]
 ```
+
 Tip: By convention, modules names has the follow structure:
 
 domain.com/user/module/package
@@ -102,25 +108,25 @@ Example: github.com/spf13/cobra
 
 ## Basic Types
 
-|   Type    |   Set of Values   |   Values  |
-|:---------:|:-----------------:|:---------:|
-| bool | boolean | true/false |
-| string | array of characters | needs to be inside "" |
-| int | integers | 32 or 64 bit integer |
-| int8 | 8-bit integers | [ -128, 128 ] |
-| int16 | 16-bit integers | [ -32768, 32767] |
-| int32 | 32-bit integers | [ -2147483648, 2147483647] |
-| int64 | 64-bit integers | [ -9223372036854775808, 9223372036854775807 ] |
-| uint8 | 8-bit unsigned integers | [ 0, 255 ] |
-| uint16 | 16-bit unsigned integers | [ 0, 65535 ] |
-| uint32 | 32-bit unsigned integers | [ 0, 4294967295 ] |
-| uint64 | 64-bit unsigned integers | [ 0, 18446744073709551615 ] |
-| float32 | 32-bit float |  |
-| float64 | 64-bit float |  |
-| complex64 | 32-bit float with real and imaginary parts |  |
-| complex128 | 64-bit float with real and imaginary parts |  |
-| byte | sets of bits | alias for uint8  |
-| rune | Unicode characters | alias for int32 |
+|    Type    |               Set of Values                |                    Values                     |
+| :--------: | :----------------------------------------: | :-------------------------------------------: |
+|    bool    |                  boolean                   |                  true/false                   |
+|   string   |            array of characters             |             needs to be inside ""             |
+|    int     |                  integers                  |             32 or 64 bit integer              |
+|    int8    |               8-bit integers               |                 [ -128, 128 ]                 |
+|   int16    |              16-bit integers               |               [ -32768, 32767]                |
+|   int32    |              32-bit integers               |          [ -2147483648, 2147483647]           |
+|   int64    |              64-bit integers               | [ -9223372036854775808, 9223372036854775807 ] |
+|   uint8    |          8-bit unsigned integers           |                  [ 0, 255 ]                   |
+|   uint16   |          16-bit unsigned integers          |                 [ 0, 65535 ]                  |
+|   uint32   |          32-bit unsigned integers          |               [ 0, 4294967295 ]               |
+|   uint64   |          64-bit unsigned integers          |          [ 0, 18446744073709551615 ]          |
+|  float32   |                32-bit float                |                                               |
+|  float64   |                64-bit float                |                                               |
+| complex64  | 32-bit float with real and imaginary parts |                                               |
+| complex128 | 64-bit float with real and imaginary parts |                                               |
+|    byte    |                sets of bits                |                alias for uint8                |
+|    rune    |             Unicode characters             |                alias for int32                |
 
 [Return to Summary](#summary)
 
@@ -130,7 +136,7 @@ Example: github.com/spf13/cobra
 
 ```go
 // Declaration
-var int value 
+var int value
 
 // Initialization
 value = 10
@@ -171,7 +177,7 @@ const pi = 3.1415
 [Return to Summary](#summary)
 
 Arithmetic Operators
-|   Symbol  |   Operation   |   Valid Types |
+| Symbol | Operation | Valid Types |
 |:---------:|:-------------:|:-------------:|
 | `+` | Sum | integers, floats, complex values, strings |
 | `-` | Difference | integers, floats, complex values |
@@ -186,7 +192,7 @@ Arithmetic Operators
 | `>>` | Right shift | integer >> unsigned integer |
 
 Comparison Operators
-|   Symbol  |   Operation   |
+| Symbol | Operation |
 |:---------:|:-------------:|
 | `==` | Equal |
 | `!=` | Not equal |
@@ -196,7 +202,7 @@ Comparison Operators
 | `>=` | Greater or equal |
 
 Logical Operators
-|   Symbol  |   Operation   |
+| Symbol | Operation |
 |:---------:|:-------------:|
 | `&&` | Conditional AND |
 | `||` | Conditional OR |
@@ -250,7 +256,7 @@ switch text {
         // 'Byee'
     default:
         // 'Ok'
-}   
+}
 
 // Switch without condition
 value := 5
@@ -262,7 +268,7 @@ switch {
         // 'Byee'
     default:
         // 'Ok'
-}   
+}
 ```
 
 [Return to Summary](#summary)
@@ -295,7 +301,7 @@ for {
 
 <hr/>
 
-## Arrays 
+## Arrays
 
 ```go
 // Declaration with specified size
@@ -334,9 +340,9 @@ slice := make([]int, 5, 6) // make(type, len, cap)
 // Append new element to slice
 slice := []int{ 1, 2 }
 slice = append(slice, 3)
-slice // { 1, 2, 3 } 
+slice // { 1, 2, 3 }
 slice = append(slice, 3, 2, 1)
-slice // { 1, 2, 3, 3, 2, 1 } 
+slice // { 1, 2, 3, 3, 2, 1 }
 
 // For range: iterate over a slice
 slice := string["W", "o", "w"]
@@ -362,6 +368,7 @@ for _, value := range slice {
 <hr/>
 
 ## Functions
+
 ```go
 // Functions acts as a scoped block of code
 func sayHello() {
@@ -402,7 +409,7 @@ func switchValuesAndDouble(x, y int) {
 }
 
 a, b = 2, 5
-switchValuesAndDouble(2, 5) 
+switchValuesAndDouble(2, 5)
 
 // a = 10
 // b = 4
@@ -424,7 +431,7 @@ func mult(x, y int) int {
 calc(sum) // 8
 calc(mult) // 12
 
-// Function closures: a function that returns a function 
+// Function closures: a function that returns a function
 // that remembers the original context
 func calc() func(int) int {
     value := 0
@@ -536,6 +543,118 @@ s.X // 3
 ```
 
 Obs: Unlike C, Go doesn't have pointer arithmetics.
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Methods and Interfaces
+
+Go doesn't have classes. But you can implement methods, interfaces and almost everything contained in OOP, but in what gophers call "Go Way"
+
+```go
+type Dog struct {
+    Name string
+}
+
+func (dog *Dog) bark() string {
+    return dog.Name + " is barking!"
+}
+
+dog := Dog{"Rex"}
+dog.bark() // Rex is barking!
+```
+
+Interfaces are implicitly implemented. You don't need to inform that your struct are correctly implementing a interface if it already has all methods with the same name of the interface.
+All structs implement the `interface{}` interface. This empty interface means the same as `any`.
+
+```go
+// Car implements Vehicle interface
+type Vehicle interface {
+    Accelerate()
+}
+
+type Car struct {
+
+}
+
+func (car *Car) Accelerate() {
+    return "Car is moving on ground"
+}
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Errors
+
+Go doesn't support `throw`, `try`, `catch` and other common error handling structures. Here, we use `error` package to build possible errors as a returning parameter in functions
+
+```go
+import "errors"
+
+// Function that contain a logic that can cause a possible exception flow 
+func firstLetter(text string) (string, error) {
+    if len(text) < 1 {
+        return nil, errors.New("Parameter text is empty")
+    }
+    return string(text[0]), nil
+}
+
+a, errorA := firstLetter("Wow")
+a // "W"
+errorA // nil
+
+b, errorB := firstLetter("")
+b // nil
+errorB // Error("Parameter text is empty")
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Testing
+
+Go has a built-in library to unit testing. In a separate file you insert tests for functionalities of a file and run `go test package` to run all tests of the actual package or `go test path` to run a specific test file.
+
+```go
+// main.go
+func Sum(x, y int) int {
+    return x + y
+}
+
+// main_test.go
+import ( 
+    "testing"
+    "reflect"
+)
+
+func TestSum(t *testing.T) {
+    x, y := 2, 4
+    expected := 2 + 4
+
+    if !reflect.DeepEqual(sum(x, y), expected) {
+        t.Fatalf("Function Sum not working as expected")
+    }
+}
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Package `fmt`
+
+```go
+import "fmt"
+
+fmt.Print("Hello World") // Print in console
+fmt.Println("Hello World") // Print and add a new line in end
+fmt.Printf("%s is %d years old", "John", 32) // Print with formatting
+fmt.Errorf("User %d not found", 123) // Print a formatted error
+```
 
 [Return to Summary](#summary)
 
