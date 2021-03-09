@@ -21,6 +21,7 @@
     -   [Methods and Interfaces](#methods-and-interfaces)
     -   [Errors](#errors)
     -   [Testing](#testing)
+    -   [Concurrency](#concurrency)
 -   Standard Libs
     -   [Package fmt](#package-fmt)
 
@@ -639,6 +640,159 @@ func TestSum(t *testing.T) {
         t.Fatalf("Function Sum not working as expected")
     }
 }
+```
+
+[Return to Summary](#summary)
+
+<hr/>
+
+## Concurrency
+
+One of the main parts that make Go attractive is its form to handle with concurrency. Different than parallelism, where tasks can be separated in many cores that the machine processor have, in concurrency we have routines that are more lightweight than threads and can run asynchronously, with memory sharing and in a single core.
+
+```go
+// Consider a common function, but that function can delay itself because some processing
+func show(from string) {
+	for i := 0; i < 3; i++ {
+		fmt.Printf("%s : %d\n", from, i)
+	}
+}
+
+// In a blocking way...
+func main() {
+	show("blocking1")
+	show("blocking2")
+
+	fmt.Println("done")
+}
+/*  blocking1: 0
+    blocking1: 1
+    blocking1: 2
+    blocking2: 0
+    blocking2: 1
+    blocking2: 2
+    done 
+*/
+
+// Go routines are a function (either declared previously or anonymous) called with the keyword go
+func main() {
+	go show("routine1")
+	go show("routine2")
+
+	go func() {
+		fmt.Println("going")
+	}()
+
+	time.Sleep(time.Second)
+
+	fmt.Println("done")
+}
+
+/*  Obs: The result will depends of what processes first
+    routine2: 0
+    routine2: 1
+    routine2: 2
+    going
+    routine1: 0
+    routine1: 1
+    routine1: 2
+    done
+*/
+
+// Routines can share data with channels
+// Channels are queues that store data between multiple routines
+msgs := make(chan string)
+
+go func(channel chan string) {
+    channel <- "ping"
+}(msgs)
+
+go func(channel chan string) {
+    channel <- "pong"
+}(msgs)
+
+fmt.Println(<-msgs) // pong
+fmt.Println(<-msgs) // ping
+
+// Channels can be bufferized. Buffered channels will accept a limited number of values and when someone try to put belong their limit, it will throw and error
+numbers := make(chan int, 2)
+
+msgs<-0
+msgs<-1
+msgs<-2
+
+// fatal error: all goroutines are asleep - deadlock!
+
+// Channels can be passed as parameter where the routine can only send or receive
+numbers := make(chan int)
+
+go func(sender chan<- int) {
+    sender <- 10
+}(numbers)
+
+go func(receiver <-chan int) {
+    fmt.Println(<-receiver) // 10
+}(numbers)
+
+time.Sleep(time.Second)
+
+// When working with multiple channels, the select can provide a control to execute code accordingly of what channel has bring a message
+c1 := make(chan string)
+c2 := make(chan string)
+
+select {
+case msg1 := <-c1:
+    fmt.Println("received", msg1)
+case msg2 := <-c2:
+    fmt.Println("received", msg2)
+default:
+    fmt.Println("no messages")
+}
+
+go func() {
+    time.Sleep(1 * time.Second)
+    c1 <- "channel1 : one"
+}()
+go func() {
+    time.Sleep(2 * time.Second)
+    c2 <- "channel2 : one"
+}()
+
+for i := 0; i < 2; i++ {
+    select {
+    case msg1 := <-c1:
+        fmt.Println("received", msg1)
+    case msg2 := <-c2:
+        fmt.Println("received", msg2)
+    }
+}
+
+/*
+    no messages
+    received channel1: one
+    received channel2: one
+*/
+
+// Channels can be closed and iterated
+channel := make(chan int, 5)
+
+for i := 0; i < 5; i++ {
+    channel <- i
+}
+
+close(channel)
+
+for value := range channel {
+    fmt.Println(value)
+}
+
+/*
+    0
+    1
+    2
+    3
+    4
+*/
 ```
 
 [Return to Summary](#summary)
