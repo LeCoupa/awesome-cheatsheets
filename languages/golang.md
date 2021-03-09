@@ -416,7 +416,7 @@ switchValuesAndDouble(2, 5)
 // b = 4
 // aux = 0
 
-// Functions can be handled as values
+// Functions can be handled as values and be anonymous functions
 func calc(fn func(int, int) int) int {
     return fn(2, 6)
 }
@@ -431,6 +431,11 @@ func mult(x, y int) int {
 
 calc(sum) // 8
 calc(mult) // 12
+calc(
+    func(x, y int) int {
+		return x / y
+    }
+) // 3
 
 // Function closures: a function that returns a function
 // that remembers the original context
