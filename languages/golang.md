@@ -12,7 +12,7 @@
     -   [Operators](#operators)
     -   [Conditional Statements](#conditional-statements)
     -   [Loops](#loops)
-    -   [Arrays](#arrays)
+    -   [Arrays and Slices](#arrays-and-slices)
     -   [Functions](#functions)
 -   Advanced
     -   [Structs](#structs)
@@ -302,7 +302,7 @@ for {
 
 <hr/>
 
-## Arrays
+## Arrays and Slices
 
 ```go
 // Declaration with specified size
