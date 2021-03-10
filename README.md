@@ -30,6 +30,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [PHP](languages/php.php)
 - [JAVA](languages/java.md)
 - [Python](languages/python.md)
+- [Go](languages/golang.md)
 
 #### Functional
 
