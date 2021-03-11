@@ -84,7 +84,7 @@ int c = a + b;
     double cos(double theta) //cosine of theta
     double tan(double theta) //tangent of theta
     double toRadians(double degrees) // convert angle from degrees to radians
-    double toDegreestouble radians)  // convert angle from radians to degrees
+    double toDegrees(double radians)  // convert angle from radians to degrees
     double exp(doube a)  // exponential (e^a)
     double pow(double a, double p) //raise a to the bth power (a^b)
     double random() //random in [0,1)
