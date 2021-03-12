@@ -186,7 +186,7 @@ Arithmetic Operators
 | `/` | Quotient | integers, floats, complex values |
 | `%` | Remainder | integers |
 | `&` | Bitwise AND | integers |
-| `|` | Bitwise OR | integers |
+| `\|` | Bitwise OR | integers |
 | `^` | Bitwise XOR | integers |
 | `&^` | Bit clear (AND NOT) | integers |
 | `<<` | Left shift | integer << unsigned integer |
@@ -206,7 +206,7 @@ Logical Operators
 | Symbol | Operation |
 |:---------:|:-------------:|
 | `&&` | Conditional AND |
-| `||` | Conditional OR |
+| `\|\|` | Conditional OR |
 | `!` | NOT |
 
 [Return to Summary](#summary)
