@@ -21,21 +21,21 @@ Query data in columns c1, c2 form a table
 ```
 SELECT * FROM t;
 ```
-#### Query all rows and columns from a table
+Query all rows and columns from a table
 <hr>
 
 ```
 SELECT c1, c2 FROM t
 WHERE condition;
 ```
-#### Query data and filter rows with a condition
+Query data and filter rows with a condition
 <hr>
 
 ```
 SELECT DISTINCT c1 FROM t
 WHERE condition;
 ```
-#### Query distinct rows from a table
+Query distinct rows from a table
 <hr>
 
 ```
@@ -43,7 +43,7 @@ SELECT c1, c2
 FROM t
 ORDER BY c1 ASC[DESC];
 ```
-#### Sort the result set in ascending or descending order
+Sort the result set in ascending or descending order
 <hr>
 
 ```
@@ -52,7 +52,7 @@ FROM t
 ORDER BY c1
 LIMIT n OFFSET offset;
 ```
-#### Skip offset of rows and return the next n rows
+Skip offset of rows and return the next n rows
 <hr>
 
 ```
@@ -60,7 +60,7 @@ SELECT c1, aggregate(c2)
 FROM t
 GROUP BY c1;
 ```
-#### Group rows using in aggregate function
+Group rows using in aggregate function
 <hr>
 
 ```
@@ -69,10 +69,10 @@ FROM t
 GROUP BY c1
 HAVING condition;
 ```
-#### Filter groups using HAVING clause
+Filter groups using HAVING clause
 </details>
 
-### QUERYING FROM MULTIPLE TABLES
+### 2️⃣ QUERYING FROM MULTIPLE TABLES
 <details>
 <summary>View Queries </summary>
 
@@ -81,7 +81,7 @@ SELECT c1, c2
 FROM t1
 INNER JOIN t2 ON condition;
 ```
-#### Inner join t1 and t2
+Inner join t1 and t2
 <hr>
 
 ```
@@ -89,7 +89,7 @@ SELECT c1, c2
 FROM t1
 LEFT JOIN t2 ON condition;
 ```
-#### Left join t1 and t1
+Left join t1 and t1
 <hr>
 
 ```
@@ -97,7 +97,7 @@ SELECT c1, c2
 FROM t1
 RIGHT JOIN t2 ON condition;
 ```
-#### Right join t1 and t2
+Right join t1 and t2
 <hr>
 
 ```
@@ -105,7 +105,7 @@ SELECT c1, c2
 FROM t1
 FULL OUTER JOIN t2 ON condition;
 ```
-#### Perform full outer join
+Perform full outer join
 <hr>
 
 ```
@@ -113,14 +113,14 @@ SELECT c1, c2
 FROM t1
 CROSS JOIN t2;
 ```
-#### Produce a Cartesian product of rows in tables
+Produce a Cartesian product of rows in tables
 <hr>
 
 ```
 SELECT c1, c2
 FROM t1, t2;
 ```
-#### Another way to perform cross join
+Another way to perform cross join
 <hr>
 
 ```
@@ -128,11 +128,11 @@ SELECT c1, c2
 FROM t1 A
 INNER JOIN t2 B ON condition;
 ```
-#### Join t1 to itself using INNER JOIN clause
+Join t1 to itself using INNER JOIN clause
 
 </details>
 
-### USING SQL OPERATORS
+### 3️⃣ USING SQL OPERATORS
 <details>
 <summary>View Queries </summary>
 
@@ -142,7 +142,7 @@ FROM t1
 UNION [ALL]
 SELECT c1, c2 FROM t2;
 ```
-#### Combine rows from tow queries
+Combine rows from tow queries
 <hr>
 
 ```
@@ -150,7 +150,7 @@ SELECT c1, c2 FROM t1
 INTERSECT
 SELECT c1, c2 FROM t2;
 ```
-#### Return the intersection of two queries
+Return the intersection of two queries
 <hr>
 
 ```
@@ -158,39 +158,38 @@ SELECT c1, c2 FROM t1
 EXCEPT 
 SELECT c1,c2 FROM t2;
 ```
-#### Subtract a result set from another result set
+Subtract a result set from another result set
 <hr>
 
 ```
 SELECT c1, c2 FROM t
 WHERE c1[NOT] LIKE pattern;
 ```
-#### Query rows using pattern matching %, _
+Query rows using pattern matching %, _
 <hr>
 
 ```
 SELECT c1, c2 FROM t
 WHERE c1[NOT] IN value_list;
 ```
-#### Query rows in a list
+Query rows in a list
 <hr>
 
 ```
 SELECT c1, c2 FROM t
 WHERE c1 BETWEEN low_value AND high_value;
 ```
-#### Query rows between two values
+Query rows between two values
 <hr>
 
 ```
 SELECT c1, c2 FROM t
 WHERE c1 IS [NOT]NULL;
 ```
-#### Check if values in a table is NULL or not
-
+Check if values in a table is NULL or not
 </details>
 
-### MANAGING TABLES
+### 4️⃣ MANAGING TABLES
 <details>
 <summary>View Queries</summary>
 
@@ -201,58 +200,58 @@ CREATE TABLE(
     price NUMERIC(10,2) DEFAULT 0
 );
 ```
-#### Create a new table with three columns
+Create a new table with three columns
 <hr>
 
 ```
 DROP TABLE t CASCADE;
 ```
-#### Delete the table from the database
+Delete the table from the database
 <hr>
 
 ```
 ALTER TABLE t ADD column;
 ```
-#### Add a new column to the table
+Add a new column to the table
 <hr>
 
 ```
 ALTER TABLE t DROP COLUMN c;
 ```
-#### Drop column c from the table
+Drop column c from the table
 <hr>
 
 ```
 ALTER TABLE t ADD contraint;
 ```
-#### Add a constraint
+Add a constraint
 <hr>
 
 ```
 ALTER TABLE t DROP constraint;
 ```
-#### Drop a constraint
+Drop a constraint
 <hr>
 
 ```
 ALTER TABLE t1 RENAME TO t2;
 ```
-#### Rename a table from t1 to t2
+Rename a table from t1 to t2
 <hr>
 
 ```
 ALTER TABLE t1 RENAME c1 to c2;
 ```
-#### Rename column c1 to c2
+Rename column c1 to c2
 <hr>
 
 ```
 TRUNCATE TABLE t CASCADE;
 ```
-#### Remove all data in a table
+Remove all data in a table
 </details>
 
-### USING SQL CONSTRAINTS
+### 5️⃣ USING SQL CONSTRAINTS
 <details>
 <summary>View Queries</summary>
 
@@ -262,7 +261,7 @@ CREATE TABLE t(
     PRIMARY KEY(c1, c2)
 );
 ```
-#### Set c1 and c2 as a primary key
+Set c1 and c2 as a primary key
 <hr>
 
 ```
@@ -272,7 +271,7 @@ CREATE TABLE t1(
     FOREIGN KEY (c2) REFERENCES ts(c2)
 );
 ```
-#### Set c2 column as a foreign key
+Set c2 column as a foreign key
 <hr>
 
 ```
@@ -281,7 +280,7 @@ CREATE TABLE t(
     UNIQUE(c2, c3)
 );
 ```
-#### Make the values in c1 and c2 unique
+Make the values in c1 and c2 unique
 <hr>
 
 ```
@@ -290,7 +289,7 @@ CREATE TABLE t(
     CHECK(c1 > 0 AND c1 >= c2)
 );
 ```
-#### Ensure c1 > 0 and values in c1 >= c2
+Ensure c1 > 0 and values in c1 >= c2
 <hr>
 
 ```
@@ -299,10 +298,10 @@ CREATE TABLE t(
     c2 VARCHAR NOT NULL
 );
 ```
-#### Set values in c2 column not null
+Set values in c2 column not null
 </details>
 
-### MODIFIYING DATA
+### 6️⃣ MODIFIYING DATA
 <details>
 <summary>View Queries</summary>
 
@@ -310,7 +309,7 @@ CREATE TABLE t(
 INSERT INTO t(column_list)
 VALUES(value_list);
 ```
-#### Insert one row into a table
+Insert one row into a table
 <hr>
 
 ```
@@ -318,7 +317,7 @@ INSERT INTO t(column_list)
 VALUES(value_list),
         (value_list), ....;
 ```
-#### Insert multiple rows into a table
+Insert multiple rows into a table
 <hr>
 
 ```
@@ -326,14 +325,14 @@ INSERT INTO t1(column_list)
 SELECT column_list
 FROM t2;
 ```
-#### Insert rows from t2 into t1
+Insert rows from t2 into t1
 <hr>
 
 ```
 UPDATE t
 SET c1 = new_value;
 ```
-#### Update new value in the column c1 for all rows
+Update new value in the column c1 for all rows
 <hr>
 
 ```
@@ -342,23 +341,23 @@ SET c1 = new_value,
     c2 = new_value
 WHERE condition;
 ```
-#### Update values in the column c1, c2 that match the condition
+Update values in the column c1, c2 that match the condition
 <hr>
 
 ```
 DELETE FROM t;
 ```
-#### Delete all data in a table
+Delete all data in a table
 <hr>
 
 ```
 DELETE FROM t 
 WHERE condition;
 ```
-#### Delete subset of rows in a table
+Delete subset of rows in a table
 </details>
 
-### MANAGING VIEWS
+### 7️⃣ MANAGING VIEWS
 <details>
 <summary>View Queries</summary>
 
@@ -368,7 +367,7 @@ AS
 SELECT c1, c2
 FROM t;
 ```
-#### Create a new view that consists of c1 and c2
+Create a new view that consists of c1 and c2
 <hr>
 
 ```
@@ -378,7 +377,7 @@ SELECT c1, c2
 FROM t
 WITH[CASCADED | LOCAL]CHECK OPTION;
 ```
-#### Create a new view with check option
+Create a new view with check option
 <hr>
 
 ```
@@ -388,7 +387,7 @@ select-statement --anchor part
 UNION[ALL]
 select-statement; --recursive part
 ```
-#### Create a recursive view
+Create a recursive view
 <hr>
 
 ```
@@ -397,17 +396,17 @@ AS
 SELECT c1, c2
 FROM t;
 ```
-#### Create a temporary view
+Create a temporary view
 <hr>
 
 ```
 DROP VIEW view_name;
 ```
-#### Delete a view
+Delete a view
 </details>
 
 
-### MANAGING INDEXES
+### 8️⃣ MANAGING INDEXES
 <details>
 <summary>View Queries</summary>
 
@@ -415,24 +414,24 @@ DROP VIEW view_name;
 CREATE INDEX inx_name
 ON t(c1, c2);
 ```
-#### Create an index on c1 and c2 of the table t
+Create an index on c1 and c2 of the table t
 <hr>
 
 ```
 CREATE UNIQUE INDEX inx_name
 ON t(c3, c4);
 ```
-#### Create unique index on c3, c4 of the table t
+Create unique index on c3, c4 of the table t
 <hr>
 
 ```
 DROP INDEX idx_name;
 ```
-#### Drop an index
+Drop an index
 </details>
 
 
-### MANAGING TRIGGERS
+### 9️⃣ MANAGING TRIGGERS
 <details>
 <summary>View Queries</summary>
 
@@ -442,7 +441,7 @@ WHEN EVENT
 ON table_name TRIGGER_TYPE
 EXECUTE stored_procedure;
 ```
-#### Create or modify a trigger
+Create or modify a trigger
 <hr>
 
 ```
@@ -473,17 +472,17 @@ BEFORE  INSERT
 ON person FOR EACH ROW
 EXECUTE stored_procedure;
 ```
-#### Create a trigger invoked before a new row is inserted into the person table
+Create a trigger invoked before a new row is inserted into the person table
 <hr>
 
 ```
 DROP TRIGGER trigger_name
 ```
-#### Delete a specific trigger
+Delete a specific trigger
 </details>
 
 
-### SQL AGGREGATE FUNCTIONS
+### 🔟 SQL AGGREGATE FUNCTIONS
 <details>
 <summary>View Queries</summary>
 
