@@ -1,21 +1,21 @@
-## PostgreSQL CHEAT SHEET
+## ❄ PostgreSQL CHEAT SHEET
 
-### What is PostgreSQL?
+### 🧐 What is PostgreSQL?
 `PostgreSQL/Postgres` is a free open-source relational database management system(RDBMS) emphasizing extensibility and SQL compliance. It was originally named `POSTGRES`, referring to it's origins as a successor to the Ingres database developed at the University of California, Berkeley.
 
-### What is the use of PostgreSQL?
+### 🤔 What is the use of PostgreSQL?
 It is a highly stable database management  system, backend by more than 20 years of community development which has contributed to it's high levels of resilience, integrity, and correctness. PostgreSQL is used as the primary data store or data warehouse for many web, mobile, geospatial, and analytics applications.
 
 ## 📚 PostgreSQL Table of Contents 
 
-### QUERYING DATA FROM A TABLE
+### 1️⃣ QUERYING DATA FROM A TABLE
 <details>
 <summary>View Queries</summary>
 
 ```
 SELECT c1, c2 FROM t;  
 ```
-#### Query data in columns c1, c2 form a table
+Query data in columns c1, c2 form a table
 <hr>
 
 ```
