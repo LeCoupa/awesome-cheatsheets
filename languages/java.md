@@ -4,9 +4,9 @@
 //Text file name HelloWorld.java
 public class HelloWorld {
   // main() is the method
-  public static void main (String[] arfs)
+  public static void main (String[] args)
     //Prints "Hello World" in the terminal window.
-    System.out.pritn("Hello World");
+    System.out.println("Hello World");
 }
 ```
 
