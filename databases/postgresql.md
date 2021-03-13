@@ -15,7 +15,7 @@ It is a highly stable database management  system, backend by more than 20 years
 ```
 SELECT c1, c2 FROM t;  
 ```
-Query data in columns c1, c2 form a table
+Query data in columns c1, c2 from a table
 <hr>
 
 ```
@@ -142,7 +142,7 @@ FROM t1
 UNION [ALL]
 SELECT c1, c2 FROM t2;
 ```
-Combine rows from tow queries
+Combine rows from two queries
 <hr>
 
 ```
