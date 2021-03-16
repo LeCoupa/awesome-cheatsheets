@@ -46,7 +46,6 @@
 
 | Keyword | Description  | Category |
 |---------- | ---------- | --------- | 
-
 | True      | Boolean value for not False or 1 | Value Keyword|
 | False     | Boolean Value for not True or 0 | Value Keyword |
 | None      | No Value | Value keyword |
