@@ -12,9 +12,9 @@
 
 * We can run a python file by the following command in cmd(Windows) or shell(mac/linux).
 
-    `python <filename.py>`
+    `$ python <filename.py>` or `$ python3 <filename.py>`
 
-#### By default, the python doesn't require any imports to run a python file.
+#### By default, python doesn't require any imports to run a python file.
 
 ## Create and execute a program
 
@@ -42,24 +42,45 @@
 ## Keywords
 <br>
 
-| Keyword | Description |
-| --------- | ----------- |
-| break 	| used to exit loop and used to exit|
-| char	  |   basic declaration of a type character |
-| const	  |   prefix declaration meaning variable can not be changed|
-| continue |	go to bottom of loop in for, while loops|
-| class |	to define a class|
-| def |	to define a function|
-| elif |	shortcut for (else if) used in else if ladder |
-| else	  |  executable statement, part of "if" structure |
-| float	  |  basic declaration of floating point|
-| for	  |    executable statement, for loop|
-| from	  |    executable statement, used to import only specific objects from a package|
-| if	  |    executable statement|
-| import |	to import modules|
-|pass| keyword to specify noting is happening in the codeblock, generally used in classes|
-|return	 | executable statement with or without a value|
-|while| executable statement, while loop|
+- As of python3.8 there are 35 keywords
+
+| Keyword | Description  | Category |
+|---------- | ---------- | --------- | 
+| True      | Boolean value for not False or 1 | Value Keyword|
+| False     | Boolean Value for not True or 0 | Value Keyword |
+| None      | No Value | Value keyword |
+| and       | returns true if both (oprand) are true (other language && ) | Operator keyword |
+| or        | returns true of either operands is true (other language || ) | Operator keyword |
+| in        | returns true if word is in iterator | Operator keyword |
+| is        | returns true if id of variables are same | Operator keyword |
+| not       | returns opposite Boolean value | Operator Keyword |
+| if | get into block if expression is true | conditional |
+| elif | for more than 1 if checks | conditional |
+| else | this block will be executed if condition is false | conditional |
+| for | used for looping | iteration |
+| while | used for looping | iteration |
+| break | get out of loop | iteration | 
+| continue | skip for specific condition | iteration |
+| def | make user defined function | structure |
+| class | make user defined classes | structure |
+| lambda | make anonymous function | structure |
+| with | execute code within context manager's scope | structure |
+| as | alias for something | structure |
+| pass | used for making empty structures(declaration) | structure |
+| return | get value(s) from function, get out of function | returning keyword |
+| yield | yields values instead of returning (are called generators) | returning keyword |
+| import | import libraries/modules/packages | import |
+| from | import specific function/classes from modules/packages | import |
+| try | this block will be tried to get executed | execption handling |
+| execpt | is any execption/error has occured it'll be executed | execption handling |
+| finally | It'll be executed no matter execption occurs or not | execption handling | 
+| raise | thros any specific error/execption | execption handling |
+| assert | throws an AssertionError if condition is false | execption handling |
+| async | used to define asynchronous functions/co-routines | asynchronous programming |
+| await | used to specify a point when control is taken back | asynchronous programming |
+| del | deletes/unsets any user defined data |  variable handling |
+| global | used to access variables defined outsied of function | variable handling |
+| nonlocal | modify variables from different scopes | variable handling |
 <br>
 
 ## Operators
@@ -79,8 +100,8 @@
 |  %    |	modulo, a % b |
 |  \+   | 	add, a + b |
 | \-   | 	subtract, a - b |
-| <<   | shift left,  left operand is shifted left by right operand bits |
-| \>>   |	shift right, left operand is shifted right by right operand bits|
+| <<   | shift left,  left operand is shifted left by right operand bits (multiply by 2) |
+| \>>   |	shift right, left operand is shifted right by right operand bits (divide by 2) |
  | <    |	less than, result is true or false,  a %lt; b
 | <=   |	less than or equal, result is true or false,  a <= b
 | \>    |	greater than, result is true or false,  a > b
