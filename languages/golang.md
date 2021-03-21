@@ -158,8 +158,8 @@ var i, j, k = 1, 2, 3
 // Special value: nil (same as null)
 
 var number int // 0
-var text string // false
-var boolean bool // ""
+var text string // ""
+var boolean bool // false
 
 // Type conversions
 // T(v) converts v to type T
