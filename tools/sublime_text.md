@@ -11,7 +11,7 @@
 
 - `ctrl + G `: Goto line
 
-- `cmd + P and # `: Fuzzy search
+- `cmd + P `: Fuzzy search
 
 - `cmd + R `: Goto symbol
 
@@ -20,7 +20,7 @@
 
 - `cmd + D `: Select word
 
-- `cmd + K D `: Skip and add next
+- `cmd + K, cmd + D `: Skip and add next
 
 - `cmd + U `: Undo quick select
 
@@ -57,6 +57,10 @@
 
 - `cmd + enter `: Insert line after
 
+- `ctrl + k, ctrl + l ` : To Lowercase
+
+- `ctrl + k, ctrl + u ` : To Uppercase
+
 
 ## Searching
 
@@ -71,20 +75,20 @@
 
 - `alt + cmd + right/left `: Switch open tab
 
-- `Indent selection `: Indent selection
+- `ctrl + ]`: Indent selection
 
-- `Unindent selection `: Unindent selection
+- `ctrl + [ `: Unindent selection
 
-- `Go to previous cursor position `: Go to previous cursor position
+- `alt + - `: Go to previous cursor position
 
-- `Go to next previous cursor position `: Go to next previous cursor position
+- `alt + shift + - `: Go to next previous cursor position
 
-- `Build and execute file `: Build and execute file
+- `ctrl + b `: Build and execute file
 
 
 ## Must have packages
 
-`A file icon, BracketHighlighter, Color Highlighter, Comment-Snippets, DevDocs, EditorConfig, Emmet, File Rename, Git, Git blame, GitGutter, HTML-CSS-JS Prettify, JavaScript Completions, JavaScript Patterns, JavaScript Snippets, LESS, Nodejs, Package Control, Pretty JSON, SideBarEnhancements, SublimeLinter, SublimeLinter-contrib-eslint, Terminal`
+`A file icon, BracketHighlighter, Color Highlighter, Comment-Snippets, DevDocs, EditorConfig, Emmet, File Rename, Git, Git blame, GitGutter, HTML-CSS-JS Prettify, JavaScript Completions, JavaScript Patterns, JavaScript Snippets, LESS, Nodejs, Package Control, Pretty JSON, SideBarEnhancements, SublimeLinter, SublimeLinter-contrib-eslint, Terminal, Termius, auto save`
 
 
 ## Preferences
