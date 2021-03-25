@@ -137,7 +137,7 @@ Example: github.com/spf13/cobra
 
 ```go
 // Declaration
-var int value
+var value int
 
 // Initialization
 value = 10
