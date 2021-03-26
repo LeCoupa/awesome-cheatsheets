@@ -1,11 +1,12 @@
-# Basic Syntax
+Basic Syntax
+===========
 
-### All Markdown applications support these elements.
+#### All Markdown applications support these elements.
+
 
 | Element | Markdown Syntax | 
-| Header | This is an H1 <br> ============ <br> This is and H2 <br> -----------<br> |
-| -------- | ---------------|
-| Heading | # H1 <br> ## H2 <br> ### H3	|
+|---------------|-------------|
+| Header | This is an H1 <br> ============ <br> This is and H2 <br> ---------------------<br>  \# H1 <br> ## H2 <br> ### |
 | Bold | \*\*Bold Text\*\* |
 | Italic | \_Italic Text\_ <br> \*Another Italic Text\*|
 | Blockquote | > Block Quote |
@@ -13,14 +14,16 @@
 | Unordered List | - Monday <br> - Tuesday <br> - Thursday |
 | Code | \`Code\` |
 | Horizontal Rule | --- |
-| Link | \[Title\]\(https://example.com\)
-| Image | \!\[Alt Text\]\(https://example.com/image.jpg\)
+| Link | \[Title\]\(https://example.com)
+| Image | \!\[Alt Text\]\(https://example.com/image.jpg) |
 
 ---
 
-# Extended Syntax
+Extended Syntax
+====
 
-### These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+
+#### These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
 
 | Element | Markdown Syntax |
 | ------- | --------------- |
@@ -30,4 +33,9 @@
 | Heading Id | ### My Great Heading \{\#custom-id\} | 
 | Strikethrough | \~\~This word is deleted\~\~ |
 | TaskList | \- \[X\] Have read README.md <br> \- [ ] Not similar to any closed issues. <br> - [ ] Using latest release |
+| Image with link | \[!\[Alt Text]\(https://example.com/image.png)](https://example.com) |
 
+
+### References
+1. [Github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+2. [MarkdownGuide](https://www.markdownguide.org/cheat-sheet/)
