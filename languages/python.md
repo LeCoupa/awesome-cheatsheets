@@ -74,7 +74,7 @@
 | try | this block will be tried to get executed | execption handling |
 | execpt | is any execption/error has occured it'll be executed | execption handling |
 | finally | It'll be executed no matter execption occurs or not | execption handling | 
-| raise | thros any specific error/execption | execption handling |
+| raise | throws any specific error/execption | execption handling |
 | assert | throws an AssertionError if condition is false | execption handling |
 | async | used to define asynchronous functions/co-routines | asynchronous programming |
 | await | used to specify a point when control is taken back | asynchronous programming |
