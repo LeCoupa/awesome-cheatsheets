@@ -40,6 +40,14 @@
 
 - [`PHP IntelliSense`](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense): Advanced Autocompletion and Refactoring support for PHP.
 
+### Perl
+
+- [`Perl`](https://marketplace.visualstudio.com/items?itemName=cfgweb.vscode-perl): Code intelligence for the Perl language.
+
+- [`Perl Toolbox`](https://marketplace.visualstudio.com/items?itemName=d9705996.perl-toolbox): Perl Toolbox for linting and syntax checking for Perl.
+
+- [`Perl Moose`](https://marketplace.visualstudio.com/items?itemName=torrentalle.perl-moose): Perl Moose syntax highlight support for Visual Studio Code.
+
 ### Git
 
 - [`Git History`](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory): View git log, file history, compare branches or commits.
