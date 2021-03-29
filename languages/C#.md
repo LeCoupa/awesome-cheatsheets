@@ -1,19 +1,19 @@
-CHEATSHEET C#
+# CHEATSHEET C#
 
 1. Data Types
 
-    Primitive   Size            Example
-    
-    String      2 bytes/char    s = "reference";
-    bool                        b = true;
-    char        2 bytes         ch = 'a';
-    byte        1 byte          b = 0x78;
-    short       2 bytes         val = 70;
-    int         4 bytes         val = 700;
-    long        8 bytes         val = 70;
-    float       4 bytes         val = 70.0F;
-    double      8 bytes         val = 70.0D;
-    decimal     16 bytes        val = 70.0M;
+| Primitive |      Size     |       Example      |
+|:---------:|:-------------:|:------------------:|    
+| String    | 2 bytes/char  | `s = "reference";` |
+| bool      |               | `b = true;`        |
+| char      | 2 bytes       | `ch = 'a';`        |
+| byte      | 1 byte        | `b = 0x78;`        |
+| short     | 2 bytes       | `val = 70;`        |
+| int       | 4 bytes       | `val = 700;`       |
+| long      | 8 bytes       | `val = 70;`        |
+| float     | 4 bytes       | `val = 70.0F;`     |
+| double    | 8 bytes       | `val = 70.0D;`     |
+| decimal   | 16 bytes      | `val = 70.0M;`     |
 
 2. Arrays
     
