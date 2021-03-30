@@ -203,79 +203,6 @@ Format item syntax: `{index[,alignment][:format string]}`
 | R or r | Round-trip  | {0,9:R}, 3.1416  | 3.1316    | A string that can round-trip to an identical number |
 | X or x | Hexadecimal | {0,9:X4}, 31     | 001f      | A hexadecimal string |
 
-## C# compiler at the Command Line
-
-`csc File.cs` -> Compiles Files.cs producing File.exe  
-`csc -target:library File.cs` -> Compiles File.cs producing File.dll  
-`csc -out:My.exe File.cs` -> Compiles File.cs and creates My.exe  
-`csc -define:DEBUG -optimize -out:File2.exe *.cs` -> Compiles all the C# files in the current directory with optimizations enabled and defines the DEBUG symbol. The output is File2.exe  
-`csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs` -> Compiles all the C# files in the current directory producing a debug version of File2.dll. No logo and no warnings are displayed  
-`csc -target:library -out:Something.xyz *.cs` -> Compiles all the C# files in the current directory to Something.xyz (a DLL)
-    
-### Compiler Options Listed
-
-|   Option	                    | Purpose |
-|:------------------------------|:--------|
-|   @	                        | Reads a response file for more options. |
-|   -?	                        | Displays a usage message to stdout. |
-|   -additionalfile	            | Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings. |
-|   -addmodule	                | Links the specified modules into this assembly |
-|   -analyzer	                | Run the analyzers from this assembly (Short form: -a) |
-|   -appconfig	                | Specifies the location of app.config at assembly binding time. |
-|   -baseaddress	            | Specifies the base address for the library to be built. |
-|   -bugreport	                | Creates a 'Bug Report' file. This file will be sent together with any crash information if it is used with -errorreport:prompt or -errorreport:send. |
-|   -checked	                | Causes the compiler to generate overflow checks. |
-|   -checksumalgorithm:<alg>	| Specifies the algorithm for calculating the source file checksum stored in PDB. Supported values are: SHA1 (default) or SHA256. |
-|   -codepage	                | Specifies the codepage to use when opening source files. |
-|   -debug	                    | Emits debugging information. |
-|   -define	                    | Defines conditional compilation symbols. |
-|   -delaysign	                | Delay-signs the assembly by using only the public part of the strong name key. |
-|   -deterministic	            | Causes the compiler to output an assembly whose binary content is identical across compilations if inputs are identical. |
-|   -doc	                    | Specifies an XML Documentation file to generate. |
-|   -errorreport	            | Specifies how to handle internal compiler errors: prompt, send, or none. The default is none. |
-|   -filealign	                | Specifies the alignment used for output file sections. |
-|   -fullpaths	                | Causes the compiler to generate fully qualified paths. |
-|   -help	                    | Displays a usage message to stdout. |
-|   -highentropyva	            | Specifies that high entropy ASLR is supported. |
-|   -incremental	            | Enables incremental compilation [obsolete]. |
-|   -keycontainer	            | Specifies a strong name key container. |
-|   -keyfile	                | Specifies a strong name key file. |
-|   -langversion:<string>	    | Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest |
-|   -lib	                    | Specifies additional directories in which to search for references. |
-|   -link	                    | Makes COM type information in specified assemblies available to the project. |
-|   -linkresource	            | Links the specified resource to this assembly. |
-|   -main	                    | Specifies the type that contains the entry point (ignore all other possible entry points). |
-|   -moduleassemblyname	        | Specifies an assembly whose non-public types a .netmodule can access. |
-|   -modulename:<string>	    | Specify the name of the source module. |
-|   -noconfig	                | Instructs the compiler not to auto include CSC.RSP file. |
-|   -nologo	                    | Suppresses compiler copyright message. |
-|   -nostdlib	                | Instructs the compiler not to reference standard library (mscorlib.dll). |
-|   -nowarn	                    | Disables specific warning messages |
-|   -nowin32manifest	        | Instructs the compiler not to embed an application manifest in the executable file. |
-|   -optimize	                | Enables/disables optimizations. |
-|   -out	                    | Specifies the output file name (default: base name of file with main class or first file). |
-|   -parallel[+|-]	            | Specifies whether to use concurrent build (+). |
-|   -pathmap	                | Specifies a mapping for source path names output by the compiler. |
-|   -pdb	                    | Specifies the file name and location of the .pdb file. |
-|   -platform	                | Limits which platforms this code can run on: x86, Itanium, x64, anycpu, or anycpu32bitpreferred. The default is anycpu. |
-|   -preferreduilang	        | Specifies the language to be used for compiler output. |
-|   -publicsign             	| Apply a public key without signing the assembly, but set the bit in the assembly indicating the assembly is signed. |
-|   -recurse	                | Includes all files in the current directory and subdirectories according to the wildcard specifications. |
-|   -reference              	| References metadata from the specified assembly files. |
-|   -refout                 	| Generate a reference assembly in addition to the primary assembly. |
-|   -refonly                	| Generate a reference assembly instead of a primary assembly. |
-|   -resource               	| Embeds the specified resource. |
-|   -ruleset:<file>         	| Specify a ruleset file that disables specific diagnostics. |
-|   -subsystemversion	        | Specifies the minimum version of the subsystem that the executable file can use. |
-|   -target                 	| Specifies the format of the output file by using one of four options: -target:appcontainerexe, -target:exe, -target:library, -target:module, -target:winexe, -target:winmdobj. |
-|   -unsafe                 	| Allows unsafe code. |
-|   -utf8output	                | Outputs compiler messages in UTF-8 encoding. |
-|   -warn	                    | Sets the warning level (0-4). |
-|   -warnaserror	            | Reports specific warnings as errors. |
-|   -win32icon              	| Uses this icon for the output. |
-|   -win32manifest          	| Specifies a custom win32 manifest file. |
-|   -win32res               	| Specifies the win32 resource file (.res). |
-
 
 ## Control flow statements
 
@@ -441,3 +368,76 @@ event MyDelegate MyEvent;
 | MouseDown, Mouseup, MouseMove                 |  `MouseEventHandler(object sender, MouseEventArgs e)`<br>*e.X, e.Y – x and y coordinates*<br>*e.Button – MouseButton.Left, Middle, Right* |
 | KeyUp, KeyDown                                |  `KeyEventHandler(object sndr, KeyEventArgs e)`<br>*e.Handled – Indicates whether event is handled*<br>*e.KeyCode – Keys enumeration, e.g., Keys.V*<br>*e.Modifiers – Indicates if Alt, Ctrl, or Shift key* |
 | KeyPress                                      |  `KeyPressEventHandler(object sender, KeyPressEventArgs e)` |
+
+## C# compiler at the Command Line
+
+`csc File.cs` -> Compiles Files.cs producing File.exe  
+`csc -target:library File.cs` -> Compiles File.cs producing File.dll  
+`csc -out:My.exe File.cs` -> Compiles File.cs and creates My.exe  
+`csc -define:DEBUG -optimize -out:File2.exe *.cs` -> Compiles all the C# files in the current directory with optimizations enabled and defines the DEBUG symbol. The output is File2.exe  
+`csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs` -> Compiles all the C# files in the current directory producing a debug version of File2.dll. No logo and no warnings are displayed  
+`csc -target:library -out:Something.xyz *.cs` -> Compiles all the C# files in the current directory to Something.xyz (a DLL)
+    
+### Compiler Options Listed
+
+|   Option	                    | Purpose |
+|:------------------------------|:--------|
+|   @	                        | Reads a response file for more options. |
+|   -?	                        | Displays a usage message to stdout. |
+|   -additionalfile	            | Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings. |
+|   -addmodule	                | Links the specified modules into this assembly |
+|   -analyzer	                | Run the analyzers from this assembly (Short form: -a) |
+|   -appconfig	                | Specifies the location of app.config at assembly binding time. |
+|   -baseaddress	            | Specifies the base address for the library to be built. |
+|   -bugreport	                | Creates a 'Bug Report' file. This file will be sent together with any crash information if it is used with -errorreport:prompt or -errorreport:send. |
+|   -checked	                | Causes the compiler to generate overflow checks. |
+|   -checksumalgorithm:<alg>	| Specifies the algorithm for calculating the source file checksum stored in PDB. Supported values are: SHA1 (default) or SHA256. |
+|   -codepage	                | Specifies the codepage to use when opening source files. |
+|   -debug	                    | Emits debugging information. |
+|   -define	                    | Defines conditional compilation symbols. |
+|   -delaysign	                | Delay-signs the assembly by using only the public part of the strong name key. |
+|   -deterministic	            | Causes the compiler to output an assembly whose binary content is identical across compilations if inputs are identical. |
+|   -doc	                    | Specifies an XML Documentation file to generate. |
+|   -errorreport	            | Specifies how to handle internal compiler errors: prompt, send, or none. The default is none. |
+|   -filealign	                | Specifies the alignment used for output file sections. |
+|   -fullpaths	                | Causes the compiler to generate fully qualified paths. |
+|   -help	                    | Displays a usage message to stdout. |
+|   -highentropyva	            | Specifies that high entropy ASLR is supported. |
+|   -incremental	            | Enables incremental compilation [obsolete]. |
+|   -keycontainer	            | Specifies a strong name key container. |
+|   -keyfile	                | Specifies a strong name key file. |
+|   -langversion:<string>	    | Specify language version: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, or Latest |
+|   -lib	                    | Specifies additional directories in which to search for references. |
+|   -link	                    | Makes COM type information in specified assemblies available to the project. |
+|   -linkresource	            | Links the specified resource to this assembly. |
+|   -main	                    | Specifies the type that contains the entry point (ignore all other possible entry points). |
+|   -moduleassemblyname	        | Specifies an assembly whose non-public types a .netmodule can access. |
+|   -modulename:<string>	    | Specify the name of the source module. |
+|   -noconfig	                | Instructs the compiler not to auto include CSC.RSP file. |
+|   -nologo	                    | Suppresses compiler copyright message. |
+|   -nostdlib	                | Instructs the compiler not to reference standard library (mscorlib.dll). |
+|   -nowarn	                    | Disables specific warning messages |
+|   -nowin32manifest	        | Instructs the compiler not to embed an application manifest in the executable file. |
+|   -optimize	                | Enables/disables optimizations. |
+|   -out	                    | Specifies the output file name (default: base name of file with main class or first file). |
+|   -parallel[+|-]	            | Specifies whether to use concurrent build (+). |
+|   -pathmap	                | Specifies a mapping for source path names output by the compiler. |
+|   -pdb	                    | Specifies the file name and location of the .pdb file. |
+|   -platform	                | Limits which platforms this code can run on: x86, Itanium, x64, anycpu, or anycpu32bitpreferred. The default is anycpu. |
+|   -preferreduilang	        | Specifies the language to be used for compiler output. |
+|   -publicsign             	| Apply a public key without signing the assembly, but set the bit in the assembly indicating the assembly is signed. |
+|   -recurse	                | Includes all files in the current directory and subdirectories according to the wildcard specifications. |
+|   -reference              	| References metadata from the specified assembly files. |
+|   -refout                 	| Generate a reference assembly in addition to the primary assembly. |
+|   -refonly                	| Generate a reference assembly instead of a primary assembly. |
+|   -resource               	| Embeds the specified resource. |
+|   -ruleset:<file>         	| Specify a ruleset file that disables specific diagnostics. |
+|   -subsystemversion	        | Specifies the minimum version of the subsystem that the executable file can use. |
+|   -target                 	| Specifies the format of the output file by using one of four options: -target:appcontainerexe, -target:exe, -target:library, -target:module, -target:winexe, -target:winmdobj. |
+|   -unsafe                 	| Allows unsafe code. |
+|   -utf8output	                | Outputs compiler messages in UTF-8 encoding. |
+|   -warn	                    | Sets the warning level (0-4). |
+|   -warnaserror	            | Reports specific warnings as errors. |
+|   -win32icon              	| Uses this icon for the output. |
+|   -win32manifest          	| Specifies a custom win32 manifest file. |
+|   -win32res               	| Specifies the win32 resource file (.res). |
