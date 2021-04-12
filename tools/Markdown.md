@@ -33,7 +33,7 @@ Extended Syntax
 | Heading Id | ### My Great Heading \{\#custom-id\} | 
 | Strikethrough | \~\~This word is deleted\~\~ |
 | TaskList | \- \[X\] Have read README.md <br> \- [ ] Not similar to any closed issues. <br> - [ ] Using latest release |
-| Image with link | \[!\[Alt Text]\(https://example.com/image.png)](https://example.com) |
+| Image with link | \!\[Alt Text]\(https://example.com/image.png)](https://example.com) |
 
 
 ### References
