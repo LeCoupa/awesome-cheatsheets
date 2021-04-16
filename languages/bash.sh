@@ -192,6 +192,7 @@ declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
+${varname:word}              # if varname exists and isn't null, return its value; otherwise return word
 ${varname:=word}             # if varname exists and isn't null, return its value; otherwise set it word and then return its value
 ${varname:?message}          # if varname exists and isn't null, return its value; otherwise print varname, followed by message and abort the current command or script
 ${varname:+word}             # if varname exists and isn't null, return word; otherwise return null
