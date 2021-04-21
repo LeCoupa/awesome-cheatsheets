@@ -34,7 +34,6 @@
 | char | Characters [a, b, @, !, `] |
 | str | Strings [abc, AbC, A@B, sd!, `asa] |
 | bool | Boolean Values [True, False] |
-| char | Characters [a, b, @, !, `] |
 | complex | Complex numbers [2+3j, 4-1j] |
 
 <br>
