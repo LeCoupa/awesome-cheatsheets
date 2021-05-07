@@ -42,8 +42,9 @@ TTL key                           # returns the number of seconds until a key is
 
 
 RPUSH key value [value ...]           # put the new value at the end of the list
-RPUSHX key value                      # append a value to a list, only if the exists
+RPUSHX key value                      # append a value at the end of the list, only if it exists
 LPUSH key value [value ...]           # put the new value at the start of the list
+LPUSHX key value                      # append a value at the start of the list, only if it exists
 LRANGE key start stop                 # give a subset of the list
 LINDEX key index                      # get an element from a list by its index
 LINSERT key BEFORE|AFTER pivot value  # insert an element before or after another element in a list
