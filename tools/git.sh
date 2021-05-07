@@ -1,4 +1,5 @@
 git init            # initiates git in the current directory
+git remote add origin https://github.com/repo_name.git        # add remote reposiory
 git clone <address> # creates a git repo from given address (get the address from your git-server)
 git clone <address> -b <branch_name> <path/to/directory>  # clones a git repo from the address into the given directory and checkout's the given branch
 git clone <address> -b <branch_name> --single-branch  # Clones a single branch
