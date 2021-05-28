@@ -1,11 +1,11 @@
 <?php
 
 /********************************************************************************************
- * 1. CLI AVAILABLE COMMANDS FOR ARTISAN
+ * CLI AVAILABLE COMMANDS FOR ARTISAN
  * https://laravel.com/docs/5.8/artisan
  ********************************************************************************************/
 
-// 1.1. MAIN.
+// MAIN.
 
 php artisan clear-compiled       // Remove the compiled class file
 php artisan down                 // Put the application into maintenance mode
@@ -21,38 +21,38 @@ php artisan serve                // Serve the application on the PHP development
 php artisan tinker               // Interact with your application
 php artisan up                   // Bring the application out of maintenance mode
 
-// 1.2. APP.
+// APP.
 
 php artisan app:name             // Set the application namespace
 
-// 1.3. AUTH
+// AUTH
 
 php artisan auth:clear-resets    // Flush expired password reset tokens
 
-// 1.4. CACHE
+// CACHE
 
 php artisan cache:clear          // Flush the application cache
 php artisan cache:forget         // Remove an item from the cache
 php artisan cache:table          // Create a migration for the cache database table
  
-// 1.5. CONFIG
+// CONFIG
 
 php artisan config:cache         // Create a cache file for faster configuration loading
 php artisan config:clear         // Remove the configuration cache file
  
-// 1.6. DB
+// DB
 
 php artisan db:seed              // Seed the database with records
 
-// 1.7. EVENT
+// EVENT
 
 php artisan event:generate       // Generate the missing events and listeners based on registration
 
-// 1.8. KEY
+// KEY
 
 php artisan key:generate         // Set the application key
 
-// 1.9. MAKE
+// MAKE
 
 php artisan make:auth            // Scaffold basic login and registration views and routes
 php artisan make:channel         // Create a new channel class
@@ -77,7 +77,7 @@ php artisan make:rule            // Create a new validation rule
 php artisan make:seeder          // Create a new seeder class
 php artisan make:test            // Create a new test class
 
-// 1.10. MIGRATE
+// MIGRATE
 
 php artisan migrate:fresh        // Drop all tables and re-run all migrations
 php artisan migrate:install      // Create the migration repository
@@ -86,19 +86,19 @@ php artisan migrate:reset        // Rollback all database migrations
 php artisan migrate:rollback     // Rollback the last database migration
 php artisan migrate:status       // Show the status of each migration
 
-// 1.11. NOTIFICATIONS
+// NOTIFICATIONS
 
 php artisan notifications:table  // Create a migration for the notifications table
 
-// 1.12. OPTIMIZE
+// OPTIMIZE
 
 php artisan optimize:clear       // Remove the cached bootstrap files
 
-// 1.13. PACKAGE
+// PACKAGE
 
 php artisan package:discover     // Rebuild the cached package manifest
 
-// 1.14. QUEUE
+// QUEUE
 
 php artisan queue:failed         // List all of the failed queue jobs
 php artisan queue:failed-table   // Create a migration for the failed queue jobs database table
@@ -110,35 +110,35 @@ php artisan queue:retry          // Retry a failed queue job
 php artisan queue:table          // Create a migration for the queue jobs database table
 php artisan queue:work           // Start processing jobs on the queue as a daemon
 
-// 1.15. ROUTE
+// ROUTE
 
 php artisan route:cache          // Create a route cache file for faster route registration
 php artisan route:clear          // Remove the route cache file
 php artisan route:list           // List all registered routes
 
-// 1.16. SCHEDULE
+// SCHEDULE
 
 php artisan schedule:run         // Run the scheduled commands
 
-// 1.17. SESSION
+// SESSION
 
 php artisan session:table        // Create a migration for the session database table
 
-// 1.18. STORAGE
+// STORAGE
 
 php artisan storage:link         // Create a symbolic link from "public/storage" to "storage/app/public"
 
-// 1.19. VENDOR
+// VENDOR
 
 php artisan vendor:publish       // Publish any publishable assets from vendor packages
 
-// 1.20. VIEW
+// VIEW
 
 php artisan view:cache           // Compile all of the application's Blade templates
 php artisan view:clear           // Clear all compiled view files
 
 /********************************************************************************************
- * 2. REQUEST
+ * REQUEST
  * https://laravel.com/api/5.8/Illuminate/Http/Request.html
  * https://laravel.com/docs/5.8/requests
  ********************************************************************************************/
@@ -146,7 +146,7 @@ php artisan view:clear           // Clear all compiled view files
 
 
 /********************************************************************************************
- * 3. RESPONSE
+ * RESPONSE
  * https://laravel.com/api/5.8/Illuminate/Http/Response.html
  * https://laravel.com/docs/5.8/responses
  ********************************************************************************************/
@@ -154,64 +154,242 @@ php artisan view:clear           // Clear all compiled view files
 
 
 /********************************************************************************************
- * 4. ROUTING
+ * ROUTING
  * https://laravel.com/docs/5.8/routing
  ********************************************************************************************/
 
 
 
  /********************************************************************************************
- * 5. MIDDLEWARE
+ * MIDDLEWARE
  * https://laravel.com/docs/5.8/middleware
  ********************************************************************************************/
 
 
 /********************************************************************************************
- * 6. CONTROLLERS
+ * CONTROLLERS
  * https://laravel.com/docs/5.8/controllers
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
- * 7. SESSION
+ * SESSION
  * https://laravel.com/docs/5.8/session
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
- * 8. URL GENERATION
+ * URL GENERATION
  * https://laravel.com/docs/5.8/urls
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
- * 9. VALIDATION
+ * VALIDATION
  * https://laravel.com/docs/5.8/validation
  ********************************************************************************************/
 
-
+accepted                               // The field under validation must be yes, on, 1, or true.
+active_url                             // The field under validation must have a valid A or AAAA record according to the dns_get_record PHP function.
+after:date                             // The field under validation must be a value after a given date.
+after_or_equal:date                    // The field under validation must be a value after or equal to the given date.
+alpha                                  // The field under validation must be entirely alphabetic characters.
+alpha_dash                             // The field under validation may have alpha-numeric characters, as well as dashes and underscores.
+alpha_num                              // The field under validation must be entirely alpha-numeric characters.
+array                                  // The field under validation must be a PHP array.
+bail                                   // Stop running validation rules after the first validation failure.
+before:date                            // The field under validation must be a value preceding the given date.
+before_or_equal:date                   // The field under validation must be a value preceding or equal to the given date.
+between:min,max                        // The field under validation must have a size between the given min and max.
+boolean                                // The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, "1", and "0".
+confirmed                              // The field under validation must have a matching field of foo_confirmation.
+date                                   // The field under validation must be a valid, non-relative date according to the strtotime PHP function.
+date_equals:date                       // The field under validation must be equal to the given date.
+date_format:format                     // The field under validation must match the given format.
+different:field                        // The field under validation must have a different value than field.
+digits:value                           // The field under validation must be numeric and must have an exact length of value.
+digits_between:min,max                 // The field under validation must have a length between the given min and max.
+dimensions                             // The file under validation must be an image meeting the dimension constraints as specified by the rule's parameters.
+distinct                               // When working with arrays, the field under validation must not have any duplicate values.
+email                                  // The field under validation must be formatted as an e-mail address.
+ends_with:foo,bar,...                  // The field under validation must end with one of the given values.
+exists:table,column                    // The field under validation must exist on a given database table.
+file                                   // The field under validation must be a successfully uploaded file.
+filled                                 // The field under validation must not be empty when it is present.
+gt:field                               // The field under validation must be greater than the given field.
+gte:field                              // The field under validation must be greater than or equal to the given field.
+image                                  // The file under validation must be an image (jpeg, png, bmp, gif, svg, or webp)
+in:foo,bar,...                         // The field under validation must be included in the given list of values.
+in_array:anotherfield.*                // The field under validation must exist in anotherfield's values.
+integer                                // The field under validation must be an integer.
+ip                                     // The field under validation must be an IP address.
+ipv4                                   // The field under validation must be an IPv4 address.
+ipv6                                   // The field under validation must be an IPv6 address.
+json                                   // The field under validation must be a valid JSON string.
+lt:field                               // The field under validation must be less than the given field.
+lte:field                              // The field under validation must be less than or equal to the given field.
+max:value                              // The field under validation must be less than or equal to a maximum value.
+mimetypes:text/plain,...               // The file under validation must match one of the given MIME types:
+mimes:foo,bar,...                      // The file under validation must have a MIME type corresponding to one of the listed extensions.
+min:value                              // The field under validation must have a minimum value.
+not_in:foo,bar,...                     // The field under validation must not be included in the given list of values.
+not_regex:pattern                      // The field under validation must not match the given regular expression.
+nullable                               // The field under validation may be null.
+numeric                                // The field under validation must be numeric.
+present                                // The field under validation must be present in the input data but can be empty.
+regex:pattern                          // The field under validation must match the given regular expression.
+required                               // The field under validation must be present in the input data and not empty.
+required_if:anotherfield,value,...     // The field under validation must be present and not empty if the anotherfield field is equal to any value.
+required_unless:anotherfield,value,... // The field under validation must be present and not empty unless the anotherfield field is equal to any value.
+required_with:foo,bar,...              // The field under validation must be present and not empty only if any of the other specified fields are present.
+required_with_all:foo,bar,...          // The field under validation must be present and not empty only if all of the other specified fields are present.
+required_without:foo,bar,...           // The field under validation must be present and not empty only when any of the other specified fields are not present.
+required_without_all:foo,bar,...       // The field under validation must be present and not empty only when all of the other specified fields are not present.
+same:field                             // The given field must match the field under validation.
+size:value                             // The field under validation must have a size matching the given value.
+starts_with:foo,bar,...                // The field under validation must start with one of the given values.
+string                                 // The field under validation must be a string.
+timezone                               // The field under validation must be a valid timezone identifier according to the timezone_identifiers_list PHP function.
+unique:table,column,except,idColumn    // The field under validation must not exist within the given database table.
+url                                    // The field under validation must be a valid URL.
+uuid                                   // The field under validation must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID).
 
 /********************************************************************************************
- * 10. ERROR HANDLING
+ * ERROR HANDLING
  * https://laravel.com/docs/5.8/errors
  ********************************************************************************************/
 
-
-
 /********************************************************************************************
- * 11. LOGGING
- * https://laravel.com/docs/5.8/logging
+ * MIGRATION COMMANDS
+ * https://laravel.com/docs/5.8/migrations
  ********************************************************************************************/
 
+// TABLE OPTIONS
+
+$table->engine = 'InnoDB';             // Specify the table storage engine (MySQL).
+$table->charset = 'utf8';              // Specify a default character set for the table (MySQL).
+$table->collation = 'utf8_unicode_ci'; // Specify a default collation for the table (MySQL).
+$table->temporary();                   // Create a temporary table (except SQL Server).
+
+// COLUMN TYPES
+
+$table->bigIncrements('id');                       // Auto-incrementing UNSIGNED BIGINT (primary key) equivalent column.
+$table->bigInteger('votes');                       // BIGINT equivalent column.
+$table->binary('data');                            // BLOB equivalent column.
+$table->boolean('confirmed');                      // BOOLEAN equivalent column.
+$table->char('name', 100);                         // CHAR equivalent column with an optional length.
+$table->date('created_at');                        // DATE equivalent column.
+$table->dateTime('created_at');                    // DATETIME equivalent column.
+$table->dateTimeTz('created_at');                  // DATETIME (with timezone) equivalent column.
+$table->decimal('amount', 8, 2);                   // DECIMAL equivalent column with a precision (total digits) and scale (decimal digits).
+$table->double('amount', 8, 2);                    // DOUBLE equivalent column with a precision (total digits) and scale (decimal digits).
+$table->enum('level', ['easy', 'hard']);           // ENUM equivalent column.
+$table->float('amount', 8, 2);                     // FLOAT equivalent column with a precision (total digits) and scale (decimal digits).
+$table->geometry('positions');                     // GEOMETRY equivalent column.
+$table->geometryCollection('positions');           // GEOMETRYCOLLECTION equivalent column.
+$table->increments('id');                          // Auto-incrementing UNSIGNED INTEGER (primary key) equivalent column.
+$table->integer('votes');                          // INTEGER equivalent column.
+$table->ipAddress('visitor');                      // IP address equivalent column.
+$table->json('options');                           // JSON equivalent column.
+$table->jsonb('options');                          // JSONB equivalent column.
+$table->lineString('positions');                   // LINESTRING equivalent column.
+$table->longText('description');                   // LONGTEXT equivalent column.
+$table->macAddress('device');                      // MAC address equivalent column.
+$table->mediumIncrements('id');                    // Auto-incrementing UNSIGNED MEDIUMINT (primary key) equivalent column.
+$table->mediumInteger('votes');                    // MEDIUMINT equivalent column.
+$table->mediumText('description');                 // MEDIUMTEXT equivalent column.
+$table->morphs('taggable');                        // Adds taggable_id UNSIGNED BIGINT and taggable_type VARCHAR equivalent columns.
+$table->uuidMorphs('taggable');                    // Adds taggable_id CHAR(36) and taggable_type VARCHAR(255) UUID equivalent columns.
+$table->multiLineString('positions');              // MULTILINESTRING equivalent column.
+$table->multiPoint('positions');                   // MULTIPOINT equivalent column.
+$table->multiPolygon('positions');                 // MULTIPOLYGON equivalent column.
+$table->nullableMorphs('taggable');                // Adds nullable versions of morphs() columns.
+$table->nullableUuidMorphs('taggable');            // Adds nullable versions of uuidMorphs() columns.
+$table->nullableTimestamps();                      // Alias of timestamps() method.
+$table->point('position');                         // POINT equivalent column.
+$table->polygon('positions');                      // POLYGON equivalent column.
+$table->rememberToken();                           // Adds a nullable remember_token VARCHAR(100) equivalent column.
+$table->set('flavors', ['strawberry', 'vanilla']); // SET equivalent column.
+$table->smallIncrements('id');                     // Auto-incrementing UNSIGNED SMALLINT (primary key) equivalent column.
+$table->smallInteger('votes');                     // SMALLINT equivalent column.
+$table->softDeletes();                             // Adds a nullable deleted_at TIMESTAMP equivalent column for soft deletes.
+$table->softDeletesTz();                           // Adds a nullable deleted_at TIMESTAMP (with timezone) equivalent column for soft deletes.
+$table->string('name', 100);                       // VARCHAR equivalent column with a optional length.
+$table->text('description');                       // TEXT equivalent column.
+$table->time('sunrise');                           // TIME equivalent column.
+$table->timeTz('sunrise');                         // TIME (with timezone) equivalent column.
+$table->timestamp('added_on');                     // TIMESTAMP equivalent column.
+$table->timestampTz('added_on');                   // TIMESTAMP (with timezone) equivalent column.
+$table->timestamps();                              // Adds nullable created_at and updated_at TIMESTAMP equivalent columns.
+$table->timestampsTz();                            // Adds nullable created_at and updated_at TIMESTAMP (with timezone) equivalent columns.
+$table->tinyIncrements('id');                      // Auto-incrementing UNSIGNED TINYINT (primary key) equivalent column.
+$table->tinyInteger('votes');                      // TINYINT equivalent column.
+$table->unsignedBigInteger('votes');               // UNSIGNED BIGINT equivalent column.
+$table->unsignedDecimal('amount', 8, 2);           // UNSIGNED DECIMAL equivalent column with a precision (total digits) and scale (decimal digits).
+$table->unsignedInteger('votes');                  // UNSIGNED INTEGER equivalent column.
+$table->unsignedMediumInteger('votes');            // UNSIGNED MEDIUMINT equivalent column.
+$table->unsignedSmallInteger('votes');             // UNSIGNED SMALLINT equivalent column.
+$table->unsignedTinyInteger('votes');              // UNSIGNED TINYINT equivalent column.
+$table->uuid('id');                                // UUID equivalent column.
+$table->year('birth_year');                        // YEAR equivalent column.
+
+// COLUMN MODIFIERS
+
+$table->someType()->after('column');              // Place the column "after" another column (MySQL)
+$table->someType()->autoIncrement();              // Set INTEGER columns as auto-increment (primary key)
+$table->someType()->charset('utf8');              // Specify a character set for the column (MySQL)
+$table->someType()->collation('utf8_unicode_ci'); // Specify a collation for the column (MySQL/SQL Server)
+$table->someType()->comment('my comment');        // Add a comment to a column (MySQL/PostgreSQL)
+$table->someType()->default($value);              // Specify a "default" value for the column
+$table->someType()->first();                      // Place the column "first" in the table (MySQL)
+$table->someType()->nullable($value = true);      // Allows (by default) NULL values to be inserted into the column
+$table->someType()->storedAs($expression);        // Create a stored generated column (MySQL)
+$table->someType()->unsigned();                   // Set INTEGER columns as UNSIGNED (MySQL)
+$table->someType()->useCurrent();                 // Set TIMESTAMP columns to use CURRENT_TIMESTAMP as default value
+$table->someType()->virtualAs($expression);       // Create a virtual generated column (MySQL)
+$table->someType()->generatedAs($expression);     // Create an identity column with specified sequence options (PostgreSQL)
+$table->someType()->always();                     // Defines the precedence of sequence values over input for an identity column (PostgreSQL)
+
+// UPDATING COLUMNS
+
+$table->someType()->change();       // Allows you to modify some existing column types to a new type or modify the column's attributes.
+$table->renameColumn('from', 'to'); // Rename a column
+
+$table->dropColumn('column');       // Drop a given column (accepts an array of columns).
+$table->dropRememberToken();        // Drop the remember_token column.
+$table->dropSoftDeletes();          // Drop the deleted_at column.
+$table->dropSoftDeletesTz();        // Alias of dropSoftDeletes() method.
+$table->dropTimestamps();           // Drop the created_at and updated_at columns.
+$table->dropTimestampsTz();         // Alias of dropTimestamps() method.
+
+// INDEXES
+
+$table->primary('id');                // Adds a primary key.
+$table->primary(['id', 'parent_id']); // Adds composite keys.
+$table->unique('email');              // Adds a unique index.
+$table->index('state');               // Adds a plain index.
+$table->spatialIndex('location');     // Adds a spatial index. (except SQLite)
+
+$table->dropPrimary('users_id_primary');               // Drop a primary key from the "users" table.
+$table->dropUnique('users_email_unique');              // Drop a unique index from the "users" table.
+$table->dropIndex('geo_state_index');                  // Drop a basic index from the "geo" table.
+$table->dropSpatialIndex('geo_location_spatialindex'); // Drop a spatial index from the "geo" table (except SQLite).
+
+// FOREIGN KEY CONSTRAINTS
+
+$table->foreign('user_id')->references('id')->on('users'); // Create foreign key constraints.
+$table->dropForeign('posts_user_id_foreign');              // Drop foreign key (accepts an array of strings).
+
+Schema::enableForeignKeyConstraints();  // Enable foreign key constraints within your migrations.
+Schema::disableForeignKeyConstraints(); // Disable foreign key constraints within your migrations.
 
 /********************************************************************************************
- * 12. COLLECTIONS
+ * COLLECTION ELOQUENT METHODS
  * https://laravel.com/docs/5.7/collections
  ********************************************************************************************/
-
 
 all
 average
@@ -321,12 +499,10 @@ whereNotInStrict
 wrap
 zip
 
-
 /********************************************************************************************
- * 13. HTTP TESTS
+ * HTTP TESTS
  * https://laravel.com/docs/5.7/http-tests
  ********************************************************************************************/
-
 
 $response->assertStatus($code);                            // Assert that the response has a given code.
 $response->assertForbidden();                              // Assert that the response has a forbidden status code.
@@ -379,3 +555,32 @@ $this->assertGuest($guard = null);                                   // Assert t
 $this->assertAuthenticatedAs($user, $guard = null);                  // Assert that the given user is authenticated.
 $this->assertCredentials(array $credentials, $guard = null);         // $this->assertCredentials(array $credentials, $guard = null).
 $this->assertInvalidCredentials(array $credentials, $guard = null);  // Assert that the given credentials are invalid.
+
+/********************************************************************************************
+ * LARAVEL VALET COMMANDS
+ * https://laravel.com/docs/6.0/valet
+ ********************************************************************************************/
+
+valet install     // Install the Valet daemon.
+valet uninstall   // Uninstall the Valet daemon.
+valet use php@7.2 // Allows you to switch between php versions.
+
+valet start       // Start the Valet daemon.
+valet stop        // Stop the Valet daemon.
+valet restart     // Restart the Valet daemon.
+
+valet park        // Register your current working directory as a path which Valet should search for sites.
+valet forget      // Run this command from a "parked" directory to remove it from the parked directory list.
+valet paths       // View all of your "parked" paths.
+
+valet link <name>   // Link a single site in the current directory and not the entire directory.
+valet unlink <name> // Unlink a single site in the current directory
+valet links         // View all of your "linked" paths.
+
+valet secure      // Serve site into https
+valet unsecure    // Revert back to http
+
+valet log          // View a list of logs which are written by Valet's services.
+valet trust        // Add sudoers files for Brew and Valet to allow Valet commands to be run without prompting for passwords.
+valet tld <suffix> // Update tld for your domains (default to test).
+valet share        // Share your site with the world.

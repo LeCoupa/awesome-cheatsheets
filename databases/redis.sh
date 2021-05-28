@@ -3,9 +3,10 @@
 # *****************************************************************************
 
 
-redis-server /path/redis.conf  # start redis with the related configuration file
-redis-cli                      # opens a redis prompt
-
+redis-server /path/redis.conf        # start redis with the related configuration file
+redis-cli                            # opens a redis prompt
+sudo systemctl restart redis.service # Restart Redis
+sudo systemctl status redis          # Check Redis status
 
 # *****************************************************************************
 # STRINGS
@@ -41,8 +42,9 @@ TTL key                           # returns the number of seconds until a key is
 
 
 RPUSH key value [value ...]           # put the new value at the end of the list
-RPUSHX key value                      # append a value to a list, only if the exists
+RPUSHX key value                      # append a value at the end of the list, only if it exists
 LPUSH key value [value ...]           # put the new value at the start of the list
+LPUSHX key value                      # append a value at the start of the list, only if it exists
 LRANGE key start stop                 # give a subset of the list
 LINDEX key index                      # get an element from a list by its index
 LINSERT key BEFORE|AFTER pivot value  # insert an element before or after another element in a list
@@ -115,7 +117,7 @@ HINCRBY key field increment  # increment value in hash by X
 HDEL key field [field ...]   # delete one or more hash fields
 HEXISTS key field            # determine if a hash field exists
 HKEYS key                    # get all the fields in a hash
-HLEN key                     # get all the fields in a hash
+HLEN key                     # get the number of fields in a hash
 HSTRLEN key field            # get the length of the value of a hash field
 HVALS key                    # get all the values in a hash
 
