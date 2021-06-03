@@ -16,28 +16,28 @@ Methods;
 express.json([options]);
 
 options: `
-inflate // to manage the deflated bodies like enabling and disabling
+inflate                   // to manage the deflated bodies like enabling and disabling
 
-limit  // Controls the maximum request body size.
+limit                     // Controls the maximum request body size.
 
-reviver // It is passed directly to JSON.parse as an second argument
+reviver                   // It is passed directly to JSON.parse as an second argument
 
-type    // This is used to determine the type of middleware will parse
+type                      // This is used to determine the type of middleware will parse
 
-verify  // It is an undefined function which used to verify the middleware parsing.
+verify                    // It is an undefined function which used to verify the middleware parsing.
 
 `;
 
 express.raw([options]);
 
 options: `
-inflate // to manage the deflated bodies like enabling and disabling
+inflate                   // to manage the deflated bodies like enabling and disabling
 
-limit  // Controls the maximum request body size.
+limit                     // Controls the maximum request body size.
 
-type    // This is used to determine the type of middleware will parse
+type                      // This is used to determine the type of middleware will parse
 
-verify  // It is an undefined function which used to verify the middleware parsing.
+verify                    // It is an undefined function which used to verify the middleware parsing.
 `;
 
 express.Router([options]);
