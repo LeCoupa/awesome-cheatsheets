@@ -102,5 +102,9 @@ verify                  // It is an undefined function which used to verify the 
 Properties```app.local`;
 
 `app.locals.title = "My Cheatsheet";
+
 console.dir(app.locals.title)`;
-app.mountpath`;``app.mountpath``const admin = express()`;
+
+app.mountpath`
+
+``app.mountpath``const admin = express()`;
