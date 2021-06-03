@@ -11,7 +11,7 @@ const app = express(); // Intializing the imported express application
  * http://expressjs.com/en/api.html#express.json
  * ******************************************************************************************* */
 
-Methods;
+```Methods```;
 
 express.json([options]);
 
@@ -97,3 +97,10 @@ type                    // This is used to determine the type of middleware will
 
 verify                  // It is an undefined function which used to verify the middleware parsing.
 `;
+
+```Application`````;
+Properties```app.local`;
+
+`app.locals.title = "My Cheatsheet";
+console.dir(app.locals.title)`;
+app.mountpath`;``app.mountpath``const admin = express()`;
