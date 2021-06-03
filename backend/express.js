@@ -103,8 +103,20 @@ Properties```app.local`;
 
 `app.locals.title = "My Cheatsheet";
 
-console.dir(app.locals.title)`;
+console.dir(app.locals.title)`;                     // Creating objects with local variables
 
 app.mountpath`
 
-``app.mountpath``const admin = express()`;
+``app.mountpath``const admin = express()
+admin.get('/', function(req,res){
+    console.log(admin.mountpath)
+    res.send('Admin Homepage')
+})                            
+
+app.use('<admin dir>', admin)`;                    // Mounting a sub - app
+
+``Event``
+
+`admin.on('mount', (parent){
+    console.log('Admin Mounted')
+})`                                                // 
