@@ -163,9 +163,22 @@ app.use('<admin dir>', admin)`;                    // Mounting a sub - app
 ```Request```
 ``Methods``
 
-`req.param('name')`
+`req.get('content-type')`
 
+`req.accepts('html')`
+
+    `req.is('json')`
+    
+    `var range = req.range(1000)
+    if (range.type === 'bytes'){
+        range.forEach(function(r){
+
+        })
+    }`
+    
 ``Properties``
+
+`req.param('name')`
     
 `app.post('/', function (req, res, next) {
     console.log(req.body)
@@ -180,4 +193,25 @@ app.use('<admin dir>', admin)`;                    // Mounting a sub - app
 res.send('GET')`
 
 `console.dir(req.signedCookies.user)`
+
+
+```Response```
+``Methods``
+        
+`res.redirect('https://google.com')`
+
+`res.send({message: 'Awesome Stuffs'})`
+        
+`res.json({alert: 'awesomecheatsheets'})`
+
+`const file = req.params.name;
+res.sendFile(file, options, function(err){
+    if(err){
+        next(err)
+    }else{
+        console.log('Sent:', file)
+    }
+})`
+
+`res.render('index')`
 
