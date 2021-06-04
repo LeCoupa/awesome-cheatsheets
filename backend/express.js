@@ -119,4 +119,43 @@ app.use('<admin dir>', admin)`;                    // Mounting a sub - app
 
 `admin.on('mount', (parent){
     console.log('Admin Mounted')
-})`                                                // 
+})`                                                // Mounting on a parent app
+
+``Methods``
+`app.get('/', function(req, res){
+    res.send('GET request to message')
+})`                                               // get requests to the specified path
+
+`app.post('/', function(req,res){
+    res.send('POST request to a webpage')
+})`
+
+`app.put('/', function(req,res){
+    res.send('PUT request to a webpage')
+})`
+
+`app.delete('/', function(req,res){
+    res.send('DELETE request to a webpage')
+})`
+
+`app.all('/', function(req,res,next){
+    console.log('Accessing the secret section....')
+    next()
+})`
+
+`app.param('user', function(req,res,next){
+    User.find(id, function(err, user){
+        if(err){
+            next(err)
+        } else if (user){
+            req.user = user
+            next()
+        } else {
+            next(new Error('Failed to load user'))
+        }
+    })
+})`
+
+`app.use(function(req,res,next){
+    res.send('Hey There!')
+})`
