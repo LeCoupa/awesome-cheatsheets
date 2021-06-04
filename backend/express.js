@@ -159,3 +159,23 @@ app.use('<admin dir>', admin)`;                    // Mounting a sub - app
 `app.use(function(req,res,next){
     res.send('Hey There!')
 })`
+
+```Request```
+``Methods``
+
+`req.param('name')`
+
+``app.post('/', function (req, res, next) {
+    console.log(req.body)
+    res.json(req.body)
+})``
+
+`console.dir(req.cookies.name)`
+
+`console.dir(req.query.q)`
+
+`console.log(req.route)
+res.send('GET')`
+
+`console.dir(req.signedCookies.user)`
+
