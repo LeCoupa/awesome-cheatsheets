@@ -165,10 +165,12 @@ app.use('<admin dir>', admin)`;                    // Mounting a sub - app
 
 `req.param('name')`
 
-``app.post('/', function (req, res, next) {
+``Properties``
+    
+`app.post('/', function (req, res, next) {
     console.log(req.body)
     res.json(req.body)
-})``
+})`
 
 `console.dir(req.cookies.name)`
 
