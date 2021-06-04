@@ -215,3 +215,10 @@ res.sendFile(file, options, function(err){
 
 `res.render('index')`
 
+```BodyParser```
+    
+`const BodyParser = require('body-parser')
+app.use(BodyParser.json())
+app.use(BodyParser.urlencoded({
+    extended: true
+}))`
