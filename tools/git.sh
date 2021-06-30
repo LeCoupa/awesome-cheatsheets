@@ -41,6 +41,7 @@ git grep --heading --line-number '<string/regex>' # Find lines matching the patt
 git log --grep='<string/regex>'                   # Search Commit log
 
 git commit -m "msg"          # commit changes with a msg
+git commit -m "title" -m "description" # commit changes with a title and description
 git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
 git commit --amend --no-edit # amends a commit without changing its commit message
 git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
