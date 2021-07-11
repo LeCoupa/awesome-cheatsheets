@@ -117,6 +117,9 @@ grep -r <pattern> <dir>       # search recursively for pattern in directory
 head -n file_name | tail +n   # Print nth line from file.
 head -y lines.txt | tail +x   # want to display all the lines from x to y. This includes the xth and yth lines.
 
+sed 's/<pattern>/<replacement>/g' <filename> # replace pattern in file with replacement value to std output the character after s (/) is the delimeter 
+sed -i 's/<pattern>/<replacement>/g' <filename> # replace pattern in file with replacement value in place
+echo "this" | sed 's/is/at/g' # replace pattern from input stream with replacement value
 
 ##############################################################################
 # DIRECTORY COMMANDS
@@ -145,6 +148,9 @@ ssh -p <port> user@host  # connects to host on specified port as user
 ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed or passwordless login
 
 whoami                   # returns your username
+su <user>                # switch to a different user
+su -                     # switch to root, likely needs to be sudo su -
+sudo <command>           # execute command as the root user
 passwd                   # lets you change your password
 quota -v                 # shows what your disk quota is
 date                     # shows the current date and time
@@ -154,6 +160,8 @@ w                        # displays whois online
 finger <user>            # displays information about user
 uname -a                 # shows kernel information
 man <command>            # shows the manual for specified command
+info <command>           # shows another documentation system for the specific command
+help                     # shows documentation about built-in commands and functions
 df                       # shows disk usage
 du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
 last <yourUsername>      # lists your last logins
