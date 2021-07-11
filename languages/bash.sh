@@ -381,7 +381,7 @@ n<&m       # file descriptor n is made to be a copy of the input file descriptor
 <&-        # closes the standard input
 >&-        # closes the standard output
 n>&-       # closes the ouput from file descriptor n
-n<&-       # closes the input from file descripor n
+n<&-       # closes the input from file descriptor n
 
 |tee <file># output command to both terminal and a file (-a to append to file)
 
