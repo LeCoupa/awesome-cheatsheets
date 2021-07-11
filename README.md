@@ -32,6 +32,10 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [PHP](languages/php.php)
 - [Python](languages/python.md)
 
+#### Extensible Markup Language
+
+- [XML](languages/XML.md)
+
 #### Functional
 
 - [JavaScript](languages/javascript.js)
