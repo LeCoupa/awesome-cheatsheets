@@ -1,0 +1,344 @@
+Java Cheatsheet
+
+HELLO WORLD
+
+//Text file name HelloWorld.java
+public class HelloWorld {
+  // main() is the method
+  public static void main (String[] arfs)
+    //Prints "Hello World" in the terminal window.
+    System.out.pritn("Hello World");
+}
+
+DATA TYPES
+
+Type        Set of values                        Values                     Operators
+int         integers                   between -2^31 and + (2^31)-1         + - * / %
+double      floating-point numbers            real numbers                  + - * /
+boolean     boolean values                    true or false                 && || !
+char        characters                        
+String      sequences of characters
+
+DECLARATION AND ASSIGNMENT STATEMENTS
+
+//Declaration statement
+int a,b;
+
+//Assignment statement
+a = 13212; //a is the variable name; 13212 is the literal which is assign to the variable a
+
+//Initialization statement
+int c = a + b;
+
+COMPARISON OPERATORS
+
+Operation     Meaning
+  ==          equal
+  !=          not equal
+  <           less than
+  >           greater than
+  <=          less than or equal
+  >=          greater than or equal
+  
+  
+PRINTING
+
+  void System.out.print(String s) //print s
+  void System.out.println(String s) //print s, followed by a newline
+  void System.out.println() //print a newline
+  
+PARSING COMMAND-LINE ARGUMENTS
+
+  int Integer.parseInt(String s) //convert s to an int value
+  double Double.parseDouble(String) //convert s to a double value
+  long Long.parseLong(String s) // convert s to a long value
+  
+MATH LIBRARY
+
+  Public Class Math
+    double abs(double a)    // absolute value of a
+    double max(double a, double b)  //maximum of a and b
+    double min(double a, dobule a)  //minimum of a and b
+    double sin(double theta) //sine of theta
+    double cos(double theta) //cosine of theta
+    double tan(double theta) //tangent of theta
+    double toRadians(double degrees) // convert angle from degrees to radians
+    double toDegreestouble radians)  // convert angle from radians to degrees
+    double exp(doube a)  // exponential (e^a)
+    double pow(double a, double p) //raise a to the bth power (a^b)
+    double random() //random in [0,1)
+    double sqrt(double a)  //square root of a
+    
+    
+EXAMPLES OF TYPE CONVERSION
+ 
+  Expression                Expression type        Expression value
+  (1 + 2 + 3 + 4) / 4.0          double                 2.5
+  Math.sqrt(4)                   double                 2.0
+  "123343" + 99                  String              "12334399"
+     11 * 0.25                   double                 2.75
+    (int) 11 * 0.25              double                 2.75
+    11 * (int) 0.25              int                    0
+    (int) (11 * 0.25)            int                    2
+    
+    
+ANATOMY OF AN IF STATEMENT
+
+  if (x>y) { // x > y is the boolean expression
+   //Sequence of statements
+   x = y;
+  } 
+  
+IF AND IF-ELSE STATEMENT
+
+   if (BOOLEAN EXPRESSION) { 
+   //Sequence of statements
+   } else {
+   //Sequence of statements
+   }
+   
+ANATOMY OF A WHILE LOOP
+
+  //Initialization is a separate statement
+  int power = 1;
+  
+  while ( power <= n/2 ) // power <= n/2 is an example of the loop-continuation condition
+  {
+    //Statements
+  }
+
+ANATOMY OF A WHILE LOOP
+
+  //Initialize another variable in a separate statement
+  int power = 1;
+  
+  for (declare and initialize a loop control variable; loop-continuation condition/s; increment or decrement of the variable of control)
+  {
+    //Statement
+  }
+  
+  Example:
+  for (int i = 0; i <= n; i++) {
+     //Statement
+  }
+  
+DO-WHILE LOOP
+
+  do{
+    //Statement
+  } while(lopp-continuation condition);
+  
+SWITCH STATEMENT
+
+  switch (VARIABLE TO EVALUATE ITS VALUE) {
+    case value: Statement; break;
+    ...
+    default: Statement; break;
+  }
+  
+  Example:
+ 
+  int month = 8;
+        String monthString;
+        switch (month) {
+            case 1:  monthString = "January";
+                     break;
+            case 2:  monthString = "February";
+                     break;
+            case 3:  monthString = "March";
+                     break;
+            case 4:  monthString = "April";
+                     break;
+            case 5:  monthString = "May";
+                     break;
+            case 6:  monthString = "June";
+                     break;
+            case 7:  monthString = "July";
+                     break;
+            case 8:  monthString = "August";
+                     break;
+            case 9:  monthString = "September";
+                     break;
+            case 10: monthString = "October";
+                     break;
+            case 11: monthString = "November";
+                     break;
+            case 12: monthString = "December";
+                     break;
+            default: monthString = "Invalid month";
+                     break;
+        }
+
+ARRAY DECLARATION
+
+    int[]     ai;        // array of int
+    short[][] as;        // array of array of short
+    short     s,         // scalar short
+              aas[][];   // array of array of short
+    Object[]  ao,        // array of Object
+              otherAo;   // array of Object
+    Collection<?>[] ca;  // array of Collection of unknown type
+
+DECLARATION OF ARRAY VARIABLE
+
+  Exception ae[]  = new Exception[3];
+  Object aao[][]  = new Exception[2][3];
+  int[] factorial = { 1, 1, 2, 6, 24, 120, 720, 5040 };
+  char ac[]       = { 'n', 'o', 't', ' ', 'a', ' ',
+                      'S', 't', 'r', 'i', 'n', 'g' };
+  String[] aas    = { "array", "of", "String", };
+
+FUNCTIONS
+
+  public static double sum (int a, int b) { //double is the return type, sum is the method's name, a and b are two arguments of type int;
+    int result; //local variable
+    result = a + b;
+    return result;//return statement;
+  }
+  
+USING AN OBJECT
+
+  //Declare a a variable, object name
+  String s;
+  
+  //Invoke a contructor to create an object
+  s = new String ("Hello World");
+  
+  //Invoke an instance method that operates on the object's value
+  char c = s.chartAt(4);
+  
+INSTANCE VARIABLES
+
+  public class Charge {
+    //Instance variable declarations
+    private final double rx, ry;
+    private final double q;
+  }
+  
+  //private, final and public are access modifiers
+  
+  
+CONSTRUCTORS
+
+  //A class contains constructors that are invoked to create objects from the class blueprint.
+  //Constructor declarations look like method declarations—except that they use the name of the class and have no return type
+  
+  public Bicycle(int startCadence, int startSpeed, int startGear) {
+    gear = startGear;
+    cadence = startCadence;
+    speed = startSpeed;
+}
+
+DECLARING CLASSESS
+
+
+class MyClass {
+    // field, constructor, and 
+    // method declarations
+}
+
+Example:
+
+    public class Bicycle {
+        // the Bicycle class has
+        // three fields
+        public int cadence;
+        public int gear;
+        public int speed;
+        // the Bicycle class has
+        // one constructor
+        public Bicycle(int startCadence, int startSpeed, int startGear) {
+            gear = startGear;
+            cadence = startCadence;
+            speed = startSpeed;
+        }
+        // the Bicycle class has
+        // four methods
+        public void setCadence(int newValue) {
+            cadence = newValue;
+        }   
+        public void setGear(int newValue) {
+            gear = newValue;
+        }   
+        public void applyBrake(int decrement) {
+            speed -= decrement;
+        }  
+        public void speedUp(int increment) {
+            speed += increment;
+        }
+
+DECLARING CLASSESS IMPLEMENTATING AN INTERFACE
+
+class MyClass extends MySuperClass implements YourInterface {
+    // field, constructor, and
+    // method declarations
+}
+
+// MyClass is a subclass of MySuperClass and that it implements the YourInterface interface.
+
+
+STACK DATA TYPE
+
+  public class Stack<Item> implements Iterable <Item>
+  
+  Stack()   //create an empty stack
+  boolean isEmpthy() //return if the stack empthy
+  void push(Item item) // push an item onto the stack
+  Item pop() //return and remove the item that was inserted most recently
+  int size() //number of item on stack
+  
+QUEUE DATA TYPE
+
+  public class Queue<Item> implements Iterable<Item>
+  
+  Queue()  //create an emptyh queue
+  boolean isEmpthy()  //return if the queue empthy
+  void enqueue(Item item) // insert an item onto queue
+  Item dequeue()  //return and remove the item that was inserted least recently
+  int size() //number of item on queue
+  
+ITERABLE
+
+//import Iterator
+import java.util.Iterator;
+
+public class Queue<Item> implements Iterable <Item> { 
+ 
+//FIFO queue
+  private Node first;
+  private Node last;
+  private class Node {
+    Item item;
+    Node next;
+  }
+
+  public void enqueue (Item item)
+  ...
+  
+  public Item dequeue()
+  ...
+
+}
+
+SYMBOL TABLE DATA TYPE
+
+  public class ST<Key extends Comparable<Key>, Value>
+  
+  ST()  //create and empthy symbol table
+  void put(Key key, Value val)  //associate val with key
+  Value get(Key key)  //value associated with key
+  void remove(Key key) //remove key (and its associated value)
+  boolean contains (Key key)  //return if there is a value associated with key
+  int size()  //number of key-value pairs
+  Iterable<Key> keys()  // all keys in the symbol table
+  
+SET DATA TYPE
+
+  public class SET<Key extends Comparable<Key>> implements Iterable<Key>
+  SET() //create an empthy set
+  boolean isEmpthy()  //return if the set is empthy
+  void add (Key key)  //add key to the set
+  void remove(Key key)  //remove key from set
+  boolean contains(Key key) //return if the key is in the set
+  int size() //number of elements in set
+  
