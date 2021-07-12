@@ -1,0 +1,68 @@
+CRONTAB, is a time-based job scheduler in Unix like operating systems. 
+In laymen term, it is used to execute scripts on your machine at a predefined time or interval. 
+This can be any script, for instance downloading images from a particular website every hour or generating a pdf of your unread emails from the past day and the list goes on
+
+
+###################################
+BASICS
+###################################
+
+Each line of a crontab represents a job and it looks as follows:
+
+* * * * * command_name
+
+Each asterisk here has a special meaning :
+Asterisk 1 : Represents minutes from 0 to 59
+Asterisk 2 : Represents hour of the day from 0 to 23
+Asterisk 3: Represents day of the month from 1 to 31
+Asterisk 4: Represents a month from 1 to 12
+Asterisk 5: Represents the day of the week from 0 to 6 (Sunday to Saturday)
+Command : A command that executes a script
+
+Example : 0 10 * * * /bin/bash print_time.sh
+You can play with these settings from the following site : https://crontab.guru
+
+The above example will execute the script print_time.sh using the /bin/bash shell, everyday at 10:00 A.M. 
+Crontab uses a 24 hour clock
+Providing the full path to the script is necessary
+Providing a shell name or a specific interpreter is necessary too
+
+We can also use the following strings to define job.
+
+@reboot	Run once, at startup.
+@yearly	Run once a year.
+@annually	(same as @yearly).
+@monthly	Run once a month.
+@weekly	Run once a week.
+@daily	Run once a day.
+@midnight	(same as @daily).
+@hourly	Run once an hour.
+
+@reboot <command-to-execute> # run a job every time the system reboots
+
+###################################
+CREATING CRONTAB JOBS
+###################################
+
+crontab -e # this opens up the crontab file in your predefined editor
+
+# create a basic cronjob that runs everyday at 10:00 A.M.
+0 10 * * * /bin/bash ~/Documents/collect_log.sh 
+
+- this cronjob will get executed everyday at 10:00 AM
+- note the leading 0 is important
+- /bin/bash is the interpreter here, and this is required
+- ~/Documents/collect_log.sh is the absolute path to the script to be executed
+
+
+
+###################################
+VIEW CRONJOBS FOR THE CURRENT USER
+###################################
+crontab -l 
+
+
+##########################################
+REMOVE ALL CRONJOBS FOR THE CURRENT USER
+##########################################
+crontab -r
