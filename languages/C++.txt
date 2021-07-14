@@ -1,0 +1,506 @@
+C++
+
+#DATA TYPES
+ 1)void   - type with empty set of values.There is no structure assosciated with void except pointers.
+std::nullptr_t is a special pointer that is not itself a pointer type.
+
+ 2) int   - stores an integer value .
+          4 bytes C++ standard since C11. (for 16-bit OS its 2 bytes)
+          Hence,int value ranges from -2147483648 to 2147483647.
+
+ 3) float - stores an decimal value.
+           4 bytes .
+
+ 4) char  - stores a single character value(ASCII values)
+           1 byte.(0 to 255)
+
+ 5) bool  - stores a boolean value.(true or false)
+           1 byte.
+	   stores a value 0 or 1 indicating tue or false.
+	
+# MODIFIERS
+C++ has modifiers for extending the limits of the basic data types for some advanced calculation.There are 2 types of Modifiers:-
+1)Signedness
+    #  signed   - by default,target will have signed representation ,which means a variable can take negative values.
+    #  unsigned - target data type will be unsigned means only positive(absolute) values will be taken by that type.
+
+2) Size
+    #  short     - Target data type will have a width of atleast 2 bytes.The data type is optimized for lower bounds using less space.
+    #  long      - Target data type will have a width of atleast 4 bytes.
+    #  long long - Target data type will have a width of at least 8 bytes.
+
+Character Types
+
+    1) signed char 
+    2) unsigned char
+    3) char
+    4) wchar_t
+
+Float Types
+    1) float
+    2) double
+    3) long double
+    
+# DATA STRUCTURES
+1) ARRAYS
+to declare an array of any type : data_type name_of_array[size of array];
+array cannot be re-intialized with the number of elements. 
+
+2) LINKED LIST
+a linked list in cpp is built-in in the form of vectors
+to declare an vector(linked list) in cpp : vector<data_type> name;
+you have to include vector library. #include<vector>
+
+3) STACK
+to make a stack in cpp : stack<data_type> name;
+you have to include stack library .#include<stack>
+
+4) QUEUE
+to make a queue in cpp : queue<data_type> name;
+you have to include queue library .#include<queue>
+
+cout<<"Anything"<<variables<<endl;
+* This prints text on console (Console OUTput).
+cin>>x;
+* This inputs data from user and stores in specified variables.
+
+cin.getline(variable,characters in it)
+* This is specially used for white sapced (Spaces) input.
+
+
+* Declare a variable named x
+DataType    Description
+int x;      // Integer var named x
+char x;     // Character var stores one alphabet,numerics,special symbol and is one byte.
+string x;   // Characterd back to back
+bool x;     // Boolean value (1 or 0)(true or false)
+float x;    // Real values (decimal numbers)
+
+* 
+
+#KEYWORDS (reserved words ,have special functionality).There are 97 keywords in C++ as of C20 standard.
+    1)  alignas              -specifies the alignment requirement of a type or an object.
+    2)  alignof              -queries alignment requirements of a type.
+    3)  and                  -logical and operator.(alternative to &&)
+    4)  and_eq		     -bitwise and operator .(alternative to &= ,x&=y or x=x&y)
+    5)  asm		     -embed assembly code within C++ program.
+    6)  atomic_cancel        -
+    7)  atomic_commit	     -
+    8)  atomic_noexcept
+    9)	auto                 -automatic intializer or return type evaluated.
+   10)  bitand               -alternative for bitwise and. (&)
+   11)  bitor                -alternative for bitwise or. (|)
+   12)  bool                 -data type,capable of holding either true or false.
+   13)  break                -terminating statement for, loops and switch statements.
+   14)  case                 -transfer control to one of the several statements depending on the value of conditions.
+   15)  catch                -used in exception handling.
+   16)  char                 -data type character.
+   17)  char8_t              -character data type 1 byte.(UTF-8 bit character)
+   18)  char16_t	     -character data type 2 bytes.(UTF-16 bit character)
+   19)  char32_t	     -character data type 4 bytes.(UTF-32 bit character)
+   20)  class      	     -declaration of user-defined data types.
+   21)  compl 		     -compliment operator.(alternative to ~)
+   22)  concept   	     -named set of requirements.
+   23)  const		     -defines that the type is constant.
+   24)  consteval	     -specifies that a function is an immediate function.
+   25)  constexpr	     -specifies that the value of a variable or function can appear in constant expression.
+   26)  constinit	     -asserts that a variable has static intialization.
+   27)  const_cast 	     -converts between types with different cv-qualification.
+   28)  continue     	     -causes the remaining body of loops to be skipped.
+   29)  co_await	     -suspend operation until resumed.
+   30)  co_return 	     -complete execution returning a value.
+   31)  co_yield 	     -suspend execution returning a value.
+   32)  decltype	     -inspects the declared type of an entity or the type and value category of an expression.
+   33)  default		     -transfer control to one of the several statements,explicitly defaultedfunction definition.
+   34)  delete		     -destroy previously allocated objects,ill-formed functions. 
+   35)  do		     -do-while loop.(executes a statement repeatedly,until condition is false)
+   36)  double 		     -double precision floating point.
+   37)  dynamic_cast	     -safely converts pointers and references to classes along the inheritance hierarchy.
+   38)  else 		     -if the bool value of if() is false then this block gets executed.
+   39)  enum 		     -enumeration is a distinct type whose value is restricted to a range of values.
+   40)  explicit	     -specifies that a constructor or conversion function cannot be used for implicit conversions and copy initialization.
+   41)  export		     -exports all namespace-scope declaration.
+   42)  extern		     -applies the language specification for external linkages of function names,types and variables.
+   43)  false		     -a boolean literal indicating condition is not satisfied.
+   44)  float 		     -data type declaration for floating point numbers.
+   45)  for 		     -intializes counter once and iterates over and over again incrementing the counter each time ,till the condition is met.Range based for loop executes over a range.
+   46)  friend		     -a friend declaration appears in a class body to grants a function or another class access to private and protected members.
+   47)  goto		     -transfers control unconditionally.
+   48)  if		     -if the condition yields true then the block of code gets executed.
+   49)  inline		     -declares a function to be inline function .
+   50)  int 		     -basic integer data type.
+   51)  long 		     -target type will have a width of atleast 4 bytes.
+   52)  mutable		     -permits modification of class members even if they are declared const.
+   53)  namespace 	     -provide a method for preventing name conflicts in large projects.
+   54)  new		     -creates and initializes objects with dynamic storage duration.
+   55)  noexcept	     -performs a compile time check that returns true if an expression is declared not to throw exceptions.
+   56)  not		     -alternative operator for !
+   57)  not_eq	   	     -alternative operator for !=
+   58)  null_ptr	     -denotes a pointer literal.
+   59)  operator	     -customizes C++ operators for operands of user-defined data type
+   60)  or		     -alternative to | operator.
+   61)  or_eq		     -alternative to |= operator.
+   62)  private		     -member specification of class/struct or union ,define the accessibility of subsequent members.
+   63)  protected	     -member specification of class/struct or union ,define the accessibility of subsequent members and inherited members of base class.
+   64)  public 		     - member specification of class/struct or union ,define the accessibility of subsequent members to any subsequent class.
+   65)  reflexpr	     -
+   66)  register	     -automatic storage duration.
+   67)  reinterpret_cast     -converts between types by reinterpreting the underlying bit pattern.
+   68)  requires	     -used to introduce a requires-clause, which specifies constraints on template arguments or on a function declaration. 
+   69)  return 		     -terminates the current function and gives back a specified value to the caller.
+   70)  short		     -target type will be optimized for space and will have a width of 2 bytes atleast. 
+   71)  signed		     -target will have a signed representation.
+   72)  sizeof		     -used when actual size of object must be known.
+   73)  static 		     -specified variables will have static storage duration.
+   74)  static_asset	     -performs compile-time assertion check.
+   75)  static_cast	     -converts between types using a combination of implicit and user-defined conversions.
+   76)  struct		     -class with public member accessibility by default. 
+   77)  switch		     -transfer control to one of the several statements,depending on the value of condition. 
+   78)  synchronized 	     -
+   79)  template	     -template is an entity of family of either classes,functions or variables.
+   80)  this		     -a prvalue expression whose value is the address of the implicit object parameter.
+   81)  thread_local	     -thread storage duration.
+   82)  throw		     -signals and erroneous conditions and executes an error handler.
+   83)  true		     -a boolean literal indicating condition is satisfied. 
+   84)  try		     -associates one or more exception handlers with a compound statement.
+   85)  typedef		     -creates an alias that can be used anywhere in place of a type name.
+   86)  typeid		     -used where the dynamic type or polymorphic object must be known and for static type identification.
+   87)  typename	     -similar word for class.
+   88)  union		     -a special class type that can hold only one of its non-static data members at a time. 
+   89)  unsigned	     -target type will have a unsigned representation.
+   90)  using		     -introduces a name that is defines elsewhere into the declarative region .
+   91)  virtual		     -virtual functions or classes are defined using the virtual keyword.
+   92)  void		     -type with empty set of values.
+   93)  volatile  	     -defines that the type is volatile.
+   94)  wchar_t		     -type for wide character representation.
+   95)  while		     -executes statements repeatedly untill the condition becomes false.
+   96)  xor		     -alternative operator for ^
+   97)  xor_eq		     -alternative operatir for ^=
+
+#HEADER FILES
+
+   #include<files>
+*This makes the compiler aware that other files are required for the complete working of this source code.
+
+List of Header files and their respective functions in C++
+1) <cstdlib>   General purpose library.
+
+Function name      use cases                                                                  return type                  Parameters
+malloc           allocates memory                                                                 void*               1(number of bytes)
+calloc           allocates and zeroes memory                                                      void*               2(no.of obj,size of each obj)
+realloc          expands or shrinks previously allocated memory                                   void*               2(pointer to mem area allocated,new size of array)
+free             deallocates previously allocated memory                                          void                1(pointer to memory to deallocate)   
+atof             converts a byte string to floating point value                                  double               1(string)
+atoll            converts a byte string to integer value                                  int/long/long long          1(string)
+strtoull         converts a byte string to unsigned integer                                  long/long long           3(str ,str_end ,base) 
+strtold          convert a byte string to a float point value                           float/double/lonng double     2(str ,str_end)
+rand             generate pseudo-random numbers                                                    int                0 
+srand            seeds pseudo-random number generation                                             void               1(seed)
+qsort            sorts range of element with unspecified type.                                     void               4(ptr ,count ,size ,comp)
+bsearch          searches an array for an element of unspecified type.                             void*              5(key ,ptr ,count ,size ,comp)
+abs/llabs        completes absolute value of an integer value.	                           int/long/long long         1(int)
+lldiv            computes quotient and remainder of integer division                                obj               2(int,int)
+abort            abnormal program termination without cleaning up.	                           void               0
+exit             normal program termination with cleaning up.                                      void               1(exit_code)
+mblen            returns number of bytes in next multibyte characters.                              int               2(ptr ,int)
+mbtowc           converts a next multilayer character to wide characters.                           int               3(int , ptr , ptr)
+wctomb          converts a next multilayer character to wide characters.                            int               2(wide char , ptr)
+
+2) <bitset>      general utility library
+
+operator&        performs binary logic operations on bitsets.(and)
+operator|        performs binary logic operations on bitsets.(or)                                }obj                  2(lhs ,rhs)
+operator^        performs binary logic operations on bitsets.(xor)
+operator>>       performs stream output of bitsets
+operator<<       performs stream input of bitsets
+
+3) <utility>     general utility library
+
+swap             swaps the value of two objects.						 obj                   2(a ,b)
+exchange         replaces the argument with a new value and returns its previous value.          obj                   2(obj , new_obj)
+forward          forwards a function argument.							 obj                   1(obj) 
+move             obtains an rvalue refrence. 							 obj                   1(obj)
+std::get         access an element of a pair.						     refernce (ptr)            1(obj)
+operator<=>     lexicographically compares the value in pair.					boolean                2(lhs , rhs)
+in_range         checks if an integer value is in the range of a given integer type.            boolean                1(obj)
+
+cmp_equal
+cmp_not_equal
+cmp_less         } compares two integer values without value change caused by conversion.       boolean                2(u , t )
+cmp_greater
+cmp_less_equal
+cmp_greater_equal 
+
+4) <functional>  provudes standard hash functions
+
+bind_front       binds a variable number of arguments,in order,to a function object.            obj                   2(obj , args)
+bind             binds one or more arguments to a function object.                              obj                   2(obj , args)
+ref/cref         creates a std::reference_wrapper with a type deduced from its argument.        obj                   1(ptr to obj)
+invoke           invokes any callable object with given arguments.                              obj                   2(obj , args)
+
+5) <ctime>       C-style time/date utility. 
+
+clock            returns raw processor clock time since the program started.                   int (time)               0
+time             returns the current time of the system since epoch.                           obj                    1(ptr)
+difftime         computes the difference between times.                                        int (time)             2(time_begin , time_end)
+time_spec_get    returns the calender time based on a given time base.                         int                    2(ptr , base)
+
+6) <chrono>      C++ time/date utility
+
+opeartors
++
+-
+*               }implements arithmetic operations with durations as arguments.                 obj                    4(lhs , rhs , d , s)
+/
+%
+
+operators
+==
+<
+>               }compares two durations.                                                       obj                   2(lhs , rhs )
+<=
+>=
+<=>
+
+duration cast    converts a duration to another.                                    time duration(int ,float,etc)   1(duration time)
+floor            converts a duration to another,rounding down.                      time duration(int ,float,etc)   1(duration time)
+ceil             converts a duration to another,rounding up.                        time duration(int ,float,etc)   1(duration time)
+round            converts a duration to another,rounding to nearest,ties to even.   time duration(int ,float,etc)   1(duration time)
+abs              obtain the absolute value of the duration.                         time duration(int ,float,etc)   1(duration time)                  
+
+7) <algorithm>
+
+all_of  
+any_of           } checks for any predicate is true for elements in a range.           boolean                      4(first ,last, policy ,predicate)
+none_of
+
+for_each           applies a function to a range of elements                           obj                          4(first ,last, policy ,obj)
+for_each_n         applies a function to a range of n elements in a sequence           integer                      4(first ,last, policy ,obj)
+count              }returns the number of elements satisfying a criteria.              integer                      4(first ,last, policy ,predicate)
+count_if          
+mismatch           finds first position where two ranges differ.                       obj                          6(first1 ,last1 ,first2 ,last2 ,policy ,binary predicate)  
+find               
+find_if            }finds first element which satisfies specific criteria.             obj                          6(first, last ,policy ,valur,unary predicate,binary predicate)
+find_if          
+find_if_not
+find_end           finds the last sequence of elements in a range.                     obj                          6(first ,last ,s_first ,s_last, ppolicy ,binary predicate) 
+find_first_of      searches for any one of a set of elements.  
+adjacent_find      finds first two adjacent items that are equal.              
+search             searches for a range of elements.
+search_n           searches a range for a number of consecutive copies of an element
+  
+copy               }copies a range of elements to a new location 
+copy_if
+copy_n             copies a range of elements to a new location.
+copy_backward      copies a range of elements in backward order.
+move               moves a range of elements to a new location.
+move_backward      moves a range of elements to a new location in backward location.
+fill               copy-assigns the given value to every element in a range.
+fill_n             copy-assigns the given value to N elements in a range.
+transform          applies a function to a range of elements, storing results in a destination range.
+generate           assigns the results of successive function calls to every element in a range .   
+generate_n         assigns the results of successive function calls to N elements in a range.
+remove            }removes elements satisfying specific criteria.
+remove_if
+remove_copy       }copies a range of elements omitting those that satisfy specific criteria.
+remove_copy_if
+replace           }replaces all values satisfying specific criteria with another value.
+replace_if
+replace_copy      }copies a range, replacing elements satisfying specific criteria with another value.
+replace_copy_if
+swap              swaps the values of two objects.
+swap_ranges       swaps two ranges of elements.
+iter_swap 	  swaps the elements pointed to by two iterators.
+reverse           reverses the order of elements in a range.
+reverse_copy      creates a copy of a range that is reversed.
+rotate            rotates the order of elements in a range.
+rotate_copy       copies and rotate a range of elements.
+shift_left        }shifts elements in a range.
+shift_right   
+shuffle           }randomly re-orders elements in a range.
+random_shuffle
+sample            selects n random elements from a sequence.
+unique            removes consecutive duplicate elements in a range.
+unique_copy       creates a copy of some range of elements that contains no consecutive duplicates.
+
+is_partitioned    determines if the range is partitioned by the given predicate.
+partition         divides a range of elements into two groups.
+partition_copy    copies a range dividing the elements into two groups.
+stable_partition  divides elements into two groups while preserving their relative order.
+partition_point   locates the partition point of a partitioned range.
+
+is_sorted         }checks whether a range is sorted into ascending order.
+is_sorted_until
+sort               sorts a range into ascending order.
+partial_sort       sorts the first N elements of a range.
+partial_sirt_copy  copies and partially sorts a range of elements.
+stable_sort        sorts a range of elements while preserving order between equal elements.
+nth_element        partially sorts the given range, partitioned by the given element.
+
+lower_bound        returns an iterator to the first element not less than the given value.
+upper_bound        returns an iterator to the first element greater than a certain value.
+binary_search      determines if an element exists in a certain range.
+equal_range        returns range of elements matching a specific key.
+
+merge              merges two sorted ranges.
+inplace_merge      merges two ordered ranges in-place.
+
+includes           returns true if one sequence is a subsequence of another .           
+set_differences    computes the difference between two sets.
+set_interactions   computes the intersection of two sets.
+set_symmetric_difference       computes the symmetric difference between two sets.
+set_union          computes the union of two sets.
+
+is_heap            checks if the given range is a max heap.
+is_heap_until      finds the largest subrange that is a max heap.
+make_heap          creates a max heap out of a range of elements.
+push_heap          adds an element to a max heap.
+pop_heap           removes the largest element from a max heap.
+sort_heap          turns a max heap into a range of elements sorted in ascending order.
+
+max                returns the greater of the given values.
+max_element        returns the largest element in a range.
+min                returns the smaller of the given values.
+min_element        returns the smallest element in a range.
+minmax             returns the smaller and larger of two elements.
+minmax_element     returns the smallest and the largest elements in a range.
+clamp              clamps a value between a pair of boundary values.
+
+equal                                determines if two sets of elements are the same.
+lexicographical_compare              returns true if one range is lexicographically less than another.
+lexicographical_compare_three_way    compares two ranges using three-way comparison.
+
+is_permutation        determines if a sequence is a permutation of another sequence.
+next_permutation      generates the next greater lexicographic permutation of a range of elements.
+prev_permutation      generates the next smaller lexicographic permutation of a range of elements.
+
+range::all of the above functions in algorithm
+
+8) <cmath>
+
+abs  
+fabs                }absolute value of a floating point value.
+fabsf
+fabsl
+
+fmod
+fmodf               }remainder of the floating point division operation.
+fmodl
+
+remainder
+remainderf          }signed remainder of the division operation.
+remainderl
+
+remquo
+remquof           }signed remainder as well as the three last bits of the division operation.
+remquol
+
+fma
+fmaf              }fused multiply-add operation.
+fmal
+
+fmax
+fmaxf             }larger of two floating point values.
+fmaxl
+
+fmin
+fminf             }smaller of two floating point values.
+fminl
+
+fdim
+fdimf             }positive difference of two floating point values.
+fdiml
+
+nan
+nanf              }not-a-number (NaN).
+nanl
+
+lerp              linear interpolation function.
+
+exp expf expl            returns e raised to the given power.
+exp2 exp2f exp2l         returns 2 raised to the given power.
+expm1 expm1f expm1l      returns e raised to the given power, minus one.
+log   logf   logl        computes natural (base e) logarithm.
+log10 log10f log10l      computes common (base 10) logarithm.
+log2  log2f  log2l       base 2 logarithm of the given number.
+log1p log1pf log1pl      natural logarithm (to base e) of 1 plus the given number.
+pow   powf   powl        raises a number to the given power.
+sqrt  sqrtf  sqrtl       computes square root.
+cbrt  cbrtf  cbrtl       computes cubic root.
+hypot hypotf hypotl      computes square root of the sum of the squares of two or three given numbers.
+sin   sinf   sinl        computes sine.
+cos   cosf   cosl        computes cosine.
+tan   tanf   tanl        computes tangent.
+asin  asinf  asinl       computes arc sine.
+acos  acosf  acosl       computes arc cosine.
+atan  atanf  atanl       computes arc tangent.
+sinh  sinhf  sinhl       computes hyperbolic sine.
+cosh  coshf  coshl       computes hyperbolic cosine.
+tanh  tanhf  tanhl       computes hyperbolic tangent.
+asinh asinhf asinhl      computes the inverse hyperbolic sine.
+acosh acochf acoshl      computes the inverse hyperbolic cosine.
+atanh atanhf atanhl      computes the inverse hyperbolic tangent.
+erf   erff   erfl        error function.
+erfc  erfcf  erfcl       complementary error function.
+tgamma tgammaf tgammal   gamma function.
+lgamma lgammaf lgammal   natural logarithm of the gamma function.
+ceil   ceilf   ceill     nearest integer not less than the given value.
+floor  floorf  floorl	 nearest integer not greater than the given value.
+trunc  truncf  truncl	 nearest integer not greater in magnitude than the given value.
+round  roundf  roundl	 
+lround lroundf lroundl   } nearest integer, rounding away from zero in halfway cases..
+llround llroundf llroundl
+nearbyint nearbyintf nearbyintl    nearest integer using current rounding mode.
+
+9) <complex>
+
+operator+ 
+operator-             }applies unary operators to complex numbers.
+opeartor*              performs complex number arithmetics on two complex values or a complex and a scalar.
+operator/
+operator==
+operator!=            }compares two complex numbers or a complex and a scalar.
+operator>>            
+opeartor<<            }serializes and deserializes a complex number.
+real                   returns the real component.
+imag		       returns the imaginary component.
+abs	 	       returns the magnitude of a complex number.
+arg                    returns the phase angle.   
+norm		       returns the squared magnitude.
+conj		       returns the complex conjugate.
+proj                   returns the projection onto the Riemann sphere.
+polar                  constructs a complex number from magnitude and phase angle.
+exp		       complex base e exponential.
+log		       complex natural logarithm with the branch cuts along the negative real axis.
+log10		       complex common logarithm with the branch cuts along the negative real axis.
+pow		       complex power, one or both arguments may be a complex number.
+sqrt                   complex square root in the range of the right half-plane.
+sin   cos   tan        computes sine, cosine and tangent respectively of a complex number. 
+asin  acos  atan       computes arc sine, arc cosine and arc tangent respectively of a complex number.
+sinh  cosh  tanh       computes hyperbolic sine, hyperbolic cosine and hyperbolic tangent respectively of a complex number.
+asinh acosh atanh      computes area hyperbolic sine, area hyperbolic cosine and area hyperbolic tangent respectively of a complex number.
+operator""if
+operator""i            } A std::complex literal representing pure imaginary number.
+operator""il
+
+10) <random> pseudo-random number generator library
+
+generate_canonical      evenly distributes real values of given precision across [0, 1).
+
+11) <numeric>  
+
+iota                    fills a range with successive increments of the starting value.
+accumulate		sums up a range of elements.
+reduce                  similar to std::accumulate, except out of order.
+transform_reduce        applies an invocable, then reduces out of order.
+inner_product		computes the inner product of two ranges of elements.
+adjacent_differnce      computes the differences between adjacent elements in a range.
+partial_sum             computes the partial sum of a range of elements.
+inclusive_scan          similar to std::partial_sum, includes the ith input element in the ith sum.
+exclusive_scan          similar to std::partial_sum, excludes the ith input element from the ith sum.
+transform_inclusive_scan  	 applies an invocable, then calculates inclusive scan.
+transform_exclusive_scan   	 applies an invocable, then calculates exclusive scan
+gcd		 		constexpr function template returning the greatest common divisor of two integers.
+lcm                             constexpr function template returning the least common multiple of two integers.
+midpoint                        midpoint between two numbers or pointers.
+
