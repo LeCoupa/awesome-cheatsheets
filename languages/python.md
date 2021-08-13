@@ -339,3 +339,25 @@ function_name()
 * We need not to specify the return type of the function.
 * Functions by default return `None` 
 * We can return any datatype.
+
+
+## Some Important 3rd Party Modules
+
+### 1. numpy 
+For manipulating numerical data and effectively deals with arrays and matrices.
+### 2. requests
+Deals with HTTP response and requests.
+### 3. lxml
+Used to parse web page in a better way.
+### 4. beautifulsoup
+Web-scraping module only for static pages and user-friendly
+### 5. selenium
+Web-scraping module also helps to automate web application and works in dynamic pages too. 
+### 6. scrapy
+Boss of web-scraping modules, full fledged and can do all the heavy lifting for you.
+### 7. pipreqs
+To create requirements.txt file for the current project
+### 8. colorama
+To change the colors in the terminal
+### 9. figlet
+To create a ASCII art text
