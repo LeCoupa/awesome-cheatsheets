@@ -339,3 +339,22 @@ function_name()
 * We need not to specify the return type of the function.
 * Functions by default return `None` 
 * We can return any datatype.
+
+### Function arguments
+
+- You can pass arguments in a function while calling to use inside it.
+- Like if you want to add two numbers.
+
+```
+def sum(a , b):
+    return a + b 
+```
+- In this a and b are passed and their sum is returned
+
+-You can also assign the return value of this function to a variable
+
+```
+sum_of_two_numbers = sum(5,8) #calling the function and value assigned
+print(sum_of_two_numbers)
+```
+-This will print sum of 5 and 8
