@@ -196,6 +196,24 @@ int c = a + b;
      System.out.println(i);
   }
 ```
+
+>Enhanced for loop/for-each 
+```java
+for(dataType item : array) {
+    ...
+}
+
+```
+**Example:**
+```java
+    // array of numbers
+    int[] numbers = {100, 200, 300, 400};
+    
+    // for each loop 
+    for (int number: numbers) {
+      System.out.println(number);
+```
+
 > WHILE LOOP STATEMENT
 ```java
     while(condition){  //till condition will be true.

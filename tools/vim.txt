@@ -29,6 +29,7 @@ $                   end of line
 <enter>             move line downwards, on the first non blank character
 gg                  go to first line
 G                   go to last line
+ngg                 go to line n
 nG                  go To line n
 :n                  go To line n
 )                   move the cursor forward to the next sentence.
