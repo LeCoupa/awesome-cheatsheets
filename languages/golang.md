@@ -641,7 +641,7 @@ func TestSum(t *testing.T) {
     x, y := 2, 4
     expected := 2 + 4
 
-    if !reflect.DeepEqual(sum(x, y), expected) {
+    if !reflect.DeepEqual(Sum(x, y), expected) {
         t.Fatalf("Function Sum not working as expected")
     }
 }
