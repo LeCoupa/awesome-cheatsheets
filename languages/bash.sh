@@ -40,6 +40,7 @@ ALT+L   # uncapitalizes every character from the current cursor position to the 
 ALT+C   # capitalizes the letter under the cursor. The cursor then moves to the end of the word.
 ALT+R   # reverts any changes to a command you’ve pulled from your history if you’ve edited it.
 ALT+?   # list possible completions to what is typed
+ALT+*   # inserts all possible completions to what is typed
 ALT+^   # expand line to most recent match from history
 
 CTRL+X then (   # start recording a keyboard macro
