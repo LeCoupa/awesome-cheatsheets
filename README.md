@@ -77,6 +77,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Ember.js](frontend/ember.js)
 - [Angular (2+)](frontend/angular.js)
 - [AngularJS](frontend/angularjs.js)
+- [Bootstrap](frontend/bootstrap)
   </details>
 
 ### 🗃️ Databases
