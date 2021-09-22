@@ -1,0 +1,4316 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Bootstrap 4 Cheat Sheet</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+
+    <!--  Social tags      -->
+    <meta name="keywords" content="bootstrap, bootstrap 4, bootstrap 4 cheat sheet, creative tim, creative-tim, html css template, web template, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit">
+    <meta name="description" content="Bootstrap 4 Cheat Sheet is an online tool that helps you easily find the differences between Bootstrap 3 and Bootstrap 4. Beautiful and easy-to-use, this should be your go-to page if you are looking to upgrade your Bootstrap 3 project or start a new Bootstrap 4 project.">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Bootstrap 4 Cheat Sheet by Creative Tim">
+    <meta itemprop="description" content="Bootstrap 4 Cheat Sheet is an online tool that helps you easily find the differences between Bootstrap 3 and Bootstrap 4. Beautiful and easy-to-use, this should be your go-to page if you are looking to upgrade your Bootstrap 3 project or start a new Bootstrap 4 project.">
+    <meta itemprop="image" content="https://s3.amazonaws.com/creativetimtest/bs4-cheatsheet.png">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@CreativeTim">
+    <meta name="twitter:title" content="Bootstrap 4 Cheat Sheet by Creative Tim">
+    <meta name="twitter:description" content="Bootstrap 4 Cheat Sheet is an online tool that helps you easily find the differences between Bootstrap 3 and Bootstrap 4. Beautiful and easy-to-use, this should be your go-to page if you are looking to upgrade your Bootstrap 3 project or start a new Bootstrap 4 project.">
+    <meta name="twitter:creator" content="@CreativeTim">
+    <meta name="twitter:image" content="https://s3.amazonaws.com/creativetimtest/bs4-cheatsheet.png">
+    <meta name="twitter:data1" content="Bootstrap 4 Cheat Sheet by Creative Tim">
+    <meta name="twitter:label1" content="Product Type">
+    <meta name="twitter:data2" content="Free">
+    <meta name="twitter:label2" content="Price">
+    <!-- Open Graph data -->
+    <meta property="fb:app_id" content="655968634437471">
+    <meta property="og:title" content="Bootstrap 4 Cheat Sheet by Creative Tim" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.creative-tim.com/cheatsheet/bootstrap4" />
+    <meta property="og:image" content="https://s3.amazonaws.com/creativetimtest/bs4-cheatsheet.png" />
+    <meta property="og:description" content="Bootstrap 4 Cheat Sheet is an online tool that helps you easily find the differences between Bootstrap 3 and Bootstrap 4. Beautiful and easy-to-use, this should be your go-to page if you are looking to upgrade your Bootstrap 3 project or start a new Bootstrap 4 project." />
+    <meta property="og:site_name" content="CreativeTim" />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/material-kit.css" rel="stylesheet" />
+	<link href="./assets/css/bs4-cheatsheet.css" rel="stylesheet" />
+
+	<!-- Core Js -->
+	<script src="./assets/js/core/jquery.3.2.0.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-transparent">
+    	<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   				<span class="navbar-toggler-icon"></span>
+ 			</button>
+
+    	    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul  class="navbar-nav">
+					<li class="nav-item text-center">
+						<a class="nav-link" rel="tooltip" title="Bootstrap 4 CheatSheet" data-placement="bottom" href="https://github.com/creativetimofficial/bootstrap4-cheatsheet" target="_blank">
+							<i class="fa fa-github"></i>
+							<p>Github</p>
+						</a>
+					</li>
+                </ul>
+    	    </div>
+    	</div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="main">
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-md-12">
+                        <div class="brand">
+							<div class="card card-raised card-form-horizontal">
+								<div class="card-block">
+									<form method="" action="">
+										<div class="row">
+											<div class="col-md-4">
+												 <div class="form-group">
+						        	        		<input type="text" value="" id="filter" placeholder="Search.." class="form-control">
+						                		</div>
+											</div>
+											<div class="col-md-4">
+												<a href="javascript:void(0)" class="btn btn-default btn-block" id="expand-all">Expand All</a>
+											</div>
+											<div class="col-md-4">
+												<a href="javascript:void(0)" class="btn btn-default btn-block" id="new">Highlight new in v4</a>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-3" id="col1">
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Alerts">
+						    <h2 class="mb-0">
+						      	<a class="collapsed" data-toggle="collapse" data-target="#collapseAlerts" href="#collapseAlerts" aria-expanded="false" aria-controls="collapseAlerts">
+									<div class="jcorgFilterTextChild">Alerts</div>
+						        	<i class="material-icons">keyboard_arrow_down</i>
+						      </a>
+                          </h2>
+						  </div>
+						  <div id="collapseAlerts" class="collapse" role="tabpanel" aria-labelledby="Alerts">
+						    <div class="card-block">
+						        <ul>
+						          	<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">alert-success</div>
+											</a>
+<div class="html-code"><div class="alert alert-success" role="alert">
+	<strong>Well done!</strong> You successfully read this important alert message.
+</div></div>
+									</li>
+						          	<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">alert-info</div>
+											</a>
+<div class="html-code"><div class="alert alert-info" role="alert">
+	<strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div></div>
+									</li>
+						          	<li>
+									  	<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">alert-warning</div>
+											</a>
+<div class="html-code"><div class="alert alert-warning" role="alert">
+	<strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div></div>
+									</li>
+						          	<li>
+									  	<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">alert-danger</div>
+											</a>
+<div class="html-code"><div class="alert alert-danger" role="alert">
+	<strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div></div>
+								  	</li>
+						          <li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">alert-link</div>
+											</a>
+<div class="html-code"><div class="alert alert-danger" role="alert">
+	<strong>Oh snap!</strong>
+	<a href="#" class="alert-link">Change a few things up</a>
+  	and try submitting again.
+</div></div>
+								  </li>
+
+						          <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">alert-dismissible</div>
+									  </a>
+<div class="html-code"><div class="alert alert-warning alert-dismissible fade show" role="alert">
+  	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    	<span aria-hidden="true">&times;</span>
+  	</button>
+  	<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+</div></div>
+
+								  </li>
+						          <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">alert-heading</div>
+									  </a>
+<div class="html-code"><div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  You successfully read this important alert message.
+</div></div>
+								  </li>
+						        </ul>
+						    </div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Badge">
+						    <h2 class="mb-0">
+						      <a class="collapsed" data-toggle="collapse" data-target="#collapseBadge" href="#collapseBadge" aria-expanded="false" aria-controls="collapseBadge">
+						        <div class="jcorgFilterTextChild">Badge</div>
+						        <i class="material-icons">keyboard_arrow_down</i>
+						      </a>
+                          </h2>
+						  </div>
+						  <div id="collapseBadge" class="collapse" role="tabpanel" aria-labelledby="Badge">
+						    <div class="card-block">
+						        <ul>
+						          <li><a href="javascript:void(0)">
+									<div class="jcorgFilterTextChild">badge-default</div>
+									   </a>
+<div class="html-code"><h1>Example heading <span class="badge badge-default">New</span></h1>
+<h2>Example heading <span class="badge badge-default">New</span></h2>
+<h3>Example heading <span class="badge badge-default">New</span></h3>
+<h4>Example heading <span class="badge badge-default">New</span></h4>
+<h5>Example heading <span class="badge badge-default">New</span></h5>
+<h6>Example heading <span class="badge badge-default">New</span></h6></div>
+								  </li>
+						          <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">badge-pill</div>
+									  </a>
+<div class="html-code"><span class="badge badge-pill badge-default">Default</span></div>
+								  </li>
+						          <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">badge-primary</div>
+										  </a>
+<div class="html-code"><span class="badge badge-primary">Primary</span></div>
+								  </li>
+						          <li><a href="javascript:void(0)">
+									<div class="jcorgFilterTextChild">badge-success</div>
+								</a>
+<div class="html-code"><span class="badge badge-success">Success</span></div>
+								  </li>
+						          <li><a href="javascript:void(0)">
+									  <div class="jcorgFilterTextChild">badge-info</div>
+								  </a>
+<div class="html-code"><span class="badge badge-info">Info</span></div>
+								  </li>
+						          <li><a href="javascript:void(0)">
+									  <div class="jcorgFilterTextChild">badge-warning</div>
+								  </a>
+<div class="html-code"><span class="badge badge-warning">Warning</span></div>
+								  </li>
+						          <li><a href="javascript:void(0)">
+									  <div class="jcorgFilterTextChild">badge-danger</div>
+								  </a>
+<div class="html-code"><span class="badge badge-danger">Danger</span></div>
+								  </li>
+						        </ul>
+						    </div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Breadcrumb">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseBreadcrumb" href="#collapseBreadcrumb" aria-expanded="false" aria-controls="collapseBreadcrumb">
+							    <div class="jcorgFilterTextChild">Breadcrumb</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseBreadcrumb" class="collapse" role="tabpanel" aria-labelledby="Badge">
+							<div class="card-block">
+								<ul>
+								  <li><a href="javascript:void(0)">
+								  <div class="jcorgFilterTextChild">breadcrumb</div>
+							  </a>
+<div class="html-code"><ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">	Home</a></li>
+  <li class="breadcrumb-item active">Library</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item"><a href="#">Library</a></li>
+  <li class="breadcrumb-item active">Data</li>
+</ol></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Buttons">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtons" href="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
+							<div class="jcorgFilterTextChild">Buttons</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseButtons" class="collapse" role="tabpanel" aria-labelledby="Buttons">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-primary</div></a>
+<div class="html-code"><button type="button" class="btn btn-primary">Primary</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-secondary</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-secondary">Secondary</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-success</div></a>
+<div class="html-code"><button type="button" class="btn btn-success">Success</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-info</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-info">Info</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-warning</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-warning">Warning</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-danger</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-danger">Danger</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-link</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-link">Link</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-primary</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-primary">Primary</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-secondary</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-secondary">Secondary</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-sucess</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-success">Success</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-info</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-info">Info</button></div>
+								  </li>
+							   	  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-warning</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-warning">Warning</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-outline-danger</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-outline-danger">Danger</button></div>
+								  </li>
+				   				</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="ButtonGroups">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtonGroups" href="#collapseButtonGroups" aria-expanded="false" aria-controls="collapseButtonGroups">
+								<div class="jcorgFilterTextChild">Buttons Group</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseButtonGroups" class="collapse" role="tabpanel" aria-labelledby="ButtonGroups">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-group</div>
+									  </a>
+<div class="html-code"><div class="btn-group" role="group" aria-label="Basic example">
+<button type="button" class="btn btn-secondary">Left</button>
+<button type="button" class="btn btn-secondary">Middle</button>
+<button type="button" class="btn btn-secondary">Right</button></div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-group-lg</div>
+									  </a>
+<div class="html-code"><div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+	<button type="button" class="btn btn-secondary">Left</button>
+	<button type="button" class="btn btn-secondary">Middle</button>
+	<button type="button" class="btn btn-secondary">Right</button>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-group-sm</div>
+									  </a>
+<div class="html-code"><div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-group-vertical</div>
+									  </a>
+<div class="html-code"><div class="btn-group-vertical" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary">Left</button>
+  <button type="button" class="btn btn-secondary">Middle</button>
+  <button type="button" class="btn btn-secondary">Right</button>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-group (nested)</div>
+									  </a>
+<div class="html-code"><div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+  <button type="button" class="btn btn-secondary">1</button>
+  <button type="button" class="btn btn-secondary">2</button>
+
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button"
+            class="btn btn-secondary dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="#link">Dropdown link</a>
+      <a class="dropdown-item" href="#link">Dropdown link</a>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-toolbar</div>
+									  </a>
+<div class="html-code"><div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group" aria-label="First group">
+    <button type="button" class="btn btn-secondary">1</button>
+    <button type="button" class="btn btn-secondary">2</button>
+    <button type="button" class="btn btn-secondary">3</button>
+  </div>
+  <div class="btn-group" role="group" aria-label="Second group">
+    <button type="button" class="btn btn-secondary">5</button>
+    <button type="button" class="btn btn-secondary">6</button>
+  </div>
+  <div class="btn-group" role="group" aria-label="Third group">
+    <button type="button" class="btn btn-secondary">8</button>
+  </div>
+</div></div>
+								  </li>
+				   				</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="ButtonModifiers">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseButtonModifiers" href="#collapseButtonModifiers" aria-expanded="false" aria-controls="collapseButtonModifiers">
+								<div class="jcorgFilterTextChild">Button Modifiers</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseButtonModifiers" class="collapse" role="tabpanel" aria-labelledby="ButtonModifiers">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-lg</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-primary btn-lg">Large button</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-sm</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-primary btn-sm">Small button</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">btn-block</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">active button</div>
+									  </a>
+<div class="html-code"><a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">disabled button</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">data-toggle</div>
+									  </a>
+<div class="html-code"><button type="button" class="btn btn-primary"
+        data-toggle="button" aria-pressed="false">
+  Single toggle
+</button></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">checkbox as button</div>
+									  </a>
+<div class="html-code"><div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="checkbox" checked> Checkbox 1 (pre-checked)
+  </label>
+  <label class="btn btn-primary">
+    <input type="checkbox"> Checkbox 2
+  </label>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">radio as button</div>
+									  </a>
+<div class="html-code"><div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="options" id="option1" checked> Radio 1 (preselected)
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option2"> Radio 2
+  </label>
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Cards">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseCards" href="#collapseCards" aria-expanded="false" aria-controls="collapseCards">
+								<div class="jcorgFilterTextChild">Cards</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseCards" class="collapse" role="tabpanel" aria-labelledby="Cards">
+							<div class="card-block">
+								<ul>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card</div>
+									  </a>
+<div class="html-code"><div class="card">
+	  <img class="card-img-top" src="assets/img/318x100.svg" alt="Card image cap">
+	  <div class="card-block">
+	    <h4 class="card-title">Card title</h4>
+	    <p class="card-text">
+	      Some quick example text to build on the card title
+	      and make up the bulk of the card's content.
+	    </p>
+	    <a href="#" class="btn btn-primary">Go somewhere</a>
+	  </div>
+	</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-block</div>
+									  </a>
+<div class="html-code"><div class="card">
+	  <div class="card-block">
+	    This is some text within a card block.
+	  </div>
+	</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-title</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-subtitle</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-text</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-link</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-img-top</div>
+										  </a>
+<div class="html-code"><div class="card">
+  <img class="card-img-top" src="assets/img/318x100.svg" alt="Card image cap">
+  <div class="card-block"> Some more card content </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-img-bottom</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block"> Some more card content </div>
+  <img class="card-img-bottom" src="assets/img/318x100.svg" alt="Card image cap">
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-img-overlay</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <img class="card-img" src="assets/img/318x100.svg" alt="Card image">
+  <div class="card-img-overlay">
+    <p class="card-text">I'm text that has a background image!</p>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">middle image</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <p class="card-text">This image is in the middle</p>
+  </div>
+  <img src="assets/img/318x100.svg" alt="Card image">
+  <div class="card-block">
+    <p class="card-text">of a card.</p>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-header</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+									  <div class="jcorgFilterTextChild">h*.cardheader</div>
+								  </a>
+<div class="html-code"><div class="card">
+  <h3 class="card-header">Featured</h3>
+  <div class="card-block">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-footer</div>
+									  </a>
+<div class="html-code"><div class="card">
+  <div class="card-block">
+    <p class="card-text">Some more card content</p>
+  </div>
+  <div class="card-footer">
+    2 days ago
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-inverse</div>
+									  </a>
+<div class="html-code"><div class="card card-inverse">
+  <img class="card-img" src="assets/img/318x200.svg" alt="Card image">
+  <div class="card-img-overlay">
+    <p class="card-text">I'm INVERTED text that has a background image!</p>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-primary</div>
+									  </a>
+<div class="html-code"><div class="card card-inverse card-primary text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									 <a href="javascript:void(0)">
+										 <div class="jcorgFilterTextChild">card-info</div>
+									 </a>
+<div class="html-code"><div class="card card-inverse card-info text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-success</div>
+									  </a>
+<div class="html-code"><div class="card card-inverse card-success text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-warning</div>
+									  </a>
+<div class="html-code"><div class="card card-inverse card-warning text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-danger</div>
+									  </a>
+<div class="html-code"><div class="card card-inverse card-danger text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-primary</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-primary text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-secondary</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-secondary text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-success</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-success text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-info</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-info text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-warning</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-warning text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-outline-danger</div>
+									  </a>
+<div class="html-code"><div class="card card-outline-danger text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-group</div>
+									  </a>
+<div class="html-code"><div class="card-group">
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-deck</div>
+									  </a>
+<div class="html-code"><div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">card-columns</div>
+									  </a>
+<div class="html-code"><div class="card-columns">
+  <div class="card">
+    <div class="card-block">
+      <!-- Card content -->
+    </div>
+  </div>
+  <div class="card p-3">
+    <!-- Card content -->
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <!-- Card content -->
+    </div>
+  </div>
+  <div class="card card-inverse card-primary p-3 text-center">
+      <!-- Card content -->
+  </div>
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+                    </div>
+
+					<div class="col-md-3" id="col2">
+						<div class="card card-collapse">
+                          <div class="card-header" role="tab" id="Carousel">
+                            <h2 class="mb-0">
+                              <a data-toggle="collapse" data-target="#collapseCarousel" href="#collapseCarousel" aria-expanded="true" aria-controls="collapseCarousel">
+                                  <div class="jcorgFilterTextChild">Carousel</div>
+                                  <i class="material-icons">keyboard_arrow_down</i>
+                              </a>
+                          </h2>
+                          </div>
+
+                          <div id="collapseCarousel" class="collapse" role="tabpanel" aria-labelledby="Carousel">
+                            <div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">Carousel slide</div>
+										</a>
+<div class="html-code"><div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" src="#" data-src="holder.js/900x400?theme=social" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="#" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a></div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">Carousel-indicators</div>
+										</a>
+<div class="html-code"><div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+<div class="carousel-item active">
+  <img class="d-block img-fluid" src="#" data-src="holder.js/900x400?theme=social" alt="First slide">
+</div>
+<div class="carousel-item">
+  <img class="d-block img-fluid" src="#" data-src="holder.js/900x400?theme=industrial" alt="Second slide">
+</div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a></div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">Carousel-caption</div>
+										</a>
+<div class="html-code"><div class="bd-example">
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+</ol>
+<div class="carousel-inner" role="listbox">
+  <div class="carousel-item active">
+    <img class="d-block img-fluid" data-src="holder.js/900x300?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <img class="d-block img-fluid" data-src="holder.js/900x300?auto=yes&bg=666&fg=444&text=Second slide" alt="Second slide">
+    <div class="carousel-caption d-none d-md-block">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a></div></div></div>
+									</li>
+								</ul>
+                            </div>
+                          </div>
+					  </div>
+
+						<div class="card card-collapse">
+                          <div class="card-header" role="tab" id="Collapse">
+                            <h2 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#collapseCollapse" href="#collapseCollapse" aria-expanded="false" aria-controls="collapseCollapse">
+                                <div class="jcorgFilterTextChild">Collapse</div>
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </a>
+                          </h2>
+                          </div>
+                          <div id="collapseCollapse" class="collapse" role="tabpanel" aria-labelledby="Collapse">
+                            <div class="card-block">
+                              	<ul>
+                              	   	<li>
+										<a href="javascript:void(0)" data-html="#collapse-html">
+											<div class="jcorgFilterTextChild">Collapse</div>
+										</a>
+									</li>
+								   	<li>
+										<a href="javascript:void(0)" data-html="#accordion-html">
+											<div class="jcorgFilterTextChild">Accordion</div>
+										</a>
+									</li>
+                              	</ul>
+                            </div>
+                          </div>
+                        </div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Dropdowns">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseDropdowns" href="#collapseDropdowns" aria-expanded="false" aria-controls="collapseDropdowns">
+								<div class="jcorgFilterTextChild">Dropdowns</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseDropdowns" class="collapse" role="tabpanel" aria-labelledby="Dropdowns">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown</div>
+										</a>
+<div class="html-code"><div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown (split)</div>
+											</a>
+<div class="html-code"><div class="btn-group">
+<button type="button" class="btn btn-secondary">Dropdown</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropup</div>
+										</a>
+<div class="html-code"><div class="btn-group dropup">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropup
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropup (split)</div>
+										</a>
+<div class="html-code"><div class="btn-group dropup">
+  <button type="button" class="btn btn-secondary">Dropup</button>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown show</div>
+										</a>
+<div class="html-code"><div class="dropdown show">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown-header</div>
+										</a>
+<div class="html-code"><div class="dropdown open">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu3" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu">
+    <h6 class="dropdown-header">Dropdown header</h6>
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown-divider</div>
+										</a>
+<div class="html-code"><div class="dropdown open">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Separated link</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown-item disabled</div>
+										</a>
+<div class="html-code"><div class="dropdown open">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu5" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item disabled" href="#">Disabled action</a>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown-menu-right</div>
+										</a>
+<div class="html-code"><div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    This dropdown's menu is right-aligned
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Forms">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseForms" href="#collapseForms" aria-expanded="false" aria-controls="collapseForms">
+								<div class="jcorgFilterTextChild">Forms</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseForms" class="collapse" role="tabpanel" aria-labelledby="Forms">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-group</div>
+										</a>
+<div class="html-code"><form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+  </div>
+</form></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-inline</div>
+										</a>
+<div class="html-code"><form class="form-inline">
+  <label class="sr-only" for="inlineFormInput">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputGroup">Username</label>
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <div class="input-group-addon">@</div>
+    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+  </div>
+
+  <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+    <label class="form-check-label">
+      <input class="form-check-input" type="checkbox"> Remember me
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form using the grid</div>
+										</a>
+<div class="html-code"><div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 form-control-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 form-control-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      </div>
+    </div>
+  </form>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-control</div>
+										</a>
+<div class="html-code"><input type="text" class="form-control" id="extampleField" placeholder="Type here"></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-control-file</div>
+										</a>
+<div class="html-code"><input type="file" class="form-control-file" id="exampleInputFile"></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-check</div>
+										</a>
+<div class="html-code"><div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" value="">
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-check-inline</div>
+										</a>
+<div class="html-code"><div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+  </label>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">radio</div>
+										</a>
+<div class="html-code"><div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios"
+           id="exampleRadios1" value="option1" checked>
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="exampleRadios"
+           id="exampleRadios3" value="option2">
+    Option two can be something else and selecting it will deselect option one
+  </label>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">checkbox</div>
+										</a>
+<div class="html-code"><div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" value="">
+    Option one is this and that&mdash;be sure to include why it's great
+  </label>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">disabled items</div>
+										</a>
+<div class="html-code"><form>
+  <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Disabled input</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">Disabled select menu</label>
+      <select id="disabledSelect" class="form-control">
+        <option>Disabled select</option>
+      </select>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="radio" name="exampleRadios"
+        id="exampleRadios4" value="option3" disabled>
+        Option three is disabled
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" value="" disabled>
+        Option two is disabled
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">readonly</div>
+										</a>
+<div class="html-code"><input class="form-control" type="text" placeholder="Readonly input here…" readonly></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="FormModifiers">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormModifiers" href="#collapseFormModifiers" aria-expanded="false" aria-controls="collapseFormModifiers">
+								<div class="jcorgFilterTextChild">Form Modifiers</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseFormModifiers" class="collapse" role="tabpanel" aria-labelledby="FormModifiers">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-control-lg</div>
+										</a>
+<div class="html-code"><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+</div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">form-control-sm</div>
+										</a>
+<div class="html-code"><input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+</div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">has-success</div>
+										</a>
+<div class="html-code"><div class="form-group has-success">
+  <label class="form-control-label" for="inputSuccess1">Input with success</label>
+  <input type="text" class="form-control form-control-success" id="inputSuccess1">
+</div>
+<div class="form-check has-success">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" id="checkboxSuccess" value="option1">
+    Checkbox with success
+  </label>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">has-warning</div>
+										</a>
+<div class="html-code"><div class="form-group has-warning">
+  <label class="form-control-label" for="inputWarning1">Input with warning</label>
+  <input type="text" class="form-control form-control-warning" id="inputWarning1">
+</div>
+<div class="form-check has-warning">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" id="checkboxWarning" value="option1">
+    Checkbox with warning
+  </label>
+</div></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">has-danger</div>
+										</a>
+<div class="html-code"><div class="form-group has-danger">
+  <label class="form-control-label" for="inputDanger1">Input with danger</label>
+  <input type="text" class="form-control form-control-danger" id="inputDanger1">
+</div>
+<div class="form-check has-danger">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" id="checkboxDanger" value="option1">
+    Checkbox with danger
+  </label>
+</div></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="FormInputGroups">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseFormInputGroups" href="#collapseFormInputGroups" aria-expanded="false" aria-controls="collapseFormInputGroups">
+								<div class="jcorgFilterTextChild">Form Input Groups</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseFormInputGroups" class="collapse" role="tabpanel" aria-labelledby="FormInputGroups">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">input-group</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <span class="input-group-addon">Left addon</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-addon">Right addon</span>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">input-group-lg</div>
+										</a>
+<div class="html-code"><div class="input-group input-group-lg">
+  <span class="input-group-addon" id="sizing-addon1">Left addon</span>
+  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">multiple addons</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <span class="input-group-addon">$</span>
+  <span class="input-group-addon">0.00</span>
+  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">checkbox</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <span class="input-group-addon">
+    <input type="checkbox" aria-label="Checkbox for following text input">
+  </span>
+  <input type="text" class="form-control" aria-label="Text input with checkbox">
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">radio</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <span class="input-group-addon">
+    <input type="radio" aria-label="Radio button for following text input">
+  </span>
+  <input type="text" class="form-control" aria-label="Text input with radio button">
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">input-group-btn</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-danger" type="button">Hate it</button>
+  </span>
+  <input type="text" class="form-control" placeholder="Product name">
+  <span class="input-group-btn">
+    <button class="btn btn-success" type="button">Love it</button>
+  </span>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">dropdown</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <div class="input-group-btn">
+    <button type="button" class="btn btn-secondary dropdown-toggle"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Action
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">segmented buttons</div>
+										</a>
+<div class="html-code"><div class="input-group">
+  <div class="input-group-btn">
+    <button type="button" class="btn btn-secondary">Action</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+</div></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="CustomForms">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseCustomForms" href="#collapseCustomForms" aria-expanded="false" aria-controls="collapseCustomForms">
+								<div class="jcorgFilterTextChild">Custom Forms</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseCustomForms" class="collapse" role="tabpanel" aria-labelledby="CustomForms">
+							<div class="card-block">
+								<ul>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">custom-checkbox</div>
+										</a>
+<div class="html-code"><label class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Check this custom checkbox</span>
+</label></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">custom-radio</div>
+										</a>
+<div class="html-code"><label class="custom-control custom-radio">
+  <input id="radio1" name="radio" type="radio" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Toggle this custom radio</span>
+</label>
+<label class="custom-control custom-radio">
+  <input id="radio2" name="radio" type="radio" class="custom-control-input">
+  <span class="custom-control-indicator"></span>
+  <span class="custom-control-description">Or toggle this other custom radio</span>
+</label><div class="custom-controls-stacked">
+  <label class="custom-control custom-radio">
+    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Toggle this custom radio</span>
+  </label>
+  <label class="custom-control custom-radio">
+    <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Or toggle this other custom radio</span>
+  </label>
+</div></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">custom-controls-stacked</div>
+										</a>
+<div class="html-code"><div class="custom-controls-stacked">
+  <label class="custom-control custom-radio">
+    <input id="radioStacked1" name="radio-stacked" type="radio" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Toggle this custom radio</span>
+  </label>
+  <label class="custom-control custom-radio">
+    <input id="radioStacked2" name="radio-stacked" type="radio" class="custom-control-input">
+    <span class="custom-control-indicator"></span>
+    <span class="custom-control-description">Or toggle this other custom radio</span>
+  </label>
+</div></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">custom-select</div>
+										</a>
+<div class="html-code"><select class="custom-select">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">custom-file</div>
+										</a>
+<div class="html-code"><label class="custom-file">
+  <input type="file" id="file" class="custom-file-input">
+  <span class="custom-file-control"></span>
+</label></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Grid">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseGrid" href="#collapseGrid" aria-expanded="false" aria-controls="collapseGrid">
+								<div class="jcorgFilterTextChild">Grid</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseGrid" class="collapse" role="tabpanel" aria-labelledby="Grid">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">container</div>
+										</a>
+<div class="html-code"><div class="container">
+  <!-- Content here -->
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">container-fluid</div>
+										</a>
+<div class="html-code"><div class="container-fluid">
+  <!-- A fluid container that uses the full witdh -->
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">row</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+  <!-- col- elements here -->
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col < 576px</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+    <div class="col-2">
+      <!-- Content -->
+    </div>
+    <div class="col-2">
+      <!-- Content -->
+    </div>
+    <div class="col-8">
+      <!-- Content -->
+    </div>
+  </div>
+</div></div>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col md > 768px </div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <!-- Content -->
+    </div>
+    <div class="col-md-2">
+      <!-- Content -->
+    </div>
+    <div class="col-md-8">
+      <!-- Content -->
+    </div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col - lg 992px</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <!-- Content -->
+    </div>
+    <div class="col-lg-2">
+      <!-- Content -->
+    </div>
+    <div class="col-lg-8">
+      <!-- Content -->
+    </div>
+  </div>
+</div></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col - xl - 1200px</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+    <div class="col-xl-2">
+      <!-- Content -->
+    </div>
+    <div class="col-xl-2">
+      <!-- Content -->
+    </div>
+    <div class="col-xl-8">
+      <!-- Content -->
+    </div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col</div>
+										</a>
+<div class="html-code"><!-- Equal width cols, same on all screen sizes -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      1 of 3
+    </div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">col-*</div>
+										</a>
+<div class="html-code"><!-- responsive equal width cols, can be sm, md, lg, or xl -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm">1 of 3</div>
+    <div class="col-sm">1 of 3</div>
+    <div class="col-sm">1 of 3</div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">no-gutters</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row no-gutters">
+    <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">offset-*-#</div>
+										</a>
+<div class="html-code"><div class="container">
+  <div class="row">
+    <div class="col-3 offset-6">
+      <!-- Content -->
+    </div>
+  </div>
+  <!-- This class can be used with responsive classes such as -md- as well: -->
+  <div class="row">
+    <div class="col-md-3 offset-md-6">
+      <!-- Content -->
+    </div>
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">push</div>
+										</a>
+<div class="html-code"><div class="row">
+  <div class="col-9 push-3">
+     <!-- Content -->
+  </div>
+  <div class="col-3 pull-9">
+     <!-- Content -->
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">pull</div>
+										</a>
+<div class="html-code"><div class="row">
+  <div class="col-9 push-3">
+     <!-- Content -->
+  </div>
+  <div class="col-3 pull-9">
+     <!-- Content -->
+  </div>
+</div></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">nested columns</div>
+										</a>
+<div class="html-code"><div class="row">
+  <div class="col-sm-9">
+    Level 1: .col-sm-9
+    <div class="row">
+      <div class="col-8 col-sm-6">
+        Level 2: .col-8 .col-sm-6
+      </div>
+      <div class="col-4 col-sm-6">
+        Level 2: .col-4 .col-sm-6
+      </div>
+    </div>
+  </div>
+</div></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Images">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseImages" href="#collapseImages" aria-expanded="false" aria-controls="collapseImages">
+								<div class="jcorgFilterTextChild">Images</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseImages" class="collapse" role="tabpanel" aria-labelledby="Images">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">img-fluid</div>
+										</a>
+<div class="html-code"><img src="assets/img/318x200.svg" class="img-fluid" alt="Responsive image"></div>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">img-thumbnail</div>
+										</a>
+<div class="html-code"><img class="img-thumbnail" src="assets/img/318x200.svg" alt="Thumbnail image"></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Jumbotron">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseJumbotron" href="#collapseJumbotron" aria-expanded="false" aria-controls="collapseJumbotron">
+								<div class="jcorgFilterTextChild">Jumbotron</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseJumbotron" class="collapse" role="tabpanel" aria-labelledby="Jumbotron">
+							<div class="card-block">
+								<ul>
+									<li>
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">Jumbotron</div>
+										</a>
+<div class="html-code"><div class="jumbotron">
+  <h1 class="display-3">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for
+                  calling extra attention to featured content or information.</p>
+  <hr class="my-2">
+  <p>It uses utility classes for typography and
+     spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Some action</a>
+  </p>
+</div></div>
+									</li>
+									<li class="bootstrap4-new">
+										<a href="javascript:void(0)">
+											<div class="jcorgFilterTextChild">Jumbotron-fluid</div>
+										</a>
+<div class="html-code"><div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies
+                    the entire horizontal space of its parent.</p>
+  </div>
+</div></div>
+									</li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+					</div>
+
+					<div class="col-md-3" id="col3">
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="ListGroup">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseListGroup" href="#collapseListGroup" aria-expanded="false" aria-controls="collapseListGroup">
+								<div class="jcorgFilterTextChild">List Group</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseListGroup" class="collapse" role="tabpanel" aria-labelledby="ListGroup">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group</div>
+									  </a>
+<div class="html-code"><ul class="list-group">
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item active</div>
+									  </a>
+<div class="html-code"><ul class="list-group">
+  <li class="list-group-item active">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item disabled</div>
+									  </a>
+<div class="html-code"><ul class="list-group">
+  <li class="list-group-item disabled">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item-action</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item active">Cras justo odio</a>
+  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item-success</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Dapibus ac facilisis in</a>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item-info</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info">Cras sit amet nibh libero</a>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item-warning</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Porta ac consectetur ac</a>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group-item-danger</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Vestibulum at eros</a>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group with badges</div>
+									  </a>
+<div class="html-code"><ul class="list-group">
+  <li class="list-group-item justify-content-between">
+    Cras justo odio
+    <span class="badge badge-default badge-pill">14</span>
+  </li>
+  <li class="list-group-item justify-content-between">
+    Dapibus ac facilisis in
+    <span class="badge badge-default badge-pill">2</span>
+  </li>
+  <li class="list-group-item justify-content-between">
+    Morbi leo risus
+    <span class="badge badge-default badge-pill">1</span>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-group with d-flex</div>
+									  </a>
+<div class="html-code"><div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small>Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">List group item heading</h5>
+      <small class="text-muted">3 days ago</small>
+    </div>
+    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+    <small class="text-muted">Donec id elit non mi porta.</small>
+  </a>
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="MediaObjects">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseMediaObjects" href="#collapseMediaObjects" aria-expanded="false" aria-controls="collapseMediaObjects">
+								<div class="jcorgFilterTextChild">Media Objects</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseMediaObjects" class="collapse" role="tabpanel" aria-labelledby="MediaObjects">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">media</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <img class="d-flex mr-3" data-src="holder.js/64x64?theme=sky" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Media heading</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nested media</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <img class="d-flex mr-3" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Media heading</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+    <div class="media mt-3">
+      <a class="d-flex pr-3" href="#">
+        <img src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-flex align-self-start</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <img class="d-flex align-self-start mr-3" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Top-aligned media</h5>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-flex align-self-center</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <img class="d-flex align-self-center mr-3" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Center-aligned media</h5>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-flex align-self-end</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <img class="d-flex align-self-end mr-3" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">Bottom-aligned media</h5>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">right aligned media</div>
+									  </a>
+<div class="html-code"><div class="media">
+  <div class="media-body">
+    <h5 class="mt-0 mb-1">Media object</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+  </div>
+  <img class="d-flex ml-3" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Generic placeholder image">
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Modal">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseModal" href="#collapseModal" aria-expanded="false" aria-controls="collapseModal">
+								<div class="jcorgFilterTextChild">Modal</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseModal" class="collapse" role="tabpanel" aria-labelledby="Modal">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">modal</div>
+									  </a>
+<div class="html-code"><!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">modal fade</div>
+									  </a>
+<div class="html-code"><!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModal3Label">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">modal-lg</div>
+									  </a>
+<div class="html-code"><!-- Large modal -->
+<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+  Large modal
+</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">modal-sm</div>
+									  </a>
+<div class="html-code"><!-- Small modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">
+  Small modal
+</button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog"
+     aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div></div>
+								  </li>
+							  	</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Navs">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseNavs" href="#collapseNavs" aria-expanded="false" aria-controls="collapseNavs">
+								<div class="jcorgFilterTextChild">Navs</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseNavs" class="collapse" role="tabpanel" aria-labelledby="Navs">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">ul.nav</div>
+									  </a>
+<div class="html-code"><ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav.nav</div>
+									  </a>
+<div class="html-code"><nav class="nav">
+  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link disabled" href="#">Disabled</a>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav justify-content-*</div>
+									  </a>
+<div class="html-code"><ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav flex-column</div>
+									  </a>
+<div class="html-code"><nav class="nav flex-column">
+  <a class="nav-link active" href="#">Active</a>
+  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Link</a>
+</nav>	</div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav-tabs</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav-tabs</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav-fill</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Longer nav link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav.justified</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Longer nav link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav with flex utils</div>
+									  </a>
+<div class="html-code"><nav class="nav nav-pills flex-column flex-sm-row">
+  <a class="flex-sm-fill text-sm-center nav-link active" href="#">Active</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav-tabs with dropdown</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+       href="#" role="button" aria-haspopup="true" aria-expanded="false">
+       Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+    </div>
+  </li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">nav-pills with dropdown</div>
+									  </a>
+<div class="html-code"><ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+    </div>
+  </li>
+</ul></div>
+
+
+
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Navbar">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseNavbar" href="#collapseNavbar" aria-expanded="false" aria-controls="collapseNavbar">
+								<div class="jcorgFilterTextChild">Navbar</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseNavbar" class="collapse" role="tabpanel" aria-labelledby="Navbar">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-brand</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar with form</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-light bg-faded">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-text</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-light bg-faded">
+  <span class="navbar-text">
+    Navbar text with an inline element
+  </span>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-inverse bg-inverse</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <input class="mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <input class="mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-light</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light" style="background-color: #e3f2fd;">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <form class="form-inline">
+      <input class="mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar fixed-top</div>
+									  </a>
+<div class="html-code"><nav class="navbar fixed-top navbar-inverse bg-primary">
+  <a class="navbar-brand" href="#">Fixed top</a>
+</nav></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar fixed-bottom</div>
+									  </a>
+<div class="html-code"><nav class="navbar fixed-bottom navbar-inverse bg-primary">
+  <a class="navbar-brand" href="#">Fixed bottom</a>
+</nav></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar sticky-top</div>
+									  </a>
+<div class="html-code"><nav class="navbar sticky-top navbar-inverse bg-primary">
+  <a class="navbar-brand" href="#">Sticky top</a>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">collapse navbar-collapse</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-toggler</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-toggler-right</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-toggler-left</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">navbar-toggleable-*</div>
+									  </a>
+<div class="html-code"><nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</nav></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Pagination">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapsePagination" href="#collapsePagination" aria-expanded="false" aria-controls="collapsePagination">
+								<div class="jcorgFilterTextChild">Pagination</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapsePagination" class="collapse" role="tabpanel" aria-labelledby="Pagination">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">pagination</div>
+									  </a>
+<div class="html-code"><nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">page-item disabled</div>
+									  </a>
+<div class="html-code"><nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">page-item active</div>
+									  </a>
+<div class="html-code"><nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">pagination-lg</div>
+									  </a>
+<div class="html-code"><nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">pagination-sm</div>
+									  </a>
+<div class="html-code"><nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Popover">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapsePopover" href="#collapsePopover" aria-expanded="false" aria-controls="collapsePopover">
+								<div class="jcorgFilterTextChild">Popover</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapsePopover" class="collapse" role="tabpanel" aria-labelledby="Popover">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">popovers</div>
+									  </a>
+<div class="html-code"><!-- Note: A custom script is used to activate popovers:
+
+$(function(){
+  $('[data-toggle="popover"]').popover()
+});
+-->
+<button type="button" class="btn btn-secondary" data-container="body"
+        data-toggle="popover" data-placement="top"
+        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body"
+        data-toggle="popover" data-placement="right"
+        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body"
+        data-toggle="popover" data-placement="bottom"
+        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-secondary" data-container="body"
+        data-toggle="popover" data-placement="left"
+        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">dismissible popover</a>
+<div class="html-code"><!-- Note: A custom script is used to activate popovers:
+
+$(function(){
+  $('[data-toggle="popover"]').popover()
+});
+-->
+<a tabindex="0" class="btn btn-lg btn-danger" role="button"
+   data-toggle="popover" data-trigger="focus" title="Dismissible popover"
+   data-content="Click anywhere to dismiss this popover">
+   Dismissible popover
+</a></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Progress">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseProgress" href="#collapseProgress" aria-expanded="false" aria-controls="collapseProgress">
+								<div class="jcorgFilterTextChild">Progress</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseProgress" class="collapse" role="tabpanel" aria-labelledby="Progress">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 41%" aria-valuenow="41" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar with label</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar with height</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%; height: 35px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar bg-*</div>
+									  </a>
+<div class="html-code"><div class="progress"><div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">multiple progress_bar</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar-striped</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar-striped bg-*</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">progress-bar-animated</div>
+									  </a>
+<div class="html-code"><div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="ResponsiveUtilities">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseResponsiveUtilities" href="#collapseResponsiveUtilities" aria-expanded="false" aria-controls="collapseResponsiveUtilities">
+								<div class="jcorgFilterTextChild">Responsive Utilities</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseResponsiveUtilities" class="collapse" role="tabpanel" aria-labelledby="ResponsiveUtilities">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">hidden-*-down</div>
+									  </a>
+<div class="html-code"><div class="hidden-sm-down">
+  This will be hidden on small and very small screens
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">hidden-*-up</div>
+									  </a>
+<div class="html-code"><div class="hidden-lg-up">
+  This will be hidden on large and very large screens
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">visible-print-block</div>
+									  </a>
+<div class="html-code"><div class="visible-print-block">
+  This will be printed as "block" and hidden in the browser
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">visible-print-inline</div>
+									  </a>
+<div class="html-code"><div class="visible-print-inline">
+  This will be printed as "inline" and hidden in the browser
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">visible-print-inline-block</div>
+									  </a>
+<div class="html-code"><div class="visible-print-inline-block">
+  This will be printed as "inline-block" and hidden in the browser
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">hidden-print</div>
+									  </a>
+<div class="html-code"><div class="hidden-print">
+  This will hidden in print
+</div></div>
+								  </li>
+							</ul>
+							</div>
+						  </div>
+						</div>
+					</div>
+
+					<div class="col-md-3" id="col4">
+						<div class="card card-collapse">
+                          <div class="card-header" role="tab" id="Scrollspy">
+                            <h2 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#collapseScrollspy" href="#collapseScrollspy" aria-expanded="false" aria-controls="collapseScrollspy">
+                                <div class="jcorgFilterTextChild">Scrollspy</div>
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </a>
+                          </h2>
+                          </div>
+                          <div id="collapseScrollspy" class="collapse" role="tabpanel" aria-labelledby="Scrollspy">
+                            <div class="card-block">
+								<ul>
+  								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">data-spy</div>
+									  </a>
+<div class="html-code"><!-- Custom css that makes this example work like it does: -->
+<style type="text/css" scoped>
+.scrollspy-example {
+    position: relative;
+    height: 200px;
+    margin-top: .5rem;
+    overflow: auto;
+}
+</style>
+
+<!-- Actual scrollspy markup: -->
+<nav id="navbar-example2" class="navbar navbar-light bg-faded">
+  <h3 class="navbar-brand">Project Name</h3>
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" href="#verse1">Verse 1</a></li>
+    <li class="nav-item"><a class="nav-link" href="#verse2">Verse 2</a></li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+  <h4 id="verse1">Verse 1</h4>
+  <p>May <br> the <br> gods <br> forgive <br> me.</p>
+  <h4 id="verse2">Verse 2</h4>
+  <p>For <br> this <br> rampant <br> abuse <br> of <br> br-tags.</p>
+</div></div>
+								  </li>
+  							  	</ul>
+                            </div>
+                          </div>
+                        </div>
+
+						<div class="card card-collapse">
+                          <div class="card-header" role="tab" id="Tables">
+                            <h2 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#collapseTables" href="#collapseTables" aria-expanded="false" aria-controls="collapseTables">
+                                <div class="jcorgFilterTextChild">Tables</div>
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </a>
+                          </h2>
+                          </div>
+                          <div id="collapseTables" class="collapse" role="tabpanel" aria-labelledby="Tables">
+                            <div class="card-block">
+								<ul>
+  								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-inverse</div>
+									  </a>
+<div class="html-code"><table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">thead-inverse</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">thead-default</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-striped</div>
+									  </a>
+<div class="html-code"><table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-bordered</div>
+									  </a>
+<div class="html-code"><table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-hover</div>
+									  </a>
+<div class="html-code"><table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-sm</div>
+									  </a>
+<div class="html-code"><table class="table table-sm">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-responsive</div>
+									  </a>
+<div class="html-code"><table class="table table-responsive">
+<!-- table content here -->
+</table></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-reflow</div>
+									  </a>
+<div class="html-code"><table class="table table-reflow">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+      <th>Table heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Table cell</td>
+      <td>Table cell</td>
+      <td>Table cell</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-active</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-success</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-success">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-info</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-info">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-warning</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-warning">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">table-danger</div>
+									  </a>
+<div class="html-code"><table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-danger">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+    </tr>
+  </tbody>
+</table></div>
+								  </li>
+  							  	</ul>
+                            </div>
+                          </div>
+                        </div>
+
+						<div class="card card-collapse">
+                          <div class="card-header" role="tab" id="Tooltips">
+                            <h2 class="mb-0">
+                              <a class="collapsed" data-toggle="collapse" data-target="#collapseTooltips" href="#collapseTooltips" aria-expanded="false" aria-controls="collapseTooltips">
+                                <div class="jcorgFilterTextChild">Tooltips</div>
+                                <i class="material-icons">keyboard_arrow_down</i>
+                              </a>
+                          </h2>
+                          </div>
+                          <div id="collapseTooltips" class="collapse" role="tabpanel" aria-labelledby="headingTooltips">
+                            <div class="card-block">
+								<ul>
+  								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">tooltip</div>
+									  </a>
+<div class="html-code"><!-- Note: A custom script is used to activate tooltips:
+
+$(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+-->
+<button type="button" class="btn btn-secondary" data-toggle="tooltip"
+        data-placement="top" title="Tooltip on top"> Tooltip on top
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip"
+        data-placement="right" title="Tooltip on right"> Tooltip on right
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip"
+        data-placement="bottom" title="Tooltip on bottom"> Tooltip on bottom
+</button>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip"
+        data-placement="left" title="Tooltip on left"> Tooltip on left
+</button></div>
+								  </li>
+  							  	</ul>
+                            </div>
+                          </div>
+                        </div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="Typography">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseTypography" href="#collapseTypography" aria-expanded="false" aria-controls="collapseTypography">
+								<div class="jcorgFilterTextChild">Typography</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseTypography" class="collapse" role="tabpanel" aria-labelledby="Typography">
+							<div class="card-block">
+								<ul>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">display-# (1-4)</div>
+									  </a>
+
+<div class="html-code"><h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">lead</div>
+									  </a>
+<div class="html-code"><p class="lead">
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">blockquote</div>
+									  </a>
+<div class="html-code"><blockquote class="blockquote">
+  <p class="mb-0">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </p>
+</blockquote></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">blockquote-footer</div>
+									  </a>
+<div class="html-code"><blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <footer class="blockquote-footer">Someone famous in
+    <cite title="Source Title">Source Title</cite>
+  </footer>
+</blockquote></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">blockquote-reverse</div>
+									  </a>
+<div class="html-code"><blockquote class="blockquote blockquote-reverse">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.  </p>
+  <footer class="blockquote-footer">Someone famous in
+    <cite title="Source Title">Source Title</cite>
+  </footer>
+</blockquote></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-unstyled</div>
+									  </a>
+<div class="html-code"><ul class="list-unstyled">
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Eget porttitor lorem</li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">list-inline</div>
+									  </a>
+<div class="html-code"><ul class="list-inline">
+  <li class="list-inline-item">Lorem ipsum</li>
+  <li class="list-inline-item">Phasellus iaculis</li>
+  <li class="list-inline-item">Nulla volutpat</li>
+</ul></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">dl-horizontal</div>
+									  </a>
+<div class="html-code"><dl class="dl-horizontal">
+  <dt class="col-sm-3">Description lists</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+  <dt class="col-sm-3">Euismod</dt>
+  <dd class="col-sm-9">Vestibulum  felis euismod semper eget lacinia odio sem nec elit.</dd>
+  <dd class="col-sm-9 offset-sm-3">Donec id elit non mi porta gravida at eget metus.</dd>
+
+  <dt class="col-sm-3">Malesuada porta</dt>
+  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dd class="col-sm-9">Fusce dapibmodo, nibh, ut fermentum massa justo sit amet risus.</dd>
+</dl></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+
+						<div class="card card-collapse">
+						  <div class="card-header" role="tab" id="UtilityClasses">
+							<h2 class="mb-0">
+							  <a class="collapsed" data-toggle="collapse" data-target="#collapseUtilityClasses" href="#collapseUtilityClasses" aria-expanded="false" aria-controls="collapseUtilityClasses">
+								<div class="jcorgFilterTextChild">Utility Classes</div>
+								<i class="material-icons">keyboard_arrow_down</i>
+							  </a>
+                          </h2>
+						  </div>
+						  <div id="collapseUtilityClasses" class="collapse" role="tabpanel" aria-labelledby="UtilityClasses">
+							<div class="card-block">
+								<ul>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">align-*</div>
+									  </a>
+<div class="html-code"><span class="align-baseline">baseline</span>
+<span class="align-top">top</span>
+<span class="align-middle">middle</span>
+<span class="align-bottom">bottom</span>
+<span class="align-text-top">text-top</span>
+<span class="align-text-bottom">text-bottom</span></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-primary</div>
+									  </a>
+<div class="html-code"><div class="bg-primary text-white">Nullam id dolor id nibh ultricies vehicula ut id elit.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-success</div>
+									  </a>
+<div class="html-code"><div class="bg-success text-white">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</div>
+</div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-info</div>
+									  </a>
+<div class="html-code"><div class="bg-info text-white">Maecenas sed diam eget risus varius blandit sit amet non magna.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-warning</div>
+									  </a>
+<div class="html-code"><div class="bg-warning text-white">Etiam porta sem malesuada magna mollis euismod.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-danger</div>
+									  </a>
+<div class="html-code"><div class="bg-danger text-white">Donec ullamcorper nulla non metus auctor fringilla.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-inverse</div>
+									  </a>
+<div class="html-code"><div class="bg-inverse text-white">Cras mattis consectetur purus sit amet fermentum.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">bg-faded</div>
+									  </a>
+<div class="html-code"><div class="bg-faded">Cras mattis consectetur purus sit amet fermentum.</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">clearfix</div>
+									  </a>
+<div class="html-code"><div class="clearfix">...</div>
+<div class="clearfix">...</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">close</div>
+									  </a>
+<div class="html-code"><button type="button" class="close" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-block</div>
+									  </a>
+<div class="html-code"><span class="d-block bg-primary">Block</span></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-inline</div>
+									  </a>
+<div class="html-code"><div class="d-inline bg-success">Inline</div>
+<div class="d-inline bg-success">Inline</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">d-inline-block</div>
+									  </a>
+<div class="html-code"><div class="d-inline-block bg-warning">
+  <h3>inline-block</h3>
+  Boot that strap!
+</div>
+<div class="d-inline-block bg-warning">
+  <h3>inline-block</h3>
+  Strap that boot!
+</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">embed-responsive</div>
+									  </a>
+<div class="html-code"><div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/48OJbbI0DfE" allowfullscreen></iframe>
+</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">float-*-left</div>
+									  </a>
+<div class="html-code"><div class="float-left">Float left on all viewport sizes</div>
+<div class="float-sm-left">Float left on viewports sized SM (small) or wider</div>
+<div class="float-md-left">Float left on viewports sized MD (medium) or wider</div>
+<div class="float-lg-left">Float left on viewports sized LG (large) or wider</div>
+<div class="float-xl-left">Float left on viewports sized XL (extra-large) or wider</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">float-*-right</div>
+									  </a>
+<div class="html-code"><div class="float-right">Float right on all viewport sizes</div>
+<div class="float-sm-right">Float right on viewports sized SM (small) or wider</div>
+<div class="float-md-right">Float right on viewports sized MD (medium) or wider</div>
+<div class="float-lg-right">Float right on viewports sized LG (large) or wider</div>
+<div class="float-xl-right">Float right on viewports sized XL (extra-large) or wider</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">float-*-none</div>
+									  </a>
+<div class="html-code"><div class="float-none">Don't float on all viewport sizes</div>
+<div class="float-sm-none">Don't float on viewports sized SM (small) or wider</div>
+<div class="float-md-none">Don't float on viewports sized MD (medium) or wider</div>
+<div class="float-lg-none">Don't float on viewports sized LG (large) or wider</div>
+<div class="float-xl-none">Don't float on viewports sized XL (extra-large) or wider</div></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">font_weight-bold</div>
+									  </a>
+<div class="html-code"><p class="font-weight-bold">Bold text.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">font-weight-normal</div>
+									  </a>
+<div class="html-code"><p class="font-weight-normal">Normal weight text.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">font-italic</div>
+									  </a>
+<div class="html-code"><p class="font-italic">Italicized text.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">invisible</div>
+									  </a>
+<div class="html-code"><div class="invisible">...</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">pos-f-t</div>
+									  </a>
+<div class="html-code"><div class="pos-f-t">...</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)"><div class="jcorgFilterTextChild">rounded</div>
+									  </a>
+<div class="html-code"><img class="rounded" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Rounded image"></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">rounded-circle</div>
+									  </a>
+<div class="html-code"><img class="rounded-circle" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Circle image"></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">rounded-*</div>
+									  </a>
+<div class="html-code"><img class="rounded-top" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Circle image">
+<img class="rounded-right" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Circle image">
+<img class="rounded-bottom" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Circle image">
+<img class="rounded-left" src="https://s3.amazonaws.com/creativetim_bucket/tim-business-card.jpg" alt="Circle image"></div>
+								  </li>
+								  <li><a href="javascript:void(0)">
+									  <div class="jcorgFilterTextChild">sr-only</div>
+								  </a>
+<div class="html-code"><a class="sr-only" href="#content">Skip to main content</a></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">sr-only-focusable</div>
+									  </a>
+<div class="html-code"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-justify</div>
+									  </a>
+<div class="html-code"><p class="text-justify">Justified text.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-nowrap</div>
+									  </a>
+<div class="html-code"><p class="text-nowrap">No wrap text.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-*-left</div>
+									  </a>
+<div class="html-code"><p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-sm-left">Left aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-left">Left aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-left">Left aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-left">Left aligned text on viewports sized XL (extra-large) or wider.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-*-right</div>
+									  </a>
+<div class="html-code"><p class="text-right">Right aligned text on all viewport sizes.</p>
+<p class="text-sm-right">Right aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-right">Right aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-right">Right aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-right">Right aligned text on viewports sized XL (extra-large) or wider.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-*-center</div>
+									  </a>
+<div class="html-code"><p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-sm-center">Center aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-center">Center aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-center">Center aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-center">Center aligned text on viewports sized XL (extra-large) or wider.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-lowercase</div>
+									  </a>
+<div class="html-code"><p class="text-lowercase">lowercased text.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-uppercase</div>
+									  </a>
+<div class="html-code"><p class="text-uppercase">uppercased text.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-capitalize</div>
+									  </a>
+<div class="html-code"><p class="text-capitalize">capitalized text.</p></div>
+								  </li>
+								  <li class="bootstrap4-new">
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-muted</div>
+									  </a>
+<div class="html-code"><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-primary</div>
+									  </a>
+<div class="html-code"><p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-success</div>
+									  </a>
+<div class="html-code"><p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-info</div>
+									  </a>
+<div class="html-code"><p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-warning</div>
+									  </a>
+<div class="html-code"><p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-danger</div>
+									  </a>
+<div class="html-code"><p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-white</div>
+									  </a>
+<div class="html-code"><p class="text-white">Donec ullamcorper nulla non metus auctor fringilla.</p></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">
+										  <div class="jcorgFilterTextChild">text-hide</div>
+									  </a>
+<div class="html-code"><h1 class="text-hide">Custom heading</h1></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">w-100</a>
+<div class="html-code"><div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+<div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+<div class="w-100 p-3" style="background-color: #eee;">Width 100%</div></div>
+								  </li>
+								  <li>
+									  <a href="javascript:void(0)">h-100</a>
+<div class="html-code"><div style="height: 100px; background-color: rgba(255,0,0,0.1);">
+  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
+</div></div>
+								  </li>
+								</ul>
+							</div>
+						  </div>
+						</div>
+					</div>
+            	</div>
+			</div>
+        </div>
+
+		<div class="share-plugin">
+			<ul>
+				<li>
+					<a class="facebook-sharrre-nav" href="#pablo" target="_blank">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+				<li>
+					<a class="pinterest-sharrre-nav" href="#pablo" target="_blank">
+						<i class="fa fa-pinterest"></i>
+					</a>
+				</li>
+				<li>
+					<a class="google-sharrre-nav" href="#pablo" target="_blank">
+						<i class="fa fa-google-plus"></i>
+					</a>
+				</li>
+				<li>
+					<a class="twitter-sharrre-nav" href="#pablo" target="_blank">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="container-editor">
+			<i class="material-icons" id="close">clear</i>
+			<div class="editor-left">
+				<h5>Code Snippet</h5>
+				<div id="editor"></div>
+			</div>
+
+			<div class="return-right">
+				<h5>Preview</h5>
+				<div id="return"></div>
+			</div>
+		</div>
+
+		<footer class="footer">
+		    <div class="container">
+		        <nav>
+		            <ul>
+		                <li>
+		                    <a href="https://www.creative-tim.com" target="_blank">
+		                        Creative Tim
+		                    </a>
+				</li>
+		                <li>
+		                    <a href="https://github.com/creativetimofficial/bootstrap4-cheatsheet/issues" target="_blank">Have an issue?</a>
+		                </li>
+		            </ul>
+		        </nav>
+		        <div class="copyright">
+		            &copy; <script>document.write(new Date().getFullYear())</script>, Made with Love by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+		        </div>
+		    </div>
+		</footer>
+    </div>
+	<div class="html-code" id="collapse-html"><p><a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	    Link with href
+	  </a>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+	    Button with data-target
+	  </button>
+	</p>
+	<div class="collapse" id="collapseExample">
+	  <div class="card card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+	  </div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			$('#collapseExample').collapse();
+		});
+	</script>
+	</div>
+
+	<div class="html-code" id="accordion-html"><div id="accordion" role="tablist" aria-multiselectable="true"><div class="card">
+	<div class="card-header" role="tab" id="headingOne">
+	  <h5 class="mb-0">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	      Collapsible Group Item #1
+	    </a>
+	  </h5>
+	</div>
+
+	<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+	  <div class="card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+	  </div>
+	</div>
+	</div>
+	<div class="card">
+	<div class="card-header" role="tab" id="headingTwo">
+	  <h5 class="mb-0">
+	    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	      Collapsible Group Item #2
+	    </a>
+	  </h5>
+	</div>
+	<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+	  <div class="card-block">
+	    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+	  </div>
+	</div>
+	</div></div>
+
+	<script>
+		$(document).ready(function(){
+			$('#collapseOne, #collapseTwo').collapse();
+		});
+	</script>
+</div>
+</body>
+	<!--   Core JS Files   -->
+    <script src="assets/js/core/tether.min.js" type="text/javascript"></script>
+	<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="https://ajaxorg.github.io/ace-builds/src/ace.js"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/bs4-cheatsheet.js"></script>
+
+	<!-- Plugin for Search -->
+	<script src="assets/js/plugins/jcfilter.min.js"></script>
+
+	<!-- Share Library etc -->
+	<script src="assets/js/plugins/jquery.sharrre.js" type="text/javascript"></script>
+
+	<!-- Google analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-48244800-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+</html>
