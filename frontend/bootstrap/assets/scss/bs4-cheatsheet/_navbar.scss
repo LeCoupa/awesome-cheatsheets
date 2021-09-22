@@ -1,0 +1,21 @@
+.navbar{
+    transition: none;
+    
+    .navbar-collapse{
+        .navbar-nav .nav-item .nav-link p{
+            display: inline-block;
+        }
+    }
+
+    button{
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbar[class*='navbar-toggleable-'] .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,47 @@
+.footer{
+    color: #ffffff;
+    background-color: transparent;
+    padding: 10px 15px;
+
+    nav{
+        display: inline-block;
+        float: left;
+        line-height: 2.4;
+    }
+
+    ul{
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+
+        li{
+            display: inline-block;
+        }
+    }
+
+    &:after{
+        display: table;
+        clear: both;
+        content: " ";
+    }
+
+    .copyright,
+    nav ul li > a{
+        > a{
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (min-width: 991px){
+    .footer .copyright {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer nav {
+        display: block;
+        float: none;
+    }
+}

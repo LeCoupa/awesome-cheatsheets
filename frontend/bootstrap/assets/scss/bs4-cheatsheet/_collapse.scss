@@ -1,0 +1,120 @@
+.card{
+    &.card-collapse{
+        border: none;
+        background-color: transparent;
+        border-radius: 10px;
+        transition: background-color 170ms ease-in;
+        margin-bottom: 10px;
+
+        &.active{
+            background-color: #fff;
+            box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+
+            .card-header{
+                h2{
+                    > a{
+                        color: #3C4858;
+
+                        i{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-header{
+            padding: 0;
+            background-color: transparent;
+            border-bottom: none;
+
+            h2{
+                > a{
+                    padding: .5rem 1rem;
+                    display: block;
+                    color: #fff;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    transition: none;
+
+                    i{
+                        opacity: 0;
+                        float: right;
+                        position: relative;
+                        top: 4px;
+                        color: #3C4858;
+                        transition: transform 170ms ease-in, opacity 170ms ease-in;
+                    }
+
+                    &[aria-expanded="true"]{
+                        i{
+                            -webkit-transform: rotate(180deg);
+                            -ms-transform: rotate(180deg);
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    &:hover,
+                    &focus{
+                        color: inherit;
+                    }
+
+                    .jcorgFilterTextChild{
+                        display: inline-block;
+                    }
+                }
+            }
+
+            & + div .card-block{
+                border-top: 1px solid rgba(0,0,0,.125);
+                padding-left: 12px;
+                padding-right: 12px;
+
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    text-decoration: none;
+                    list-style: none;
+
+                    li > a{
+                        padding: 5px 15px;
+                        display: block;
+                        color: #3C4858;
+                        font-size: 14px;
+                        border-radius: 4px;
+                        transition: background-color 100ms linear, color 100ms linear;
+                        text-decoration: none;
+
+                        &:hover,
+                        &:focus,
+                        &.active{
+                            background-color: rgba(220,220,220, .425);
+                        }
+                    }
+
+                    li:not(:last-child) a{
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        &:hover,
+        &:focus{
+            background-color: #fff;
+            box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+
+            h2{
+                > a{
+                    color: #3C4858;
+
+                    i{
+                        color: #3C4858;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

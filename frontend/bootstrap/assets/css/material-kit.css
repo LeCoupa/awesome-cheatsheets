@@ -1,0 +1,3028 @@
+/*! =========================================================
+ *
+ * Material Kit PRO - V1.0.0
+ *
+ * =========================================================
+ *
+ * Copyright 2016 Creative Code Srl
+ * Available with purchase of license from http://www.creative-tim.com/product/material-kit-pro
+ *
+ * ========================================================= */
+/* ANIMATION */
+/* SHADOWS */
+/* Shadows (from mdl http://www.getmdl.io/) */
+h2,
+.card-block ul li > a,
+.container-editor h5{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1em;
+}
+
+.brand .btn,
+.brand .navbar .navbar-nav > li > a.btn {
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  padding: 12px 30px;
+  margin: 10px 1px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  will-change: box-shadow, transform;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.brand .btn::-moz-focus-inner,
+.brand .navbar .navbar-nav > li > a.btn::-moz-focus-inner {
+  border: 0;
+}
+.brand .btn, .brand .btn.btn-default,
+.brand .navbar .navbar-nav > li > a.btn,
+.brand .navbar .navbar-nav > li > a.btn.btn-default {
+  box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12);
+}
+.brand .btn, .brand .btn:hover, .brand .btn:focus, .brand .btn:active, .brand .btn.active, .brand .btn:active:focus, .brand .btn:active:hover, .brand .btn.active:focus, .brand .btn.active:hover, .open > .brand .btn.dropdown-toggle, .open > .brand .btn.dropdown-toggle:focus, .open > .brand .btn.dropdown-toggle:hover, .brand .btn.btn-default, .brand .btn.btn-default:hover, .brand .btn.btn-default:focus, .brand .btn.btn-default:active, .brand .btn.btn-default.active, .brand .btn.btn-default:active:focus, .brand .btn.btn-default:active:hover, .brand .btn.btn-default.active:focus, .brand .btn.btn-default.active:hover, .open > .brand .btn.btn-default.dropdown-toggle, .open > .brand .btn.btn-default.dropdown-toggle:focus, .open > .brand .btn.btn-default.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn,
+.brand .navbar .navbar-nav > li > a.btn:hover,
+.brand .navbar .navbar-nav > li > a.btn:focus,
+.brand .navbar .navbar-nav > li > a.btn:active,
+.brand .navbar .navbar-nav > li > a.btn.active,
+.brand .navbar .navbar-nav > li > a.btn:active:focus,
+.brand .navbar .navbar-nav > li > a.btn:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle:hover {
+  background-color: #999999;
+  color: #FFFFFF;
+}
+.brand .btn:focus, .brand .btn:active, .brand .btn:hover, .brand .btn.btn-default:focus, .brand .btn.btn-default:active, .brand .btn.btn-default:hover,
+.brand .navbar .navbar-nav > li > a.btn:focus,
+.brand .navbar .navbar-nav > li > a.btn:active,
+.brand .navbar .navbar-nav > li > a.btn:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:hover {
+  box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2);
+}
+.brand .btn.disabled, .brand .btn.disabled:hover, .brand .btn.disabled:focus, .brand .btn.disabled.focus, .brand .btn.disabled:active, .brand .btn.disabled.active, .brand .btn:disabled, .brand .btn:disabled:hover, .brand .btn:disabled:focus, .brand .btn:disabled.focus, .brand .btn:disabled:active, .brand .btn:disabled.active, .brand .btn[disabled], .brand .btn[disabled]:hover, .brand .btn[disabled]:focus, .brand .btn[disabled].focus, .brand .btn[disabled]:active, .brand .btn[disabled].active, fieldset[disabled] .brand .btn, fieldset[disabled] .brand .btn:hover, fieldset[disabled] .brand .btn:focus, fieldset[disabled] .brand .btn.focus, fieldset[disabled] .brand .btn:active, fieldset[disabled] .brand .btn.active, .brand .btn.btn-default.disabled, .brand .btn.btn-default.disabled:hover, .brand .btn.btn-default.disabled:focus, .brand .btn.btn-default.disabled.focus, .brand .btn.btn-default.disabled:active, .brand .btn.btn-default.disabled.active, .brand .btn.btn-default:disabled, .brand .btn.btn-default:disabled:hover, .brand .btn.btn-default:disabled:focus, .brand .btn.btn-default:disabled.focus, .brand .btn.btn-default:disabled:active, .brand .btn.btn-default:disabled.active, .brand .btn.btn-default[disabled], .brand .btn.btn-default[disabled]:hover, .brand .btn.btn-default[disabled]:focus, .brand .btn.btn-default[disabled].focus, .brand .btn.btn-default[disabled]:active, .brand .btn.btn-default[disabled].active, fieldset[disabled] .brand .btn.btn-default, fieldset[disabled] .brand .btn.btn-default:hover, fieldset[disabled] .brand .btn.btn-default:focus, fieldset[disabled] .brand .btn.btn-default.focus, fieldset[disabled] .brand .btn.btn-default:active, fieldset[disabled] .brand .btn.btn-default.active,
+.brand .navbar .navbar-nav > li > a.btn.disabled,
+.brand .navbar .navbar-nav > li > a.btn.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn:disabled,
+.brand .navbar .navbar-nav > li > a.btn:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn[disabled],
+.brand .navbar .navbar-nav > li > a.btn[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-default.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-simple, .brand .btn.btn-default.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.btn-simple {
+  background-color: transparent;
+  color: #999999;
+  box-shadow: none;
+}
+.brand .btn.btn-simple:hover, .brand .btn.btn-simple:focus, .brand .btn.btn-simple:active, .brand .btn.btn-default.btn-simple:hover, .brand .btn.btn-default.btn-simple:focus, .brand .btn.btn-default.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-default.btn-simple:active {
+  background-color: transparent;
+  color: #999999;
+}
+.brand .btn.btn-primary,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary {
+  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+}
+.brand .btn.btn-primary, .brand .btn.btn-primary:hover, .brand .btn.btn-primary:focus, .brand .btn.btn-primary:active, .brand .btn.btn-primary.active, .brand .btn.btn-primary:active:focus, .brand .btn.btn-primary:active:hover, .brand .btn.btn-primary.active:focus, .brand .btn.btn-primary.active:hover, .open > .brand .btn.btn-primary.dropdown-toggle, .open > .brand .btn.btn-primary.dropdown-toggle:focus, .open > .brand .btn.btn-primary.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.dropdown-toggle:hover {
+  background-color: #9c27b0;
+  color: #FFFFFF;
+}
+.brand .btn.btn-primary:focus, .brand .btn.btn-primary:active, .brand .btn.btn-primary:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:hover {
+  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+}
+.brand .btn.btn-primary.disabled, .brand .btn.btn-primary.disabled:hover, .brand .btn.btn-primary.disabled:focus, .brand .btn.btn-primary.disabled.focus, .brand .btn.btn-primary.disabled:active, .brand .btn.btn-primary.disabled.active, .brand .btn.btn-primary:disabled, .brand .btn.btn-primary:disabled:hover, .brand .btn.btn-primary:disabled:focus, .brand .btn.btn-primary:disabled.focus, .brand .btn.btn-primary:disabled:active, .brand .btn.btn-primary:disabled.active, .brand .btn.btn-primary[disabled], .brand .btn.btn-primary[disabled]:hover, .brand .btn.btn-primary[disabled]:focus, .brand .btn.btn-primary[disabled].focus, .brand .btn.btn-primary[disabled]:active, .brand .btn.btn-primary[disabled].active, fieldset[disabled] .brand .btn.btn-primary, fieldset[disabled] .brand .btn.btn-primary:hover, fieldset[disabled] .brand .btn.btn-primary:focus, fieldset[disabled] .brand .btn.btn-primary.focus, fieldset[disabled] .brand .btn.btn-primary:active, fieldset[disabled] .brand .btn.btn-primary.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-primary.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.btn-simple {
+  background-color: transparent;
+  color: #9c27b0;
+  box-shadow: none;
+}
+.brand .btn.btn-primary.btn-simple:hover, .brand .btn.btn-primary.btn-simple:focus, .brand .btn.btn-primary.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-primary.btn-simple:active {
+  background-color: transparent;
+  color: #9c27b0;
+}
+.brand .btn.btn-info,
+.brand .navbar .navbar-nav > li > a.btn.btn-info {
+  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
+}
+.brand .btn.btn-info, .brand .btn.btn-info:hover, .brand .btn.btn-info:focus, .brand .btn.btn-info:active, .brand .btn.btn-info.active, .brand .btn.btn-info:active:focus, .brand .btn.btn-info:active:hover, .brand .btn.btn-info.active:focus, .brand .btn.btn-info.active:hover, .open > .brand .btn.btn-info.dropdown-toggle, .open > .brand .btn.btn-info.dropdown-toggle:focus, .open > .brand .btn.btn-info.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-info.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-info.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-info.dropdown-toggle:hover {
+  background-color: #00bcd4;
+  color: #FFFFFF;
+}
+.brand .btn.btn-info:focus, .brand .btn.btn-info:active, .brand .btn.btn-info:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:hover {
+  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);
+}
+.brand .btn.btn-info.disabled, .brand .btn.btn-info.disabled:hover, .brand .btn.btn-info.disabled:focus, .brand .btn.btn-info.disabled.focus, .brand .btn.btn-info.disabled:active, .brand .btn.btn-info.disabled.active, .brand .btn.btn-info:disabled, .brand .btn.btn-info:disabled:hover, .brand .btn.btn-info:disabled:focus, .brand .btn.btn-info:disabled.focus, .brand .btn.btn-info:disabled:active, .brand .btn.btn-info:disabled.active, .brand .btn.btn-info[disabled], .brand .btn.btn-info[disabled]:hover, .brand .btn.btn-info[disabled]:focus, .brand .btn.btn-info[disabled].focus, .brand .btn.btn-info[disabled]:active, .brand .btn.btn-info[disabled].active, fieldset[disabled] .brand .btn.btn-info, fieldset[disabled] .brand .btn.btn-info:hover, fieldset[disabled] .brand .btn.btn-info:focus, fieldset[disabled] .brand .btn.btn-info.focus, fieldset[disabled] .brand .btn.btn-info:active, fieldset[disabled] .brand .btn.btn-info.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-info.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-info.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.btn-simple {
+  background-color: transparent;
+  color: #00bcd4;
+  box-shadow: none;
+}
+.brand .btn.btn-info.btn-simple:hover, .brand .btn.btn-info.btn-simple:focus, .brand .btn.btn-info.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-info.btn-simple:active {
+  background-color: transparent;
+  color: #00bcd4;
+}
+.brand .btn.btn-success,
+.brand .navbar .navbar-nav > li > a.btn.btn-success {
+  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
+}
+.brand .btn.btn-success, .brand .btn.btn-success:hover, .brand .btn.btn-success:focus, .brand .btn.btn-success:active, .brand .btn.btn-success.active, .brand .btn.btn-success:active:focus, .brand .btn.btn-success:active:hover, .brand .btn.btn-success.active:focus, .brand .btn.btn-success.active:hover, .open > .brand .btn.btn-success.dropdown-toggle, .open > .brand .btn.btn-success.dropdown-toggle:focus, .open > .brand .btn.btn-success.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-success.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-success.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-success.dropdown-toggle:hover {
+  background-color: #4caf50;
+  color: #FFFFFF;
+}
+.brand .btn.btn-success:focus, .brand .btn.btn-success:active, .brand .btn.btn-success:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:hover {
+  box-shadow: 0 14px 26px -12px rgba(76, 175, 80, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);
+}
+.brand .btn.btn-success.disabled, .brand .btn.btn-success.disabled:hover, .brand .btn.btn-success.disabled:focus, .brand .btn.btn-success.disabled.focus, .brand .btn.btn-success.disabled:active, .brand .btn.btn-success.disabled.active, .brand .btn.btn-success:disabled, .brand .btn.btn-success:disabled:hover, .brand .btn.btn-success:disabled:focus, .brand .btn.btn-success:disabled.focus, .brand .btn.btn-success:disabled:active, .brand .btn.btn-success:disabled.active, .brand .btn.btn-success[disabled], .brand .btn.btn-success[disabled]:hover, .brand .btn.btn-success[disabled]:focus, .brand .btn.btn-success[disabled].focus, .brand .btn.btn-success[disabled]:active, .brand .btn.btn-success[disabled].active, fieldset[disabled] .brand .btn.btn-success, fieldset[disabled] .brand .btn.btn-success:hover, fieldset[disabled] .brand .btn.btn-success:focus, fieldset[disabled] .brand .btn.btn-success.focus, fieldset[disabled] .brand .btn.btn-success:active, fieldset[disabled] .brand .btn.btn-success.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-success.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-success.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.btn-simple {
+  background-color: transparent;
+  color: #4caf50;
+  box-shadow: none;
+}
+.brand .btn.btn-success.btn-simple:hover, .brand .btn.btn-success.btn-simple:focus, .brand .btn.btn-success.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-success.btn-simple:active {
+  background-color: transparent;
+  color: #4caf50;
+}
+.brand .btn.btn-warning,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning {
+  box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12);
+}
+.brand .btn.btn-warning, .brand .btn.btn-warning:hover, .brand .btn.btn-warning:focus, .brand .btn.btn-warning:active, .brand .btn.btn-warning.active, .brand .btn.btn-warning:active:focus, .brand .btn.btn-warning:active:hover, .brand .btn.btn-warning.active:focus, .brand .btn.btn-warning.active:hover, .open > .brand .btn.btn-warning.dropdown-toggle, .open > .brand .btn.btn-warning.dropdown-toggle:focus, .open > .brand .btn.btn-warning.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.dropdown-toggle:hover {
+  background-color: #ff9800;
+  color: #FFFFFF;
+}
+.brand .btn.btn-warning:focus, .brand .btn.btn-warning:active, .brand .btn.btn-warning:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:hover {
+  box-shadow: 0 14px 26px -12px rgba(255, 152, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);
+}
+.brand .btn.btn-warning.disabled, .brand .btn.btn-warning.disabled:hover, .brand .btn.btn-warning.disabled:focus, .brand .btn.btn-warning.disabled.focus, .brand .btn.btn-warning.disabled:active, .brand .btn.btn-warning.disabled.active, .brand .btn.btn-warning:disabled, .brand .btn.btn-warning:disabled:hover, .brand .btn.btn-warning:disabled:focus, .brand .btn.btn-warning:disabled.focus, .brand .btn.btn-warning:disabled:active, .brand .btn.btn-warning:disabled.active, .brand .btn.btn-warning[disabled], .brand .btn.btn-warning[disabled]:hover, .brand .btn.btn-warning[disabled]:focus, .brand .btn.btn-warning[disabled].focus, .brand .btn.btn-warning[disabled]:active, .brand .btn.btn-warning[disabled].active, fieldset[disabled] .brand .btn.btn-warning, fieldset[disabled] .brand .btn.btn-warning:hover, fieldset[disabled] .brand .btn.btn-warning:focus, fieldset[disabled] .brand .btn.btn-warning.focus, fieldset[disabled] .brand .btn.btn-warning:active, fieldset[disabled] .brand .btn.btn-warning.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-warning.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.btn-simple {
+  background-color: transparent;
+  color: #ff9800;
+  box-shadow: none;
+}
+.brand .btn.btn-warning.btn-simple:hover, .brand .btn.btn-warning.btn-simple:focus, .brand .btn.btn-warning.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-warning.btn-simple:active {
+  background-color: transparent;
+  color: #ff9800;
+}
+.brand .btn.btn-danger,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger {
+  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
+}
+.brand .btn.btn-danger, .brand .btn.btn-danger:hover, .brand .btn.btn-danger:focus, .brand .btn.btn-danger:active, .brand .btn.btn-danger.active, .brand .btn.btn-danger:active:focus, .brand .btn.btn-danger:active:hover, .brand .btn.btn-danger.active:focus, .brand .btn.btn-danger.active:hover, .open > .brand .btn.btn-danger.dropdown-toggle, .open > .brand .btn.btn-danger.dropdown-toggle:focus, .open > .brand .btn.btn-danger.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.dropdown-toggle:hover {
+  background-color: #f44336;
+  color: #FFFFFF;
+}
+.brand .btn.btn-danger:focus, .brand .btn.btn-danger:active, .brand .btn.btn-danger:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:hover {
+  box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);
+}
+.brand .btn.btn-danger.disabled, .brand .btn.btn-danger.disabled:hover, .brand .btn.btn-danger.disabled:focus, .brand .btn.btn-danger.disabled.focus, .brand .btn.btn-danger.disabled:active, .brand .btn.btn-danger.disabled.active, .brand .btn.btn-danger:disabled, .brand .btn.btn-danger:disabled:hover, .brand .btn.btn-danger:disabled:focus, .brand .btn.btn-danger:disabled.focus, .brand .btn.btn-danger:disabled:active, .brand .btn.btn-danger:disabled.active, .brand .btn.btn-danger[disabled], .brand .btn.btn-danger[disabled]:hover, .brand .btn.btn-danger[disabled]:focus, .brand .btn.btn-danger[disabled].focus, .brand .btn.btn-danger[disabled]:active, .brand .btn.btn-danger[disabled].active, fieldset[disabled] .brand .btn.btn-danger, fieldset[disabled] .brand .btn.btn-danger:hover, fieldset[disabled] .brand .btn.btn-danger:focus, fieldset[disabled] .brand .btn.btn-danger.focus, fieldset[disabled] .brand .btn.btn-danger:active, fieldset[disabled] .brand .btn.btn-danger.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-danger.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple {
+  background-color: transparent;
+  color: #f44336;
+  box-shadow: none;
+}
+.brand .btn.btn-danger.btn-simple:hover, .brand .btn.btn-danger.btn-simple:focus, .brand .btn.btn-danger.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-danger.btn-simple:active {
+  background-color: transparent;
+  color: #f44336;
+}
+.brand .btn.btn-rose,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose {
+  box-shadow: 0 2px 2px 0 rgba(233, 30, 99, 0.14), 0 3px 1px -2px rgba(233, 30, 99, 0.2), 0 1px 5px 0 rgba(233, 30, 99, 0.12);
+}
+.brand .btn.btn-rose, .brand .btn.btn-rose:hover, .brand .btn.btn-rose:focus, .brand .btn.btn-rose:active, .brand .btn.btn-rose.active, .brand .btn.btn-rose:active:focus, .brand .btn.btn-rose:active:hover, .brand .btn.btn-rose.active:focus, .brand .btn.btn-rose.active:hover, .open > .brand .btn.btn-rose.dropdown-toggle, .open > .brand .btn.btn-rose.dropdown-toggle:focus, .open > .brand .btn.btn-rose.dropdown-toggle:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:active:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.active:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.active:hover, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle:focus, .open >
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.dropdown-toggle:hover {
+  background-color: #e91e63;
+  color: #FFFFFF;
+}
+.brand .btn.btn-rose:focus, .brand .btn.btn-rose:active, .brand .btn.btn-rose:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:hover {
+  box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(233, 30, 99, 0.2);
+}
+.brand .btn.btn-rose.disabled, .brand .btn.btn-rose.disabled:hover, .brand .btn.btn-rose.disabled:focus, .brand .btn.btn-rose.disabled.focus, .brand .btn.btn-rose.disabled:active, .brand .btn.btn-rose.disabled.active, .brand .btn.btn-rose:disabled, .brand .btn.btn-rose:disabled:hover, .brand .btn.btn-rose:disabled:focus, .brand .btn.btn-rose:disabled.focus, .brand .btn.btn-rose:disabled:active, .brand .btn.btn-rose:disabled.active, .brand .btn.btn-rose[disabled], .brand .btn.btn-rose[disabled]:hover, .brand .btn.btn-rose[disabled]:focus, .brand .btn.btn-rose[disabled].focus, .brand .btn.btn-rose[disabled]:active, .brand .btn.btn-rose[disabled].active, fieldset[disabled] .brand .btn.btn-rose, fieldset[disabled] .brand .btn.btn-rose:hover, fieldset[disabled] .brand .btn.btn-rose:focus, fieldset[disabled] .brand .btn.btn-rose.focus, fieldset[disabled] .brand .btn.btn-rose:active, fieldset[disabled] .brand .btn.btn-rose.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled.focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:disabled.active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled],
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled]:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled]:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled].focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled]:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose[disabled].active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:hover, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.focus, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose:active, fieldset[disabled]
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.active {
+  box-shadow: none !important;
+}
+.brand .btn.btn-rose.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.btn-simple {
+  background-color: transparent;
+  color: #e91e63;
+  box-shadow: none;
+}
+.brand .btn.btn-rose.btn-simple:hover, .brand .btn.btn-rose.btn-simple:focus, .brand .btn.btn-rose.btn-simple:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-rose.btn-simple:active {
+  background-color: transparent;
+  color: #e91e63;
+}
+.brand .btn.btn-white, .brand .btn.btn-white:focus, .brand .btn.btn-white:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-white,
+.brand .navbar .navbar-nav > li > a.btn.btn-white:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-white:hover {
+  background-color: #FFFFFF;
+  color: #999999;
+}
+.brand .btn.btn-white.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-white.btn-simple {
+  color: #FFFFFF;
+  background: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-facebook,
+.brand .navbar .navbar-nav > li > a.btn.btn-facebook {
+  background-color: #3b5998;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(59, 89, 152, 0.14), 0 3px 1px -2px rgba(59, 89, 152, 0.2), 0 1px 5px 0 rgba(59, 89, 152, 0.12);
+}
+.brand .btn.btn-facebook:focus, .brand .btn.btn-facebook:active, .brand .btn.btn-facebook:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-facebook:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-facebook:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(59, 89, 152, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(59, 89, 152, 0.2);
+}
+.brand .btn.btn-facebook.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-facebook.btn-simple {
+  color: #3b5998;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-twitter,
+.brand .navbar .navbar-nav > li > a.btn.btn-twitter {
+  background-color: #55acee;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(85, 172, 238, 0.14), 0 3px 1px -2px rgba(85, 172, 238, 0.2), 0 1px 5px 0 rgba(85, 172, 238, 0.12);
+}
+.brand .btn.btn-twitter:focus, .brand .btn.btn-twitter:active, .brand .btn.btn-twitter:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-twitter:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-twitter:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-twitter:hover {
+  background-color: #55acee;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(85, 172, 238, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(85, 172, 238, 0.2);
+}
+.brand .btn.btn-twitter.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-twitter.btn-simple {
+  color: #55acee;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-pinterest,
+.brand .navbar .navbar-nav > li > a.btn.btn-pinterest {
+  background-color: #cc2127;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(204, 33, 39, 0.14), 0 3px 1px -2px rgba(204, 33, 39, 0.2), 0 1px 5px 0 rgba(204, 33, 39, 0.12);
+}
+.brand .btn.btn-pinterest:focus, .brand .btn.btn-pinterest:active, .brand .btn.btn-pinterest:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-pinterest:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-pinterest:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-pinterest:hover {
+  background-color: #cc2127;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(204, 33, 39, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(204, 33, 39, 0.2);
+}
+.brand .btn.btn-pinterest.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-pinterest.btn-simple {
+  color: #cc2127;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-google,
+.brand .navbar .navbar-nav > li > a.btn.btn-google {
+  background-color: #dd4b39;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(221, 75, 57, 0.14), 0 3px 1px -2px rgba(221, 75, 57, 0.2), 0 1px 5px 0 rgba(221, 75, 57, 0.12);
+}
+.brand .btn.btn-google:focus, .brand .btn.btn-google:active, .brand .btn.btn-google:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-google:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-google:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-google:hover {
+  background-color: #dd4b39;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(221, 75, 57, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(221, 75, 57, 0.2);
+}
+.brand .btn.btn-google.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-google.btn-simple {
+  color: #dd4b39;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-linkedin,
+.brand .navbar .navbar-nav > li > a.btn.btn-linkedin {
+  background-color: #0976b4;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(9, 118, 180, 0.14), 0 3px 1px -2px rgba(9, 118, 180, 0.2), 0 1px 5px 0 rgba(9, 118, 180, 0.12);
+}
+.brand .btn.btn-linkedin:focus, .brand .btn.btn-linkedin:active, .brand .btn.btn-linkedin:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-linkedin:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-linkedin:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-linkedin:hover {
+  background-color: #0976b4;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(9, 118, 180, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(9, 118, 180, 0.2);
+}
+.brand .btn.btn-linkedin.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-linkedin.btn-simple {
+  color: #0976b4;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-dribbble,
+.brand .navbar .navbar-nav > li > a.btn.btn-dribbble {
+  background-color: #ea4c89;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(234, 76, 137, 0.14), 0 3px 1px -2px rgba(234, 76, 137, 0.2), 0 1px 5px 0 rgba(234, 76, 137, 0.12);
+}
+.brand .btn.btn-dribbble:focus, .brand .btn.btn-dribbble:active, .brand .btn.btn-dribbble:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-dribbble:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-dribbble:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-dribbble:hover {
+  background-color: #ea4c89;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(234, 76, 137, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(234, 76, 137, 0.2);
+}
+.brand .btn.btn-dribbble.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-dribbble.btn-simple {
+  color: #ea4c89;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-github,
+.brand .navbar .navbar-nav > li > a.btn.btn-github {
+  background-color: #333333;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(51, 51, 51, 0.14), 0 3px 1px -2px rgba(51, 51, 51, 0.2), 0 1px 5px 0 rgba(51, 51, 51, 0.12);
+}
+.brand .btn.btn-github:focus, .brand .btn.btn-github:active, .brand .btn.btn-github:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-github:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-github:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-github:hover {
+  background-color: #333333;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(51, 51, 51, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(51, 51, 51, 0.2);
+}
+.brand .btn.btn-github.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-github.btn-simple {
+  color: #333333;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-youtube,
+.brand .navbar .navbar-nav > li > a.btn.btn-youtube {
+  background-color: #e52d27;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(229, 45, 39, 0.14), 0 3px 1px -2px rgba(229, 45, 39, 0.2), 0 1px 5px 0 rgba(229, 45, 39, 0.12);
+}
+.brand .btn.btn-youtube:focus, .brand .btn.btn-youtube:active, .brand .btn.btn-youtube:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-youtube:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-youtube:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-youtube:hover {
+  background-color: #e52d27;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(229, 45, 39, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(229, 45, 39, 0.2);
+}
+.brand .btn.btn-youtube.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-youtube.btn-simple {
+  color: #e52d27;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-instagram,
+.brand .navbar .navbar-nav > li > a.btn.btn-instagram {
+  background-color: #125688;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(18, 86, 136, 0.14), 0 3px 1px -2px rgba(18, 86, 136, 0.2), 0 1px 5px 0 rgba(18, 86, 136, 0.12);
+}
+.brand .btn.btn-instagram:focus, .brand .btn.btn-instagram:active, .brand .btn.btn-instagram:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-instagram:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-instagram:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-instagram:hover {
+  background-color: #125688;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(18, 86, 136, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(18, 86, 136, 0.2);
+}
+.brand .btn.btn-instagram.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-instagram.btn-simple {
+  color: #125688;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-reddit,
+.brand .navbar .navbar-nav > li > a.btn.btn-reddit {
+  background-color: #ff4500;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(255, 69, 0, 0.14), 0 3px 1px -2px rgba(255, 69, 0, 0.2), 0 1px 5px 0 rgba(255, 69, 0, 0.12);
+}
+.brand .btn.btn-reddit:focus, .brand .btn.btn-reddit:active, .brand .btn.btn-reddit:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-reddit:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-reddit:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-reddit:hover {
+  background-color: #ff4500;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(255, 69, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 69, 0, 0.2);
+}
+.brand .btn.btn-reddit.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-reddit.btn-simple {
+  color: #ff4500;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-tumblr,
+.brand .navbar .navbar-nav > li > a.btn.btn-tumblr {
+  background-color: #35465c;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(53, 70, 92, 0.14), 0 3px 1px -2px rgba(53, 70, 92, 0.2), 0 1px 5px 0 rgba(53, 70, 92, 0.12);
+}
+.brand .btn.btn-tumblr:focus, .brand .btn.btn-tumblr:active, .brand .btn.btn-tumblr:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-tumblr:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-tumblr:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-tumblr:hover {
+  background-color: #35465c;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(53, 70, 92, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(53, 70, 92, 0.2);
+}
+.brand .btn.btn-tumblr.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-tumblr.btn-simple {
+  color: #35465c;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn.btn-behance,
+.brand .navbar .navbar-nav > li > a.btn.btn-behance {
+  background-color: #1769ff;
+  color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(23, 105, 255, 0.14), 0 3px 1px -2px rgba(23, 105, 255, 0.2), 0 1px 5px 0 rgba(23, 105, 255, 0.12);
+}
+.brand .btn.btn-behance:focus, .brand .btn.btn-behance:active, .brand .btn.btn-behance:hover,
+.brand .navbar .navbar-nav > li > a.btn.btn-behance:focus,
+.brand .navbar .navbar-nav > li > a.btn.btn-behance:active,
+.brand .navbar .navbar-nav > li > a.btn.btn-behance:hover {
+  background-color: #1769ff;
+  color: #fff;
+  box-shadow: 0 14px 26px -12px rgba(23, 105, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(23, 105, 255, 0.2);
+}
+.brand .btn.btn-behance.btn-simple,
+.brand .navbar .navbar-nav > li > a.btn.btn-behance.btn-simple {
+  color: #1769ff;
+  background-color: transparent;
+  box-shadow: none;
+}
+.brand .btn:focus, .brand .btn:active, .brand .btn:active:focus,
+.brand .navbar .navbar-nav > li > a.btn:focus,
+.brand .navbar .navbar-nav > li > a.btn:active,
+.brand .navbar .navbar-nav > li > a.btn:active:focus {
+  outline: 0;
+}
+.brand .btn.btn-round,
+.brand .navbar .navbar-nav > li > a.btn.btn-round {
+  border-radius: 30px;
+}
+.brand .btn:not(.btn-just-icon):not(.btn-fab) .fa,
+.brand .navbar .navbar-nav > li > a.btn:not(.btn-just-icon):not(.btn-fab) .fa {
+  font-size: 18px;
+  margin-top: -2px;
+  position: relative;
+  top: 2px;
+}
+.brand .btn.btn-fab,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab {
+  border-radius: 50%;
+  font-size: 24px;
+  height: 56px;
+  margin: auto;
+  min-width: 56px;
+  width: 56px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  line-height: normal;
+}
+.brand .btn.btn-fab .ripple-container,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab .ripple-container {
+  border-radius: 50%;
+}
+.brand .btn.btn-fab.btn-fab-mini, .btn-group-sm .brand .btn.btn-fab,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab.btn-fab-mini, .btn-group-sm
+.brand .navbar .navbar-nav > li > a.btn.btn-fab {
+  height: 40px;
+  min-width: 40px;
+  width: 40px;
+}
+.brand .btn.btn-fab.btn-fab-mini.material-icons, .btn-group-sm .brand .btn.btn-fab.material-icons,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab.btn-fab-mini.material-icons, .btn-group-sm
+.brand .navbar .navbar-nav > li > a.btn.btn-fab.material-icons {
+  top: -3.5px;
+  left: -3.5px;
+}
+.brand .btn.btn-fab.btn-fab-mini .material-icons, .btn-group-sm .brand .btn.btn-fab .material-icons,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab.btn-fab-mini .material-icons, .btn-group-sm
+.brand .navbar .navbar-nav > li > a.btn.btn-fab .material-icons {
+  font-size: 17px;
+}
+.brand .btn.btn-fab i.material-icons,
+.brand .navbar .navbar-nav > li > a.btn.btn-fab i.material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-12px, -12px);
+  line-height: 24px;
+  width: 24px;
+  font-size: 24px;
+}
+.brand .btn.btn-lg, .btn-group-lg .brand .btn,
+.brand .navbar .navbar-nav > li > a.btn.btn-lg, .btn-group-lg
+.brand .navbar .navbar-nav > li > a.btn {
+  font-size: 14px;
+  padding: 18px 36px;
+}
+.brand .btn.btn-sm, .btn-group-sm .brand .btn,
+.brand .navbar .navbar-nav > li > a.btn.btn-sm, .btn-group-sm
+.brand .navbar .navbar-nav > li > a.btn {
+  padding: 5px 20px;
+  font-size: 11px;
+}
+.brand .btn.btn-xs, .btn-group-xs .brand .btn,
+.brand .navbar .navbar-nav > li > a.btn.btn-xs, .btn-group-xs
+.brand .navbar .navbar-nav > li > a.btn {
+  padding: 4px 15px;
+  font-size: 10px;
+}
+.brand .btn.btn-just-icon,
+.brand .navbar .navbar-nav > li > a.btn.btn-just-icon {
+  font-size: 20px;
+  padding: 12px 12px;
+  line-height: 1em;
+}
+.brand .btn.btn-just-icon i,
+.brand .navbar .navbar-nav > li > a.btn.btn-just-icon i {
+  width: 20px;
+}
+.brand .btn.btn-just-icon.btn-lg,
+.brand .navbar .navbar-nav > li > a.btn.btn-just-icon.btn-lg {
+  font-size: 22px;
+  padding: 13px 18px;
+}
+.brand .btn .material-icons {
+  vertical-align: middle;
+  font-size: 17px;
+  top: -1px;
+  position: relative;
+}
+.brand .btn .caret {
+  margin-left: 3px;
+}
+.brand .navbar .navbar-nav > li > a.btn {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.brand .navbar .navbar-nav > li > a.btn.btn-fab {
+  margin: 5px 2px;
+}
+.brand .navbar .navbar-nav > li > a:not(.btn) .material-icons {
+  margin-top: -3px;
+  top: 0px;
+  position: relative;
+  margin-right: 3px;
+}
+.brand .navbar .navbar-nav > li > .profile-photo {
+  margin: 5px 2px;
+}
+.brand .navbar-default:not(.navbar-transparent) .navbar-nav > li > a.btn.btn-white.btn-simple {
+  color: #555555;
+}
+.brand .btn-group,
+.brand .btn-group-vertical {
+  position: relative;
+  margin: 10px 1px;
+}
+.brand .btn-group .dropdown-menu,
+.brand .btn-group-vertical .dropdown-menu {
+  border-radius: 0 0 3px 3px;
+}
+.brand .btn-group.btn-group-raised,
+.brand .btn-group-vertical.btn-group-raised {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.brand .btn-group .btn + .btn,
+.brand .btn-group .btn,
+.brand .btn-group .btn:active,
+.brand .btn-group .btn-group,
+.brand .btn-group-vertical .btn + .btn,
+.brand .btn-group-vertical .btn,
+.brand .btn-group-vertical .btn:active,
+.brand .btn-group-vertical .btn-group {
+  margin: 0;
+}
+.brand .close {
+  font-size: inherit;
+  color: #FFFFFF;
+  opacity: .9;
+  text-shadow: none;
+}
+.brand .close:hover, .brand .close:focus {
+  opacity: 1;
+  color: #FFFFFF;
+}
+.brand .close i {
+  font-size: 20px;
+}
+
+.brand legend {
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+.brand output {
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+.brand .form-control {
+  height: 36px;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .brand input[type="date"].form-control,
+  .brand input[type="time"].form-control,
+  .brand input[type="datetime-local"].form-control,
+  .brand input[type="month"].form-control {
+    line-height: 36px;
+  }
+  .brand input[type="date"].input-sm, .input-group-sm .brand input[type="date"],
+  .brand input[type="time"].input-sm, .input-group-sm
+  .brand input[type="time"],
+  .brand input[type="datetime-local"].input-sm, .input-group-sm
+  .brand input[type="datetime-local"],
+  .brand input[type="month"].input-sm, .input-group-sm
+  .brand input[type="month"] {
+    line-height: 24px;
+  }
+  .brand input[type="date"].input-lg, .input-group-lg .brand input[type="date"],
+  .brand input[type="time"].input-lg, .input-group-lg
+  .brand input[type="time"],
+  .brand input[type="datetime-local"].input-lg, .input-group-lg
+  .brand input[type="datetime-local"],
+  .brand input[type="month"].input-lg, .input-group-lg
+  .brand input[type="month"] {
+    line-height: 44px;
+  }
+}
+.brand .radio label,
+.brand .checkbox label {
+  min-height: 20px;
+}
+.brand .form-control-static {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 34px;
+}
+.brand .input-sm .input-sm {
+  height: 24px;
+  padding: 3px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.brand .input-sm select.input-sm {
+  height: 24px;
+  line-height: 24px;
+}
+.brand .input-sm textarea.input-sm,
+.brand .input-sm select[multiple].input-sm {
+  height: auto;
+}
+.brand .form-group-sm .form-control {
+  height: 24px;
+  padding: 3px 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.brand .form-group-sm select.form-control {
+  height: 24px;
+  line-height: 24px;
+}
+.brand .form-group-sm textarea.form-control,
+.brand .form-group-sm select[multiple].form-control {
+  height: auto;
+}
+.brand .form-group-sm .form-control-static {
+  height: 24px;
+  min-height: 31px;
+  padding: 4px 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.brand .input-lg .input-lg {
+  height: 44px;
+  padding: 9px 0;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 0;
+}
+.brand .input-lg select.input-lg {
+  height: 44px;
+  line-height: 44px;
+}
+.brand .input-lg textarea.input-lg,
+.brand .input-lg select[multiple].input-lg {
+  height: auto;
+}
+.brand .form-group-lg .form-control {
+  height: 44px;
+  padding: 9px 0;
+  font-size: 18px;
+  line-height: 1.33333;
+}
+.brand .form-group-lg select.form-control {
+  height: 44px;
+  line-height: 44px;
+}
+.brand .form-group-lg textarea.form-control,
+.brand .form-group-lg select[multiple].form-control {
+  height: auto;
+}
+.brand .form-group-lg .form-control-static {
+  height: 44px;
+  min-height: 38px;
+  padding: 10px 0;
+  font-size: 18px;
+  line-height: 1.33333;
+}
+.brand .form-horizontal .radio,
+.brand .form-horizontal .checkbox,
+.brand .form-horizontal .radio-inline,
+.brand .form-horizontal .checkbox-inline {
+  padding-top: 8px;
+}
+.brand .form-horizontal .radio,
+.brand .form-horizontal .checkbox {
+  min-height: 28px;
+}
+@media (min-width: 768px) {
+  .brand .form-horizontal .control-label {
+    padding-top: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .brand .form-horizontal .form-group-lg .control-label {
+    padding-top: 13.0px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .brand .form-horizontal .form-group-sm .control-label {
+    padding-top: 4px;
+    font-size: 11px;
+  }
+}
+.brand .label {
+  border-radius: 2px;
+}
+.brand .label, .brand .label.label-default {
+  background-color: #FFFFFF;
+}
+.brand .label.label-inverse {
+  background-color: #212121;
+}
+.brand .label.label-primary {
+  background-color: #9c27b0;
+}
+.brand .label.label-success {
+  background-color: #4caf50;
+}
+.brand .label.label-info {
+  background-color: #00bcd4;
+}
+.brand .label.label-warning {
+  background-color: #ff9800;
+}
+.brand .label.label-danger {
+  background-color: #f44336;
+}
+.brand .label.label-rose {
+  background-color: #e91e63;
+}
+.brand .form-control,
+.brand .form-group .form-control {
+  border: 0;
+  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 0 2px, 100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom, center calc(100% - 1px);
+  background-color: transparent;
+  transition: background 0s ease-out;
+  float: none;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: 400;
+}
+.brand .form-control::-moz-placeholder,
+.brand .form-group .form-control::-moz-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-control:-ms-input-placeholder,
+.brand .form-group .form-control:-ms-input-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-control::-webkit-input-placeholder,
+.brand .form-group .form-control::-webkit-input-placeholder {
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-control[readonly], .brand .form-control[disabled], fieldset[disabled] .brand .form-control,
+.brand .form-group .form-control[readonly],
+.brand .form-group .form-control[disabled], fieldset[disabled]
+.brand .form-group .form-control {
+  background-color: transparent;
+}
+.brand .form-control[disabled], fieldset[disabled] .brand .form-control,
+.brand .form-group .form-control[disabled], fieldset[disabled]
+.brand .form-group .form-control {
+  background-image: none;
+  border-bottom: 1px dotted #D2D2D2;
+}
+.brand .form-group {
+  position: relative;
+}
+.brand .form-group.label-static label.control-label, .brand .form-group.label-placeholder label.control-label, .brand .form-group.label-floating label.control-label {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+.brand .form-group.label-floating label.control-label {
+  will-change: left, top, contents;
+}
+.brand .form-group.label-placeholder:not(.is-empty) label.control-label {
+  display: none;
+}
+.brand .form-group .help-block {
+  position: absolute;
+  display: none;
+}
+.brand .form-group.is-focused .form-control {
+  outline: none;
+  background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+  background-size: 100% 2px, 100% 1px;
+  box-shadow: none;
+  transition-duration: 0.3s;
+}
+.brand .form-group.is-focused .form-control .material-input:after {
+  background-color: #9c27b0;
+}
+.brand .form-group.is-focused.form-info .form-control {
+  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.form-success .form-control {
+  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.form-warning .form-control {
+  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.form-danger .form-control {
+  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.form-rose .form-control {
+  background-image: linear-gradient(#e91e63, #e91e63), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.form-white .form-control {
+  background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.is-focused.label-placeholder label,
+.brand .form-group.is-focused.label-placeholder label.control-label {
+  color: #AAAAAA;
+}
+.brand .form-group.is-focused .help-block {
+  display: block;
+}
+.brand .form-group.has-warning .form-control {
+  box-shadow: none;
+}
+.brand .form-group.has-warning.is-focused .form-control {
+  background-image: linear-gradient(#ff9800, #ff9800), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.has-warning label.control-label,
+.brand .form-group.has-warning .help-block {
+  color: #ff9800;
+}
+.brand .form-group.has-error .form-control {
+  box-shadow: none;
+}
+.brand .form-group.has-error.is-focused .form-control {
+  background-image: linear-gradient(#f44336, #f44336), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.has-error label.control-label,
+.brand .form-group.has-error .help-block {
+  color: #f44336;
+}
+.brand .form-group.has-success .form-control {
+  box-shadow: none;
+}
+.brand .form-group.has-success.is-focused .form-control {
+  background-image: linear-gradient(#4caf50, #4caf50), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.has-success label.control-label,
+.brand .form-group.has-success .help-block {
+  color: #4caf50;
+}
+.brand .form-group.has-info .form-control {
+  box-shadow: none;
+}
+.brand .form-group.has-info.is-focused .form-control {
+  background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);
+}
+.brand .form-group.has-info label.control-label,
+.brand .form-group.has-info .help-block {
+  color: #00bcd4;
+}
+.brand .form-group textarea {
+  resize: none;
+}
+.brand .form-group textarea ~ .form-control-highlight {
+  margin-top: -11px;
+}
+.brand .form-group select {
+  appearance: none;
+}
+.brand .form-group select ~ .material-input:after {
+  display: none;
+}
+.brand .form-control {
+  margin-bottom: 7px;
+}
+.brand .form-control::-moz-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-control:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-control::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .checkbox label,
+.brand .radio label,
+.brand label {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand label.control-label {
+  font-size: 11px;
+  line-height: 1.07143;
+  color: #AAAAAA;
+  font-weight: 400;
+  margin: 16px 0 0 0;
+}
+.brand .help-block {
+  margin-top: 0;
+  font-size: 11px;
+}
+.brand .form-group {
+  padding-bottom: 7px;
+  margin: 27px 0 0 0;
+}
+.brand .form-group .form-control {
+  margin-bottom: 7px;
+}
+.brand .form-group .form-control::-moz-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group .form-control:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group .form-control::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group .checkbox label,
+.brand .form-group .radio label,
+.brand .form-group label {
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group label.control-label {
+  font-size: 11px;
+  line-height: 1.07143;
+  color: #AAAAAA;
+  font-weight: 400;
+  margin: 16px 0 0 0;
+}
+.brand .form-group .help-block {
+  margin-top: 0;
+  font-size: 11px;
+}
+.brand .form-group.label-floating label.control-label, .brand .form-group.label-placeholder label.control-label {
+  top: -7px;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+.brand .form-group.label-static label.control-label, .brand .form-group.label-floating.is-focused label.control-label, .brand .form-group.label-floating:not(.is-empty) label.control-label {
+  top: -28px;
+  left: 0;
+  font-size: 11px;
+  line-height: 1.07143;
+}
+.brand .form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
+  top: -28px;
+  left: 0;
+  font-size: 11px;
+  line-height: 1.07143;
+}
+.brand .form-group.form-group-sm {
+  padding-bottom: 3px;
+  margin: 21px 0 0 0;
+}
+.brand .form-group.form-group-sm .form-control {
+  margin-bottom: 3px;
+}
+.brand .form-group.form-group-sm .form-control::-moz-placeholder {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-sm .form-control:-ms-input-placeholder {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-sm .form-control::-webkit-input-placeholder {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-sm .checkbox label,
+.brand .form-group.form-group-sm .radio label,
+.brand .form-group.form-group-sm label {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-sm label.control-label {
+  font-size: 9px;
+  line-height: 1.125;
+  color: #AAAAAA;
+  font-weight: 400;
+  margin: 16px 0 0 0;
+}
+.brand .form-group.form-group-sm .help-block {
+  margin-top: 0;
+  font-size: 9px;
+}
+.brand .form-group.form-group-sm.label-floating label.control-label, .brand .form-group.form-group-sm.label-placeholder label.control-label {
+  top: -11px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.brand .form-group.form-group-sm.label-static label.control-label, .brand .form-group.form-group-sm.label-floating.is-focused label.control-label, .brand .form-group.form-group-sm.label-floating:not(.is-empty) label.control-label {
+  top: -25px;
+  left: 0;
+  font-size: 9px;
+  line-height: 1.125;
+}
+.brand .form-group.form-group-sm.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
+  top: -25px;
+  left: 0;
+  font-size: 9px;
+  line-height: 1.125;
+}
+.brand .form-group.form-group-lg {
+  padding-bottom: 9px;
+  margin: 30px 0 0 0;
+}
+.brand .form-group.form-group-lg .form-control {
+  margin-bottom: 9px;
+}
+.brand .form-group.form-group-lg .form-control::-moz-placeholder {
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-lg .form-control:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-lg .form-control::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-lg .checkbox label,
+.brand .form-group.form-group-lg .radio label,
+.brand .form-group.form-group-lg label {
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+.brand .form-group.form-group-lg label.control-label {
+  font-size: 14px;
+  line-height: 1.0;
+  color: #AAAAAA;
+  font-weight: 400;
+  margin: 16px 0 0 0;
+}
+.brand .form-group.form-group-lg .help-block {
+  margin-top: 0;
+  font-size: 14px;
+}
+.brand .form-group.form-group-lg.label-floating label.control-label, .brand .form-group.form-group-lg.label-placeholder label.control-label {
+  top: -5px;
+  font-size: 18px;
+  line-height: 1.33333;
+}
+.brand .form-group.form-group-lg.label-static label.control-label, .brand .form-group.form-group-lg.label-floating.is-focused label.control-label, .brand .form-group.form-group-lg.label-floating:not(.is-empty) label.control-label {
+  top: -32px;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.0;
+}
+.brand .form-group.form-group-lg.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
+  top: -32px;
+  left: 0;
+  font-size: 14px;
+  line-height: 1.0;
+}
+.brand select.form-control {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.form-group.is-focused .brand select.form-control {
+  box-shadow: none;
+  border-color: #D2D2D2;
+}
+.brand select.form-control[multiple], .form-group.is-focused .brand select.form-control[multiple] {
+  height: 85px;
+}
+.brand .input-group-btn .btn {
+  margin: 0 0 7px 0;
+}
+.brand .form-group.form-group-sm .input-group-btn .btn {
+  margin: 0 0 3px 0;
+}
+.brand .form-group.form-group-lg .input-group-btn .btn {
+  margin: 0 0 9px 0;
+}
+.brand .input-group .input-group-btn {
+  padding: 0 12px;
+}
+.brand .input-group .input-group-addon {
+  border: 0;
+  background: transparent;
+  padding: 6px 15px 0px;
+}
+.brand .form-group input[type=file] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.brand .form-control-feedback {
+  opacity: 0;
+}
+.has-success .brand .form-control-feedback {
+  color: #4caf50;
+  opacity: 1;
+}
+.has-error .brand .form-control-feedback {
+  color: #f44336;
+  opacity: 1;
+}
+
+.brand .rotating-card-container {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+.brand .rotating-card-container .card-image,
+.brand .rotating-card-container .card {
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  -o-transition: -o-transform .5s;
+  -ms-transition: -ms-transition .5s;
+  transition: transform .5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.brand .rotating-card-container .card-image .back, .brand .rotating-card-container .card-image .front,
+.brand .rotating-card-container .card .back,
+.brand .rotating-card-container .card .front {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.brand .rotating-card-container .card-image .front,
+.brand .rotating-card-container .card .front {
+  position: relative;
+  z-index: 2;
+}
+.brand .rotating-card-container .card-image .back,
+.brand .rotating-card-container .card .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 3;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.brand .rotating-card-container .card .back {
+  box-shadow: none;
+}
+.brand .rotating-card-container:not(.manual-flip):hover .card-image,
+.brand .rotating-card-container:not(.manual-flip):hover .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.brand .rotating-card-container.hover.manual-flip .card-image,
+.brand .rotating-card-container.hover.manual-flip .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.brand .atvImg {
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 400px;
+  cursor: pointer;
+}
+.brand .atvImg img {
+  box-shadow: 0 2px 8px rgba(14, 21, 47, 0.25);
+  width: 100%;
+}
+.brand .atvImg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+}
+.brand .atvImg-container.over .atvImg-shadow {
+  box-shadow: 0 45px 100px rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+}
+.brand .atvImg-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+.brand .atvImg,
+.brand .atvImg-layers,
+.brand .atvImg-container,
+.brand .atvImg img {
+  border-radius: 6px;
+  overflow: inherit;
+}
+.brand .atvImg-rendered-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+  transition: all 0.1s ease-out;
+}
+.brand .atvImg-shadow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transition: all 0.25s ease-out;
+  box-shadow: 0 12px 30px rgba(14, 21, 47, 0.7);
+}
+.brand .atvImg-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 30%);
+}
+.brand .card.mk {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: rgba(0,0,0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.brand .card.mk .card-height-indicator {
+  margin-top: 100%;
+}
+.brand .card.mk.no-shadow .card-image {
+  box-shadow: none;
+}
+.brand .card.mk .card-image {
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.brand .card.mk .card-image img {
+  width: 100%;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.brand .card.mk .card-image .card-title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 1.3em;
+  text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+}
+.brand .card.mk .card-image .shadow-fancy {
+  transform: scale(0.9);
+  top: 11px;
+  filter: blur(20px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+.brand .card.mk .card-image.no-shadow {
+  box-shadow: none;
+}
+.brand .card.mk .card-image.no-shadow.shadow-normal {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.brand .card.mk .card-image.no-shadow .shadow-fancy {
+  display: none !important;
+}
+.brand .card.mk .category:not([class*="text-"]) {
+  color: #999999;
+}
+.brand .card.mk .card-content {
+  padding: 15px 30px;
+}
+.brand .card.mk .card-body {
+  height: 30%;
+  padding: 18px;
+}
+.brand .card.mk .card-footer {
+  height: 10%;
+  padding: 18px;
+}
+.brand .card.mk .card-footer button, .brand .card.mk .card-footer a {
+  margin: 0 !important;
+  position: relative;
+  bottom: 25px;
+  width: auto;
+}
+.brand .card.mk .card-footer button:first-child, .brand .card.mk .card-footer a:first-child {
+  left: -15px;
+}
+.brand .card.mk .header {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  border-radius: 3px;
+  padding: 15px 0;
+  background-color: #FFFFFF;
+}
+.brand .card.mk .header .title {
+  color: #FFFFFF;
+}
+.brand .card.mk .header-primary,
+.brand .card.mk .content-primary {
+  background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+.brand .card.mk .header-info,
+.brand .card.mk .content-info {
+  background: linear-gradient(60deg, #26c6da, #0097a7);
+}
+.brand .card.mk .header-success,
+.brand .card.mk .content-success {
+  background: linear-gradient(60deg, #66bb6a, #388e3c);
+}
+.brand .card.mk .header-warning,
+.brand .card.mk .content-warning {
+  background: linear-gradient(60deg, #ffa726, #f57c00);
+}
+.brand .card.mk .header-danger,
+.brand .card.mk .content-danger {
+  background: linear-gradient(60deg, #ef5350, #d32f2f);
+}
+.brand .card.mk .header-rose,
+.brand .card.mk .content-rose {
+  background: linear-gradient(60deg, #ec407a, #c2185b);
+}
+.brand .card.mk .header-primary {
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6);
+}
+.brand .card.mk .header-danger {
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(244, 67, 54, 0.6);
+}
+.brand .card.mk [class*="header-"],
+.brand .card.mk [class*="content-"] {
+  color: #FFFFFF;
+}
+.brand .card.mk [class*="header-"] .card-title a,
+.brand .card.mk [class*="header-"] .card-title,
+.brand .card.mk [class*="header-"] .icon i,
+.brand .card.mk [class*="content-"] .card-title a,
+.brand .card.mk [class*="content-"] .card-title,
+.brand .card.mk [class*="content-"] .icon i {
+  color: #FFFFFF;
+}
+.brand .card.mk [class*="header-"] .icon i,
+.brand .card.mk [class*="content-"] .icon i {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.brand .card.mk [class*="header-"] .author a,
+.brand .card.mk [class*="header-"] .footer .stats,
+.brand .card.mk [class*="header-"] .category,
+.brand .card.mk [class*="header-"] .card-description,
+.brand .card.mk [class*="content-"] .author a,
+.brand .card.mk [class*="content-"] .footer .stats,
+.brand .card.mk [class*="content-"] .category,
+.brand .card.mk [class*="content-"] .card-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+.brand .card.mk [class*="header-"] .author a:hover, .brand .card.mk [class*="header-"] .author a:focus, .brand .card.mk [class*="header-"] .author a:active,
+.brand .card.mk [class*="content-"] .author a:hover,
+.brand .card.mk [class*="content-"] .author a:focus,
+.brand .card.mk [class*="content-"] .author a:active {
+  color: #FFFFFF;
+}
+.brand .card.mk [class*="content-"] {
+  border-radius: 6px;
+}
+.brand .card.mk [class*="content-"] h1 small,
+.brand .card.mk [class*="content-"] h2 small,
+.brand .card.mk [class*="content-"] h3 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.brand .card.mk img {
+  width: 100%;
+  height: auto;
+}
+.brand .card.mk .category .material-icons {
+  position: relative;
+  top: 6px;
+  line-height: 0;
+}
+.brand .card.mk .category-social .fa {
+  font-size: 24px;
+  position: relative;
+  margin-top: -4px;
+  top: 2px;
+  margin-right: 5px;
+}
+.brand .card.mk .author .avatar {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.brand .card.mk .author a {
+  color: #3C4858;
+  text-decoration: none;
+}
+.brand .card.mk .author a .ripple-container {
+  display: none;
+}
+.brand .card.mk .footer {
+  margin-top: 15px;
+}
+.brand .card.mk .footer div {
+  display: inline-block;
+}
+.brand .card.mk .footer .author {
+  color: #999999;
+}
+.brand .card.mk .footer .stats {
+  float: right;
+  line-height: 30px;
+  color: #999999;
+}
+.brand .card.mk .footer .stats .material-icons {
+  position: relative;
+  top: 4px;
+  font-size: 18px;
+}
+.carousel .brand .card.mk {
+  max-width: 650px;
+  margin: 60px auto;
+}
+.brand .card.mk .checkbox,
+.brand .card.mk .radio {
+  margin-top: 16px;
+}
+.brand .card-signup .header {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -40px;
+  padding: 20px 0;
+}
+.brand .card-signup .text-divider {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.brand .card-signup .card-content {
+  padding: 0px 30px 0px 10px;
+}
+.brand .card-signup .checkbox {
+  margin-top: 20px;
+}
+.brand .card-signup .checkbox label {
+  margin-left: 17px;
+}
+.brand .card-signup .checkbox .checkbox-material {
+  padding-right: 12px;
+}
+.brand .card-signup .social-line {
+  margin-top: 15px;
+  text-align: center;
+  padding: 0;
+}
+.brand .card-signup .social-line .btn {
+  color: #FFFFFF;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.brand .card-contact .header {
+  margin-top: -20px;
+}
+.brand .card-contact .header .title {
+  margin: 10px 0 10px;
+}
+.brand .card-nav-tabs {
+  margin-top: 45px;
+}
+.brand .card-nav-tabs .header {
+  margin-top: -30px;
+}
+.brand .card-nav-tabs .nav-tabs {
+  background: transparent;
+}
+.brand .card-plain {
+  background: transparent;
+  box-shadow: none;
+}
+.brand .card-plain .header {
+  margin-left: 0;
+  margin-right: 0;
+}
+.brand .card-plain .card-content {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.brand .card-plain .card-image {
+  margin: 0;
+  border-radius: 6px;
+}
+.brand .card-plain .card-image img {
+  border-radius: 6px;
+}
+.brand .iframe-container iframe {
+  width: 100%;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.brand .card-form-horizontal .card-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.brand .card-form-horizontal .form-group {
+  padding-bottom: 0px;
+  margin: 3px 0 0 0;
+}
+.brand .card-form-horizontal .form-group .form-control {
+  margin-bottom: 0;
+}
+.brand .card-form-horizontal .btn {
+  margin: 0;
+}
+.brand .card-form-horizontal .input-group .input-group-addon {
+  padding-left: 0;
+}
+.brand .card-profile,
+.brand .card-testimonial {
+  margin-top: 30px;
+  text-align: center;
+}
+.brand .card-profile .btn-just-icon.btn-raised,
+.brand .card-testimonial .btn-just-icon.btn-raised {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.brand .card-profile .card-avatar,
+.brand .card-testimonial .card-avatar {
+  max-width: 130px;
+  max-height: 130px;
+  margin: -50px auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.brand .card-profile .card-avatar + .card-content,
+.brand .card-testimonial .card-avatar + .card-content {
+  margin-top: 15px;
+}
+.brand .card-profile.card-plain .card-avatar,
+.brand .card-testimonial.card-plain .card-avatar {
+  margin-top: 0;
+}
+.brand .card-testimonial .card-avatar {
+  max-width: 100px;
+  max-height: 100px;
+}
+.brand .card-testimonial .footer {
+  margin-top: 0;
+}
+.brand .card-testimonial .footer .card-avatar {
+  margin-top: 10px;
+  margin-bottom: -50px;
+}
+.brand .card-testimonial .card-description {
+  font-style: italic;
+}
+.brand .card-testimonial .card-description + .card-title {
+  margin-top: 30px;
+}
+.brand .card-testimonial .icon {
+  margin-top: 30px;
+}
+.brand .card-testimonial .icon .material-icons {
+  font-size: 40px;
+}
+.brand .card-blog {
+  margin-top: 30px;
+}
+.brand .card-blog .row .category {
+  margin-bottom: 0;
+}
+.brand .card-blog .card-title {
+  margin-top: 5px;
+}
+.brand .card-blog .card-image + .category {
+  margin-top: 20px;
+}
+.brand .card-pricing {
+  text-align: center;
+}
+.brand .card-pricing .card-title {
+  margin-top: 30px;
+}
+.brand .card-pricing .card-content {
+  padding: 15px !important;
+}
+.brand .card-pricing .icon {
+  padding: 10px 0 0px;
+  color: #999999;
+}
+.brand .card-pricing .icon i {
+  font-size: 55px;
+  border: 1px solid #E5E5E5;
+  border-radius: 50%;
+  width: 130px;
+  line-height: 130px;
+  height: 130px;
+}
+.brand .card-pricing h1 small {
+  font-size: 18px;
+}
+.brand .card-pricing h1 small:first-child {
+  position: relative;
+  top: -17px;
+  font-size: 26px;
+}
+.brand .card-pricing ul {
+  list-style: none;
+  padding: 0;
+  max-width: 240px;
+  margin: 10px auto;
+}
+.brand .card-pricing ul li {
+  color: #999999;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}
+.brand .card-pricing ul li:last-child {
+  border: 0;
+}
+.brand .card-pricing ul li b {
+  color: #3C4858;
+}
+.brand .card-pricing ul li i {
+  top: 6px;
+  position: relative;
+}
+.brand .card-pricing.card-background ul li,
+.brand .card-pricing [class*="content-"] ul li {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.brand .card-pricing.card-background ul li b,
+.brand .card-pricing [class*="content-"] ul li b {
+  color: #FFFFFF;
+}
+.brand .card-pricing.card-background [class*="text-"],
+.brand .card-pricing [class*="content-"] [class*="text-"] {
+  color: #FFFFFF;
+}
+.brand .card-pricing.card-background:after {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.brand .card-raised {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.brand .card-background {
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+.brand .card-background .card-content {
+  position: relative;
+  z-index: 2;
+  min-height: 280px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.brand .card-background .category,
+.brand .card-background .card-description,
+.brand .card-background small {
+  color: rgba(255, 255, 255, 0.7);
+}
+.brand .card-background .card-title {
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+.brand .card-background:not(.card-pricing) .btn {
+  margin-bottom: 0;
+}
+.brand .card-background:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 6px;
+}
+.brand .card-product {
+  margin-top: 30px;
+}
+.brand .card-product .btn-simple.btn-just-icon {
+  padding: 0;
+}
+.brand .card-product .footer {
+  margin-top: 5px;
+}
+.brand .card-product .footer .stats .material-icons {
+  margin-top: 4px;
+  top: 0;
+}
+.brand .card-product .footer .price h4 {
+  margin-bottom: 0;
+}
+.brand .card-product .card-title,
+.brand .card-product .category,
+.brand .card-product .card-description {
+  text-align: center;
+}
+
+.section-white {
+  background: #FFFFFF;
+}
+
+.section-white-to-gray {
+  background-color: #fff;
+  background: transparent linear-gradient(0deg, #e5e5e5 0%, #fff 100%) repeat scroll 0 0;
+}
+
+.section-gray {
+  background: #E5E5E5;
+}
+
+.section-light-gray {
+  background: #eee;
+}
+
+.section-primary {
+  background: #e1bee7;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #e1bee7, #ba68c8);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #e1bee7, #ba68c8);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #e1bee7, #ba68c8);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #e1bee7, #ba68c8);
+  /* Standard syntax */
+}
+
+.section-info {
+  background: #b2ebf2;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #b2ebf2, #4dd0e1);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #b2ebf2, #4dd0e1);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #b2ebf2, #4dd0e1);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #b2ebf2, #4dd0e1);
+  /* Standard syntax */
+}
+
+.section-success {
+  background: #c8e6c9;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #c8e6c9, #81c784);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #c8e6c9, #81c784);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #c8e6c9, #81c784);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #c8e6c9, #81c784);
+  /* Standard syntax */
+}
+
+.section-warning {
+  background: #ffe0b2;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #ffe0b2, #ffb74d);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #ffe0b2, #ffb74d);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #ffe0b2, #ffb74d);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #ffe0b2, #ffb74d);
+  /* Standard syntax */
+}
+
+.section-danger {
+  background: #ffcdd2;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #ffcdd2, #e57373);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #ffcdd2, #e57373);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #ffcdd2, #e57373);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #ffcdd2, #e57373);
+  /* Standard syntax */
+}
+
+.section-rose {
+  background: #f8bbd0;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, #f8bbd0, #f06292);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, #f8bbd0, #f06292);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, #f8bbd0, #f06292);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, #f8bbd0, #f06292);
+  /* Standard syntax */
+}
+
+.section-space {
+  height: 70px;
+  display: block;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-navbars {
+  padding-bottom: 0;
+}
+
+.section-full-screen {
+  height: 100vh;
+}
+
+.section-signup {
+  padding-top: 20vh;
+}
+
+.section-dark,
+.section-image {
+  background-color: #343434;
+  background-size: 200% 240%;
+  background: #232323;
+  background: -moz-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #585858), color-stop(100%, #232323));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #585858 0%, #232323 100%);
+  /* W3C */
+  background-size: 550% 450%;
+}
+
+.section-dark .title,
+.section-dark .card-plain .card-title,
+.section-dark .card-plain .icon i,
+.section-image .title,
+.section-image .card-plain .card-title,
+.section-image .card-plain .icon i {
+  color: #FFFFFF;
+}
+.section-dark .description,
+.section-dark .card-plain .card-description,
+.section-dark .card-plain .icon,
+.section-image .description,
+.section-image .card-plain .card-description,
+.section-image .card-plain .icon {
+  color: rgba(255, 255, 255, 0.76);
+}
+.section-dark .card-plain [class*="text-"],
+.section-dark .card-plain ul li b,
+.section-image .card-plain [class*="text-"],
+.section-image .card-plain ul li b {
+  color: #FFFFFF;
+}
+.section-dark .card-plain .category,
+.section-image .card-plain .category {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section-image {
+  position: relative;
+}
+.section-image:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.section-image .container {
+  z-index: 2;
+  position: relative;
+}
+
+.section,
+.section-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+[class*="features-"],
+[class*="team-"],
+[class*="projects-"],
+[class*="pricing-"],
+[class*="testimonials-"],
+[class*="contactus-"] {
+  padding: 80px 0;
+}
+
+.page-header {
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.page-header .carousel .carousel-indicators {
+  bottom: 60px;
+}
+.page-header .container {
+  padding-top: 226px;
+  color: #FFFFFF;
+}
+.page-header .title {
+  color: #FFFFFF;
+}
+.page-header.header-small {
+  height: 65vh;
+}
+.page-header.header-small .container {
+  padding-top: 20vh;
+}
+
+.header-filter {
+  position: relative;
+}
+.header-filter:before, .header-filter:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+}
+.header-filter::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header-filter .container {
+  z-index: 2;
+  position: relative;
+}
+.header-filter[filter-color="purple"]:after, .header-filter[filter-color="primary"]:after {
+  background: rgba(225, 190, 231, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(225, 190, 231, 0.56), rgba(186, 104, 200, 0.95));
+  /* Standard syntax */
+}
+.header-filter[filter-color="blue"]:after, .header-filter[filter-color="info"]:after {
+  background: rgba(178, 235, 242, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(178, 235, 242, 0.56), rgba(77, 208, 225, 0.95));
+  /* Standard syntax */
+}
+.header-filter[filter-color="green"]:after, .header-filter[filter-color="success"]:after {
+  background: rgba(165, 214, 167, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(165, 214, 167, 0.56), rgba(102, 187, 106, 0.95));
+  /* Standard syntax */
+}
+.header-filter[filter-color="orange"]:after, .header-filter[filter-color="warning"]:after {
+  background: rgba(255, 224, 178, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(255, 224, 178, 0.56), rgba(255, 183, 77, 0.95));
+  /* Standard syntax */
+}
+.header-filter[filter-color="red"]:after, .header-filter[filter-color="danger"]:after {
+  background: rgba(239, 154, 154, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(239, 154, 154, 0.56), rgba(239, 83, 80, 0.95));
+  /* Standard syntax */
+}
+.header-filter[filter-color="rose"]:after {
+  background: rgba(248, 187, 208, 0.56);
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(60deg, rgba(248, 187, 208, 0.56), rgba(240, 98, 146, 0.95));
+  /* Standard syntax */
+}
+
+.clear-filter:before {
+  display: none;
+}
+
+.header-1 .wrapper,
+.header-2 .wrapper,
+.header-3 .wrapper {
+  background: #CCCCCC;
+}
+
+.header-2 .page-header .container {
+  padding-top: 25vh;
+}
+.header-2 .page-header .card {
+  margin-top: 60px;
+}
+
+.header-3 .btn {
+  margin: 0;
+}
+.header-3 h6 {
+  margin-bottom: 0;
+}
+
+.phone-container img {
+  width: 100%;
+}
+
+.features-1 {
+  text-align: center;
+}
+
+.features-3 .info {
+  max-width: none;
+  margin: 0 auto;
+  padding: 10px 0 0px;
+}
+.features-3 .phone-container {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.features-4 .phone-container {
+  max-width: 260px;
+  margin: 60px auto 0;
+}
+.features-4 .info {
+  max-width: none;
+  margin: 0 auto;
+  padding: 10px 0 0px;
+}
+.features-4 .info:first-child {
+  padding-top: 130px;
+}
+
+.features-5 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.features-5:after {
+  background: rgba(0, 0, 0, 0.55);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+.features-5 .container,
+.features-5 .title {
+  position: relative;
+  z-index: 2;
+}
+.features-5 .title,
+.features-5 .info-title {
+  color: #FFFFFF;
+}
+.features-5 .info {
+  text-align: center;
+  max-width: 310px;
+  min-height: 320px;
+}
+.features-5 .info .icon {
+  color: #FFFFFF;
+}
+.features-5 .info .icon > i {
+  font-size: 2.8em;
+}
+.features-5 .info p {
+  color: #FFFFFF;
+  min-height: 120px;
+}
+.features-5 .container [class*="col-"] {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-top: 0;
+}
+.features-5 .container [class*="col-"] {
+  border-left: 0;
+}
+.features-5 .container [class*="col-"]:last-child {
+  border-right: 0;
+}
+.features-5 .container .row:last-child [class*="col-"] {
+  border-bottom: 0;
+}
+
+[class*="blogs-"] {
+  padding: 50px 0;
+}
+
+.blogs-1 .card {
+  margin-bottom: 80px;
+}
+
+.blogs-4 .card {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team-1 .card .content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.team-1 .card .description {
+  min-height: 90px;
+}
+.team-1 .card .btn {
+  margin-top: 0;
+}
+.team-1 h5.description {
+  margin-bottom: 80px;
+}
+
+.team-2 .card .title {
+  margin: 10px 0 0;
+}
+.team-2 .card h6 {
+  margin-top: 5px;
+}
+.team-2 h5.description {
+  margin-bottom: 80px;
+}
+
+.team-3 .card,
+.team-5 .card {
+  text-align: left;
+}
+.team-3 .card .footer,
+.team-5 .card .footer {
+  margin-top: 0;
+}
+.team-3 h5.description,
+.team-5 h5.description {
+  margin-bottom: 70px;
+}
+
+.team-4 h5.description {
+  margin-bottom: 100px;
+}
+
+.projects-1 .title {
+  margin-top: 10px;
+}
+.projects-1 .nav-pills {
+  display: inline-block;
+}
+
+.projects-2 h2.title {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.projects-2 .card-title {
+  margin-bottom: 5px;
+}
+.projects-2 .category {
+  color: #999999;
+  margin-top: 5px;
+}
+.projects-2 .card-description {
+  margin-top: 20px;
+}
+.projects-2 .card {
+  text-align: center;
+}
+
+.projects-3 h2.title,
+.projects-3 h3.title {
+  margin-bottom: 80px;
+  margin-top: 5px;
+}
+.projects-3 .card {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.projects-3 .category {
+  margin-bottom: 5px;
+}
+.projects-3 .card-title {
+  margin-top: 5px;
+}
+
+.projects-4 h2.title {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.projects-4 .info {
+  padding: 0;
+}
+.projects-4 .info p {
+  margin: 0;
+}
+.projects-4 .card-background {
+  margin-bottom: 0;
+}
+.projects-4 .card-background .content {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.projects-4 hr {
+  margin: 70px auto;
+  max-width: 970px;
+}
+
+.pricing-1 h2.title {
+  margin-bottom: 10px;
+}
+.pricing-1 .card-separator {
+  width: 1px;
+  display: block;
+  height: 100%;
+  background-color: rgba(153, 153, 153, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.pricing-1.section-image:after {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pricing-2 .nav-pills {
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.pricing-5 .nav-pills {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pricing-3 .title,
+.pricing-4 .title {
+  margin-bottom: 10px;
+}
+
+.testimonials-1 .description {
+  margin-bottom: 50px;
+}
+
+.contactus-1 .info {
+  padding: 0;
+  margin: 0;
+}
+.contactus-1 .info:first-child {
+  margin-top: 30px;
+}
+.contactus-1 .info .info-title {
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+.contactus-1 .info .icon {
+  margin-top: 14px;
+  color: #FFFFFF;
+}
+.contactus-1 .card-contact {
+  margin-top: 30px;
+}
+
+.contactus-2 {
+  padding: 0;
+}
+.contactus-2 .card-contact {
+  max-width: 560px;
+  margin: 80px 0 80px 150px;
+}
+.contactus-2 .card-contact .info {
+  padding: 0;
+  margin: 0;
+}
+.contactus-2 .map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.contactus-2 .info-horizontal .icon {
+  margin-top: 26px;
+}
+.contactus-2 .info-horizontal .icon > i {
+  font-size: 2.2em;
+  max-width: 45px;
+}
+
+footer {
+  padding: 15px 0;
+  text-align: center;
+}
+footer ul {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+}
+footer ul li a {
+  color: inherit;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+footer ul li a:hover,
+footer ul li a:focus{
+  color: #fff;
+}
+footer ul li .btn {
+  margin: 0;
+}
+footer ul.links-horizontal:first-child a {
+  padding-left: 0;
+}
+footer ul.links-horizontal:last-child a {
+  padding-right: 0;
+}
+footer ul.links-vertical li {
+  display: block;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+footer ul.links-vertical li a {
+  padding: 5px;
+}
+footer .social-buttons a,
+footer .social-buttons .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer .footer-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  margin-left: -15px;
+}
+footer .footer-brand:hover, footer .footer-brand:focus {
+  color: #3C4858;
+}
+footer .copyright {
+  padding: 15px 0;
+}
+footer .copyright .material-icons {
+  font-size: 18px;
+  position: relative;
+  top: 3px;
+}
+footer .pull-center {
+  display: inline-block;
+  float: none;
+}
+
+.footer-big {
+  padding: 30px 0;
+}
+.footer-big .content {
+  text-align: left;
+}
+.footer-big .social-feed i {
+  font-size: 20px;
+  display: table-cell;
+  padding-right: 10px;
+}
+.footer-big .social-feed p {
+  display: table-cell;
+  vertical-align: top;
+  overflow: hidden;
+  padding-bottom: 10px;
+  max-width: 300px;
+}
+.footer-big .gallery-feed img {
+  width: 20%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  float: left;
+}
+
+.footer-white {
+  background-color: #FFFFFF;
+}
+
+.footer-gray {
+  background-color: #eeeeee;
+}
+
+.footer-black {
+  background: #232323;
+  background: -moz-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #585858), color-stop(100%, #232323));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #585858 0%, #232323 100%);
+  /* W3C */
+  background-size: 550% 450%;
+}
+.footer-black a {
+  color: #FFFFFF;
+  opacity: .86;
+}
+.footer-black a:hover, .footer-black a:focus {
+  opacity: 1;
+}
+.footer-black .footer-brand {
+  color: #FFFFFF;
+}
+.footer-black .footer-brand:hover, .footer-black .footer-brand:focus {
+  color: #FFFFFF;
+}
+.footer-black h5,
+.footer-black h4,
+.footer-black i,
+.footer-black .copyright {
+  color: #FFFFFF;
+}
+.footer-black hr {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-line {
+  padding: 15px 0;
+}
+
+.social-line-big-icons [class*="col-"] {
+  border-right: 1px solid #eeeeee;
+}
+.social-line-big-icons [class*="col-"]:last-child {
+  border: 0;
+}
+.social-line-big-icons .btn {
+  margin: 0;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.social-line-big-icons .btn .fa {
+  font-size: 25px;
+}
+
+.subscribe-line {
+  padding: 30px 0;
+}
+.subscribe-line .card {
+  margin-top: 30px;
+}
+.subscribe-line.subscribe-line-image {
+  position: relative;
+  background-position: top center;
+  background-size: cover;
+}
+.subscribe-line.subscribe-line-image .title {
+  color: #FFFFFF;
+}
+.subscribe-line.subscribe-line-image:after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.66);
+}
+.subscribe-line.subscribe-line-image .container {
+  z-index: 2;
+  position: relative;
+}
+
+.social-line-white,
+.subscribe-line-white {
+  background-color: #FFFFFF;
+}
+
+.social-line-black,
+.subscribe-line-black {
+  background: #232323;
+  background: -moz-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #585858), color-stop(100%, #232323));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, #585858 0%, #232323 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, #585858 0%, #232323 100%);
+  /* W3C */
+  background-size: 550% 450%;
+}
+.social-line-black [class*="col-"],
+.subscribe-line-black [class*="col-"] {
+  border-color: rgba(255, 255, 255, 0.1);
+}
