@@ -436,7 +436,7 @@ request.on('connect', function(response, socket, head) { });   // Emitted each t
 request.on('upgrade', function(response, socket, head) { });   // Emitted each time a server responds to a request with an upgrade. If this event isn't being listened for, clients receiving an upgrade header will have their connections closed.
 request.on('continue', function() { });                        // Emitted when the server sends a '100 Continue' HTTP response, usually because the request contained 'Expect: 100-continue'. This is an instruction that the client should send the request body.
 
-response.write(chunk, [encoding]);                             // This sends a chunk of the response body. If this merthod is called and response.writeHead() has not been called, it will switch to implicit header mode and flush the implicit headers.
+response.write(chunk, [encoding]);                             // This sends a chunk of the response body. If this method is called and response.writeHead() has not been called, it will switch to implicit header mode and flush the implicit headers.
 response.writeContinue();                                      // Sends a HTTP/1.1 100 Continue message to the client, indicating that the request body should be sent.
 response.writeHead(statusCode, [reasonPhrase], [headers]);     // Sends a response header to the request.
 response.setTimeout(msecs, callback);                          // Sets the Socket's timeout value to msecs. If a callback is provided, then it is added as a listener on the 'timeout' event on the response object.
