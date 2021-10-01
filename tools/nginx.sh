@@ -165,7 +165,7 @@ server {
 # The majority of SSL options depend on what your application does or needs
 
 server {
-    listen 443 ssl;
+    listen 443 ssl http2;
     server_name example.com;
 
     ssl on;
