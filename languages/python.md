@@ -297,6 +297,22 @@ thisdict = {
   print(x)# Mustang
   print(car)#{'brand': 'Ford', 'year': 1964}
   ```
+- Retrieving list of key and value in dictionary. You can get a list of key, value or item both
+```
+ jjj = {'chuck': 1, 'jred': 42, 'jan': 100}
+ print(list(jjj))
+ print(jjj.key())
+ print(jjj.value())
+ print(jjj.items())
+ ```
+ - Two iteration variables!
+ - we loop through the key and value paris in a dicitionary using two iteration variable
+ - each iteration, the frist variable is key and the second variable is the corresponding value for the key
+ ```
+ jjj={'chuck': 1,'fred':42,'jan':100}
+ for key,value in jjj.items():
+    print(key, value)
+ ```
 
   
 
