@@ -70,15 +70,15 @@
 | yield | yields values instead of returning (are called generators) | returning keyword |
 | import | import libraries/modules/packages | import |
 | from | import specific function/classes from modules/packages | import |
-| try | this block will be tried to get executed | execption handling |
-| execpt | is any execption/error has occured it'll be executed | execption handling |
-| finally | It'll be executed no matter execption occurs or not | execption handling | 
-| raise | throws any specific error/execption | execption handling |
-| assert | throws an AssertionError if condition is false | execption handling |
+| try | this block will be tried to get executed | exception handling |
+| except | is any exception/error has occured it'll be executed | exception handling |
+| finally | It'll be executed no matter exception occurs or not | exception handling | 
+| raise | throws any specific error/exception | exception handling |
+| assert | throws an AssertionError if condition is false | exception handling |
 | async | used to define asynchronous functions/co-routines | asynchronous programming |
 | await | used to specify a point when control is taken back | asynchronous programming |
 | del | deletes/unsets any user defined data |  variable handling |
-| global | used to access variables defined outsied of function | variable handling |
+| global | used to access variables defined outside of function | variable handling |
 | nonlocal | modify variables from different scopes | variable handling |
 <br>
 
@@ -159,8 +159,8 @@ thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
   ```python
   thislist = ["apple", "banana", "cherry"] 
   
-  print(thislist.pop())# cherry
-  print(thislist.pop(0)) #apple 
+  print(thislist.pop())  # cherry
+  print(thislist.pop(0))  #apple 
   
   ```
 
@@ -194,7 +194,7 @@ print(len(thistuple))
 thistuple = ("apple",)
 print(type(thistuple))
 
-#NOT a tuple
+# NOT a tuple
 thistuple = ("apple")
 print(type(thistuple))
 ```
