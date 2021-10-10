@@ -164,6 +164,7 @@ info <command>           # shows another documentation system for the specific c
 help                     # shows documentation about built-in commands and functions
 df                       # shows disk usage
 du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
+resize2fs                # ext2/ext3/ext4 file system resizer
 last <yourUsername>      # lists your last logins
 ps -u yourusername       # lists your processes
 kill <PID>               # kills the processes with the ID you gave
