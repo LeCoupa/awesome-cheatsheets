@@ -46,6 +46,7 @@ CTRL+X then (   # start recording a keyboard macro
 CTRL+X then )   # finish recording keyboard macro
 CTRL+X then E   # recall last recorded keyboard macro
 CTRL+X then CTRL+E   # invoke text editor (specified by $EDITOR) on current command line then execute resultes as shell commands
+CTRAL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
