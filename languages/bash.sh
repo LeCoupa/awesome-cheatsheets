@@ -46,6 +46,7 @@ CTRL+X then (   # start recording a keyboard macro
 CTRL+X then )   # finish recording keyboard macro
 CTRL+X then E   # recall last recorded keyboard macro
 CTRL+X then CTRL+E   # invoke text editor (specified by $EDITOR) on current command line then execute resultes as shell commands
+CTRAL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
@@ -164,6 +165,7 @@ info <command>           # shows another documentation system for the specific c
 help                     # shows documentation about built-in commands and functions
 df                       # shows disk usage
 du <filename>            # shows the disk usage of the files and directories in filename (du -s give only a total)
+resize2fs                # ext2/ext3/ext4 file system resizer
 last <yourUsername>      # lists your last logins
 ps -u yourusername       # lists your processes
 kill <PID>               # kills the processes with the ID you gave
@@ -179,6 +181,7 @@ whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
+netstat                  # Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
 
 time <command>             # report time consumed by command execution
 
