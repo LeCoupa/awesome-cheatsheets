@@ -179,6 +179,7 @@ whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
+netstat                  # Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
 
 time <command>             # report time consumed by command execution
 
