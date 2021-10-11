@@ -98,3 +98,14 @@ git config --global alias.<handle> <command> # add git aliases to speed up workf
 # is a hidden directory in repo directory including git files. It is created after "git init".
 
 
+# Generate personal access tokens:-
+
+# "profile -> settings -> Developer settings -> Personal access tokens -> Generate new token"
+# After clicking generate new token check the required boxes as for the permissions you want to give to the token.
+
+# Save the generated token on your machine as it can be seen only once.
+
+
+git config --global credential.helper cache   #To save the token on local machine
+
+git config --global --unset credential.helper   # To clear the saved token on local machine ( in case you need to change it / when the token gets expired)
