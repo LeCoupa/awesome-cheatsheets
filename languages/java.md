@@ -1,8 +1,21 @@
 ### HELLO WORLD :ghost:
 
+1.
+
 ```java
 //Text file name HelloWorld.java
 public class HelloWorld {
+  // main() is the method
+  public static void main (String[] args)
+    //Prints "Hello World" in the terminal window.
+    System.out.println("Hello World");
+}
+```
+2.
+
+```java
+//Text file name HelloWorld.java
+class Main {
   // main() is the method
   public static void main (String[] args)
     //Prints "Hello World" in the terminal window.
@@ -13,13 +26,25 @@ public class HelloWorld {
 ### COMPILATION & EXECUTING JAVA CODE
 
 * Goto your program directory in terminal (Assumed JAVA Path is set)
-* After for compile your code
+* After that-
+
+1.
+* For compile your code
 
 > **javac HelloWorld.java (your program file name)**
   
 * For run program 
 
 > **java HelloWorld (main class name)**
+
+2.
+* For compile your code
+
+> **javac HelloWorld.java (your program file name)**
+  
+* For run program 
+
+> **java Main (main class name)**
 
 
 ### DATA TYPES
