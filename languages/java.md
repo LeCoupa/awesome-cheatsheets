@@ -469,7 +469,7 @@ class MyClass extends MySuperClass implements YourInterface {
 
       @Override
       public void draw(){
-        System.out.println("Drawing circle");
+        System.out.println("Drawing Circle");
       }
 
       @Override
