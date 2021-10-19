@@ -94,17 +94,17 @@ int c = a + b;
 ### PRINTING
 ```java
   String s = "Happy Coding Folks!!"
-  void System.out.print(String s) //print s
-  void System.out.println(String s) //print s, followed by a newline
+  void System.out.print(s) //print s
+  void System.out.println(s) //print s, followed by a newline
   void System.out.println() //print a newline
 ```
 
 ### PARSING COMMAND-LINE ARGUMENTS
 ```java 
   String s = "Java is the best!!"
-  int Integer.parseInt(String s) //convert s to an int value
-  double Double.parseDouble(String) //convert s to a double value
-  long Long.parseLong(String s) // convert s to a long value
+  int Integer.parseInt(s) //convert s to an int value
+  double Double.parseDouble(s) //convert s to a double value
+  long Long.parseLong(s) // convert s to a long value
 ````
 
 ### MATH LIBRARY
@@ -499,7 +499,7 @@ class MyClass extends MySuperClass implements YourInterface {
 * `Shape` is the superclass and there are two subclasses `Circle` and `Square`.
 * Below is an example of runtime polymorphism.
 ```java
-    class Main {
+class Main {
   public static void main(String[] args)
   {
     Shape sh = new Circle();
@@ -512,11 +512,11 @@ class MyClass extends MySuperClass implements YourInterface {
   }
 }
 ```
-* Output-
-Drawing circle
-Circle
-Drawing Square
-Square
+* Output- <br>
+Drawing circle <br>
+Circle <br>
+Drawing Square <br>
+Square <br>
 
 ### INHERITANCE
 
