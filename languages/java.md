@@ -1,6 +1,6 @@
 ### HELLO WORLD :ghost:
 
-1.
+1. class is public (File name and class name should be exactly same)
 
 ```java
 //Text file name HelloWorld.java
@@ -11,7 +11,7 @@ public class HelloWorld {
     System.out.println("Hello World");
 }
 ```
-2.
+2. class is default (File name and class name may not be same)
 
 ```java
 //Text file name HelloWorld.java
@@ -29,6 +29,7 @@ class Main {
 * After that-
 
 1.
+
 * For compile your code
 
 > **javac HelloWorld.java (your program file name)**
@@ -38,6 +39,7 @@ class Main {
 > **java HelloWorld (main class name)**
 
 2.
+
 * For compile your code
 
 > **javac HelloWorld.java (your program file name)**
@@ -298,7 +300,7 @@ for(dataType item : array) {
 
 ### ACCESS MODIFIERS
 
-1. defualt(No keyword required) 
+1. default(No keyword required) 
 2. private
 3. public
 4. protected 
