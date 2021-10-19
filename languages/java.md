@@ -6,9 +6,10 @@
 //Text file name HelloWorld.java
 public class HelloWorld {
   // main() is the method
-  public static void main (String[] args)
+    public static void main (String[] args) {
     //Prints "Hello World" in the terminal window.
-    System.out.println("Hello World");
+        System.out.println("Hello World");
+    }
 }
 ```
 2. class is default (File name and class name may not be same)
@@ -17,9 +18,10 @@ public class HelloWorld {
 //Text file name HelloWorld.java
 class Main {
   // main() is the method
-  public static void main (String[] args)
+    public static void main (String[] args) {
     //Prints "Hello World" in the terminal window.
-    System.out.println("Hello World");
+        System.out.println("Hello World");
+    }
 }
 ```
 
@@ -30,35 +32,39 @@ class Main {
 
 1.
 
-* For compile your code
+* To compile your code
 
 > **javac HelloWorld.java (your program file name)**
   
-* For run program 
+* To run program 
 
 > **java HelloWorld (main class name)**
 
 2.
 
-* For compile your code
+* To compile your code
 
 > **javac HelloWorld.java (your program file name)**
   
-* For run program 
+* To run program 
 
 > **java Main (main class name)**
 
 
 ### DATA TYPES
 
-|   Type  |      Set of values      |            Values            | Operators |
-|:-------:|:-----------------------:|:----------------------------:|:---------:|
-|   int   |         integers        | between -2^31 and + (2^31)-1 | + - * / % |
-|  double |  floating-point numbers |         real numbers         |  + - * /  |
-| boolean |      boolean values     |         true or false        | && \|\| ! |
-|   char  |        characters       |                              |           |
-|  String | sequences of characters |                              |           |
+|   Type  |      Set of values      |  Size  |            Values            | Operators |
+|:-------:|:-----------------------:|:------:|:----------------------------:|:---------:|
+|  byte   |                         | 1 byte |    between -128 and +127     |           |
+|  short  |                         | 2 bytes|  between -32,768 to +32,767  |           |
+|   int   |         integers        | 4 bytes| between -2^31 and +(2^31)-1  | + - * / % |
+|  long   |         integers        | 8 bytes| between -2^63 and +(2^63)-1  | + - * / % |
+|  float  |  floating-point numbers | 4 bytes|         real numbers         |  + - * /  |
+|  double |  floating-point numbers | 8 bytes|         real numbers         |  + - * /  |
+| boolean |      boolean values     | 1 bit  |         true or false        | && \|\| ! |
+|  char   |        characters       | 2 bytes|          characters          |           |
 
+> String is a class in Java.
 
 ### DECLARATION AND ASSIGNMENT STATEMENTS
 
@@ -255,6 +261,7 @@ for(dataType item : array) {
   while ( power <= 10/2 ) // power <= n/2 is an example of the loop-continuation condition
   {
     System.out.println(power);
+    ++power;
   }
 ```
 
@@ -295,12 +302,12 @@ for(dataType item : array) {
   int[] factorial = { 1, 1, 2, 6, 24, 120, 720, 5040 };
   char ac[]       = { 'n', 'o', 't', ' ', 'a', ' ',
                       'S', 't', 'r', 'i', 'n', 'g' };
-  String[] aas    = { "array", "of", "String", };
+  String[] aas    = { "array", "of", "Strings" };
 ```
 
 ### ACCESS MODIFIERS
 
-1. default(No keyword required) 
+1. default (No keyword required) 
 2. private
 3. public
 4. protected 
@@ -326,7 +333,7 @@ for(dataType item : array) {
   s = new String ("Hello World");
 
   //Invoke an instance method that operates on the object's value
-  char c = s.chartAt(4);
+  char c = s.charAt(4);
 ```
 > INSTANCE VARIABLES
 
@@ -394,11 +401,11 @@ class MyClass extends MySuperClass implements YourInterface {
     // method declarations
 }
 ```
-* MyClass is a subclass of MySuperClass and that it implements the YourInterface interface.
+* MyClass is a subclass of MySuperClass and implements the YourInterface interface.
 
 > CONSTRUCTORS
 * A class contains constructors that are invoked to create objects from the class blueprint.
-* Constructor declarations look like method declarations—except that they use the name of the class and have no return type
+* Constructor declarations look like method declarations—except that they use the name of the class and have no return type.
 * Each and every class has defualt No-args constructor.
 
 
@@ -429,62 +436,87 @@ class MyClass extends MySuperClass implements YourInterface {
 
 #### 1. Compile Time Polymorphism
 * Compile-time polymorphism is achieved by method overloading.
-* method overloading is creating multiple method with methods name is same and arguments are different. 
+* Method overloading is creating multiple methods with same method name but different argument(s). 
 ```java
   public class Circle {
 
     public void draw(){
-      System.out.println("Drwaing circle with default color Black and diameter 1 cm.");
+      System.out.println("Drawing circle with default color Black and diameter 1 cm.");
     }
 
     public void draw(int diameter){ //method draw() overloaded.
-      System.out.println("Drwaing circle with default color Black and diameter"+diameter+" cm.");
+      System.out.println("Drawing circle with default color Black and diameter"+diameter+" cm.");
     }
 
     public void draw(int diameter, String color){ //method draw() overloaded.
-      System.out.println("Drwaing circle with color"+color+" and diameter"+diameter+" cm.");
+      System.out.println("Drawing circle with color"+color+" and diameter"+diameter+" cm.");
     }
   }
 ```
 #### 2. Run Time Polymorphism
 * Run-time polymorphism is achieved by method overriding.
 * Runtime polymorphism is implemented when we have an **“IS-A”** relationship between objects.
-* method overriding is the subclass has to override the superclass method.
+* Method overriding is done by redefining the superclass method in the subclass.
 ```java
-    public interface Shape {
+    interface Shape {
 
-	    public void draw();
+      public void draw();
+      public String getShape();
     }
 ```
 ```java
-    public class Circle implements Shape{
+    class Circle implements Shape{
 
       @Override
       public void draw(){
-        System.out.println("Drwaing circle");
+        System.out.println("Drawing circle");
+      }
+
+      @Override
+      public String getShape()
+      {
+        return "Circle";
       }
 
     }
 ```
 ```java
-    public class Square implements Shape {
+    class Square implements Shape {
 
       @Override
       public void draw() {
         System.out.println("Drawing Square");
       }
 
+      @Override
+      public String getShape()
+      {
+        return "Square";
+      }
+
     }
 ```
-* `Shape` is the superclass and there are two subclasses `Circle` and `Square`
+* `Shape` is the superclass and there are two subclasses `Circle` and `Square`.
 * Below is an example of runtime polymorphism.
 ```java
+    class Main {
+  public static void main(String[] args)
+  {
     Shape sh = new Circle();
     sh.draw();
+    System.out.println(sh.getShape());
 
-    Shape sh1 = getShape(); //some third party logic to determine shape
-    sh1.draw();
+    sh = new Square(); //same reference now refers to a difference object of different subclass
+    sh.draw();
+    System.out.println(sh.getShape());
+  }
+}
 ```
+* Output-
+Drawing circle
+Circle
+Drawing Square
+Square
 
 ### INHERITANCE
 
@@ -527,13 +559,13 @@ class MyClass extends MySuperClass implements YourInterface {
     abstract class Flower{
         abstract String Smell(); //abstract method.
         String Oil(){  // non-abstract method. 
-           System.out.println("Flower Oil is good.");
+           return "Flower Oil is good.";
          }
     }
 
     public class Lily extends Flower{
         private String Smell(){ // implementation of abstarct method.
-          System.out.println("Lily smell's lovender.");
+          return "Lily smell's lovender.";
         }
     }
 ```
@@ -549,6 +581,7 @@ class MyClass extends MySuperClass implements YourInterface {
         void printPaper();  
     }  
     public class A4 implements print{  
+        @Override
         public void printPaper(){
           System.out.println("A4 Page Printed. ");
         }  
