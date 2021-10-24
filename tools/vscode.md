@@ -54,11 +54,17 @@
 
 - [`Gitignore`](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore): An extension for Visual Studio Code that assists you in working with .gitignore files.
 
+- [`GitLens`](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Visualize code authorship, code lens, seamlessly Git blame annotations and more.
+
+- [`Gitmoji`](https://marketplace.visualstudio.com/items?itemName=Vtrois.gitmoji-vscode): An emoji tool for your git commit messages.
+
 ### Themes
 
 - [`Material Icon Theme`](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme): Material Design Icons for Visual Studio Code.
 
 - [`Palenight Theme`](https://marketplace.visualstudio.com/items?itemName=whizkydee.material-palenight-theme): An elegant and juicy material-like theme for Visual Studio Code.
+
+- [`Office Theme`](https://marketplace.visualstudio.com/items?itemName=huacat.office-theme) A Microsoft Office theme for Visual Studio Code.
 
 ### Handy
 
@@ -95,6 +101,8 @@
 - [`VS Live Share`](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare): Real-time collaborative development from the comfort of your favorite tools.
 
 - [`Wrap Console Log`](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log): Wrap to console.log by word or selection.
+
+- [`Bracket Pair Colorizer`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer): Allows matching brackets to be identified with colours. 
 
 ## My Settings
 
