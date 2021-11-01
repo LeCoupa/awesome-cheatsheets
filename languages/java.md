@@ -578,8 +578,8 @@ class MyClass extends MySuperClass implements YourInterface {
 ```java
   public class Queue<Item> implements Iterable<Item>
 
-  Queue()  //create an emptyh queue
-  boolean isEmpthy()  //return if the queue empthy
+  Queue()  //create an empty queue
+  boolean isEmpty()  //return if the queue empty
   void enqueue(Item item) // insert an item onto queue
   Item dequeue()  //return and remove the item that was inserted least recently
   int size() //number of item on queue
@@ -591,7 +591,7 @@ class MyClass extends MySuperClass implements YourInterface {
 //import Iterator
 import java.util.Iterator;
 
-public class Queue<Item> implements Iterable <Item> { 
+public class Queue<Item> implements Iterable<Item> { 
 
 //FIFO queue
   private Node first;
@@ -627,9 +627,9 @@ public class Queue<Item> implements Iterable <Item> {
 * **SET DATA TYPE**
 
 ```java
-  public class SET<Key extends Comparable<Key>> implements Iterable<Key>
-  SET() //create an empthy set
-  boolean isEmpthy()  //return if the set is empthy
+  public class Set<Key extends Comparable<Key>> implements Iterable<Key>
+  Set() //create an empty set
+  boolean isEmpty()  //return if the set is empty
   void add (Key key)  //add key to the set
   void remove(Key key)  //remove key from set
   boolean contains(Key key) //return if the key is in the set
