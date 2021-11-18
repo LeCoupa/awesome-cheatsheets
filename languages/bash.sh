@@ -46,7 +46,7 @@ CTRL+X then (   # start recording a keyboard macro
 CTRL+X then )   # finish recording keyboard macro
 CTRL+X then E   # recall last recorded keyboard macro
 CTRL+X then CTRL+E   # invoke text editor (specified by $EDITOR) on current command line then execute resultes as shell commands
-CTRAL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
+CTRL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
@@ -88,7 +88,7 @@ readlink <filename>           # shows where a symbolic links points to
 tree                          # show directories and subdirectories in easilly readable file tree
 mc                            # terminal file explorer (alternative to ncdu)
 touch <filename>              # creates or updates (edit) your file
-mktemp -t <filename>            # make a temp file in /tmp/ which is deleted at next boot (-d to make directory)
+mktemp -t <filename>          # make a temp file in /tmp/ which is deleted at next boot (-d to make directory)
 cat <filename>                # prints file raw content (will not be interpreted)
 any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
 more <filename>               # shows the first part of a file (move with space and type q to quit)
@@ -183,7 +183,7 @@ dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
 netstat                  # Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
 
-time <command>             # report time consumed by command execution
+time <command>           # report time consumed by command execution
 
 
 ##############################################################################
