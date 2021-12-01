@@ -215,6 +215,7 @@ z=                  suggest word
 :q                  quit Vim. This fails when changes have been made.
 :q!                 quit without writing.
 :cq                 quit always, without writing.
+:w                  save without exiting.
 :wq                 write the current file and exit.
 :wq!                write the current file and exit always.
 :wq {file}          write to {file}. Exit if not editing the last
