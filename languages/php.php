@@ -66,6 +66,25 @@ arsort($arr); // Sort associative arrays in descending order, according to the v
 krsort($arr); // Sort associative arrays in descending order, according to the key.
 
 /**
+ * Conditions
+ */
+
+ // If/Elseif/Else
+if($i > 10) {
+
+} elseif( $i > 100) {
+
+} else {
+
+}
+
+// Ternary
+$string = $state == 'Running' ? 'He is running' : 'I don\'t know';
+
+// Null coalescing
+$string = $startDate ?? '';
+
+/**
  * Ways of looping
  */
 continue; // Skip current iter
@@ -143,6 +162,31 @@ $_COOKIE; // Array of cookies sent in request
 $_ENV; // php.ini options
 $argv; // Array of terminal arguments (filename included)
 $argc; // Number of arguments passed into terminal
+
+/**
+ * Functions
+ */
+
+ // Simple function
+ function name($parameter);
+
+ // Function with return type (void, int, float, string, array, object, mixed)
+ function name($parameter) : void;
+
+ // Function with optionnal parameter
+ function name($parameter = '') : string;
+
+ // Function with typed parameter (? means "can be null")
+ function name(?string $parameter) : ?string;
+
+ // Function with union types (PHP >= 8.0)
+ function name(int|string $parameter1, array $parameter2) : int|string;
+
+ // Function call
+ name('my_parameter');
+
+ // Null safe operator (PHP >= 8.0)
+ $myObject?->getName()?->startWith('A');
 
 /**
  * Class 
