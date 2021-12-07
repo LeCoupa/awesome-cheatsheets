@@ -223,6 +223,7 @@ declare -F                   # displays function names without definitions
 declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
+declare -u                   # lowercase values in the variable are converted to uppercase
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
 ${varname:word}              # if varname exists and isn't null, return its value; otherwise return word
