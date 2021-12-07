@@ -223,6 +223,8 @@ declare -F                   # displays function names without definitions
 declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
+declare -l                   # uppercase values in the variable are converted to lowercase
+declare -A                   # makes it an associative array
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
 ${varname:word}              # if varname exists and isn't null, return its value; otherwise return word
@@ -248,6 +250,7 @@ ${#varname}                  # returns the length of the value of the variable a
 
 $(UNIX command)              # command substitution: runs the command and returns standard output
 
+typeset -l <x>                 # makes variable local - <x> must be an interger
 
 ##############################################################################
 # FUNCTIONS
