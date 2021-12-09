@@ -70,15 +70,15 @@
 | yield | yields values instead of returning (are called generators) | returning keyword |
 | import | import libraries/modules/packages | import |
 | from | import specific function/classes from modules/packages | import |
-| try | this block will be tried to get executed | execption handling |
-| execpt | is any execption/error has occured it'll be executed | execption handling |
-| finally | It'll be executed no matter execption occurs or not | execption handling | 
-| raise | throws any specific error/execption | execption handling |
-| assert | throws an AssertionError if condition is false | execption handling |
+| try | this block will be tried to get executed | exception handling |
+| except | is any exception/error has occured it'll be executed | exception handling |
+| finally | It'll be executed no matter exception occurs or not | exception handling | 
+| raise | throws any specific error/exception | exception handling |
+| assert | throws an AssertionError if condition is false | exception handling |
 | async | used to define asynchronous functions/co-routines | asynchronous programming |
 | await | used to specify a point when control is taken back | asynchronous programming |
 | del | deletes/unsets any user defined data |  variable handling |
-| global | used to access variables defined outsied of function | variable handling |
+| global | used to access variables defined outside of function | variable handling |
 | nonlocal | modify variables from different scopes | variable handling |
 <br>
 
@@ -134,7 +134,7 @@
 
 - Lists are created using square brackets:
 
-```py
+```python
 thislist = ["apple", "banana", "cherry"] 
 ```
 
@@ -147,18 +147,31 @@ thislist = ["apple", "banana", "cherry"]
 - To determine how many items a list has, use the `len()` function.
 
 - A list can contain different data types:
-```py
+```python
 list1 = ["abc", 34, True, 40, "male"]
 ```
 - It is also possible to use the list() constructor when creating a new list
-```py
+```python
 thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
 ```
+- pop() function removes the last value in the given list by default.
+
+  ```python
+  thislist = ["apple", "banana", "cherry"] 
+  
+  print(thislist.pop())  # cherry
+  print(thislist.pop(0))  #apple 
+  
+  ```
+
+  
+
 ### Tuple
+
 - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 - A tuple is a collection which is ordered and unchangeable.
 - Tuples are written with round brackets.
-```py
+```python
 thistuple = ("apple", "banana", "cherry")
 ```
 - Tuple items are ordered, unchangeable, and allow duplicate values.
@@ -168,25 +181,25 @@ thistuple = ("apple", "banana", "cherry")
 - Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
 - Since tuple are indexed, tuples can have items with the same value:
 - Tuples allow duplicate values:
-```py
+```python
 thistuple = ("apple", "banana", "cherry", "apple", "cherry")
 ```
 - To determine how many items a tuple has, use the  `len()`function:
-```py
+```python
 thistuple = ("apple", "banana", "cherry")
 print(len(thistuple))
 ```
 - To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
-```py
+```python
 thistuple = ("apple",)
 print(type(thistuple))
 
-#NOT a tuple
+# NOT a tuple
 thistuple = ("apple")
 print(type(thistuple))
 ```
 - It is also possible to use the tuple() constructor to make a tuple.
-```py
+```python
 
 thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
 print(thistuple)
@@ -195,7 +208,7 @@ print(thistuple)
 ### Set
 - Set is a collection which is unordered and unindexed. No duplicate members.
 - A set is a collection which is both unordered and unindexed.
-```py
+```python
 thisset = {"apple", "banana", "cherry"}
 ```
 - Set items are unordered, unchangeable, and do not allow duplicate values.
@@ -206,27 +219,38 @@ thisset = {"apple", "banana", "cherry"}
 - Sets are unchangeable, meaning that we cannot change the items after the set has been created.
 - Duplicate values will be ignored.
 - To determine how many items a set has, use the `len()` method.
-```py
+```python
 thisset = {"apple", "banana", "cherry"}
 
 print(len(thisset))
 ```
 - Set items can be of any data type:
-```py
+```python
 set1 = {"apple", "banana", "cherry"}
 set2 = {1, 5, 7, 9, 3}
 set3 = {True, False, False}
 set4 = {"abc", 34, True, 40, "male"}
 ```
 - It is also possible to use the `set()` constructor to make a set.
-```py
+```python
 thisset = set(("apple", "banana", "cherry")) # note the double round-brackets
 ```
+- frozenset()  is just an immutable version of Set. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+
+```python
+set1 = {"apple", "banana", "cherry"}
+frzset=frozenset(set1)
+print(frzset)
+```
+
+
+
 ### Dictionary
+
 - Dictionary is a collection which is unordered and changeable. No duplicate members.
 - Dictionaries are used to store data values in key:value pairs.
 - Dictionaries are written with curly brackets, and have keys and values:
-```py
+```python
 thisdict = {
   "brand": "Ford",
   "model": "Mustang",
@@ -234,7 +258,7 @@ thisdict = {
 }
 ```
 - Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
-```py
+```python
 thisdict = {
   "brand": "Ford",
   "model": "Mustang",
@@ -246,11 +270,11 @@ print(thisdict["brand"])
 - Dictionaries cannot have two items with the same key.
 - Duplicate values will overwrite existing values.
 - To determine how many items a dictionary has, use the `len()` function.
-```py
+```python
 print(len(thisdict))
 ```
 - The values in dictionary items can be of any data type
-```py
+```python
 thisdict = {
   "brand": "Ford",
   "electric": False,
@@ -259,9 +283,26 @@ thisdict = {
 }
 ```
 
+- pop() Function is used to remove a specific value from a dictionary. You can only use key bot the value. Unlike Lists you have to give a value to this function
+
+  ```python
+   car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+  }
+  
+  x = car.pop("model")
+  
+  print(x)# Mustang
+  print(car)#{'brand': 'Ford', 'year': 1964}
+  ```
+
+  
+
 ### Conditional branching
 
-```py
+```python
     if condition:
         pass
     elif condition2:
@@ -278,7 +319,7 @@ thisdict = {
 #### While loop
 - With the `while` loop we can execute a set of statements as long as a condition is true.
 - Example: Print i as long as i is less than 6
-```py
+```python
 i = 1
 while i < 6:
   print(i)
@@ -296,7 +337,7 @@ while i < 6:
 - This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.
 
 - With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
-```py
+```python
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
   print(x)
@@ -310,7 +351,7 @@ A nested loop is a loop inside a loop.
 
 - The "inner loop" will be executed one time for each iteration of the "outer loop":
 
-```py
+```python
 adj = ["red", "big", "tasty"]
 fruits = ["apple", "banana", "cherry"]
 
@@ -320,19 +361,19 @@ for x in adj:
 ```
 - for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
 
-```py
+```python
 for x in [0, 1, 2]:
   pass
 ```
 
 ### Function definition
-```py
+```python
 def function_name():
     return
 ```
 ### Function call
 
-```py 
+```python
 function_name()
 ```
 
