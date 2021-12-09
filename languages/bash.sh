@@ -92,6 +92,7 @@ touch <filename>              # creates or updates (edit) your file
 mktemp -t <filename>          # make a temp file in /tmp/ which is deleted at next boot (-d to make directory)
 cat <filename>                # displays file raw content (will not be interpreted)
 cat -n <filename>             # shows number of lines
+nl <file.sh>                  # shows number of lines in file
 cat filename1 > filename2     # Copy filename1 to filename2
 cat filename1 >> filename2    # merge two files texts together 
 any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
