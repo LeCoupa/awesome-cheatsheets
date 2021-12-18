@@ -207,6 +207,10 @@ read -p "prompt" <varname>   # same as above but outputs a prompt to ask user fo
 column -t <filename>         # display info in pretty columns (often used with pipe)
 let <varname> = <equation>   # performs mathematical calculation using operators like +, -, *, /, %
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
+export -f  <funcname>        # Exports function 'funcname'
+export var1="var1 value"     # Export and assign in the same statement
+export <varname>             # Copy Bash variable 
+declare -x <varname>         # Copy Bash variable 
 
 array[0]=valA                # how to define an array
 array[1]=valB
