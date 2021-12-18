@@ -12,8 +12,25 @@ print_r($arr); // Print anything, with type hints for array's and object's
 var_dump($arr); // Print anything, with type hints for any value and sizes
 
 /**
+ * Usefull string manipulation methods
+ */
+$string = 'Awesome cheatsheets';
+
+str_contains($string, 'cheat'); // Find if the string contains the specified string (PHP >= 8.0)
+str_replace('Awesome', 'Bonjour', $string); // Replace all occurence (PHP >= 8.0)
+strcmp($string, 'Awesome cheatsheets'); // Compare two strings
+strpos($string, 'a', 0); // Get position in the string
+str_split($string, 2); // Split the string
+strrev($string); // Reverse a string
+trim($string); // Strip whitespace from the beginning and end of a string
+ucfirst($string); // Make a string's first character uppercase
+lcfirst($string); // Make a string's first character lowercase
+substr($string, 0, 4); // Return part of a string
+
+/**
  * Declaring an Array
  */
+
 // Indexed Array
 $arr = array("John", "Doe", "Lorem", "Ipsum");
 
@@ -28,6 +45,16 @@ $arr = array (
     array("Ipsum",170,150)
 );
 
+// Declaring array with short syntax
+$arr = ["John", "Doe", "Lorem", "Ipsum"]; // Indexed Array
+$arr = ["John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000"]; // Associative Array
+$arr = [
+    ["John",100,180],
+    ["Doe",150,130],
+    ["Lorem",500,200],
+    ["Ipsum",170,150], // You can have a "," at the end without throwing syntax errors
+];
+
 /**
  * Sorting an Array
  */
@@ -37,6 +64,25 @@ asort($arr); // Sort associative arrays in ascending order, according to the val
 ksort($arr); // Sort associative arrays in ascending order, according to the key.
 arsort($arr); // Sort associative arrays in descending order, according to the value.
 krsort($arr); // Sort associative arrays in descending order, according to the key.
+
+/**
+ * Conditions
+ */
+
+ // If/Elseif/Else
+if($i > 10) {
+
+} elseif( $i > 100) {
+
+} else {
+
+}
+
+// Ternary
+$string = $state == 'Running' ? 'He is running' : 'I don\'t know';
+
+// Null coalescing
+$string = $startDate ?? '';
 
 /**
  * Ways of looping
@@ -82,6 +128,26 @@ switch($arr) {
 }
 
 /**
+ * Match (PHP >= 8.0)
+ * https://www.php.net/manual/fr/control-structures.match.php
+ */
+$food = 'apple';
+$return_value = match($food) {
+    'apple', 'appel' => 'An apple',
+    'banana' => 'A banana',
+    'applepie' => 'An applepie',
+    default => 'A fruit'
+};
+
+//You can also use it as a conditionnal and throw exceptions
+$str = 'Welcome to awesome cheatsheets';
+$return_value = match(true) {
+    str_contains($str, 'Welcome') && str_contains($str ,'to') => 'en-EN',
+    str_contains($str, 'Bonjour') && str_contains($str, 'sur') => 'fr-FR',
+    default => throw new Exception('Not a recognized language')
+};
+
+/**
  * Global variables
  * http://php.net/manual/en/language.variables.superglobals.php
  */
@@ -96,6 +162,31 @@ $_COOKIE; // Array of cookies sent in request
 $_ENV; // php.ini options
 $argv; // Array of terminal arguments (filename included)
 $argc; // Number of arguments passed into terminal
+
+/**
+ * Functions
+ */
+
+ // Simple function
+ function name($parameter);
+
+ // Function with return type (void, int, float, string, array, object, mixed)
+ function name($parameter) : void;
+
+ // Function with optionnal parameter
+ function name($parameter = '') : string;
+
+ // Function with typed parameter (? means "can be null")
+ function name(?string $parameter) : ?string;
+
+ // Function with union types (PHP >= 8.0)
+ function name(int|string $parameter1, array $parameter2) : int|string;
+
+ // Function call
+ name('my_parameter');
+
+ // Null safe operator (PHP >= 8.0)
+ $myObject?->getName()?->startWith('A');
 
 /**
  * Class 
@@ -367,6 +458,48 @@ class ClassWithLogger
     use LoggerAwareTrait;
 }
 
+
+/**
+ * Enums (PHP >=8.1)
+ * https://www.php.net/manual/fr/language.types.enumerations.php
+ */
+
+ interface StateCode {
+    public function stateCode() : int;
+ }
+
+ enum States implements StateCode {
+     case Running;
+     case Stopped;
+
+     public function stateCode() : int {
+         return match($this) {
+             State::Running => '444',
+             State::Stopped => '666'
+         };
+     }
+ }
+
+ /**
+  * You can also declare backed Enums
+  */
+  enum States : int implements StateCode {
+    case Running = 1;
+    case Stopped = 0;
+
+    public function stateCode() : int {
+        return match($this) {
+            State::Running => '444',
+            State::Stopped => '666'
+        };
+    }
+}
+
+ /** Enums can be use as a type */
+ function notify(State $state) {
+     // ...
+ }
+ notify(State::Running);
 
 /**
  * PHP Regex.
