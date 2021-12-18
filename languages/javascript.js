@@ -63,6 +63,7 @@ arr.length                                           // Reflects the number of e
 arr.copyWithin(target, start, end)                   // Copies a sequence of array elements within the array.
 arr.fill(value, start, end)                          // Fills all the elements of an array from a start index to an end index with a static value.
 arr.pop()                                            // Removes the last element from an array and returns that element.
+arr.flat()                                           // merges nested array into one single array
 arr.push([element1[, ...[, elementN]]])              // Adds one or more elements to the end of an array and returns the new length of the array.
 arr.reverse()                                        // Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.
 arr.shift()                                          // Removes the first element from an array and returns that element.
