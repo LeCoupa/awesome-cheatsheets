@@ -85,5 +85,5 @@
 > 1. `$ source venv/bin/activate`	
 > 1. `$ pip install django`							
 > 1. `$ django-admin startproject myproject`
-> 1. `$ django-admin startapp myapp`
+> 1. `$ python manage.py startapp myapp`
 > 1. `$ python manage.py runserver`
