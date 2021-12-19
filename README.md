@@ -49,7 +49,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Python
 
-- [Django](backend/django.py)
+- [Django](backend/django.md)
 
 #### Javascript
 
