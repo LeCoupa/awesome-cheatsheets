@@ -87,3 +87,59 @@
 > 1. `$ django-admin startproject myproject`
 > 1. `$ python manage.py startapp myapp`
 > 1. `$ python manage.py runserver`
+
+---
+
+> # Models in Django
+> ## Step 1:
+> In the code given below, following implementations in your `models.py` file are shown:
+> * How to create models
+> * Different types of fields - CharField, ImageField, BooleanField, DateTimeField.
+> * Usage of `Ckeditor` that can enable *RichTextField* and give an interactive text editor panel to user in Django-Admin page.
+> * Implementation of Date and TIme stamp.
+> * Proper headline when it is seen in Django Admin page.
+>
+> ```
+> from django.db import models
+> from ckeditor.fields import RichTextField
+> from datetime import datetime
+> # Create your models here.
+> class <Model Name>(models.Model):
+>
+>    title = models.CharField(max_length=255)
+>    category = models.CharField(max_length=255, blank=True)
+>    photo = models.ImageField(upload_to='media/home/%Y/%m')
+>    content = RichTextField()
+>    author = models.CharField(max_length=255, blank=True)
+>    is_featured = models.BooleanField(default=False)
+>    created_date = models.DateTimeField(default=datetime.now)
+>
+>    def __str__(self):
+>        return self.title
+>  ```
+>
+> ## Step 2:
+> After creating models, we need to register them in `admin.py` page.
+> In your `admin.py` add the following code:
+> ```
+> from django.contrib import admin
+> from .models import <Model Name>
+>
+> admin.site.register(<Model Name>)
+> ```
+>
+> If you want some filters on your Django-Admin page, you can use the following code:
+> ```
+> from django.contrib import admin
+> from .models import <Model Name>
+> # Register your models here.
+>
+> class ModelDisplay(admin.ModelAdmin):
+> 
+>    list_display = ('id', 'name', 'email', 'subject', 'created_date',) # model fields that you want to display
+>    search_fields = ('name', 'email',) # model field that you want to add in search
+>    list_display_links = ('id', 'name', 'email',)
+>
+>
+> admin.site.register(<Model Name>, ModelDisplay)
+> ```  
