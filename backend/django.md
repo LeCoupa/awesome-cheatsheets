@@ -143,3 +143,9 @@
 >
 > admin.site.register(<Model Name>, ModelDisplay)
 > ```  
+> ## Step 3:
+> In your terminal run the following commands:
+> ```
+> python manage.py makemigrations
+> python manage.py migrate
+> ```
