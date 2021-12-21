@@ -37,6 +37,15 @@
 
 # Use underscores in URL pattern names rather than dashes.
 
+# *****************************************************************************
+# CODING STYLE > DATABASE
+# *****************************************************************************
+
+# 1.Register your app in admin file in your app folder to use admin panel in django
+# 2.Create a superuser using command python manage.py createsuperuser
+# 3.Remember to migrate after you change anything in your models.py file
+# 4.Use /admin/ page to add data in your tables for testing purpose
+
 
 # *****************************************************************************
 # Deployment
