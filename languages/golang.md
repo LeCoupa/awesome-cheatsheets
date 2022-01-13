@@ -1,820 +1,785 @@
-# Golang
+# GoLang
 
-## Summary
+# Index
+1. [Basic Syntax](#basic-syntax)
+2. [Operators](#operators)
+    * [Arithmetic](#arithmetic)
+    * [Comparison](#comparison)
+    * [Logical](#logical)
+    * [Other](#other)
+3. [Declarations](#declarations)
+4. [Functions](#functions)
+    * [Functions as values and closures](#functions-as-values-and-closures)
+    * [Variadic Functions](#variadic-functions)
+5. [Built-in Types](#built-in-types)
+6. [Type Conversions](#type-conversions)
+7. [Packages](#packages)
+8. [Control structures](#control-structures)
+    * [If](#if)
+    * [Loops](#loops)
+    * [Switch](#switch)
+9. [Arrays, Slices, Ranges](#arrays-slices-ranges)
+    * [Arrays](#arrays)
+    * [Slices](#slices)
+    * [Operations on Arrays and Slices](#operations-on-arrays-and-slices)
+10. [Maps](#maps)
+11. [Structs](#structs)
+12. [Pointers](#pointers)
+13. [Interfaces](#interfaces)
+14. [Embedding](#embedding)
+15. [Errors](#errors)
+16. [Concurrency](#concurrency)
+    * [Goroutines](#goroutines)
+    * [Channels](#channels)
+    * [Channel Axioms](#channel-axioms)
+17. [Printing](#printing)
+18. [Reflection](#reflection)
+    * [Type Switch](#type-switch)
+    * [Examples](https://github.com/a8m/reflect-examples)
+19. [Snippets](#snippets)
+    * [Files Embedding](#files-embedding)
+    * [HTTP Server](#http-server)
 
--   Introduction
-    -   [Hello World](#hello-world)
-    -   [Go CLI Commands](#go-cli-commands)
-    -   [Go Modules](#go-modules)
--   Basic
-    -   [Basic Types](#basic-types)
-    -   [Variables](#variables)
-    -   [Operators](#operators)
-    -   [Conditional Statements](#conditional-statements)
-    -   [Loops](#loops)
-    -   [Arrays](#arrays)
-    -   [Functions](#functions)
--   Advanced
-    -   [Structs](#structs)
-    -   [Maps](#maps)
-    -   [Pointers](#pointers)
-    -   [Methods and Interfaces](#methods-and-interfaces)
-    -   [Errors](#errors)
-    -   [Testing](#testing)
-    -   [Concurrency](#concurrency)
--   Standard Libs
-    -   [Package fmt](#package-fmt)
+## Credits
+
+Most example code taken from [A Tour of Go](http://tour.golang.org/), which is an excellent introduction to Go.
+If you're new to Go, do that tour. Seriously.
+
+## Go in a Nutshell
+
+* Imperative language
+* Statically typed
+* Syntax tokens similar to C (but less parentheses and no semicolons) and the structure to Oberon-2
+* Compiles to native code (no JVM)
+* No classes, but structs with methods
+* Interfaces
+* No implementation inheritance. There's [type embedding](http://golang.org/doc/effective%5Fgo.html#embedding), though.
+* Functions are first class citizens
+* Functions can return multiple values
+* Has closures
+* Pointers, but not pointer arithmetic
+* Built-in concurrency primitives: Goroutines and Channels
+
+# Basic Syntax
 
 ## Hello World
-
+File `hello.go`:
 ```go
 package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Hello Gophers!")
+    fmt.Println("Hello Go")
 }
 ```
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Go CLI Commands
-
-```bash
-# Compile & Run code
-$ go run [file.go]
-
-# Compile
-$ go build [file.go]
-# Running compiled file
-$ ./hello
-
-# Test packages
-$ go test [folder]
-
-# Install packages/modules
-$ go install [package]
-
-# List installed packages/modules
-$ go list
-
-# Update packages/modules
-$ go fix
-
-# Format package sources
-$ go fmt
-
-# See package documentation
-$ go doc [package]
-
-# Add dependencies and install
-$ go get [module]
-
-# See Go environment variables
-$ go env
-
-# See version
-$ go version
-```
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Go Modules
-
--   Go projects are called **modules**
--   Each module has multiple **packages**
--   Each package should has a scoped functionality. Packages talk to each other to compose the code
--   A module needs at least one package, the **main**
--   The package main needs a entry function called **main**
-
-```bash
-# Create Module
-$ go mod init [name]
-```
-
-Tip: By convention, modules names has the follow structure:
-
-domain.com/user/module/package
-
-Example: github.com/spf13/cobra
-
-<hr/>
-
-[Return to Summary](#summary)
-
-## Basic Types
-
-|    Type    |               Set of Values                |                    Values                     |
-| :--------: | :----------------------------------------: | :-------------------------------------------: |
-|    bool    |                  boolean                   |                  true/false                   |
-|   string   |            array of characters             |             needs to be inside ""             |
-|    int     |                  integers                  |             32 or 64 bit integer              |
-|    int8    |               8-bit integers               |                 [ -128, 128 ]                 |
-|   int16    |              16-bit integers               |               [ -32768, 32767]                |
-|   int32    |              32-bit integers               |          [ -2147483648, 2147483647]           |
-|   int64    |              64-bit integers               | [ -9223372036854775808, 9223372036854775807 ] |
-|   uint8    |          8-bit unsigned integers           |                  [ 0, 255 ]                   |
-|   uint16   |          16-bit unsigned integers          |                 [ 0, 65535 ]                  |
-|   uint32   |          32-bit unsigned integers          |               [ 0, 4294967295 ]               |
-|   uint64   |          64-bit unsigned integers          |          [ 0, 18446744073709551615 ]          |
-|  float32   |                32-bit float                |                                               |
-|  float64   |                64-bit float                |                                               |
-| complex64  | 32-bit float with real and imaginary parts |                                               |
-| complex128 | 64-bit float with real and imaginary parts |                                               |
-|    byte    |                sets of bits                |                alias for uint8                |
-|    rune    |             Unicode characters             |                alias for int32                |
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Variables
-
-```go
-// Declaration
-var value int
-
-// Initialization
-value = 10
-
-// Declaration + Initialization + Type inference
-var isActive = true
-
-// Short declaration (only inside functions)
-text := "Hello"
-
-// Multi declaration
-var i, j, k = 1, 2, 3
-
-// Variable not initialized = Zero values
-// Numeric: 0
-// Boolean: false
-// String: ""
-// Special value: nil (same as null)
-
-var number int // 0
-var text string // ""
-var boolean bool // false
-
-// Type conversions
-// T(v) converts v to type T
-
-i := 1.234 // float
-int(i) // 1
-
-// Constants
-const pi = 3.1415
-```
-
-<hr/>
+`$ go run hello.go`
 
 ## Operators
+### Arithmetic
+|Operator|Description|
+|--------|-----------|
+|`+`|addition|
+|`-`|subtraction|
+|`*`|multiplication|
+|`/`|quotient|
+|`%`|remainder|
+|`&`|bitwise and|
+|`\|`|bitwise or|
+|`^`|bitwise xor|
+|`&^`|bit clear (and not)|
+|`<<`|left shift|
+|`>>`|right shift|
 
-[Return to Summary](#summary)
+### Comparison
+|Operator|Description|
+|--------|-----------|
+|`==`|equal|
+|`!=`|not equal|
+|`<`|less than|
+|`<=`|less than or equal|
+|`>`|greater than|
+|`>=`|greater than or equal|
 
-Arithmetic Operators
-| Symbol | Operation | Valid Types |
-|:---------:|:-------------:|:-------------:|
-| `+` | Sum | integers, floats, complex values, strings |
-| `-` | Difference | integers, floats, complex values |
-| `*` | Product | integers, floats, complex values |
-| `/` | Quotient | integers, floats, complex values |
-| `%` | Remainder | integers |
-| `&` | Bitwise AND | integers |
-| `|` | Bitwise OR | integers |
-| `^` | Bitwise XOR | integers |
-| `&^` | Bit clear (AND NOT) | integers |
-| `<<` | Left shift | integer << unsigned integer |
-| `>>` | Right shift | integer >> unsigned integer |
+### Logical
+|Operator|Description|
+|--------|-----------|
+|`&&`|logical and|
+|`\|\|`|logical or|
+|`!`|logical not|
 
-Comparison Operators
-| Symbol | Operation |
-|:---------:|:-------------:|
-| `==` | Equal |
-| `!=` | Not equal |
-| `<` | Less |
-| `<=` | Less or equal |
-| `>` | Greater |
-| `>=` | Greater or equal |
+### Other
+|Operator|Description|
+|--------|-----------|
+|`&`|address of / create pointer|
+|`*`|dereference pointer|
+|`<-`|send / receive operator (see 'Channels' below)|
 
-Logical Operators
-| Symbol | Operation |
-|:---------:|:-------------:|
-| `&&` | Conditional AND |
-| `||` | Conditional OR |
-| `!` | NOT |
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Conditional Statements
-
+## Declarations
+Type goes after identifier!
 ```go
-// If / Else
-i := 1
+var foo int // declaration without initialization
+var foo int = 42 // declaration with initialization
+var foo, bar int = 42, 1302 // declare and init multiple vars at once
+var foo = 42 // type omitted, will be inferred
+foo := 42 // shorthand, only in func bodies, omit var keyword, type is always implicit
+const constant = "This is a constant"
 
-if i > 0 {
-    // Condition is True! i is greater than zero
-} else {
-    // Condition is False! i is lower or equal to zero
-}
-
-// Else if
-i := 1
-
-if i > 0 {
-    // Condition is True! i is greater than zero
-} else if i > 0 && i < 2 {
-    // Condition is True! i greater than zero and lower than two
-} else if i > 1 && i < 4 {
-    // Condition is True! i greater than one and lower than four
-} else {
-    // None of the above conditions is True, so it falls here
-}
-
-// If with short statements
-i := 2.567
-
-if j := int(i); j == 2 {
-    // Condition is True! j, the integer value of i, is equal to two
-} else {
-    // Condition is False! j, the integer value of i, is not equal to two
-}
-
-// Switch
-text := 'hey'
-
-switch text {
-    case 'hey':
-        // 'Hello!'
-    case 'bye':
-        // 'Byee'
-    default:
-        // 'Ok'
-}
-
-// Switch without condition
-value := 5
-
-switch {
-    case value < 2:
-        // 'Hello!'
-    case value >= 2 && value < 6:
-        // 'Byee'
-    default:
-        // 'Ok'
-}
+// iota can be used for incrementing numbers, starting from 0
+const (
+    _ = iota
+    a
+    b
+    c = 1 << iota
+    d
+)
+    fmt.Println(a, b) // 1 2 (0 is skipped)
+    fmt.Println(c, d) // 8 16 (2^3, 2^4)
 ```
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Loops
-
-```go
-// Golang only has the for loop
-for i := 0; i < 10; i++ {
-    // i
-}
-
-// The first and third parameters are ommitable
-// For as a while
-i := 0;
-
-for i < 10 {
-    i++
-}
-
-// Forever loop
-for {
-
-}
-```
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Arrays
-
-```go
-// Declaration with specified size
-var array [3]string
-array[0] = "Hello"
-array[1] = "Golang"
-array[2] = "World"
-
-// Declaration and Initialization
-values := [5]int{1, 2, 3, 4, 5}
-
-// Slices: A subarray that acts as a reference of an array
-// Determining min and max
-values[1:3] // {2, 3, 4}
-
-// Determining only max will use min = 0
-values[:2] // {1, 2, 3}
-
-// Determining only min will use max = last element
-values[3:] // {3, 4}
-
-// Length: number of elements that a slice contains
-len(values) // 5
-
-// Capacity: number of elements that a slice can contain
-values = values[:1]
-len(values) // 2
-cap(values) // 5
-
-// Slice literal
-slice := []bool{true, true, false}
-
-// make function: create a slice with length and capacity
-slice := make([]int, 5, 6) // make(type, len, cap)
-
-// Append new element to slice
-slice := []int{ 1, 2 }
-slice = append(slice, 3)
-slice // { 1, 2, 3 }
-slice = append(slice, 3, 2, 1)
-slice // { 1, 2, 3, 3, 2, 1 }
-
-// For range: iterate over a slice
-slice := string["W", "o", "w"]
-
-for i, value := range slice {
-    i // 0, then 1, then 2
-    value // "W", then "o", then "w"
-}
-
-// Skip index or value
-
-for i := range slice {
-    i // 0, then 1, then 2
-}
-
-for _, value := range slice {
-   value // "W", then "o", then "w"
-}
-```
-
-[Return to Summary](#summary)
-
-<hr/>
 
 ## Functions
-
 ```go
-// Functions acts as a scoped block of code
-func sayHello() {
-    // Hello World!
-}
-sayHello() // Hello World!
+// a simple function
+func functionName() {}
 
-// Functions can take zero or more parameters, as so return zero or more parameters
-func sum(x int, y int) int {
-    return x + y
-}
-sum(3, 7) // 10
+// function with parameters (again, types go after identifiers)
+func functionName(param1 string, param2 int) {}
 
-// Returned values can be named and be used inside the function
-func doubleAndTriple(x int) (double, triple int) {
-    double = x * 2
-    triple = x * 3
+// multiple parameters of the same type
+func functionName(param1, param2 int) {}
+
+// return type declaration
+func functionName() int {
+    return 42
+}
+
+// Can return multiple values at once
+func returnMulti() (int, string) {
+    return 42, "foobar"
+}
+var x, str = returnMulti()
+
+// Return multiple named results simply by return
+func returnMulti2() (n int, s string) {
+    n = 42
+    s = "foobar"
+    // n and s will be returned
     return
 }
-d, t := doubleAndTriple(5)
-// d = 10
-// t = 15
+var x, str = returnMulti2()
 
-// Skipping one of the returned values
-_, t := doubleAndTriple(3)
-// t = 9
-
-// Functions can defer commands. Defered commands are
-// runned in a stack order after the execution and
-// returning of a function
-var aux = 0
-
-func switchValuesAndDouble(x, y int) {
-    aux = x
-    defer aux = 0 // cleaning variable to post use
-    x = y * 2
-    y = aux * 2
-}
-
-a, b = 2, 5
-switchValuesAndDouble(2, 5)
-
-// a = 10
-// b = 4
-// aux = 0
-
-// Functions can be handled as values and be anonymous functions
-func calc(fn func(int, int) int) int {
-    return fn(2, 6)
-}
-
-func sum(x, y int) int {
-    return x + y
-}
-
-func mult(x, y int) int {
-    return x * y
-}
-
-calc(sum) // 8
-calc(mult) // 12
-calc(
-    func(x, y int) int {
-		return x / y
-    }
-) // 3
-
-// Function closures: a function that returns a function
-// that remembers the original context
-func calc() func(int) int {
-    value := 0
-    return func(x int) int {
-        value += x
-        return value
-    }
-}
-
-calculator := calc()
-calculator(3) // 3
-calculator(45) // 48
-calculator(12) // 60
 ```
 
-[Return to Summary](#summary)
+### Functions As Values And Closures
+```go
+func main() {
+    // assign a function to a name
+    add := func(a, b int) int {
+        return a + b
+    }
+    // use the name to call the function
+    fmt.Println(add(3, 4))
+}
 
-<hr/>
+// Closures, lexically scoped: Functions can access values that were
+// in scope when defining the function
+func scope() func() int{
+    outer_var := 2
+    foo := func() int { return outer_var}
+    return foo
+}
 
-## Structs
+func another_scope() func() int{
+    // won't compile because outer_var and foo not defined in this scope
+    outer_var = 444
+    return foo
+}
 
-Structs are a way to arrange data in specific formats.
+
+// Closures
+func outer() (func() int, int) {
+    outer_var := 2
+    inner := func() int {
+        outer_var += 99 // outer_var from outer scope is mutated.
+        return outer_var
+    }
+    inner()
+    return inner, outer_var // return inner func and mutated outer_var 101
+}
+```
+
+### Variadic Functions
+```go
+func main() {
+	fmt.Println(adder(1, 2, 3)) 	// 6
+	fmt.Println(adder(9, 9))	// 18
+
+	nums := []int{10, 20, 30}
+	fmt.Println(adder(nums...))	// 60
+}
+
+// By using ... before the type name of the last parameter you can indicate that it takes zero or more of those parameters.
+// The function is invoked like any other function except we can pass as many arguments as we want.
+func adder(args ...int) int {
+	total := 0
+	for _, v := range args { // Iterates over the arguments whatever the number.
+		total += v
+	}
+	return total
+}
+```
+
+## Built-in Types
+```go
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8
+
+rune // alias for int32 ~= a character (Unicode code point) - very Viking
+
+float32 float64
+
+complex64 complex128
+```
+
+All Go's predeclared identifiers are defined in the [builtin](https://golang.org/pkg/builtin/) package.  
+
+## Type Conversions
+```go
+var i int = 42
+var f float64 = float64(i)
+var u uint = uint(f)
+
+// alternative syntax
+i := 42
+f := float64(i)
+u := uint(f)
+```
+
+## Packages
+* Package declaration at top of every source file
+* Executables are in package `main`
+* Convention: package name == last name of import path (import path `math/rand` => package `rand`)
+* Upper case identifier: exported (visible from other packages)
+* Lower case identifier: private (not visible from other packages)
+
+## Control structures
+
+### If
+```go
+func main() {
+	// Basic one
+	if x > 10 {
+		return x
+	} else if x == 10 {
+		return 10
+	} else {
+		return -x
+	}
+
+	// You can put one statement before the condition
+	if a := b + c; a < 42 {
+		return a
+	} else {
+		return a - 42
+	}
+
+	// Type assertion inside if
+	var val interface{} = "foo"
+	if str, ok := val.(string); ok {
+		fmt.Println(str)
+	}
+}
+```
+
+### Loops
+```go
+    // There's only `for`, no `while`, no `until`
+    for i := 1; i < 10; i++ {
+    }
+    for ; i < 10;  { // while - loop
+    }
+    for i < 10  { // you can omit semicolons if there is only a condition
+    }
+    for { // you can omit the condition ~ while (true)
+    }
+    
+    // use break/continue on current loop
+    // use break/continue with label on outer loop
+here:
+    for i := 0; i < 2; i++ {
+        for j := i + 1; j < 3; j++ {
+            if i == 0 {
+                continue here
+            }
+            fmt.Println(j)
+            if j == 2 {
+                break
+            }
+        }
+    }
+
+there:
+    for i := 0; i < 2; i++ {
+        for j := i + 1; j < 3; j++ {
+            if j == 1 {
+                continue
+            }
+            fmt.Println(j)
+            if j == 2 {
+                break there
+            }
+        }
+    }
+```
+
+### Switch
+```go
+    // switch statement
+    switch operatingSystem {
+    case "darwin":
+        fmt.Println("Mac OS Hipster")
+        // cases break automatically, no fallthrough by default
+    case "linux":
+        fmt.Println("Linux Geek")
+    default:
+        // Windows, BSD, ...
+        fmt.Println("Other")
+    }
+
+    // as with for and if, you can have an assignment statement before the switch value
+    switch os := runtime.GOOS; os {
+    case "darwin": ...
+    }
+
+    // you can also make comparisons in switch cases
+    number := 42
+    switch {
+        case number < 42:
+            fmt.Println("Smaller")
+        case number == 42:
+            fmt.Println("Equal")
+        case number > 42:
+            fmt.Println("Greater")
+    }
+
+    // cases can be presented in comma-separated lists
+    var char byte = '?'
+    switch char {
+        case ' ', '?', '&', '=', '#', '+', '%':
+            fmt.Println("Should escape")
+    }
+```
+
+## Arrays, Slices, Ranges
+
+### Arrays
+```go
+var a [10]int // declare an int array with length 10. Array length is part of the type!
+a[3] = 42     // set elements
+i := a[3]     // read elements
+
+// declare and initialize
+var a = [2]int{1, 2}
+a := [2]int{1, 2} //shorthand
+a := [...]int{1, 2} // elipsis -> Compiler figures out array length
+```
+
+### Slices
+```go
+var a []int                              // declare a slice - similar to an array, but length is unspecified
+var a = []int {1, 2, 3, 4}               // declare and initialize a slice (backed by the array given implicitly)
+a := []int{1, 2, 3, 4}                   // shorthand
+chars := []string{0:"a", 2:"c", 1: "b"}  // ["a", "b", "c"]
+
+var b = a[lo:hi]	// creates a slice (view of the array) from index lo to hi-1
+var b = a[1:4]		// slice from index 1 to 3
+var b = a[:3]		// missing low index implies 0
+var b = a[3:]		// missing high index implies len(a)
+a =  append(a,17,3)	// append items to slice a
+c := append(a,b...)	// concatenate slices a and b
+
+// create a slice with make
+a = make([]byte, 5, 5)	// first arg length, second capacity
+a = make([]byte, 5)	// capacity is optional
+
+// create a slice from an array
+x := [3]string{"Лайка", "Белка", "Стрелка"}
+s := x[:] // a slice referencing the storage of x
+```
+
+### Operations on Arrays and Slices
+`len(a)` gives you the length of an array/a slice. It's a built-in function, not a attribute/method on the array.
 
 ```go
-// Declaring a struct
-type Person struct {
-    Name string
-    Age int
+// loop over an array/a slice
+for i, e := range a {
+    // i is the index, e the element
 }
 
-// Initializing
-person := Person{"John", 34}
-person.Name // "John"
-person.Age // 34
+// if you only need e:
+for _, e := range a {
+    // e is the element
+}
 
-person2 := Person{Age: 20}
-person2.Name // ""
-person2.Age // 20
+// ...and if you only need the index
+for i := range a {
+}
 
-person3 := Person{}
-person3.Name // ""
-person3.Age // 0
+// In Go pre-1.4, you'll get a compiler error if you're not using i and e.
+// Go 1.4 introduced a variable-free form, so that you can do this
+for range time.Tick(time.Second) {
+    // do it once a sec
+}
+
 ```
-
-[Return to Summary](#summary)
-
-<hr/>
 
 ## Maps
 
-Maps are data structures that holds values assigneds to a key.
-
 ```go
-// Declaring a map
-var cities map[string]string
+m := make(map[string]int)
+m["key"] = 42
+fmt.Println(m["key"])
 
-// Initializing
-cities = make(map[string]string)
-cities // nil
+delete(m, "key")
 
-// Insert
-cities["NY"] = "EUA"
+elem, ok := m["key"] // test if key "key" is present and retrieve it, if so
 
-// Retrieve
-newYork = cities["NY"]
-newYork // "EUA"
+// map literal
+var m = map[string]Vertex{
+    "Bell Labs": {40.68433, -74.39967},
+    "Google":    {37.42202, -122.08408},
+}
 
-// Delete
-delete(cities, "NY")
+// iterate over map content
+for key, value := range m {
+}
 
-// Check if a key is setted
-value, ok := cities["NY"]
-ok // false
-value // ""
 ```
 
-[Return to Summary](#summary)
+## Structs
 
-<hr/>
+There are no classes, only structs. Structs can have methods.
+```go
+// A struct is a type. It's also a collection of fields
+
+// Declaration
+type Vertex struct {
+    X, Y int
+}
+
+// Creating
+var v = Vertex{1, 2}
+var v = Vertex{X: 1, Y: 2} // Creates a struct by defining values with keys
+var v = []Vertex{{1,2},{5,2},{5,5}} // Initialize a slice of structs
+
+// Accessing members
+v.X = 4
+
+// You can declare methods on structs. The struct you want to declare the
+// method on (the receiving type) comes between the the func keyword and
+// the method name. The struct is copied on each method call(!)
+func (v Vertex) Abs() float64 {
+    return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+// Call method
+v.Abs()
+
+// For mutating methods, you need to use a pointer (see below) to the Struct
+// as the type. With this, the struct value is not copied for the method call.
+func (v *Vertex) add(n float64) {
+    v.X += n
+    v.Y += n
+}
+
+```
+**Anonymous structs:**
+Cheaper and safer than using `map[string]interface{}`.
+```go
+point := struct {
+	X, Y int
+}{1, 2}
+```
 
 ## Pointers
-
-Pointers are a direct reference to a memory address that some variable or value is being stored.
-
 ```go
-// Pointers has *T type
-var value int
-var pointer *int
+p := Vertex{1, 2}  // p is a Vertex
+q := &p            // q is a pointer to a Vertex
+r := &Vertex{1, 2} // r is also a pointer to a Vertex
 
-// Point to a variable memory address with &
-value = 3
-pointer = &value
+// The type of a pointer to a Vertex is *Vertex
 
-pointer // 3
-pointer = 20
-pointer // 20
-pointer += 5
-pointer // 25
-
-// Pointers to structs can access the attributes
-type Struct struct {
-    X int
-}
-
-s := Struct{3}
-pointer := &s
-
-s.X // 3
+var s *Vertex = new(Vertex) // new creates a pointer to a new struct instance
 ```
 
-Obs: Unlike C, Go doesn't have pointer arithmetics.
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Methods and Interfaces
-
-Go doesn't have classes. But you can implement methods, interfaces and almost everything contained in OOP, but in what gophers call "Go Way"
-
+## Interfaces
 ```go
-type Dog struct {
-    Name string
+// interface declaration
+type Awesomizer interface {
+    Awesomize() string
 }
 
-func (dog *Dog) bark() string {
-    return dog.Name + " is barking!"
-}
+// types do *not* declare to implement interfaces
+type Foo struct {}
 
-dog := Dog{"Rex"}
-dog.bark() // Rex is barking!
-```
-
-Interfaces are implicitly implemented. You don't need to inform that your struct are correctly implementing a interface if it already has all methods with the same name of the interface.
-All structs implement the `interface{}` interface. This empty interface means the same as `any`.
-
-```go
-// Car implements Vehicle interface
-type Vehicle interface {
-    Accelerate()
-}
-
-type Car struct {
-
-}
-
-func (car *Car) Accelerate() {
-    return "Car is moving on ground"
+// instead, types implicitly satisfy an interface if they implement all required methods
+func (foo Foo) Awesomize() string {
+    return "Awesome!"
 }
 ```
 
-[Return to Summary](#summary)
+## Embedding
 
-<hr/>
+There is no subclassing in Go. Instead, there is interface and struct embedding.
+
+```go
+// ReadWriter implementations must satisfy both Reader and Writer
+type ReadWriter interface {
+    Reader
+    Writer
+}
+
+// Server exposes all the methods that Logger has
+type Server struct {
+    Host string
+    Port int
+    *log.Logger
+}
+
+// initialize the embedded type the usual way
+server := &Server{"localhost", 80, log.New(...)}
+
+// methods implemented on the embedded struct are passed through
+server.Log(...) // calls server.Logger.Log(...)
+
+// the field name of the embedded type is its type name (in this case Logger)
+var logger *log.Logger = server.Logger
+```
 
 ## Errors
 
-Go doesn't support `throw`, `try`, `catch` and other common error handling structures. Here, we use `error` package to build possible errors as a returning parameter in functions
+There is no exception handling. Instead, functions that might produce an error just declare an additional return value of type [`error`](https://golang.org/pkg/builtin/#error). This is the `error` interface:
 
 ```go
-import "errors"
-
-// Function that contain a logic that can cause a possible exception flow 
-func firstLetter(text string) (string, error) {
-    if len(text) < 1 {
-        return nil, errors.New("Parameter text is empty")
-    }
-    return string(text[0]), nil
-}
-
-a, errorA := firstLetter("Wow")
-a // "W"
-errorA // nil
-
-b, errorB := firstLetter("")
-b // nil
-errorB // Error("Parameter text is empty")
-```
-
-[Return to Summary](#summary)
-
-<hr/>
-
-## Testing
-
-Go has a built-in library to unit testing. In a separate file you insert tests for functionalities of a file and run `go test package` to run all tests of the actual package or `go test path` to run a specific test file.
-
-```go
-// main.go
-func Sum(x, y int) int {
-    return x + y
-}
-
-// main_test.go
-import ( 
-    "testing"
-    "reflect"
-)
-
-func TestSum(t *testing.T) {
-    x, y := 2, 4
-    expected := 2 + 4
-
-    if !reflect.DeepEqual(Sum(x, y), expected) {
-        t.Fatalf("Function Sum not working as expected")
-    }
+// The error built-in interface type is the conventional interface for representing an error condition,
+// with the nil value representing no error.
+type error interface {
+    Error() string
 }
 ```
 
-[Return to Summary](#summary)
+Here's an example:
+```go
+func sqrt(x float64) (float64, error) {
+	if x < 0 {
+		return 0, errors.New("negative value")
+	}
+	return math.Sqrt(x), nil
+}
 
-<hr/>
+func main() {
+	val, err := sqrt(-1)
+	if err != nil {
+		// handle error
+		fmt.Println(err) // negative value
+		return
+	}
+	// All is good, use `val`.
+	fmt.Println(val)
+}
+```
 
-## Concurrency
+# Concurrency
 
-One of the main parts that make Go attractive is its form to handle with concurrency. Different than parallelism, where tasks can be separated in many cores that the machine processor have, in concurrency we have routines that are more lightweight than threads and can run asynchronously, with memory sharing and in a single core.
+## Goroutines
+Goroutines are lightweight threads (managed by Go, not OS threads). `go f(a, b)` starts a new goroutine which runs `f` (given `f` is a function).
 
 ```go
-// Consider a common function, but that function can delay itself because some processing
-func show(from string) {
-	for i := 0; i < 3; i++ {
-		fmt.Printf("%s : %d\n", from, i)
+// just a function (which can be later started as a goroutine)
+func doStuff(s string) {
+}
+
+func main() {
+    // using a named function in a goroutine
+    go doStuff("foobar")
+
+    // using an anonymous inner function in a goroutine
+    go func (x int) {
+        // function body goes here
+    }(42)
+}
+```
+
+## Channels
+```go
+ch := make(chan int) // create a channel of type int
+ch <- 42             // Send a value to the channel ch.
+v := <-ch            // Receive a value from ch
+
+// Non-buffered channels block. Read blocks when no value is available, write blocks until there is a read.
+
+// Create a buffered channel. Writing to a buffered channels does not block if less than <buffer size> unread values have been written.
+ch := make(chan int, 100)
+
+close(ch) // closes the channel (only sender should close)
+
+// read from channel and test if it has been closed
+v, ok := <-ch
+
+// if ok is false, channel has been closed
+
+// Read from channel until it is closed
+for i := range ch {
+    fmt.Println(i)
+}
+
+// select blocks on multiple channel operations, if one unblocks, the corresponding case is executed
+func doStuff(channelOut, channelIn chan int) {
+    select {
+    case channelOut <- 42:
+        fmt.Println("We could write to channelOut!")
+    case x := <- channelIn:
+        fmt.Println("We could read from channelIn")
+    case <-time.After(time.Second * 1):
+        fmt.Println("timeout")
+    }
+}
+```
+
+### Channel Axioms
+- A send to a nil channel blocks forever
+
+  ```go
+  var c chan string
+  c <- "Hello, World!"
+  // fatal error: all goroutines are asleep - deadlock!
+  ```
+- A receive from a nil channel blocks forever
+
+  ```go
+  var c chan string
+  fmt.Println(<-c)
+  // fatal error: all goroutines are asleep - deadlock!
+  ```
+- A send to a closed channel panics
+
+  ```go
+  var c = make(chan string, 1)
+  c <- "Hello, World!"
+  close(c)
+  c <- "Hello, Panic!"
+  // panic: send on closed channel
+  ```
+- A receive from a closed channel returns the zero value immediately
+
+  ```go
+  var c = make(chan int, 2)
+  c <- 1
+  c <- 2
+  close(c)
+  for i := 0; i < 3; i++ {
+      fmt.Printf("%d ", <-c)
+  }
+  // 1 2 0
+  ```
+
+## Printing
+
+```go
+fmt.Println("Hello, 你好, नमस्ते, Привет, ᎣᏏᏲ") // basic print, plus newline
+p := struct { X, Y int }{ 17, 2 }
+fmt.Println( "My point:", p, "x coord=", p.X ) // print structs, ints, etc
+s := fmt.Sprintln( "My point:", p, "x coord=", p.X ) // print to string variable
+
+fmt.Printf("%d hex:%x bin:%b fp:%f sci:%e",17,17,17,17.0,17.0) // c-ish format
+s2 := fmt.Sprintf( "%d %f", 17, 17.0 ) // formatted print to string variable
+
+hellomsg := `
+ "Hello" in Chinese is 你好 ('Ni Hao')
+ "Hello" in Hindi is नमस्ते ('Namaste')
+` // multi-line string literal, using back-tick at beginning and end
+```
+
+## Reflection
+### Type Switch
+A type switch is like a regular switch statement, but the cases in a type switch specify types (not values) which are compared against the type of the value held by the given interface value.
+```go
+func do(i interface{}) {
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Twice %v is %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q is %v bytes long\n", v, len(v))
+	default:
+		fmt.Printf("I don't know about type %T!\n", v)
 	}
 }
 
-// In a blocking way...
 func main() {
-	show("blocking1")
-	show("blocking2")
-
-	fmt.Println("done")
+	do(21)
+	do("hello")
+	do(true)
 }
-/*  blocking1: 0
-    blocking1: 1
-    blocking1: 2
-    blocking2: 0
-    blocking2: 1
-    blocking2: 2
-    done 
-*/
-
-// Go routines are a function (either declared previously or anonymous) called with the keyword go
-func main() {
-	go show("routine1")
-	go show("routine2")
-
-	go func() {
-		fmt.Println("going")
-	}()
-
-	time.Sleep(time.Second)
-
-	fmt.Println("done")
-}
-
-/*  Obs: The result will depends of what processes first
-    routine2: 0
-    routine2: 1
-    routine2: 2
-    going
-    routine1: 0
-    routine1: 1
-    routine1: 2
-    done
-*/
-
-// Routines can share data with channels
-// Channels are queues that store data between multiple routines
-msgs := make(chan string)
-
-go func(channel chan string) {
-    channel <- "ping"
-}(msgs)
-
-go func(channel chan string) {
-    channel <- "pong"
-}(msgs)
-
-fmt.Println(<-msgs) // pong
-fmt.Println(<-msgs) // ping
-
-// Channels can be bufferized. Buffered channels will accept a limited number of values and when someone try to put belong their limit, it will throw and error
-numbers := make(chan int, 2)
-
-msgs<-0
-msgs<-1
-msgs<-2
-
-// fatal error: all goroutines are asleep - deadlock!
-
-// Channels can be passed as parameter where the routine can only send or receive
-numbers := make(chan int)
-
-go func(sender chan<- int) {
-    sender <- 10
-}(numbers)
-
-go func(receiver <-chan int) {
-    fmt.Println(<-receiver) // 10
-}(numbers)
-
-time.Sleep(time.Second)
-
-// When working with multiple channels, the select can provide a control to execute code accordingly of what channel has bring a message
-c1 := make(chan string)
-c2 := make(chan string)
-
-select {
-case msg1 := <-c1:
-    fmt.Println("received", msg1)
-case msg2 := <-c2:
-    fmt.Println("received", msg2)
-default:
-    fmt.Println("no messages")
-}
-
-go func() {
-    time.Sleep(1 * time.Second)
-    c1 <- "channel1 : one"
-}()
-go func() {
-    time.Sleep(2 * time.Second)
-    c2 <- "channel2 : one"
-}()
-
-for i := 0; i < 2; i++ {
-    select {
-    case msg1 := <-c1:
-        fmt.Println("received", msg1)
-    case msg2 := <-c2:
-        fmt.Println("received", msg2)
-    }
-}
-
-/*
-    no messages
-    received channel1: one
-    received channel2: one
-*/
-
-// Channels can be closed and iterated
-channel := make(chan int, 5)
-
-for i := 0; i < 5; i++ {
-    channel <- i
-}
-
-close(channel)
-
-for value := range channel {
-    fmt.Println(value)
-}
-
-/*
-    0
-    1
-    2
-    3
-    4
-*/
 ```
 
-[Return to Summary](#summary)
+# Snippets
 
-<hr/>
+## Files Embedding
 
-## Package `fmt`
+Go programs can embed static files using the `"embed"` package as follows:
 
 ```go
-import "fmt"
+package main
 
-fmt.Print("Hello World") // Print in console
-fmt.Println("Hello World") // Print and add a new line in end
-fmt.Printf("%s is %d years old", "John", 32) // Print with formatting
-fmt.Errorf("User %d not found", 123) // Print a formatted error
+import (
+	"embed"
+	"log"
+	"net/http"
+)
+
+// content holds the static content (2 files) for the web server.
+//go:embed a.txt b.txt
+var content embed.FS
+
+func main() {
+	http.Handle("/", http.FileServer(http.FS(content)))
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
 ```
 
-[Return to Summary](#summary)
+[Full Playground Example](https://play.golang.org/p/pwWxdrQSrYv)
 
-<hr/>
+## HTTP Server
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+// define a type for the response
+type Hello struct{}
+
+// let that type implement the ServeHTTP method (defined in interface http.Handler)
+func (h Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprint(w, "Hello!")
+}
+
+func main() {
+    var h Hello
+    http.ListenAndServe("localhost:4000", h)
+}
+
+// Here's the method signature of http.ServeHTTP:
+// type Handler interface {
+//     ServeHTTP(w http.ResponseWriter, r *http.Request)
+// }
+```
+
