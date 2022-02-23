@@ -92,6 +92,7 @@ touch <filename>              # creates or updates (edit) your file
 mktemp -t <filename>          # make a temp file in /tmp/ which is deleted at next boot (-d to make directory)
 cat <filename>                # displays file raw content (will not be interpreted)
 cat -n <filename>             # shows number of lines
+nl <file.sh>                  # shows number of lines in file
 cat filename1 > filename2     # Copy filename1 to filename2
 cat filename1 >> filename2    # merge two files texts together 
 any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
@@ -206,6 +207,10 @@ read -p "prompt" <varname>   # same as above but outputs a prompt to ask user fo
 column -t <filename>         # display info in pretty columns (often used with pipe)
 let <varname> = <equation>   # performs mathematical calculation using operators like +, -, *, /, %
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
+export -f  <funcname>        # Exports function 'funcname'
+export var1="var1 value"     # Export and assign in the same statement
+export <varname>             # Copy Bash variable 
+declare -x <varname>         # Copy Bash variable 
 
 array[0]=valA                # how to define an array
 array[1]=valB
@@ -223,6 +228,8 @@ declare -F                   # displays function names without definitions
 declare -i                   # the variables are treated as integers
 declare -r                   # makes the variables read-only
 declare -x                   # marks the variables for export via the environment
+declare -l                   # uppercase values in the variable are converted to lowercase
+declare -A                   # makes it an associative array
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
 ${varname:word}              # if varname exists and isn't null, return its value; otherwise return word
@@ -248,6 +255,7 @@ ${#varname}                  # returns the length of the value of the variable a
 
 $(UNIX command)              # command substitution: runs the command and returns standard output
 
+typeset -l <x>                 # makes variable local - <x> must be an interger
 
 ##############################################################################
 # FUNCTIONS
