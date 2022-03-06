@@ -23,3 +23,6 @@ lsof -i :9000 # List process running on port 9000
 journalctl -u minio.service -n 100 --no-pager # List last 100 logs for specific service
 
 sudo resize2fs /dev/disk/by-id/scsi-0DO_example # Resize volume
+
+ps -ax | grep myprocessname # Search process
+kill -9 PROCESS_ID # Kill process PID
