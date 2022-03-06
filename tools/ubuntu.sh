@@ -24,5 +24,5 @@ journalctl -u minio.service -n 100 --no-pager # List last 100 logs for specific 
 
 sudo resize2fs /dev/disk/by-id/scsi-0DO_example # Resize volume
 
-ps -ax | grep myprocessname # Search process
+ps -ax | grep myprocessname # Search processes
 kill -9 PROCESS_ID # Kill process PID
