@@ -232,10 +232,10 @@ declare -l                   # uppercase values in the variable are converted to
 declare -A                   # makes it an associative array
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
-${varname:word}              # if varname exists and isn't null, return its value; otherwise return word
 ${varname:=word}             # if varname exists and isn't null, return its value; otherwise set it word and then return its value
 ${varname:?message}          # if varname exists and isn't null, return its value; otherwise print varname, followed by message and abort the current command or script
 ${varname:+word}             # if varname exists and isn't null, return word; otherwise return null
+${varname:offset}            # performs substring expansion. It returns the substring of $varname starting at offset to the end
 ${varname:offset:length}     # performs substring expansion. It returns the substring of $varname starting at offset and up to length characters
 
 ${variable#pattern}          # if the pattern matches the beginning of the variable's value, delete the shortest part that matches and return the rest
