@@ -7,6 +7,38 @@
 
 
 ##############################################################################
+# INSERT MODE
+##############################################################################
+
+
+i                   start insert mode at cursor
+I                   insert at the beginning of the line
+a                   append after the cursor
+A                   append at the end of the line
+o                   open (append) blank line below current line
+O                   open blank line above current line
+<Esc>                 exit insert mode
+
+
+##############################################################################
+# EXITING
+##############################################################################
+
+
+:q                  quit Vim, fails when changes have been made
+:q!                 quit without writing
+:cq                 quit always, without writing
+:w                  save without exiting
+:wq                 write the current file and exit
+:wq!                write the current file and exit always
+:wq {file}          write to {file} Exit if not editing the last
+:wq! {file}         write to {file} and exit always
+:[range]wq[!]       same as above, but only write the lines in [range]
+ZZ                  write current file, if modified, and exit
+ZQ                  quit current file and exit (same as ":q!")
+
+
+##############################################################################
 # CURSOR MOVEMENTS
 ##############################################################################
 
@@ -57,32 +89,7 @@ tx                  find and move to next occurance of x on current line
 Tx                  find and move to previous occurance of x on current line
 ;                   rerun last f/F/t/T movement
 ,                   rerun last f/F/t/T movement but in the opposite way
-
-
-##############################################################################
-# BOOKMARKS
-##############################################################################
-
-
-:marks              list all the current marks
-ma                  make a bookmark named a at the current cursor position
-`a                  go to position of bookmark a
-'a                  go to the line with bookmark a
-`.                  go to the line that you last edited
-
-
-##############################################################################
-# INSERT MODE
-##############################################################################
-
-
-i                   start insert mode at cursor
-I                   insert at the beginning of the line
-a                   append after the cursor
-A                   append at the end of the line
-o                   open (append) blank line below current line
-O                   open blank line above current line
-<Esc>                 exit insert mode
+%                   show matching brace, bracket, or parenthese
 
 
 ##############################################################################
@@ -230,24 +237,6 @@ z=                  suggest word
 
 
 ##############################################################################
-# EXITING
-##############################################################################
-
-
-:q                  quit Vim, fails when changes have been made
-:q!                 quit without writing
-:cq                 quit always, without writing
-:w                  save without exiting
-:wq                 write the current file and exit
-:wq!                write the current file and exit always
-:wq {file}          write to {file} Exit if not editing the last
-:wq! {file}         write to {file} and exit always
-:[range]wq[!]       same as above, but only write the lines in [range]
-ZZ                  write current file, if modified, and exit
-ZQ                  quit current file and exit (same as ":q!")
-
-
-##############################################################################
 # SEARCH/REPLACE
 ##############################################################################
 
@@ -264,6 +253,18 @@ set noignorecase            ignore case: turn off
 :%s/old/new/gc              replace all old with new throughout file with confirmation
 :argdo %s/old/new/gc | wq   open multiple files and run this command to replace old 
                             with new in every file with confirmation, save and quit
+
+
+##############################################################################
+# BOOKMARKS
+##############################################################################
+
+
+:marks              list all the current marks
+ma                  make a bookmark named a at the current cursor position
+`a                  go to position of bookmark a
+'a                  go to the line with bookmark a
+`.                  go to the line that you last edited
 
 
 ##############################################################################
@@ -327,7 +328,6 @@ clast               display the last error
 ##############################################################################
 
 
-%                   show matching brace, bracket, or parenthese
 gf                  edit the file whose name is under or after the cursor
 gd                  if cursor is on a local variable or function, jump to its declaration
 ''                  return to the line where the cursor was before the latest jump
