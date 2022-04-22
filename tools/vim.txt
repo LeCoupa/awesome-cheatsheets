@@ -2,6 +2,7 @@
 # VIM CHEATSHEET
 # WEBSITE: http://www.vim.org/  
 # DOCUMENTATION: https://vim.sourceforge.io/docs.php
+# CTRL-A = <C-a>
 ##############################################################################
 
 
@@ -10,10 +11,12 @@
 ##############################################################################
 
 
-h                   move left
-j                   move down
-k                   move up
-l                   move right
+h                   move a character left
+j                   move a line down
+k                   move a line up
+l                   move a character right
+gj                  move a visual line down
+gk                  move a visual line up
 w                   jump by start of words (punctuation considered words)
 W                   jump by words (spaces separate words)
 e                   jump to end of words (punctuation considered words)
@@ -22,33 +25,38 @@ b                   jump backward by words (punctuation considered words)
 B                   jump backward by words (no punctuation)
 ge                  jump backward to end of words
 0                   (zero) start of line
-^                   first non-blank character of line
+^                   first non-whitespace character of line
 $                   end of line
--                   move line upwards, on the first non blank character
-+                   move line downwards, on the first non blank character
-<enter>             move line downwards, on the first non blank character
+n$                  move to the end of line n lines down
+-                   move line upwards, on the first non-whitespace character
++                   move line downwards, on the first non-whitespace character
+<enter>             move line downwards, on the first non-whitespace character
 gg                  go to first line
 G                   go to last line
 ngg                 go to line n
-nG                  go To line n
-:n                  go To line n
-)                   move the cursor forward to the next sentence.
-(                   move the cursor backward by a sentence.
+nG                  go to line n
+:n                  go to line n
+:-n                 go n lines up, like nk
+:+n                 go n lines down, like nj
+)                   move the cursor forward to the next sentence
+(                   move the cursor backward by a sentence
 {                   move the cursor a paragraph backwards
 }                   move the cursor a paragraph forwards
 ]]                  move the cursor a section forwards or to the next {
 [[                  move the cursor a section backwards or the previous {
-CTRL-f              move the cursor forward by a screen of text
-CTRL-b              move the cursor backward by a screen of text
-CTRL-u              move the cursor up by half a screen
-CTRL-d              move the cursor down by half a screen
-H                   move the cursor to the top of the screen.
-M                   move the cursor to the middle of the screen.
-L                   move the cursor to the bottom of the screen.
-fx                  search line forward for 'x'
-Fx                  search line backward for 'x'
-tx                  search line forward before 'x'
-Tx                  search line backward before 'x'
+<C-f>               move the cursor forward by a screen of text
+<C-b>               move the cursor backward by a screen of text
+<C-u>               move the cursor up by half a screen
+<C-d>               move the cursor down by half a screen
+H                   move the cursor to the top of the screen
+M                   move the cursor to the middle of the screen
+L                   move the cursor to the bottom of the screen
+fx                  find and move on next occurance of x on current line
+Fx                  find and move on previous occurance of x on current line
+tx                  find and move to next occurance of x on current line
+Tx                  find and move to previous occurance of x on current line
+;                   rerun last f/F/t/T movement
+,                   rerun last f/F/t/T movement but in the opposite way
 
 
 ##############################################################################
@@ -74,7 +82,7 @@ a                   append after the cursor
 A                   append at the end of the line
 o                   open (append) blank line below current line
 O                   open blank line above current line
-Esc                 exit insert mode
+<Esc>                 exit insert mode
 
 
 ##############################################################################
@@ -84,16 +92,25 @@ Esc                 exit insert mode
 
 r                   replace a single character (does not use insert mode)
 R                   enter Insert mode, replacing characters rather than inserting
-J                   join line below to the current one
-cc                  change (replace) an entire line
-cw                  change (replace) to the end of word
-C                   change (replace) to the end of line
-ct'                 change (replace) until the ' character (can change ' for any character)
+J                   join line below to the current one and add space
+gJ                  join line below to the current one without adding space
+cc                  change an entire line
+cw                  change to the end of word
+ciw                 change whole word regardless of where you are in it
+cip                 change in paragaph (between new lines)
+cap                 change around paragaph and the paragraph itself
+ci(                 change in pair of (, works with { [ " ' too
+ca(                 change in and around pair of (, works with { [ " ' too
+C                   change to the end of line
+ct'                 change until the ' character (can change ' for any character)
+ci"                 change everything in the next " on the line
 s                   delete character at cursor and substitute text
 S                   delete line at cursor and substitute text (same as cc)
 xp                  transpose two letters (delete and paste, technically)
 u                   undo
-CTRL-r              redo
+<C-r>               redo
+<C-a>               increment number under cursor
+<C-x>               decrement number under cursor
 .                   repeat last command
 ~                   switch case
 g~iw                switch case of current word
@@ -103,12 +120,15 @@ gU$                 make uppercase until end of line
 gu$                 make lowercase until end of line
 >>                  indent line one column to right
 <<                  indent line one column to left
+<ip                 indent in paragraph to the left
+>ip                 outdent in paragraph to the left
+<ap                 indent around paragraph to the left and the paragraph itself
+>ap                 outdent around paragraph to the left and the paragraph itself
 ==                  auto-indent current line
 ddp                 swap current line with next
 ddkp                swap current line with previous
-:%retab             fix spaces / tabs issues in whole file
-:r [name]           insert the file [name] below the cursor.
-:r !{cmd}           execute {cmd} and insert its standard output below the cursor.
+g??                 rot13 encode current line, useful for spoilering text
+<C-r>=3+3           in insert mode, will evaluate 3+3 and paste it, works with simple expressions
 
 
 ##############################################################################
@@ -120,10 +140,14 @@ x                   delete current character
 X                   delete previous character
 dw                  delete the current word
 dd                  delete (cut) a line
+diw                 delete whole word regardless of where you are in it
+dip                 delte in paragraph
+dap                 delte around paragraph and the paragraph itself
 dt'                 delete until the next ' character on the line (replace ' by any character)
 D                   delete from cursor to end of line
 :[range]d           delete [range] lines
-
+di(                 delete in pair of (, works with { [ " ' too
+da(                 delete in and around pair of (, works with { [ " ' too
 
 ##############################################################################
 # COPYING AND MOVING TEXT
@@ -132,8 +156,13 @@ D                   delete from cursor to end of line
 
 yw                  yank word
 yy                  yank (copy) a line
-2yy                 yank 2 lines
+nyy                 yank n lines
 y$                  yank to end of line
+yiw                 yank whole word regardless of where you are in it
+yip                 yank in paragaph (between new lines)
+yap                 yank around paragaph and the paragraph itself
+yi(                 yank in pair of (, works with { [ " ' too
+ya(                 yank in and around pair of (, works with { [ " ' too
 p                   put (paste) the clipboard after cursor/current line
 P                   put (paste) before cursor/current line
 :set paste          avoid unexpected effects in pasting
@@ -153,11 +182,13 @@ P                   put (paste) before cursor/current line
 ##############################################################################
 
 
-qa                  start recording macro 'a'
+qa                  start recording macro to register a
 q                   end recording macro
 @a                  replay macro 'a'
+@@                  replay last macro
 @:                  replay last command
-
+"ap                 paste the conents of the a register/macro
+"ayy                yank the current line into the a register/macro
 
 ##############################################################################
 # VISUAL MODE
@@ -168,32 +199,23 @@ v                   start visual mode, mark lines, then do command (such as y-ya
 V                   start linewise visual mode
 o                   move to other end of marked area
 U                   upper case of marked area
-CTRL-v              start visual block mode
+<C-v>               start visual block mode
 O                   move to other corner of block
 aw                  mark a word
 ab                  a () block (with braces)
 ab                  a {} block (with brackets)
 ib                  inner () block
 ib                  inner {} block
-Esc                 exit visual mode
-
-VISUAL MODE COMMANDS
---------------------
-
->                   shift right
-<                   shift left
-c                   change (replace) marked text
-y                   yank (copy) marked text
-d                   delete marked text
-~                   switch case
-
-VISUAL MODE SHORTCUTS
----------------------
-
-v%                  selects matching parenthesis
+vap                 visually select paragraph and around it
+vip                 visually select in paragraph
+v%                  matching parenthesis
 vi{                 selects matching curly brace
 vi"                 selects text between double quotes
 vi'                 selects text between single quotes
+va"                 selects text around double quotes
+va'                 selects text around single quotes
+g<C-a>              increment selected text but increment with one more each time
+g<C-x>              decrement selected text but decrement with one more each time
 
 ##############################################################################
 # SPELLING
@@ -212,17 +234,17 @@ z=                  suggest word
 ##############################################################################
 
 
-:q                  quit Vim. This fails when changes have been made.
-:q!                 quit without writing.
-:cq                 quit always, without writing.
-:w                  save without exiting.
-:wq                 write the current file and exit.
-:wq!                write the current file and exit always.
-:wq {file}          write to {file}. Exit if not editing the last
-:wq! {file}         write to {file} and exit always.
-:[range]wq[!]       same as above, but only write the lines in [range].
-ZZ                  write current file, if modified, and exit.
-ZQ                  quit current file and exit (same as ":q!").
+:q                  quit Vim, fails when changes have been made
+:q!                 quit without writing
+:cq                 quit always, without writing
+:w                  save without exiting
+:wq                 write the current file and exit
+:wq!                write the current file and exit always
+:wq {file}          write to {file} Exit if not editing the last
+:wq! {file}         write to {file} and exit always
+:[range]wq[!]       same as above, but only write the lines in [range]
+ZZ                  write current file, if modified, and exit
+ZQ                  quit current file and exit (same as ":q!")
 
 
 ##############################################################################
@@ -236,8 +258,8 @@ n                           repeat search in same direction
 N                           repeat search in opposite direction
 *                           search forward, word under cursor
 #                           search backward, word under cursor
-set ic                      ignore case: turn on
-set noic                    ignore case: turn off
+set ignorecase              ignore case: turn on
+set noignorecase            ignore case: turn off
 :%s/old/new/g               replace all old with new throughout file
 :%s/old/new/gc              replace all old with new throughout file with confirmation
 :argdo %s/old/new/gc | wq   open multiple files and run this command to replace old 
@@ -245,7 +267,7 @@ set noic                    ignore case: turn off
 
 
 ##############################################################################
-# MULTIPLE FILES
+# MULTIPLE FILES AND BUFFERS
 ##############################################################################
 
 
@@ -266,24 +288,24 @@ set noic                    ignore case: turn off
 ##############################################################################
 
 
-:sp f               split open f
-:vsp f              vsplit open f
-CTRL-w s            split windows
-CTRL-w w            switch between windows
-CTRL-w q            quit a window
-CTRL-w v            split windows vertically
-CTRL-w x            swap windows
-CTRL-w h            left window
-CTRL-w j            down window
-CTRL-w k            up window
-CTRL-w l            right window
-CTRL-w +            increase window height
-CTRL-w -            decrease window height
-CTRL-w <            increase window width
-CTRL-w >            decrease window width
-CTRL-w =            equal window
-CTRL-w o            close other windows
-zz                  Centers the window to the current line
+:sp file            horizontal split open file, if you don't specify it opens the current one
+:vsp file           vertical split open file, if you don't specify it opens the current one
+<C-ws>              split windows
+<C-ww>              switch between windows
+<C-wq>              quit a window
+<C-wv>              split windows vertically
+<C-wx>              swap windows
+<C-wh>              left window
+<C-wj>              down window
+<C-wk>              up window
+<C-wl>              right window
+<C-w+>              increase window height
+<C-w->              decrease window height
+<C-w<>              increase window width
+<C-w>>              decrease window width
+<C-w=>              equal window
+<C-wo>              close other windows
+zz                  visually puts current line at the center of the screen
 
 
 ##############################################################################
@@ -307,11 +329,29 @@ clast               display the last error
 
 %                   show matching brace, bracket, or parenthese
 gf                  edit the file whose name is under or after the cursor
-gd                  when the cursor is on a local variable or function, jump to its declaration
+gd                  if cursor is on a local variable or function, jump to its declaration
 ''                  return to the line where the cursor was before the latest jump
 gi                  return to insert mode where you inserted text the last time
-CTRL-o              move to previous position you were at
-CTRL-i              move to more recent position you were at
+<C-o>               move to previous position you were at
+<C-i>               move to more recent position you were at
+
+
+##############################################################################
+# COMMANDS
+##############################################################################
+
+
+q:                  list command history
+:set optionName     set the optionName option
+:h[elp] command     open offline help menu for command
+:put                paste
+:put = 3+3          calculate 3+3 and put it on a new line, works with basic expressions
+:%retab             fix spaces / tabs issues in whole file
+:r [name]           insert the file [name] below the cursor
+:r !{cmd}           execute {cmd} and insert its standard output below the cursor
+:%le                remove all leading whitespace
+:%y                 yank whole file
+:[range]norm Ihi    run a sequence of commands on a range of lines
 
 
 ##############################################################################
@@ -416,8 +456,8 @@ P                   go to root
 p                   go to parent
 K                   go to first child
 J                   go to last child
-CTRL-j              go to next sibling
-CTRL-k              go to prev sibling
+<C-j>               go to next sibling
+<C-k>               go to prev sibling
 
 FILESYSTEM
 ----------
@@ -451,7 +491,7 @@ A                   zoom (maximize-minimize) the NERDTree window
 ##############################################################################
 
 
-CTRL-P              generate PHP DOC
+<C-P>               generate PHP DOC
 
 
 ##############################################################################
@@ -475,8 +515,8 @@ CTRL-P              generate PHP DOC
 ##############################################################################
 
 
-CTRL-e              execute sparkup (zen coding expansion)
-CTRL-n              jump to the next empty tag / attribute
+<C-e>               execute sparkup (zen coding expansion)
+<C-n>               jump to the next empty tag / attribute
 
 
 ##############################################################################
