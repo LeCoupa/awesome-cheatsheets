@@ -153,8 +153,8 @@ dap                 delte around paragraph and the paragraph itself
 dt'                 delete until the next ' character on the line (replace ' by any character)
 D                   delete from cursor to end of line
 :[range]d           delete [range] lines
-di(                 delete in pair of (, works with { [ " ' too
-da(                 delete in and around pair of (, works with { [ " ' too
+di(                 delete in pair of (, works with { [ " ' ` < too
+da(                 delete in and around pair of (, works with { [ " ' ` < too
 
 ##############################################################################
 # COPYING AND MOVING TEXT
