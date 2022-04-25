@@ -108,7 +108,7 @@ cip                 change in paragaph (between new lines)
 cap                 change around paragaph and the paragraph itself
 ci(                 change in pair of (, works with { [ " ' ` < too
 ca(                 change in and around pair of (, works with { [ " ' ` < too
-C                   change to the end of line
+C                   change to the end of line (same as c$)
 ct'                 change until the ' character (can change ' for any character)
 ci"                 change everything in the next " on the line
 s                   delete character at cursor and substitute text
