@@ -17,7 +17,7 @@ a                   append after the cursor
 A                   append at the end of the line
 o                   open (append) blank line below current line
 O                   open blank line above current line
-<Esc>                 exit insert mode
+<Esc>               exit insert mode
 
 
 ##############################################################################
