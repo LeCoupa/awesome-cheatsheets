@@ -168,8 +168,8 @@ y$                  yank to end of line
 yiw                 yank whole word regardless of where you are in it
 yip                 yank in paragaph (between new lines)
 yap                 yank around paragaph and the paragraph itself
-yi(                 yank in pair of (, works with { [ " ' too
-ya(                 yank in and around pair of (, works with { [ " ' too
+yi(                 yank in pair of (, works with { [ " ' ` < too
+ya(                 yank in and around pair of (, works with { [ " ' ` < too
 p                   put (paste) the clipboard after cursor/current line
 P                   put (paste) before cursor/current line
 :set paste          avoid unexpected effects in pasting
