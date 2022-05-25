@@ -162,7 +162,7 @@ CHEATSHEET C#
 
 8. C# compiler at the Command Line
 
-    csc File.cs -> Compiles Files.cs producing File.exe
+    csc File.cs -> Compiles File.cs producing File.exe
     csc -target:library File.cs -> Compiles File.cs producing File.dll
     csc -out:My.exe File.cs -> Compiles File.cs and creates My.exe
     csc -define:DEBUG -optimize -out:File2.exe *.cs -> Compiles all the C# files in the current directory with optimizations enabled and defines the DEBUG symbol. The output is File2.exe
