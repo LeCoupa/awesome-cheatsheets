@@ -72,3 +72,16 @@
 
 ---
 
+|   **Exceptions**  	| **Variables** 	| **Constants** 	| **Ruby Arguments** 	|
+|:-----------------:	|:-------------:	|:-------------:	|:------------------:	|
+|       begin       	|     local     	|    __FILE__   	|      -c Check      	|
+|  rescue ex => var 	|   @instance   	|    __LINE__   	|      -d Debug      	|
+|       else        	|    @@class    	|      ENV      	|     -e One Line    	|
+|       ensure      	|    CONSTANT   	|      ARGF     	|       -h Help      	|
+|   StandardError   	|               	|      ARGV     	|    -n gets loop    	|
+| ZeroDivisionError 	|               	|               	|    -rL require L   	|
+|     RangeError    	|               	|               	|     -v verbose     	|
+|   SecurityError   	|               	|               	|     -w warning     	|
+|      IOError      	|               	|               	|    -y comp debug   	|
+|     IndexError    	|               	|               	|                    	|
+|    RuntimeError   	|               	|               	|                    	|
