@@ -29,3 +29,46 @@
 
 ---
 
+|    **Predefined Variables**   	|            **Regex**            	| **Reserved Words** 	|
+|:-----------------------------:	|:-------------------------------:	|:------------------:	|
+|    $! Exception Information   	|         . all characters        	|        alias       	|
+|     $@ Array of Backtrace     	|    [ ] any single char in set   	|         and        	|
+|    $& String of Last Match    	| [^ ] any single char not in set 	|        begin       	|
+| $' String right of last Match 	|          * zero or more         	|        BEGIN       	|
+|  $+ Last group of last match  	|          + one or more          	|        break       	|
+|   $N Nth group of last match  	|          ? zero or one          	|        case        	|
+|    $~ Info about last match   	|          \| alteration          	|        class       	|
+|    $= Case insensitive flag   	|            ( ) Group            	|         def        	|
+|   $/ Input record separator   	|  ^ Beginning of line or string  	|      defined?      	|
+|   $\ Output field separator   	|     $ End of line or string     	|         do         	|
+|   $, Output field separator   	|           {1,5} 1 to 5          	|        else        	|
+|  $. Line number of last file  	|      \A Beginning of String     	|        elsif       	|
+|       $> Default output       	|         \b Word boundry         	|         END        	|
+|  $_ Last input line of string 	|       \B Non-word Boundry       	|         end        	|
+|  $* Last input line of string 	|     \d digit, same as [0..9]    	|       ensure       	|
+|       $0 Name of script       	|           \D non-digit          	|        false       	|
+|       $$ Process Number       	|          \s whitespace          	|         for        	|
+|     $" Module Names loaded    	|        \S non-whitespace        	|         if         	|
+| $stderr Standard Error output 	|        \w word-character        	|         in         	|
+|       $stdin Standard In      	|      \W non-word-character      	|       module       	|
+|      $stdout Standard Out     	|         \z End of string        	|        next        	|
+|                               	|   \Z End of string, before nl   	|         nil        	|
+|                               	|                                 	|         not        	|
+|                               	|                                 	|         or         	|
+|                               	|                                 	|        redo        	|
+|                               	|                                 	|       rescue       	|
+|                               	|                                 	|        retry       	|
+|                               	|                                 	|       return       	|
+|                               	|                                 	|        self        	|
+|                               	|                                 	|        super       	|
+|                               	|                                 	|        then        	|
+|                               	|                                 	|        true        	|
+|                               	|                                 	|        undef       	|
+|                               	|                                 	|       unless       	|
+|                               	|                                 	|        until       	|
+|                               	|                                 	|        when        	|
+|                               	|                                 	|        while       	|
+|                               	|                                 	|        yield       	|
+
+---
+
