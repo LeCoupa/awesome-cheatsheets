@@ -17,7 +17,7 @@ var_dump($arr); // Print anything, with type hints for any value and sizes
 $string = 'Awesome cheatsheets';
 
 str_contains($string, 'cheat'); // Find if the string contains the specified string (PHP >= 8.0)
-str_replace('Awesome', 'Bonjour', $string); // Replace all occurence (PHP >= 8.0)
+str_replace('Awesome', 'Bonjour', $string); // Replace all occurence
 strcmp($string, 'Awesome cheatsheets'); // Compare two strings
 strpos($string, 'a', 0); // Get position in the string
 str_split($string, 2); // Split the string
