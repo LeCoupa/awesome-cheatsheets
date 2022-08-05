@@ -12,6 +12,7 @@ docker stop <hash>                          # Gracefully stop the specified cont
 docker ps -a                                # See a list of all containers, even the ones not running
 docker kill <hash>                          # Force shutdown of the specified container
 docker rm <hash>                            # Remove the specified container from this machine
+docker rm -f <hash>                         # Remove force specified container from this machine
 docker rm $(docker ps -a -q)                # Remove all containers from this machine
 docker images -a                            # Show all images on this machine
 docker rmi <imagename>                      # Remove the specified image from this machine
