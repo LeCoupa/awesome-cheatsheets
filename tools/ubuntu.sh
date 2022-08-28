@@ -12,6 +12,8 @@ sudo ufw allow from remote_IP_address to any port 3306 # Allow external ip to ac
 scp user@remote_host:remote_file local_file # download: remote -> local
 scp local_file user@remote_host:remote_file # upload: local -> remote
 
+service elasticsearch restart # Restart elasticsearch service
+
 sudo -s # Log as root
 
 cat /proc/<process_id>/maps   # Show the current virtual memory usage of a Linux process
