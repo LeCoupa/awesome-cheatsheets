@@ -26,11 +26,14 @@ public class HelloWorld {
 
 |   Type  |      Set of values      |            Values            | Operators |
 |:-------:|:-----------------------:|:----------------------------:|:---------:|
+|  short  |         integers        | between -2^15 and + (2^15)-1 | + - * / % |
 |   int   |         integers        | between -2^31 and + (2^31)-1 | + - * / % |
-|  double |  floating-point numbers |         real numbers         |  + - * /  |
+|  long   |         integers        | between -2^63 and + (2^63)-1 | + - * / % |
+|  float  |         integers        |     real numbers 32 bit      |  + - * /  |
+|  double |  floating-point numbers |     real numbers 64 bit      |  + - * /  |
 | boolean |      boolean values     |         true or false        | && \|\| ! |
-|   char  |        characters       |                              |           |
-|  String | sequences of characters |                              |           |
+|   char  |        characters       |         16 bit               |           |
+|  String | sequences of characters |it's not a primitive data type|           |
 
 
 ### DECLARATION AND ASSIGNMENT STATEMENTS
@@ -44,6 +47,16 @@ a = 13212; //a is the variable name; 13212 is the literal which is assign to the
 
 //Initialization statement
 int c = a + b;
+
+//Compound assignment expressions
+a += b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a + b
+a -= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a - b
+a *= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a * b
+a /= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a / b
+a %= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a % b
+a ^= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a ^ b
+a &= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a & b
+a \|= b; //a is the variable name; b is the variable name; this expression is an equivalent shorthand notation of a = a \| b
 ```
 
 ### COMPARISON OPERATORS
