@@ -15,4 +15,8 @@ GRANT ALL PRIVILEGES ON prospectwith.* TO 'power'@'localhost' WITH GRANT OPTION;
 
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password'; # Create user
 
+DROP USER 'newuser'@'localhost'; # Delete user
+
+RENAME USER 'jeffrey'@'localhost' TO 'jeff'@'127.0.0.1'; # Rename user
+
 mysql -u root -pmypassword -e "MY SQL QUERY" &>> query.log & disown # Run SQL query in the background
