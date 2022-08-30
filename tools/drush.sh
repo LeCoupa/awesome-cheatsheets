@@ -4,8 +4,11 @@
 # Usage: https://www.drush.org/usage/
 ##############################################################################
 
+status
 
-cache clear (cc)        # Clear all caches.
+cache:clear (cc)        # Clear all caches.
+
+cache:rebuild (cr)      # Rebuild a Drupal site.
 
 cron                    # Run all cron hooks.
 
@@ -25,17 +28,15 @@ installcore (ic)        # Install Drupal core via the specified install profile.
 
 refresh (rf)            # Refresh update status information script Runs the given php script(s) after a full Drupal bootstrap. NOTE: you can't supply absolute paths to the script e.g. ~/Desktop/script.php won't work Desktop/script.php will
 
-sql cli (sqlc)          # Open a SQL command-line interface using Drupal?s credentials.
+sql:cli (sqlc)          # Open a SQL command-line interface using Drupal?s credentials.
 
-sql conf                # Print database connection details.
+sql:conf                # Print database connection details.
 
-sql connect             # A string for connecting to the DB.
+sql:connect             # A string for connecting to the DB.
 
-sql dump                # Exports the Drupal DB as SQL using mysqldump.
+sql:dump                # Exports the Drupal DB as SQL using mysqldump.
 
-sql load                # Copy source database to target database.
-
-sql query (sqlq)        # Execute a query against the site database.
+sql:query (sqlq)        # Execute a query against the site database.
 
 status (st)             # Provides a birds-eye view of the current Drupal installation, if any.
 
@@ -43,17 +44,15 @@ statusmodules (sm)      # Show module enabled/disabled status
 
 sync                    # Rsync the Drupal tree to/from another server using ssh.
 
-test clean              # Delete leftover tables and files from prior test runs.
+test:clean              # Delete leftover tables and files from prior test runs.
 
-test mail               # Run all tests and mail the results to your team.
-
-uninstall               # Uninstall one or more modules.
-
-update (up)             # Update your project code and apply any database updates required (update.php)
+test:mail               # Run all tests and mail the results to your team.
 
 updatecode (upc)        # Update your project code. Moves existing project files to the backup directory specified in the config.
 
 updatedb (updb)         # Execute the update.php process from the command line.
+
+updatedb:status         # List any pending database updates
 
 variable delete (vdel)  # Delete a variable.
 
@@ -61,6 +60,14 @@ variable get (vget)     # Get a list of some or all site variables and values.
 
 variable set (vset)     # Set a variable.
 
-watchdog delete (wd)    # Delete all messages or only those of a specified type.
+watchdog:delete (wd)    # Delete all messages or only those of a specified type.
 
-watchdog show (ws)      # Shows recent watchdog log messages. Optionally filter for a specific type.
+watchdog:show (ws)      # Shows recent watchdog log messages. Optionally filter for a specific type.
+
+watchdog:list (wd-list) # Interactively filter the watchdog message listing.
+
+pm:enable (en)          # Enable one or more modules.
+
+pm:list (pml)           # Show a list of available extensions (modules and themes).
+
+pm:uninstall (pmu)      # Uninstall one or more modules and their dependent modules.
