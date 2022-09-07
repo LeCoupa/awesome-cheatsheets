@@ -1,4 +1,5 @@
 // Kotlin is a statically typed programming language for modern multiplatform applications.
+// https://kotlinlang.org/
 
 // Mutability
 var mutableString: String = "Adam"
