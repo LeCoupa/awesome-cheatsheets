@@ -101,6 +101,10 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Redis](databases/redis.sh)
   </details>
 
+#### PostgreSQL
+
+- [PostgreSQL](databases/postgresql.sh)
+
 ### 🔧 Tools
 
 <details>
