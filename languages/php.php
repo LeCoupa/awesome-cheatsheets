@@ -1,23 +1,23 @@
 <?php
 
-// Exit the file, string inside get's echo'ed
-die("This file is not ment to be ran. ¯\_(ツ)_/¯");
-exit("This file is not ment to be ran. ¯\_(ツ)_/¯");
+// Exit the file, string inside gets echoed
+die("This file is not supposed to be run. ¯\_(ツ)_/¯");
+exit("This file is not supposed to be run. ¯\_(ツ)_/¯");
 
 /**
  * Printing
  */
-echo ""; // Print a string or type that can be made into a string(I.E int, float).
-print_r($arr); // Print anything, with type hints for array's and object's
-var_dump($arr); // Print anything, with type hints for any value and sizes
+echo ""; // Print a string or type that can be made into a string (i.e int, float).
+print_r($arr); // Print anything with type hints for arrays and objects
+var_dump($arr); // Print anything with type hints for any value and sizes
 
 /**
- * Usefull string manipulation methods
+ * Useful string manipulation methods
  */
 $string = 'Awesome cheatsheets';
 
 str_contains($string, 'cheat'); // Find if the string contains the specified string (PHP >= 8.0)
-str_replace('Awesome', 'Bonjour', $string); // Replace all occurence
+str_replace('Awesome', 'Bonjour', $string); // Replace all occurrence
 strcmp($string, 'Awesome cheatsheets'); // Compare two strings
 strpos($string, 'a', 0); // Get position in the string
 str_split($string, 2); // Split the string
@@ -139,7 +139,7 @@ $return_value = match($food) {
     default => 'A fruit'
 };
 
-//You can also use it as a conditionnal and throw exceptions
+//You can also use it as a conditional and throw exceptions
 $str = 'Welcome to awesome cheatsheets';
 $return_value = match(true) {
     str_contains($str, 'Welcome') && str_contains($str ,'to') => 'en-EN',
@@ -173,7 +173,7 @@ $argc; // Number of arguments passed into terminal
  // Function with return type (void, int, float, string, array, object, mixed)
  function name($parameter) : void;
 
- // Function with optionnal parameter
+ // Function with optional parameter
  function name($parameter = '') : string;
 
  // Function with typed parameter (? means "can be null")
@@ -533,15 +533,15 @@ u   Pattern is treated as UTF-8
 (?!)    Negative look ahead assertion   foo(?!bar) matches foo when not followed by bar
 (?<=)   Positive look behind assertion  (?<=foo)bar matches bar when preceded by foo
 (?<!)   Negative look behind assertion  (?<!foo)bar matches bar when not preceded by foo
-(?>)    Once-only subpatterns   (?>\d+)bar Performance enhancing when bar not present
-(?(x))  Conditional subpatterns (?(3)foo|fu)bar Matches foo if 3rd subpattern has matched, fu if not
+(?>)    Once-only sub-patterns   (?>\d+)bar Performance enhancing when bar not present
+(?(x))  Conditional sub-patterns (?(3)foo|fu)bar Matches foo if 3rd subpattern has matched, fu if not
 (?#)    Comment (?# Pattern does x y or z)
 
 // Base Character Classes
 \w  Any "word" character (a-z 0-9 _)
 \W  Any non "word" character
 \s  Whitespace (space, tab CRLF)
-\S  Any non whitepsace character
+\S  Any non whitespace character
 \d  Digits (0-9)
 \D  Any non digit character
 .   (Period) - Any character except newline
@@ -549,7 +549,7 @@ u   Pattern is treated as UTF-8
 // Multiplicity.
 n*  Zero or more of n
 n+  One or more of n
-n?  Zero or one occurrences of n
+n?  Zero or one occurrence of n
 {n} n occurrences exactly
 {n,}    At least n occurrences
 {,m}    At most m occurrences
