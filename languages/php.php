@@ -35,24 +35,24 @@ substr($string, 0, 4); // Return part of a string
 $arr = array("John", "Doe", "Lorem", "Ipsum");
 
 // Associative Array
-$arr = array("John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000");
+$arr = array("John" => "10", "Doe" => "200", "Lorem" => "3000", "Ipsum" => "40000");
 
 // Multidimensional Arrays
 $arr = array (
-    array("John",100,180),
-    array("Doe",150,130),
-    array("Lorem",500,200),
-    array("Ipsum",170,150)
+    array("John", 100, 180),
+    array("Doe", 150, 130),
+    array("Lorem", 500, 200),
+    array("Ipsum", 170, 150)
 );
 
 // Declaring array with short syntax
 $arr = ["John", "Doe", "Lorem", "Ipsum"]; // Indexed Array
-$arr = ["John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000"]; // Associative Array
+$arr = ["John" => "10", "Doe" => "200", "Lorem" => "3000", "Ipsum" => "40000"]; // Associative Array
 $arr = [
-    ["John",100,180],
-    ["Doe",150,130],
-    ["Lorem",500,200],
-    ["Ipsum",170,150], // You can have a "," at the end without throwing syntax errors
+    ["John", 100, 180],
+    ["Doe", 150, 130],
+    ["Lorem", 500, 200],
+    ["Ipsum", 170, 150], // You can have a "," at the end without throwing syntax errors
 ];
 
 /**
@@ -70,9 +70,9 @@ krsort($arr); // Sort associative arrays in descending order, according to the k
  */
 
  // If/Elseif/Else
-if($i > 10) {
+if ($i > 10) {
 
-} elseif( $i > 100) {
+} elseif ($i > 100) {
 
 } else {
 
@@ -91,20 +91,20 @@ continue; // Skip current iter
 break; // Exit loop
 
 // Foreach
-foreach($arr as $key => $value) {
+foreach ($arr as $key => $value) {
     $key = $key;
     $value = $value;
 }
 
 // For
-for($i = 0; $i < count($arr); $i++) {
+for ($i = 0; $i < count($arr); $i++) {
     $key = $i;
     $value = $arr[$i];
 }
 
 // While
 $i = 0;
-while($i < count($arr) - 1) {
+while ($i < count($arr) - 1) {
     $key = $i;
     $value = $arr[$i];
 }
@@ -114,10 +114,10 @@ $i = 0;
 do {
     $key = $i;
     $value = $arr[$i];
-} while($i < count($arr));
+} while ($i < count($arr));
 
 // Switch
-switch($arr) {
+switch ($arr) {
     case 1:
         break;
     case 2:
