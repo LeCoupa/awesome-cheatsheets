@@ -87,6 +87,7 @@ arr.every(callback[, thisArg])                       // Returns true if every el
 arr.filter(callback[, thisArg])                      // Creates a new array with all of the elements of this array for which the provided filtering function returns true.
 arr.find(callback[, thisArg])                        // Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found.
 arr.findIndex(callback[, thisArg])                   // Returns the found index in the array, if an element in the array satisfies the provided testing function or -1 if not found.
+arr.flatMap(callback[, thisArg])                     // Apply the callback function for each element in array and flatten the result in a new array
 arr.forEach(callback[, thisArg])                     // Calls a function for each element in the array.
 arr.keys()                                           // Returns a new Array Iterator that contains the keys for each index in the array.
 arr.map(callback[, initialValue])                    // Creates a new array with the results of calling a provided function on every element in this array.
@@ -94,4 +95,3 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
-arr.flatMap(callback[, thisArg])                     // Apply the callback function for each element in array and flatten the result in a new array
