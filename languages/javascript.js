@@ -140,3 +140,32 @@ str.trim()                                           // Remove whitespace at the
 str.trimStart()                                      // Remove whitespace at the beginning
 str.trimEnd()                                        // Remove whitespace at the end of the string
 str.valueOf()                                        // Returns the primitive value of a String object.
+
+/* *******************************************************************************************
+ * GLOBAL OBJECTS > STRING
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+ * ******************************************************************************************* */
+
+// Global object: methods
+Number.EPSILON                                       // The smallest interval between two representable numbers.
+Number.MAX_SAFE_INTEGER                              // The maximum safe integer in JavaScript (253 - 1).
+Number.MAX_VALUE                                     // The largest positive representable number.
+Number.MIN_SAFE_INTEGER                              // The minimum safe integer in JavaScript (-(253 - 1)).
+Number.MIN_VALUE                                     // The smallest positive representable number—that is, the positive number closest to zero (without actually being zero).
+Number.NaN                                           // Special "Not a Number" value.
+Number.NEGATIVE_INFINITY                             // Special value representing negative infinity. Returned on overflow.
+Number.POSITIVE_INFINITY                             // Special value representing infinity. Returned on overflow.
+Number.isFinite(value)                               // Determine whether the passed value is a finite number, returns a boolean.
+Number.isInteger(value)                              // Determine whether the passed value is an integer, returns a boolean.
+Number.isNaN(value)                                  // Determine whether the passed value is NaN, returns a boolean.
+Number.isSafeInteger()                               // Determine whether the passed value is a safe integer (number between -(253 - 1) and 253 - 1), returns a boolean.
+Number.parseFloat()                                  // Parses a string argument and returns a floating point number, this is the same as the global parseFloat() function.
+Number.parseInt()                                    // Parses a string argument and returns an integer of the specified radix, this is the same as the global parseInt() function.
+
+// Methods
+number.toExponential(fractionDigits)                 // Returns a string representing the number in exponential notation.
+number.toFixed(digits)                               // Returns a string representing the number in fixed-point notation.
+number.toLocaleString(locales, options)              // Returns a string with a language-sensitive representation of this number.
+number.toPrecision(precision)                        // Returns a string representing the number to a specified precision in fixed-point or exponential notation.
+number.toString(radix)                               // Returns a string representing the specified number value.
+number.valueOf(radix)                                // Returns a string representing the specified number value.
