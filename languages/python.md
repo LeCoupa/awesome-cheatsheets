@@ -2,7 +2,7 @@
 
 * Python is an interpreted, high-level and general-purpose, dynamically typed programming language
 
-* It seen as an object-oriented, modular scripting language.
+* It is seen as an object-oriented, modular scripting language.
 
 * In Python, everything is considered as an object.
 
