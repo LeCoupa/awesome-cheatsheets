@@ -1,4 +1,26 @@
 /* *******************************************************************************************
+ * GETTING STARTED WITH THE WEB > JAVASCRIPT BASICS
+ * https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+ * ******************************************************************************************* */
+
+// Variables & Data Types
+let someVariable;                                    // Declaring a variable.
+someVariable = 'variableValue';                      // Assigning a value to a predefined variable.
+someVariable;                                        // Calling a variable. Its name points to the value it stores.
+
+let stirngVariable = 'string';                       // Type: String
+let numberVariable = 1;                              // Type: Number
+let booleanVariable = true;                          // Type: Boolean
+let arrayVariable = [0, 1, 2, 3];                    // Type: Array
+let objectVariable = { key: 'value'};                // Type: Object
+
+// Comments
+// This is a one-line comment
+/* 
+  Everything in between is a comment.
+*/
+
+/* *******************************************************************************************
  * GLOBAL OBJECTS > OBJECT
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
  * ******************************************************************************************* */
