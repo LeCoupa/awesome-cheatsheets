@@ -173,7 +173,7 @@ $argc; // Number of arguments passed into terminal
  // Function with return type (void, int, float, string, array, object, mixed)
  function name($parameter) : void;
 
- // Function with optionnal parameter
+ // Function with optional parameter
  function name($parameter = '') : string;
 
  // Function with typed parameter (? means "can be null")
