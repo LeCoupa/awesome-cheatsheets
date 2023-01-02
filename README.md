@@ -31,6 +31,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Java](languages/java.md)
 - [PHP](languages/php.php)
 - [Python](languages/python.md)
+- [Lua](languages/lua.md)
 
 #### Functional
 
