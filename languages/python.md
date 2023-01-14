@@ -137,9 +137,13 @@
 
 - Comments start with # in Python
 
-  #This is a comment ----> This is a comment
-  print("Welcome!")
+    ```python
+    
+    #This is a comment
 
+    print("Welcome!")
+    
+    ```
 <br>
 
 ### Basic Data Structures
