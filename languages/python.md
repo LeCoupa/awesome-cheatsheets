@@ -135,7 +135,7 @@
 
 - They never get executed.
 
-- Comments start with # in Python
+- Comments start with # in Python.
 
     ```python
     
