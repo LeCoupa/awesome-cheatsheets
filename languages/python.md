@@ -125,6 +125,23 @@
 |  \|= | bitwise or and store|
 |  , | separator as in   ( y=x,z=++x )|
 
+<br>
+
+## Comments
+
+- Comments are very helpful to explain a Python code.
+
+- They are used to make the code more readable.
+
+- They never get executed.
+
+- Comments start with # in Python
+
+  #This is a comment ----> This is a comment
+  print("Welcome!")
+
+<br>
+
 ### Basic Data Structures
 
 ### List
