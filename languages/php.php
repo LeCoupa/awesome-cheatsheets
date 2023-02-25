@@ -1,23 +1,23 @@
 <?php
 
-// Exit the file, string inside get's echo'ed
-die("This file is not ment to be ran. ¯\_(ツ)_/¯");
-exit("This file is not ment to be ran. ¯\_(ツ)_/¯");
+// Exit the file, string inside gets echoed
+die("This file is not supposed to be run. ¯\_(ツ)_/¯");
+exit("This file is not supposed to be run. ¯\_(ツ)_/¯");
 
 /**
  * Printing
  */
-echo ""; // Print a string or type that can be made into a string(I.E int, float).
-print_r($arr); // Print anything, with type hints for array's and object's
-var_dump($arr); // Print anything, with type hints for any value and sizes
+echo ""; // Print a string or type that can be made into a string (i.e int, float).
+print_r($arr); // Print anything with type hints for arrays and objects
+var_dump($arr); // Print anything with type hints for any value and sizes
 
 /**
- * Usefull string manipulation methods
+ * Useful string manipulation methods
  */
 $string = 'Awesome cheatsheets';
 
 str_contains($string, 'cheat'); // Find if the string contains the specified string (PHP >= 8.0)
-str_replace('Awesome', 'Bonjour', $string); // Replace all occurence
+str_replace('Awesome', 'Bonjour', $string); // Replace all occurrence
 strcmp($string, 'Awesome cheatsheets'); // Compare two strings
 strpos($string, 'a', 0); // Get position in the string
 str_split($string, 2); // Split the string
@@ -35,24 +35,24 @@ substr($string, 0, 4); // Return part of a string
 $arr = array("John", "Doe", "Lorem", "Ipsum");
 
 // Associative Array
-$arr = array("John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000");
+$arr = array("John" => "10", "Doe" => "200", "Lorem" => "3000", "Ipsum" => "40000");
 
 // Multidimensional Arrays
 $arr = array (
-    array("John",100,180),
-    array("Doe",150,130),
-    array("Lorem",500,200),
-    array("Ipsum",170,150)
+    array("John", 100, 180),
+    array("Doe", 150, 130),
+    array("Lorem", 500, 200),
+    array("Ipsum", 170, 150)
 );
 
 // Declaring array with short syntax
 $arr = ["John", "Doe", "Lorem", "Ipsum"]; // Indexed Array
-$arr = ["John"=>"10", "Doe"=>"200", "Doe"=>"3000", "Ipsum"=>"40000"]; // Associative Array
+$arr = ["John" => "10", "Doe" => "200", "Lorem" => "3000", "Ipsum" => "40000"]; // Associative Array
 $arr = [
-    ["John",100,180],
-    ["Doe",150,130],
-    ["Lorem",500,200],
-    ["Ipsum",170,150], // You can have a "," at the end without throwing syntax errors
+    ["John", 100, 180],
+    ["Doe", 150, 130],
+    ["Lorem", 500, 200],
+    ["Ipsum", 170, 150], // You can have a "," at the end without throwing syntax errors
 ];
 
 /**
@@ -70,9 +70,9 @@ krsort($arr); // Sort associative arrays in descending order, according to the k
  */
 
  // If/Elseif/Else
-if($i > 10) {
+if ($i > 10) {
 
-} elseif( $i > 100) {
+} elseif ($i > 100) {
 
 } else {
 
@@ -91,20 +91,20 @@ continue; // Skip current iter
 break; // Exit loop
 
 // Foreach
-foreach($arr as $key => $value) {
+foreach ($arr as $key => $value) {
     $key = $key;
     $value = $value;
 }
 
 // For
-for($i = 0; $i < count($arr); $i++) {
+for ($i = 0; $i < count($arr); $i++) {
     $key = $i;
     $value = $arr[$i];
 }
 
 // While
 $i = 0;
-while($i < count($arr) - 1) {
+while ($i < count($arr) - 1) {
     $key = $i;
     $value = $arr[$i];
 }
@@ -114,10 +114,10 @@ $i = 0;
 do {
     $key = $i;
     $value = $arr[$i];
-} while($i < count($arr));
+} while ($i < count($arr));
 
 // Switch
-switch($arr) {
+switch ($arr) {
     case 1:
         break;
     case 2:
@@ -139,7 +139,7 @@ $return_value = match($food) {
     default => 'A fruit'
 };
 
-//You can also use it as a conditionnal and throw exceptions
+//You can also use it as a conditional and throw exceptions
 $str = 'Welcome to awesome cheatsheets';
 $return_value = match(true) {
     str_contains($str, 'Welcome') && str_contains($str ,'to') => 'en-EN',
@@ -173,7 +173,7 @@ $argc; // Number of arguments passed into terminal
  // Function with return type (void, int, float, string, array, object, mixed)
  function name($parameter) : void;
 
- // Function with optionnal parameter
+ // Function with optional parameter
  function name($parameter = '') : string;
 
  // Function with typed parameter (? means "can be null")
@@ -533,15 +533,15 @@ u   Pattern is treated as UTF-8
 (?!)    Negative look ahead assertion   foo(?!bar) matches foo when not followed by bar
 (?<=)   Positive look behind assertion  (?<=foo)bar matches bar when preceded by foo
 (?<!)   Negative look behind assertion  (?<!foo)bar matches bar when not preceded by foo
-(?>)    Once-only subpatterns   (?>\d+)bar Performance enhancing when bar not present
-(?(x))  Conditional subpatterns (?(3)foo|fu)bar Matches foo if 3rd subpattern has matched, fu if not
+(?>)    Once-only sub-patterns   (?>\d+)bar Performance enhancing when bar not present
+(?(x))  Conditional sub-patterns (?(3)foo|fu)bar Matches foo if 3rd subpattern has matched, fu if not
 (?#)    Comment (?# Pattern does x y or z)
 
 // Base Character Classes
 \w  Any "word" character (a-z 0-9 _)
 \W  Any non "word" character
 \s  Whitespace (space, tab CRLF)
-\S  Any non whitepsace character
+\S  Any non whitespace character
 \d  Digits (0-9)
 \D  Any non digit character
 .   (Period) - Any character except newline
@@ -549,7 +549,7 @@ u   Pattern is treated as UTF-8
 // Multiplicity.
 n*  Zero or more of n
 n+  One or more of n
-n?  Zero or one occurrences of n
+n?  Zero or one occurrence of n
 {n} n occurrences exactly
 {n,}    At least n occurrences
 {,m}    At most m occurrences
