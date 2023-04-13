@@ -1,38 +1,57 @@
 # Visual Studio CheatSheet
 
 ## Shortcuts
+# Visual Studio Code Shortcut Cheat Sheet  for Windows and macOS
+##  For Windows and macOS
+## General Shortcuts
 
-### Linux
+- **Ctrl + Shift + P (Windows) / Command + Shift + P (macOS)**: Open Command Palette.
+- **Ctrl + , (Windows) / Command + , (macOS)**: Open Settings.
+- **Ctrl + B (Windows) / Command + B (macOS)**: Toggle Sidebar visibility.
+- **Ctrl + P (Windows) / Command + P (macOS)**: Quick Open file by name.
+- **Ctrl + ` (Windows) / Command + ` (macOS)**: Open Integrated Terminal.
 
-#### General
+## Editing Shortcuts
 
-- `Ctrl`+`Shift`+`P`, `F1`:  Show Command Palette
-- `Ctrl`+`P`: Quick Open, Go to File
-- `Ctrl`+`Shift`+`N`: New window/instance
-- `Ctrl`+`W`: Close window/instance
-- `Ctrl`+`,`: User Settings
-- `Ctrl`+`K`, `Ctrl`+`S`: Keyboard Shortcuts
+- **Ctrl + X (Windows) / Command + X (macOS)**: Cut line.
+- **Ctrl + C (Windows) / Command + C (macOS)**: Copy line.
+- **Ctrl + V (Windows) / Command + V (macOS)**: Paste line.
+- **Ctrl + Z (Windows) / Command + Z (macOS)**: Undo.
+- **Ctrl + Shift + Z (Windows) / Command + Shift + Z (macOS)**: Redo.
+- **Ctrl + D (Windows) / Command + D (macOS)**: Add selection to next Find match.
+- **Alt + Click (Windows) / Option + Click (macOS)**: Add cursors at multiple locations.
 
-#### Basic editing
+## Navigation Shortcuts
 
-- `Ctrl`+`X`: Cut line (empty selection)
-- `Ctrl`+`C`: Copy line (empty selection)
-- `Ctrl`+`↓/↑`: Move line down / up
-- `Ctrl`+`Shift`+`K`: Delete line
-- `Ctrl`+`Enter` / `Ctrl`+`Shift`+`Enter`: Insert line below / above 
-- `Ctrl`+`Shift`+`\`: Jump to matching bracket
-- `Ctrl`+`]` / `Ctrl`+`[`: Indent / Outdent line
-- `Ctrl`+`Home` / `End`: Go to beginning / end of file
-- `Ctrl`+`↑ / ↓`: Scroll line up / down
-- `Alt`+`PgUp` / `PgDn`: Scroll page up / down
-- `Ctrl`+`Shift`+`[ / ]`: Fold / unfold region
-- `Ctrl`+`K`, `Ctrl`+`[ / ]`: Fold / unfold all subregions
-- `Ctrl`+`K`, `Ctrl`+`0` / `Ctrl`+`K`, `Ctrl`+`J`: Fold /Unfold all regions
-- `Ctrl`+`K`, `Ctrl`+`C`: Add line comment
-- `Ctrl`+`K`, `Ctrl`+`U`: Remove line comment
-- `Ctrl`+`/`: Toggle line comment
-- `Ctrl`+`Shift`+`A`: Toggle block comment
-- `Alt`+`Z`: Toggle word wrap
+- **Ctrl + P (Windows) / Command + P (macOS)**: Quick Open file by name.
+- **Ctrl + G (Windows) / Command + G (macOS)**: Go to line number.
+- **Ctrl + Shift + O (Windows) / Command + Shift + O (macOS)**: Go to Symbol (e.g., function, class).
+
+## Code Manipulation Shortcuts
+
+- **Ctrl + / (Windows) / Command + / (macOS)**: Toggle line comment.
+- **Shift + Alt + A (Windows) / Shift + Option + A (macOS)**: Toggle block comment.
+- **Ctrl + F (Windows) / Command + F (macOS)**: Find in file.
+- **Ctrl + H (Windows) / Command + H (macOS)**: Replace in file.
+- **Shift + Alt + F (Windows) / Shift + Option + F (macOS)**: Format document.
+
+## Code Navigation Shortcuts
+
+- **Ctrl + Shift + F (Windows) / Command + Shift + F (macOS)**: Search across files.
+- **F12 (Windows) / F12 (macOS)**: Go to definition.
+- **Alt + F12 (Windows) / Option + F12 (macOS)**: Peek definition.
+- **Ctrl + K + F12 (Windows) / Command + K + F12 (macOS)**: Show type information.
+
+## Navigation and Editing Shortcuts
+
+- **Ctrl + L (Windows) / Command + L (macOS)**: Select current line.
+- **Ctrl + Enter (Windows) / Command + Enter (macOS)**: Insert line below.
+- **Ctrl + Shift + Enter (Windows) / Command + Shift + Enter (macOS)**: Insert line above.
+- **Ctrl + Shift + \ (Windows) / Command + Shift + \ (macOS)**: Jump to matching bracket.
+- **Ctrl + ] (Windows) / Command + ] (macOS)**: Indent line or selection.
+- **Ctrl + [ (Windows) / Command + [ (macOS)**: Outdent line or selection.
+- **Alt + Up (Windows) / Option + Up (macOS)**: Move line or selection up
+
 
 ## Useful Extensions
 
