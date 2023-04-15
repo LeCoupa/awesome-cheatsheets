@@ -602,3 +602,8 @@ echo $host; // domain-name.com
 $text = "A regular expression (shortened as regex) is a sequence of characters that define a search pattern. Usually such patterns are used by string-searching algorithms for 'find' or 'find and replace' operations on strings, or for input validation.";
 $text = preg_replace("/\b(regex)\b/i", 'replaced content', $text);
 echo $text; /*A regular expression (shortened as replaced content) is a sequence of characters that define a search pattern. Usually such patterns are used by string-searching algorithms for 'find' or 'find and replace' operations on strings, or for input validation.*/
+
+//  spread operator > PHP 7.4
+$array1 = [1, 2, 3];
+$array2 = [4, 5, 6];
+$merge_array = [0, ...$array1, ...$array2]; // [0, 1, 2, 3, 4, 5, 6]
