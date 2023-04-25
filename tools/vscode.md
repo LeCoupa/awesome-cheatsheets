@@ -52,6 +52,16 @@
 - **Ctrl + [ (Windows) / Command + [ (macOS)**: Outdent line or selection.
 - **Alt + Up (Windows) / Option + Up (macOS)**: Move line or selection up
 
+## Git Shortcuts
+
+- **Ctrl + Shift + G (Windows) / Command + Shift + G (macOS)**: Open source control (Git) view.
+- **Ctrl + Enter (Windows) / Command + Enter (macOS)**: Commit changes in source control (Git).
+- **Ctrl + K + S (Windows) / Command + K + S (macOS)**: Stage changes in source control (Git).
+- **Ctrl + K + C (Windows) / Command + K + C (macOS)**: Commit changes with message in source control (Git). 
+ 
+- **Ctrl + K + U (Windows) / Command + K + U (macOS)**: Unstage changes in source control (Git).
+- **Ctrl + K + P (Windows) / Command + K + P (macOS)**: Push changes to remote repository in source control (Git).
+- **Ctrl + K + R (Windows) / Command + K + R (macOS)**: Pull changes from remote repository in source control (Git).
 
 ## Useful Extensions
 
