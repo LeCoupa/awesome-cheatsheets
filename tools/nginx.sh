@@ -8,6 +8,7 @@ sudo systemctl status nginx # nginx current status
 sudo systemctl reload nginx # Reload nginx
 sudo systemctl restart nginx  # Restart nginx
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/ # Link website
+sudo tail -f /var/log/nginx/access.log # Tail logs to inspect requests
 
 # *****************************************************************************
 # General Settings
