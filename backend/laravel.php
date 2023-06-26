@@ -8,6 +8,8 @@
 // MAIN.
 
 php artisan clear-compiled       // Remove the compiled class file
+php artisan db                   // Start a new database CLI session
+php artisan docs                 // Access the Laravel documentation
 php artisan down                 // Put the application into maintenance mode
 php artisan dump-server          // Start the dump server to collect dump information.
 php artisan env                  // Display the current framework environment
@@ -43,6 +45,9 @@ php artisan config:clear         // Remove the configuration cache file
 // DB
 
 php artisan db:seed              // Seed the database with records
+php artisan db:show              // Display information about the given database
+php artisan db:table             // Display information about the given database table
+php artisan db:wipe              // Drop all tables, views, and types
 
 // EVENT
 
@@ -54,9 +59,10 @@ php artisan key:generate         // Set the application key
 
 // MAKE
 
-php artisan make:auth            // Scaffold basic login and registration views and routes
+php artisan make:cast            // Create a new custom Eloquent cast class
 php artisan make:channel         // Create a new channel class
 php artisan make:command         // Create a new Artisan command
+php artisan make:component       // Create a new view component class
 php artisan make:controller      // Create a new controller class
 php artisan make:event           // Create a new event class
 php artisan make:exception       // Create a new custom exception class
@@ -74,6 +80,7 @@ php artisan make:provider        // Create a new service provider class
 php artisan make:request         // Create a new form request class
 php artisan make:resource        // Create a new resource
 php artisan make:rule            // Create a new validation rule
+php artisan make:scope           // Create a new scope class
 php artisan make:seeder          // Create a new seeder class
 php artisan make:test            // Create a new test class
 
@@ -85,6 +92,10 @@ php artisan migrate:refresh      // Reset and re-run all migrations
 php artisan migrate:reset        // Rollback all database migrations
 php artisan migrate:rollback     // Rollback the last database migration
 php artisan migrate:status       // Show the status of each migration
+
+// MODEL
+php artisan model:prune          // Prune models that are no longer needed
+php artisan model:show           // Show information about an Eloquent model
 
 // NOTIFICATIONS
 
@@ -100,13 +111,19 @@ php artisan package:discover     // Rebuild the cached package manifest
 
 // QUEUE
 
+php artisan queue:batches-table  // Create a migration for the batches database table
+php artisan queue:clear          // Delete all of the jobs from the specified queue
 php artisan queue:failed         // List all of the failed queue jobs
 php artisan queue:failed-table   // Create a migration for the failed queue jobs database table
 php artisan queue:flush          // Flush all of the failed queue jobs
 php artisan queue:forget         // Delete a failed queue job
 php artisan queue:listen         // Listen to a given queue
+php artisan queue:monitor        // Monitor the size of the specified queues
+php artisan queue:prune-batches  // Prune stale entries from the batches database
+php artisan queue:prune-failed   // Prune stale entries from the failed jobs table
 php artisan queue:restart        // Restart queue worker daemons after their current job
 php artisan queue:retry          // Retry a failed queue job
+php artisan queue:retry-batch    // Retry the failed jobs for a batch
 php artisan queue:table          // Create a migration for the queue jobs database table
 php artisan queue:work           // Start processing jobs on the queue as a daemon
 
@@ -116,9 +133,26 @@ php artisan route:cache          // Create a route cache file for faster route r
 php artisan route:clear          // Remove the route cache file
 php artisan route:list           // List all registered routes
 
+// SAIL
+
+php artisan sail:install         // Install Laravel Sail's default Docker Compose file
+php artisan sail:publish         // Publish the Laravel Sail Docker files
+
+// SANCTUM
+
+php artisan sanctum:prune-expired // Prune tokens expired for more than specified number of hours.
+
 // SCHEDULE
 
-php artisan schedule:run         // Run the scheduled commands
+php artisan schedule:clear-cache  // Delete the cached mutex files created by scheduler
+php artisan schedule:list         // List the scheduled commands
+php artisan schedule:run          // Run the scheduled commands
+php artisan schedule:test         // Run a scheduled command
+php artisan schedule:work         // Start the schedule worker
+
+// SCHEMA
+
+php artisan schema:dump           // Dump the given database schema
 
 // SESSION
 
@@ -127,6 +161,10 @@ php artisan session:table        // Create a migration for the session database 
 // STORAGE
 
 php artisan storage:link         // Create a symbolic link from "public/storage" to "storage/app/public"
+
+// STUD
+
+php artisan stub:publish         // Publish all stubs that are available for customization
 
 // VENDOR
 
