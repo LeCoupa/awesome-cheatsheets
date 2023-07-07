@@ -72,6 +72,7 @@ array.splice(start, deleteCount, item1, item2, ...)  // Adds and/or removes elem
 arr.unshift([element1[, ...[, elementN]]])           // Adds one or more elements to the front of an array and returns the new length of the array.
 
 // Instance: accessor methods
+arr.at(index)                                        // Returns the element at the specified index in the array.
 arr.concat(value1[, value2[, ...[, valueN]]])        // Returns a new array comprised of this array joined with other array(s) and/or value(s).
 arr.includes(searchElement, fromIndex)               // Determines whether an array contains a certain element, returning true or false as appropriate.
 arr.indexOf(searchElement[, fromIndex])              // Returns the first (least) index of an element within the array equal to the specified value, or -1 if none is found.
