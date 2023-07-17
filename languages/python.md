@@ -380,3 +380,14 @@ function_name()
 * We need not to specify the return type of the function.
 * Functions by default return `None` 
 * We can return any datatype.
+### f strings
+* Short of "formatted string".
+* Allow us to to embed expressions inside string literals.
+* f-strings are denoted by "f" or "F" prefix before the string
+* Expressions are closed by curly braces '{}' with the f-string
+```
+name = "Alice"
+print(f"Hello, I am {name} and I am a programmer.")
+
+```
+	

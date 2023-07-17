@@ -47,9 +47,10 @@ CTRL+X then )   # finish recording keyboard macro
 CTRL+X then E   # recall last recorded keyboard macro
 CTRL+X then CTRL+E   # invoke text editor (specified by $EDITOR) on current command line then execute resultes as shell commands
 CTRL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
-
-BACKSPACE  # deletes one character backward
-DELETE     # deletes one character under cursor
+CTRL+T then Z # Minimizes the current session or sends the current session to the background.
+fg(foreground) # Maxmizes the current session 
+BACKSPACE      # deletes one character backward
+DELETE         # deletes one character under cursor
 
 history   # shows command line history
 !!        # repeats the last command
