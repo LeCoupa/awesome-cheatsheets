@@ -102,8 +102,8 @@ arr.values()                                         // Returns a new Array Iter
  * ******************************************************************************************* */
 
 // Global object: properties
-String.length // Reflects the length of the string. Read-only.
-String.prototype // Allows you to add properties and methods to the String object.
+String.length                                        // Reflects the length of the string. Read-only.
+String.prototype                                     // Allows you to add properties and methods to the String object.
 
 // Global object: methods
 String.fromCharCode(num1[, ...[, numN]])             // Returns a string created from the specified sequence of UTF-16 code units.
