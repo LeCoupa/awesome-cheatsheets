@@ -46,6 +46,18 @@
 # 3.Remember to migrate after you change anything in your models.py file
 # 4.Use /admin/ page to add data in your tables for testing purpose
 
+# *****************************************************************************
+# DEPENDENCY MANAGEMENT
+# *****************************************************************************
+# First of there are many tools to manage python dependencies like venv, conda, poetry etc.
+# I find poetry to be the best one. It is easy to use and has a lot of features. like you don't have to write requirements.txt everytime you add a new dependency. poetry does it for you.
+# You can install poetry by running the following command in your terminal
+# pip install poetry. In windows, you might have to add the path to the poetry executable to your PATH environment variable. In linux OS, the poetry executable is added to the PATH automatically.
+# To get started with poetry run 'poetry init'. this will ask few questions answer them or skip them by pressing enter.
+# Now you can add dependencies by running 'poetry add <package-name>'. This will add the package to your project and also add it to the pyproject.toml file.
+# Everytime you run the command 'poetry add <package-name>' it will add the package to your project and also add it to the pyproject.toml file. so no need to write requirements.txt file.
+# Your team members can install all the dependencies by running 'poetry install' command.
+
 
 # *****************************************************************************
 # Deployment
