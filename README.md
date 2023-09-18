@@ -25,7 +25,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Imperative
 
-- [C](languages/C.txt)
+- [C](languages/C.md)
 - [C#](languages/C%23.txt)
 - [Go](languages/golang.md)
 - [Java](languages/java.md)
