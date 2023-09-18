@@ -158,9 +158,9 @@ In Linux systems:
 | `!=`     | Not equal, result is true or false, `a != b`      |
 | `&`      | Bitwise and, `a & b`                              |
 | `^`      | Bitwise exclusive or, `a ^ b`                     |
-| &#124;      | Bitwise or, `a | b`                               |
+| &#124;      | Bitwise or, `a` &#124; `b`                               |
 | `&&`     | Relational and, result is true or false, `a < b && c >= d` |
-| &#124; &#124;     | Relational or, result is true or false, `a < b || c >= d` |
+| &#124; &#124;     | Relational or, result is true or false, `a < b` &#124; &#124; `c >= d` |
 | `?`      | Ternary conditional, `exp1 ? exp2 : exp3`, result is `exp2` if `exp1` is not 0, else result is `exp3` |
 | `=`      | Store                                              |
 | `+=`     | Add and store                                     |
@@ -191,11 +191,11 @@ In Linux systems:
 | LR            | `==`, `!=`                                       |
 | LR            | `&`                                             |
 | LR            | `^`                                             |
-| LR            | `|`                                             |
+| LR            | &#124;                                          |
 | LR            | `&&`                                            |
-| LR            | `||`                                            |
+| LR            | &#124; &#124;                                   |
 | RL            | `? :`                                           |
-| RL            | `=`, `+=`, `-=` ,`*=`, `/=`, `%=`, `>>=`, `<<=`, `&=`, `^=`, `|=` |
+| RL            | `=`, `+=`, `-=` ,`*=`, `/=`, `%=`, `>>=`, `<<=`, `&=`, `^=`, &#124;= |
 | LR            | `,`                                             |
 
 
@@ -228,7 +228,5 @@ In Linux systems:
           default:               /* default executes if no constant equals*/
              statement_sequence  /* the expression. This is optional */
      }
-
----
 
 ---
