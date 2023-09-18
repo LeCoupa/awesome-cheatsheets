@@ -1,5 +1,3 @@
-
-
 main() Function
 
 * The main() function is the starting point of the program: 	int main (int argc, char *argv[]) 
