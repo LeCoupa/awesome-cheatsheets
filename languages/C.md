@@ -1,16 +1,14 @@
-<!-- making C cheatsheets -->
+### main() Function
 
-```main() Function```
-
-* The main() function is the starting point of the program: ```int main (int argc, char *argv[])```
-* The return type of the main() function is an integer (type int) and it is known as the ```return value``` of the program.
-* As a rule of thumb, ```value 0 means success while non-zero means an error conditions.```
+* The main() function is the starting point of the program: `int main (int argc, char *argv[])`
+* The return type of the main() function is an integer (type int) and it is known as the `return value` of the program.
+* As a rule of thumb, `value 0 means success while non-zero means an error conditions.`
 
 ---
 
 ## Include Files
 
-* The `purpose` of these files is to tell the compiler about the existence of external functions which the source code will make use of.
+* The purpose of these files is to tell the compiler about the existence of external functions which the source code will make use of.
 
 ---
 
@@ -41,8 +39,11 @@
 ## Create and execute a program
 
 In Linux systems: 
+
     1. Open up a terminal (Ctrl + Alt + T)
+
     2. Create the program: nano nameProgram.c
+
     3. Write the program and save it
-    4. gcc -o nameExecutable nameProgram.c  (eg: gcc -o nameProgram_output nameProgram.c
-)
+
+    4. gcc -o nameExecutable nameProgram.c  (eg: gcc -o nameProgram_output nameProgram.c)
