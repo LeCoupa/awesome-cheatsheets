@@ -1,34 +1,4 @@
 
-Include Files
-
-* The purpose of these files is to tell the compiler about the existence of external functions which the source code will make use of.
-
-Preprocessor directives:
-  #include "mine.h"	search current working directory first
-  #include <stdio.h>	search command line directory then system
-  #define TRUE 1	macro substitution, usually use capitals
-  #define min(a,b) (a<b)?(a):(b)	macro substitution with parameters
-  #define abs(a) (a<0)?(-(a)):(a)	macro substitution
-  #define note /* comment */	this comment gets inserted every time note appears */
-  backslash \ at end of a line means continue
-  #undef TRUE	undefines a previously defined macroname
-  #error	stop compiling at this point
-  #if expression	conditional compilation, start if structure
-  #elif expression	else if expression != 0 compile following code
-  #else	else compile following code
-  #endif	end of conditional compiling
-  #ifdef macroname	like #if, compiles if macroname defined
-  #ifndef	like #if, compiles if macroname undefined
-  #line number [filename]	set origin for __LINE__ and __FILE__
-  #pragma	gives the compiler commands
-
-Create and execute a program
-
-In Linux systems: 
-    1. Open up a terminal
-    2. Create the program: nano nameProgram.c
-    3. Write the program and save it
-    4. gcc -o nameExecutable nameProgram.c 
 
 32 Reserved words
 
