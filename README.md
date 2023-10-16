@@ -93,7 +93,11 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### NoSQL
 
 - [Redis](databases/redis.sh)
-  </details>
+
+#### GUI
+
+- [WebDB](https://webdb.app)
+</details>
 
 ### 🔧 Tools
 
