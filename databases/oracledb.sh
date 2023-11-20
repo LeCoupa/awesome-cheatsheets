@@ -14,27 +14,27 @@ Retrieve a list of all schemas in the Oracle Database.
 SELECT username FROM all_users;
 
 # Show Current Schema
-   Display the current schema (user) in use.
+Display the current schema (user) in use.
  
 SHOW USER;
 
 # Create Schema (User)
-   Create a new schema (user) in the Oracle Database.
+Create a new schema (user) in the Oracle Database.
  
 CREATE USER username IDENTIFIED BY password;
 
 # Switch Schema
- Change the current schema for the session.
+Change the current schema for the session.
  
 ALTER SESSION SET CURRENT_SCHEMA = username;
 
 # Drop Schema (User)
- Remove a schema (user) from the Oracle Database, including all owned objects.
+Remove a schema (user) from the Oracle Database, including all owned objects.
  
 DROP USER username CASCADE;
 
 # Show Tables in Current Schema
- Retrieve a list of tables in the current schema.
+Retrieve a list of tables in the current schema.
  
 SELECT table_name FROM user_tables;
 
@@ -43,7 +43,7 @@ CRUD
 *****************************************************************************
 
 # Create Table
- Define and create a new table in the Oracle Database.
+Define and create a new table in the Oracle Database.
  
 CREATE TABLE table_name (
   column1 datatype,
@@ -52,27 +52,27 @@ CREATE TABLE table_name (
 );
 
 # Insert Row
- Add a new row with specified values into a table.
+Add a new row with specified values into a table.
  
 INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);
 
 # Select All Rows
- Retrieve all rows from a table.
+Retrieve all rows from a table.
  
 SELECT * FROM table_name;
 
 # Select Specific Columns
- Retrieve specific columns from a table.
+Retrieve specific columns from a table.
  
 SELECT column1, column2 FROM table_name;
 
 # Update Row
- Modify data in a table by updating a specific row.
+Modify data in a table by updating a specific row.
  
 UPDATE table_name SET column1 = value1 WHERE condition;
 
 # Delete Row
- Remove specific rows from a table based on a condition.
+Remove specific rows from a table based on a condition.
  
 DELETE FROM table_name WHERE condition;
 
