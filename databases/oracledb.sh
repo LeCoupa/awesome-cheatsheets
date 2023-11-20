@@ -81,67 +81,67 @@ OTHER FUNCTIONS
 *****************************************************************************
 
 # Sort Rows
- Retrieve rows from a table sorted in ascending or descending order based on a specified column.
+Retrieve rows from a table sorted in ascending or descending order based on a specified column.
  
 SELECT * FROM table_name ORDER BY column1 [ASC|DESC];
 
 # Count Rows
- Calculate the total number of rows in a table.
+Calculate the total number of rows in a table.
  
 SELECT COUNT(*) FROM table_name;
 
 # Limit Rows
- Restrict the number of rows retrieved from a table.
+Restrict the number of rows retrieved from a table.
  
 SELECT * FROM table_name WHERE ROWNUM <= n;
 
 # Join Tables
- Combine rows from two or more tables based on a related column.
+Combine rows from two or more tables based on a related column.
  
 SELECT * FROM table1 JOIN table2 ON table1.column = table2.column;
 
 # Group By
- Group rows based on the values in a specified column and perform an aggregate function.
+Group rows based on the values in a specified column and perform an aggregate function.
  
 SELECT column, COUNT(*) FROM table_name GROUP BY column;
 
 # Aggregate Functions
- Perform aggregate calculations on a column, such as average, sum, minimum, and maximum.
+Perform aggregate calculations on a column, such as average, sum, minimum, and maximum.
  
 SELECT AVG(column), SUM(column), MIN(column), MAX(column) FROM table_name;
 
 # Subquery
- Use the result of a subquery to filter data in the main query.
+Use the result of a subquery to filter data in the main query.
  
 SELECT column1 FROM table_name WHERE column2 = (SELECT column2 FROM another_table WHERE condition);
 
 # Index
- Create an index on a column to improve query performance.
+Create an index on a column to improve query performance.
  
 CREATE INDEX index_name ON table_name(column1);
 
 # Drop Index
- Remove an existing index from a table.
+Remove an existing index from a table.
  
 DROP INDEX index_name;
 
 # Constraints
- Enforce data integrity by adding a primary key constraint to a table.
+Enforce data integrity by adding a primary key constraint to a table.
  
 ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY (column1);
 
 # Sequence
- Create a sequence that generates unique values for a column.
+Create a sequence that generates unique values for a column.
  
 CREATE SEQUENCE sequence_name START WITH 1 INCREMENT BY 1;
 
 # View
- Create a virtual table based on the result of a SELECT query.
+Create a virtual table based on the result of a SELECT query.
  
 CREATE VIEW view_name AS SELECT column1, column2 FROM table_name WHERE condition;
 
 # Stored Procedure
- Define and store a reusable set of SQL statements in the database.
+Define and store a reusable set of SQL statements in the database.
  
 CREATE OR REPLACE PROCEDURE procedure_name (parameter1 datatype, parameter2 datatype, ...) AS
 BEGIN
@@ -150,7 +150,7 @@ END;
 /
 
 # Trigger
- Associate a set of actions with a specific table event, such as before inserting a new row.
+Associate a set of actions with a specific table event, such as before inserting a new row.
  
 CREATE OR REPLACE TRIGGER trigger_name
 BEFORE INSERT ON table_name
@@ -161,7 +161,7 @@ END;
 /
 
 # Partitioning
-   Divide a large table into smaller, more manageable pieces for improved performance and maintenance.
+Divide a large table into smaller, more manageable pieces for improved performance and maintenance.
  
 CREATE TABLE table_name
 PARTITION BY RANGE (column_name)
