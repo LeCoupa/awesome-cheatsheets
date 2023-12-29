@@ -105,7 +105,7 @@ gu$                 make lowercase until end of line
 <<                  indent line one column to left
 ==                  auto-indent current line
 ddp                 swap current line with next
-ddkp                swap current line with previous
+ddkP                swap current line with previous
 :%retab             fix spaces / tabs issues in whole file
 :r [name]           insert the file [name] below the cursor.
 :r !{cmd}           execute {cmd} and insert its standard output below the cursor.
