@@ -59,7 +59,7 @@ Command         | Aliases       | Description
 --------------------------------------------------
 ```
 ember new       |               | Create new project with the provided name (ex. ember new <app-name>)
-ember server    | ember s       | Starts development server (default port is 4200)
+ember serve     | ember s       | Starts development server (default port is 4200)
 ember test      | ember t       | Run tests in CI mode
 ember generate  | ember g       | Run generator
 ember destroy   | ember d       | Remove code created by generator
