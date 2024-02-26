@@ -16,3 +16,33 @@ GRANT ALL PRIVILEGES ON prospectwith.* TO 'power'@'localhost' WITH GRANT OPTION;
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password'; # Create user
 
 mysql -u root -pmypassword -e "MY SQL QUERY" &>> query.log & disown # Run SQL query in the background
+
+# *****************************************************************************
+# CREATE DATABASE/TABLE
+# *****************************************************************************
+
+# Creating Database
+CREATE DATABASE databasename;
+
+# Creating Table [Table's name should be in plural form (ex. users, menus)]
+CREATE TABLE tablename, (column1 datatype, column2 datatype, column3 datatype,);
+
+# For DATA TYPES check out MySQL's official documentation:
+# https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+
+# *****************************************************************************
+# ACCESSING THE DATABASE and TABLES
+# *****************************************************************************
+
+# Accessing the Database
+USE database_name;
+
+# Accessing a specific table
+SELECT * FROM tablename
+
+# *****************************************************************************
+# SELECT (to select any data from any column from the table)
+# *****************************************************************************
+SELECT * FROM tablename # To select every data included from the table
+SELECT column1, column2, column3 FROM tablename # You can specify certain columns to access data from it.
+SELECT column1 (AS name) from tablename # To rename a column, we use an alias (AS) and name it as we want.
