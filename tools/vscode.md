@@ -6,7 +6,8 @@
 
 #### General
 
-- `Ctrl`+`Shift`+`P`, `F1`:  Show Command Palette
+- `Ctrl`+`Shift`+`P`, `F1`: Show Command Palette
+- `Ctrl`+`Shift`+`T`: Open last closed tab
 - `Ctrl`+`P`: Quick Open, Go to File
 - `Ctrl`+`Shift`+`N`: New window/instance
 - `Ctrl`+`W`: Close window/instance
@@ -19,7 +20,7 @@
 - `Ctrl`+`C`: Copy line (empty selection)
 - `Ctrl`+`↓/↑`: Move line down / up
 - `Ctrl`+`Shift`+`K`: Delete line
-- `Ctrl`+`Enter` / `Ctrl`+`Shift`+`Enter`: Insert line below / above 
+- `Ctrl`+`Enter` / `Ctrl`+`Shift`+`Enter`: Insert line below / above
 - `Ctrl`+`Shift`+`\`: Jump to matching bracket
 - `Ctrl`+`]` / `Ctrl`+`[`: Indent / Outdent line
 - `Ctrl`+`Home` / `End`: Go to beginning / end of file
@@ -136,7 +137,7 @@
 
 - [`Wrap Console Log`](https://marketplace.visualstudio.com/items?itemName=midnightsyntax.vscode-wrap-console-log): Wrap to console.log by word or selection.
 
-- [`Bracket Pair Colorizer`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer): Allows matching brackets to be identified with colours. 
+- [`Bracket Pair Colorizer`](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer): Allows matching brackets to be identified with colours.
 
 ## My Settings
 
