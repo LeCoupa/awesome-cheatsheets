@@ -142,7 +142,7 @@ $font-size: 2rem;
 }
 
 .para {
-  padding: $padding / 2;
+  padding: calc($padding / 2);
   font-size: $font-size - 1;
 }
 
