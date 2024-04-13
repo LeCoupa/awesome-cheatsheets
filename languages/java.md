@@ -286,7 +286,7 @@ for(dataType item : array) {
 
 ### ACCESS MODIFIERS
 
-1. defualt(No keyword required)
+1. defaut(No keyword required)
 2. private
 3. public
 4. protected
