@@ -2,7 +2,7 @@
 
 /********************************************************************************************
  * CLI AVAILABLE COMMANDS FOR ARTISAN
- * https://laravel.com/docs/5.8/artisan
+ * https://laravel.com/docs/11.x/artisan
  ********************************************************************************************/
 
 // MAIN.
@@ -20,6 +20,7 @@ php artisan migrate              // Run the database migrations
 php artisan optimize             // Cache the framework bootstrap files
 php artisan preset               // Swap the front-end scaffolding for the application
 php artisan serve                // Serve the application on the PHP development server
+php artisan test                 // Run the application tests
 php artisan tinker               // Interact with your application
 php artisan up                   // Bring the application out of maintenance mode
 
@@ -177,60 +178,60 @@ php artisan view:clear           // Clear all compiled view files
 
 /********************************************************************************************
  * REQUEST
- * https://laravel.com/api/5.8/Illuminate/Http/Request.html
- * https://laravel.com/docs/5.8/requests
+ * https://laravel.com/api/11.x/Illuminate/Http/Request.html
+ * https://laravel.com/docs/11.x/requests
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
  * RESPONSE
- * https://laravel.com/api/5.8/Illuminate/Http/Response.html
- * https://laravel.com/docs/5.8/responses
+ * https://laravel.com/api/11.x/Illuminate/Http/Response.html
+ * https://laravel.com/docs/11.x/responses
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
  * ROUTING
- * https://laravel.com/docs/5.8/routing
+ * https://laravel.com/docs/11.x/routing
  ********************************************************************************************/
 
 
 
  /********************************************************************************************
  * MIDDLEWARE
- * https://laravel.com/docs/5.8/middleware
+ * https://laravel.com/docs/11.x/middleware
  ********************************************************************************************/
 
 
 /********************************************************************************************
  * CONTROLLERS
- * https://laravel.com/docs/5.8/controllers
+ * https://laravel.com/docs/11.x/controllers
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
  * SESSION
- * https://laravel.com/docs/5.8/session
+ * https://laravel.com/docs/11.x/session
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
  * URL GENERATION
- * https://laravel.com/docs/5.8/urls
+ * https://laravel.com/docs/11.x/urls
  ********************************************************************************************/
 
 
 
 /********************************************************************************************
  * VALIDATION
- * https://laravel.com/docs/5.8/validation
+ * https://laravel.com/docs/11.x/validation
  ********************************************************************************************/
 
-accepted                               // The field under validation must be yes, on, 1, or true.
+accepted                               // The field under validation must be "yes", "on", 1, "1", true, or "true".
 active_url                             // The field under validation must have a valid A or AAAA record according to the dns_get_record PHP function.
 after:date                             // The field under validation must be a value after a given date.
 after_or_equal:date                    // The field under validation must be a value after or equal to the given date.
@@ -294,23 +295,28 @@ timezone                               // The field under validation must be a v
 unique:table,column,except,idColumn    // The field under validation must not exist within the given database table.
 url                                    // The field under validation must be a valid URL.
 uuid                                   // The field under validation must be a valid RFC 4122 (version 1, 3, 4, or 5) universally unique identifier (UUID).
+exclude_if:anotherfield,value          // The field under validation will be excluded from the request data returned by the validate and validated methods if the anotherfield field is equal to value.
+exclude_unless:anotherfield,value      // The field under validation will be excluded from the request data returned by the validate and validated methods unless anotherfield's field is equal to value.
+exclude_with:anotherfield              // The field under validation will be excluded from the request data returned by the validate and validated methods if the anotherfield field is present
+exclude_without:anotherfield           // The field under validation will be excluded from the request data returned by the validate and validated methods if the anotherfield field is not present.
 
 /********************************************************************************************
  * ERROR HANDLING
- * https://laravel.com/docs/5.8/errors
+ * https://laravel.com/docs/11.x/errors
  ********************************************************************************************/
 
 /********************************************************************************************
  * MIGRATION COMMANDS
- * https://laravel.com/docs/5.8/migrations
+ * https://laravel.com/docs/11.x/migrations
  ********************************************************************************************/
 
 // TABLE OPTIONS
 
-$table->engine = 'InnoDB';             // Specify the table storage engine (MySQL).
-$table->charset = 'utf8';              // Specify a default character set for the table (MySQL).
-$table->collation = 'utf8_unicode_ci'; // Specify a default collation for the table (MySQL).
-$table->temporary();                   // Create a temporary table (except SQL Server).
+$table->engine('InnoDB');;                // Specify the table storage engine (MySQL).
+$table->charset('utf8mb4');               // Specify a default character set for the table (MySQL).
+$table->collation('utf8mb4_unicode_ci');  // Specify a default collation for the table (MySQL).
+$table->temporary();                      // Create a temporary table (except SQL Server).
+$table->comment('Some comment');          // Add a "comment" to a database table
 
 // COLUMN TYPES
 
@@ -409,11 +415,13 @@ $table->primary('id');                // Adds a primary key.
 $table->primary(['id', 'parent_id']); // Adds composite keys.
 $table->unique('email');              // Adds a unique index.
 $table->index('state');               // Adds a plain index.
+$table->fullText('body');             // Adds a full text index (MySQL / PostgreSQL).
 $table->spatialIndex('location');     // Adds a spatial index. (except SQLite)
 
 $table->dropPrimary('users_id_primary');               // Drop a primary key from the "users" table.
 $table->dropUnique('users_email_unique');              // Drop a unique index from the "users" table.
 $table->dropIndex('geo_state_index');                  // Drop a basic index from the "geo" table.
+$table->dropFullText('posts_body_fulltext');           // Drop a full text index from the "posts" table.
 $table->dropSpatialIndex('geo_location_spatialindex'); // Drop a spatial index from the "geo" table (except SQLite).
 
 // FOREIGN KEY CONSTRAINTS
@@ -426,7 +434,7 @@ Schema::disableForeignKeyConstraints(); // Disable foreign key constraints withi
 
 /********************************************************************************************
  * COLLECTION ELOQUENT METHODS
- * https://laravel.com/docs/5.7/collections
+ * https://laravel.com/docs/11.x/collections
  ********************************************************************************************/
 
 all
@@ -536,10 +544,11 @@ whereNotIn
 whereNotInStrict
 wrap
 zip
+sliding 
 
 /********************************************************************************************
  * HTTP TESTS
- * https://laravel.com/docs/5.7/http-tests
+ * https://laravel.com/docs/11.x/http-tests
  ********************************************************************************************/
 
 $response->assertStatus($code);                            // Assert that the response has a given code.
@@ -548,9 +557,13 @@ $response->assertNotFound();                               // Assert that the re
 $response->assertOk();                                     // Assert that the response has a 200 status code.
 $response->assertSuccessful();                             // Assert that the response has a successful status code.
 $response->assertRedirect($uri);                           // Assert that the response is a redirect to a given URI.
+$response->assertMethodNotAllowed();                       // Assert that the response has a method not allowed (405) HTTP status code.
+$response->assertMovedPermanently();                       // Assert that the response has a moved permanently (301) HTTP status code.
 
 $response->assertHeader($headerName, $value = null);       // Assert that the given header is present on the response.
 $response->assertHeaderMissing($headerName);               // Assert that the given header is not present on the response.
+
+$response->assertDownload();                               // Assert that the response is a "download".
 
 $response->assertExactJson(array $data);                   // Assert that the response contains an exact match of the given JSON data.
 $response->assertJson(array $data);                        // Assert that the response contains the given JSON data.
@@ -582,6 +595,11 @@ $response->assertSessionHasErrorsIn($errorBag, $keys = [], $format = null);     
 $response->assertSessionHasNoErrors();                                                        // Assert that the session has no errors.
 $response->assertSessionDoesntHaveErrors($keys = [], $format = null, $errorBag = 'default');  // Assert that the session has no errors for the given keys.
 $response->assertSessionMissing($key);                                                        // Assert that the session does not contain the given key.
+
+$response->assertLocation($uri);               // Assert that the response has the given URI value in the Location header.
+$response->assertContent($value);              // Assert that the given string matches the response content.
+$response->assertNoContent($status = 204);     // Assert that the response has the given HTTP status code and no content.
+$response->assertStreamedContent($value);      // Assert that the given string matches the streamed response content.
 
 $response->assertViewHas($key, $value = null);             // Assert that the response view was given a piece of data.
 $response->assertViewHasAll(array $data);                  // Assert that the response view has a given list of data.
