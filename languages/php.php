@@ -1,8 +1,8 @@
 <?php
 
 // Exit the file, string inside get's echo'ed
-die("This file is not ment to be ran. ¯\_(ツ)_/¯");
-exit("This file is not ment to be ran. ¯\_(ツ)_/¯");
+die("This file is not meant to be ran. ¯\_(ツ)_/¯");
+exit("This file is not meant to be ran. ¯\_(ツ)_/¯");
 
 /**
  * Printing
