@@ -149,6 +149,7 @@ Operators
   ^=   	bitwise exclusive or and store
   |=   	bitwise or and store
   ,    	separator as in   ( y=x,z=++x )
+  ;     statement terminator.
 
 
 Operator precedence
