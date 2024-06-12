@@ -95,6 +95,14 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Redis](databases/redis.sh)
   </details>
 
+#### Cheat Class
+<details>
+<summary>view cheatsheets</summary>
+
+  - [PDO](cheatclass/PDO.php)
+  
+</details>
+
 ### 🔧 Tools
 
 <details>
