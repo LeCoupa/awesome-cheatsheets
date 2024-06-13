@@ -1,0 +1,442 @@
+/****************************
+ * SCSS CHEATSHEET
+ * Documentation: https://sass-lang.com/documentation/
+ *
+ *
+ * Table of contents
+ * -----------------
+ *  01 | Variables
+ *  02 | Nesting
+ *  03 | Interpolation
+ *  04 | Operators
+ *  05 | At-Rules
+ *        - @use
+ *        - @include
+ *        - @extend
+ *        - @function
+ *        - @mixin and @include
+ *        - @if
+ *        - @else and @else if
+ *        - @for
+ *        - @each
+ *        - @while
+ *****************************/
+
+/***************************
+
+------------ 01: Variables -----------
+
+You can define variables in SCSS using the $ symbol as prefix and assign a value.
+We can then refer this variable anywhere instead of the value in the SCSS file.
+This helps in reducing repetition and makes it easier to update the value in one place.
+
+*******************************/
+// $success-color and $error-color are variables defined with color values
+
+$success-color: #56c0a4;
+$error-color: #ff5b5b;
+
+.success-notification {
+  color: $success-color;
+}
+
+.error-notification {
+  color: $error-color;
+}
+
+.valid {
+  background-color: $success-color;
+}
+
+.invalid {
+  background-color: $error-color;
+}
+
+/*** CSS Output ***/
+
+.success-notification {
+  color: #56c0a4;
+}
+
+.error-notification {
+  color: #ff5b5b;
+}
+
+.valid {
+  background-color: #56c0a4;
+}
+
+.invalid {
+  background-color: #ff5b5b;
+}
+
+/***************************
+
+------------ 02: Nesting -----------
+
+SCSS allows you to nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.
+
+<div class="container">
+  <h1 class="header">Title</h1>
+  <p class="content">Content 1</p>
+  <p class="content">Content 2</p>
+</div>
+
+*******************************/
+
+.container {
+  width: 100%;
+  .header {
+    font-size: 24px;
+  }
+  .content {
+    font-size: 16px;
+  }
+}
+
+/*** CSS Output ***/
+
+.container {
+  width: 100%;
+}
+.container .header {
+  font-size: 24px;
+}
+.container .content {
+  font-size: 16px;
+}
+
+/***************************
+
+------------ 03: Interpolation -----------
+
+Interpolation is a way to embed a variable value into a string. It is done using the #{} syntax.
+Below is just a simple example, you can see better practical usages of interpolation in the At-Rules section.
+
+*******************************/
+$element: 'p';
+
+#{$element} {
+  color: #e0ffff;
+}
+
+/*** CSS Output ***/
+
+p {
+  color: #e0ffff;
+}
+
+/***************************
+
+------------ 04: Operators ------------
+We can use operators in SCSS to perform arithmetic operations.
+
+*******************************/
+
+$padding: 4px;
+$font-size: 2rem;
+
+.header {
+  padding: $padding * 2;
+  font-size: $font-size + 2;
+}
+
+.para {
+  padding: calc($padding / 2);
+  font-size: $font-size - 1;
+}
+
+/*** CSS Output ***/
+
+.header {
+  padding: 8px;
+  font-size: 4rem;
+}
+
+.para {
+  padding: 2px;
+  font-size: 1rem;
+}
+
+/***************************
+
+------------ 05: At-Rules -----------
+
+At-Rules are special instructions to the SCSS preprocessor. They are prefixed with the @ symbol.
+
+*******************************/
+
+// @use
+
+// @use is a directive in SCSS that replaces @import and provides better control over how you import and use code from other stylesheets.
+// Assume we have a file named _variables.scss
+
+// _variables.scss
+$containerWidth: 100px;
+$cardHeight: 60px;
+
+@function doubleWidth($width) {
+  @return $width * 2;
+}
+
+// We can use the variables defined in _variables.scss in our main SCSS file as follows:
+
+@use 'variables' as v;
+
+.container {
+  width: v.doubleWidth(v.$containerWidth); // 200px
+}
+
+.card {
+  height: v.$cardHeight; // 60px
+}
+
+// @extend
+
+// @extend is used to inherit styles from another selector.
+
+.error {
+  border: 1px solid red;
+}
+
+.error-notification {
+  @extend .error;
+  background-color: #ff5b5b;
+}
+
+/*** CSS Output ***/
+
+.error,
+.error-notification {
+  border: 1px solid red;
+}
+
+.error-notification {
+  background-color: #ff5b5b;
+}
+
+/*****************/
+
+// @function
+
+// @function is used to define a function in SCSS to perform operations and return a value.
+
+$spacing: 4px;
+
+@function spacing($value) {
+  @return $value * $spacing;
+}
+
+.container {
+  padding: spacing(4);
+}
+
+/*** CSS Output ***/
+
+.container {
+  padding: 16px;
+}
+/*****************/
+
+// @mixin and include
+
+// @mixin is used to define a mixin in SCSS to reuse styles.
+// @include is used to include a mixin in the current selector.
+
+// $color is a parameter with a default value of #000, when not passed it defaults to #000
+@mixin border-radius($radius, $color: #e82b2b) {
+  border-radius: $radius;
+  color: $color;
+}
+
+.button-primary {
+  @include border-radius(4px, #56c0a4);
+}
+
+.button-secondary {
+  @include border-radius(4px);
+}
+
+/*** CSS Output ***/
+
+.button-primary {
+  border-radius: 4px;
+  color: #56c0a4;
+}
+
+.button-secondary {
+  border-radius: 4px;
+  color: #e82b2b; // default value
+}
+/*****************/
+
+// @if
+
+// @if is used to conditionally apply styles.
+// In the below example, if the value of $progress is greater than or equal to 80, the green background-color will be added.
+
+@mixin show-progress($progress: 0) {
+  @if $progress >= 80 {
+    background-color: green;
+  }
+  color: #ffffff;
+}
+
+.progress-bar-1 {
+  @include show-progress(90);
+}
+
+.progress-bar-2 {
+  @include show-progress();
+}
+
+/*** CSS Output ***/
+
+.progress-bar-1 {
+  background-color: green;
+  color: #ffffff;
+}
+
+.progress-bar-2 {
+  color: #ffffff;
+}
+/*****************/
+
+// @else
+
+// @else and @else if are used to define alternative conditions for @if.
+
+@mixin show-progress($progress: 0) {
+  @if $progress >= 80 {
+    background-color: green;
+  } @else if $progress >= 40 {
+    background-color: orange;
+  } @else {
+    background-color: red;
+  }
+  color: #ffffff;
+}
+
+.progress-bar-1 {
+  @include show-progress(90);
+}
+
+.progress-bar-2 {
+  @include show-progress(40);
+}
+
+.progress-bar-3 {
+  @include show-progress();
+}
+
+/*** CSS Output ***/
+
+.progress-bar-1 {
+  background-color: green;
+  color: #ffffff;
+}
+
+.progress-bar-2 {
+  background-color: orange;
+  color: #ffffff;
+}
+
+.progress-bar-3 {
+  background-color: red;
+  color: #ffffff;
+}
+/*****************/
+
+// @for
+
+// @for is used to loop through a range of values.
+
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    // Interpolation to create class names item-1, item-2, item-3
+    padding: 4px * $i;
+  }
+}
+
+/*** CSS Output ***/
+
+.item-1 {
+  padding: 4px;
+}
+
+.item-2 {
+  padding: 8px;
+}
+
+.item-3 {
+  padding: 12px;
+}
+/*****************/
+
+// @each
+
+// @each is used to loop through a list of values.
+
+$statuses: (
+  'success': 'green',
+  'warn': 'orange',
+  'error': 'red',
+);
+
+@each $type, $color in $statuses {
+  .#{$type} {
+    color: $color;
+  }
+}
+
+/*** CSS Output ***/
+
+.success {
+  color: 'green';
+}
+
+.warn {
+  color: 'orange';
+}
+
+.error {
+  color: 'red';
+}
+/*****************/
+
+// @while
+
+// @while is used to loop through a block of code while a condition is true.
+
+$i: 5;
+
+@while $i > 0 {
+  .item-#{$i} {
+    background-color: rgba(255, 0, 0, $i * 0.1);
+  }
+  $i: $i - 1;
+}
+
+/*** CSS Output ***/
+
+.item-5 {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.item-4 {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+.item-3 {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.item-2 {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.item-1 {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/****************************************************************/
