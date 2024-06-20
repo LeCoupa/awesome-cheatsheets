@@ -1,6 +1,6 @@
 ##############################################################################
 # VIM CHEATSHEET
-# WEBSITE: http://www.vim.org/  
+# WEBSITE: http://www.vim.org/
 # DOCUMENTATION: https://vim.sourceforge.io/docs.php
 ##############################################################################
 
@@ -20,13 +20,15 @@ e                   jump to end of words (punctuation considered words)
 E                   jump to end of words (no punctuation)
 b                   jump backward by words (punctuation considered words)
 B                   jump backward by words (no punctuation)
-ge                  jump backward to end of words
+ge                  jump backward to end of a word
+gE                  jump backwards to the end of a word (words can contain punctuation)
 0                   (zero) start of line
 ^                   first non-blank character of line
-$                   end of line
--                   move line upwards, on the first non blank character
-+                   move line downwards, on the first non blank character
-<enter>             move line downwards, on the first non blank character
+$                   jump to the end of the line
+g_                  jump to the last non-blank character of the line
+-                   move line upwards, on the first non-blank character
++                   move line downwards, on the first non-blank character
+<enter>             move line downwards, on the first non-blank character
 gg                  go to first line
 G                   go to last line
 ngg                 go to line n
@@ -38,10 +40,6 @@ nG                  go To line n
 }                   move the cursor a paragraph forwards
 ]]                  move the cursor a section forwards or to the next {
 [[                  move the cursor a section backwards or the previous {
-CTRL-f              move the cursor forward by a screen of text
-CTRL-b              move the cursor backward by a screen of text
-CTRL-u              move the cursor up by half a screen
-CTRL-d              move the cursor down by half a screen
 H                   move the cursor to the top of the screen.
 M                   move the cursor to the middle of the screen.
 L                   move the cursor to the bottom of the screen.
@@ -49,6 +47,16 @@ fx                  search line forward for 'x'
 Fx                  search line backward for 'x'
 tx                  search line forward before 'x'
 Tx                  search line backward before 'x'
+CTRL-y              moves screen up one line
+CTRL-e              moves screen down one line
+CTRL-u              moves cursor & screen up ½ page
+CTRL-d              moves cursor & screen down ½ page
+CTRL-b              moves screen up one page, cursor to last line
+CTRL-f              moves screen down one page, cursor to first line
+zz                  shift current line to middle of screen
+z.                  same as zz but also jumps to the first non-black character
+zt                  shift current line to top of screen
+zb                  shift current line to bottom of screen
 
 
 ##############################################################################
@@ -60,8 +68,15 @@ Tx                  search line backward before 'x'
 ma                  make a bookmark named a at the current cursor position
 `a                  go to position of bookmark a
 'a                  go to the line with bookmark a
+`0                  go to the position where Vim was previously exited
+`"                  go to the position when last editing this file
 `.                  go to the line that you last edited
+``                  go to the position before the last jump
+g,                  go to newer position in change list
+g;                  go to older position in change list
 
+# Tip: To jump to a mark you can either use a backtick (`) or an apostrophe (').
+# Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
 
 ##############################################################################
 # INSERT MODE
@@ -70,10 +85,13 @@ ma                  make a bookmark named a at the current cursor position
 
 i                   start insert mode at cursor
 I                   insert at the beginning of the line
+gi                  return to insert mode where you inserted text the last time
+gI                  like "I", but always start in column 1
 a                   append after the cursor
 A                   append at the end of the line
 o                   open (append) blank line below current line
 O                   open blank line above current line
+CTRL-o              Temporarily enter normal mode to issue one normal-mode command(while in insert mode)
 Esc                 exit insert mode
 
 
@@ -84,10 +102,25 @@ Esc                 exit insert mode
 
 r                   replace a single character (does not use insert mode)
 R                   enter Insert mode, replacing characters rather than inserting
-J                   join line below to the current one
+J                   join line below to the current one with one space in between
+gJ                  join line below to the current one without space in between
 cc                  change (replace) an entire line
-cw                  change (replace) to the end of word
-C                   change (replace) to the end of line
+cw                  change (replace) to the end of word (same as ce)
+2cw                 change (replace) repeat cw twice
+ciw                 change (replace) word under the cursor
+caw                 change (replace) word under the cursor and the space after or before it
+ci"                 change (replace) word inside ""
+cit                 change (replace) html tag content
+cat                 change (replace) html tag
+cis                 change (replace) sentence under the cursor
+cas                 change (replace) sentence under the cursor and the space after or before it
+cib                 change (replace) inside a block with ()
+cab                 change (replace) a block with ()
+ciB                 change (replace) inside a block with {}
+caB                 change (replace) a block with {}
+C                   change (replace) to the end of line(same as c$)
+cG                  change (replace) to the end of the file
+cgg                 change (replace) from first line to current line
 ct'                 change (replace) until the ' character (can change ' for any character)
 s                   delete character at cursor and substitute text
 S                   delete line at cursor and substitute text (same as cc)
@@ -102,6 +135,7 @@ guiw                make current word lowercase
 gU$                 make uppercase until end of line
 gu$                 make lowercase until end of line
 >>                  indent line one column to right
+>i{                 indent everything in the {}
 <<                  indent line one column to left
 ==                  auto-indent current line
 ddp                 swap current line with next
@@ -110,6 +144,7 @@ ddkP                swap current line with previous
 :r [name]           insert the file [name] below the cursor.
 :r !{cmd}           execute {cmd} and insert its standard output below the cursor.
 
+# Tip: Instead of b or B one can also use ( or { respectively.
 
 ##############################################################################
 # DELETING TEXT
@@ -118,10 +153,15 @@ ddkP                swap current line with previous
 
 x                   delete current character
 X                   delete previous character
-dw                  delete the current word
+dw                  delete (cut) to the end of word (same as de)
+diw                 delete (cut) word under the cursor
+daw                 delete (cut) word under the cursor and the space after or before it
+dap                 delete (cut) a paragraph
 dd                  delete (cut) a line
-dt'                 delete until the next ' character on the line (replace ' by any character)
-D                   delete from cursor to end of line
+dt'                 delete (cut) until the next ' character on the line (replace ' by any character)
+dG                  delete (cut) to the end of the file
+dgg                 delete (cut) from first line to current line
+D                   delete (cut) from cursor to end of line (same as d$)
 :[range]d           delete [range] lines
 
 
@@ -136,6 +176,10 @@ yy                  yank (copy) a line
 y$                  yank to end of line
 p                   put (paste) the clipboard after cursor/current line
 P                   put (paste) before cursor/current line
+gp                  put (paste) the clipboard after cursor and leave cursor after the new text
+gP                  put (paste) before cursor and leave cursor after the new text
+"+y                 yank into the system clipboard register
+"+p                 paste from the system clipboard register
 :set paste          avoid unexpected effects in pasting
 :registers          display the contents of all registers
 "xyw                yank word into register x
@@ -147,6 +191,12 @@ P                   put (paste) before cursor/current line
 "xgP                just like "P", but leave the cursor just after the new text
 :[line]put x        put the text from register x after [line]
 
+# Tip: if you are using vim extension on vs code, you can enable
+"vim.useSystemClipboard": true
+in setting.json, this will allow to Use system clipboard for unnamed register.
+
+
+
 
 ##############################################################################
 # MACROS
@@ -157,6 +207,7 @@ qa                  start recording macro 'a'
 q                   end recording macro
 @a                  replay macro 'a'
 @:                  replay last command
+@@                  repeat macro
 
 
 ##############################################################################
@@ -172,9 +223,11 @@ CTRL-v              start visual block mode
 O                   move to other corner of block
 aw                  mark a word
 ab                  a () block (with braces)
-ab                  a {} block (with brackets)
+aB                  a {} block (with brackets)
+at                  a block with <> tags
 ib                  inner () block
-ib                  inner {} block
+iB                  inner {} block
+it                  inner <> block
 Esc                 exit visual mode
 
 VISUAL MODE COMMANDS
@@ -194,6 +247,7 @@ v%                  selects matching parenthesis
 vi{                 selects matching curly brace
 vi"                 selects text between double quotes
 vi'                 selects text between single quotes
+gv                  reselect the last selected area
 
 ##############################################################################
 # SPELLING
@@ -240,7 +294,7 @@ set ic                      ignore case: turn on
 set noic                    ignore case: turn off
 :%s/old/new/g               replace all old with new throughout file
 :%s/old/new/gc              replace all old with new throughout file with confirmation
-:argdo %s/old/new/gc | wq   open multiple files and run this command to replace old 
+:argdo %s/old/new/gc | wq   open multiple files and run this command to replace old
                             with new in every file with confirmation, save and quit
 
 
@@ -283,7 +337,6 @@ CTRL-w <            increase window width
 CTRL-w >            decrease window width
 CTRL-w =            equal window
 CTRL-w o            close other windows
-zz                  Centers the window to the current line
 
 
 ##############################################################################
@@ -306,12 +359,14 @@ clast               display the last error
 
 
 %                   show matching brace, bracket, or parenthese
-gf                  edit the file whose name is under or after the cursor
+gf                  edit the file whose name is under the cursor
+gF                  edit the file whose name is under the cursor and jump to the line number
 gd                  when the cursor is on a local variable or function, jump to its declaration
 ''                  return to the line where the cursor was before the latest jump
-gi                  return to insert mode where you inserted text the last time
 CTRL-o              move to previous position you were at
 CTRL-i              move to more recent position you were at
+:set nu             display numbers (short for :set number)
+:set nonu           hide numbers (short for :set nonumber)
 
 
 ##############################################################################
@@ -485,7 +540,7 @@ CTRL-n              jump to the next empty tag / attribute
 
 
 cs'"                change surrounding quotes to double-quotes
-cs(}                change surrounding parens to braces 
+cs(}                change surrounding parens to braces
 cs({                change surrounding parens to braces with space
 ds'                 delete surrounding quotes
 dst                 delete surrounding tags
@@ -593,7 +648,7 @@ jj                  exit insertion mode
 
 <leader>/           clear the search register
 
-<leader>h           toggle hidden characters 
+<leader>h           toggle hidden characters
 
 <leader>W           strip all trailing whitespace
 
@@ -661,5 +716,5 @@ CTRL-y              go to next tag of attribute in sparkup plugin
 <leader>g           toggle Gundo window
 
 IMG<CR>             show image browser to insert image tag with src, width and height
-b                   insert image tag with dimensions from NERDTree 
+b                   insert image tag with dimensions from NERDTree
                     (http://stackoverflow.com/questions/5707925/vim-image-placement)
