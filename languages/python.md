@@ -44,7 +44,7 @@
 - As of python3.8 there are 35 keywords
 
 | Keyword | Description  | Category |
-|---------- | ---------- | --------- | 
+|---------- | ---------- | --------- |
 | True      | Boolean value for not False or 1 | Value Keyword|
 | False     | Boolean Value for not True or 0 | Value Keyword |
 | None      | No Value | Value keyword |
@@ -58,7 +58,7 @@
 | else | this block will be executed if condition is false | conditional |
 | for | used for looping | iteration |
 | while | used for looping | iteration |
-| break | get out of loop | iteration | 
+| break | get out of loop | iteration |
 | continue | skip for specific condition | iteration |
 | def | make user defined function | structure |
 | class | make user defined classes | structure |
@@ -71,8 +71,8 @@
 | import | import libraries/modules/packages | import |
 | from | import specific function/classes from modules/packages | import |
 | try | this block will be tried to get executed | exception handling |
-| except | is any exception/error has occured it'll be executed | exception handling |
-| finally | It'll be executed no matter exception occurs or not | exception handling | 
+| except | is any exception/error has occurred it'll be executed | exception handling |
+| finally | It'll be executed no matter exception occurs or not | exception handling |
 | raise | throws any specific error/exception | exception handling |
 | assert | throws an AssertionError if condition is false | exception handling |
 | async | used to define asynchronous functions/co-routines | asynchronous programming |
@@ -135,7 +135,7 @@
 - Lists are created using square brackets:
 
 ```python
-thislist = ["apple", "banana", "cherry"] 
+thislist = ["apple", "banana", "cherry"]
 ```
 
 - List items are ordered, changeable, and allow duplicate values.
@@ -157,14 +157,14 @@ thislist = list(("apple", "banana", "cherry"))  # note the double round-brackets
 - pop() function removes the last value in the given list by default.
 
   ```python
-  thislist = ["apple", "banana", "cherry"] 
-  
+  thislist = ["apple", "banana", "cherry"]
+
   print(thislist.pop())  # cherry
-  print(thislist.pop(0))  #apple 
-  
+  print(thislist.pop(0))  #apple
+
   ```
 
-  
+
 
 ### Tuple
 
@@ -291,14 +291,14 @@ thisdict = {
     "model": "Mustang",
     "year": 1964
   }
-  
+
   x = car.pop("model")
-  
+
   print(x)# Mustang
   print(car)#{'brand': 'Ford', 'year': 1964}
   ```
 
-  
+
 
 ### Conditional branching
 
@@ -378,5 +378,5 @@ function_name()
 ```
 
 * We need not to specify the return type of the function.
-* Functions by default return `None` 
+* Functions by default return `None`
 * We can return any datatype.
