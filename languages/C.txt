@@ -31,11 +31,11 @@ Preprocessor directives:
 
 Create and execute a program
 
-In Linux systems: 
+In Linux systems:
     1. Open up a terminal
     2. Create the program: nano nameProgram.c
     3. Write the program and save it
-    4. gcc -o nameExecutable nameProgram.c 
+    4. gcc -o nameExecutable nameProgram.c
 
 32 Reserved words
 
@@ -106,8 +106,8 @@ Operators
 
   ( )	  grouping parenthesis, function call
   [ ]	  array indexing, also  [ ][ ]  etc.
-  ->   	selector, structure pointer  
-  .	    select structure element     
+  ->   	selector, structure pointer
+  .	    select structure element
   !	    relational not, complement, ! a  yields true or false
   ~    	bitwise not, ones complement, ~ a
   ++  	increment, pre or post to a variable
@@ -153,7 +153,7 @@ Operators
 
 
 Operator precedence
-                
+
 More precedence
 
 LR	( ) [ ] -> . x++ x--
@@ -203,7 +203,7 @@ Function definition
 
 type function_name(int a, float b, const char * ch,...) { function_body }
 
-/* only parameters passed by address can are modified*/ 
+/* only parameters passed by address can are modified*/
 
 /* in the calling function, local copy can be modified*/
 

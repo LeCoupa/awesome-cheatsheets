@@ -1,8 +1,8 @@
 <?php
 
 // Exit the file, string inside get's echo'ed
-die("This file is not ment to be ran. ¯\_(ツ)_/¯");
-exit("This file is not ment to be ran. ¯\_(ツ)_/¯");
+die("This file is not meant to be ran. ¯\_(ツ)_/¯");
+exit("This file is not meant to be ran. ¯\_(ツ)_/¯");
 
 /**
  * Printing
@@ -17,7 +17,7 @@ var_dump($arr); // Print anything, with type hints for any value and sizes
 $string = 'Awesome cheatsheets';
 
 str_contains($string, 'cheat'); // Find if the string contains the specified string (PHP >= 8.0)
-str_replace('Awesome', 'Bonjour', $string); // Replace all occurence
+str_replace('Awesome', 'Bonjour', $string); // Replace all occurrence
 strcmp($string, 'Awesome cheatsheets'); // Compare two strings
 strpos($string, 'a', 0); // Get position in the string
 str_split($string, 2); // Split the string
@@ -189,7 +189,7 @@ $argc; // Number of arguments passed into terminal
  $myObject?->getName()?->startWith('A');
 
 /**
- * Class 
+ * Class
  * http://php.net/manual/en/language.oop5.basic.php
  */
 class NormalClass extends AbstractClassName implements InterfaceName
@@ -200,7 +200,7 @@ class NormalClass extends AbstractClassName implements InterfaceName
     // --> PROPERTY TYPES <--
 
     /**
-     * Public property, everyone can access this property. 
+     * Public property, everyone can access this property.
      * @var Type
      */
     public $property;
@@ -251,7 +251,7 @@ class NormalClass extends AbstractClassName implements InterfaceName
     protected function protectedFunction(Type $var = null): Type
     {
     }
-    
+
     /**
      * Static function, doesn't need an instance to be executed.
      * @param Type
@@ -541,7 +541,7 @@ u   Pattern is treated as UTF-8
 \w  Any "word" character (a-z 0-9 _)
 \W  Any non "word" character
 \s  Whitespace (space, tab CRLF)
-\S  Any non whitepsace character
+\S  Any non whitespace character
 \d  Digits (0-9)
 \D  Any non digit character
 .   (Period) - Any character except newline

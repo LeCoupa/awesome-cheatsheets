@@ -204,7 +204,7 @@ a \|= b; //a is the variable name; b is the variable name; this expression is an
   }
 ```
 **Example:**
-```java  
+```java
   for (int i = 0; i <= n; i++) {
      System.out.println(i);
   }
@@ -254,10 +254,10 @@ for(dataType item : array) {
 
 **Example:**
 ```java
-    int i=1;  
-    do{  
-      System.out.println(i);  
-      i++;  
+    int i=1;
+    do{
+      System.out.println(i);
+      i++;
     }while(i<=10);
 ```
 
@@ -308,7 +308,7 @@ for(dataType item : array) {
   //Declare a variable, object name
   String s;
 
-  //Invoke a contructor to create an object
+  //Invoke a constructor to create an object
   s = new String ("Hello World");
 
   //Invoke an instance method that operates on the object's value
@@ -361,13 +361,13 @@ class MyClass {
         // four methods
         public void setCadence(int newValue) {
             cadence = newValue;
-        }   
+        }
         public void setGear(int newValue) {
             gear = newValue;
-        }   
+        }
         public void applyBrake(int decrement) {
             speed -= decrement;
-        }  
+        }
         public void speedUp(int increment) {
             speed += increment;
         }
@@ -531,13 +531,13 @@ class MyClass extends MySuperClass implements YourInterface {
 
 
 ```java
-    interface print{  
-        void printPaper();  
-    }  
-    public class A4 implements print{  
+    interface print{
+        void printPaper();
+    }
+    public class A4 implements print{
         public void printPaper(){
           System.out.println("A4 Page Printed. ");
-        }  
+        }
     }
 ```
 

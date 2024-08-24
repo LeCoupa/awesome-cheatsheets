@@ -397,8 +397,8 @@ d, t := doubleAndTriple(5)
 _, t := doubleAndTriple(3)
 // t = 9
 
-// Functions can defer commands. Defered commands are
-// runned in a stack order after the execution and
+// Functions can defer commands. Deferred commands are
+// ran in a stack order after the execution and
 // returning of a function
 var aux = 0
 
@@ -488,7 +488,7 @@ person3.Age // 0
 
 ## Maps
 
-Maps are data structures that holds values assigneds to a key.
+Maps are data structures that holds values assigned to a key.
 
 ```go
 // Declaring a map
@@ -508,7 +508,7 @@ newYork // "EUA"
 // Delete
 delete(cities, "NY")
 
-// Check if a key is setted
+// Check if a key is set
 value, ok := cities["NY"]
 ok // false
 value // ""
@@ -600,7 +600,7 @@ Go doesn't support `throw`, `try`, `catch` and other common error handling struc
 ```go
 import "errors"
 
-// Function that contain a logic that can cause a possible exception flow 
+// Function that contain a logic that can cause a possible exception flow
 func firstLetter(text string) (string, error) {
     if len(text) < 1 {
         return nil, errors.New("Parameter text is empty")
@@ -632,7 +632,7 @@ func Sum(x, y int) int {
 }
 
 // main_test.go
-import ( 
+import (
     "testing"
     "reflect"
 )
@@ -676,7 +676,7 @@ func main() {
     blocking2: 0
     blocking2: 1
     blocking2: 2
-    done 
+    done
 */
 
 // Go routines are a function (either declared previously or anonymous) called with the keyword go

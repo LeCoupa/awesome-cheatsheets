@@ -11,7 +11,7 @@ XML uses a DTD to describe the data.
    So the XML is a **Complement** to HTML.
 * HTML: is used to format and display the same data.
 
-   
+
 XML does not carry any information about how to be displayed. The same XML data can be used in many different presentation scenarios.
 Because of this, with XML, there is a full separation between data and presentation.
 

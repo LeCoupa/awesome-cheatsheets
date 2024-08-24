@@ -46,7 +46,7 @@ CTRL+X then (   # start recording a keyboard macro
 CTRL+X then )   # finish recording keyboard macro
 CTRL+X then E   # recall last recorded keyboard macro
 CTRL+X then CTRL+E   # invoke text editor (specified by $EDITOR) on current command line then execute resultes as shell commands
-CTRL+A then D  # logout from screen but don't kill it, if any command exist, it will continue 
+CTRL+A then D  # logout from screen but don't kill it, if any command exist, it will continue
 
 BACKSPACE  # deletes one character backward
 DELETE     # deletes one character under cursor
@@ -94,7 +94,7 @@ cat <filename>                # displays file raw content (will not be interpret
 cat -n <filename>             # shows number of lines
 nl <file.sh>                  # shows number of lines in file
 cat filename1 > filename2     # Copy filename1 to filename2
-cat filename1 >> filename2    # merge two files texts together 
+cat filename1 >> filename2    # merge two files texts together
 any_command > <filename>      # '>' is used to perform redirections, it will set any_command's stdout to file instead of "real stdout" (generally /dev/stdout)
 more <filename>               # shows the first part of a file (move with space and type q to quit)
 head <filename>               # outputs the first lines of file (default: 10 lines)
@@ -203,14 +203,14 @@ echo $$                      # prints process ID of the current shell
 echo $!                      # prints process ID of the most recently invoked background job
 echo $?                      # displays the exit status of the last command
 read <varname>               # reads a string from the input and assigns it to a variable
-read -p "prompt" <varname>   # same as above but outputs a prompt to ask user for value 
+read -p "prompt" <varname>   # same as above but outputs a prompt to ask user for value
 column -t <filename>         # display info in pretty columns (often used with pipe)
 let <varname> = <equation>   # performs mathematical calculation using operators like +, -, *, /, %
 export VARNAME=value         # defines an environment variable (will be available in subprocesses)
 export -f  <funcname>        # Exports function 'funcname'
 export var1="var1 value"     # Export and assign in the same statement
-export <varname>             # Copy Bash variable 
-declare -x <varname>         # Copy Bash variable 
+export <varname>             # Copy Bash variable
+declare -x <varname>         # Copy Bash variable
 
 array[0]=valA                # how to define an array
 array[1]=valB
@@ -507,9 +507,9 @@ function returntrap {
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
 
 ##############################################################################
-# COLORS AND BACKGROUNDS 
+# COLORS AND BACKGROUNDS
 ##############################################################################
-# note: \e or \x1B also work instead of \033 
+# note: \e or \x1B also work instead of \033
 # Reset
 Color_Off='\033[0m' # Text Reset
 
@@ -524,14 +524,14 @@ Cyan='\033[0;36m'   # Cyan
 White='\033[0;97m'  # White
 
 # Additional colors
-LGrey='\033[0;37m'  # Ligth Gray
+LGrey='\033[0;37m'  # Light Gray
 DGrey='\033[0;90m'  # Dark Gray
-LRed='\033[0;91m'   # Ligth Red
-LGreen='\033[0;92m' # Ligth Green
-LYellow='\033[0;93m'# Ligth Yellow
-LBlue='\033[0;94m'  # Ligth Blue
+LRed='\033[0;91m'   # Light Red
+LGreen='\033[0;92m' # Light Green
+LYellow='\033[0;93m'# Light Yellow
+LBlue='\033[0;94m'  # Light Blue
 LPurple='\033[0;95m'# Light Purple
-LCyan='\033[0;96m'  # Ligth Cyan
+LCyan='\033[0;96m'  # Light Cyan
 
 
 # Bold
@@ -566,6 +566,6 @@ On_White='\033[47m' # White
 
 # Example of usage
 echo -e "${Green}This is GREEN text${Color_Off} and normal text"
-echo -e "${Red}${On_White}This is Red test on White background${Color_Off}" 
+echo -e "${Red}${On_White}This is Red test on White background${Color_Off}"
 # option -e is mandatory, it enable interpretation of backslash escapes
 printf "${Red} This is red \n"
