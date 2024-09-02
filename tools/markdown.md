@@ -36,9 +36,11 @@ Horizontal rule
 
 ![Image](image.jpg)
 
-| Table      | Table Cell |
-| ---------- | ---------- |
-| Table Cell | Table Cell |
+| Table       | Table cell  |
+| ----------- | ----------- |
+| Header cell | Header cell |
+| Table       | Table cell  |
+| Table       | Table cell  |
 
 ```
 Fenced code block
