@@ -118,3 +118,77 @@ django-admin version                     # display the current django version
 # 8. $ django-admin startproject myproject
 # 9. $ django-admin startapp myapp
 # 10. $ python manage.py runserver
+
+# *****************************************************************************
+# Writing unit tests in django projects
+# *****************************************************************************
+
+# 1. Set Up Your Test Environment:
+#    Before writing tests, ensure that you have your Django project set up. Typically, you'll have a structure similar to this:
+myproject/
+├── myproject/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── myapp/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── views.py
+│   └── tests.py          # This is where your tests will go
+├── manage.py
+└── venv/
+# 2. Create test cases by subclassing django.test.TestCase or django.test.TransactionTestCase
+# myapp/tests.py
+```
+from django.test import TestCase
+from .models import YourModel
+
+class YourModelTestCase(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # Set up resources for the entire test case class
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        # Clean up resources for the entire test case class
+        pass
+
+    def setUp(self):
+        # Set up resources before each test method
+        pass
+
+    def tearDown(self):
+        # Clean up resources after each test method
+        pass
+```
+# --> setUp(): This method is called before each test method is executed. You can use it to set up any necessary state or resources needed for the test.
+# --> tearDown(): This method is called after each test method is executed. It's used to clean up any resources or state that was set up in setUp().
+# 3. Configure your test database: Django creates a separate database for running tests, ensuring that your production data is not affected. This is specified in your settings.py file.
+# settings.py
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'test_db.sqlite3',
+    }
+}
+```
+# 4. Run your tests: Django provides a management command, manage.py test, to run your tests. Navigate to your project directory in the terminal and run:
+$ python manage.py test
+$ python manage.py test your_app_name
+$ python manage.py test your_app_name.YourModelTestCase
+$ python manage.py test your_app_name.YourModelTestCase.test_something
+# Django will discover your tests and run them. It will output the results to the terminal.
+# 5. View test coverage: You may also want to measure the coverage of your tests. To do this, you can use third-party packages like coverage. First, install it:
+$ pip install coverage
+$ coverage run manage.py test
+# 6. After running tests, you can generate a report:
+$ coverage report
+# This will show you which parts of your code are covered by tests and which are not.
+
