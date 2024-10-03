@@ -70,6 +70,8 @@ arr.shift()                                          // Removes the first elemen
 arr.sort()                                           // Sorts the elements of an array in place and returns the array.
 array.splice(start, deleteCount, item1, item2, ...)  // Adds and/or removes elements from an array.
 arr.unshift([element1[, ...[, elementN]]])           // Adds one or more elements to the front of an array and returns the new length of the array.
+arr.populate(length, value)                          // Fills the array with the specified value to a given length.
+arr.shuffle()                                        // Randomly shuffles the elements of the array in place.
 
 // Instance: accessor methods
 arr.at(index)                                        // Returns the element at the specified index in the array.
@@ -81,6 +83,7 @@ arr.lastIndexOf(searchElement, fromIndex)            // Returns the last (greate
 arr.slice(begin, end)                                // Extracts a section of an array and returns a new array.
 arr.toString()                                       // Returns a string representing the array and its elements. Overrides the Object.prototype.toString() method.
 arr.toLocaleString(locales, options)                 // Returns a localized string representing the array and its elements. Overrides the Object.prototype.toLocaleString() method.
+arr.flat(depth)                                      // Creates a new array with all sub-array elements concatenated up to the specified depth.
 
 // Instance: iteration methods
 arr.entries()                                        // Returns a new Array Iterator object that contains the key/value pairs for each index in the array.
@@ -95,3 +98,8 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
+arr[@@iterator]()                                    // Returns a new Array Iterator object that contains the values for each index in the array. (Same as arr.values())
+             
+// Instance: utility methods
+arr.isEmpty()                                       // Checks if the array is empty and returns a boolean value.
+arr.sample()                                        // Returns a random element from the array without modifying the array.
