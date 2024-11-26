@@ -88,6 +88,7 @@ arr.every(callback[, thisArg])                       // Returns true if every el
 arr.filter(callback[, thisArg])                      // Creates a new array with all of the elements of this array for which the provided filtering function returns true.
 arr.find(callback[, thisArg])                        // Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found.
 arr.findIndex(callback[, thisArg])                   // Returns the found index in the array, if an element in the array satisfies the provided testing function or -1 if not found.
+arr.flatMap(callback[, thisArg])                     // Apply the callback function for each element in array and flatten the result in a new array
 arr.forEach(callback[, thisArg])                     // Calls a function for each element in the array.
 arr.keys()                                           // Returns a new Array Iterator that contains the keys for each index in the array.
 arr.map(callback[, initialValue])                    // Creates a new array with the results of calling a provided function on every element in this array.
@@ -95,3 +96,77 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
+
+/* *******************************************************************************************
+ * GLOBAL OBJECTS > STRING
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+ * ******************************************************************************************* */
+
+// Global object: properties
+str.length                                           // Returns the number of characters in string
+
+// Methods of the Object constructor
+String.fromCharCode(num1[, ...[, numN]])             // Returns a string created from the specified sequence of UTF-16 code units.
+String.fromCodePoint(num1[, ...[, numN]])            // Returns a string created by using the specified sequence of code points
+String.raw(strings, ...substitutions)                // It's used to get the raw string form of template literals that is, substitutions (e.g. ${foo}) are processed, but escape sequences (e.g. \n) are not.
+
+// Methods
+str.charAt(index)                                    // Takes an integer and return the character in position passed, if not found returns an empty string
+str.charCodeAt(index)                                // Takes an integer that corresponds to a position in the string and returns Unicode of the character at that position
+str.codePointAt(index)                               // Takes an integer and returns the Unicode of the position passed as an argument
+str.concat(string2[, ...stringN])                    // Receives an N number of strings and returns their concatenation
+str.endsWith(searchString[, endPosition])            // Checks if the string ends with one or more characters, returning a boolean
+str.includes(searchString[, position])               // Checks if the characters passed as an argument are present in the string
+str.indexOf(searchValue[, fromIndex])                // Returns the index of the first occurrence of the value provided as an argument in the searchValue
+str.lastIndexOf(searchValue[, fromIndex])            // Returns the index of the last occurrence of the value provided as an argument in the searchValue
+str.localeCompare(compareString[,locales[,options]]) // Checks if the reference string comes before or after the one passed as an argument 
+str.match(regexp)                                    // Retrieves the result of matching a string against a regular expression.
+str.matchAll(regexp)                                 // Returns an iterator of all results matching a string against a regular expression, including capturing groups
+str.normalize([form])                                // Returns the Unicode Normalization Form of the string
+str.padEnd(targetLength [, padString])               // Returns a new string padded from the right end with the character or group of characters specified in padString
+str.padStart(targetLength [, padString])             // Returns a new string padded from the beginning with the character or group of characters specified in padString
+str.repeat(count)                                    // Constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together
+str.replace(regexp|substr, newSubStr|func)           // Takes as first argument a string or a Regex that the match or matches are replaced, the second argument is a new string or a function that the return will replace the occurrences, and returns a new string with the replacements
+str.replaceAll(regexp|substr, newSubStr|func)        // It takes as the first argument a string or a Regex that matches will be replaced, the second argument is a new string or a function that the return will replace the occurrences, and returns a new string with the replacements
+str.search(regexp)                                   // It takes a regexp as an argument and returns the index of the position that satisfies it
+str.slice(start, end)                                // Remove a part of the string and return a new string
+str.split([separator[, limit]])                      // Splits the string from a separator defined in the first argument and returns an array of strings
+str.startsWith(searchString[, position])             // Checks if the string starts with one or more characters, returning a boolean
+str.toLocaleLowerCase(locale)                        // Converts all letters to lowercase and return the string with the converted values according to the locale specified as an argument
+str.toLocaleUpperCase(locale)                        // Converte todas as letras em valores retorna uma string com os valores de acordo com a localidade especificada como argumento
+str.toLowerCase()                                    // Convert all letters to lowercase and return the string with the converted values
+str.toString()                                       // Returns a string representing the specified string value.
+str.toUpperCase()                                    // Converts all letters to uppercase returns the string with the converted values
+str.trim()                                           // Remove whitespace at the beginning and end of the string
+str.trimStart()                                      // Remove whitespace at the beginning
+str.trimEnd()                                        // Remove whitespace at the end of the string
+str.valueOf()                                        // Returns the primitive value of a String object.
+
+/* *******************************************************************************************
+ * GLOBAL OBJECTS > STRING
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+ * ******************************************************************************************* */
+
+// Global object: methods
+Number.EPSILON                                       // The smallest interval between two representable numbers.
+Number.MAX_SAFE_INTEGER                              // The maximum safe integer in JavaScript (253 - 1).
+Number.MAX_VALUE                                     // The largest positive representable number.
+Number.MIN_SAFE_INTEGER                              // The minimum safe integer in JavaScript (-(253 - 1)).
+Number.MIN_VALUE                                     // The smallest positive representable number—that is, the positive number closest to zero (without actually being zero).
+Number.NaN                                           // Special "Not a Number" value.
+Number.NEGATIVE_INFINITY                             // Special value representing negative infinity. Returned on overflow.
+Number.POSITIVE_INFINITY                             // Special value representing infinity. Returned on overflow.
+Number.isFinite(value)                               // Determine whether the passed value is a finite number, returns a boolean.
+Number.isInteger(value)                              // Determine whether the passed value is an integer, returns a boolean.
+Number.isNaN(value)                                  // Determine whether the passed value is NaN, returns a boolean.
+Number.isSafeInteger()                               // Determine whether the passed value is a safe integer (number between -(253 - 1) and 253 - 1), returns a boolean.
+Number.parseFloat()                                  // Parses a string argument and returns a floating point number, this is the same as the global parseFloat() function.
+Number.parseInt()                                    // Parses a string argument and returns an integer of the specified radix, this is the same as the global parseInt() function.
+
+// Methods
+number.toExponential(fractionDigits)                 // Returns a string representing the number in exponential notation.
+number.toFixed(digits)                               // Returns a string representing the number in fixed-point notation.
+number.toLocaleString(locales, options)              // Returns a string with a language-sensitive representation of this number.
+number.toPrecision(precision)                        // Returns a string representing the number to a specified precision in fixed-point or exponential notation.
+number.toString(radix)                               // Returns a string representing the specified number value.
+number.valueOf(radix)                                // Returns a string representing the specified number value.
