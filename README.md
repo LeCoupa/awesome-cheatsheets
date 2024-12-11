@@ -50,6 +50,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### Python
 
 - [Django](backend/django.py)
+- [Cirq] (backend/cirq.py)
 
 #### Javascript
 

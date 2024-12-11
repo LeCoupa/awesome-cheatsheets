@@ -1,5 +1,5 @@
 # *****************************************************************************
-# CIRQ QUANTUM COMPUTING FRAMEWORK - COMPREHENSIVE GUIDE
+# 
 # Documentation: https://quantumai.google/cirq
 # Author: Claude | Date: 2024
 # *****************************************************************************
