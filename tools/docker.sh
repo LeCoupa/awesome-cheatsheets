@@ -1,6 +1,7 @@
 ##############################################################################
 # DOCKER
 ##############################################################################
+An open-source platform that automates the deployment, scaling, and management of applications within lightweight, portable containers.
 
 docker init                                 # Creates Docker-related starter files 
 docker build -t friendlyname .              # Create image using this directory's Dockerfile
@@ -31,7 +32,7 @@ docker network prune                        # Remove all unused networks
 ##############################################################################
 # DOCKER COMPOSE
 ##############################################################################
-
+A tool for defining and running multi-container Docker applications using a single YAML configuration file.
 
 docker-compose up                               # Create and start containers
 docker-compose up -d                            # Create and start containers in detached mode
@@ -44,6 +45,21 @@ docker-compose config                           # Validate and view the Compose 
 docker-compose scale <service_name>=<replica>   # Scale special service(s)
 docker-compose top                              # Display the running processes
 docker-compose run -rm -p 2022:22 web bash      # Start web service and runs bash as its command, remove old container.
+
+
+##############################################################################
+# DOCKER VOLUME
+##############################################################################
+It is a persistent data storage mechanism managed by Docker, allowing data to be stored and shared between containers.
+
+docker volume create <volume_name>                         # Create a volume
+docker volume ls                                           # List all volumes
+docker volume inspect <volume_name>                        # Display detailed information on one or more volumes
+docker volume rm <volume_name>                             # Remove one or more volumes
+docker volume prune                                        # Remove all unused local volumes
+docker run -v <volume_name>:<mount_path> <image_name>      # Mount a volume
+docker system df -v                                       # Show docker disk usage
+
 
 ##############################################################################
 # DOCKER SERVICES 
