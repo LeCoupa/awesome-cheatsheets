@@ -65,6 +65,25 @@ ksort($arr); // Sort associative arrays in ascending order, according to the key
 arsort($arr); // Sort associative arrays in descending order, according to the value.
 krsort($arr); // Sort associative arrays in descending order, according to the key.
 
+/** / 
+ * Array Functions
+ * 
+ * This are functions that you can use to manipulate the arrays
+*/
+
+count($arr); // This will count the length of the array values
+array_push($arr, ['Jane', 200, 500]); // Accepts two parameters. And this adds new value to the end of the array
+array_pop($arr); // This removes the value at the end of the array
+array_shift($arr); // This removes the first index of the array
+array_unshift($arr, ['PHP', 1999, 2024]);  // Accepts two parameters. This adds new value in the first index of the array
+array_slice($arr, 0, 1); // Accepts two or three parameters. This removes the selected index from the array.
+
+$arr2 = [["Lebron James", 2003, 2024], ["Michael Jordan", 1989, 2001]];
+array_splice($arr, 0, 2, $arr2); // Accepts three or four parameters. This removes specified index from the array and replaces new value.
+
+array_reverse($arr); // This reverses the value of the array.
+
+
 /**
  * Conditions
  */
@@ -78,6 +97,17 @@ if($i > 10) {
 
 }
 
+// Switch Conditions
+switch($arr) {
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    default:
+}
+
 // Ternary
 $string = $state == 'Running' ? 'He is running' : 'I don\'t know';
 
@@ -86,23 +116,19 @@ $string = $startDate ?? '';
 
 /**
  * Ways of looping
+ * NOTE: Look out for and avoid having an infinite loop! 
  */
 continue; // Skip current iter
 break; // Exit loop
 
-// Foreach
-foreach($arr as $key => $value) {
-    $key = $key;
-    $value = $value;
-}
-
-// For
-for($i = 0; $i < count($arr); $i++) {
+// For loop
+// gets the initial value, validates if initial value is less than the count; if true add one.
+for($i = 0; $i < count($arr); $i++) { 
     $key = $i;
     $value = $arr[$i];
 }
 
-// While
+// While loop
 $i = 0;
 while($i < count($arr) - 1) {
     $key = $i;
@@ -116,15 +142,11 @@ do {
     $value = $arr[$i];
 } while($i < count($arr));
 
-// Switch
-switch($arr) {
-    case 1:
-        break;
-    case 2:
-        break;
-    case 3:
-        break;
-    default:
+// Foreach 
+// Iterates through the array. It could get only the value or the key and value of the array
+foreach($arr as $key => $value) {
+    $key = $key;
+    $value = $value;
 }
 
 /**
