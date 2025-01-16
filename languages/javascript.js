@@ -28,6 +28,8 @@ Object.preventExtensions(obj)                        // Prevents any extensions 
 Object.seal(obj)                                     // Prevents other code from deleting properties of an object.
 Object.setPrototypeOf(obj, prototype)                // Sets the prototype (i.e., the internal [[Prototype]] property).
 Object.values(obj)                                   // Returns an array containing the values that correspond to all of a given object's own enumerable string properties.
+Object.hasOwn(obj, prop)                             // Checks if a object has a property of its own (not inherited).
+Object.fromEntries(iterable)                         // Transforms a list of key values pairs into a onject.
 
 // Object instances and Object prototype object (Object.prototype.property or Object.prototype.method())
 // Properties
@@ -55,6 +57,8 @@ Array.prototype                                      // Represents the prototype
 Array.from(arrayLike[, mapFn[, thisArg]])            // Creates a new Array instance from an array-like or iterable object.
 Array.isArray(obj)                                   // Returns true if a variable is an array, if not false.
 Array.of(element0[, element1[, ...[, elementN]]])    // Creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+Array.prototype.flatMap()                            // arr.flatMap(callback) / Combines map and flat into a single method call.
+Array.prototype.group()                              //arr.group(callback) / Groups the elements of an array based on the callback's return value.
 
 // Instance: properties
 arr.length                                           // Reflects the number of elements in an array.
