@@ -106,3 +106,15 @@ str.startsWith(searchString[, position]) // Checks if the string starts with the
 str.endsWith(searchString[, length]) // Checks if the string ends with the given characters.
 str.includes(searchString[, position]) // Checks if the string contains the given characters.
 str.repeat(count) // Repeats the string for the specified number of times.
+
+// Math methods
+Math.max(value1, value2, ..., valueN) // Returns the largest number from the given arguments.
+Math.min(value1, value2, ..., valueN) // Returns the smallest number from the given arguments.
+Math.random() // Generates a random number between 0 (inclusive) and 1 (exclusive).
+Math.round(x) // Rounds the number to the nearest integer.
+Math.floor(x) // Rounds the number down to the nearest integer.
+Math.ceil(x) // Rounds the number up to the nearest integer.
+Math.pow(base, exponent) // Raises the base to the power of the exponent.
+Math.sqrt(x) // Returns the square root of a number.
+Math.trunc(x) // Removes the fractional part of a number, returning only the integer part.
+
