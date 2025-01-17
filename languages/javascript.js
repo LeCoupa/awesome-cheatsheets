@@ -99,3 +99,10 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
+
+
+// String.prototype.startsWith()
+str.startsWith(searchString[, position]) // Checks if the string starts with the given characters.
+str.endsWith(searchString[, length]) // Checks if the string ends with the given characters.
+str.includes(searchString[, position]) // Checks if the string contains the given characters.
+str.repeat(count) // Repeats the string for the specified number of times.
