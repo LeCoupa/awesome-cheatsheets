@@ -28,6 +28,8 @@ Object.preventExtensions(obj)                        // Prevents any extensions 
 Object.seal(obj)                                     // Prevents other code from deleting properties of an object.
 Object.setPrototypeOf(obj, prototype)                // Sets the prototype (i.e., the internal [[Prototype]] property).
 Object.values(obj)                                   // Returns an array containing the values that correspond to all of a given object's own enumerable string properties.
+Object.hasOwn(obj, prop)                             // Checks if a object has a property of its own (not inherited).
+Object.fromEntries(iterable)                         // Transforms a list of key values pairs into a onject.
 
 // Object instances and Object prototype object (Object.prototype.property or Object.prototype.method())
 // Properties
@@ -55,6 +57,8 @@ Array.prototype                                      // Represents the prototype
 Array.from(arrayLike[, mapFn[, thisArg]])            // Creates a new Array instance from an array-like or iterable object.
 Array.isArray(obj)                                   // Returns true if a variable is an array, if not false.
 Array.of(element0[, element1[, ...[, elementN]]])    // Creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+Array.prototype.flatMap()                            // arr.flatMap(callback) / Combines map and flat into a single method call.
+Array.prototype.group()                              //arr.group(callback) / Groups the elements of an array based on the callback's return value.
 
 // Instance: properties
 arr.length                                           // Reflects the number of elements in an array.
@@ -95,3 +99,22 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
+
+
+// String.prototype.startsWith()
+str.startsWith(searchString[, position]) // Checks if the string starts with the given characters.
+str.endsWith(searchString[, length]) // Checks if the string ends with the given characters.
+str.includes(searchString[, position]) // Checks if the string contains the given characters.
+str.repeat(count) // Repeats the string for the specified number of times.
+
+// Math methods
+Math.max(value1, value2, ..., valueN) // Returns the largest number from the given arguments.
+Math.min(value1, value2, ..., valueN) // Returns the smallest number from the given arguments.
+Math.random() // Generates a random number between 0 (inclusive) and 1 (exclusive).
+Math.round(x) // Rounds the number to the nearest integer.
+Math.floor(x) // Rounds the number down to the nearest integer.
+Math.ceil(x) // Rounds the number up to the nearest integer.
+Math.pow(base, exponent) // Raises the base to the power of the exponent.
+Math.sqrt(x) // Returns the square root of a number.
+Math.trunc(x) // Removes the fractional part of a number, returning only the integer part.
+
