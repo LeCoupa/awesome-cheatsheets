@@ -218,7 +218,6 @@ array[2]=valC
 array=([2]=valC [0]=valA [1]=valB)  # another way
 array=(valA valB valC) # and another
 ${array[@]} # list contents
-${array[i]} # value at index i (0-based)
 
 ${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
 ${#array[i]}                 # to find out the length of any element in the array
