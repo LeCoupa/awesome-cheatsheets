@@ -259,6 +259,17 @@ $(UNIX command)              # command substitution: runs the command and return
 
 typeset -l <x>                 # makes variable local - <x> must be an interger
 
+#########################
+# POSIX Character Classes
+#########################
+
+[:alnum:]		# Alphanumeric characters
+[:alpha:]		# Alphabetic characters
+[:digit:]		# Numerals
+[:upper:]		# Uppercase alphabetic characters
+[:lower:]		# Lowercase alphabetic characters
+[!characters]	# Matches any character that is not a member of the set characters
+
 ##############################################################################
 # FUNCTIONS
 ##############################################################################
