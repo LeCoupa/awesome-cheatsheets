@@ -1,0 +1,118 @@
+C++ Cheatsheets
+
+- Variables:
+int age = 25;
+double salary = 45000.50;
+char grade = 'A';
+string name = "John";
+
+
+-Functions: 
+#include <iostream>
+using namespace std;
+
+void greet(string name) {
+    cout << "Hello, " << name << "!" << endl;
+}
+
+-Conditionals:
+if (age > 18) {
+    cout << "Adult" << endl;
+} else {
+    cout << "Minor" << endl;
+}
+
+
+-Loops:
+for (int i = 0; i < 5; i++) {
+    cout << i << endl;
+}
+
+int i = 0;
+while (i < 5) {
+    cout << i << endl;
+    i++;
+}
+
+
+- Classes and Objects
+
+class Person {
+public:
+    string name;
+    int age;
+
+    void greet() {
+        cout << "Hello, " << name << "!" << endl;
+    }
+};
+
+Object:
+
+Person person;
+person.name = "John";
+person.age = 25;
+person.greet();
+Pointers and References
+Pointers:
+
+cpp
+int a = 10;
+int* p = &a;
+cout << "Value: " << *p << endl; // Dereferencing
+References:
+
+cpp
+int b = 20;
+int& ref = b;
+ref = 30;
+cout << "Value: " << b << endl; // Output will be 30
+Standard Template Library (STL)
+Vectors:
+
+cpp
+#include <vector>
+#include <iostream>
+using namespace std;
+
+vector<int> v = {1, 2, 3};
+v.push_back(4);
+for (int i : v) {
+    cout << i << " ";
+}
+Maps:
+
+cpp
+#include <map>
+#include <iostream>
+using namespace std;
+
+map<string, int> m;
+m["apple"] = 1;
+m["banana"] = 2;
+for (auto const& pair : m) {
+    cout << pair.first << ": " << pair.second << endl;
+}
+File I/O
+Read from File:
+
+cpp
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+ifstream inputFile("data.txt");
+string line;
+while (getline(inputFile, line)) {
+    cout << line << endl;
+}
+inputFile.close();
+Write to File:
+
+cpp
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+ofstream outputFile("output.txt");
+outputFile << "Hello, World!" << 
