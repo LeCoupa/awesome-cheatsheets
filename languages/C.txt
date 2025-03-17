@@ -240,3 +240,102 @@ enum enum_type                /* enum_name is optional */
 
  /* use dot notation to select a component of a struct or union */
 
+
+Graphical enviroment
+
+//  Using a graphical program
+
+//Example ------------------------------>  Drawing a line
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<graphics.h>                            //    library to use graphical commands
+
+int main()
+{
+  int gd=DETECT,gm;                             //    Initialisation of graphics pointer.
+
+  initgraph(&gd,&gm,"c:\\turboc3\\bgi");        //    starting the graphical enviroment
+
+  int x1,y1,x2,y2;
+  
+  printf("Enter coordinates of first point");
+  scanf("%d%d",&x1,&y1);
+  printf("Enter coordinates of second point");
+  scanf("%d%d",&x2,&y2);
+
+  line( x1 , y1 , x2 , y2 );                    //    graphics command 
+
+  closegraph();                                 //    Closing of graphics pointer
+
+  return 0;
+}
+
+
+
+//Example ------------------------------> Drawing a circle
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<graphics.h>                            //    library to use graphical commands
+
+int main()
+{
+  int gd=DETECT,gm;                             //    Initialisation of graphics pointer.
+
+  initgraph(&gd,&gm,"c:\\turboc3\\bgi");        //    starting the graphical enviroment
+
+  int x1,y1,r;
+  
+  printf("Enter coordinates of center");
+  scanf("%d%d",&x1,&y1);
+  printf("Enter size of radius");
+  scanf("%d",&r);
+
+  circle( x1 , y1 , r );                        //    graphics command 
+
+  closegraph();                                 //    Closing of graphics pointer
+
+  return 0;
+}
+
+
+
+//Example ------------------------------> Drawing a rectangle
+
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<graphics.h>                            //    header file to use graphical commands
+
+int main()
+{
+  int gd=DETECT,gm;                             //    initialisation of graphics pointer.
+
+  initgraph(&gd,&gm,"c:\\turboc3\\bgi");        //    starting the graphical enviroment
+
+  int x1,y1,r;
+  
+  printf("Enter coordinates of first point");
+  scanf("%d%d",&x1,&y1);
+  printf("Enter coordinates of second point");
+  scanf("%d%d",&x2,&y2);
+  printf("Enter coordinates of third point");
+  scanf("%d%d",&x3,&y3);
+  printf("Enter coordinates of forth point");
+  scanf("%d%d",&x4,&y4);
+  
+  line( x1 , y1 , x2 , y2 );                    //    graphics command 
+  line( x2 , y2 , x3 , y3 );
+  line( x3 , y3 , x4 , y4 );
+  line( x4 , y4 , x1 , y1 );
+
+
+  closegraph();                                 //    closing of graphics pointer
+
+  return 0;
+}
