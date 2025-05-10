@@ -3,6 +3,7 @@
 * PDF: https://sematext.com/kubernetes-cheat-sheet/
 * WEBSITE: https://kubernetes.io/
 * DOCUMENTATION: https://kubernetes.io/docs/home
+* Kubernetes API: https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#-strong-api-overview-strong-
 
 ## Client Configuration
 
