@@ -380,3 +380,11 @@ function_name()
 * We need not to specify the return type of the function.
 * Functions by default return `None`
 * We can return any datatype.
+
+### Lambda functions
+- lambda functions are functions without a name
+- It accepts arguments and immediately returns the result of the work
+```python
+res = lambda x,y : x*y 
+print(res(5, 10)) # 50
+```
