@@ -35,6 +35,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### Functional
 
 - [JavaScript](languages/javascript.js)
+- [Typescript](languages/typescript.md)
 
 </details>
 
@@ -61,6 +62,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Sails.js](backend/sails.js)
   </details>
 
+
 ### 🌐 Frontend
 
 <details>
@@ -79,6 +81,10 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Ember.js](frontend/ember.js)
 - [Angular (2+)](frontend/angular.js)
 - [AngularJS](frontend/angularjs.js)
+
+#### Typescript
+
+- [Typescript](frontend/typescript.ts)
   </details>
 
 ### 🗃️ Databases
