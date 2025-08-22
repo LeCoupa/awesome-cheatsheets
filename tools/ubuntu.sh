@@ -21,6 +21,7 @@ cat /proc/<process_id>/maps   # Show the current virtual memory usage of a Linux
 ip r # Display ip of the server
 
 lsof -i :9000 # List process running on port 9000
+kill -9 $(lsof -t -i:PORT) # Kill the process running on whichever port specified
 
 journalctl -u minio.service -n 100 --no-pager # List last 100 logs for specific service
 
