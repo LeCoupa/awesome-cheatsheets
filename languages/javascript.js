@@ -95,3 +95,9 @@ arr.reduce(callback[, initialValue])                 // Apply a function against
 arr.reduceRight(callback[, initialValue])            // Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.
 arr.some(callback[, initialValue])                   // Returns true if at least one element in this array satisfies the provided testing function.
 arr.values()                                         // Returns a new Array Iterator object that contains the values for each index in the array.
+
+// String methods
+String.charAt(index)                                 // Returns the character at the specified index in a string.
+String.indexOf(character)                            // Returns the index of the first occurrence of a specified value in a string.
+String.substring(starting_index, ending_index)       // Returns a new string that is a subset of the original string.
+String.substring(starting_index)                     // Returns a substring from starting index to last index of string.
