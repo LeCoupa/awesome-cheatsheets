@@ -89,6 +89,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### SQL
 
 - [MySQL](databases/mysql.sh)
+- [PostgreSQL](databases/postgresql.md)
 
 #### NoSQL
 
