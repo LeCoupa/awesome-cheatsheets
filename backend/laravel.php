@@ -418,8 +418,10 @@ $table->dropSpatialIndex('geo_location_spatialindex'); // Drop a spatial index f
 
 // FOREIGN KEY CONSTRAINTS
 
-$table->foreign('user_id')->references('id')->on('users'); // Create foreign key constraints.
-$table->dropForeign('posts_user_id_foreign');              // Drop foreign key (accepts an array of strings).
+$table->foreign('user_id')->references('id')->on('users');                             // Create foreign key constraints.
+$table->foreignId('user_id')->constrained('users');                                    // Create foreign key terser methods (7.x).
+$table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade'); // Specify the desired action for the "on delete" and "on update" properties of the constraint(7.x).
+$table->dropForeign('posts_user_id_foreign');                                          // Drop foreign key (accepts an array of strings).
 
 Schema::enableForeignKeyConstraints();  // Enable foreign key constraints within your migrations.
 Schema::disableForeignKeyConstraints(); // Disable foreign key constraints within your migrations.
