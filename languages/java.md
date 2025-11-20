@@ -420,15 +420,15 @@ class MyClass extends MySuperClass implements YourInterface {
   public class Circle {
 
     public void draw(){
-      System.out.println("Drwaing circle with default color Black and diameter 1 cm.");
+      System.out.println("Drawing circle with default color Black and diameter 1 cm.");
     }
 
     public void draw(int diameter){ //method draw() overloaded.
-      System.out.println("Drwaing circle with default color Black and diameter"+diameter+" cm.");
+      System.out.println("Drawing circle with default color Black and diameter"+diameter+" cm.");
     }
 
     public void draw(int diameter, String color){ //method draw() overloaded.
-      System.out.println("Drwaing circle with color"+color+" and diameter"+diameter+" cm.");
+      System.out.println("Drawing circle with color"+color+" and diameter"+diameter+" cm.");
     }
   }
 ```
@@ -447,7 +447,7 @@ class MyClass extends MySuperClass implements YourInterface {
 
       @Override
       public void draw(){
-        System.out.println("Drwaing circle");
+        System.out.println("Drawing circle");
       }
 
     }
