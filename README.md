@@ -128,6 +128,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [VIM](tools/vim.txt)
 - [Visual Studio Code](tools/vscode.md)
 - [Xcode](tools/xcode.txt)
+- [ZapTools](tools/zaptools.md)
 
 #### Infrastructure
 - [AWS CLI](tools/aws.sh)
