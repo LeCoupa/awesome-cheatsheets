@@ -134,7 +134,7 @@ app.use('<admin dir>', admin)`;                    `// Mounting a sub - app`
 
 `app.put('/', function(req,res){
     res.send('PUT request to a webpage')
-})`                                               `// post request to the specified path`
+})`                                               `// put request to the specified path`
 
 `app.delete('/', function(req,res){
     res.send('DELETE request to a webpage')
