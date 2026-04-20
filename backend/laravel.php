@@ -83,6 +83,7 @@ php artisan make:rule            // Create a new validation rule
 php artisan make:scope           // Create a new scope class
 php artisan make:seeder          // Create a new seeder class
 php artisan make:test            // Create a new test class
+php artisan make:enum            // Create a new enum class
 
 // MIGRATE
 
