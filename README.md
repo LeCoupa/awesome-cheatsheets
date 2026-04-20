@@ -112,6 +112,10 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 ---
 
+#### PostgreSQL
+
+- [PostgreSQL](databases/postgresql.sh)
+
 ### 🔧 Tools
 
 <details>
