@@ -61,6 +61,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 #### Python
 - [Django](backend/django.py)
+- [FastAPI](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/backend/fastapi.py)
 
 #### JavaScript
 - [Adonis.js](backend/adonis.js)
