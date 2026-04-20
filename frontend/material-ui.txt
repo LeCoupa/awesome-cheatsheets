@@ -1,0 +1,143 @@
+##############################################################################
+# Material-UI
+# Material-UI: React components for modern web design.
+# WEBSITE: https://mui.com/material-ui/
+# DOCUMENTATION: https://mui.com/material-ui/getting-started/
+##############################################################################
+
+
+##############################################################################
+# CORE COMPONENTS
+##############################################################################
+
+Button -       variant: Style of the button, e.g., "contained" or "outlined".
+               color: Color scheme, e.g., "primary", "secondary".
+
+Typography -   variant: Text style, e.g., "h1", "body1".
+
+
+Grid -         container: Marks an element as a grid container.
+               item: Marks an element as a grid item.
+
+
+Icon-          Use specific icon names or custom SVG.
+
+
+##############################################################################
+# FORM COMPONENTS
+##############################################################################
+
+TextField -        label: Label for the input field.
+                   variant: Input style, e.g., "filled" or "outlined".
+
+Checkbox/Radio -   color: Color scheme, e.g., "primary", "secondary".
+
+Select -           variant: Select style, e.g., "filled" or "outlined".
+
+Slider -           value: Current value of the slider.
+
+
+##############################################################################
+# LAYOUT COMPONENTS
+##############################################################################
+
+AppBar/Toolbar -    position: Positioning, e.g., "fixed" or "static".
+
+Drawer -            anchor: Side to anchor, e.g., "left" or "right".
+
+Card -              variant: Card style, e.g., "outlined" or "elevation".
+
+Stepper -           alternativeLabel: Display step labels.
+
+
+##############################################################################
+# NAVIGATION COMPONENTS
+##############################################################################
+
+Tabs/Breadcrumbs -       value: Current active tab.
+                         aria-label: Accessible label.
+
+Menu/IconButton -        edge: Edge to anchor, e.g., "start" or "end".
+
+
+##############################################################################
+# FEEDBACK COMPONENTS
+##############################################################################
+
+Snackbar/Alert -         severity: Severity, e.g., "success", "error".
+
+Progress -               color: Color scheme, e.g., "primary", "secondary".
+
+Tooltip -                title: Tooltip content.
+
+
+##############################################################################
+# DIALOGS/MODALS
+##############################################################################
+
+Dialog/Modal -           open: Control visibility.
+
+
+##############################################################################
+# STYLING
+##############################################################################
+
+
+makeStyles/withStyles -      Define and apply custom styles.
+
+ThemeProvider -              Apply a custom theme.
+
+
+##############################################################################
+# DATA DISPLAY
+##############################################################################
+
+Avatar/Badge -        color: Color scheme, e.g., "primary", "secondary".
+
+Chip -                color: Color scheme, e.g., "primary", "secondary".
+
+Table -               size: Size, e.g., "small", "medium".
+
+
+##############################################################################
+# UTILITY COMPONENTS
+##############################################################################
+
+Popover -                     anchorEl: Element to anchor to.
+
+ClickAwayListener -           Handle clicks outside.
+
+Hidden -                      Media query breakpoints, e.g., mdDown, lgUp.
+
+CssBaseline -                 Apply basic styling.
+
+
+##############################################################################
+# TRANSITIONS/ANIMATIONS
+##############################################################################
+
+Collapse/Fade/Grow/Slide -       Transition-specific attributes.
+
+
+##############################################################################
+# THEMES
+##############################################################################
+
+Custom Theme/ThemeProvider -     Define and apply themes.
+
+
+##############################################################################
+# HOOKS
+##############################################################################
+
+useMediaQuery/useScrollTrigger -       Responsive design.
+                                       Media query and scroll control.
+
+useTheme -                             Access theme properties.
+
+
+##############################################################################
+# CUSTOMIZATION
+##############################################################################
+
+Customize Theme/withStyles -           Override and customize styles.
