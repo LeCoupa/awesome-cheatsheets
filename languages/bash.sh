@@ -216,7 +216,8 @@ array[0]=valA                # how to define an array
 array[1]=valB
 array[2]=valC
 array=([2]=valC [0]=valA [1]=valB)  # another way
-array=(valA valB valC)              # and another
+array=(valA valB valC) # and another
+${array[@]} # list contents
 
 ${array[i]}                  # displays array's value for this index. If no index is supplied, array element 0 is assumed
 ${#array[i]}                 # to find out the length of any element in the array
@@ -256,6 +257,17 @@ ${#varname}                  # returns the length of the value of the variable a
 $(UNIX command)              # command substitution: runs the command and returns standard output
 
 typeset -l <x>                 # makes variable local - <x> must be an interger
+
+#########################
+# POSIX Character Classes
+#########################
+
+[:alnum:]		# Alphanumeric characters
+[:alpha:]		# Alphabetic characters
+[:digit:]		# Numerals
+[:upper:]		# Uppercase alphabetic characters
+[:lower:]		# Lowercase alphabetic characters
+[!characters]	# Matches any character that is not a member of the set characters
 
 ##############################################################################
 # FUNCTIONS
