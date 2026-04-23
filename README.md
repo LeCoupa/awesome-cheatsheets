@@ -24,7 +24,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 ---
 
-## 📚 Table of Contents
+## 📚 Table of Contents :
 
 ### 📃 Languages
 
