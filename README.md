@@ -135,6 +135,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [GCP CLI](tools/gcp.md)
 - [Heroku CLI](tools/heroku.sh)
 - [Kubernetes](tools/kubernetes.md)
+- [KubeStellar Console](https://github.com/kubestellar/console) - AI-powered multi-cluster Kubernetes dashboard for intelligent workload management
 - [macOS](tools/macos.sh)
 - [Nanobox Boxfile](tools/nanobox_boxfile.yml)
 - [Nanobox CLI](tools/nanobox_cli.sh)
