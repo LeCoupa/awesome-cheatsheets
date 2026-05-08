@@ -31,14 +31,18 @@ git branch                         # shows all the branches (current branch is s
 git branch -a                     # shows all the branches local and remote
 
 git branch my-branch               # creates my-branch
+git checkout -b my-branch          # create and switches to my-branch
+git switch -c my-branch            # create and switches to my-branch
 git branch -d my-branch            # deletes my-branch
 git checkout my-branch         	   # switches to my-branch
+git switch my-branch               # switches to my-branch
 git merge my-branch                # merges my-branch to current branch
 git push origin --delete my-branch # delete remote branch
 git branch -m <new-branch-name>    # rename the branch
 git checkout --orphan <branch_name> # checkout a branch with no commit history
 git branch -vv                     # list all branches and their upstreams, as well as last commit on branch
 git branch -a                      # List all local and remote branches
+git restore                        # Restore specified paths in the working tree
 
 git cherry-pick <commit_id>                     # merge the specified commit
 git cherry-pick <commit_id_A>^..<commit_id_B>   # pick the entire range of commits where A is older than B ( the ^ is for including A as well )
