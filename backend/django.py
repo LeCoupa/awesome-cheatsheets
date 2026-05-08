@@ -118,3 +118,48 @@ django-admin version                     # display the current django version
 # 8. $ django-admin startproject myproject
 # 9. $ django-admin startapp myapp
 # 10. $ python manage.py runserver
+
+# *****************************************************************************
+# Templates Tags
+# *****************************************************************************
+
+# {% extends "base.html "%}                   --> Base template forms basis for other templates  
+
+# {% block content %}                         --> Content tags extend templates to reduce repeated code
+# ...
+# {% endblock %} 
+
+# or
+
+# {% block content %} 
+# ... 
+# {% endblock content %}
+
+# {% load static "styles.css" %}              --> Used in header of HTML file to load static files
+
+# {{ variable_name }}                         --> Varriable tags used to display template varriables
+
+# {% if condition %}                          --> Templates can include logic using if statements.
+# {% elif condition %}
+# {% else %}
+# {% endif %}
+
+# <ul>
+#   {% for item in dictionary %}              --> Template variables can be iterated over using for loops inside template tags
+#     <li>{{ item.value }}</li>
+#   {% endfor %}
+# </ul>
+
+# {% url "some-other-page" %}                 --> Linking urls can be done using the url tag
+
+# {% url "items" item.id %}                   --> You can pass arguments between pages in the url tag
+
+# {{ variable_name | filter_name }}           --> Use | to filter varriables
+
+# {{ variable_name | filter_name:"argument"}} --> Arguments can be passed in to filters
+
+# {{ dictionary_name | dictsort:"key_name"}}  --> Dictionaries can be sorted using dicsort filter
+
+
+
+
