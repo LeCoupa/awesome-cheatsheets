@@ -104,6 +104,21 @@ DROP INDEX idx_name ON table_name;                             # Remove an index
 EXPLAIN SELECT * FROM table_name WHERE condition;              # Analyze how MySQL executes a query (Check index usage)
 
 # *****************************************************************************
+# Foreign Keys (Relationships)
+# *****************************************************************************
+
+ALTER TABLE table1 ADD CONSTRAINT fk_name FOREIGN KEY (column_name) REFERENCES table2(id); # Add a foreign key constraint
+ALTER TABLE table1 DROP FOREIGN KEY fk_name;                                               # Drop a foreign key constraint                                                # Drop a foreign key constraint
+
+# *****************************************************************************
+# Views
+# *****************************************************************************
+
+CREATE VIEW view_name AS SELECT column1, column2 FROM table_name; # Create a view
+SELECT * FROM view_name;                                          # Query a view
+DROP VIEW view_name;                                              # Delete a view
+
+# *****************************************************************************
 # Transactions (Data Integrity)
 # *****************************************************************************
 
