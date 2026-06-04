@@ -108,7 +108,7 @@ EXPLAIN SELECT * FROM table_name WHERE condition;              # Analyze how MyS
 # *****************************************************************************
 
 ALTER TABLE table1 ADD CONSTRAINT fk_name FOREIGN KEY (column_name) REFERENCES table2(id); # Add a foreign key constraint
-ALTER TABLE table1 DROP FOREIGN KEY fk_name;                                               # Drop a foreign key constraint                                                # Drop a foreign key constraint
+ALTER TABLE table1 DROP FOREIGN KEY fk_name;                                               # Drop a foreign key constraint
 
 # *****************************************************************************
 # Views
