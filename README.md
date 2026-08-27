@@ -114,6 +114,8 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 ### 🔧 Tools
 
+* [UIZZE](https://uizze.com) - Anti-UI-slop workflow for coding agents with a free skill, optional authenticated MCP, and GitHub Action grounded in 800,000+ real web and iOS screens.
+
 <details>
 <summary>View cheatsheets</summary>
 
