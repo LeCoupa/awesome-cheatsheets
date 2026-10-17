@@ -203,7 +203,7 @@ Function definition
 
 type function_name(int a, float b, const char * ch,...) { function_body }
 
-/* only parameters passed by address can are modified*/
+/* only parameters passed by address can be modified*/
 
 /* in the calling function, local copy can be modified*/
 
