@@ -8,7 +8,7 @@
 // MAIN.
 
 php artisan clear-compiled       // Remove the compiled class file
-php artisan db                   // Start a new database CLI session
+php artisan db                   // Start a new database CLI sessionn
 php artisan docs                 // Access the Laravel documentation
 php artisan down                 // Put the application into maintenance mode
 php artisan dump-server          // Start the dump server to collect dump information.
