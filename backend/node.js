@@ -73,7 +73,7 @@ ref();    // If you had previously unref()d a timer you can call ref() to explic
  * http://nodejs.org/api/modules.html
  * ******************************************************************************************* */
 
-
+// require() accepts a relative path of the given module w.r.t. the file you are importing it in. 
 var module = require('./module.js');    // Loads the module module.js in the same directory.
 module.require('./another_module.js');  // load another_module as if require() was called from the module itself.
 
