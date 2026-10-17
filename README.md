@@ -123,6 +123,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Drush](tools/drush.sh)
 - [Elasticsearch](tools/elasticsearch.js)
 - [Emmet](tools/emmet.md)
+- [FFmpeg](tools/ffmpeg.sh)
 - [Git](tools/git.sh)
 - [Puppeteer](tools/puppeteer.js)
 - [Sublime Text](tools/sublime_text.md)
