@@ -120,7 +120,7 @@
 |  %= | modulo and store|
 | <<= | shift left and store|
 |  \>>= | shift right and store|
-|  &= | bitwise and and store|
+|  &= | bitwise and store|
 |  ^= | bitwise exclusive or and store|
 |  \|= | bitwise or and store|
 |  , | separator as in   ( y=x,z=++x )|
