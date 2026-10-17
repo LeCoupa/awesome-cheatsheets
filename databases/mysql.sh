@@ -36,6 +36,8 @@ INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...); # I
 UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition; # Update existing data in a table
 DELETE FROM table_name WHERE condition; # Delete data from a table
 SELECT column1, column2, ... FROM table_name WHERE condition; # Select data from a table
+# Count total number of rows in a table
+SELECT COUNT(*) AS total_rows FROM table_name;
 
 # *****************************************************************************
 # Backup and Restore
