@@ -1,0 +1,322 @@
+C++ CheatSheet
+
+MAIN() FUNCTION
+
+The entry point of every C++ program:
+
+int main(int argc, char* argv[])
+
+Return value rules:
+0 → success
+non-zero → error
+
+Valid forms:
+int main() {}
+int main(int argc, char** argv) {}
+
+INCLUDE FILES (PREPROCESSOR)
+
+#include "mine.h" // search local directory first
+#include <iostream> // search system include paths
+
+Preprocessor directives:
+#define TRUE 1
+#define min(a,b) ((a)<(b)?(a):(b))
+#define ABS(a) ((a)<0?-(a):(a))
+#undef TRUE
+#error
+#if / #elif / #else / #endif
+#ifdef / #ifndef
+#line number "filename"
+#pragma (compiler-specific commands)
+
+Backslash "" at end of line → continues line
+
+CREATING & RUNNING A PROGRAM (LINUX)
+
+nano program.cpp
+
+Write code
+
+Compile with g++:
+
+g++ -o executable program.cpp
+./executable
+
+C++ KEYWORDS (RESERVED WORDS)
+
+alignas, alignof, and, and_eq, asm,
+auto, bitand, bitor, bool, break,
+case, catch, char, char16_t, char32_t,
+class, compl, const, constexpr, const_cast,
+continue, decltype, default, delete, do,
+double, dynamic_cast, else, enum, explicit,
+export, extern, false, float, for,
+friend, goto, if, inline, int,
+long, mutable, namespace, new, noexcept,
+not, not_eq, nullptr, operator, or,
+or_eq, private, protected, public, register,
+reinterpret_cast, return, short, signed, sizeof,
+static, static_cast, struct, switch, template,
+this, thread_local, throw, true, try,
+typedef, typeid, typename, union, unsigned,
+using, virtual, void, volatile, wchar_t,
+while, xor, xor_eq
+
+BASIC TYPES
+
+char – character
+int – integer
+float – 4-byte floating point
+double – 8-byte floating point
+bool – boolean (true/false)
+void – no type
+wchar_t – wide character
+char16_t, char32_t – UTF character types
+enum – enumerated type
+
+TYPE MODIFIERS
+
+signed
+unsigned
+short
+long
+long long
+const
+volatile
+
+STORAGE CLASSES
+
+auto – automatic storage (or type inference)
+static – persists after function exit
+extern – defined elsewhere
+register – legacy hint for CPU register
+mutable – allows modification in const objects
+thread_local – per-thread storage
+
+OPERATORS
+
+Parentheses & member access:
+() [] -> .
+
+Arithmetic:
+
+/ % ++ --
+
+Logical:
+! && ||
+
+Bitwise:
+~ & | ^ << >>
+
+Pointer:
+
+(dereference)
+& (address of)
+
+Assignment:
+= += -= *= /= %= <<= >>= &= ^= |=
+
+Conditional:
+?:
+
+Comma:
+,
+
+Casting:
+static_cast<T>(x)
+reinterpret_cast<T>(x)
+const_cast<T>(x)
+dynamic_cast<T>(x)
+
+OPERATOR PRECEDENCE (HIGH → LOW)
+
+() [] -> . ++ --
+Unary: ! ~ ++ -- + - * & sizeof typeid
+
+/ %
+
+<< >>
+< <= > >=
+== !=
+&
+^
+|
+&&
+||
+?:
+Assignments (= += -= etc.)
+,
+
+CONDITIONAL BRANCHING
+
+IF:
+if (condition)
+statement;
+else
+statement2;
+
+SWITCH:
+switch (value) {
+case 1: break;
+case 2:
+case 3: statement; break;
+default: statement;
+}
+
+FUNCTIONS
+
+Function definition:
+return_type name(params) { … }
+
+Example:
+int add(int a, int b)
+
+Pass by reference (modifies original variable):
+void func(int& x) { x = 20; }
+
+Const reference:
+void print(const std::string& s)
+
+CLASSES
+
+class MyClass {
+public:
+int x;
+void method();
+private:
+int y;
+};
+
+Member access:
+object.method();
+object.x;
+
+STRUCT
+
+struct Point {
+int x, y;
+};
+
+Works like a class but default visibility = public.
+
+UNION
+
+union Data {
+int i;
+float f;
+char c;
+};
+
+All members share the same memory.
+
+ENUM
+
+enum Color { RED, GREEN = 5, BLUE };
+
+Strongly typed enum (C++11):
+enum class Mode { Off, On };
+
+TEMPLATES
+
+template<typename T>
+T add(T a, T b) { return a + b; }
+
+Class template:
+template<class T>
+class Box { T value; };
+
+NAMESPACES
+
+namespace myspace {
+int value = 10;
+}
+
+Use:
+myspace::value
+
+OBJECT-ORIENTED PROGRAMMING (OOP)
+
+Inheritance:
+class Base {};
+class Derived : public Base {};
+
+Polymorphism:
+virtual void speak();
+
+Virtual destructor:
+virtual ~Base() {}
+
+Abstract class:
+virtual void run() = 0;
+
+Override keyword:
+void speak() override;
+
+EXCEPTION HANDLING
+
+try {
+…
+} catch (const std::exception& e) {
+…
+}
+
+throw keyword for raising exceptions.
+
+STANDARD TEMPLATE LIBRARY (STL)
+
+CONTAINERS:
+vector
+list
+deque
+map
+set
+unordered_map
+unordered_set
+stack
+queue
+priority_queue
+
+Example:
+std::vector<int> v = {1, 2, 3};
+
+ALGORITHMS:
+sort
+find
+count
+reverse
+for_each
+binary_search
+
+Example:
+std::sort(v.begin(), v.end());
+
+ITERATORS:
+begin()
+end()
+rbegin()
+rend()
+
+MEMORY MANAGEMENT
+
+RAW POINTERS:
+int* p = new int(5);
+delete p;
+
+SMART POINTERS:
+std::unique_ptr<T>
+std::shared_ptr<T>
+std::weak_ptr<T>
+
+Example:
+auto ptr = std::make_unique<int>(10);
+
+INPUT / OUTPUT
+
+std::cout << "Hello";
+std::cin >> x;
+
+FILE I/O
+
+std::ifstream f("file.txt");
+std::ofstream o("out.txt");
