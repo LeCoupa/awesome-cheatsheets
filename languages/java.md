@@ -77,6 +77,7 @@ a \|= b; //a is the variable name; b is the variable name; this expression is an
   System.out.print(String s) //print s
   System.out.println(String s) //print s, followed by a newline
   System.out.println() //print a newline
+  System.out.printf() //use %d for print integer, %c for char, use %f for float, use %s for string
 ```
 
 ### PARSING COMMAND-LINE ARGUMENTS
@@ -386,6 +387,12 @@ class MyClass extends MySuperClass implements YourInterface {
 * A class contains constructors that are invoked to create objects from the class blueprint.
 * Constructor declarations look like method declarations—except that they use the name of the class and have no return type
 * Each and every class has defualt No-args constructor.
+* constructor can also be override by giving the argumentsto it.
+**Example:**
+class constructor{
+	public constructor(){//the constructor name is same as of class name and it does not have any return type
+	System.out.println("I am a constructor");
+}
 
 
 ```java
@@ -648,3 +655,11 @@ public class Queue<Item> implements Iterable<Item> {
   boolean contains(Key key) //return if the key is in the set
   int size() //number of elements in set
 ```
+## ADVANCE JAVA
+There are some advance topic in java which done the work very easy and relieable.
+**Collection   Framework**
+It include-:
+1.Arraylist
+2.Set
+3.Stack
+4.Harshmap
