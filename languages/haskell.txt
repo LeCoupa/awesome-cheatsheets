@@ -1,0 +1,479 @@
+CHEATSHEET HASKELL
+
+Use HASKELL
+
+    Documentation
+        - Haskell API search: http://www.haskell.org/hoogle/
+        - Haskell reference: ftp://ftpdeveloppez.com/cmaneu/langages/haskell/haskellreference.zip
+
+    Basics
+        - Load file :load filename
+        - Reload file :reload
+        - Launch file editor with current file :edit
+        - Get information about a function :info command
+
+Comments
+
+A single line comment starts with ‘--’ and extends to the end of the line.
+Multi-line comments start with ’{-’ and extend to ’-}’. Comments can be nested.
+
+Reserved words
+
+     !
+     '
+     ''
+     -
+     --
+     -<
+     -<<
+     ->
+     ::
+     ;
+     <-
+     ,
+     =
+     =>
+     >
+     ?
+     #
+     *
+     @
+     [|, |]
+     \
+     _
+     `
+     {, }
+     {-, -}
+     |
+     ~
+     as
+     case, of
+     class
+     data
+     data family
+     data instance
+     default
+     deriving
+     deriving instance
+     do
+     forall
+     foreign
+     hiding
+     if, then, else
+     import
+     infix, infixl, infixr
+     instance
+     let, in
+     mdo
+     module
+     newtype
+     proc
+     qualified
+     rec
+     type
+     type family
+     type instance
+     where
+
+Data types
+
+    All the data types must start by a capital letter.
+
+    Int: Integer number with fixed precision
+    Integer: Integer number with virtually no limits
+    Float:  Real floating point with single precision
+    Double: Real floating point with double the precision
+    Bool: Boolean
+    Char: Character, have to placed between quotes
+    String: A list of Chars
+
+    Type redefinition
+        Type NewTypeName = TypeValue
+        Example: Type String = [Char]
+
+List & Numbers
+
+    [] – Empty list
+    [1,2,3,4] – List of four numbers
+    1 : 2 : 3 : 4 : [] - Write a lists using cons (:) and nil ([])
+    [1..100] - List of number 1,2,3..,100
+    [100..] - Infinite list of number 100,101,102,103,..
+    [0,-1 ..] - Negative integers 0,-1,-2,..
+    (h:q) - h stands for the first element of the list and q for the result
+    (f:s:t:q) - f is the first element, s is the second elemnt, t is the third and q is the rest of the elements of the list.
+
+    It can be added the element e to the list l with e:l
+
+Basic functions for lists
+
+    list1++list2    append two list
+    list!!n         return element n
+    head            takes a list and returns its head. The head of a list is basically its first element.
+    tail            takes a list and returns its tail. In other words, it chops off a list's head.
+    last            takes a list and returns its last element.
+    init            takes a list and returns everything except its last element.
+    length          takes a list and returns its length, obviously.
+    null            checks if a list is empty.
+    reverse         reverses a list.
+    take            takes number and a list. It extracts that many elements from the beginning of the list.
+    drop            works in a similar way as take, only it drops the number of elements from the beginning of a list.
+    maximum         takes a list of stuff that can be put in some kind of order and returns the biggest element.
+    minimum         returns the smallest.
+    sum             takes a list of numbers and returns their sum.
+    product         takes a list of numbers and returns their product.
+    elem            takes a thing and a list of things and tells us if that thing is an element of the list. It's usually called as an infix function because it's easier to read that way.
+
+Function for infinite lists:
+
+    cycle: takes a list and cycles it into an infinite list. If you just try to display the result, it will go on forever so you have to slice it off somewhere.
+    repeat: takes an element and produces an infinite list of just that element. It's like cycling a list with only one element.
+    replicate: takes the number of the same element in a list.
+
+List comprehension
+
+    List comprehension is the process of generating a list using a mathematical expression.
+
+    [body | generator]
+
+    Examples: [x*a | a <- [1..3]] = [2,4,6]
+              [x*y | x <- [1..5], y <- [9..5] ]
+              [x | x <- [1,10,14,16,18], x>5 ]
+
+Tuples
+
+    (1,"a") -  2-element tuple of a number and a string
+    (last, 4, 'b') -  3-element tuple of a function, a number and a character
+
+Note that the empty tuple () is also a type which can only have a single value: ()
+
+Basic functions for Tuples
+
+    fst: takes a pair and returns its first component.
+    snd: takes a pair and returns its second component.
+    zip: takes two lists and then zips them together into one list by joining the matching elements into pairs.
+
+Note: these functions operate only on pairs. They won't work on triples, 4-tuples, 5-tuples, etc.
+
+
+Typeclasses
+
+A typeclass is a sort of interface that defines some behaviour.
+If a type is a part of a typeclass, that means that it supports and implements the behavior the typeclass describes. 
+If you come from OPP you can think of them kind of as Java interfaces, only better.
+
+Everything before the => symbol is called a class constraint.
+
+    Eq is used for types that support equality testing. Eq class constraint for a type variable in a function, it uses == or /= somewhere inside its definition
+    Ord is for types that have an ordering. Ord covers all the standard comparing functions such as >, <, >= and <=
+    Show can be presented as strings. show takes a value whose type is a member of Show and presents it to us as a string.
+    Read is sort of the opposite typeclass of Show. The read function takes a string and returns a type which is a member of Read.
+    Enum members are sequentially ordered types, they can be enumerated. Types in this class: (), Bool, Char, Ordering, Int, Integer, Float and Double.
+    Bounded members have an upper and a lower bound. All tuples are part of Bounded. Types in this class: Bool, Int and Char.
+    Num is a numeric typeclass. Types in this class: Int, Integer, Float and Double.
+    Integral is also a numeric typeclass. In this typeclass are Int and Integer.
+    Floating includes only floating point numbers. Types in this class: Float and Double.
+
+Functions
+
+    Functions are defined by declaring their name, any arguments, and an equals sign.
+
+    Declare a new function starting with explicit type declaration (optional)
+        functionName :: inpuntType1 [ -> inputTypeN ] -> outputType
+
+    Declare a new function with pattern matching
+        intToChar 1 = "One"
+        intToChar 2 = "Two"
+    
+    Declare a new function with guards
+        intToChar x
+            |   x==1 = "One"
+            |   x==2 = "Two"
+
+    Declare a new function with guards and pattern matching
+        allEmpty _ = falsePart
+        allEmpty [] = truePart
+
+        alwaysEven n
+            | otherwise = False
+            | n 'div' 2 == 0 = True 
+
+    Declare a new function with record syntax
+
+        Being this data type:
+            data Color = C { red,
+                , blue
+                , yellow :: Int }
+        
+        It can only be match on blue only:
+
+            isBlueZero (C { blue = 0 }) = True
+            isBlueZero _ = False
+
+        Defining a PixelColor type and a function replace values with non-zero blue components.
+
+Where and let
+
+    Let must always be followed by in. The in must appear in the sale column as the let keyword.
+    In the following example, mult multiples its argument n by x, which passed to the original multiples.
+        multiples x = 
+            let mult n = n * x
+            in map mult [1..10]
+
+
+    Where is similar to let. The scope of a where definition is the current function.
+    In the following example, the function result below has a different meaning depending on the arguments given to the function strlen:
+        strlen [] = result
+            where result = "No string given!"
+        strlen f = result ++ " characters long!"
+            where result = show (length f)
+
+    
+    It is important to know that let ... in ... is an expression, that is, it can be written wherever expressions are allowed.
+    In contrast, where is bound to a surrounding syntactic construct, like the pattern matching line of a function definition.
+
+    Advantage of where
+        Suppose you have the function
+        f :: s -> (a,s)
+        f x = y
+        where y = ... x ...
+        and later you decide to put this into the Control.Monad.State monad.
+        
+        However, transforming to
+        f :: State s a
+        f = State $ \x -> y
+        where y = ... x ...
+        will not work, because where refers to the pattern matching f =, where no x is in scope. In contrast, if you had started with let, then you wouldn't have trouble.
+        f :: s -> (a,s)
+        f x =
+        let y = ... x ...
+        in  y
+
+        This is easily transformed to:
+        f :: State s a
+        f = State $ \x ->
+        let y = ... x ...
+        in  y
+
+     Advantage of let
+
+        Because "where" blocks are bound to a syntactic construct, they can be used to share bindings between parts of a function that are not syntactically expressions. 
+        For example:
+        f x
+        | cond1 x   = a
+        | cond2 x   = g a
+        | otherwise = f (h x a)
+        where
+            a = w x
+
+        In expression style, you might use an explicit case:
+        f x
+        = let a = w x
+            in case () of
+                _ | cond1 x   -> a
+                | cond2 x   -> g a
+                | otherwise -> f (h x a)
+
+        or a functional equivalent:
+        f x =
+        let a = w x
+        in  select (f (h x a))
+                [(cond1 x, a),
+                (cond2 x, g a)]
+        or a series of if-then-else expressions:
+        f x
+        = let a = w x
+            in if cond1 x
+            then a
+            else if cond2 x
+            then g a
+
+
+Anonymous Functions
+
+    They are functions without names and can be defined at any time like so.
+        Example: \x -> x + 1
+
+Case expressions
+
+    case is to a switch statement in C# and Java. However, it can match a pattern.
+    Example:
+        data Choices = First String | Second | Third | Fourth
+
+    case can be used to determine which choice was given
+
+        whichChoice ch =
+          case ch of
+            First _ -> "1st!"
+            Second -> "2nd!"
+            _ -> "Something else."
+        
+
+Conditionals
+
+    Identify ==
+    Non identify /n
+    Comparatives where the type must a subclass of Ord <,>,<=,>=
+    
+    The if statement has this “signature”: if-then-else :: Bool -> a -> a -> a
+
+Maps and filters
+
+    map takes a function and a list and applies that function to every element in the list, producing a new list. 
+    Examples:
+        map :: (a -> b) -> [a] -> [b]  
+        map _ [] = []  
+        map f (x:xs) = f x : map f xs
+
+    filter is a function that takes a predicate and nd a list and then returns the list of elements that satisfy the predicate
+    Examples:
+        filter :: (a -> Bool) -> [a] -> [a]  
+        filter _ [] = []  
+        filter p (x:xs)   
+            | p x       = x : filter p xs  
+            | otherwise = filter p xs  
+
+Folds
+
+    foldl function folds the list up from the left side.
+    foldr works in a similar way to the left fold, only the accumulator eats up the values from the right.
+
+    The foldl1 and foldr1 functions work much like foldl and foldr, only you don't need to provide them with an explicit starting value.
+
+    scanl and scanr are like foldl and foldr, only they report all the intermediate accumulator states in the form of a list. 
+
+Function application with $
+
+    The $ function has the lowest precedence and the function with $ is rigth-associate
+
+Default
+
+    Default implementations can be given for function in a class.
+
+    The default is defined by giving a body to one of the members' functions.
+    Example == can be defined in terms of /=:
+        (==) a b = not (a/b)
+
+Data
+
+    Algebraic data types can be declared as: data MyType = MyValue1 | MyValue2
+
+Note that type and constructor names must start with a capital letter. It is a syntax error otherwise.
+
+
+Constructors with arguments
+
+    Constructors that take arguments can be declared, allowing more information to be stored.
+
+    data Point = TwoD Int Int
+        | ThreeD Int Int Int
+
+Notice that the arguments for each constructor are type names, not constructors. 
+
+Type and constructor names
+
+    Both names can be the same since they will never be used in a place that would cause confusion.
+    data User = User String | Admin String
+
+    Using this type in a function makes difference clear:
+    whatUser (User _) = "normal user"
+    whatUser (Admin _) = "admin user"
+
+Type Variables
+
+    Plymorphic data types are easy to be declared just by adding type varialbe in the declaration:
+        data Slot a = Slot1 a | Empty1
+
+    It can also be mix type variable and specific types in constructors:
+        data Slot2 a = Slot2 a Int | Empty2
+
+Record syntax
+
+    Constructors arguments can also be declared by using record syntax which gives a name to each argument.
+    For example:
+        data Contact = Contact { ctName :: String
+                , ctEmail :: String
+                , ctPhone :: String }
+
+Note: Multiple constructors of the same type can use the same accessor function name for values of the same type.
+
+Deriving
+
+    The capabilities to convert to and from strings, compare
+for equality, or order in a sequence are defined as Typeclasses and Haskell provides the deriving keyboard to automatically implement the typeclass on the associated type supported which are: Eq, Read, Show, Ord, Enum, Ix, and
+Bounded.
+
+    Two forms of deriving are possible.
+    
+    The first is used when a type only derives one class:
+        data Priority = Low | Medium | High
+          deriving Show
+
+    The second is used when multiple classes are derived:
+        data Alarm = Soft | Loud | Deafening
+          deriving (Read, Show)
+ 
+Class constraint
+
+    In any case, the syntax used is:
+        data (Num a) => SomeNumber a = Two a a
+        | Three a a a
+
+    This declares a type SomeNumber which has one type variable argument.
+    Valid types are those in the Num class.
+
+Do
+
+    Do indicates that the code to follow will be in a monadic context.
+    Statements are separated by newlines, the assignment is indicated by <, and a let form is introduced which does not require the in the keyboard.
+
+If, Then, Else
+
+    This function tests if the string is given starts with a lower case letter and, if so, convert it to upper case:
+
+    sentenceCase (s:rest) =
+        if isLower s
+            then toUpper s : rest
+            else s : result
+    sentenceCase _ = []
+
+Deconstruction
+
+    The left-hand side of a let definition can also destructive its argument, in case sub-components are to be accessed.
+    Examples:
+        firstThree str =
+            let (a:b:c:_) = str
+            in "Initial three characters are: " ++
+                show a ++ ", " ++
+                show b ++ ", and " ++
+                show c
+
+    Note that this is different than the following, which only works if the string has exactly three characters:
+        onlyThree str =
+            let (a:b:c:[]) = str
+            in "The characters given are: " ++
+                show a ++ ", " ++
+                show b ++ ", and " ++
+                show c
+
+Modules
+
+    A module is a compilation unit which export functions, tyñes, classes, instances, and other modules.
+    To make a Haskell file a module just add at the top of it:
+        module MyModule where
+
+Imports
+
+    To import everything (functions, data types and constructors, class declarations, and even other modules imported) exported by a library, just use the module name:
+        import Text.Read
+
+    To import selectively:
+        import Text.Read (readParen, lex)
+
+    To import data types and no constructors:
+        import Text.Read (Lexeme)
+
+    To import data types and one or more constructors explicitly
+        import Text.Read (Lexeme(Ident, Symbol))
+
+    To import all constructors for a given type:
+        import Text.Read (Lexeme())
