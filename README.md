@@ -114,6 +114,9 @@ Feel free to take a look. You might learn new things. They have been designed to
 
 ### 🔧 Tools
 
+* [Ano](https://ano.chat) - A collaborative shell with built-in AI integration (Claude Code) and custom CLI/MCP automations designed for elite devs.
+
+
 <details>
 <summary>View cheatsheets</summary>
 
