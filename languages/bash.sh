@@ -153,6 +153,8 @@ ssh user@host            # connects to host as user
 ssh -p <port> user@host  # connects to host on specified port as user
 ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed or passwordless login
 
+<Enter> + ~ + .          # Exit an unresponsive SSH shell connection
+
 whoami                   # returns your username
 su <user>                # switch to a different user
 su -                     # switch to root, likely needs to be sudo su -
