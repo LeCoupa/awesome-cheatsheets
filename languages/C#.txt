@@ -398,3 +398,17 @@ CHEATSHEET C#
     KeyPress                                        KeyPressEventHandler(object sender, KeyPressEventArgs e)
 
 
+16. Garbage Collection
+
+    16.1 Using statements
+    //A using statement encapsulates the lifetime of an IDisposable object and auto manages memory
+    
+    using(SomeManagedClass smc){
+    
+    //Scope of SomeManagedClass 
+    
+    }
+    
+    //Garbage collection happens here and the CLR disposes the object
+    
+    
