@@ -125,6 +125,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Emmet](tools/emmet.md)
 - [FFmpeg](tools/ffmpeg.sh)
 - [Git](tools/git.sh)
+- [Git Commit Messages](tools/git_commit_messages.md)
 - [jq](tools/jq.sh)
 - [Puppeteer](tools/puppeteer.js)
 - [Sublime Text](tools/sublime_text.md)
