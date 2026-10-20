@@ -150,7 +150,9 @@
 
 - `Describe one firewall rule `: gcloud compute firewall-rules describe <rule-name>
 
-- `Create one firewall rule `: gcloud compute firewall-rules create my-rule --network default --allow tcp:9200 tcp:3306
+- `Create one firewall rule `: gcloud compute firewall-rules create my-rule --network default --allow tcp:9200 tcp:3306 --source-ranges <trusted-cidr> --target-tags <tag>
+
+  > WARNING: Omitting --source-ranges defaults to 0.0.0.0/0, exposing ports to the entire internet. Always specify a trusted CIDR range and use --target-tags to restrict access to specific instances.
 
 - `Update one firewall rule `: gcloud compute firewall-rules update default --network default --allow tcp:9200 tcp:9300
 
