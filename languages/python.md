@@ -31,8 +31,7 @@
 | --------- | ----------- |
 | int | Integer values [0, 1, -2, 3] |
 | float | Floating point values [0.1, 4.532, -5.092] |
-| char | Characters [a, b, @, !, `] |
-| str | Strings [abc, AbC, A@B, sd!, `asa] |
+| str | Strings [abc, AbC, A@B, sd!, `asa]; a single character is a str of length 1 |
 | bool | Boolean Values [True, False] |
 | complex | Complex numbers [2+3j, 4-1j] |
 
@@ -90,7 +89,7 @@
 |-|-|
 |  ( )	|  grouping parenthesis, function call, tuple declaration |
 |  [ ]	|  array indexing, also declaring lists etc.|
-|  !	|    relational not, complement, ! a  yields true or false |
+|  not	|    logical not, not a  yields True or False |
 |  ~   | 	bitwise not, ones complement, ~a |
 | \-   |	unary minus, - a |
 |  \+   | 	unary plus,  + a |
@@ -101,7 +100,7 @@
 | \-   | 	subtract, a - b |
 | <<   | shift left,  left operand is shifted left by right operand bits (multiply by 2) |
 | \>>   |	shift right, left operand is shifted right by right operand bits (divide by 2) |
- | <    |	less than, result is true or false,  a %lt; b
+ | <    |	less than, result is true or false,  a < b
 | <=   |	less than or equal, result is true or false,  a <= b
 | \>    |	greater than, result is true or false,  a > b
 | \>=   |	greater than or equal, result is true or false, a >= b
@@ -110,8 +109,8 @@
 |  & | bitwise and,  a & b
 | ^ | bitwise exclusive or XOR,  a ^ b
 | \| | bitwise or,  a | b
-|  &&, and | relational and, result is true or false,  a < b && c >= d
-| \|\|, or | relational or, result is true or false,  a < b \|\| c >= d |
+|  and | logical and, result is true or false,  a < b and c >= d
+| or | logical or, result is true or false,  a < b or c >= d |
 | =  | store or assignment |
 |  += | add and store |
 |  -=  | subtract and store |
@@ -123,7 +122,7 @@
 |  &= | bitwise and and store|
 |  ^= | bitwise exclusive or and store|
 |  \|= | bitwise or and store|
-|  , | separator as in   ( y=x,z=++x )|
+|  , | separator, as in   f(x, y) or (x, y)|
 
 ### Basic Data Structures
 
@@ -216,7 +215,7 @@ thisset = {"apple", "banana", "cherry"}
 
 - Set items can appear in a different order every time you use them, and cannot be referred to by index or key.
 
-- Sets are unchangeable, meaning that we cannot change the items after the set has been created.
+- Set items cannot be changed in place, but items can be added and removed with `add()` and `remove()`.
 - Duplicate values will be ignored.
 - To determine how many items a set has, use the `len()` method.
 ```python
@@ -247,7 +246,7 @@ print(frzset)
 
 ### Dictionary
 
-- Dictionary is a collection which is unordered and changeable. No duplicate members.
+- Dictionary is a collection which is ordered (items keep insertion order since Python 3.7) and changeable. No duplicate keys.
 - Dictionaries are used to store data values in key:value pairs.
 - Dictionaries are written with curly brackets, and have keys and values:
 ```python
@@ -268,7 +267,7 @@ print(thisdict["brand"])
 ```
 - Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
 - Dictionaries cannot have two items with the same key.
-- Duplicate values will overwrite existing values.
+- A duplicate key overwrites the earlier value for that key.
 - To determine how many items a dictionary has, use the `len()` function.
 ```python
 print(len(thisdict))
@@ -283,7 +282,7 @@ thisdict = {
 }
 ```
 
-- pop() Function is used to remove a specific value from a dictionary. You can only use key bot the value. Unlike Lists you have to give a value to this function
+- pop() Function is used to remove a specific value from a dictionary. You pass the key, not the value. Unlike `list.pop()`, the argument is required
 
   ```python
    car = {
